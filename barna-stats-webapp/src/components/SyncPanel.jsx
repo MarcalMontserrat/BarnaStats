@@ -181,8 +181,8 @@ function SyncPanel({
                     </span>
                 </div>
                 <div style={styles.helper}>
-                    Pega la URL oficial de resultados y la app reconstruirá el mapping, descargará `stats` y `moves`,
-                    y regenerará el análisis publicado para la web. Si sale captcha, se abrirá el navegador auxiliar.
+                    Pega la URL oficial de resultados y la app obtendrá los partidos de la fase, descargará `stats`
+                    y `moves` y actualizará el análisis de la web. Si aparece un captcha, se abrirá el navegador auxiliar.
                 </div>
             </div>
 
@@ -200,14 +200,14 @@ function SyncPanel({
                     style={isBusy ? {...styles.button, ...styles.mutedButton} : styles.button}
                     disabled={isBusy}
                 >
-                    {isBusy ? "Sincronizando..." : "Cargar fase"}
+                    {isBusy ? "Importando..." : "Importar fase"}
                 </button>
             </div>
 
             {job ? (
                 <div style={styles.metaGrid}>
                     <div style={styles.metaCard}>
-                        <div style={styles.metaLabel}>Scope</div>
+                        <div style={styles.metaLabel}>Ámbito</div>
                         <div style={styles.metaValue}>{scopeLabel}</div>
                     </div>
                     <div style={styles.metaCard}>

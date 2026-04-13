@@ -115,6 +115,7 @@ export function buildPlayersArray(players) {
         name,
         ...stats,
         avgPoints: stats.games > 0 ? stats.points / stats.games : 0,
+        avgValuation: stats.games > 0 ? stats.valuation / stats.games : 0,
         avgVal: stats.games > 0 ? stats.valuation / stats.games : 0
     }));
 }
@@ -138,4 +139,82 @@ export function getTeamAverage(players) {
     }
 
     return players.reduce((sum, player) => sum + Number(player.points), 0) / matchesPlayed;
+}
+
+export function buildGlobalPlayers(teams) {
+    return teams.flatMap((team) =>
+        (team.seasonTotals ?? []).map((player) => {
+            const games = Number(player.games) || 0;
+            const points = Number(player.points) || 0;
+            const valuation = Number(player.valuation) || 0;
+
+            return {
+                key: `${player.teamKey ?? team.teamKey}:${player.playerName}:${player.shirtNumber ?? ""}`,
+                teamKey: player.teamKey ?? team.teamKey,
+                teamName: player.teamName ?? team.teamName,
+                playerName: player.playerName,
+                shirtNumber: player.shirtNumber ?? "",
+                games,
+                points,
+                valuation,
+                minutes: Number(player.minutes) || 0,
+                avgPoints: games > 0 ? points / games : 0,
+                avgValuation: games > 0 ? valuation / games : 0
+            };
+        })
+    );
+}
+
+export function getTopGlobalPlayers(players, metric, limit = 10) {
+    const metricKey = metric === "avgValuation" ? "avgValuation" : "points";
+
+    return [...players]
+        .sort((a, b) => {
+            const metricDelta = Number(b[metricKey]) - Number(a[metricKey]);
+            if (metricDelta !== 0) {
+                return metricDelta;
+            }
+
+            if (b.games !== a.games) {
+                return b.games - a.games;
+            }
+
+            if (b.valuation !== a.valuation) {
+                return b.valuation - a.valuation;
+            }
+
+            if (b.points !== a.points) {
+                return b.points - a.points;
+            }
+
+            return a.playerName.localeCompare(b.playerName, "es");
+        })
+        .slice(0, limit);
+}
+
+export function getTopTeamPlayers(players, metric, limit = 10) {
+    const metricKey = metric === "avgValuation" ? "avgValuation" : "points";
+
+    return [...players]
+        .sort((a, b) => {
+            const metricDelta = Number(b[metricKey]) - Number(a[metricKey]);
+            if (metricDelta !== 0) {
+                return metricDelta;
+            }
+
+            if (b.games !== a.games) {
+                return b.games - a.games;
+            }
+
+            if (b.valuation !== a.valuation) {
+                return b.valuation - a.valuation;
+            }
+
+            if (b.points !== a.points) {
+                return b.points - a.points;
+            }
+
+            return a.name.localeCompare(b.name, "es");
+        })
+        .slice(0, limit);
 }

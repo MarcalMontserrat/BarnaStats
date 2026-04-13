@@ -157,7 +157,7 @@ function MatchListSection({
 
         return (
             <div style={styles.reportCard}>
-                <div style={styles.reportTitle}>Analisis del partido</div>
+                <div style={styles.reportTitle}>Análisis del partido</div>
                 {blocks.map((block, index) => {
                     const lines = block
                         .split("\n")
@@ -204,7 +204,7 @@ function MatchListSection({
             <section style={styles.section}>
                 <div style={styles.heading}>
                     <div style={styles.eyebrow}>Partidos</div>
-                    <h2 style={styles.title}>Bitacora de jornadas</h2>
+                    <h2 style={styles.title}>Jornadas y partidos</h2>
                 </div>
                 <div style={styles.emptyState}>
                     No hay partidos disponibles para este filtro.
@@ -217,9 +217,9 @@ function MatchListSection({
         <section style={styles.section}>
             <div style={styles.heading}>
                 <div style={styles.eyebrow}>Partidos</div>
-                <h2 style={styles.title}>Bitacora de jornadas</h2>
+                <h2 style={styles.title}>Jornadas y partidos</h2>
                 <p style={styles.subtitle}>
-                    Despliega cada encuentro para revisar la tabla individual y, si existe, el resumen generado del partido.
+                    Abre cada encuentro para ver la tabla individual y, si está disponible, su resumen.
                 </p>
             </div>
 

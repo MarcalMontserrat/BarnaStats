@@ -1,4 +1,6 @@
 import {useEffect, useState} from "react";
+import GlobalLeadersSection from "./components/GlobalLeadersSection.jsx";
+import TeamLeadersSection from "./components/TeamLeadersSection.jsx";
 import StatCard from "./components/StatCard.jsx";
 import PlayerEvolutionSection from "./components/PlayerEvolutionSection.jsx";
 import MatchListSection from "./components/MatchListSection.jsx";
@@ -8,10 +10,13 @@ import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
     buildPlayersArray,
+    buildGlobalPlayers,
     getChartData,
     getMvp,
     getPlayersList,
     getTeamAverage,
+    getTopGlobalPlayers,
+    getTopTeamPlayers,
     getTopScorer,
     getVisibleMatches,
     groupPlayersByMatch,
@@ -21,6 +26,7 @@ import {
 
 const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
+const RANKINGS_ROUTE = "#/rankings";
 
 const appStyles = {
     page: {
@@ -189,6 +195,13 @@ const appStyles = {
         gap: 14,
         flexWrap: "wrap"
     },
+    heroActions: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        gap: 16,
+        flexWrap: "wrap"
+    },
     cardsGrid: {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
@@ -231,11 +244,53 @@ const appStyles = {
         maxWidth: 760,
         color: "var(--muted)",
         lineHeight: 1.6
+    },
+    secondaryLink: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: 44,
+        padding: "0 18px",
+        borderRadius: 999,
+        textDecoration: "none",
+        fontWeight: 800,
+        color: "#fff8f0",
+        background: "rgba(255, 248, 238, 0.12)",
+        border: "1px solid rgba(255, 255, 255, 0.16)",
+        backdropFilter: "blur(10px)",
+        marginLeft: "auto"
+    },
+    pageShell: {
+        display: "grid",
+        gap: 18,
+        animation: "fade-up 720ms ease both"
+    },
+    pageBackLink: {
+        display: "inline-flex",
+        alignItems: "center",
+        width: "fit-content",
+        minHeight: 40,
+        padding: "0 16px",
+        borderRadius: 999,
+        textDecoration: "none",
+        color: "var(--navy)",
+        background: "rgba(255, 251, 245, 0.86)",
+        border: "1px solid rgba(26, 53, 87, 0.12)",
+        boxShadow: "var(--shadow-sm)",
+        fontWeight: 800
     }
 };
 
 function getRouteFromHash(hash) {
-    return hash === SYNC_ROUTE ? "sync" : "dashboard";
+    if (hash === SYNC_ROUTE) {
+        return "sync";
+    }
+
+    if (hash === RANKINGS_ROUTE || hash === "#/global") {
+        return "rankings";
+    }
+
+    return "dashboard";
 }
 
 function App() {
@@ -320,6 +375,11 @@ function App() {
     );
     const visibleMatches = getVisibleMatches(sortedMatches, selectedMatch);
     const playersArray = buildPlayersArray(players);
+    const teamLeadersByAvgValuation = getTopTeamPlayers(playersArray, "avgValuation", 8);
+    const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
+    const globalPlayers = buildGlobalPlayers(teams);
+    const globalLeadersByAvgValuation = getTopGlobalPlayers(globalPlayers, "avgValuation", 8);
+    const globalLeadersByPoints = getTopGlobalPlayers(globalPlayers, "points", 8);
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
@@ -327,7 +387,7 @@ function App() {
         ? "Temporada completa"
         : `Fase ${selectedPhaseValue}`;
     const summaryText = selectedPhaseValue === null
-        ? `${analysis?.totalMatches ?? 0} partidos analizados · ${teams.length} equipos disponibles`
+        ? `${analysis?.totalMatches ?? 0} partidos · ${teams.length} equipos`
         : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
 
     const handleToggleMatch = (matchWebId) => {
@@ -375,7 +435,7 @@ function App() {
                     <div style={appStyles.heroPattern}/>
                     <div style={appStyles.heroContent}>
                         <div style={appStyles.heroHeader}>
-                            <div style={appStyles.heroKicker}>Lectura de temporada</div>
+                            <div style={appStyles.heroKicker}>Vista del equipo</div>
                             <h2 style={appStyles.heroTitle}>{selectedTeam.teamName}</h2>
                             <p style={appStyles.heroSummary}>{summaryText}</p>
                         </div>
@@ -386,37 +446,43 @@ function App() {
                             <span style={appStyles.metaChip}>{playersArray.length} jugadoras</span>
                         </div>
 
-                        <div style={appStyles.filterDeck}>
-                            <PrettySelect
-                                label="Equipo"
-                                value={effectiveTeamKey}
-                                onChange={handleTeamChange}
-                                ariaLabel="Selecciona equipo"
-                                minWidth="360px"
-                                labelColor="rgba(255, 247, 237, 0.82)"
-                            >
-                                {sortedTeams.map((team) => (
-                                    <option key={team.teamKey} value={team.teamKey}>
-                                        {team.teamName}
-                                    </option>
-                                ))}
-                            </PrettySelect>
+                        <div style={appStyles.heroActions}>
+                            <div style={appStyles.filterDeck}>
+                                <PrettySelect
+                                    label="Equipo"
+                                    value={effectiveTeamKey}
+                                    onChange={handleTeamChange}
+                                    ariaLabel="Selecciona equipo"
+                                    minWidth="360px"
+                                    labelColor="rgba(255, 247, 237, 0.82)"
+                                >
+                                    {sortedTeams.map((team) => (
+                                        <option key={team.teamKey} value={team.teamKey}>
+                                            {team.teamName}
+                                        </option>
+                                    ))}
+                                </PrettySelect>
 
-                            <PrettySelect
-                                label="Fase"
-                                value={selectedPhase}
-                                onChange={handlePhaseChange}
-                                ariaLabel="Selecciona fase"
-                                minWidth="220px"
-                                labelColor="rgba(255, 247, 237, 0.82)"
-                            >
-                                <option value="">Temporada completa</option>
-                                {availablePhases.map((phase) => (
-                                    <option key={phase} value={phase}>
-                                        Fase {phase}
-                                    </option>
-                                ))}
-                            </PrettySelect>
+                                <PrettySelect
+                                    label="Fase"
+                                    value={selectedPhase}
+                                    onChange={handlePhaseChange}
+                                    ariaLabel="Selecciona fase"
+                                    minWidth="220px"
+                                    labelColor="rgba(255, 247, 237, 0.82)"
+                                >
+                                    <option value="">Temporada completa</option>
+                                    {availablePhases.map((phase) => (
+                                        <option key={phase} value={phase}>
+                                            Fase {phase}
+                                        </option>
+                                    ))}
+                                </PrettySelect>
+                            </div>
+
+                            <a href={RANKINGS_ROUTE} style={appStyles.secondaryLink}>
+                                Ver rankings
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -430,21 +496,21 @@ function App() {
                     />
 
                     <StatCard
-                        title="Top scorer"
+                        title="Máxima anotadora"
                         value={topScorer?.name ?? "-"}
                         subtitle={topScorer ? `${topScorer.points} pts` : undefined}
                         tone="ink"
                     />
 
                     <StatCard
-                        title="Media equipo"
+                        title="Media del equipo"
                         value={teamAvg.toFixed(1)}
                         subtitle="pts por partido"
                         tone="gold"
                     />
 
                     <StatCard
-                        title="Rotación"
+                        title="Jugadoras usadas"
                         value={playersArray.length}
                         subtitle={`${sortedMatches.length} partidos`}
                         tone="mint"
@@ -475,10 +541,9 @@ function App() {
         <div style={appStyles.syncPage}>
             <section style={appStyles.syncIntro}>
                 <div style={appStyles.syncEyebrow}>Ingesta</div>
-                <h2 style={appStyles.syncTitle}>Carga una fase completa desde la fuente oficial</h2>
+                <h2 style={appStyles.syncTitle}>Importa una fase completa desde la fuente oficial</h2>
                 <p style={appStyles.syncBody}>
-                    Pega la URL de resultados, dispara la sincronización y deja que el pipeline reconstruya
-                    `match_mapping.json`, `stats`, `moves` y `analysis.json` sin pasar por la consola.
+                    Pega la URL de resultados y deja que el pipeline descargue los partidos y actualice la web sin pasar por la consola.
                 </p>
             </section>
 
@@ -492,6 +557,43 @@ function App() {
         </div>
     );
 
+    const renderRankingsPage = () => (
+        <div style={appStyles.pageShell}>
+            <a href={DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
+                Volver al panel
+            </a>
+
+            {selectedTeam ? (
+                <TeamLeadersSection
+                    teamName={selectedTeam.teamName}
+                    seasonLabel={seasonLabel}
+                    matchesCount={sortedMatches.length}
+                    playersCount={playersArray.length}
+                    leadersByAvgValuation={teamLeadersByAvgValuation}
+                    leadersByPoints={teamLeadersByPoints}
+                />
+            ) : null}
+
+            <GlobalLeadersSection
+                totalPlayers={globalPlayers.length}
+                totalTeams={teams.length}
+                leadersByAvgValuation={globalLeadersByAvgValuation}
+                leadersByPoints={globalLeadersByPoints}
+            />
+        </div>
+    );
+
+    const pageTitle = route === "sync"
+        ? "Importar datos"
+        : route === "rankings"
+            ? "Rankings"
+            : "Cuaderno de juego";
+    const pageNote = route === "sync"
+        ? "Añade nuevas fases desde la fuente oficial sin pasar por la terminal."
+        : route === "rankings"
+            ? "Combina la lectura del equipo seleccionado con la clasificación general de jugadoras."
+            : "Sigue la temporada por equipo y por fase, con detalle de cada partido y lectura visual de su evolución.";
+
     return (
         <div style={appStyles.page}>
             <div style={appStyles.glowPrimary}/>
@@ -501,12 +603,8 @@ function App() {
                 <div style={appStyles.topBar}>
                     <div style={appStyles.brand}>
                         <p style={appStyles.eyebrow}>BarnaStats</p>
-                        <h1 style={appStyles.brandTitle}>
-                            {route === "sync" ? "Sala de Carga" : "Cuaderno de Juego"}
-                        </h1>
-                        <p style={appStyles.brandNote}>
-                            Estadistica de baloncesto, fase a fase, con una capa visual bastante mas cuidada que el prototipo inicial.
-                        </p>
+                        <h1 style={appStyles.brandTitle}>{pageTitle}</h1>
+                        <p style={appStyles.brandNote}>{pageNote}</p>
                     </div>
 
                     <div style={appStyles.nav}>
@@ -529,7 +627,11 @@ function App() {
                     </div>
                 </div>
 
-                {route === "sync" ? renderSyncPage() : renderDashboard()}
+                {route === "sync"
+                    ? renderSyncPage()
+                    : route === "rankings"
+                        ? renderRankingsPage()
+                        : renderDashboard()}
             </div>
         </div>
     );
