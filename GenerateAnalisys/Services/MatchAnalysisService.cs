@@ -213,14 +213,17 @@ public sealed class MatchAnalysisService
             }
         }
 
+        var teamAnalyses = teamsByKey.Values
+            .Select(BuildTeamAnalysis)
+            .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
         return new AnalysisResult
         {
             GeneratedAtUtc = DateTime.UtcNow,
             TotalMatches = processedMatches,
-            Teams = teamsByKey.Values
-                .Select(BuildTeamAnalysis)
-                .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
-                .ToList()
+            Competition = BuildCompetitionAnalysis(teamAnalyses),
+            Teams = teamAnalyses
         };
     }
 
@@ -284,6 +287,187 @@ public sealed class MatchAnalysisService
             Ranking = BuildRanking(seasonTotals),
             Evolution = BuildEvolution(matchPlayers)
         };
+    }
+
+    private static CompetitionAnalysis BuildCompetitionAnalysis(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
+    {
+        var competitionTeams = teamAnalyses
+            .Select(team => new CompetitionTeamOverview
+            {
+                TeamKey = team.TeamKey,
+                TeamIdIntern = team.TeamIdIntern,
+                TeamIdExtern = team.TeamIdExtern,
+                TeamName = team.TeamName,
+                MatchesPlayed = team.MatchesPlayed,
+                PlayersCount = team.PlayersCount
+            })
+            .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+        var competitionMatches = BuildCompetitionMatches(teamAnalyses);
+        var competitionPhases = competitionMatches
+            .GroupBy(match => match.PhaseNumber)
+            .OrderBy(group => group.Key)
+            .Select(group => new CompetitionPhase
+            {
+                PhaseNumber = group.Key,
+                MatchesCount = group.Count()
+            })
+            .ToList();
+
+        return new CompetitionAnalysis
+        {
+            TotalTeams = competitionTeams.Count,
+            TotalMatches = competitionMatches.Count,
+            Phases = competitionPhases,
+            Teams = competitionTeams,
+            Matches = competitionMatches,
+            StandingsByPhase = BuildCompetitionStandings(competitionMatches),
+            PlayerLeaders = BuildCompetitionPlayerLeaders(teamAnalyses)
+        };
+    }
+
+    private static List<CompetitionMatch> BuildCompetitionMatches(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
+    {
+        return teamAnalyses
+            .SelectMany(team => team.MatchSummaries)
+            .GroupBy(summary => summary.MatchWebId)
+            .Select(group =>
+            {
+                var homePerspective = group.FirstOrDefault(summary => summary.IsHome) ?? group.First();
+                var homeScore = homePerspective.IsHome ? homePerspective.TeamScore : homePerspective.RivalScore;
+                var awayScore = homePerspective.IsHome ? homePerspective.RivalScore : homePerspective.TeamScore;
+
+                return new CompetitionMatch
+                {
+                    MatchWebId = homePerspective.MatchWebId,
+                    MatchInternId = homePerspective.MatchInternId,
+                    MatchExternId = homePerspective.MatchExternId,
+                    MatchDate = homePerspective.MatchDate,
+                    PhaseNumber = homePerspective.PhaseNumber,
+                    HomeTeamKey = homePerspective.HomeTeamKey,
+                    HomeTeam = homePerspective.HomeTeam,
+                    HomeScore = homeScore,
+                    AwayTeamKey = homePerspective.AwayTeamKey,
+                    AwayTeam = homePerspective.AwayTeam,
+                    AwayScore = awayScore,
+                    TopScorer = homePerspective.TopScorer,
+                    TopScorerTeam = homePerspective.TopScorerTeam,
+                    TopScorerPoints = homePerspective.TopScorerPoints
+                };
+            })
+            .OrderBy(match => match.MatchDate ?? DateTime.MaxValue)
+            .ThenBy(match => match.MatchWebId)
+            .ToList();
+    }
+
+    private static List<CompetitionPhaseStandings> BuildCompetitionStandings(IReadOnlyCollection<CompetitionMatch> matches)
+    {
+        return matches
+            .GroupBy(match => match.PhaseNumber)
+            .OrderBy(group => group.Key)
+            .Select(group => new CompetitionPhaseStandings
+            {
+                PhaseNumber = group.Key,
+                Rows = BuildCompetitionStandingRows(group)
+            })
+            .ToList();
+    }
+
+    private static List<CompetitionStandingRow> BuildCompetitionStandingRows(IEnumerable<CompetitionMatch> matches)
+    {
+        var rowsByTeam = new Dictionary<string, MutableStandingRow>(StringComparer.Ordinal);
+
+        foreach (var match in matches)
+        {
+            var home = GetOrCreateStandingRow(rowsByTeam, match.HomeTeamKey, match.HomeTeam);
+            var away = GetOrCreateStandingRow(rowsByTeam, match.AwayTeamKey, match.AwayTeam);
+
+            home.Played += 1;
+            home.PointsFor += match.HomeScore;
+            home.PointsAgainst += match.AwayScore;
+
+            away.Played += 1;
+            away.PointsFor += match.AwayScore;
+            away.PointsAgainst += match.HomeScore;
+
+            if (match.HomeScore > match.AwayScore)
+            {
+                home.Wins += 1;
+                away.Losses += 1;
+            }
+            else if (match.HomeScore < match.AwayScore)
+            {
+                away.Wins += 1;
+                home.Losses += 1;
+            }
+            else
+            {
+                home.Ties += 1;
+                away.Ties += 1;
+            }
+        }
+
+        return rowsByTeam.Values
+            .OrderByDescending(row => row.Wins)
+            .ThenBy(row => row.Losses)
+            .ThenByDescending(row => row.PointDiff)
+            .ThenByDescending(row => row.PointsFor)
+            .ThenBy(row => row.TeamName, StringComparer.OrdinalIgnoreCase)
+            .Select((row, index) => new CompetitionStandingRow
+            {
+                Position = index + 1,
+                TeamKey = row.TeamKey,
+                TeamName = row.TeamName,
+                Played = row.Played,
+                Wins = row.Wins,
+                Losses = row.Losses,
+                Ties = row.Ties,
+                PointsFor = row.PointsFor,
+                PointsAgainst = row.PointsAgainst,
+                PointDiff = row.PointDiff
+            })
+            .ToList();
+    }
+
+    private static MutableStandingRow GetOrCreateStandingRow(
+        IDictionary<string, MutableStandingRow> rowsByTeam,
+        string teamKey,
+        string teamName)
+    {
+        if (!rowsByTeam.TryGetValue(teamKey, out var row))
+        {
+            row = new MutableStandingRow(teamKey, teamName);
+            rowsByTeam[teamKey] = row;
+        }
+
+        return row;
+    }
+
+    private static List<CompetitionPlayerLeader> BuildCompetitionPlayerLeaders(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
+    {
+        return teamAnalyses
+            .SelectMany(team => team.SeasonTotals)
+            .Select(player => new CompetitionPlayerLeader
+            {
+                Key = $"{player.TeamKey}:{player.PlayerName}:{player.ShirtNumber}",
+                TeamKey = player.TeamKey,
+                TeamIdIntern = player.TeamIdIntern,
+                TeamIdExtern = player.TeamIdExtern,
+                TeamName = player.TeamName,
+                PlayerActorId = player.PlayerActorId,
+                PlayerName = player.PlayerName,
+                ShirtNumber = player.ShirtNumber,
+                Games = player.Games,
+                Minutes = player.Minutes,
+                Points = player.Points,
+                AvgPoints = player.Games > 0 ? (double)player.Points / player.Games : 0,
+                Valuation = player.Valuation,
+                AvgValuation = player.Games > 0 ? (double)player.Valuation / player.Games : 0
+            })
+            .OrderByDescending(player => player.Points)
+            .ThenBy(player => player.PlayerName, StringComparer.OrdinalIgnoreCase)
+            .ToList();
     }
 
     private static List<MatchMVP> BuildMatchMvps(IEnumerable<MatchPlayerRow> matchPlayerRows)
@@ -667,6 +851,25 @@ public sealed class MatchAnalysisService
         int VisitScore,
         int DeltaLocal,
         int DeltaVisit);
+
+    private sealed class MutableStandingRow
+    {
+        public MutableStandingRow(string teamKey, string teamName)
+        {
+            TeamKey = teamKey;
+            TeamName = teamName;
+        }
+
+        public string TeamKey { get; }
+        public string TeamName { get; }
+        public int Played { get; set; }
+        public int Wins { get; set; }
+        public int Losses { get; set; }
+        public int Ties { get; set; }
+        public int PointsFor { get; set; }
+        public int PointsAgainst { get; set; }
+        public int PointDiff => PointsFor - PointsAgainst;
+    }
 
     private sealed class TeamAccumulator
     {

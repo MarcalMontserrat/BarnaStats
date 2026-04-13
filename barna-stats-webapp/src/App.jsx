@@ -13,14 +13,10 @@ import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
     buildPhaseComparison,
     buildPhaseSummaries,
-    buildStandings,
-    buildTeamRoute,
-    buildUniqueMatches,
-    getAllPhaseNumbers
+    buildTeamRoute
 } from "./utils/analysisDerived.js";
 import {
     buildPlayersArray,
-    buildGlobalPlayers,
     getChartData,
     getMvp,
     getPlayersList,
@@ -36,7 +32,7 @@ import {
 
 const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
-const RANKINGS_ROUTE = "#/rankings";
+const COMPETITION_ROUTE = "#/competition";
 const TEAM_ROUTE_PREFIX = "#/team/";
 
 const appStyles = {
@@ -297,8 +293,8 @@ function parseHash(hash) {
         return {route: "sync", teamKey: null};
     }
 
-    if (hash === RANKINGS_ROUTE || hash === "#/global") {
-        return {route: "rankings", teamKey: null};
+    if (hash === COMPETITION_ROUTE || hash === "#/rankings" || hash === "#/global") {
+        return {route: "competition", teamKey: null};
     }
 
     if (hash.startsWith(TEAM_ROUTE_PREFIX)) {
@@ -361,6 +357,7 @@ function App() {
     }, []);
 
     const teams = analysis?.teams ?? [];
+    const competition = analysis?.competition ?? null;
     const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
     const defaultTeam = teams.reduce((best, team) => {
         if (!best) {
@@ -385,10 +382,12 @@ function App() {
     const selectedTeam = teams.find((team) => team.teamKey === effectiveTeamKey) ?? defaultTeam ?? null;
     const teamPlayers = selectedTeam?.matchPlayers ?? [];
     const teamMatchSummaries = selectedTeam?.matchSummaries ?? [];
-    const allPhaseNumbers = getAllPhaseNumbers(teams);
-    const latestPhaseNumber = allPhaseNumbers.at(-1) ?? 1;
     const availablePhases = [...new Set(teamMatchSummaries.map((match) => match.phaseNumber))]
         .sort((a, b) => a - b);
+    const competitionPhaseNumbers = (competition?.phases ?? [])
+        .map((phase) => phase.phaseNumber)
+        .sort((a, b) => a - b);
+    const latestCompetitionPhase = competitionPhaseNumbers.at(-1) ?? 1;
     const selectedPhaseValue = selectedPhase ? Number(selectedPhase) : null;
     const matchSummaries = selectedPhaseValue === null
         ? teamMatchSummaries
@@ -409,19 +408,20 @@ function App() {
     );
     const visibleMatches = getVisibleMatches(sortedMatches, selectedMatch);
     const playersArray = buildPlayersArray(players);
-    const uniqueMatches = buildUniqueMatches(teams);
-    const standingsPhaseValue = selectedPhaseValue ?? Number(selectedStandingsPhase || latestPhaseNumber);
-    const standingsRows = buildStandings(uniqueMatches, standingsPhaseValue);
     const phaseSummaries = buildPhaseSummaries(teamMatchSummaries, teamPlayers);
     const phaseComparison = buildPhaseComparison(phaseSummaries);
+    const teamLeadersByAvgValuation = getTopTeamPlayers(playersArray, "avgValuation", 8);
+    const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
+    const competitionPlayerLeaders = competition?.playerLeaders ?? [];
     const rankingMinGamesValue = Number(rankingMinGames || 1);
-    const filteredTeamRankingBase = playersArray.filter((player) => player.games >= rankingMinGamesValue);
-    const teamLeadersByAvgValuation = getTopTeamPlayers(filteredTeamRankingBase, "avgValuation", 8);
-    const teamLeadersByPoints = getTopTeamPlayers(filteredTeamRankingBase, "points", 8);
-    const globalPlayers = buildGlobalPlayers(teams);
-    const filteredGlobalPlayers = globalPlayers.filter((player) => player.games >= rankingMinGamesValue);
-    const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredGlobalPlayers, "avgValuation", 8);
-    const globalLeadersByPoints = getTopGlobalPlayers(filteredGlobalPlayers, "points", 8);
+    const filteredCompetitionPlayers = competitionPlayerLeaders
+        .filter((player) => player.games >= rankingMinGamesValue);
+    const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredCompetitionPlayers, "avgValuation", 8);
+    const globalLeadersByPoints = getTopGlobalPlayers(filteredCompetitionPlayers, "points", 8);
+    const effectiveCompetitionPhase = Number(selectedStandingsPhase || latestCompetitionPhase);
+    const competitionStandingsRows = competition?.standingsByPhase
+        ?.find((phase) => phase.phaseNumber === effectiveCompetitionPhase)
+        ?.rows ?? [];
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
@@ -429,7 +429,7 @@ function App() {
         ? "Temporada completa"
         : `Fase ${selectedPhaseValue}`;
     const summaryText = selectedPhaseValue === null
-        ? `${analysis?.totalMatches ?? 0} partidos · ${teams.length} equipos`
+        ? `${selectedTeam?.matchesPlayed ?? 0} partidos · ${selectedTeam?.playersCount ?? 0} jugadoras`
         : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
 
     const handleToggleMatch = (matchWebId) => {
@@ -468,14 +468,6 @@ function App() {
     };
 
     const handleStandingsPhaseChange = (phase) => {
-        if (selectedPhaseValue !== null) {
-            setSelectedPhase(String(phase));
-            setSelectedPlayer("");
-            setSelectedMatch("");
-            setOpenMatches({});
-            return;
-        }
-
         setSelectedStandingsPhase(String(phase));
     };
 
@@ -543,8 +535,8 @@ function App() {
                                 </PrettySelect>
                             </div>
 
-                            <a href={RANKINGS_ROUTE} style={appStyles.secondaryLink}>
-                                Ver rankings
+                            <a href={COMPETITION_ROUTE} style={appStyles.secondaryLink}>
+                                Ver competición
                             </a>
                         </div>
                     </div>
@@ -580,18 +572,18 @@ function App() {
                     />
                 </section>
 
+                <TeamLeadersSection
+                    teamName={selectedTeam.teamName}
+                    seasonLabel={seasonLabel}
+                    matchesCount={sortedMatches.length}
+                    playersCount={playersArray.length}
+                    leadersByAvgValuation={teamLeadersByAvgValuation}
+                    leadersByPoints={teamLeadersByPoints}
+                />
+
                 <PhaseComparisonSection
                     phaseSummaries={phaseSummaries}
                     comparison={phaseComparison}
-                />
-
-                <StandingsSection
-                    rows={standingsRows}
-                    availablePhases={allPhaseNumbers}
-                    selectedPhase={standingsPhaseValue}
-                    onSelectedPhaseChange={handleStandingsPhaseChange}
-                    selectedTeamKey={effectiveTeamKey}
-                    onTeamNavigate={handleTeamNavigate}
                 />
 
                 <PlayerEvolutionSection
@@ -635,20 +627,34 @@ function App() {
         </div>
     );
 
-    const renderRankingsPage = () => (
+    const renderCompetitionPage = () => (
         <div style={appStyles.pageShell}>
             <a href={selectedTeam ? buildTeamRoute(selectedTeam.teamKey) : DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
                 Volver al panel
             </a>
 
             <section style={appStyles.syncIntro}>
-                <div style={appStyles.syncEyebrow}>Filtro</div>
-                <h2 style={appStyles.syncTitle}>Rankings con un poco más de rigor</h2>
+                <div style={appStyles.syncEyebrow}>Competición</div>
+                <h2 style={appStyles.syncTitle}>Panorama general</h2>
                 <p style={appStyles.syncBody}>
-                    Ajusta el mínimo de partidos para limpiar las medias y evitar que una muestra pequeña distorsione el ranking.
+                    Todo lo que no pertenece a un solo equipo vive aquí: clasificación, fases y líderes globales.
                 </p>
 
                 <div style={appStyles.filterDeck}>
+                    <PrettySelect
+                        label="Fase"
+                        value={String(effectiveCompetitionPhase)}
+                        onChange={(event) => handleStandingsPhaseChange(Number(event.target.value))}
+                        ariaLabel="Selecciona fase de competición"
+                        minWidth="220px"
+                    >
+                        {competitionPhaseNumbers.map((phase) => (
+                            <option key={phase} value={phase}>
+                                Fase {phase}
+                            </option>
+                        ))}
+                    </PrettySelect>
+
                     <PrettySelect
                         label="Mínimo de partidos"
                         value={rankingMinGames}
@@ -663,20 +669,18 @@ function App() {
                 </div>
             </section>
 
-            {selectedTeam ? (
-                <TeamLeadersSection
-                    teamName={selectedTeam.teamName}
-                    seasonLabel={seasonLabel}
-                    matchesCount={sortedMatches.length}
-                    playersCount={playersArray.length}
-                    leadersByAvgValuation={teamLeadersByAvgValuation}
-                    leadersByPoints={teamLeadersByPoints}
-                />
-            ) : null}
+            <StandingsSection
+                rows={competitionStandingsRows}
+                availablePhases={competitionPhaseNumbers}
+                selectedPhase={effectiveCompetitionPhase}
+                onSelectedPhaseChange={handleStandingsPhaseChange}
+                selectedTeamKey={effectiveTeamKey}
+                onTeamNavigate={handleTeamNavigate}
+            />
 
             <GlobalLeadersSection
-                totalPlayers={globalPlayers.length}
-                totalTeams={teams.length}
+                totalPlayers={competitionPlayerLeaders.length}
+                totalTeams={competition?.totalTeams ?? teams.length}
                 leadersByAvgValuation={globalLeadersByAvgValuation}
                 leadersByPoints={globalLeadersByPoints}
                 onTeamNavigate={handleTeamNavigate}
@@ -686,13 +690,13 @@ function App() {
 
     const pageTitle = route === "sync"
         ? "Importar datos"
-        : route === "rankings"
-            ? "Rankings"
+        : route === "competition"
+            ? "Competición"
             : "Cuaderno de juego";
     const pageNote = route === "sync"
         ? "Añade nuevas fases desde la fuente oficial sin pasar por la terminal."
-        : route === "rankings"
-            ? "Combina la lectura del equipo actual con la clasificación general de jugadoras."
+        : route === "competition"
+            ? "Clasificación, fases y líderes globales separados del análisis propio de cada equipo."
             : "Sigue la temporada por equipo y por fase, con detalle de cada partido y lectura visual de su evolución.";
 
     return (
@@ -730,8 +734,8 @@ function App() {
 
                 {route === "sync"
                     ? renderSyncPage()
-                    : route === "rankings"
-                        ? renderRankingsPage()
+                    : route === "competition"
+                        ? renderCompetitionPage()
                         : renderDashboard()}
             </div>
         </div>

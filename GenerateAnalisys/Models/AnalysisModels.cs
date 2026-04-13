@@ -153,6 +153,89 @@ public sealed class MatchInsights
     public List<MatchPeriodScore> PeriodScores { get; set; } = [];
 }
 
+public sealed class CompetitionPhase
+{
+    public int PhaseNumber { get; init; }
+    public int MatchesCount { get; init; }
+}
+
+public sealed class CompetitionTeamOverview
+{
+    public string TeamKey { get; init; } = "";
+    public int TeamIdIntern { get; init; }
+    public int TeamIdExtern { get; init; }
+    public string TeamName { get; init; } = "";
+    public int MatchesPlayed { get; init; }
+    public int PlayersCount { get; init; }
+}
+
+public sealed class CompetitionMatch
+{
+    public int MatchWebId { get; init; }
+    public int MatchInternId { get; init; }
+    public int MatchExternId { get; init; }
+    public DateTime? MatchDate { get; init; }
+    public int PhaseNumber { get; init; }
+    public string HomeTeamKey { get; init; } = "";
+    public string HomeTeam { get; init; } = "";
+    public int HomeScore { get; init; }
+    public string AwayTeamKey { get; init; } = "";
+    public string AwayTeam { get; init; } = "";
+    public int AwayScore { get; init; }
+    public string TopScorer { get; init; } = "";
+    public string TopScorerTeam { get; init; } = "";
+    public int TopScorerPoints { get; init; }
+}
+
+public sealed class CompetitionStandingRow
+{
+    public int Position { get; init; }
+    public string TeamKey { get; init; } = "";
+    public string TeamName { get; init; } = "";
+    public int Played { get; init; }
+    public int Wins { get; init; }
+    public int Losses { get; init; }
+    public int Ties { get; init; }
+    public int PointsFor { get; init; }
+    public int PointsAgainst { get; init; }
+    public int PointDiff { get; init; }
+}
+
+public sealed class CompetitionPhaseStandings
+{
+    public int PhaseNumber { get; init; }
+    public List<CompetitionStandingRow> Rows { get; init; } = [];
+}
+
+public sealed class CompetitionPlayerLeader
+{
+    public string Key { get; init; } = "";
+    public string TeamKey { get; init; } = "";
+    public int TeamIdIntern { get; init; }
+    public int TeamIdExtern { get; init; }
+    public string TeamName { get; init; } = "";
+    public long PlayerActorId { get; init; }
+    public string PlayerName { get; init; } = "";
+    public string ShirtNumber { get; init; } = "";
+    public int Games { get; init; }
+    public int Minutes { get; init; }
+    public int Points { get; init; }
+    public double AvgPoints { get; init; }
+    public int Valuation { get; init; }
+    public double AvgValuation { get; init; }
+}
+
+public sealed class CompetitionAnalysis
+{
+    public int TotalTeams { get; init; }
+    public int TotalMatches { get; init; }
+    public List<CompetitionPhase> Phases { get; init; } = [];
+    public List<CompetitionTeamOverview> Teams { get; init; } = [];
+    public List<CompetitionMatch> Matches { get; init; } = [];
+    public List<CompetitionPhaseStandings> StandingsByPhase { get; init; } = [];
+    public List<CompetitionPlayerLeader> PlayerLeaders { get; init; } = [];
+}
+
 public sealed class TeamAnalysis
 {
     public string TeamKey { get; init; } = "";
@@ -173,5 +256,6 @@ public sealed class AnalysisResult
 {
     public DateTime GeneratedAtUtc { get; init; }
     public int TotalMatches { get; init; }
+    public CompetitionAnalysis Competition { get; init; } = new();
     public List<TeamAnalysis> Teams { get; init; } = [];
 }
