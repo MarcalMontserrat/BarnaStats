@@ -13,6 +13,7 @@ import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
     buildPhaseComparison,
     buildPhaseSummaries,
+    buildStandings,
     buildTeamRoute
 } from "./utils/analysisDerived.js";
 import {
@@ -329,7 +330,7 @@ function App() {
     const [selectedPlayer, setSelectedPlayer] = useState("");
     const [selectedMatch, setSelectedMatch] = useState("");
     const [openMatches, setOpenMatches] = useState({});
-    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("");
+    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("all");
     const [rankingMinGames, setRankingMinGames] = useState("3");
 
     useEffect(() => {
@@ -387,7 +388,6 @@ function App() {
     const competitionPhaseNumbers = (competition?.phases ?? [])
         .map((phase) => phase.phaseNumber)
         .sort((a, b) => a - b);
-    const latestCompetitionPhase = competitionPhaseNumbers.at(-1) ?? 1;
     const selectedPhaseValue = selectedPhase ? Number(selectedPhase) : null;
     const matchSummaries = selectedPhaseValue === null
         ? teamMatchSummaries
@@ -413,15 +413,18 @@ function App() {
     const teamLeadersByAvgValuation = getTopTeamPlayers(playersArray, "avgValuation", 8);
     const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
     const competitionPlayerLeaders = competition?.playerLeaders ?? [];
+    const competitionMatches = competition?.matches ?? [];
     const rankingMinGamesValue = Number(rankingMinGames || 1);
     const filteredCompetitionPlayers = competitionPlayerLeaders
         .filter((player) => player.games >= rankingMinGamesValue);
     const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredCompetitionPlayers, "avgValuation", 8);
     const globalLeadersByPoints = getTopGlobalPlayers(filteredCompetitionPlayers, "points", 8);
-    const effectiveCompetitionPhase = Number(selectedStandingsPhase || latestCompetitionPhase);
-    const competitionStandingsRows = competition?.standingsByPhase
-        ?.find((phase) => phase.phaseNumber === effectiveCompetitionPhase)
-        ?.rows ?? [];
+    const effectiveCompetitionPhase = selectedStandingsPhase || "all";
+    const competitionStandingsRows = effectiveCompetitionPhase === "all"
+        ? buildStandings(competitionMatches, null)
+        : (competition?.standingsByPhase
+            ?.find((phase) => String(phase.phaseNumber) === String(effectiveCompetitionPhase))
+            ?.rows ?? []);
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
@@ -468,7 +471,7 @@ function App() {
     };
 
     const handleStandingsPhaseChange = (phase) => {
-        setSelectedStandingsPhase(String(phase));
+        setSelectedStandingsPhase(String(phase || "all"));
     };
 
     const renderDashboard = () => {
@@ -635,38 +638,10 @@ function App() {
 
             <section style={appStyles.syncIntro}>
                 <div style={appStyles.syncEyebrow}>Competición</div>
-                <h2 style={appStyles.syncTitle}>Panorama general</h2>
+                <h2 style={appStyles.syncTitle}>Clasificación y líderes globales</h2>
                 <p style={appStyles.syncBody}>
-                    Todo lo que no pertenece a un solo equipo vive aquí: clasificación, fases y líderes globales.
+                    Aquí tienes la lectura global de la competición: la clasificación acumulada o por fase y las jugadoras que más destacan.
                 </p>
-
-                <div style={appStyles.filterDeck}>
-                    <PrettySelect
-                        label="Fase"
-                        value={String(effectiveCompetitionPhase)}
-                        onChange={(event) => handleStandingsPhaseChange(Number(event.target.value))}
-                        ariaLabel="Selecciona fase de competición"
-                        minWidth="220px"
-                    >
-                        {competitionPhaseNumbers.map((phase) => (
-                            <option key={phase} value={phase}>
-                                Fase {phase}
-                            </option>
-                        ))}
-                    </PrettySelect>
-
-                    <PrettySelect
-                        label="Mínimo de partidos"
-                        value={rankingMinGames}
-                        onChange={(event) => setRankingMinGames(event.target.value)}
-                        ariaLabel="Selecciona mínimo de partidos"
-                        minWidth="240px"
-                    >
-                        <option value="1">1 partido</option>
-                        <option value="3">3 partidos</option>
-                        <option value="5">5 partidos</option>
-                    </PrettySelect>
-                </div>
             </section>
 
             <StandingsSection
@@ -683,6 +658,8 @@ function App() {
                 totalTeams={competition?.totalTeams ?? teams.length}
                 leadersByAvgValuation={globalLeadersByAvgValuation}
                 leadersByPoints={globalLeadersByPoints}
+                rankingMinGames={rankingMinGames}
+                onRankingMinGamesChange={setRankingMinGames}
                 onTeamNavigate={handleTeamNavigate}
             />
         </div>
@@ -696,7 +673,7 @@ function App() {
     const pageNote = route === "sync"
         ? "Añade nuevas fases desde la fuente oficial sin pasar por la terminal."
         : route === "competition"
-            ? "Clasificación, fases y líderes globales separados del análisis propio de cada equipo."
+            ? "Clasificación general, clasificación por fases y líderes individuales separados del análisis propio de cada equipo."
             : "Sigue la temporada por equipo y por fase, con detalle de cada partido y lectura visual de su evolución.";
 
     return (

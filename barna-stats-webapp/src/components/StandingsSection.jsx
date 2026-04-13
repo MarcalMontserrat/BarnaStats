@@ -107,10 +107,11 @@ function StandingsSection({
                 <PrettySelect
                     label="Fase"
                     value={String(selectedPhase ?? "")}
-                    onChange={(event) => onSelectedPhaseChange(Number(event.target.value))}
+                    onChange={(event) => onSelectedPhaseChange(event.target.value)}
                     ariaLabel="Selecciona fase de clasificación"
                     minWidth="220px"
                 >
+                    <option value="all">Todas las fases</option>
                     {availablePhases.map((phase) => (
                         <option key={phase} value={phase}>
                             Fase {phase}
@@ -164,7 +165,7 @@ function StandingsSection({
                 </div>
             ) : (
                 <div style={styles.emptyState}>
-                    No hay partidos suficientes para construir la clasificación de esta fase.
+                    No hay partidos suficientes para construir esta clasificación.
                 </div>
             )}
         </section>

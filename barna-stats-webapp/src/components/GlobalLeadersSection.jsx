@@ -1,3 +1,5 @@
+import PrettySelect from "./PrettySelect.jsx";
+
 const styles = {
     section: {
         display: "grid",
@@ -31,6 +33,11 @@ const styles = {
     metaRow: {
         display: "flex",
         gap: 10,
+        flexWrap: "wrap"
+    },
+    controls: {
+        display: "flex",
+        gap: 16,
         flexWrap: "wrap"
     },
     metaChip: {
@@ -230,13 +237,15 @@ function GlobalLeadersSection({
     totalTeams,
     leadersByAvgValuation,
     leadersByPoints,
+    rankingMinGames,
+    onRankingMinGamesChange,
     onTeamNavigate
 }) {
     return (
         <section style={styles.section}>
             <div style={styles.header}>
-                <div style={styles.eyebrow}>Panorama global</div>
-                <h2 style={styles.title}>Ranking general de jugadoras</h2>
+                <div style={styles.eyebrow}>Líderes individuales</div>
+                <h2 style={styles.title}>Jugadoras destacadas de la competición</h2>
                 <p style={styles.subtitle}>
                     Consulta de un vistazo quién lidera la valoración media y quién sostiene el mayor peso anotador,
                     con su equipo al lado para dar el contexto que importa.
@@ -247,6 +256,20 @@ function GlobalLeadersSection({
                 <span style={styles.metaChip}>{totalPlayers} jugadoras</span>
                 <span style={styles.metaChip}>{totalTeams} equipos</span>
                 <span style={styles.metaChip}>Clasificación general</span>
+            </div>
+
+            <div style={styles.controls}>
+                <PrettySelect
+                    label="Mínimo de partidos"
+                    value={rankingMinGames}
+                    onChange={(event) => onRankingMinGamesChange(event.target.value)}
+                    ariaLabel="Selecciona mínimo de partidos para el ranking"
+                    minWidth="240px"
+                >
+                    <option value="1">1 partido</option>
+                    <option value="3">3 partidos</option>
+                    <option value="5">5 partidos</option>
+                </PrettySelect>
             </div>
 
             <div style={styles.boards}>
