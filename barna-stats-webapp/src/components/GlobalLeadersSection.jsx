@@ -13,7 +13,19 @@ const styles = {
     },
     header: {
         display: "grid",
-        gap: 10
+        gap: 16
+    },
+    headerTop: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        gap: 16,
+        flexWrap: "wrap"
+    },
+    titleBlock: {
+        display: "grid",
+        gap: 10,
+        minWidth: "min(100%, 540px)"
     },
     eyebrow: {
         color: "var(--accent)",
@@ -35,10 +47,16 @@ const styles = {
         gap: 10,
         flexWrap: "wrap"
     },
-    controls: {
-        display: "flex",
-        gap: 16,
-        flexWrap: "wrap"
+    controlBlock: {
+        display: "grid",
+        gap: 8,
+        justifyItems: "end",
+        flex: "0 0 auto"
+    },
+    controlHint: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 700
     },
     metaChip: {
         display: "inline-flex",
@@ -244,32 +262,37 @@ function GlobalLeadersSection({
     return (
         <section style={styles.section}>
             <div style={styles.header}>
-                <div style={styles.eyebrow}>Líderes individuales</div>
-                <h2 style={styles.title}>Jugadoras destacadas de la competición</h2>
-                <p style={styles.subtitle}>
-                    Consulta de un vistazo quién lidera la valoración media y quién sostiene el mayor peso anotador,
-                    con su equipo al lado para dar el contexto que importa.
-                </p>
+                <div style={styles.headerTop}>
+                    <div style={styles.titleBlock}>
+                        <div style={styles.eyebrow}>Líderes individuales</div>
+                        <h2 style={styles.title}>Jugadoras destacadas de la competición</h2>
+                        <p style={styles.subtitle}>
+                            Consulta de un vistazo quién lidera la valoración media y quién sostiene el mayor peso anotador,
+                            con su equipo al lado para dar el contexto que importa.
+                        </p>
+                    </div>
+
+                    <div style={styles.controlBlock}>
+                        <PrettySelect
+                            label="Mínimo de partidos"
+                            value={rankingMinGames}
+                            onChange={(event) => onRankingMinGamesChange(event.target.value)}
+                            ariaLabel="Selecciona mínimo de partidos para el ranking"
+                            minWidth="240px"
+                        >
+                            <option value="1">1 partido</option>
+                            <option value="3">3 partidos</option>
+                            <option value="5">5 partidos</option>
+                        </PrettySelect>
+                        <span style={styles.controlHint}>Este filtro solo afecta a los rankings de jugadoras.</span>
+                    </div>
+                </div>
             </div>
 
             <div style={styles.metaRow}>
                 <span style={styles.metaChip}>{totalPlayers} jugadoras</span>
                 <span style={styles.metaChip}>{totalTeams} equipos</span>
                 <span style={styles.metaChip}>Clasificación general</span>
-            </div>
-
-            <div style={styles.controls}>
-                <PrettySelect
-                    label="Mínimo de partidos"
-                    value={rankingMinGames}
-                    onChange={(event) => onRankingMinGamesChange(event.target.value)}
-                    ariaLabel="Selecciona mínimo de partidos para el ranking"
-                    minWidth="240px"
-                >
-                    <option value="1">1 partido</option>
-                    <option value="3">3 partidos</option>
-                    <option value="5">5 partidos</option>
-                </PrettySelect>
             </div>
 
             <div style={styles.boards}>

@@ -13,7 +13,19 @@ const styles = {
     },
     header: {
         display: "grid",
-        gap: 8
+        gap: 16
+    },
+    headerTop: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        gap: 16,
+        flexWrap: "wrap"
+    },
+    titleBlock: {
+        display: "grid",
+        gap: 8,
+        minWidth: "min(100%, 520px)"
     },
     eyebrow: {
         color: "var(--accent)",
@@ -30,10 +42,16 @@ const styles = {
         maxWidth: 760,
         lineHeight: 1.6
     },
-    controls: {
-        display: "flex",
-        gap: 16,
-        flexWrap: "wrap"
+    controlBlock: {
+        display: "grid",
+        gap: 8,
+        justifyItems: "end",
+        flex: "0 0 auto"
+    },
+    controlHint: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 700
     },
     tableShell: {
         overflowX: "auto",
@@ -96,28 +114,33 @@ function StandingsSection({
     return (
         <section style={styles.section}>
             <div style={styles.header}>
-                <div style={styles.eyebrow}>Clasificación</div>
-                <h2 style={styles.title}>Cómo está la competición</h2>
-                <p style={styles.subtitle}>
-                    Tabla de la fase elegida para situar al equipo seleccionado y abrir cualquier rival con un clic.
-                </p>
-            </div>
+                <div style={styles.headerTop}>
+                    <div style={styles.titleBlock}>
+                        <div style={styles.eyebrow}>Clasificación</div>
+                        <h2 style={styles.title}>Cómo está la competición</h2>
+                        <p style={styles.subtitle}>
+                            Tabla de la fase elegida para situar al equipo seleccionado y abrir cualquier rival con un clic.
+                        </p>
+                    </div>
 
-            <div style={styles.controls}>
-                <PrettySelect
-                    label="Fase"
-                    value={String(selectedPhase ?? "")}
-                    onChange={(event) => onSelectedPhaseChange(event.target.value)}
-                    ariaLabel="Selecciona fase de clasificación"
-                    minWidth="220px"
-                >
-                    <option value="all">Todas las fases</option>
-                    {availablePhases.map((phase) => (
-                        <option key={phase} value={phase}>
-                            Fase {phase}
-                        </option>
-                    ))}
-                </PrettySelect>
+                    <div style={styles.controlBlock}>
+                        <PrettySelect
+                            label="Fase"
+                            value={String(selectedPhase ?? "")}
+                            onChange={(event) => onSelectedPhaseChange(event.target.value)}
+                            ariaLabel="Selecciona fase de clasificación"
+                            minWidth="220px"
+                        >
+                            <option value="all">Todas las fases</option>
+                            {availablePhases.map((phase) => (
+                                <option key={phase} value={phase}>
+                                    Fase {phase}
+                                </option>
+                            ))}
+                        </PrettySelect>
+                        <span style={styles.controlHint}>Este selector solo afecta a la clasificación.</span>
+                    </div>
+                </div>
             </div>
 
             {rows.length > 0 ? (

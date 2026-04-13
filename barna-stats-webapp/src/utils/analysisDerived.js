@@ -192,6 +192,78 @@ export function buildPhaseComparison(phaseSummaries) {
     };
 }
 
+export function sortMatchSummariesChronologically(matchSummaries) {
+    return [...(matchSummaries ?? [])].sort((a, b) => {
+        const phaseA = Number(a.phaseNumber ?? Number.MAX_SAFE_INTEGER);
+        const phaseB = Number(b.phaseNumber ?? Number.MAX_SAFE_INTEGER);
+        if (phaseA !== phaseB) {
+            return phaseA - phaseB;
+        }
+
+        const phaseRoundA = Number(a.phaseRound ?? Number.MAX_SAFE_INTEGER);
+        const phaseRoundB = Number(b.phaseRound ?? Number.MAX_SAFE_INTEGER);
+        if (phaseRoundA !== phaseRoundB) {
+            return phaseRoundA - phaseRoundB;
+        }
+
+        const roundA = Number(a.roundNumber ?? Number.MAX_SAFE_INTEGER);
+        const roundB = Number(b.roundNumber ?? Number.MAX_SAFE_INTEGER);
+        if (roundA !== roundB) {
+            return roundA - roundB;
+        }
+
+        const dateA = a.matchDate ? new Date(a.matchDate).getTime() : Number.MAX_SAFE_INTEGER;
+        const dateB = b.matchDate ? new Date(b.matchDate).getTime() : Number.MAX_SAFE_INTEGER;
+        if (dateA !== dateB) {
+            return dateA - dateB;
+        }
+
+        return Number(a.matchWebId ?? 0) - Number(b.matchWebId ?? 0);
+    });
+}
+
+export function buildTeamRecord(matchSummaries) {
+    return (matchSummaries ?? []).reduce((record, match) => {
+        record.matches += 1;
+        record.pointsFor += Number(match.teamScore ?? 0);
+        record.pointsAgainst += Number(match.rivalScore ?? 0);
+
+        if (match.result === "W") {
+            record.wins += 1;
+        } else if (match.result === "L") {
+            record.losses += 1;
+        } else {
+            record.ties += 1;
+        }
+
+        return record;
+    }, {
+        matches: 0,
+        wins: 0,
+        losses: 0,
+        ties: 0,
+        pointsFor: 0,
+        pointsAgainst: 0
+    });
+}
+
+export function getLongestWinStreak(matchSummaries) {
+    let longest = 0;
+    let current = 0;
+
+    sortMatchSummariesChronologically(matchSummaries).forEach((match) => {
+        if (match.result === "W") {
+            current += 1;
+            longest = Math.max(longest, current);
+            return;
+        }
+
+        current = 0;
+    });
+
+    return longest;
+}
+
 function ensureStandingRow(rows, teamName, teamKey) {
     const resolvedKey = teamKey || normalizeTeamName(teamName);
 

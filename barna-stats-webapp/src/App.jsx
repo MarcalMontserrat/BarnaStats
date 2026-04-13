@@ -2,8 +2,9 @@ import {useEffect, useState} from "react";
 import GlobalLeadersSection from "./components/GlobalLeadersSection.jsx";
 import PhaseComparisonSection from "./components/PhaseComparisonSection.jsx";
 import StandingsSection from "./components/StandingsSection.jsx";
+import CompetitionResultsSection from "./components/CompetitionResultsSection.jsx";
 import TeamLeadersSection from "./components/TeamLeadersSection.jsx";
-import StatCard from "./components/StatCard.jsx";
+import TeamSnapshotSection from "./components/TeamSnapshotSection.jsx";
 import PlayerEvolutionSection from "./components/PlayerEvolutionSection.jsx";
 import MatchListSection from "./components/MatchListSection.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
@@ -11,10 +12,12 @@ import SyncPanel from "./components/SyncPanel.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
+    buildTeamRecord,
     buildPhaseComparison,
     buildPhaseSummaries,
     buildStandings,
-    buildTeamRoute
+    buildTeamRoute,
+    getLongestWinStreak
 } from "./utils/analysisDerived.js";
 import {
     buildPlayersArray,
@@ -35,6 +38,23 @@ const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
 const COMPETITION_ROUTE = "#/competition";
 const TEAM_ROUTE_PREFIX = "#/team/";
+const COMPETITION_TABS = [
+    {
+        id: "standings",
+        label: "Clasificación",
+        description: "Tabla general o por fase para situar a cada equipo."
+    },
+    {
+        id: "matches",
+        label: "Partidos",
+        description: "Listado de resultados de la competición."
+    },
+    {
+        id: "leaders",
+        label: "Jugadoras destacadas",
+        description: "Ranking global de valoración media y anotación."
+    }
+];
 
 const appStyles = {
     page: {
@@ -210,12 +230,6 @@ const appStyles = {
         gap: 16,
         flexWrap: "wrap"
     },
-    cardsGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-        gap: 18,
-        animation: "fade-up 820ms ease both"
-    },
     emptyState: {
         background: "linear-gradient(180deg, rgba(255, 252, 247, 0.92) 0%, rgba(252, 246, 239, 0.88) 100%)",
         padding: 28,
@@ -272,6 +286,39 @@ const appStyles = {
         display: "grid",
         gap: 18,
         animation: "fade-up 720ms ease both"
+    },
+    competitionTabs: {
+        display: "grid",
+        gap: 12
+    },
+    competitionTabRow: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    competitionTab: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: 44,
+        padding: "0 18px",
+        borderRadius: 999,
+        border: "1px solid rgba(26, 53, 87, 0.12)",
+        background: "rgba(255, 251, 245, 0.86)",
+        color: "var(--navy)",
+        fontWeight: 800,
+        cursor: "pointer",
+        boxShadow: "var(--shadow-sm)"
+    },
+    competitionTabActive: {
+        background: "linear-gradient(135deg, #1a3557 0%, #2d567b 100%)",
+        borderColor: "transparent",
+        color: "#fff7ef"
+    },
+    competitionTabHint: {
+        color: "var(--muted)",
+        fontSize: 14,
+        lineHeight: 1.6
     },
     pageBackLink: {
         display: "inline-flex",
@@ -331,7 +378,9 @@ function App() {
     const [selectedMatch, setSelectedMatch] = useState("");
     const [openMatches, setOpenMatches] = useState({});
     const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("all");
+    const [selectedResultsPhase, setSelectedResultsPhase] = useState("all");
     const [rankingMinGames, setRankingMinGames] = useState("3");
+    const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
 
     useEffect(() => {
         if (!window.location.hash) {
@@ -425,12 +474,21 @@ function App() {
         : (competition?.standingsByPhase
             ?.find((phase) => String(phase.phaseNumber) === String(effectiveCompetitionPhase))
             ?.rows ?? []);
+    const effectiveResultsPhase = selectedResultsPhase || "all";
+    const activeCompetitionTab = COMPETITION_TABS.find((tab) => tab.id === selectedCompetitionTab) ?? COMPETITION_TABS[0];
+    const teamStandingsRows = buildStandings(competitionMatches, selectedPhaseValue);
+    const selectedTeamStanding = teamStandingsRows.find((row) => row.teamKey === effectiveTeamKey) ?? null;
+    const teamRecord = buildTeamRecord(matchSummaries);
+    const bestWinStreak = getLongestWinStreak(matchSummaries);
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
     const seasonLabel = selectedPhaseValue === null
         ? "Temporada completa"
         : `Fase ${selectedPhaseValue}`;
+    const standingLabel = selectedPhaseValue === null
+        ? "Clasificación acumulada"
+        : `Clasificación de la fase ${selectedPhaseValue}`;
     const summaryText = selectedPhaseValue === null
         ? `${selectedTeam?.matchesPlayed ?? 0} partidos · ${selectedTeam?.playersCount ?? 0} jugadoras`
         : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
@@ -545,35 +603,16 @@ function App() {
                     </div>
                 </section>
 
-                <section style={appStyles.cardsGrid}>
-                    <StatCard
-                        title="MVP"
-                        value={mvp?.name ?? "-"}
-                        subtitle={mvp ? `${mvp.valuation} val` : undefined}
-                        tone="ember"
-                    />
-
-                    <StatCard
-                        title="Máxima anotadora"
-                        value={topScorer?.name ?? "-"}
-                        subtitle={topScorer ? `${topScorer.points} pts` : undefined}
-                        tone="ink"
-                    />
-
-                    <StatCard
-                        title="Media del equipo"
-                        value={teamAvg.toFixed(1)}
-                        subtitle="pts por partido"
-                        tone="gold"
-                    />
-
-                    <StatCard
-                        title="Jugadoras usadas"
-                        value={playersArray.length}
-                        subtitle={`${sortedMatches.length} partidos`}
-                        tone="mint"
-                    />
-                </section>
+                <TeamSnapshotSection
+                    seasonLabel={seasonLabel}
+                    record={teamRecord}
+                    standingRow={selectedTeamStanding}
+                    standingLabel={standingLabel}
+                    bestWinStreak={bestWinStreak}
+                    teamAveragePoints={teamAvg}
+                    topScorer={topScorer}
+                    mvp={mvp}
+                />
 
                 <TeamLeadersSection
                     teamName={selectedTeam.teamName}
@@ -638,30 +677,66 @@ function App() {
 
             <section style={appStyles.syncIntro}>
                 <div style={appStyles.syncEyebrow}>Competición</div>
-                <h2 style={appStyles.syncTitle}>Clasificación y líderes globales</h2>
+                <h2 style={appStyles.syncTitle}>Clasificación, resultados y líderes globales</h2>
                 <p style={appStyles.syncBody}>
-                    Aquí tienes la lectura global de la competición: la clasificación acumulada o por fase y las jugadoras que más destacan.
+                    Aquí tienes la lectura global de la competición: clasificación, partidos jugados y jugadoras destacadas en un mismo espacio.
                 </p>
             </section>
 
-            <StandingsSection
-                rows={competitionStandingsRows}
-                availablePhases={competitionPhaseNumbers}
-                selectedPhase={effectiveCompetitionPhase}
-                onSelectedPhaseChange={handleStandingsPhaseChange}
-                selectedTeamKey={effectiveTeamKey}
-                onTeamNavigate={handleTeamNavigate}
-            />
+            <section style={appStyles.competitionTabs}>
+                <div style={appStyles.competitionTabRow}>
+                    {COMPETITION_TABS.map((tab) => (
+                        <button
+                            key={tab.id}
+                            type="button"
+                            style={tab.id === activeCompetitionTab.id
+                                ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
+                                : appStyles.competitionTab}
+                            onClick={() => setSelectedCompetitionTab(tab.id)}
+                        >
+                            {tab.label}
+                        </button>
+                    ))}
+                </div>
 
-            <GlobalLeadersSection
-                totalPlayers={competitionPlayerLeaders.length}
-                totalTeams={competition?.totalTeams ?? teams.length}
-                leadersByAvgValuation={globalLeadersByAvgValuation}
-                leadersByPoints={globalLeadersByPoints}
-                rankingMinGames={rankingMinGames}
-                onRankingMinGamesChange={setRankingMinGames}
-                onTeamNavigate={handleTeamNavigate}
-            />
+                <p style={appStyles.competitionTabHint}>
+                    {activeCompetitionTab.description}
+                </p>
+            </section>
+
+            {activeCompetitionTab.id === "standings" ? (
+                <StandingsSection
+                    rows={competitionStandingsRows}
+                    availablePhases={competitionPhaseNumbers}
+                    selectedPhase={effectiveCompetitionPhase}
+                    onSelectedPhaseChange={handleStandingsPhaseChange}
+                    selectedTeamKey={effectiveTeamKey}
+                    onTeamNavigate={handleTeamNavigate}
+                />
+            ) : null}
+
+            {activeCompetitionTab.id === "matches" ? (
+                <CompetitionResultsSection
+                    matches={competitionMatches}
+                    availablePhases={competitionPhaseNumbers}
+                    selectedPhase={effectiveResultsPhase}
+                    onSelectedPhaseChange={setSelectedResultsPhase}
+                    selectedTeamKey={effectiveTeamKey}
+                    onTeamNavigate={handleTeamNavigate}
+                />
+            ) : null}
+
+            {activeCompetitionTab.id === "leaders" ? (
+                <GlobalLeadersSection
+                    totalPlayers={competitionPlayerLeaders.length}
+                    totalTeams={competition?.totalTeams ?? teams.length}
+                    leadersByAvgValuation={globalLeadersByAvgValuation}
+                    leadersByPoints={globalLeadersByPoints}
+                    rankingMinGames={rankingMinGames}
+                    onRankingMinGamesChange={setRankingMinGames}
+                    onTeamNavigate={handleTeamNavigate}
+                />
+            ) : null}
         </div>
     );
 
@@ -673,7 +748,7 @@ function App() {
     const pageNote = route === "sync"
         ? "Añade nuevas fases desde la fuente oficial sin pasar por la terminal."
         : route === "competition"
-            ? "Clasificación general, clasificación por fases y líderes individuales separados del análisis propio de cada equipo."
+            ? "Clasificación, resultados y líderes individuales en un espacio separado del análisis propio de cada equipo."
             : "Sigue la temporada por equipo y por fase, con detalle de cada partido y lectura visual de su evolución.";
 
     return (
