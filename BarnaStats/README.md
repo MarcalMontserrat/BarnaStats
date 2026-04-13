@@ -12,6 +12,9 @@ Cuando trabajas con varios equipos, cada calendario queda aislado en su propia c
 BarnaStats/out/teams/{teamCalendarId}/match_mapping.json
 BarnaStats/out/teams/{teamCalendarId}/stats
 BarnaStats/out/teams/{teamCalendarId}/moves
+BarnaStats/out/phases/{phaseId}/match_mapping.json
+BarnaStats/out/phases/{phaseId}/stats
+BarnaStats/out/phases/{phaseId}/moves
 ```
 
 ## Flujos
@@ -45,10 +48,29 @@ Qué hace en ese caso:
 - resuelve los `uuidMatch`
 - crea o completa `match_mapping.json`
 
+Si partes de la URL de resultados de una fase, puede extraer directamente `matchWebId` y `uuidMatch` desde esa página:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/competicions/resultats/20855/0
+```
+
+Qué hace en ese caso:
+
+- abre la página de resultados en el navegador real
+- reutiliza tu sesión para pasar captcha/login
+- extrae `matchWebId` y `uuidMatch` cuando la página ya los expone
+- crea o completa `BarnaStats/out/phases/{phaseId}/match_mapping.json`
+
 Si ya has sincronizado ese equipo una vez, también puedes apuntar directamente a su carpeta:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --team 81178 --all
+```
+
+Y lo mismo para una fase ya descubierta:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --phase 20855 --all
 ```
 
 También puedes forzar IDs concretos:
@@ -69,10 +91,16 @@ O releer el calendario y reintentar todos los partidos encontrados:
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --calendar https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178 --all
 ```
 
+O releer una página de resultados:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --results https://www.basquetcatala.cat/competicions/resultats/20855/0 --all
+```
+
 Si quieres lanzarlo desde la API local o desde un proceso sin terminal, usa el modo no interactivo:
 
 ```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --non-interactive https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --non-interactive https://www.basquetcatala.cat/competicions/resultats/20855/0
 ```
 
 ## Resumenes AI por partido
@@ -101,7 +129,7 @@ Comportamiento:
 dotnet run --project BarnaStats/BarnaStats.csproj
 ```
 
-El output se guarda en `out/stats` y `out/moves`.
+El output se guarda en `out/stats` y `out/moves` si trabajas sobre el mapping raíz, o en la carpeta del `team`/`phase` correspondiente si has usado una fuente con scope.
 
 ### 3. Generar análisis
 
@@ -109,10 +137,10 @@ Después hay que ejecutar `GenerateAnalisys` para producir el `analysis.json` co
 
 ### 4. Ejecutarlo todo del tirón
 
-Si quieres hacer el flujo completo partiendo de la URL del calendario:
+Si quieres hacer el flujo completo partiendo de la URL de resultados de una fase:
 
 ```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/competicions/resultats/20855/0
 ```
 
 Qué hace:
@@ -127,4 +155,10 @@ Si ya existe la carpeta del equipo:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --team 81178 --all
+```
+
+Si ya existe la carpeta de la fase:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --phase 20855 --all
 ```

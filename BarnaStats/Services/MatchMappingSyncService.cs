@@ -8,9 +8,16 @@ public sealed class MatchMappingSyncService
 {
     private const int AutomaticRetryAttempts = 5;
     private const int AutomaticRetryDelayMs = 2000;
+    private const int DirectMappingProximityWindow = 700;
 
-    private static readonly Regex UuidRegex = new(
+    private static readonly Regex UuidRouteRegex = new(
         "/estadistiques/([a-f0-9]{24})(?:[/?#\"'<> ]|$)",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex UuidJsonRegex = new(
+        "\"(?:uuid(?:Match)?|guid(?:Estadistiques)?|statsGuid|estadistiquesGuid|guidStats)\"\\s*:\\s*\"([a-f0-9]{24})\"",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex UuidAttributeRegex = new(
+        "(?:data-(?:uuid|guid|stats-guid|estadistiques-guid)|(?:uuid|guid))\\s*=\\s*[\"']([a-f0-9]{24})[\"']",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private static readonly Regex MatchWebIdRouteRegex = new(
         "(?:/|\\\\/)partits(?:/|\\\\/)llistatpartits(?:/|\\\\/)(\\d+)(?:[/?#\"'<> ]|$)",
@@ -57,7 +64,7 @@ public sealed class MatchMappingSyncService
         Console.WriteLine(interactive
             ? string.IsNullOrWhiteSpace(sourceUrl)
                 ? "Pulsa ENTER cuando la web de basquetcatala esté lista."
-                : "Pulsa ENTER cuando el calendario del equipo esté visible."
+                : "Pulsa ENTER cuando la página de basquetcatala esté visible."
             : "El proceso seguirá reintentando automáticamente mientras resuelves captcha/login en el navegador.");
 
         await page.GotoAsync(startUrl, new PageGotoOptions
@@ -74,9 +81,15 @@ public sealed class MatchMappingSyncService
             await page.WaitForTimeoutAsync(1000);
         }
 
-        var discoveredMatchWebIds = string.IsNullOrWhiteSpace(sourceUrl)
-            ? Array.Empty<int>()
-            : await DiscoverMatchWebIdsAsync(page, sourceUrl, interactive);
+        var discoveredMappings = string.IsNullOrWhiteSpace(sourceUrl)
+            ? Array.Empty<MatchDiscovery>()
+            : await DiscoverMappingsAsync(page, sourceUrl, interactive);
+
+        var discoveredMatchWebIds = discoveredMappings
+            .Select(x => x.MatchWebId)
+            .Distinct()
+            .OrderBy(x => x)
+            .ToList();
 
         var targetMatchWebIds = BuildTargetMatchWebIds(
             existingMappings,
@@ -84,20 +97,33 @@ public sealed class MatchMappingSyncService
             discoveredMatchWebIds,
             includeAll);
 
+        foreach (var discovery in discoveredMappings)
+        {
+            if (!string.IsNullOrWhiteSpace(discovery.UuidMatch))
+                resolved[discovery.MatchWebId] = discovery.UuidMatch;
+        }
+
         Console.WriteLine();
         Console.WriteLine($"Mappings actuales: {existingMappings.Count}");
         if (!string.IsNullOrWhiteSpace(sourceUrl))
-            Console.WriteLine($"Partidos encontrados en el calendario: {discoveredMatchWebIds.Count}");
-        Console.WriteLine($"Partidos a resolver: {targetMatchWebIds.Count}");
+        {
+            Console.WriteLine($"Partidos encontrados en la fuente: {discoveredMappings.Count}");
+            Console.WriteLine($"UUIDs directos encontrados     : {discoveredMappings.Count(x => !string.IsNullOrWhiteSpace(x.UuidMatch))}");
+        }
+
+        Console.WriteLine($"Partidos a resolver: {targetMatchWebIds.Count(matchWebId => !resolved.ContainsKey(matchWebId))}");
 
         foreach (var matchWebId in targetMatchWebIds)
         {
+            if (resolved.TryGetValue(matchWebId, out var directUuid) && !string.IsNullOrWhiteSpace(directUuid))
+                continue;
+
             resolved[matchWebId] = await ResolveSingleAsync(page, matchWebId, interactive);
         }
 
         return new MatchMappingSyncResult
         {
-            DiscoveredMatchWebIds = discoveredMatchWebIds,
+            DiscoveredMappings = discoveredMappings,
             TargetMatchWebIds = targetMatchWebIds,
             ResolvedUuids = resolved
         };
@@ -151,6 +177,157 @@ public sealed class MatchMappingSyncService
                 return null;
             }
         }
+    }
+
+    private async Task<IReadOnlyList<MatchDiscovery>> DiscoverMappingsAsync(IPage page, string sourceUrl, bool interactive)
+    {
+        for (var attempt = 1; ; attempt += 1)
+        {
+            var discoveredMappings = IsResultsUrl(sourceUrl)
+                ? await DiscoverMappingsFromResultsAsync(page, sourceUrl)
+                : await DiscoverMappingsAcrossCalendarsAsync(page, sourceUrl);
+
+            if (discoveredMappings.Count > 0)
+            {
+                Console.WriteLine($"  OK -> {discoveredMappings.Count} partidos encontrados");
+                return discoveredMappings;
+            }
+
+            Console.WriteLine("  No se pudo extraer ningún partido de la fuente.");
+            Console.WriteLine($"  URL actual: {page.Url}");
+
+            if (!interactive)
+            {
+                if (attempt >= AutomaticRetryAttempts)
+                {
+                    Console.WriteLine("  SKIP automático de la fuente tras agotar reintentos.");
+                    return Array.Empty<MatchDiscovery>();
+                }
+
+                Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
+                await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
+                continue;
+            }
+
+            Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
+            Console.WriteLine("  Escribe 'skip' y pulsa ENTER para continuar sin usar la fuente.");
+
+            var input = Console.ReadLine()?.Trim().ToLowerInvariant();
+            if (input == "skip")
+            {
+                Console.WriteLine("  SKIP");
+                return Array.Empty<MatchDiscovery>();
+            }
+        }
+    }
+
+    private async Task<IReadOnlyList<MatchDiscovery>> DiscoverMappingsFromResultsAsync(IPage page, string sourceUrl)
+    {
+        var capturedResponses = new List<IResponse>();
+        void HandleResponse(object? _, IResponse response) => capturedResponses.Add(response);
+
+        Console.WriteLine($"Buscando partidos en resultados: {sourceUrl}");
+
+        page.Response += HandleResponse;
+
+        try
+        {
+            await page.GotoAsync(sourceUrl, new PageGotoOptions
+            {
+                WaitUntil = WaitUntilState.DOMContentLoaded
+            });
+
+            await page.WaitForTimeoutAsync(1500);
+
+            var discovered = new Dictionary<int, MatchDiscovery>();
+
+            MergeDiscoveries(discovered, await ExtractMappingsFromPageAsync(page));
+
+            foreach (var responseText in await ReadRelevantResponseTextsAsync(capturedResponses))
+            {
+                MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
+                EnsureMatchWebIds(discovered, ExtractMatchWebIdsFromText(responseText));
+            }
+
+            return discovered.Values
+                .OrderBy(x => x.MatchWebId)
+                .ToList();
+        }
+        finally
+        {
+            page.Response -= HandleResponse;
+        }
+    }
+
+    private async Task<IReadOnlyList<MatchDiscovery>> DiscoverMappingsAcrossCalendarsAsync(IPage page, string sourceUrl)
+    {
+        var queue = new Queue<string>();
+        var seenUrls = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var visitedUrls = new List<string>();
+        var discovered = new Dictionary<int, MatchDiscovery>();
+
+        EnqueueCalendarUrl(sourceUrl, queue, seenUrls);
+
+        while (queue.Count > 0 && visitedUrls.Count < 10)
+        {
+            var currentUrl = queue.Dequeue();
+            visitedUrls.Add(currentUrl);
+            var capturedResponses = new List<IResponse>();
+            void HandleResponse(object? _, IResponse response) => capturedResponses.Add(response);
+
+            Console.WriteLine($"Buscando partidos en: {currentUrl}");
+
+            page.Response += HandleResponse;
+
+            try
+            {
+                await page.GotoAsync(currentUrl, new PageGotoOptions
+                {
+                    WaitUntil = WaitUntilState.DOMContentLoaded
+                });
+
+                await page.WaitForTimeoutAsync(1500);
+
+                MergeDiscoveries(discovered, await ExtractMappingsFromPageAsync(page));
+
+                foreach (var relatedCalendarUrl in await ExtractCalendarUrlsAsync(page, currentUrl))
+                    EnqueueCalendarUrl(relatedCalendarUrl, queue, seenUrls);
+
+                foreach (var responseText in await ReadRelevantResponseTextsAsync(capturedResponses))
+                {
+                    MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
+                    EnsureMatchWebIds(discovered, ExtractMatchWebIdsFromText(responseText));
+
+                    foreach (var relatedCalendarUrl in ExtractCalendarUrlsFromText(responseText, currentUrl))
+                        EnqueueCalendarUrl(relatedCalendarUrl, queue, seenUrls);
+                }
+            }
+            finally
+            {
+                page.Response -= HandleResponse;
+            }
+        }
+
+        if (visitedUrls.Count > 1)
+            Console.WriteLine($"  Calendarios revisados: {visitedUrls.Count}");
+
+        return discovered.Values
+            .OrderBy(x => x.MatchWebId)
+            .ToList();
+    }
+
+    private async Task<IReadOnlyList<MatchDiscovery>> ExtractMappingsFromPageAsync(IPage page)
+    {
+        var discovered = new Dictionary<int, MatchDiscovery>();
+
+        EnsureMatchWebIds(discovered, await ExtractMatchWebIdsAsync(page));
+
+        var html = await page.ContentAsync();
+        MergeDiscoveries(discovered, ExtractDirectMappingsFromText(html));
+
+        return discovered.Values
+            .OrderBy(x => x.MatchWebId)
+            .ToList();
     }
 
     private async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright)
@@ -229,45 +406,10 @@ public sealed class MatchMappingSyncService
             .ToList();
     }
 
-    private async Task<IReadOnlyList<int>> DiscoverMatchWebIdsAsync(IPage page, string sourceUrl, bool interactive)
+    private static bool IsResultsUrl(string sourceUrl)
     {
-        for (var attempt = 1; ; attempt += 1)
-        {
-            var (matchWebIds, visitedUrls) = await DiscoverMatchWebIdsAcrossCalendarsAsync(page, sourceUrl);
-            if (matchWebIds.Count > 0)
-            {
-                Console.WriteLine($"  OK -> {matchWebIds.Count} matchWebId encontrados");
-                if (visitedUrls.Count > 1)
-                    Console.WriteLine($"  Calendarios revisados: {visitedUrls.Count}");
-                return matchWebIds;
-            }
-
-            Console.WriteLine("  No se pudo extraer ningún matchWebId del calendario.");
-            Console.WriteLine($"  URL actual: {page.Url}");
-
-            if (!interactive)
-            {
-                if (attempt >= AutomaticRetryAttempts)
-                {
-                    Console.WriteLine("  SKIP automático del calendario tras agotar reintentos.");
-                    return Array.Empty<int>();
-                }
-
-                Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
-                await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
-                continue;
-            }
-
-            Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
-            Console.WriteLine("  Escribe 'skip' y pulsa ENTER para continuar sin usar el calendario.");
-
-            var input = Console.ReadLine()?.Trim().ToLowerInvariant();
-            if (input == "skip")
-            {
-                Console.WriteLine("  SKIP");
-                return Array.Empty<int>();
-            }
-        }
+        return Uri.TryCreate(sourceUrl, UriKind.Absolute, out var uri) &&
+               uri.AbsolutePath.Contains("/competicions/resultats/", StringComparison.OrdinalIgnoreCase);
     }
 
     private static async Task<string?> ExtractUuidAsync(IPage page)
@@ -299,8 +441,7 @@ public sealed class MatchMappingSyncService
             return domUuid;
 
         var html = await page.ContentAsync();
-        var rawMatch = UuidRegex.Match(html);
-        return rawMatch.Success ? rawMatch.Groups[1].Value : null;
+        return ExtractUuidsFromText(html).FirstOrDefault();
     }
 
     private static async Task<IReadOnlyList<int>> ExtractMatchWebIdsAsync(IPage page)
@@ -370,19 +511,7 @@ public sealed class MatchMappingSyncService
             """);
 
         var html = await page.ContentAsync();
-        var rawMatches = new[]
-            {
-                MatchWebIdRouteRegex,
-                MatchWebIdJsonRegex,
-                MatchWebIdDataAttributeRegex,
-                MatchWebIdScriptRegex
-            }
-            .SelectMany(regex => regex.Matches(html).Select(match => match.Groups[1].Value))
-            .Select(value => int.TryParse(value, out var matchWebId) ? matchWebId : 0)
-            .Where(matchWebId => matchWebId > 0)
-            .Distinct()
-            .OrderBy(matchWebId => matchWebId)
-            .ToList();
+        var rawMatches = ExtractMatchWebIdsFromText(html);
 
         return domMatchWebIds
             .Concat(rawMatches)
@@ -391,67 +520,191 @@ public sealed class MatchMappingSyncService
             .ToList();
     }
 
-    private async Task<(IReadOnlyList<int> MatchWebIds, IReadOnlyList<string> VisitedUrls)> DiscoverMatchWebIdsAcrossCalendarsAsync(
-        IPage page,
-        string sourceUrl)
+    private static void MergeDiscoveries(IDictionary<int, MatchDiscovery> target, IEnumerable<MatchDiscovery> discoveries)
     {
-        var queue = new Queue<string>();
-        var seenUrls = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        var visitedUrls = new List<string>();
-        var matchWebIds = new HashSet<int>();
-
-        EnqueueCalendarUrl(sourceUrl, queue, seenUrls);
-
-        while (queue.Count > 0 && visitedUrls.Count < 10)
+        foreach (var discovery in discoveries)
         {
-            var currentUrl = queue.Dequeue();
-            visitedUrls.Add(currentUrl);
-            var capturedResponses = new List<IResponse>();
-            void HandleResponse(object? _, IResponse response) => capturedResponses.Add(response);
-
-            Console.WriteLine($"Buscando partidos en: {currentUrl}");
-
-            page.Response += HandleResponse;
-
-            try
+            if (!target.TryGetValue(discovery.MatchWebId, out var existing))
             {
-                await page.GotoAsync(currentUrl, new PageGotoOptions
-                {
-                    WaitUntil = WaitUntilState.DOMContentLoaded
-                });
-
-                await page.WaitForTimeoutAsync(1500);
-
-                foreach (var matchWebId in await ExtractMatchWebIdsAsync(page))
-                {
-                    matchWebIds.Add(matchWebId);
-                }
-
-                foreach (var relatedCalendarUrl in await ExtractCalendarUrlsAsync(page, currentUrl))
-                {
-                    EnqueueCalendarUrl(relatedCalendarUrl, queue, seenUrls);
-                }
-
-                foreach (var responseText in await ReadRelevantResponseTextsAsync(capturedResponses))
-                {
-                    foreach (var matchWebId in ExtractMatchWebIdsFromText(responseText))
-                    {
-                        matchWebIds.Add(matchWebId);
-                    }
-
-                    foreach (var relatedCalendarUrl in ExtractCalendarUrlsFromText(responseText, currentUrl))
-                    {
-                        EnqueueCalendarUrl(relatedCalendarUrl, queue, seenUrls);
-                    }
-                }
+                target[discovery.MatchWebId] = discovery;
+                continue;
             }
-            finally
+
+            if (string.IsNullOrWhiteSpace(existing.UuidMatch) && !string.IsNullOrWhiteSpace(discovery.UuidMatch))
             {
-                page.Response -= HandleResponse;
+                target[discovery.MatchWebId] = discovery;
             }
         }
+    }
 
-        return (matchWebIds.OrderBy(x => x).ToList(), visitedUrls);
+    private static void EnsureMatchWebIds(IDictionary<int, MatchDiscovery> target, IEnumerable<int> matchWebIds)
+    {
+        foreach (var matchWebId in matchWebIds)
+        {
+            if (target.ContainsKey(matchWebId))
+                continue;
+
+            target[matchWebId] = new MatchDiscovery { MatchWebId = matchWebId };
+        }
+    }
+
+    private static IReadOnlyList<MatchDiscovery> ExtractDirectMappingsFromText(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+            return Array.Empty<MatchDiscovery>();
+
+        var normalizedText = text.Replace("\\/", "/");
+        var discovered = new Dictionary<int, MatchDiscovery>();
+
+        foreach (var chunk in EnumerateCandidateChunks(normalizedText))
+        {
+            var matchWebIds = ExtractMatchWebIdsFromText(chunk);
+            var uuids = ExtractUuidsFromText(chunk);
+
+            if (matchWebIds.Count != 1 || uuids.Count == 0)
+                continue;
+
+            discovered[matchWebIds[0]] = new MatchDiscovery
+            {
+                MatchWebId = matchWebIds[0],
+                UuidMatch = uuids[0]
+            };
+        }
+
+        if (discovered.Count > 0)
+            return discovered.Values.OrderBy(x => x.MatchWebId).ToList();
+
+        var uuidOccurrences = ExtractUuidOccurrences(normalizedText);
+
+        foreach (var occurrence in ExtractMatchWebIdOccurrences(normalizedText))
+        {
+            var nearestUuid = uuidOccurrences
+                .Select(uuidOccurrence => new
+                {
+                    uuidOccurrence.Uuid,
+                    Distance = Math.Abs(uuidOccurrence.Index - occurrence.Index)
+                })
+                .Where(x => x.Distance <= DirectMappingProximityWindow)
+                .OrderBy(x => x.Distance)
+                .FirstOrDefault();
+
+            if (nearestUuid is null)
+                continue;
+
+            discovered[occurrence.MatchWebId] = new MatchDiscovery
+            {
+                MatchWebId = occurrence.MatchWebId,
+                UuidMatch = nearestUuid.Uuid
+            };
+        }
+
+        return discovered.Values
+            .OrderBy(x => x.MatchWebId)
+            .ToList();
+    }
+
+    private static IEnumerable<string> EnumerateCandidateChunks(string text)
+    {
+        if (string.IsNullOrWhiteSpace(text))
+            yield break;
+
+        var chunks = Regex.Split(
+            text,
+            @"(?:</tr>|</li>|</article>|</section>|</tbody>|""\s*}\s*,\s*{""|\}\s*,\s*\{|\n\s*\n)",
+            RegexOptions.IgnoreCase);
+
+        foreach (var chunk in chunks)
+        {
+            if (string.IsNullOrWhiteSpace(chunk))
+                continue;
+
+            if (!ContainsPotentialMatchWebId(chunk) || !ContainsPotentialUuid(chunk))
+                continue;
+
+            yield return chunk;
+        }
+    }
+
+    private static bool ContainsPotentialMatchWebId(string text)
+    {
+        return MatchWebIdRouteRegex.IsMatch(text) ||
+               MatchWebIdJsonRegex.IsMatch(text) ||
+               MatchWebIdDataAttributeRegex.IsMatch(text) ||
+               MatchWebIdScriptRegex.IsMatch(text);
+    }
+
+    private static bool ContainsPotentialUuid(string text)
+    {
+        return UuidRouteRegex.IsMatch(text) ||
+               UuidJsonRegex.IsMatch(text) ||
+               UuidAttributeRegex.IsMatch(text);
+    }
+
+    private static IReadOnlyList<int> ExtractMatchWebIdsFromText(string text)
+    {
+        return new[]
+            {
+                MatchWebIdRouteRegex,
+                MatchWebIdJsonRegex,
+                MatchWebIdDataAttributeRegex,
+                MatchWebIdScriptRegex
+            }
+            .SelectMany(regex => regex.Matches(text).Select(match => match.Groups[1].Value))
+            .Select(value => int.TryParse(value, out var matchWebId) ? matchWebId : 0)
+            .Where(matchWebId => matchWebId > 0)
+            .Distinct()
+            .OrderBy(matchWebId => matchWebId)
+            .ToList();
+    }
+
+    private static IReadOnlyList<string> ExtractUuidsFromText(string text)
+    {
+        return new[]
+            {
+                UuidRouteRegex,
+                UuidJsonRegex,
+                UuidAttributeRegex
+            }
+            .SelectMany(regex => regex.Matches(text).Select(match => match.Groups[1].Value))
+            .Where(value => !string.IsNullOrWhiteSpace(value))
+            .Select(value => value.ToLowerInvariant())
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .OrderBy(value => value, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+
+    private static IReadOnlyList<(int MatchWebId, int Index)> ExtractMatchWebIdOccurrences(string text)
+    {
+        return new[]
+            {
+                MatchWebIdRouteRegex,
+                MatchWebIdJsonRegex,
+                MatchWebIdDataAttributeRegex,
+                MatchWebIdScriptRegex
+            }
+            .SelectMany(regex => regex.Matches(text).Select(match => (MatchWebId: ParseMatchWebId(match.Groups[1].Value), Index: match.Index)))
+            .Where(x => x.MatchWebId > 0)
+            .OrderBy(x => x.Index)
+            .ToList();
+    }
+
+    private static IReadOnlyList<(string Uuid, int Index)> ExtractUuidOccurrences(string text)
+    {
+        return new[]
+            {
+                UuidRouteRegex,
+                UuidJsonRegex,
+                UuidAttributeRegex
+            }
+            .SelectMany(regex => regex.Matches(text).Select(match => (Uuid: match.Groups[1].Value.ToLowerInvariant(), Index: match.Index)))
+            .Where(x => !string.IsNullOrWhiteSpace(x.Uuid))
+            .OrderBy(x => x.Index)
+            .ToList();
+    }
+
+    private static int ParseMatchWebId(string value)
+    {
+        return int.TryParse(value, out var matchWebId) ? matchWebId : 0;
     }
 
     private static async Task<IReadOnlyList<string>> ExtractCalendarUrlsAsync(IPage page, string currentUrl)
@@ -565,23 +818,6 @@ public sealed class MatchMappingSyncService
         queue.Enqueue(candidate);
     }
 
-    private static IReadOnlyList<int> ExtractMatchWebIdsFromText(string text)
-    {
-        return new[]
-            {
-                MatchWebIdRouteRegex,
-                MatchWebIdJsonRegex,
-                MatchWebIdDataAttributeRegex,
-                MatchWebIdScriptRegex
-            }
-            .SelectMany(regex => regex.Matches(text).Select(match => match.Groups[1].Value))
-            .Select(value => int.TryParse(value, out var matchWebId) ? matchWebId : 0)
-            .Where(matchWebId => matchWebId > 0)
-            .Distinct()
-            .OrderBy(matchWebId => matchWebId)
-            .ToList();
-    }
-
     private static IReadOnlyList<string> ExtractCalendarUrlsFromText(string text, string currentUrl)
     {
         var baseUri = new Uri(currentUrl);
@@ -630,7 +866,10 @@ public sealed class MatchMappingSyncService
             : string.Empty;
 
         if (string.IsNullOrWhiteSpace(contentType))
-            return uri.AbsolutePath.Contains("/partits/", StringComparison.OrdinalIgnoreCase);
+        {
+            return uri.AbsolutePath.Contains("/partits/", StringComparison.OrdinalIgnoreCase) ||
+                   uri.AbsolutePath.Contains("/competicions/", StringComparison.OrdinalIgnoreCase);
+        }
 
         return contentType.Contains("html", StringComparison.OrdinalIgnoreCase) ||
                contentType.Contains("json", StringComparison.OrdinalIgnoreCase) ||

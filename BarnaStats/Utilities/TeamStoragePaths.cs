@@ -3,20 +3,20 @@ namespace BarnaStats.Utilities;
 public sealed class TeamStoragePaths
 {
     public TeamStoragePaths(
-        int? teamCalendarId,
+        StorageScope scope,
         string rootDir,
         string mappingFile,
         string statsDir,
         string movesDir)
     {
-        TeamCalendarId = teamCalendarId;
+        Scope = scope;
         RootDir = rootDir;
         MappingFile = mappingFile;
         StatsDir = statsDir;
         MovesDir = movesDir;
     }
 
-    public int? TeamCalendarId { get; }
+    public StorageScope Scope { get; }
     public string RootDir { get; }
     public string MappingFile { get; }
     public string StatsDir { get; }

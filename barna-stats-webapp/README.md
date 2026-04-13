@@ -1,6 +1,6 @@
 # BarnaStats Web
 
-Dashboard React para explorar `analysis.json` y lanzar sincronizaciones de calendarios sin pasar por la consola.
+Dashboard React para explorar `analysis.json` y lanzar sincronizaciones sin pasar por la consola.
 
 ## Arranque rápido
 
@@ -34,7 +34,7 @@ La app mostrará esos análisis justo debajo de la tabla del partido cuando el p
 
 ## Uso
 
-1. Pega una URL tipo `https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178`
-2. Pulsa `Sincronizar equipo`
+1. Pega una URL tipo `https://www.basquetcatala.cat/competicions/resultats/20855/0` o `https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178`
+2. Pulsa `Sincronizar`
 3. Si aparece captcha/login, resuélvelo en el navegador auxiliar que abre Playwright
 4. Cuando termine, la web recarga `analysis.json` automáticamente

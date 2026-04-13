@@ -26,7 +26,7 @@ npm run dev:all
 ```
 
 La web quedará en `http://localhost:5173` y la API local en `http://127.0.0.1:5071`.
-Desde la propia UI ya puedes pegar la URL del calendario y lanzar la sincronización.
+Desde la propia UI ya puedes pegar la URL de un calendario o de una página de resultados y lanzar la sincronización.
 
 Si quieres activar resúmenes automáticos de partido con OpenAI, exporta antes:
 
@@ -38,10 +38,10 @@ export BARNASTATS_OPENAI_MODEL=gpt-4.1-mini
 
 La caché de esos resúmenes se guarda en `BarnaStats/out/match-reports`.
 
-2. Si prefieres consola, flujo completo desde la URL del calendario:
+2. Si prefieres consola, flujo completo desde una URL de resultados por fase:
 
 ```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/competicions/resultats/20855/0
 ```
 
 Eso:
@@ -49,14 +49,14 @@ Eso:
 - crea o actualiza `match_mapping.json`
 - descarga `stats` y `moves`
 - genera `analysis.json`
-- guarda los crudos en `BarnaStats/out/teams/{teamCalendarId}/...`
+- guarda los crudos en `BarnaStats/out/phases/{phaseId}/...`
 
 Si quieres ejecutar pasos sueltos, también puedes:
 
 Crear o actualizar `match_mapping.json`:
 
 ```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/competicions/resultats/20855/0
 ```
 
 Si ya tienes `matchWebId` y solo quieres resolver o reintentar IDs concretos:
@@ -69,6 +69,12 @@ Si ya existe la carpeta del equipo y quieres reusar ese contexto:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --team 81178 --all
+```
+
+O si ya existe la carpeta de una fase:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --phase 20855 --all
 ```
 
 3. Descargar stats y moves:

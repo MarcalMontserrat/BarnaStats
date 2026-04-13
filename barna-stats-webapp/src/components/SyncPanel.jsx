@@ -108,6 +108,9 @@ function SyncPanel({
     onStartSync
 }) {
     const [calendarUrl, setCalendarUrl] = useState(() => window.localStorage.getItem("barna-sync-calendar-url") ?? "");
+    const scopeLabel = job?.sourceKind === "phase"
+        ? `Fase: ${job.phaseId ?? job.sourceId ?? "-"}`
+        : `Equipo: ${job?.teamCalendarId ?? job?.sourceId ?? "-"}`;
 
     useEffect(() => {
         window.localStorage.setItem("barna-sync-calendar-url", calendarUrl);
@@ -140,13 +143,13 @@ function SyncPanel({
         <form style={styles.panel} onSubmit={handleSubmit}>
             <div style={styles.intro}>
                 <div style={styles.titleRow}>
-                    <h2 style={styles.title}>Sincronizar calendario</h2>
+                    <h2 style={styles.title}>Sincronizar fuente</h2>
                     <span style={{...styles.statusPill, ...statusStyle}}>
                         {statusLabel}
                     </span>
                 </div>
                 <div style={styles.helper}>
-                    Pega la URL del calendario del equipo y la app lanzará `sync-all`. Si sale captcha,
+                    Pega la URL de un calendario o de una página de resultados y la app lanzará `sync-all`. Si sale captcha,
                     se abrirá el navegador auxiliar para resolverlo.
                 </div>
             </div>
@@ -156,7 +159,7 @@ function SyncPanel({
                     type="url"
                     value={calendarUrl}
                     onChange={(event) => setCalendarUrl(event.target.value)}
-                    placeholder="https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178"
+                    placeholder="https://www.basquetcatala.cat/competicions/resultats/20855/0"
                     style={styles.input}
                     disabled={isBusy}
                 />
@@ -165,13 +168,13 @@ function SyncPanel({
                     style={isBusy ? {...styles.button, ...styles.mutedButton} : styles.button}
                     disabled={isBusy}
                 >
-                    {isBusy ? "Sincronizando..." : "Sincronizar equipo"}
+                    {isBusy ? "Sincronizando..." : "Sincronizar"}
                 </button>
             </div>
 
             {job ? (
                 <div style={styles.meta}>
-                    <div>Equipo: {job.teamCalendarId ?? "-"}</div>
+                    <div>{scopeLabel}</div>
                     <div>Job: {job.jobId}</div>
                     <div>URL: {job.calendarUrl}</div>
                 </div>

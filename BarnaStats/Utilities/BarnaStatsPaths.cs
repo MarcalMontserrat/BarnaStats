@@ -9,6 +9,7 @@ public sealed class BarnaStatsPaths
         MappingFile = Path.Combine(projectDir, "match_mapping.json");
         OutputDir = Path.Combine(projectDir, "out");
         TeamsDir = Path.Combine(OutputDir, "teams");
+        PhasesDir = Path.Combine(OutputDir, "phases");
         StatsDir = Path.Combine(OutputDir, "stats");
         MovesDir = Path.Combine(OutputDir, "moves");
         BrowserProfileDir = Path.Combine(OutputDir, "browser-profile");
@@ -20,6 +21,7 @@ public sealed class BarnaStatsPaths
     public string MappingFile { get; }
     public string OutputDir { get; }
     public string TeamsDir { get; }
+    public string PhasesDir { get; }
     public string StatsDir { get; }
     public string MovesDir { get; }
     public string BrowserProfileDir { get; }
@@ -35,26 +37,40 @@ public sealed class BarnaStatsPaths
     {
         Directory.CreateDirectory(OutputDir);
         Directory.CreateDirectory(TeamsDir);
+        Directory.CreateDirectory(PhasesDir);
         Directory.CreateDirectory(StatsDir);
         Directory.CreateDirectory(MovesDir);
         Directory.CreateDirectory(BrowserProfileDir);
     }
 
-    public TeamStoragePaths CreateStorage(int? teamCalendarId = null)
+    public TeamStoragePaths CreateStorage(StorageScope? scope = null)
     {
-        if (teamCalendarId is > 0)
+        scope ??= StorageScope.Root();
+
+        if (scope.Kind == StorageScopeKind.Team && scope.Id is > 0)
         {
-            var teamRootDir = Path.Combine(TeamsDir, teamCalendarId.Value.ToString());
+            var teamRootDir = Path.Combine(TeamsDir, scope.Id.Value.ToString());
             return new TeamStoragePaths(
-                teamCalendarId,
+                scope,
                 teamRootDir,
                 Path.Combine(teamRootDir, "match_mapping.json"),
                 Path.Combine(teamRootDir, "stats"),
                 Path.Combine(teamRootDir, "moves"));
         }
 
+        if (scope.Kind == StorageScopeKind.Phase && scope.Id is > 0)
+        {
+            var phaseRootDir = Path.Combine(PhasesDir, scope.Id.Value.ToString());
+            return new TeamStoragePaths(
+                scope,
+                phaseRootDir,
+                Path.Combine(phaseRootDir, "match_mapping.json"),
+                Path.Combine(phaseRootDir, "stats"),
+                Path.Combine(phaseRootDir, "moves"));
+        }
+
         return new TeamStoragePaths(
-            null,
+            StorageScope.Root(),
             ProjectDir,
             MappingFile,
             StatsDir,

@@ -59,7 +59,7 @@ app.MapPost("/api/sync-jobs", (StartSyncRequest request, SyncOrchestrator orches
     {
         return Results.BadRequest(new
         {
-            error = "Tienes que indicar la URL del calendario."
+            error = "Tienes que indicar la URL del calendario o de resultados."
         });
     }
 

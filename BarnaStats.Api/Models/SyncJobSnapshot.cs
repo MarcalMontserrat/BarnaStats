@@ -9,7 +9,10 @@ public sealed class SyncJobSnapshot
     public DateTimeOffset? StartedAtUtc { get; init; }
     public DateTimeOffset? CompletedAtUtc { get; init; }
     public int? ExitCode { get; init; }
+    public string? SourceKind { get; init; }
+    public int? SourceId { get; init; }
     public int? TeamCalendarId { get; init; }
+    public int? PhaseId { get; init; }
     public string? Error { get; init; }
     public required IReadOnlyList<string> Logs { get; init; }
     public DateTimeOffset? AnalysisUpdatedAtUtc { get; init; }

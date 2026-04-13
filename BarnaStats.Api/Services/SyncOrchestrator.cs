@@ -11,6 +11,9 @@ public sealed class SyncOrchestrator
     private static readonly Regex TeamCalendarIdRegex = new(
         "/partits/calendari_[^/]+(?:/pdf)?/(?:\\d+/)?(\\d+)(?:/|$)",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex PhaseIdRegex = new(
+        "/competicions/resultats/(\\d+)(?:/|$)",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
     private readonly Lock _lock = new();
     private readonly RepoPaths _repoPaths;
@@ -34,12 +37,14 @@ public sealed class SyncOrchestrator
     {
         calendarUrl = calendarUrl.Trim();
 
-        if (!TryNormalizeCalendarUrl(calendarUrl, out var normalizedUrl))
+        if (!TryNormalizeSourceUrl(calendarUrl, out var normalizedUrl))
         {
             jobSnapshot = null;
-            error = "La URL no parece un calendario válido de basquetcatala.cat.";
+            error = "La URL no parece un calendario ni una página de resultados válida de basquetcatala.cat.";
             return false;
         }
+
+        var sourceInfo = ParseSourceInfo(normalizedUrl);
 
         lock (_lock)
         {
@@ -50,7 +55,7 @@ public sealed class SyncOrchestrator
                 return false;
             }
 
-            var job = new SyncJob(normalizedUrl, TryGetTeamCalendarId(normalizedUrl));
+            var job = new SyncJob(normalizedUrl, sourceInfo);
             _currentJob = job;
             jobSnapshot = job.ToSnapshot();
             error = null;
@@ -142,7 +147,7 @@ public sealed class SyncOrchestrator
         return File.GetLastWriteTimeUtc(_repoPaths.AnalysisJson);
     }
 
-    private static bool TryNormalizeCalendarUrl(string input, out string normalizedUrl)
+    private static bool TryNormalizeSourceUrl(string input, out string normalizedUrl)
     {
         normalizedUrl = string.Empty;
 
@@ -152,37 +157,54 @@ public sealed class SyncOrchestrator
         if (!uri.Host.EndsWith("basquetcatala.cat", StringComparison.OrdinalIgnoreCase))
             return false;
 
-        if (!uri.AbsolutePath.Contains("/partits/calendari_", StringComparison.OrdinalIgnoreCase))
+        var isCalendarUrl = uri.AbsolutePath.Contains("/partits/calendari_", StringComparison.OrdinalIgnoreCase);
+        var isResultsUrl = uri.AbsolutePath.Contains("/competicions/resultats/", StringComparison.OrdinalIgnoreCase);
+
+        if (!isCalendarUrl && !isResultsUrl)
             return false;
 
         normalizedUrl = uri.ToString();
         return true;
     }
 
-    private static int? TryGetTeamCalendarId(string calendarUrl)
+    private static SyncSourceInfo ParseSourceInfo(string sourceUrl)
     {
-        var match = TeamCalendarIdRegex.Match(calendarUrl);
-        if (!match.Success)
-            return null;
+        var teamMatch = TeamCalendarIdRegex.Match(sourceUrl);
+        if (teamMatch.Success && int.TryParse(teamMatch.Groups[1].Value, out var teamCalendarId))
+        {
+            return new SyncSourceInfo("team", teamCalendarId, teamCalendarId, null);
+        }
 
-        return int.TryParse(match.Groups[1].Value, out var teamCalendarId) ? teamCalendarId : null;
+        var phaseMatch = PhaseIdRegex.Match(sourceUrl);
+        if (phaseMatch.Success && int.TryParse(phaseMatch.Groups[1].Value, out var phaseId))
+        {
+            return new SyncSourceInfo("phase", phaseId, null, phaseId);
+        }
+
+        return new SyncSourceInfo(null, null, null, null);
     }
 
     private sealed class SyncJob
     {
         private const int MaxLogs = 400;
 
-        public SyncJob(string calendarUrl, int? teamCalendarId)
+        public SyncJob(string calendarUrl, SyncSourceInfo sourceInfo)
         {
             JobId = Guid.NewGuid().ToString("N");
             CalendarUrl = calendarUrl;
-            TeamCalendarId = teamCalendarId;
+            SourceKind = sourceInfo.Kind;
+            SourceId = sourceInfo.SourceId;
+            TeamCalendarId = sourceInfo.TeamCalendarId;
+            PhaseId = sourceInfo.PhaseId;
             CreatedAtUtc = DateTimeOffset.UtcNow;
         }
 
         public string JobId { get; }
         public string CalendarUrl { get; }
+        public string? SourceKind { get; }
+        public int? SourceId { get; }
         public int? TeamCalendarId { get; }
+        public int? PhaseId { get; }
         public DateTimeOffset CreatedAtUtc { get; }
         public DateTimeOffset? StartedAtUtc { get; set; }
         public DateTimeOffset? CompletedAtUtc { get; set; }
@@ -219,7 +241,10 @@ public sealed class SyncOrchestrator
                     StartedAtUtc = StartedAtUtc,
                     CompletedAtUtc = CompletedAtUtc,
                     ExitCode = ExitCode,
+                    SourceKind = SourceKind,
+                    SourceId = SourceId,
                     TeamCalendarId = TeamCalendarId,
+                    PhaseId = PhaseId,
                     Error = Error,
                     Logs = Logs.ToArray(),
                     AnalysisUpdatedAtUtc = AnalysisUpdatedAtUtc
@@ -227,6 +252,12 @@ public sealed class SyncOrchestrator
             }
         }
     }
+
+    private sealed record SyncSourceInfo(
+        string? Kind,
+        int? SourceId,
+        int? TeamCalendarId,
+        int? PhaseId);
 
     private enum SyncJobStatus
     {
