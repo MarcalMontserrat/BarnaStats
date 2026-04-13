@@ -1,0 +1,94 @@
+.pretty-select-field {
+  display: grid;
+  gap: 8px;
+  width: min(100%, var(--pretty-select-min-width, 260px));
+}
+
+.pretty-select-label {
+  color: #6c7382;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding-left: 4px;
+  text-transform: uppercase;
+}
+
+.pretty-select-shell {
+  position: relative;
+  display: block;
+}
+
+.pretty-select-shell::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 17px;
+  background:
+    radial-gradient(circle at top left, rgba(217, 70, 70, 0.08), transparent 52%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(246, 248, 252, 0.98) 100%);
+  pointer-events: none;
+}
+
+.pretty-select-shell::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #7c8699;
+  border-bottom: 2px solid #7c8699;
+  transform: translateY(-62%) rotate(45deg);
+  pointer-events: none;
+}
+
+.pretty-select-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 100%;
+  border: 1px solid #d8dde8;
+  border-radius: 18px;
+  background: transparent;
+  color: #243147;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 15px 48px 15px 16px;
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pretty-select-control:hover {
+  border-color: #c5cfdf;
+  box-shadow:
+    0 16px 30px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+.pretty-select-control:focus {
+  outline: none;
+  border-color: #d94646;
+  box-shadow:
+    0 0 0 4px rgba(217, 70, 70, 0.14),
+    0 18px 34px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+.pretty-select-control option {
+  color: #243147;
+}
+
+@media (max-width: 720px) {
+  .pretty-select-field {
+    width: 100%;
+  }
+}

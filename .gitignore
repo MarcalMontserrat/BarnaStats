@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# JetBrains / Rider
+.idea/
+*.DotSettings.user
+*.suo
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Node / frontend build output
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Logs and local env files
+*.log
+.env
+.env.*
+!.env.example
+
+# Generated analysis artifacts
+BarnaStats/out/
+barna-stats-webapp/public/data/*.csv
+
+# Keep the published JSON used by the web app
+!barna-stats-webapp/public/data/
+!barna-stats-webapp/public/data/analysis.json

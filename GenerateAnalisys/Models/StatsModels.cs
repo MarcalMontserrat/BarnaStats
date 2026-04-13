@@ -1,0 +1,93 @@
+using System.Text.Json.Serialization;
+
+namespace GenerateAnalisys.Models;
+
+public sealed class StatsRoot
+{
+    [JsonPropertyName("idMatchIntern")]
+    public int IdMatchIntern { get; set; }
+
+    [JsonPropertyName("idMatchExtern")]
+    public int IdMatchExtern { get; set; }
+
+    [JsonPropertyName("localId")]
+    public int LocalId { get; set; }
+
+    [JsonPropertyName("visitId")]
+    public int VisitId { get; set; }
+
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+
+    [JsonPropertyName("teams")]
+    public List<TeamInfo> Teams { get; set; } = new();
+}
+
+public sealed class TeamInfo
+{
+    [JsonPropertyName("teamIdIntern")]
+    public int TeamIdIntern { get; set; }
+
+    [JsonPropertyName("teamIdExtern")]
+    public int TeamIdExtern { get; set; }
+
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("players")]
+    public List<PlayerInfo> Players { get; set; } = new();
+
+    [JsonPropertyName("data")]
+    public StatBlock? Data { get; set; }
+}
+
+public sealed class PlayerInfo
+{
+    [JsonPropertyName("actorId")]
+    public long ActorId { get; set; }
+
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("dorsal")]
+    public string? Dorsal { get; set; }
+
+    [JsonPropertyName("timePlayed")]
+    public int TimePlayed { get; set; }
+
+    [JsonPropertyName("inOut")]
+    public int InOut { get; set; }
+
+    [JsonPropertyName("data")]
+    public StatBlock? Data { get; set; }
+}
+
+public sealed class StatBlock
+{
+    [JsonPropertyName("score")]
+    public int Score { get; set; }
+
+    [JsonPropertyName("valoration")]
+    public int Valoration { get; set; }
+
+    [JsonPropertyName("faults")]
+    public int Faults { get; set; }
+
+    [JsonPropertyName("shotsOfOneAttempted")]
+    public int ShotsOfOneAttempted { get; set; }
+
+    [JsonPropertyName("shotsOfOneSuccessful")]
+    public int ShotsOfOneSuccessful { get; set; }
+
+    [JsonPropertyName("shotsOfTwoAttempted")]
+    public int ShotsOfTwoAttempted { get; set; }
+
+    [JsonPropertyName("shotsOfTwoSuccessful")]
+    public int ShotsOfTwoSuccessful { get; set; }
+
+    [JsonPropertyName("shotsOfThreeAttempted")]
+    public int ShotsOfThreeAttempted { get; set; }
+
+    [JsonPropertyName("shotsOfThreeSuccessful")]
+    public int ShotsOfThreeSuccessful { get; set; }
+}
