@@ -84,6 +84,10 @@ public sealed class MatchAnalysisService
                 accumulator.UpdateMetadata(team);
 
                 var isHome = team.TeamIdIntern == match.LocalId;
+                var teamPlayerScore = (team.Players ?? [])
+                    .Sum(player => player.Data?.Score ?? 0);
+                var rivalPlayerScore = (rivalTeam.Players ?? [])
+                    .Sum(player => player.Data?.Score ?? 0);
                 var teamTopScorer = (team.Players ?? [])
                     .Select(player => new
                     {
@@ -112,9 +116,11 @@ public sealed class MatchAnalysisService
                     AwayScore = visitTeam.Data?.Score ?? 0,
                     IsHome = isHome,
                     RivalTeam = rivalTeam.Name ?? "",
-                    TeamScore = team.Data?.Score ?? 0,
-                    RivalScore = rivalTeam.Data?.Score ?? 0,
-                    Result = BuildResult(team.Data?.Score ?? 0, rivalTeam.Data?.Score ?? 0),
+                    OfficialTeamScore = team.Data?.Score ?? 0,
+                    OfficialRivalScore = rivalTeam.Data?.Score ?? 0,
+                    TeamScore = teamPlayerScore,
+                    RivalScore = rivalPlayerScore,
+                    Result = BuildResult(teamPlayerScore, rivalPlayerScore),
                     TopScorer = matchTopScorer?.PlayerName ?? "",
                     TopScorerTeam = matchTopScorer?.TeamName ?? "",
                     TopScorerPoints = matchTopScorer?.Points ?? 0,

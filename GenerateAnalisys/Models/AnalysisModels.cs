@@ -42,6 +42,8 @@ public sealed class MatchSummary
     public string AwayTeam { get; set; } = "";
     public bool IsHome { get; set; }
     public string RivalTeam { get; set; } = "";
+    public int OfficialTeamScore { get; set; }
+    public int OfficialRivalScore { get; set; }
     public int TeamScore { get; set; }
     public int RivalScore { get; set; }
     public string Result { get; set; } = "";

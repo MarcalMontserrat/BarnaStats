@@ -19,16 +19,28 @@ Pipeline y dashboard para descargar, transformar y visualizar estadísticas de b
 1. Descargar datos:
 
 ```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings
+```
+
+Si quieres resolver nuevos `matchWebId`:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings 70001 70002
+```
+
+2. Descargar stats y moves:
+
+```bash
 dotnet run --project BarnaStats/BarnaStats.csproj
 ```
 
-2. Generar análisis:
+3. Generar análisis:
 
 ```bash
 dotnet run --project GenerateAnalisys/GenerateAnalisys.csproj
 ```
 
-3. Levantar la web:
+4. Levantar la web:
 
 ```bash
 cd barna-stats-webapp
