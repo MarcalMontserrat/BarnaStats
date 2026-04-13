@@ -1,0 +1,49 @@
+namespace BarnaStats.Api.Infrastructure;
+
+public sealed class RepoPaths
+{
+    private RepoPaths(string repoRoot)
+    {
+        RepoRoot = repoRoot;
+        BarnaStatsProjectFile = Path.Combine(repoRoot, "BarnaStats", "BarnaStats.csproj");
+        AnalysisJson = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data", "analysis.json");
+    }
+
+    public string RepoRoot { get; }
+    public string BarnaStatsProjectFile { get; }
+    public string AnalysisJson { get; }
+
+    public static RepoPaths ResolveDefault()
+    {
+        foreach (var candidate in EnumerateSearchRoots())
+        {
+            var barnaStatsProjectFile = Path.Combine(candidate, "BarnaStats", "BarnaStats.csproj");
+            if (File.Exists(barnaStatsProjectFile))
+                return new RepoPaths(candidate);
+        }
+
+        throw new InvalidOperationException("No se pudo localizar el repo root desde BarnaStats.Api.");
+    }
+
+    private static IEnumerable<string> EnumerateSearchRoots()
+    {
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var start in new[] { Directory.GetCurrentDirectory(), AppContext.BaseDirectory })
+        {
+            var current = Path.GetFullPath(start);
+
+            while (!string.IsNullOrWhiteSpace(current))
+            {
+                if (seen.Add(current))
+                    yield return current;
+
+                var parent = Directory.GetParent(current);
+                if (parent is null)
+                    break;
+
+                current = parent.FullName;
+            }
+        }
+    }
+}
