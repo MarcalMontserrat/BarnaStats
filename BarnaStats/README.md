@@ -75,6 +75,26 @@ Si quieres lanzarlo desde la API local o desde un proceso sin terminal, usa el m
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --non-interactive https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
 ```
 
+## Resumenes AI por partido
+
+`GenerateAnalisys` puede pedir a OpenAI un resumen neutral de cada partido y dejarlo cacheado.
+
+Variables:
+
+```bash
+export BARNASTATS_ENABLE_AI_MATCH_REPORTS=true
+export OPENAI_API_KEY=tu_api_key
+export BARNASTATS_OPENAI_MODEL=gpt-4.1-mini
+```
+
+Comportamiento:
+
+- por defecto esta feature esta desactivada
+- solo llama a OpenAI cuando falta el resumen o cambian `stats`/`moves`
+- reutiliza la caché si los datos siguen iguales
+- guarda la caché en `BarnaStats/out/match-reports`
+- si no hay `OPENAI_API_KEY`, el pipeline sigue funcionando y simplemente omite esos resúmenes
+
 ### 2. Descargar stats y moves
 
 ```bash

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-13T12:01:30.620852Z",
+  "generatedAtUtc": "2026-04-13T13:12:38.282915Z",
   "totalMatches": 32,
   "teams": [
     {
@@ -37,7 +37,10 @@
           "topScorerTeam": "AE MINGUELLA B - PURE CUISINE",
           "topScorerPoints": 11,
           "teamTopScorer": "JANA CUBARS\u00CD SANCHEZ",
-          "teamTopScorerPoints": 11
+          "teamTopScorerPoints": 11,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "AE MINGUELLA B - PURE CUISINE",
@@ -66,7 +69,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 10,
           "teamTopScorer": "JANA CUBARS\u00CD SANCHEZ",
-          "teamTopScorerPoints": 9
+          "teamTopScorerPoints": 9,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -1251,7 +1257,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 6,
           "teamTopScorer": "CLOE FLORES MENGUAL",
-          "teamTopScorerPoints": 4
+          "teamTopScorerPoints": 4,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "AESE 1",
@@ -1280,7 +1289,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 16,
           "teamTopScorer": "CARLA PALAU ALVAREZ",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -2305,7 +2317,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 16,
           "teamTopScorer": "JOANA SERRA BADIA",
-          "teamTopScorerPoints": 3
+          "teamTopScorerPoints": 3,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "BASQUET SAFA CLAROR 1",
@@ -2334,7 +2349,10 @@
           "topScorerTeam": "B\u00C0SQUET SAFA CLAROR 1",
           "topScorerPoints": 8,
           "teamTopScorer": "AINA COSTA REDONDO",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -3423,7 +3441,10 @@
           "topScorerTeam": "AE MINGUELLA B - PURE CUISINE",
           "topScorerPoints": 11,
           "teamTopScorer": "ABRIL ARIZA BERNAL",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3452,7 +3473,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 10,
           "teamTopScorer": "ELIA RIBES SARROCA",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3481,7 +3505,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 16,
           "teamTopScorer": "CLAUDIA PORTO ALFONSO",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3510,7 +3537,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 10,
           "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3539,7 +3569,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 15,
           "teamTopScorer": "ABRIL ARIZA BERNAL",
-          "teamTopScorerPoints": 15
+          "teamTopScorerPoints": 15,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3568,7 +3601,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 18,
           "teamTopScorer": "MIA GOMEZ VALLS",
-          "teamTopScorerPoints": 18
+          "teamTopScorerPoints": 18,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3597,7 +3633,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 24,
           "teamTopScorer": "ABRIL ARIZA BERNAL",
-          "teamTopScorerPoints": 24
+          "teamTopScorerPoints": 24,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3626,7 +3665,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 10,
           "teamTopScorer": "EVA RODRIGUEZ CANO",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3655,7 +3697,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 19,
           "teamTopScorer": "ANNA GUITART SINSARD",
-          "teamTopScorerPoints": 19
+          "teamTopScorerPoints": 19,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3684,7 +3729,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 18,
           "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
-          "teamTopScorerPoints": 18
+          "teamTopScorerPoints": 18,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3713,7 +3761,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 5,
           "teamTopScorer": "CLAUDIA JOU GARCIA",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3742,7 +3793,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 14,
           "teamTopScorer": "ELIA RIBES SARROCA",
-          "teamTopScorerPoints": 14
+          "teamTopScorerPoints": 14,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3771,7 +3825,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 19,
           "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
-          "teamTopScorerPoints": 19
+          "teamTopScorerPoints": 19,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3800,7 +3857,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 16,
           "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3829,7 +3889,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 14,
           "teamTopScorer": "CLAUDIA JOU GARCIA",
-          "teamTopScorerPoints": 14
+          "teamTopScorerPoints": 14,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3858,7 +3921,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 22,
           "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
-          "teamTopScorerPoints": 22
+          "teamTopScorerPoints": 22,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
@@ -3887,7 +3953,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 16,
           "teamTopScorer": "MIA GOMEZ VALLS",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -10728,7 +10797,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 16,
           "teamTopScorer": "LILIANA PEK",
-          "teamTopScorerPoints": 7
+          "teamTopScorerPoints": 7,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CB GAVA VERMELL",
@@ -10757,7 +10829,10 @@
           "topScorerTeam": "CB GAV\u00C0 VERMELL",
           "topScorerPoints": 13,
           "teamTopScorer": "LILIANA PEK",
-          "teamTopScorerPoints": 13
+          "teamTopScorerPoints": 13,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -11910,7 +11985,10 @@
           "topScorerTeam": "CB IGUALADA PMF U09",
           "topScorerPoints": 14,
           "teamTopScorer": "VINYET ESTRUCH SAIZ",
-          "teamTopScorerPoints": 14
+          "teamTopScorerPoints": 14,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CB IGUALADA PMF U09",
@@ -11939,7 +12017,10 @@
           "topScorerTeam": "CB IGUALADA PMF U09",
           "topScorerPoints": 20,
           "teamTopScorer": "J\u00DALIA \u00C1GUILA M\u00DANERA",
-          "teamTopScorerPoints": 20
+          "teamTopScorerPoints": 20,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CB IGUALADA PMF U09",
@@ -11968,7 +12049,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 19,
           "teamTopScorer": "G.Q.V.",
-          "teamTopScorerPoints": 6
+          "teamTopScorerPoints": 6,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CB IGUALADA PMF U09",
@@ -11997,7 +12081,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 14,
           "teamTopScorer": "J\u00DALIA \u00C1GUILA M\u00DANERA",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CB IGUALADA PMF U09",
@@ -12026,7 +12113,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 16,
           "teamTopScorer": "J\u00DALIA \u00C1GUILA M\u00DANERA",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -13555,7 +13645,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 5,
           "teamTopScorer": "VALENTINA MORENO ESPINOZA",
-          "teamTopScorerPoints": 2
+          "teamTopScorerPoints": 2,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CENTRE CATOLIC L\u0027H",
@@ -13584,7 +13677,10 @@
           "topScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
           "topScorerPoints": 12,
           "teamTopScorer": "OLIVIA RODRIGUEZ MIGUELES",
-          "teamTopScorerPoints": 12
+          "teamTopScorerPoints": 12,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CENTRE CATOLIC L\u0027H",
@@ -13613,7 +13709,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 14,
           "teamTopScorer": "ELIA JIMENEZ ROMERO",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "CENTRE CATOLIC L\u0027H",
@@ -13642,7 +13741,10 @@
           "topScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
           "topScorerPoints": 15,
           "teamTopScorer": "OLIVIA RODRIGUEZ MIGUELES",
-          "teamTopScorerPoints": 15
+          "teamTopScorerPoints": 15,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -15067,7 +15169,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 6,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 6
+          "teamTopScorerPoints": 6,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15096,7 +15201,10 @@
           "topScorerTeam": "CB IGUALADA PMF U09",
           "topScorerPoints": 14,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15125,7 +15233,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 16,
           "teamTopScorer": "CARLA ALONSO NOMEN",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15154,7 +15265,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 16,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15183,7 +15297,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 16,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15212,7 +15329,10 @@
           "topScorerTeam": "CB IGUALADA PMF U09",
           "topScorerPoints": 20,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 13
+          "teamTopScorerPoints": 13,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15241,7 +15361,10 @@
           "topScorerTeam": "CB GAV\u00C0 VERMELL",
           "topScorerPoints": 13,
           "teamTopScorer": "CARLA ALONSO NOMEN",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15270,7 +15393,10 @@
           "topScorerTeam": "B\u00C0SQUET SAFA CLAROR 1",
           "topScorerPoints": 8,
           "teamTopScorer": "A.F.L.E.",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15299,7 +15425,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 10,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15328,7 +15457,10 @@
           "topScorerTeam": "JAC SANTS BARCELONA U10",
           "topScorerPoints": 10,
           "teamTopScorer": "LUC\u00CDA PAC BRITEZ",
-          "teamTopScorerPoints": 6
+          "teamTopScorerPoints": 6,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15357,7 +15489,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 7,
           "teamTopScorer": "LUC\u00CDA PAC BRITEZ",
-          "teamTopScorerPoints": 7
+          "teamTopScorerPoints": 7,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15386,7 +15521,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 14,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 14
+          "teamTopScorerPoints": 14,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15415,7 +15553,10 @@
           "topScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
           "topScorerPoints": 12,
           "teamTopScorer": "LUC\u00CDA PAC BRITEZ",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15444,7 +15585,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 19,
           "teamTopScorer": "MARTINA GOMEZ CASTRILLO",
-          "teamTopScorerPoints": 4
+          "teamTopScorerPoints": 4,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15473,7 +15617,10 @@
           "topScorerTeam": "U.E. CLARET B",
           "topScorerPoints": 16,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15502,7 +15649,10 @@
           "topScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
           "topScorerPoints": 15,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "FC MARTINENC BASQUET U9",
@@ -15531,7 +15681,10 @@
           "topScorerTeam": "JAC SANTS BARCELONA U10",
           "topScorerPoints": 13,
           "teamTopScorer": "\u00C0SIA SEGURA GARC\u00CDA",
-          "teamTopScorerPoints": 11
+          "teamTopScorerPoints": 11,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -21220,7 +21373,10 @@
           "topScorerTeam": "JAC SANTS BARCELONA U10",
           "topScorerPoints": 10,
           "teamTopScorer": "MARIONA SOLEY BODRO",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "JAC SANTS BARCELONA U10",
@@ -21249,7 +21405,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 18,
           "teamTopScorer": "LAIA DEU ORIOL",
-          "teamTopScorerPoints": 13
+          "teamTopScorerPoints": 13,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "JAC SANTS BARCELONA U10",
@@ -21278,7 +21437,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 22,
           "teamTopScorer": "MARIONA SOLEY BODRO",
-          "teamTopScorerPoints": 5
+          "teamTopScorerPoints": 5,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "JAC SANTS BARCELONA U10",
@@ -21307,7 +21469,10 @@
           "topScorerTeam": "JAC SANTS BARCELONA U10",
           "topScorerPoints": 13,
           "teamTopScorer": "MARIONA SOLEY BODRO",
-          "teamTopScorerPoints": 13
+          "teamTopScorerPoints": 13,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -23116,7 +23281,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 18,
           "teamTopScorer": "HAWA TRAORE SANOGO",
-          "teamTopScorerPoints": 4
+          "teamTopScorerPoints": 4,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -23621,7 +23789,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 16,
           "teamTopScorer": "ANDREA PA\u00CDS ARILLA",
-          "teamTopScorerPoints": 6
+          "teamTopScorerPoints": 6,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "SE LA SALLE BONANOVA VERMELL",
@@ -23650,7 +23821,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 24,
           "teamTopScorer": "ANDREA PA\u00CDS ARILLA",
-          "teamTopScorerPoints": 7
+          "teamTopScorerPoints": 7,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -24707,7 +24881,10 @@
           "topScorerTeam": "FC MARTINENC B\u00C0SQUET U9",
           "topScorerPoints": 7,
           "teamTopScorer": "ISONA MARQU\u00C9S SORIA",
-          "teamTopScorerPoints": 6
+          "teamTopScorerPoints": 6,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "U.E. CLARET B",
@@ -24736,7 +24913,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 14,
           "teamTopScorer": "ONA PEDROLA \u00C1LVAREZ",
-          "teamTopScorerPoints": 7
+          "teamTopScorerPoints": 7,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "U.E. CLARET B",
@@ -24765,7 +24945,10 @@
           "topScorerTeam": "U.E. CLARET B",
           "topScorerPoints": 16,
           "teamTopScorer": "LAIA TEJERO HERNANDEZ",
-          "teamTopScorerPoints": 16
+          "teamTopScorerPoints": 16,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "U.E. CLARET B",
@@ -24794,7 +24977,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 16,
           "teamTopScorer": "ONA PEDROLA \u00C1LVAREZ",
-          "teamTopScorerPoints": 6
+          "teamTopScorerPoints": 6,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [
@@ -26667,7 +26853,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 10,
           "teamTopScorer": "AYESIRA DIALLO DIALLO",
-          "teamTopScorerPoints": 8
+          "teamTopScorerPoints": 8,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         },
         {
           "teamKey": "U.E.MATARO - PRBF",
@@ -26696,7 +26885,10 @@
           "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
           "topScorerPoints": 15,
           "teamTopScorer": "ONA VALERO CALVO",
-          "teamTopScorerPoints": 10
+          "teamTopScorerPoints": 10,
+          "matchReport": "",
+          "matchReportGeneratedAtUtc": null,
+          "matchReportModel": ""
         }
       ],
       "matchPlayers": [

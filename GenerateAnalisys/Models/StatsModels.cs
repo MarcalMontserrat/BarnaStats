@@ -19,8 +19,35 @@ public sealed class StatsRoot
     [JsonPropertyName("time")]
     public string? Time { get; set; }
 
+    [JsonPropertyName("period")]
+    public int Period { get; set; }
+
+    [JsonPropertyName("periodDuration")]
+    public int PeriodDuration { get; set; }
+
+    [JsonPropertyName("score")]
+    public List<ScoreTimelinePoint> Score { get; set; } = new();
+
     [JsonPropertyName("teams")]
     public List<TeamInfo> Teams { get; set; } = new();
+}
+
+public sealed class ScoreTimelinePoint
+{
+    [JsonPropertyName("local")]
+    public int Local { get; set; }
+
+    [JsonPropertyName("visit")]
+    public int Visit { get; set; }
+
+    [JsonPropertyName("minuteQuarter")]
+    public int MinuteQuarter { get; set; }
+
+    [JsonPropertyName("minuteAbsolute")]
+    public int MinuteAbsolute { get; set; }
+
+    [JsonPropertyName("period")]
+    public int Period { get; set; }
 }
 
 public sealed class TeamInfo

@@ -28,6 +28,16 @@ npm run dev:all
 La web quedará en `http://localhost:5173` y la API local en `http://127.0.0.1:5071`.
 Desde la propia UI ya puedes pegar la URL del calendario y lanzar la sincronización.
 
+Si quieres activar resúmenes automáticos de partido con OpenAI, exporta antes:
+
+```bash
+export BARNASTATS_ENABLE_AI_MATCH_REPORTS=true
+export OPENAI_API_KEY=tu_api_key
+export BARNASTATS_OPENAI_MODEL=gpt-4.1-mini
+```
+
+La caché de esos resúmenes se guarda en `BarnaStats/out/match-reports`.
+
 2. Si prefieres consola, flujo completo desde la URL del calendario:
 
 ```bash

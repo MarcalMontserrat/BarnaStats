@@ -9,7 +9,8 @@ if (paths is null)
     return;
 }
 
-var service = new MatchAnalysisService();
+var matchReportService = new OpenAiMatchReportService(paths.MatchReportsDir);
+var service = new MatchAnalysisService(matchReportService);
 var result = await service.ProcessAsync(paths.RawDataRootDir);
 
 await AnalysisJsonWriter.WriteAsync(paths.AnalysisJson, result);

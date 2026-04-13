@@ -57,6 +57,9 @@ export function groupPlayersByMatch(players, matchSummaries = []) {
                     rivalScore: summary?.rivalScore ?? null,
                     isHome: summary?.isHome ?? false,
                     result: summary?.result ?? "",
+                    matchReport: summary?.matchReport ?? "",
+                    matchReportGeneratedAtUtc: summary?.matchReportGeneratedAtUtc ?? null,
+                    matchReportModel: summary?.matchReportModel ?? "",
                     players: []
                 };
             }

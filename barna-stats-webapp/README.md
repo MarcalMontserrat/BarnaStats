@@ -14,6 +14,16 @@ Esto levanta:
 - la web en `http://localhost:5173`
 - la API local en `http://127.0.0.1:5071`
 
+Si quieres generar resúmenes automáticos de partido:
+
+```bash
+export BARNASTATS_ENABLE_AI_MATCH_REPORTS=true
+export OPENAI_API_KEY=tu_api_key
+export BARNASTATS_OPENAI_MODEL=gpt-4.1-mini
+```
+
+La app mostrará esos análisis justo debajo de la tabla del partido cuando el pipeline los haya generado.
+
 ## Scripts
 
 - `npm run dev`: solo la web

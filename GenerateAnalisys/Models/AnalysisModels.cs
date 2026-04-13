@@ -52,6 +52,9 @@ public sealed class MatchSummary
     public int TopScorerPoints { get; set; }
     public string TeamTopScorer { get; set; } = "";
     public int TeamTopScorerPoints { get; set; }
+    public string MatchReport { get; set; } = "";
+    public DateTime? MatchReportGeneratedAtUtc { get; set; }
+    public string MatchReportModel { get; set; } = "";
 }
 
 public sealed class MatchPlayerRow

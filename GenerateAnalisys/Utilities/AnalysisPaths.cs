@@ -8,6 +8,7 @@ public sealed class AnalysisPaths
         RawDataRootDir = rawDataRootDir;
         OutputDir = rawDataRootDir;
         AnalysisJson = Path.Combine(OutputDir, "analysis.json");
+        MatchReportsDir = Path.Combine(OutputDir, "match-reports");
         WebDataDir = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data");
         WebAnalysisJson = Path.Combine(WebDataDir, "analysis.json");
     }
@@ -16,6 +17,7 @@ public sealed class AnalysisPaths
     public string RawDataRootDir { get; }
     public string OutputDir { get; }
     public string AnalysisJson { get; }
+    public string MatchReportsDir { get; }
     public string WebDataDir { get; }
     public string WebAnalysisJson { get; }
 

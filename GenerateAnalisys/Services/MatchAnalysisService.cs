@@ -7,10 +7,16 @@ namespace GenerateAnalisys.Services;
 
 public sealed class MatchAnalysisService
 {
+    private readonly OpenAiMatchReportService _matchReportService;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true
     };
+
+    public MatchAnalysisService(OpenAiMatchReportService matchReportService)
+    {
+        _matchReportService = matchReportService;
+    }
 
     public async Task<AnalysisResult> ProcessAsync(string rawDataRootDir)
     {
@@ -41,6 +47,13 @@ public sealed class MatchAnalysisService
                 Console.WriteLine($"JSON inválido o sin equipos: {fileName}");
                 continue;
             }
+
+            var movesRaw = await TryReadMovesRawAsync(statsPath);
+            var matchReport = await _matchReportService.GetOrGenerateAsync(
+                matchWebId.Value,
+                match,
+                json,
+                movesRaw);
 
             processedMatches += 1;
 
@@ -124,7 +137,10 @@ public sealed class MatchAnalysisService
                     TopScorerTeam = matchTopScorer?.TeamName ?? "",
                     TopScorerPoints = matchTopScorer?.Points ?? 0,
                     TeamTopScorer = teamTopScorer?.PlayerName ?? "",
-                    TeamTopScorerPoints = teamTopScorer?.Points ?? 0
+                    TeamTopScorerPoints = teamTopScorer?.Points ?? 0,
+                    MatchReport = matchReport?.Summary ?? "",
+                    MatchReportGeneratedAtUtc = matchReport?.GeneratedAtUtc,
+                    MatchReportModel = matchReport?.Model ?? ""
                 });
 
                 foreach (var player in team.Players ?? [])
@@ -325,6 +341,18 @@ public sealed class MatchAnalysisService
         }
 
         return selectedPaths;
+    }
+
+    private static async Task<string?> TryReadMovesRawAsync(string statsPath)
+    {
+        var movesPath = statsPath
+            .Replace($"{Path.DirectorySeparatorChar}stats{Path.DirectorySeparatorChar}", $"{Path.DirectorySeparatorChar}moves{Path.DirectorySeparatorChar}")
+            .Replace("_stats.json", "_moves.json", StringComparison.OrdinalIgnoreCase);
+
+        if (!File.Exists(movesPath))
+            return null;
+
+        return await File.ReadAllTextAsync(movesPath);
     }
 
     private static List<PlayerRanking> BuildRanking(IEnumerable<PlayerSeasonTotal> seasonTotals)
