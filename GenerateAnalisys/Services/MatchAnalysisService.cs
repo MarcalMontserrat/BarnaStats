@@ -12,13 +12,12 @@ public sealed class MatchAnalysisService
         PropertyNameCaseInsensitive = true
     };
 
-    public async Task<AnalysisResult> ProcessAsync(string statsDir)
+    public async Task<AnalysisResult> ProcessAsync(string rawDataRootDir)
     {
         var teamsByKey = new Dictionary<string, TeamAccumulator>(StringComparer.Ordinal);
         var processedMatches = 0;
 
-        var statsFiles = Directory.GetFiles(statsDir, "*.json")
-            .OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
+        var statsFiles = GetUniqueStatsFiles(rawDataRootDir)
             .ToList();
 
         foreach (var statsPath in statsFiles)
@@ -287,6 +286,45 @@ public sealed class MatchAnalysisService
             })
             .OrderBy(row => row.MatchWebId)
             .ToList();
+    }
+
+    private static IEnumerable<string> GetUniqueStatsFiles(string rawDataRootDir)
+    {
+        var selectedPaths = new List<string>();
+        var duplicateMatchWebIds = new List<int>();
+
+        var candidates = Directory.GetFiles(rawDataRootDir, "*_stats.json", SearchOption.AllDirectories)
+            .Select(path => new
+            {
+                Path = path,
+                MatchWebId = TryGetMatchWebIdFromFileName(Path.GetFileName(path)),
+                IsTeamScoped = path.Contains($"{Path.DirectorySeparatorChar}teams{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase),
+                LastWriteTimeUtc = File.GetLastWriteTimeUtc(path)
+            })
+            .Where(x => x.MatchWebId.HasValue)
+            .GroupBy(x => x.MatchWebId!.Value)
+            .OrderBy(group => group.Key);
+
+        foreach (var group in candidates)
+        {
+            var selected = group
+                .OrderByDescending(x => x.IsTeamScoped)
+                .ThenByDescending(x => x.LastWriteTimeUtc)
+                .ThenBy(x => x.Path, StringComparer.OrdinalIgnoreCase)
+                .First();
+
+            if (group.Count() > 1)
+                duplicateMatchWebIds.Add(group.Key);
+
+            selectedPaths.Add(selected.Path);
+        }
+
+        if (duplicateMatchWebIds.Count > 0)
+        {
+            Console.WriteLine($"Duplicados detectados en {duplicateMatchWebIds.Count} partidos. Se prioriza la versión guardada en `out/teams` y, si empatan, la más reciente.");
+        }
+
+        return selectedPaths;
     }
 
     private static List<PlayerRanking> BuildRanking(IEnumerable<PlayerSeasonTotal> seasonTotals)

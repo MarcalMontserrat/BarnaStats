@@ -1,9 +1,18 @@
 Este programa descarga las estadísticas crudas de partido y jugadoras.
-Su responsabilidad es solo la ingesta:
+Su responsabilidad es la ingesta y la orquestación básica del pipeline:
 
 - resolver `matchWebId -> uuidMatch`
 - descargar JSON de `stats`
 - descargar JSON de `moves`
+- lanzar `GenerateAnalisys` para regenerar `analysis.json`
+
+Cuando trabajas con varios equipos, cada calendario queda aislado en su propia carpeta:
+
+```text
+BarnaStats/out/teams/{teamCalendarId}/match_mapping.json
+BarnaStats/out/teams/{teamCalendarId}/stats
+BarnaStats/out/teams/{teamCalendarId}/moves
+```
 
 ## Flujos
 
@@ -22,6 +31,26 @@ Qué hace:
 - recorre los `matchWebId` pendientes
 - actualiza `match_mapping.json`
 
+Si partes solo de la URL del calendario del equipo, también puede descubrir los `matchWebId` por ti:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
+```
+
+Qué hace en ese caso:
+
+- abre el calendario del equipo en el navegador real
+- reutiliza tu sesión para pasar captcha/login
+- extrae los `matchWebId` desde el HTML cargado
+- resuelve los `uuidMatch`
+- crea o completa `match_mapping.json`
+
+Si ya has sincronizado ese equipo una vez, también puedes apuntar directamente a su carpeta:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --team 81178 --all
+```
+
 También puedes forzar IDs concretos:
 
 ```bash
@@ -32,6 +61,18 @@ O reintentar todos:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --all
+```
+
+O releer el calendario y reintentar todos los partidos encontrados:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --calendar https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178 --all
+```
+
+Si quieres lanzarlo desde la API local o desde un proceso sin terminal, usa el modo no interactivo:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --non-interactive https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
 ```
 
 ### 2. Descargar stats y moves
@@ -45,3 +86,25 @@ El output se guarda en `out/stats` y `out/moves`.
 ### 3. Generar análisis
 
 Después hay que ejecutar `GenerateAnalisys` para producir el `analysis.json` consumido por la web.
+
+### 4. Ejecutarlo todo del tirón
+
+Si quieres hacer el flujo completo partiendo de la URL del calendario:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
+```
+
+Qué hace:
+
+- sincroniza o crea `match_mapping.json`
+- descarga `stats` y `moves`
+- ejecuta `GenerateAnalisys`
+- deja actualizado `BarnaStats/out/analysis.json`
+- deja actualizada la copia de la web en `barna-stats-webapp/public/data/analysis.json`
+
+Si ya existe la carpeta del equipo:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --team 81178 --all
+```

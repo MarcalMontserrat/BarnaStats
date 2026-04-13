@@ -2,18 +2,18 @@ namespace GenerateAnalisys.Utilities;
 
 public sealed class AnalysisPaths
 {
-    private AnalysisPaths(string repoRoot, string statsDir)
+    private AnalysisPaths(string repoRoot, string rawDataRootDir)
     {
         RepoRoot = repoRoot;
-        StatsDir = statsDir;
-        OutputDir = Path.GetDirectoryName(statsDir)!;
+        RawDataRootDir = rawDataRootDir;
+        OutputDir = rawDataRootDir;
         AnalysisJson = Path.Combine(OutputDir, "analysis.json");
         WebDataDir = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data");
         WebAnalysisJson = Path.Combine(WebDataDir, "analysis.json");
     }
 
     public string RepoRoot { get; }
-    public string StatsDir { get; }
+    public string RawDataRootDir { get; }
     public string OutputDir { get; }
     public string AnalysisJson { get; }
     public string WebDataDir { get; }
@@ -23,9 +23,9 @@ public sealed class AnalysisPaths
     {
         foreach (var root in EnumerateSearchRoots())
         {
-            var statsDir = Path.Combine(root, "BarnaStats", "out", "stats");
-            if (Directory.Exists(statsDir))
-                return new AnalysisPaths(root, statsDir);
+            var rawDataRootDir = Path.Combine(root, "BarnaStats", "out");
+            if (Directory.Exists(rawDataRootDir))
+                return new AnalysisPaths(root, rawDataRootDir);
         }
 
         return null;

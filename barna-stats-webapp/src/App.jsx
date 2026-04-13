@@ -3,7 +3,9 @@ import StatCard from "./components/StatCard.jsx";
 import PlayerEvolutionSection from "./components/PlayerEvolutionSection.jsx";
 import MatchListSection from "./components/MatchListSection.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
+import SyncPanel from "./components/SyncPanel.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
+import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
     buildPlayersArray,
     getChartData,
@@ -56,7 +58,17 @@ const appStyles = {
 };
 
 function App() {
-    const {analysis, loading, error} = useAnalysisData("/data/analysis.json");
+    const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
+    const {analysis, loading, error} = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
+    const {
+        apiAvailable,
+        starting: syncStarting,
+        error: syncError,
+        job,
+        startSync
+    } = useSyncJob(() => {
+        setAnalysisVersion(Date.now());
+    });
     const teams = analysis?.teams ?? [];
     const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
     const defaultTeam = teams.reduce((best, team) => {
@@ -184,6 +196,14 @@ function App() {
                             {summaryText}
                         </p>
                     </div>
+
+                    <SyncPanel
+                        apiAvailable={apiAvailable}
+                        job={job}
+                        starting={syncStarting}
+                        error={syncError}
+                        onStartSync={startSync}
+                    />
 
                     <div style={{display: "flex", gap: 16, flexWrap: "wrap"}}>
                         <PrettySelect

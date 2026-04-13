@@ -19,6 +19,7 @@ export function useAnalysisData(url) {
             .then((payload) => {
                 if (!cancelled) {
                     setAnalysis(payload);
+                    setError("");
                     setLoading(false);
                 }
             })

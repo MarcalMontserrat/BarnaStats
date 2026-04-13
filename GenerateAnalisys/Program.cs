@@ -5,12 +5,12 @@ var paths = AnalysisPaths.ResolveDefault();
 
 if (paths is null)
 {
-    Console.WriteLine("No se encontró BarnaStats/out/stats.");
+    Console.WriteLine("No se encontró BarnaStats/out.");
     return;
 }
 
 var service = new MatchAnalysisService();
-var result = await service.ProcessAsync(paths.StatsDir);
+var result = await service.ProcessAsync(paths.RawDataRootDir);
 
 await AnalysisJsonWriter.WriteAsync(paths.AnalysisJson, result);
 await AnalysisJsonWriter.WriteAsync(paths.WebAnalysisJson, result);

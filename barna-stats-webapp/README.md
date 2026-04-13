@@ -1,16 +1,30 @@
-# React + Vite
+# BarnaStats Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dashboard React para explorar `analysis.json` y lanzar sincronizaciones de calendarios sin pasar por la consola.
 
-Currently, two official plugins are available:
+## Arranque rápido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev:all
+```
 
-## React Compiler
+Esto levanta:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- la web en `http://localhost:5173`
+- la API local en `http://127.0.0.1:5071`
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev`: solo la web
+- `npm run dev:api`: solo la API local
+- `npm run dev:all`: web + API local
+- `npm run build`: build del frontend
+- `npm run lint`: lint del frontend
+
+## Uso
+
+1. Pega una URL tipo `https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178`
+2. Pulsa `Sincronizar equipo`
+3. Si aparece captcha/login, resuélvelo en el navegador auxiliar que abre Playwright
+4. Cuando termine, la web recarga `analysis.json` automáticamente
