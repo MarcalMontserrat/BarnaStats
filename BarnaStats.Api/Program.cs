@@ -55,15 +55,15 @@ app.MapGet("/api/sync-jobs/current", (SyncOrchestrator orchestrator) =>
 
 app.MapPost("/api/sync-jobs", (StartSyncRequest request, SyncOrchestrator orchestrator) =>
 {
-    if (string.IsNullOrWhiteSpace(request.CalendarUrl))
+    if (string.IsNullOrWhiteSpace(request.SourceUrl))
     {
         return Results.BadRequest(new
         {
-            error = "Tienes que indicar la URL del calendario o de resultados."
+            error = "Tienes que indicar la URL de resultados."
         });
     }
 
-    var started = orchestrator.TryStart(request.CalendarUrl, out var jobSnapshot, out var error);
+    var started = orchestrator.TryStart(request.SourceUrl, out var jobSnapshot, out var error);
 
     if (!started)
     {

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import StatCard from "./components/StatCard.jsx";
 import PlayerEvolutionSection from "./components/PlayerEvolutionSection.jsx";
 import MatchListSection from "./components/MatchListSection.jsx";
@@ -19,6 +19,9 @@ import {
     sortPlayers
 } from "./utils/playerStats.js";
 
+const DASHBOARD_ROUTE = "#/";
+const SYNC_ROUTE = "#/sync";
+
 const appStyles = {
     page: {
         background: "#f5f6fa",
@@ -28,12 +31,60 @@ const appStyles = {
     },
     container: {
         maxWidth: 1200,
-        margin: "0 auto"
+        margin: "0 auto",
+        display: "grid",
+        gap: 24
+    },
+    topBar: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap: 16,
+        flexWrap: "wrap"
+    },
+    brand: {
+        display: "grid",
+        gap: 4
+    },
+    eyebrow: {
+        color: "#64748b",
+        fontSize: 13,
+        fontWeight: 700,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        margin: 0
+    },
+    brandTitle: {
+        margin: 0,
+        fontSize: 28
+    },
+    nav: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    navLink: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: 42,
+        padding: "0 16px",
+        borderRadius: 999,
+        textDecoration: "none",
+        fontWeight: 700,
+        border: "1px solid #cbd5e1",
+        color: "#0f172a",
+        background: "#fff"
+    },
+    navLinkActive: {
+        background: "#172554",
+        borderColor: "#172554",
+        color: "#fff"
     },
     header: {
         display: "grid",
         gap: 16,
-        marginBottom: 30
+        marginBottom: 6
     },
     intro: {
         display: "grid",
@@ -54,11 +105,20 @@ const appStyles = {
         padding: 24,
         borderRadius: 12,
         boxShadow: "0 4px 12px rgba(0,0,0,0.08)"
+    },
+    syncPage: {
+        display: "grid",
+        gap: 18
     }
 };
 
+function getRouteFromHash(hash) {
+    return hash === SYNC_ROUTE ? "sync" : "dashboard";
+}
+
 function App() {
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
+    const [route, setRoute] = useState(() => getRouteFromHash(window.location.hash));
     const {analysis, loading, error} = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
     const {
         apiAvailable,
@@ -69,6 +129,22 @@ function App() {
     } = useSyncJob(() => {
         setAnalysisVersion(Date.now());
     });
+
+    useEffect(() => {
+        if (!window.location.hash) {
+            window.location.hash = DASHBOARD_ROUTE;
+        }
+
+        const handleHashChange = () => {
+            setRoute(getRouteFromHash(window.location.hash));
+        };
+
+        window.addEventListener("hashchange", handleHashChange);
+        return () => {
+            window.removeEventListener("hashchange", handleHashChange);
+        };
+    }, []);
+
     const teams = analysis?.teams ?? [];
     const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
     const defaultTeam = teams.reduce((best, team) => {
@@ -152,58 +228,30 @@ function App() {
         setSelectedPlayer(value);
     };
 
-    if (loading) {
-        return (
-            <div style={appStyles.page}>
-                <div style={appStyles.container}>
-                    <div style={appStyles.emptyState}>Cargando análisis...</div>
-                </div>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div style={appStyles.page}>
-                <div style={appStyles.container}>
-                    <div style={appStyles.emptyState}>{error}</div>
-                </div>
-            </div>
-        );
-    }
-
-    if (!selectedTeam) {
-        return (
-            <div style={appStyles.page}>
-                <div style={appStyles.container}>
-                    <div style={appStyles.emptyState}>No hay equipos disponibles en el análisis.</div>
-                </div>
-            </div>
-        );
-    }
-
     const summaryText = selectedPhaseValue === null
         ? `${analysis?.totalMatches ?? 0} partidos analizados · ${teams.length} equipos disponibles`
         : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
 
-    return (
-        <div style={appStyles.page}>
-            <div style={appStyles.container}>
+    const renderDashboard = () => {
+        if (loading) {
+            return <div style={appStyles.emptyState}>Cargando análisis...</div>;
+        }
+
+        if (error) {
+            return <div style={appStyles.emptyState}>{error}</div>;
+        }
+
+        if (!selectedTeam) {
+            return <div style={appStyles.emptyState}>No hay equipos disponibles en el análisis.</div>;
+        }
+
+        return (
+            <>
                 <div style={appStyles.header}>
                     <div style={appStyles.intro}>
                         <h1 style={{marginBottom: 0}}>{selectedTeam.teamName}</h1>
-                        <p style={appStyles.helper}>
-                            {summaryText}
-                        </p>
+                        <p style={appStyles.helper}>{summaryText}</p>
                     </div>
-
-                    <SyncPanel
-                        apiAvailable={apiAvailable}
-                        job={job}
-                        starting={syncStarting}
-                        error={syncError}
-                        onStartSync={startSync}
-                    />
 
                     <div style={{display: "flex", gap: 16, flexWrap: "wrap"}}>
                         <PrettySelect
@@ -279,6 +327,61 @@ function App() {
                     openMatches={openMatches}
                     onToggleMatch={handleToggleMatch}
                 />
+            </>
+        );
+    };
+
+    const renderSyncPage = () => (
+        <div style={appStyles.syncPage}>
+            <div style={appStyles.intro}>
+                <h1 style={{marginBottom: 0}}>Cargar datos</h1>
+                <p style={appStyles.helper}>
+                    Esta pantalla dispara la sincronización de una fase completa a partir de su URL de resultados.
+                </p>
+            </div>
+
+            <SyncPanel
+                apiAvailable={apiAvailable}
+                job={job}
+                starting={syncStarting}
+                error={syncError}
+                onStartSync={startSync}
+            />
+        </div>
+    );
+
+    return (
+        <div style={appStyles.page}>
+            <div style={appStyles.container}>
+                <div style={appStyles.topBar}>
+                    <div style={appStyles.brand}>
+                        <p style={appStyles.eyebrow}>BarnaStats</p>
+                        <h1 style={appStyles.brandTitle}>
+                            {route === "sync" ? "Sincronización" : "Dashboard"}
+                        </h1>
+                    </div>
+
+                    <div style={appStyles.nav}>
+                        <a
+                            href={DASHBOARD_ROUTE}
+                            style={route === "dashboard"
+                                ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                : appStyles.navLink}
+                        >
+                            Resultados
+                        </a>
+                        <a
+                            href={SYNC_ROUTE}
+                            style={route === "sync"
+                                ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                : appStyles.navLink}
+                        >
+                            Cargar fase
+                        </a>
+                    </div>
+                </div>
+
+                {route === "sync" ? renderSyncPage() : renderDashboard()}
             </div>
         </div>
     );

@@ -87,7 +87,7 @@ async Task<bool> ExecuteSyncMappingsAsync(
         explicitMatchIds.Count == 0)
     {
         Console.WriteLine($"No existe el mapping en: {storage.MappingFile}");
-        Console.WriteLine("Pasa una URL de calendario o resultados, o matchWebIds explícitos para crearlo.");
+        Console.WriteLine("Pasa una URL de resultados o matchWebIds explícitos para crearlo.");
         return false;
     }
 
@@ -294,17 +294,11 @@ void PrintHelp()
     Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj");
     Console.WriteLine("    Descarga stats y moves usando los uuid existentes en match_mapping.json.");
     Console.WriteLine();
-    Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --team 81178 --all");
-    Console.WriteLine("    Usa la carpeta del equipo 81178 sin necesidad de volver a pegar la URL.");
-    Console.WriteLine();
     Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --phase 20855 --all");
     Console.WriteLine("    Usa la carpeta de la fase 20855 para reintentar o descargar sin volver a pegar la URL.");
     Console.WriteLine();
     Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings");
     Console.WriteLine("    Abre un navegador y resuelve los uuid faltantes del mapping actual.");
-    Console.WriteLine();
-    Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178");
-    Console.WriteLine("    Extrae partidos del calendario del equipo y completa el mapping.");
     Console.WriteLine();
     Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/competicions/resultats/20855/0");
     Console.WriteLine("    Extrae partidos de una fase y usa los uuid directos cuando la página los expone.");
@@ -322,9 +316,6 @@ void PrintHelp()
     Console.WriteLine("    Igual que sync-all, pero sin pedir ENTER en consola mientras resuelves captcha.");
     Console.WriteLine();
     Console.WriteLine("  Estructura por scope:");
-    Console.WriteLine("    BarnaStats/out/teams/{teamCalendarId}/match_mapping.json");
-    Console.WriteLine("    BarnaStats/out/teams/{teamCalendarId}/stats");
-    Console.WriteLine("    BarnaStats/out/teams/{teamCalendarId}/moves");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/match_mapping.json");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/stats");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/moves");
@@ -380,32 +371,6 @@ bool TryParseSyncArgs(
             continue;
         }
 
-        if (arg.Equals("--team", StringComparison.OrdinalIgnoreCase))
-        {
-            if (i + 1 >= syncArgs.Length)
-            {
-                Console.WriteLine("Falta el teamCalendarId después de --team.");
-                PrintHelp();
-                return false;
-            }
-
-            if (!int.TryParse(syncArgs[i + 1], out var teamCalendarId) || teamCalendarId <= 0)
-            {
-                Console.WriteLine($"teamCalendarId no válido: {syncArgs[i + 1]}");
-                PrintHelp();
-                return false;
-            }
-
-            if (!TryAssignScope(StorageScope.Team(teamCalendarId), ref scope, out var teamError))
-            {
-                Console.WriteLine(teamError);
-                return false;
-            }
-
-            i += 1;
-            continue;
-        }
-
         if (arg.Equals("--phase", StringComparison.OrdinalIgnoreCase))
         {
             if (i + 1 >= syncArgs.Length)
@@ -432,8 +397,7 @@ bool TryParseSyncArgs(
             continue;
         }
 
-        if (arg.Equals("--calendar", StringComparison.OrdinalIgnoreCase) ||
-            arg.Equals("--results", StringComparison.OrdinalIgnoreCase) ||
+        if (arg.Equals("--results", StringComparison.OrdinalIgnoreCase) ||
             arg.Equals("--source", StringComparison.OrdinalIgnoreCase))
         {
             if (i + 1 >= syncArgs.Length)
@@ -494,7 +458,7 @@ bool TryHandleSourceUrl(
 
     if (!TryInferScopeFromSourceUrl(normalizedSourceUrl, out var inferredScope))
     {
-        error = $"La URL no parece un calendario ni una página de resultados válida: {normalizedSourceUrl}";
+        error = $"La URL no parece una página de resultados válida: {normalizedSourceUrl}";
         return false;
     }
 
@@ -533,15 +497,6 @@ bool TryInferScopeFromSourceUrl(string sourceUrl, out StorageScope scope)
         .Split('/', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
     if (segments.Length >= 3 &&
-        segments[0].Equals("partits", StringComparison.OrdinalIgnoreCase) &&
-        segments[1].StartsWith("calendari_", StringComparison.OrdinalIgnoreCase) &&
-        TryFindTrailingNumericId(segments, minValue: 1000, out var teamCalendarId))
-    {
-        scope = StorageScope.Team(teamCalendarId);
-        return true;
-    }
-
-    if (segments.Length >= 3 &&
         segments[0].Equals("competicions", StringComparison.OrdinalIgnoreCase) &&
         segments[1].Equals("resultats", StringComparison.OrdinalIgnoreCase) &&
         int.TryParse(segments[2], out var phaseId) &&
@@ -551,19 +506,5 @@ bool TryInferScopeFromSourceUrl(string sourceUrl, out StorageScope scope)
         return true;
     }
 
-    return false;
-}
-
-bool TryFindTrailingNumericId(IReadOnlyList<string> segments, int minValue, out int id)
-{
-    for (var index = segments.Count - 1; index >= 0; index -= 1)
-    {
-        if (!int.TryParse(segments[index], out id) || id <= minValue)
-            continue;
-
-        return true;
-    }
-
-    id = 0;
     return false;
 }

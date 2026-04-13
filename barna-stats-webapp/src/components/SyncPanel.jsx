@@ -107,14 +107,14 @@ function SyncPanel({
     error,
     onStartSync
 }) {
-    const [calendarUrl, setCalendarUrl] = useState(() => window.localStorage.getItem("barna-sync-calendar-url") ?? "");
+    const [sourceUrl, setSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
     const scopeLabel = job?.sourceKind === "phase"
-        ? `Fase: ${job.phaseId ?? job.sourceId ?? "-"}`
-        : `Equipo: ${job?.teamCalendarId ?? job?.sourceId ?? "-"}`;
+        ? `Fase: ${job.sourceId ?? "-"}`
+        : `Fuente: ${job?.sourceId ?? "-"}`;
 
     useEffect(() => {
-        window.localStorage.setItem("barna-sync-calendar-url", calendarUrl);
-    }, [calendarUrl]);
+        window.localStorage.setItem("barna-sync-source-url", sourceUrl);
+    }, [sourceUrl]);
 
     const status = job?.status ?? (apiAvailable ? "idle" : "offline");
     const isBusy = starting || status === "pending" || status === "running";
@@ -132,24 +132,24 @@ function SyncPanel({
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!calendarUrl.trim() || isBusy) {
+        if (!sourceUrl.trim() || isBusy) {
             return;
         }
 
-        await onStartSync(calendarUrl.trim());
+        await onStartSync(sourceUrl.trim());
     };
 
     return (
         <form style={styles.panel} onSubmit={handleSubmit}>
             <div style={styles.intro}>
                 <div style={styles.titleRow}>
-                    <h2 style={styles.title}>Sincronizar fuente</h2>
+                    <h2 style={styles.title}>Cargar fase</h2>
                     <span style={{...styles.statusPill, ...statusStyle}}>
                         {statusLabel}
                     </span>
                 </div>
                 <div style={styles.helper}>
-                    Pega la URL de un calendario o de una página de resultados y la app lanzará `sync-all`. Si sale captcha,
+                    Pega la URL de resultados de una fase y la app lanzará `sync-all`. Si sale captcha,
                     se abrirá el navegador auxiliar para resolverlo.
                 </div>
             </div>
@@ -157,8 +157,8 @@ function SyncPanel({
             <div style={styles.controls}>
                 <input
                     type="url"
-                    value={calendarUrl}
-                    onChange={(event) => setCalendarUrl(event.target.value)}
+                    value={sourceUrl}
+                    onChange={(event) => setSourceUrl(event.target.value)}
                     placeholder="https://www.basquetcatala.cat/competicions/resultats/20855/0"
                     style={styles.input}
                     disabled={isBusy}
@@ -168,7 +168,7 @@ function SyncPanel({
                     style={isBusy ? {...styles.button, ...styles.mutedButton} : styles.button}
                     disabled={isBusy}
                 >
-                    {isBusy ? "Sincronizando..." : "Sincronizar"}
+                    {isBusy ? "Sincronizando..." : "Cargar fase"}
                 </button>
             </div>
 
@@ -176,7 +176,7 @@ function SyncPanel({
                 <div style={styles.meta}>
                     <div>{scopeLabel}</div>
                     <div>Job: {job.jobId}</div>
-                    <div>URL: {job.calendarUrl}</div>
+                    <div>URL: {job.sourceUrl}</div>
                 </div>
             ) : null}
 

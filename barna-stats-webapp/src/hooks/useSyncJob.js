@@ -64,7 +64,7 @@ export function useSyncJob(onJobSucceeded) {
         }
     }
 
-    async function startSync(calendarUrl) {
+    async function startSync(sourceUrl) {
         setStarting(true);
         setError("");
 
@@ -74,7 +74,7 @@ export function useSyncJob(onJobSucceeded) {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({calendarUrl})
+                body: JSON.stringify({sourceUrl})
             });
 
             const hasJson = response.headers

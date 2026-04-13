@@ -19,7 +19,7 @@ public sealed class StorageScope
     public int? Id { get; }
 
     public static StorageScope Root() => new(StorageScopeKind.Root, null);
-    public static StorageScope Team(int teamCalendarId) => new(StorageScopeKind.Team, teamCalendarId);
+    public static StorageScope Team(int teamId) => new(StorageScopeKind.Team, teamId);
     public static StorageScope Phase(int phaseId) => new(StorageScopeKind.Phase, phaseId);
 
     public override string ToString()

@@ -34,7 +34,8 @@ La app mostrará esos análisis justo debajo de la tabla del partido cuando el p
 
 ## Uso
 
-1. Pega una URL tipo `https://www.basquetcatala.cat/competicions/resultats/20855/0` o `https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178`
-2. Pulsa `Sincronizar`
-3. Si aparece captcha/login, resuélvelo en el navegador auxiliar que abre Playwright
-4. Cuando termine, la web recarga `analysis.json` automáticamente
+1. Abre `http://localhost:5173/#/sync`
+2. Pega una URL tipo `https://www.basquetcatala.cat/competicions/resultats/20855/0`
+3. Pulsa `Cargar fase`
+4. Si aparece captcha/login, resuélvelo en el navegador auxiliar que abre Playwright
+5. Cuando termine, vuelve al dashboard en `#/`

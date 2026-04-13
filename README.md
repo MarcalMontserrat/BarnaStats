@@ -26,7 +26,7 @@ npm run dev:all
 ```
 
 La web quedará en `http://localhost:5173` y la API local en `http://127.0.0.1:5071`.
-Desde la propia UI ya puedes pegar la URL de un calendario o de una página de resultados y lanzar la sincronización.
+Desde la propia UI ya puedes pegar la URL de resultados de una fase y lanzar la sincronización desde la página `#/sync`.
 
 Si quieres activar resúmenes automáticos de partido con OpenAI, exporta antes:
 
@@ -63,12 +63,6 @@ Si ya tienes `matchWebId` y solo quieres resolver o reintentar IDs concretos:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings 70001 70002
-```
-
-Si ya existe la carpeta del equipo y quieres reusar ese contexto:
-
-```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --team 81178 --all
 ```
 
 O si ya existe la carpeta de una fase:

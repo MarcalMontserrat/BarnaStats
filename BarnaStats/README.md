@@ -6,12 +6,9 @@ Su responsabilidad es la ingesta y la orquestación básica del pipeline:
 - descargar JSON de `moves`
 - lanzar `GenerateAnalisys` para regenerar `analysis.json`
 
-Cuando trabajas con varios equipos, cada calendario queda aislado en su propia carpeta:
+La ingesta principal queda organizada por fase:
 
 ```text
-BarnaStats/out/teams/{teamCalendarId}/match_mapping.json
-BarnaStats/out/teams/{teamCalendarId}/stats
-BarnaStats/out/teams/{teamCalendarId}/moves
 BarnaStats/out/phases/{phaseId}/match_mapping.json
 BarnaStats/out/phases/{phaseId}/stats
 BarnaStats/out/phases/{phaseId}/moves
@@ -27,26 +24,12 @@ Para evitar el paso manual de pegar JavaScript en la consola del navegador, exis
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings
 ```
 
-Qué hace:
+Que hace:
 
 - abre un navegador real con sesión persistente
 - te deja resolver captcha/login si hace falta
 - recorre los `matchWebId` pendientes
 - actualiza `match_mapping.json`
-
-Si partes solo de la URL del calendario del equipo, también puede descubrir los `matchWebId` por ti:
-
-```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178
-```
-
-Qué hace en ese caso:
-
-- abre el calendario del equipo en el navegador real
-- reutiliza tu sesión para pasar captcha/login
-- extrae los `matchWebId` desde el HTML cargado
-- resuelve los `uuidMatch`
-- crea o completa `match_mapping.json`
 
 Si partes de la URL de resultados de una fase, puede extraer directamente `matchWebId` y `uuidMatch` desde esa página:
 
@@ -54,20 +37,14 @@ Si partes de la URL de resultados de una fase, puede extraer directamente `match
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings https://www.basquetcatala.cat/competicions/resultats/20855/0
 ```
 
-Qué hace en ese caso:
+Que hace en ese caso:
 
 - abre la página de resultados en el navegador real
 - reutiliza tu sesión para pasar captcha/login
 - extrae `matchWebId` y `uuidMatch` cuando la página ya los expone
 - crea o completa `BarnaStats/out/phases/{phaseId}/match_mapping.json`
 
-Si ya has sincronizado ese equipo una vez, también puedes apuntar directamente a su carpeta:
-
-```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --team 81178 --all
-```
-
-Y lo mismo para una fase ya descubierta:
+Si ya has sincronizado esa fase una vez, también puedes apuntar directamente a su carpeta:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --phase 20855 --all
@@ -79,19 +56,7 @@ También puedes forzar IDs concretos:
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings 70001 70002
 ```
 
-O reintentar todos:
-
-```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --all
-```
-
-O releer el calendario y reintentar todos los partidos encontrados:
-
-```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --calendar https://www.basquetcatala.cat/partits/calendari_equip_global/24/81178 --all
-```
-
-O releer una página de resultados:
+O releer la página de resultados y reintentar todos los partidos encontrados:
 
 ```bash
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-mappings --results https://www.basquetcatala.cat/competicions/resultats/20855/0 --all
@@ -129,7 +94,7 @@ Comportamiento:
 dotnet run --project BarnaStats/BarnaStats.csproj
 ```
 
-El output se guarda en `out/stats` y `out/moves` si trabajas sobre el mapping raíz, o en la carpeta del `team`/`phase` correspondiente si has usado una fuente con scope.
+El output se guarda en `out/stats` y `out/moves` si trabajas sobre el mapping raíz, o en la carpeta de la fase correspondiente si has usado una fuente con scope.
 
 ### 3. Generar análisis
 
@@ -143,19 +108,13 @@ Si quieres hacer el flujo completo partiendo de la URL de resultados de una fase
 dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/competicions/resultats/20855/0
 ```
 
-Qué hace:
+Que hace:
 
 - sincroniza o crea `match_mapping.json`
 - descarga `stats` y `moves`
 - ejecuta `GenerateAnalisys`
 - deja actualizado `BarnaStats/out/analysis.json`
 - deja actualizada la copia de la web en `barna-stats-webapp/public/data/analysis.json`
-
-Si ya existe la carpeta del equipo:
-
-```bash
-dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --team 81178 --all
-```
 
 Si ya existe la carpeta de la fase:
 

@@ -337,7 +337,7 @@ public sealed class MatchAnalysisService
 
         if (duplicateMatchWebIds.Count > 0)
         {
-            Console.WriteLine($"Duplicados detectados en {duplicateMatchWebIds.Count} partidos. Se prioriza la versión guardada en `out/teams` y, si empatan, la más reciente.");
+            Console.WriteLine($"Duplicados detectados en {duplicateMatchWebIds.Count} partidos. Se prioriza la versión más reciente, dando preferencia a las carpetas con scope dedicado como `out/phases`.");
         }
 
         return selectedPaths;

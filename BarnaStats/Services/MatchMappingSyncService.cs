@@ -31,10 +31,6 @@ public sealed class MatchMappingSyncService
     private static readonly Regex MatchWebIdScriptRegex = new(
         "showPartit\\((\\d+)\\)",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
-    private static readonly Regex CalendarUrlRegex = new(
-        "(https?://[^\"'<>\\s]*basquetcatala\\.cat)?(?:/|\\\\/)partits(?:/|\\\\/)calendari[^\"'<>\\s)]*",
-        RegexOptions.IgnoreCase | RegexOptions.Compiled);
-
     private readonly string _browserProfileDir;
 
     public MatchMappingSyncService(string browserProfileDir)
@@ -183,9 +179,7 @@ public sealed class MatchMappingSyncService
     {
         for (var attempt = 1; ; attempt += 1)
         {
-            var discoveredMappings = IsResultsUrl(sourceUrl)
-                ? await DiscoverMappingsFromResultsAsync(page, sourceUrl)
-                : await DiscoverMappingsAcrossCalendarsAsync(page, sourceUrl);
+            var discoveredMappings = await DiscoverMappingsFromResultsAsync(page, sourceUrl);
 
             if (discoveredMappings.Count > 0)
             {
@@ -257,63 +251,6 @@ public sealed class MatchMappingSyncService
         {
             page.Response -= HandleResponse;
         }
-    }
-
-    private async Task<IReadOnlyList<MatchDiscovery>> DiscoverMappingsAcrossCalendarsAsync(IPage page, string sourceUrl)
-    {
-        var queue = new Queue<string>();
-        var seenUrls = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        var visitedUrls = new List<string>();
-        var discovered = new Dictionary<int, MatchDiscovery>();
-
-        EnqueueCalendarUrl(sourceUrl, queue, seenUrls);
-
-        while (queue.Count > 0 && visitedUrls.Count < 10)
-        {
-            var currentUrl = queue.Dequeue();
-            visitedUrls.Add(currentUrl);
-            var capturedResponses = new List<IResponse>();
-            void HandleResponse(object? _, IResponse response) => capturedResponses.Add(response);
-
-            Console.WriteLine($"Buscando partidos en: {currentUrl}");
-
-            page.Response += HandleResponse;
-
-            try
-            {
-                await page.GotoAsync(currentUrl, new PageGotoOptions
-                {
-                    WaitUntil = WaitUntilState.DOMContentLoaded
-                });
-
-                await page.WaitForTimeoutAsync(1500);
-
-                MergeDiscoveries(discovered, await ExtractMappingsFromPageAsync(page));
-
-                foreach (var relatedCalendarUrl in await ExtractCalendarUrlsAsync(page, currentUrl))
-                    EnqueueCalendarUrl(relatedCalendarUrl, queue, seenUrls);
-
-                foreach (var responseText in await ReadRelevantResponseTextsAsync(capturedResponses))
-                {
-                    MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
-                    EnsureMatchWebIds(discovered, ExtractMatchWebIdsFromText(responseText));
-
-                    foreach (var relatedCalendarUrl in ExtractCalendarUrlsFromText(responseText, currentUrl))
-                        EnqueueCalendarUrl(relatedCalendarUrl, queue, seenUrls);
-                }
-            }
-            finally
-            {
-                page.Response -= HandleResponse;
-            }
-        }
-
-        if (visitedUrls.Count > 1)
-            Console.WriteLine($"  Calendarios revisados: {visitedUrls.Count}");
-
-        return discovered.Values
-            .OrderBy(x => x.MatchWebId)
-            .ToList();
     }
 
     private async Task<IReadOnlyList<MatchDiscovery>> ExtractMappingsFromPageAsync(IPage page)
@@ -404,12 +341,6 @@ public sealed class MatchMappingSyncService
             .Select(x => x.MatchWebId)
             .OrderBy(x => x)
             .ToList();
-    }
-
-    private static bool IsResultsUrl(string sourceUrl)
-    {
-        return Uri.TryCreate(sourceUrl, UriKind.Absolute, out var uri) &&
-               uri.AbsolutePath.Contains("/competicions/resultats/", StringComparison.OrdinalIgnoreCase);
     }
 
     private static async Task<string?> ExtractUuidAsync(IPage page)
@@ -705,129 +636,6 @@ public sealed class MatchMappingSyncService
     private static int ParseMatchWebId(string value)
     {
         return int.TryParse(value, out var matchWebId) ? matchWebId : 0;
-    }
-
-    private static async Task<IReadOnlyList<string>> ExtractCalendarUrlsAsync(IPage page, string currentUrl)
-    {
-        var domCalendarUrls = await page.EvaluateAsync<string[]>(
-            """
-            () => {
-                const values = [];
-                const seen = new Set();
-                const patterns = [
-                    /https?:\/\/[^"' )]*basquetcatala\.cat(?:\/|\\\/)partits(?:\/|\\\/)calendari[^"' )]*/ig,
-                    /(?:\/|\\\/)partits(?:\/|\\\/)calendari[^"' )]*/ig
-                ];
-
-                const add = (value) => {
-                    if (!value) {
-                        return;
-                    }
-
-                    const normalized = value.trim();
-                    if (!normalized || seen.has(normalized)) {
-                        return;
-                    }
-
-                    seen.add(normalized);
-                    values.push(normalized);
-                };
-
-                const collect = (text) => {
-                    if (!text) {
-                        return;
-                    }
-
-                    for (const pattern of patterns) {
-                        pattern.lastIndex = 0;
-                        let match;
-
-                        while ((match = pattern.exec(text)) !== null) {
-                            add(match[0]);
-
-                            if (pattern.lastIndex === match.index) {
-                                pattern.lastIndex += 1;
-                            }
-                        }
-                    }
-                };
-
-                const selectors = [
-                    'a[href]',
-                    '[onclick]',
-                    '[data-href]',
-                    '[data-url]',
-                    'form[action]',
-                    'option[value]'
-                ];
-
-                for (const element of document.querySelectorAll(selectors.join(','))) {
-                    collect(element.getAttribute('href'));
-                    collect(element.getAttribute('onclick'));
-                    collect(element.getAttribute('data-href'));
-                    collect(element.getAttribute('data-url'));
-                    collect(element.getAttribute('action'));
-                    collect(element.getAttribute('value'));
-                }
-
-                collect(document.documentElement?.outerHTML || '');
-                return values;
-            }
-            """);
-
-        var baseUri = new Uri(currentUrl);
-        return domCalendarUrls
-            .Select(value => NormalizeCalendarUrl(baseUri, value))
-            .Where(url => !string.IsNullOrWhiteSpace(url))
-            .Concat(ExtractCalendarUrlsFromText(await page.ContentAsync(), currentUrl))
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .OrderBy(url => url, StringComparer.OrdinalIgnoreCase)
-            .ToList()!;
-    }
-
-    private static string? NormalizeCalendarUrl(Uri baseUri, string candidate)
-    {
-        if (string.IsNullOrWhiteSpace(candidate))
-            return null;
-
-        var sanitized = candidate
-            .Trim()
-            .Trim('"', '\'', ')', '>', ';')
-            .Replace("\\/", "/");
-
-        if (!Uri.TryCreate(baseUri, sanitized, out var resolvedUri))
-            return null;
-
-        if (!resolvedUri.Host.EndsWith("basquetcatala.cat", StringComparison.OrdinalIgnoreCase))
-            return null;
-
-        if (!resolvedUri.AbsolutePath.Contains("/partits/calendari", StringComparison.OrdinalIgnoreCase))
-            return null;
-
-        return resolvedUri.ToString();
-    }
-
-    private static void EnqueueCalendarUrl(string candidate, Queue<string> queue, HashSet<string> seenUrls)
-    {
-        if (string.IsNullOrWhiteSpace(candidate))
-            return;
-
-        if (!seenUrls.Add(candidate))
-            return;
-
-        queue.Enqueue(candidate);
-    }
-
-    private static IReadOnlyList<string> ExtractCalendarUrlsFromText(string text, string currentUrl)
-    {
-        var baseUri = new Uri(currentUrl);
-        return CalendarUrlRegex
-            .Matches(text)
-            .Select(match => NormalizeCalendarUrl(baseUri, match.Value))
-            .Where(url => !string.IsNullOrWhiteSpace(url))
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .OrderBy(url => url, StringComparer.OrdinalIgnoreCase)
-            .ToList()!;
     }
 
     private static async Task<IReadOnlyList<string>> ReadRelevantResponseTextsAsync(IReadOnlyList<IResponse> responses)
