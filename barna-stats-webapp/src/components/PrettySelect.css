@@ -5,10 +5,10 @@
 }
 
 .pretty-select-label {
-  color: #6c7382;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  color: var(--pretty-select-label-color, var(--muted));
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
   padding-left: 4px;
   text-transform: uppercase;
 }
@@ -22,10 +22,10 @@
   content: "";
   position: absolute;
   inset: 1px;
-  border-radius: 17px;
+  border-radius: 18px;
   background:
-    radial-gradient(circle at top left, rgba(217, 70, 70, 0.08), transparent 52%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(246, 248, 252, 0.98) 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 48%),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.96) 0%, rgba(247, 237, 225, 0.94) 100%);
   pointer-events: none;
 }
 
@@ -36,8 +36,8 @@
   top: 50%;
   width: 10px;
   height: 10px;
-  border-right: 2px solid #7c8699;
-  border-bottom: 2px solid #7c8699;
+  border-right: 2px solid rgba(31, 36, 48, 0.6);
+  border-bottom: 2px solid rgba(31, 36, 48, 0.6);
   transform: translateY(-62%) rotate(45deg);
   pointer-events: none;
 }
@@ -48,19 +48,19 @@
   -moz-appearance: none;
   position: relative;
   width: 100%;
-  border: 1px solid #d8dde8;
+  border: 1px solid rgba(107, 86, 58, 0.18);
   border-radius: 18px;
   background: transparent;
-  color: #243147;
+  color: var(--text);
   cursor: pointer;
   font: inherit;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
-  padding: 15px 48px 15px 16px;
+  padding: 16px 48px 16px 16px;
   box-shadow:
-    0 12px 28px rgba(15, 23, 42, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+    0 12px 24px rgba(33, 24, 19, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease,
@@ -68,23 +68,23 @@
 }
 
 .pretty-select-control:hover {
-  border-color: #c5cfdf;
+  border-color: rgba(107, 86, 58, 0.28);
   box-shadow:
-    0 16px 30px rgba(15, 23, 42, 0.1),
+    0 16px 28px rgba(33, 24, 19, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.96);
 }
 
 .pretty-select-control:focus {
   outline: none;
-  border-color: #d94646;
+  border-color: rgba(188, 63, 43, 0.48);
   box-shadow:
-    0 0 0 4px rgba(217, 70, 70, 0.14),
-    0 18px 34px rgba(15, 23, 42, 0.12),
+    0 0 0 4px rgba(188, 63, 43, 0.12),
+    0 18px 34px rgba(33, 24, 19, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.96);
 }
 
 .pretty-select-control option {
-  color: #243147;
+  color: var(--text);
 }
 
 @media (max-width: 720px) {

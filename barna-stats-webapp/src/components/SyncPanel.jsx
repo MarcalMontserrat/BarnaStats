@@ -2,16 +2,17 @@ import {useEffect, useState} from "react";
 
 const styles = {
     panel: {
-        background: "#fff",
-        padding: 20,
-        borderRadius: 12,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
         display: "grid",
-        gap: 16
+        gap: 18,
+        padding: "24px clamp(18px, 3vw, 30px)",
+        borderRadius: "var(--radius-xl)",
+        background: "linear-gradient(180deg, rgba(255, 252, 247, 0.94) 0%, rgba(246, 237, 224, 0.92) 100%)",
+        border: "1px solid var(--border)",
+        boxShadow: "var(--shadow-lg)"
     },
     intro: {
         display: "grid",
-        gap: 6
+        gap: 8
     },
     titleRow: {
         display: "flex",
@@ -21,19 +22,23 @@ const styles = {
     },
     title: {
         margin: 0,
-        fontSize: 20
+        fontSize: "clamp(1.5rem, 2vw, 2rem)"
     },
     helper: {
-        color: "#666",
-        fontSize: 14
+        color: "var(--muted)",
+        fontSize: 15,
+        lineHeight: 1.6,
+        maxWidth: 760
     },
     statusPill: {
         display: "inline-flex",
         alignItems: "center",
         borderRadius: 999,
-        padding: "6px 10px",
+        padding: "7px 12px",
         fontSize: 12,
-        fontWeight: 700
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase"
     },
     controls: {
         display: "flex",
@@ -42,47 +47,74 @@ const styles = {
     },
     input: {
         flex: "1 1 520px",
-        minHeight: 48,
-        padding: "0 16px",
-        borderRadius: 10,
-        border: "1px solid #d8dbe5",
+        minHeight: 56,
+        padding: "0 18px",
+        borderRadius: 18,
+        border: "1px solid rgba(107, 86, 58, 0.18)",
+        background: "rgba(255, 252, 247, 0.94)",
+        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.9)",
+        color: "var(--text)",
         fontSize: 15
     },
     button: {
-        minHeight: 48,
-        padding: "0 20px",
-        borderRadius: 10,
+        minHeight: 56,
+        padding: "0 22px",
+        borderRadius: 18,
         border: "none",
-        background: "#172554",
-        color: "#fff",
-        fontWeight: 700,
-        cursor: "pointer"
+        background: "linear-gradient(135deg, #1a3557 0%, #bc3f2b 100%)",
+        color: "#fff8ef",
+        fontWeight: 800,
+        cursor: "pointer",
+        boxShadow: "0 16px 28px rgba(40, 30, 21, 0.14)"
     },
     mutedButton: {
-        background: "#94a3b8",
-        cursor: "not-allowed"
+        background: "linear-gradient(135deg, #8e97a2 0%, #b0b6bd 100%)",
+        cursor: "not-allowed",
+        boxShadow: "none"
     },
-    meta: {
+    metaGrid: {
         display: "grid",
-        gap: 4,
-        color: "#555",
-        fontSize: 14
+        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+        gap: 12
+    },
+    metaCard: {
+        display: "grid",
+        gap: 6,
+        padding: 14,
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 251, 245, 0.88)",
+        border: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    metaLabel: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 800,
+        textTransform: "uppercase",
+        letterSpacing: "0.08em"
+    },
+    metaValue: {
+        color: "var(--text)",
+        fontSize: 14,
+        lineHeight: 1.45,
+        wordBreak: "break-word"
     },
     error: {
-        color: "#b91c1c",
-        fontSize: 14
+        color: "#9d2618",
+        fontSize: 14,
+        lineHeight: 1.6
     },
     logs: {
         margin: 0,
-        background: "#0f172a",
-        color: "#dbeafe",
-        borderRadius: 10,
-        padding: 14,
-        maxHeight: 220,
+        background: "linear-gradient(180deg, #132033 0%, #182a43 100%)",
+        color: "#ecf1f6",
+        borderRadius: "var(--radius-lg)",
+        padding: 16,
+        maxHeight: 260,
         overflow: "auto",
         fontSize: 13,
-        lineHeight: 1.5,
-        whiteSpace: "pre-wrap"
+        lineHeight: 1.6,
+        whiteSpace: "pre-wrap",
+        boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)"
     }
 };
 
@@ -94,10 +126,10 @@ const STATUS_LABELS = {
 };
 
 const STATUS_STYLES = {
-    pending: {background: "#fef3c7", color: "#92400e"},
-    running: {background: "#dbeafe", color: "#1d4ed8"},
-    succeeded: {background: "#dcfce7", color: "#166534"},
-    failed: {background: "#fee2e2", color: "#b91c1c"}
+    pending: {background: "#fef0cb", color: "#925f00"},
+    running: {background: "#dce8f6", color: "#1a3557"},
+    succeeded: {background: "#e4f1e4", color: "#2d5d34"},
+    failed: {background: "#f8dcd6", color: "#9d2618"}
 };
 
 function SyncPanel({
@@ -109,8 +141,8 @@ function SyncPanel({
 }) {
     const [sourceUrl, setSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
     const scopeLabel = job?.sourceKind === "phase"
-        ? `Fase: ${job.sourceId ?? "-"}`
-        : `Fuente: ${job?.sourceId ?? "-"}`;
+        ? `Fase ${job.sourceId ?? "-"}`
+        : `Fuente ${job?.sourceId ?? "-"}`;
 
     useEffect(() => {
         window.localStorage.setItem("barna-sync-source-url", sourceUrl);
@@ -124,9 +156,9 @@ function SyncPanel({
             ? "API no disponible"
             : (STATUS_LABELS[status] ?? status);
     const statusStyle = status === "idle"
-        ? {background: "#e2e8f0", color: "#334155"}
+        ? {background: "#efe4d5", color: "#6c5b49"}
         : status === "offline"
-            ? {background: "#fee2e2", color: "#991b1b"}
+            ? {background: "#f8dcd6", color: "#9d2618"}
             : STATUS_STYLES[status];
 
     const handleSubmit = async (event) => {
@@ -143,14 +175,14 @@ function SyncPanel({
         <form style={styles.panel} onSubmit={handleSubmit}>
             <div style={styles.intro}>
                 <div style={styles.titleRow}>
-                    <h2 style={styles.title}>Cargar fase</h2>
+                    <h2 style={styles.title}>Sincronizar fase</h2>
                     <span style={{...styles.statusPill, ...statusStyle}}>
                         {statusLabel}
                     </span>
                 </div>
                 <div style={styles.helper}>
-                    Pega la URL de resultados de una fase y la app lanzará `sync-all`. Si sale captcha,
-                    se abrirá el navegador auxiliar para resolverlo.
+                    Pega la URL oficial de resultados y la app reconstruirá el mapping, descargará `stats` y `moves`,
+                    y regenerará el análisis publicado para la web. Si sale captcha, se abrirá el navegador auxiliar.
                 </div>
             </div>
 
@@ -173,10 +205,19 @@ function SyncPanel({
             </div>
 
             {job ? (
-                <div style={styles.meta}>
-                    <div>{scopeLabel}</div>
-                    <div>Job: {job.jobId}</div>
-                    <div>URL: {job.sourceUrl}</div>
+                <div style={styles.metaGrid}>
+                    <div style={styles.metaCard}>
+                        <div style={styles.metaLabel}>Scope</div>
+                        <div style={styles.metaValue}>{scopeLabel}</div>
+                    </div>
+                    <div style={styles.metaCard}>
+                        <div style={styles.metaLabel}>Job</div>
+                        <div style={styles.metaValue}>{job.jobId}</div>
+                    </div>
+                    <div style={styles.metaCard}>
+                        <div style={styles.metaLabel}>Fuente</div>
+                        <div style={styles.metaValue}>{job.sourceUrl}</div>
+                    </div>
                 </div>
             ) : null}
 

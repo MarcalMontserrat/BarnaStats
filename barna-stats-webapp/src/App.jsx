@@ -24,13 +24,39 @@ const SYNC_ROUTE = "#/sync";
 
 const appStyles = {
     page: {
-        background: "#f5f6fa",
+        position: "relative",
         minHeight: "100vh",
-        padding: 30,
-        fontFamily: "Arial, sans-serif"
+        overflow: "hidden",
+        padding: "clamp(18px, 3vw, 34px)"
+    },
+    glowPrimary: {
+        position: "absolute",
+        top: -120,
+        left: -80,
+        width: 340,
+        height: 340,
+        borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(188, 63, 43, 0.22) 0%, rgba(188, 63, 43, 0) 72%)",
+        filter: "blur(8px)",
+        animation: "float-glow 8s ease-in-out infinite alternate",
+        pointerEvents: "none"
+    },
+    glowSecondary: {
+        position: "absolute",
+        right: -100,
+        top: 80,
+        width: 360,
+        height: 360,
+        borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(26, 53, 87, 0.18) 0%, rgba(26, 53, 87, 0) 72%)",
+        filter: "blur(10px)",
+        animation: "float-glow 10s ease-in-out infinite alternate-reverse",
+        pointerEvents: "none"
     },
     container: {
-        maxWidth: 1200,
+        position: "relative",
+        zIndex: 1,
+        maxWidth: 1280,
         margin: "0 auto",
         display: "grid",
         gap: 24
@@ -39,24 +65,30 @@ const appStyles = {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        gap: 16,
-        flexWrap: "wrap"
+        gap: 18,
+        flexWrap: "wrap",
+        animation: "fade-up 650ms ease both"
     },
     brand: {
         display: "grid",
-        gap: 4
+        gap: 6
     },
     eyebrow: {
-        color: "#64748b",
-        fontSize: 13,
-        fontWeight: 700,
-        letterSpacing: "0.08em",
+        color: "var(--accent)",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.16em",
         textTransform: "uppercase",
         margin: 0
     },
     brandTitle: {
-        margin: 0,
-        fontSize: 28
+        fontSize: "clamp(2rem, 4vw, 3.3rem)",
+        lineHeight: 0.95
+    },
+    brandNote: {
+        color: "var(--muted)",
+        maxWidth: 540,
+        fontSize: 15
     },
     nav: {
         display: "flex",
@@ -67,48 +99,138 @@ const appStyles = {
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: 42,
-        padding: "0 16px",
+        minHeight: 44,
+        padding: "0 18px",
         borderRadius: 999,
         textDecoration: "none",
-        fontWeight: 700,
-        border: "1px solid #cbd5e1",
-        color: "#0f172a",
-        background: "#fff"
+        fontWeight: 800,
+        border: "1px solid rgba(26, 53, 87, 0.14)",
+        color: "var(--navy)",
+        background: "rgba(255, 251, 245, 0.78)",
+        boxShadow: "var(--shadow-sm)",
+        backdropFilter: "blur(10px)"
     },
     navLinkActive: {
-        background: "#172554",
-        borderColor: "#172554",
+        background: "linear-gradient(135deg, #1a3557 0%, #2d567b 100%)",
+        borderColor: "transparent",
         color: "#fff"
     },
-    header: {
+    hero: {
         display: "grid",
-        gap: 16,
-        marginBottom: 6
+        gap: 22,
+        padding: "clamp(20px, 4vw, 34px)",
+        borderRadius: "var(--radius-xl)",
+        background: "linear-gradient(135deg, rgba(19, 32, 51, 0.96) 0%, rgba(53, 28, 34, 0.92) 54%, rgba(143, 44, 29, 0.9) 100%)",
+        color: "#fff7ef",
+        border: "1px solid rgba(255, 255, 255, 0.08)",
+        boxShadow: "0 28px 70px rgba(22, 18, 15, 0.22)",
+        overflow: "hidden",
+        position: "relative",
+        animation: "fade-up 720ms ease both"
     },
-    intro: {
+    heroPattern: {
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(120deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 24%), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 72px)",
+        pointerEvents: "none"
+    },
+    heroContent: {
+        position: "relative",
+        zIndex: 1,
         display: "grid",
-        gap: 8
+        gap: 20
     },
-    helper: {
-        color: "#666",
-        margin: 0
+    heroHeader: {
+        display: "grid",
+        gap: 10
+    },
+    heroKicker: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "8px 12px",
+        borderRadius: 999,
+        background: "rgba(255, 248, 238, 0.12)",
+        width: "fit-content",
+        fontSize: 12,
+        letterSpacing: "0.12em",
+        textTransform: "uppercase",
+        fontWeight: 800
+    },
+    heroTitle: {
+        fontSize: "clamp(2.3rem, 4vw, 4.2rem)",
+        lineHeight: 0.95,
+        color: "#fff7ef"
+    },
+    heroSummary: {
+        color: "rgba(255, 243, 227, 0.82)",
+        fontSize: 16,
+        maxWidth: 760
+    },
+    heroMetaRow: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    metaChip: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "10px 14px",
+        borderRadius: 999,
+        background: "rgba(255, 248, 238, 0.1)",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        color: "#fff8f0",
+        fontSize: 13,
+        fontWeight: 700
+    },
+    filterDeck: {
+        display: "flex",
+        gap: 14,
+        flexWrap: "wrap"
     },
     cardsGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        gap: 20,
-        marginBottom: 30
+        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+        gap: 18,
+        animation: "fade-up 820ms ease both"
     },
     emptyState: {
-        background: "#fff",
-        padding: 24,
-        borderRadius: 12,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.08)"
+        background: "linear-gradient(180deg, rgba(255, 252, 247, 0.92) 0%, rgba(252, 246, 239, 0.88) 100%)",
+        padding: 28,
+        borderRadius: "var(--radius-lg)",
+        boxShadow: "var(--shadow-md)",
+        border: "1px solid var(--border)",
+        color: "var(--muted)"
     },
     syncPage: {
         display: "grid",
-        gap: 18
+        gap: 18,
+        animation: "fade-up 720ms ease both"
+    },
+    syncIntro: {
+        display: "grid",
+        gap: 12,
+        padding: "clamp(20px, 4vw, 30px)",
+        borderRadius: "var(--radius-xl)",
+        background: "linear-gradient(160deg, rgba(255, 252, 247, 0.9) 0%, rgba(249, 239, 226, 0.92) 100%)",
+        border: "1px solid var(--border)",
+        boxShadow: "var(--shadow-md)"
+    },
+    syncEyebrow: {
+        color: "var(--accent)",
+        fontSize: 12,
+        fontWeight: 800,
+        textTransform: "uppercase",
+        letterSpacing: "0.16em"
+    },
+    syncTitle: {
+        fontSize: "clamp(2rem, 3vw, 3.2rem)"
+    },
+    syncBody: {
+        maxWidth: 760,
+        color: "var(--muted)",
+        lineHeight: 1.6
     }
 };
 
@@ -201,6 +323,12 @@ function App() {
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
+    const seasonLabel = selectedPhaseValue === null
+        ? "Temporada completa"
+        : `Fase ${selectedPhaseValue}`;
+    const summaryText = selectedPhaseValue === null
+        ? `${analysis?.totalMatches ?? 0} partidos analizados · ${teams.length} equipos disponibles`
+        : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
 
     const handleToggleMatch = (matchWebId) => {
         setOpenMatches((prev) => ({
@@ -228,10 +356,6 @@ function App() {
         setSelectedPlayer(value);
     };
 
-    const summaryText = selectedPhaseValue === null
-        ? `${analysis?.totalMatches ?? 0} partidos analizados · ${teams.length} equipos disponibles`
-        : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
-
     const renderDashboard = () => {
         if (loading) {
             return <div style={appStyles.emptyState}>Cargando análisis...</div>;
@@ -247,69 +371,85 @@ function App() {
 
         return (
             <>
-                <div style={appStyles.header}>
-                    <div style={appStyles.intro}>
-                        <h1 style={{marginBottom: 0}}>{selectedTeam.teamName}</h1>
-                        <p style={appStyles.helper}>{summaryText}</p>
+                <section style={appStyles.hero}>
+                    <div style={appStyles.heroPattern}/>
+                    <div style={appStyles.heroContent}>
+                        <div style={appStyles.heroHeader}>
+                            <div style={appStyles.heroKicker}>Lectura de temporada</div>
+                            <h2 style={appStyles.heroTitle}>{selectedTeam.teamName}</h2>
+                            <p style={appStyles.heroSummary}>{summaryText}</p>
+                        </div>
+
+                        <div style={appStyles.heroMetaRow}>
+                            <span style={appStyles.metaChip}>{seasonLabel}</span>
+                            <span style={appStyles.metaChip}>{sortedMatches.length} partidos visibles</span>
+                            <span style={appStyles.metaChip}>{playersArray.length} jugadoras</span>
+                        </div>
+
+                        <div style={appStyles.filterDeck}>
+                            <PrettySelect
+                                label="Equipo"
+                                value={effectiveTeamKey}
+                                onChange={handleTeamChange}
+                                ariaLabel="Selecciona equipo"
+                                minWidth="360px"
+                                labelColor="rgba(255, 247, 237, 0.82)"
+                            >
+                                {sortedTeams.map((team) => (
+                                    <option key={team.teamKey} value={team.teamKey}>
+                                        {team.teamName}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+
+                            <PrettySelect
+                                label="Fase"
+                                value={selectedPhase}
+                                onChange={handlePhaseChange}
+                                ariaLabel="Selecciona fase"
+                                minWidth="220px"
+                                labelColor="rgba(255, 247, 237, 0.82)"
+                            >
+                                <option value="">Temporada completa</option>
+                                {availablePhases.map((phase) => (
+                                    <option key={phase} value={phase}>
+                                        Fase {phase}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        </div>
                     </div>
+                </section>
 
-                    <div style={{display: "flex", gap: 16, flexWrap: "wrap"}}>
-                        <PrettySelect
-                            label="Equipo"
-                            value={effectiveTeamKey}
-                            onChange={handleTeamChange}
-                            ariaLabel="Selecciona equipo"
-                            minWidth="380px"
-                        >
-                            {sortedTeams.map((team) => (
-                                <option key={team.teamKey} value={team.teamKey}>
-                                    {team.teamName}
-                                </option>
-                            ))}
-                        </PrettySelect>
-
-                        <PrettySelect
-                            label="Fase"
-                            value={selectedPhase}
-                            onChange={handlePhaseChange}
-                            ariaLabel="Selecciona fase"
-                            minWidth="220px"
-                        >
-                            <option value="">Temporada completa</option>
-                            {availablePhases.map((phase) => (
-                                <option key={phase} value={phase}>
-                                    Fase {phase}
-                                </option>
-                            ))}
-                        </PrettySelect>
-                    </div>
-                </div>
-
-                <div style={appStyles.cardsGrid}>
+                <section style={appStyles.cardsGrid}>
                     <StatCard
-                        title="👑 MVP"
+                        title="MVP"
                         value={mvp?.name ?? "-"}
                         subtitle={mvp ? `${mvp.valuation} val` : undefined}
+                        tone="ember"
                     />
 
                     <StatCard
-                        title="🔥 Top scorer"
+                        title="Top scorer"
                         value={topScorer?.name ?? "-"}
                         subtitle={topScorer ? `${topScorer.points} pts` : undefined}
+                        tone="ink"
                     />
 
                     <StatCard
-                        title="📈 Media equipo"
+                        title="Media equipo"
                         value={teamAvg.toFixed(1)}
-                        subtitle="pts / partido"
+                        subtitle="pts por partido"
+                        tone="gold"
                     />
 
                     <StatCard
-                        title="🏀 Jugadoras"
+                        title="Rotación"
                         value={playersArray.length}
                         subtitle={`${sortedMatches.length} partidos`}
+                        tone="mint"
                     />
-                </div>
+                </section>
 
                 <PlayerEvolutionSection
                     playersList={playersList}
@@ -333,12 +473,14 @@ function App() {
 
     const renderSyncPage = () => (
         <div style={appStyles.syncPage}>
-            <div style={appStyles.intro}>
-                <h1 style={{marginBottom: 0}}>Cargar datos</h1>
-                <p style={appStyles.helper}>
-                    Esta pantalla dispara la sincronización de una fase completa a partir de su URL de resultados.
+            <section style={appStyles.syncIntro}>
+                <div style={appStyles.syncEyebrow}>Ingesta</div>
+                <h2 style={appStyles.syncTitle}>Carga una fase completa desde la fuente oficial</h2>
+                <p style={appStyles.syncBody}>
+                    Pega la URL de resultados, dispara la sincronización y deja que el pipeline reconstruya
+                    `match_mapping.json`, `stats`, `moves` y `analysis.json` sin pasar por la consola.
                 </p>
-            </div>
+            </section>
 
             <SyncPanel
                 apiAvailable={apiAvailable}
@@ -352,13 +494,19 @@ function App() {
 
     return (
         <div style={appStyles.page}>
+            <div style={appStyles.glowPrimary}/>
+            <div style={appStyles.glowSecondary}/>
+
             <div style={appStyles.container}>
                 <div style={appStyles.topBar}>
                     <div style={appStyles.brand}>
                         <p style={appStyles.eyebrow}>BarnaStats</p>
                         <h1 style={appStyles.brandTitle}>
-                            {route === "sync" ? "Sincronización" : "Dashboard"}
+                            {route === "sync" ? "Sala de Carga" : "Cuaderno de Juego"}
                         </h1>
+                        <p style={appStyles.brandNote}>
+                            Estadistica de baloncesto, fase a fase, con una capa visual bastante mas cuidada que el prototipo inicial.
+                        </p>
                     </div>
 
                     <div style={appStyles.nav}>
