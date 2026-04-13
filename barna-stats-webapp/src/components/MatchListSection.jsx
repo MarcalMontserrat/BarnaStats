@@ -1,3 +1,4 @@
+import MatchInsightsPanel from "./MatchInsightsPanel.jsx";
 import MatchTable from "./MatchTable.jsx";
 import PrettySelect from "./PrettySelect.jsx";
 
@@ -56,6 +57,14 @@ const styles = {
         fontFamily: "var(--font-display)",
         fontSize: "clamp(1.25rem, 2vw, 1.65rem)",
         lineHeight: 1
+    },
+    matchTitleButton: {
+        padding: 0,
+        border: "none",
+        background: "transparent",
+        font: "inherit",
+        color: "var(--accent-strong)",
+        cursor: "pointer"
     },
     matchMeta: {
         color: "var(--muted)",
@@ -143,7 +152,8 @@ function MatchListSection({
     onSelectedMatchChange,
     selectedPhase,
     openMatches,
-    onToggleMatch
+    onToggleMatch,
+    onTeamNavigate
 }) {
     const renderMatchReport = (match) => {
         if (!match.matchReport) {
@@ -258,7 +268,21 @@ function MatchListSection({
                         >
                             <div style={styles.matchHeaderMain}>
                                 <div style={styles.matchTitle}>
-                                    {formatMatchTitle(match)}
+                                    {selectedPhase ? `Jornada ${match.phaseRound ?? "-"} · vs ` : `Fase ${match.phaseNumber ?? "-"} · Jornada ${match.phaseRound ?? "-"} · vs `}
+                                    {match.rivalTeamKey ? (
+                                        <button
+                                            type="button"
+                                            style={styles.matchTitleButton}
+                                            onClick={(event) => {
+                                                event.stopPropagation();
+                                                onTeamNavigate?.(match.rivalTeamKey);
+                                            }}
+                                        >
+                                            {match.rival}
+                                        </button>
+                                    ) : (
+                                        match.rival
+                                    )}
                                 </div>
                                 <div style={styles.matchMeta}>
                                     {match.result || "-"} · {location}
@@ -276,6 +300,7 @@ function MatchListSection({
                         {isOpen ? (
                             <div style={styles.detailShell}>
                                 <MatchTable players={match.players}/>
+                                <MatchInsightsPanel insights={match.insights}/>
                                 {renderMatchReport(match)}
                             </div>
                         ) : null}

@@ -126,7 +126,9 @@ const styles = {
         background: "rgba(188, 63, 43, 0.08)",
         color: "var(--accent-strong)",
         fontSize: 12,
-        fontWeight: 800
+        fontWeight: 800,
+        border: "none",
+        cursor: "pointer"
     },
     gamesMeta: {
         color: "var(--muted)",
@@ -173,7 +175,7 @@ function buildSecondaryText(player, metric) {
     return `${formatMetric(player.avgPoints, 1)} pts/partido · ${player.games} pj`;
 }
 
-function LeaderBoard({title, kicker, subtitle, rows, metric, accentColor, label}) {
+function LeaderBoard({title, kicker, subtitle, rows, metric, accentColor, label, onTeamNavigate}) {
     return (
         <article style={styles.board}>
             <div style={styles.boardHeader}>
@@ -191,7 +193,13 @@ function LeaderBoard({title, kicker, subtitle, rows, metric, accentColor, label}
                             <div style={styles.playerBlock}>
                                 <div style={styles.playerName}>{player.playerName}</div>
                                 <div style={styles.teamMeta}>
-                                    <span style={styles.teamBadge}>{player.teamName}</span>
+                                    <button
+                                        type="button"
+                                        style={styles.teamBadge}
+                                        onClick={() => onTeamNavigate?.(player.teamKey)}
+                                    >
+                                        {player.teamName}
+                                    </button>
                                     <span style={styles.gamesMeta}>{player.games} partidos</span>
                                 </div>
                             </div>
@@ -221,7 +229,8 @@ function GlobalLeadersSection({
     totalPlayers,
     totalTeams,
     leadersByAvgValuation,
-    leadersByPoints
+    leadersByPoints,
+    onTeamNavigate
 }) {
     return (
         <section style={styles.section}>
@@ -249,6 +258,7 @@ function GlobalLeadersSection({
                     metric="avgValuation"
                     accentColor="var(--accent)"
                     label="val media"
+                    onTeamNavigate={onTeamNavigate}
                 />
 
                 <LeaderBoard
@@ -259,6 +269,7 @@ function GlobalLeadersSection({
                     metric="points"
                     accentColor="var(--navy)"
                     label="pts totales"
+                    onTeamNavigate={onTeamNavigate}
                 />
             </div>
         </section>

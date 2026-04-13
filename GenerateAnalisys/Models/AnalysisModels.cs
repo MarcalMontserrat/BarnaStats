@@ -29,6 +29,8 @@ public sealed class MatchSummary
     public int TeamIdIntern { get; set; }
     public int TeamIdExtern { get; set; }
     public string TeamName { get; set; } = "";
+    public string HomeTeamKey { get; set; } = "";
+    public string AwayTeamKey { get; set; } = "";
     public int MatchWebId { get; set; }
     public int MatchInternId { get; set; }
     public int MatchExternId { get; set; }
@@ -41,6 +43,7 @@ public sealed class MatchSummary
     public int AwayScore { get; set; }
     public string AwayTeam { get; set; } = "";
     public bool IsHome { get; set; }
+    public string RivalTeamKey { get; set; } = "";
     public string RivalTeam { get; set; } = "";
     public int OfficialTeamScore { get; set; }
     public int OfficialRivalScore { get; set; }
@@ -52,6 +55,7 @@ public sealed class MatchSummary
     public int TopScorerPoints { get; set; }
     public string TeamTopScorer { get; set; } = "";
     public int TeamTopScorerPoints { get; set; }
+    public MatchInsights? Insights { get; set; }
     public string MatchReport { get; set; } = "";
     public DateTime? MatchReportGeneratedAtUtc { get; set; }
     public string MatchReportModel { get; set; } = "";
@@ -70,6 +74,7 @@ public sealed class MatchPlayerRow
     public int PhaseNumber { get; set; }
     public int PhaseRound { get; set; }
     public bool IsHome { get; set; }
+    public string RivalTeamKey { get; set; } = "";
     public string Rival { get; set; } = "";
     public long PlayerActorId { get; set; }
     public string PlayerName { get; set; } = "";
@@ -114,6 +119,38 @@ public sealed class PlayerEvolution
     public int MatchWebId { get; set; }
     public int Points { get; set; }
     public int Valuation { get; set; }
+}
+
+public sealed class MatchPeriodScore
+{
+    public int PeriodNumber { get; set; }
+    public string Label { get; set; } = "";
+    public int TeamPoints { get; set; }
+    public int RivalPoints { get; set; }
+    public int Diff { get; set; }
+}
+
+public sealed class MatchInsights
+{
+    public int LeadChanges { get; set; }
+    public int Ties { get; set; }
+    public int MaxLead { get; set; }
+    public int MaxDeficit { get; set; }
+    public int BestRun { get; set; }
+    public int RivalBestRun { get; set; }
+    public int ClosingRun { get; set; }
+    public int RivalClosingRun { get; set; }
+    public string FirstScorer { get; set; } = "";
+    public string FirstScorerTeam { get; set; } = "";
+    public string LastScorer { get; set; } = "";
+    public string LastScorerTeam { get; set; } = "";
+    public string TeamFirstScorer { get; set; } = "";
+    public string TeamLastScorer { get; set; } = "";
+    public string BestPeriodLabel { get; set; } = "";
+    public int BestPeriodDiff { get; set; }
+    public string WorstPeriodLabel { get; set; } = "";
+    public int WorstPeriodDiff { get; set; }
+    public List<MatchPeriodScore> PeriodScores { get; set; } = [];
 }
 
 public sealed class TeamAnalysis

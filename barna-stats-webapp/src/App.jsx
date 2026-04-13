@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import GlobalLeadersSection from "./components/GlobalLeadersSection.jsx";
+import PhaseComparisonSection from "./components/PhaseComparisonSection.jsx";
+import StandingsSection from "./components/StandingsSection.jsx";
 import TeamLeadersSection from "./components/TeamLeadersSection.jsx";
 import StatCard from "./components/StatCard.jsx";
 import PlayerEvolutionSection from "./components/PlayerEvolutionSection.jsx";
@@ -8,6 +10,14 @@ import PrettySelect from "./components/PrettySelect.jsx";
 import SyncPanel from "./components/SyncPanel.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
+import {
+    buildPhaseComparison,
+    buildPhaseSummaries,
+    buildStandings,
+    buildTeamRoute,
+    buildUniqueMatches,
+    getAllPhaseNumbers
+} from "./utils/analysisDerived.js";
 import {
     buildPlayersArray,
     buildGlobalPlayers,
@@ -27,6 +37,7 @@ import {
 const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
 const RANKINGS_ROUTE = "#/rankings";
+const TEAM_ROUTE_PREFIX = "#/team/";
 
 const appStyles = {
     page: {
@@ -281,21 +292,30 @@ const appStyles = {
     }
 };
 
-function getRouteFromHash(hash) {
+function parseHash(hash) {
     if (hash === SYNC_ROUTE) {
-        return "sync";
+        return {route: "sync", teamKey: null};
     }
 
     if (hash === RANKINGS_ROUTE || hash === "#/global") {
-        return "rankings";
+        return {route: "rankings", teamKey: null};
     }
 
-    return "dashboard";
+    if (hash.startsWith(TEAM_ROUTE_PREFIX)) {
+        const encodedTeamKey = hash.slice(TEAM_ROUTE_PREFIX.length);
+
+        return {
+            route: "dashboard",
+            teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null
+        };
+    }
+
+    return {route: "dashboard", teamKey: null};
 }
 
 function App() {
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
-    const [route, setRoute] = useState(() => getRouteFromHash(window.location.hash));
+    const [route, setRoute] = useState(() => parseHash(window.location.hash).route);
     const {analysis, loading, error} = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
     const {
         apiAvailable,
@@ -307,13 +327,31 @@ function App() {
         setAnalysisVersion(Date.now());
     });
 
+    const initialHashState = parseHash(window.location.hash);
+    const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
+    const [selectedPhase, setSelectedPhase] = useState("");
+    const [selectedPlayer, setSelectedPlayer] = useState("");
+    const [selectedMatch, setSelectedMatch] = useState("");
+    const [openMatches, setOpenMatches] = useState({});
+    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("");
+    const [rankingMinGames, setRankingMinGames] = useState("3");
+
     useEffect(() => {
         if (!window.location.hash) {
             window.location.hash = DASHBOARD_ROUTE;
         }
 
         const handleHashChange = () => {
-            setRoute(getRouteFromHash(window.location.hash));
+            const nextState = parseHash(window.location.hash);
+            setRoute(nextState.route);
+
+            if (nextState.teamKey) {
+                setSelectedTeamKey(nextState.teamKey);
+                setSelectedPhase("");
+                setSelectedPlayer("");
+                setSelectedMatch("");
+                setOpenMatches({});
+            }
         };
 
         window.addEventListener("hashchange", handleHashChange);
@@ -341,18 +379,14 @@ function App() {
         return best;
     }, null);
 
-    const [selectedTeamKey, setSelectedTeamKey] = useState("");
-    const [selectedPhase, setSelectedPhase] = useState("");
-    const [selectedPlayer, setSelectedPlayer] = useState("");
-    const [selectedMatch, setSelectedMatch] = useState("");
-    const [openMatches, setOpenMatches] = useState({});
-
     const effectiveTeamKey = teams.some((team) => team.teamKey === selectedTeamKey)
         ? selectedTeamKey
         : (defaultTeam?.teamKey ?? "");
     const selectedTeam = teams.find((team) => team.teamKey === effectiveTeamKey) ?? defaultTeam ?? null;
     const teamPlayers = selectedTeam?.matchPlayers ?? [];
     const teamMatchSummaries = selectedTeam?.matchSummaries ?? [];
+    const allPhaseNumbers = getAllPhaseNumbers(teams);
+    const latestPhaseNumber = allPhaseNumbers.at(-1) ?? 1;
     const availablePhases = [...new Set(teamMatchSummaries.map((match) => match.phaseNumber))]
         .sort((a, b) => a - b);
     const selectedPhaseValue = selectedPhase ? Number(selectedPhase) : null;
@@ -375,11 +409,19 @@ function App() {
     );
     const visibleMatches = getVisibleMatches(sortedMatches, selectedMatch);
     const playersArray = buildPlayersArray(players);
-    const teamLeadersByAvgValuation = getTopTeamPlayers(playersArray, "avgValuation", 8);
-    const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
+    const uniqueMatches = buildUniqueMatches(teams);
+    const standingsPhaseValue = selectedPhaseValue ?? Number(selectedStandingsPhase || latestPhaseNumber);
+    const standingsRows = buildStandings(uniqueMatches, standingsPhaseValue);
+    const phaseSummaries = buildPhaseSummaries(teamMatchSummaries, teamPlayers);
+    const phaseComparison = buildPhaseComparison(phaseSummaries);
+    const rankingMinGamesValue = Number(rankingMinGames || 1);
+    const filteredTeamRankingBase = playersArray.filter((player) => player.games >= rankingMinGamesValue);
+    const teamLeadersByAvgValuation = getTopTeamPlayers(filteredTeamRankingBase, "avgValuation", 8);
+    const teamLeadersByPoints = getTopTeamPlayers(filteredTeamRankingBase, "points", 8);
     const globalPlayers = buildGlobalPlayers(teams);
-    const globalLeadersByAvgValuation = getTopGlobalPlayers(globalPlayers, "avgValuation", 8);
-    const globalLeadersByPoints = getTopGlobalPlayers(globalPlayers, "points", 8);
+    const filteredGlobalPlayers = globalPlayers.filter((player) => player.games >= rankingMinGamesValue);
+    const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredGlobalPlayers, "avgValuation", 8);
+    const globalLeadersByPoints = getTopGlobalPlayers(filteredGlobalPlayers, "points", 8);
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
@@ -397,12 +439,21 @@ function App() {
         }));
     };
 
-    const handleTeamChange = (event) => {
-        setSelectedTeamKey(event.target.value);
+    const handleTeamNavigate = (teamKey) => {
+        if (!teamKey) {
+            return;
+        }
+
+        setSelectedTeamKey(teamKey);
         setSelectedPhase("");
         setSelectedPlayer("");
         setSelectedMatch("");
         setOpenMatches({});
+        window.location.hash = buildTeamRoute(teamKey);
+    };
+
+    const handleTeamChange = (event) => {
+        handleTeamNavigate(event.target.value);
     };
 
     const handlePhaseChange = (event) => {
@@ -414,6 +465,18 @@ function App() {
 
     const handlePlayerChange = (value) => {
         setSelectedPlayer(value);
+    };
+
+    const handleStandingsPhaseChange = (phase) => {
+        if (selectedPhaseValue !== null) {
+            setSelectedPhase(String(phase));
+            setSelectedPlayer("");
+            setSelectedMatch("");
+            setOpenMatches({});
+            return;
+        }
+
+        setSelectedStandingsPhase(String(phase));
     };
 
     const renderDashboard = () => {
@@ -517,6 +580,20 @@ function App() {
                     />
                 </section>
 
+                <PhaseComparisonSection
+                    phaseSummaries={phaseSummaries}
+                    comparison={phaseComparison}
+                />
+
+                <StandingsSection
+                    rows={standingsRows}
+                    availablePhases={allPhaseNumbers}
+                    selectedPhase={standingsPhaseValue}
+                    onSelectedPhaseChange={handleStandingsPhaseChange}
+                    selectedTeamKey={effectiveTeamKey}
+                    onTeamNavigate={handleTeamNavigate}
+                />
+
                 <PlayerEvolutionSection
                     playersList={playersList}
                     selectedPlayer={effectiveSelectedPlayer}
@@ -532,6 +609,7 @@ function App() {
                     selectedPhase={selectedPhaseValue}
                     openMatches={openMatches}
                     onToggleMatch={handleToggleMatch}
+                    onTeamNavigate={handleTeamNavigate}
                 />
             </>
         );
@@ -559,9 +637,31 @@ function App() {
 
     const renderRankingsPage = () => (
         <div style={appStyles.pageShell}>
-            <a href={DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
+            <a href={selectedTeam ? buildTeamRoute(selectedTeam.teamKey) : DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
                 Volver al panel
             </a>
+
+            <section style={appStyles.syncIntro}>
+                <div style={appStyles.syncEyebrow}>Filtro</div>
+                <h2 style={appStyles.syncTitle}>Rankings con un poco más de rigor</h2>
+                <p style={appStyles.syncBody}>
+                    Ajusta el mínimo de partidos para limpiar las medias y evitar que una muestra pequeña distorsione el ranking.
+                </p>
+
+                <div style={appStyles.filterDeck}>
+                    <PrettySelect
+                        label="Mínimo de partidos"
+                        value={rankingMinGames}
+                        onChange={(event) => setRankingMinGames(event.target.value)}
+                        ariaLabel="Selecciona mínimo de partidos"
+                        minWidth="240px"
+                    >
+                        <option value="1">1 partido</option>
+                        <option value="3">3 partidos</option>
+                        <option value="5">5 partidos</option>
+                    </PrettySelect>
+                </div>
+            </section>
 
             {selectedTeam ? (
                 <TeamLeadersSection
@@ -579,6 +679,7 @@ function App() {
                 totalTeams={teams.length}
                 leadersByAvgValuation={globalLeadersByAvgValuation}
                 leadersByPoints={globalLeadersByPoints}
+                onTeamNavigate={handleTeamNavigate}
             />
         </div>
     );
@@ -591,7 +692,7 @@ function App() {
     const pageNote = route === "sync"
         ? "Añade nuevas fases desde la fuente oficial sin pasar por la terminal."
         : route === "rankings"
-            ? "Combina la lectura del equipo seleccionado con la clasificación general de jugadoras."
+            ? "Combina la lectura del equipo actual con la clasificación general de jugadoras."
             : "Sigue la temporada por equipo y por fase, con detalle de cada partido y lectura visual de su evolución.";
 
     return (
@@ -609,7 +710,7 @@ function App() {
 
                     <div style={appStyles.nav}>
                         <a
-                            href={DASHBOARD_ROUTE}
+                            href={selectedTeam ? buildTeamRoute(selectedTeam.teamKey) : DASHBOARD_ROUTE}
                             style={route === "dashboard"
                                 ? {...appStyles.navLink, ...appStyles.navLinkActive}
                                 : appStyles.navLink}
