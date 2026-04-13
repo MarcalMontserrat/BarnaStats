@@ -114,6 +114,20 @@ async Task<bool> ExecuteSyncMappingsAsync(
             sourceUrl,
             interactive: !nonInteractive);
 
+        if (!string.IsNullOrWhiteSpace(sourceUrl) && syncResult.DiscoveredMappings.Count > 0)
+        {
+            var allowedMatchIds = syncResult.DiscoveredMappings
+                .Select(discovery => discovery.MatchWebId)
+                .Concat(explicitMatchIds)
+                .ToHashSet();
+
+            mappings = mappings
+                .Where(mapping => allowedMatchIds.Contains(mapping.MatchWebId))
+                .ToList();
+
+            mappingsById = mappings.ToDictionary(x => x.MatchWebId);
+        }
+
         var updatedIds = new HashSet<int>();
 
         foreach (var discovery in syncResult.DiscoveredMappings)
@@ -126,13 +140,21 @@ async Task<bool> ExecuteSyncMappingsAsync(
             }
 
             if (string.IsNullOrWhiteSpace(discovery.UuidMatch))
-                continue;
+            {
+                if (discovery.MatchDate.HasValue)
+                    mapping.MatchDate = discovery.MatchDate;
 
-            if (string.Equals(mapping.UuidMatch, discovery.UuidMatch, StringComparison.OrdinalIgnoreCase))
                 continue;
+            }
 
-            mapping.UuidMatch = discovery.UuidMatch;
-            updatedIds.Add(discovery.MatchWebId);
+            if (!string.Equals(mapping.UuidMatch, discovery.UuidMatch, StringComparison.OrdinalIgnoreCase))
+            {
+                mapping.UuidMatch = discovery.UuidMatch;
+                updatedIds.Add(discovery.MatchWebId);
+            }
+
+            if (discovery.MatchDate.HasValue)
+                mapping.MatchDate = discovery.MatchDate;
         }
 
         foreach (var matchWebId in syncResult.TargetMatchWebIds)
@@ -199,14 +221,22 @@ async Task<bool> RunDownloadAsync(TeamStoragePaths storage)
     var validMappings = mappings
         .Where(x => !string.IsNullOrWhiteSpace(x.UuidMatch))
         .ToList();
+    var futureMappings = validMappings
+        .Where(x => IsFutureMatch(x.MatchDate))
+        .ToList();
+    var downloadableMappings = validMappings
+        .Except(futureMappings)
+        .ToList();
 
     Console.WriteLine($"Mappings totales: {mappings.Count}");
     Console.WriteLine($"Mappings válidos : {validMappings.Count}");
+    if (futureMappings.Count > 0)
+        Console.WriteLine($"Partidos futuros omitidos: {futureMappings.Count}");
 
     using var http = MsStatsHttpClientFactory.Create();
     var client = new MsStatsClient(http);
 
-    foreach (var mapping in validMappings)
+    foreach (var mapping in downloadableMappings)
     {
         Console.WriteLine($"Procesando matchWebId={mapping.MatchWebId}, uuid={mapping.UuidMatch}");
 
@@ -484,6 +514,18 @@ bool TryAssignScope(StorageScope candidateScope, ref StorageScope? currentScope,
 
     error = $"Conflicto de scope: ya estabas trabajando con {currentScope}, pero se intentó usar {candidateScope}.";
     return false;
+}
+
+bool IsFutureMatch(DateTime? matchDate)
+{
+    if (!matchDate.HasValue)
+        return false;
+
+    var localMatchDate = matchDate.Value;
+    if (localMatchDate.TimeOfDay == TimeSpan.Zero)
+        return localMatchDate.Date > DateTime.Today;
+
+    return localMatchDate > DateTime.Now;
 }
 
 bool TryInferScopeFromSourceUrl(string sourceUrl, out StorageScope scope)

@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using BarnaStats.Models;
 using Microsoft.Playwright;
+using System.Globalization;
 
 namespace BarnaStats.Services;
 
@@ -9,6 +10,13 @@ public sealed class MatchMappingSyncService
     private const int AutomaticRetryAttempts = 5;
     private const int AutomaticRetryDelayMs = 2000;
     private const int DirectMappingProximityWindow = 700;
+    private static readonly CultureInfo[] SupportedDateCultures =
+    [
+        new("ca-ES"),
+        new("es-ES"),
+        new("en-US"),
+        CultureInfo.InvariantCulture
+    ];
 
     private static readonly Regex UuidRouteRegex = new(
         "/estadistiques/([a-f0-9]{24})(?:[/?#\"'<> ]|$)",
@@ -31,6 +39,18 @@ public sealed class MatchMappingSyncService
     private static readonly Regex MatchWebIdScriptRegex = new(
         "showPartit\\((\\d+)\\)",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex NumericDateRegex = new(
+        "\\b\\d{1,2}[/-]\\d{1,2}[/-]\\d{2,4}(?:\\s+\\d{1,2}:\\d{2}(?::\\d{2})?)?\\b",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex TextualDateRegex = new(
+        "\\b\\d{1,2}\\s+(?:de\\s+)?[A-Za-zÀ-ÿ]{3,12}\\s+(?:de\\s+)?\\d{2,4}(?:\\s+\\d{1,2}:\\d{2}(?::\\d{2})?)?\\b",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex EnglishDateRegex = new(
+        "\\b[A-Za-z]{3,12}\\s+\\d{1,2},\\s+\\d{4}(?:\\s+\\d{1,2}:\\d{2}(?::\\d{2})?\\s*(?:AM|PM)?)?\\b",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex HtmlTagRegex = new(
+        "<[^>]+>",
+        RegexOptions.Compiled);
     private readonly string _browserProfileDir;
 
     public MatchMappingSyncService(string browserProfileDir)
@@ -240,7 +260,6 @@ public sealed class MatchMappingSyncService
             foreach (var responseText in await ReadRelevantResponseTextsAsync(capturedResponses))
             {
                 MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
-                EnsureMatchWebIds(discovered, ExtractMatchWebIdsFromText(responseText));
             }
 
             return discovered.Values
@@ -255,16 +274,8 @@ public sealed class MatchMappingSyncService
 
     private async Task<IReadOnlyList<MatchDiscovery>> ExtractMappingsFromPageAsync(IPage page)
     {
-        var discovered = new Dictionary<int, MatchDiscovery>();
-
-        EnsureMatchWebIds(discovered, await ExtractMatchWebIdsAsync(page));
-
         var html = await page.ContentAsync();
-        MergeDiscoveries(discovered, ExtractDirectMappingsFromText(html));
-
-        return discovered.Values
-            .OrderBy(x => x.MatchWebId)
-            .ToList();
+        return ExtractDirectMappingsFromText(html);
     }
 
     private async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright)
@@ -317,6 +328,7 @@ public sealed class MatchMappingSyncService
         if (includeAll)
         {
             return existingMappings
+                .Where(mapping => !IsFutureMatch(mapping.MatchDate))
                 .Select(x => x.MatchWebId)
                 .Concat(explicitIds)
                 .Concat(discoveredMatchWebIds)
@@ -337,7 +349,7 @@ public sealed class MatchMappingSyncService
         }
 
         return existingMappings
-            .Where(x => string.IsNullOrWhiteSpace(x.UuidMatch))
+            .Where(x => string.IsNullOrWhiteSpace(x.UuidMatch) && !IsFutureMatch(x.MatchDate))
             .Select(x => x.MatchWebId)
             .OrderBy(x => x)
             .ToList();
@@ -455,27 +467,31 @@ public sealed class MatchMappingSyncService
     {
         foreach (var discovery in discoveries)
         {
+            if (IsFutureMatch(discovery.MatchDate))
+                continue;
+
             if (!target.TryGetValue(discovery.MatchWebId, out var existing))
             {
                 target[discovery.MatchWebId] = discovery;
                 continue;
             }
 
-            if (string.IsNullOrWhiteSpace(existing.UuidMatch) && !string.IsNullOrWhiteSpace(discovery.UuidMatch))
+            var mergedDate = existing.MatchDate ?? discovery.MatchDate;
+            var mergedUuid = string.IsNullOrWhiteSpace(existing.UuidMatch)
+                ? discovery.UuidMatch
+                : existing.UuidMatch;
+
+            if (!string.IsNullOrWhiteSpace(discovery.UuidMatch))
             {
-                target[discovery.MatchWebId] = discovery;
+                mergedUuid = discovery.UuidMatch;
             }
-        }
-    }
 
-    private static void EnsureMatchWebIds(IDictionary<int, MatchDiscovery> target, IEnumerable<int> matchWebIds)
-    {
-        foreach (var matchWebId in matchWebIds)
-        {
-            if (target.ContainsKey(matchWebId))
-                continue;
-
-            target[matchWebId] = new MatchDiscovery { MatchWebId = matchWebId };
+            target[discovery.MatchWebId] = new MatchDiscovery
+            {
+                MatchWebId = discovery.MatchWebId,
+                UuidMatch = mergedUuid,
+                MatchDate = mergedDate
+            };
         }
     }
 
@@ -489,21 +505,12 @@ public sealed class MatchMappingSyncService
 
         foreach (var chunk in EnumerateCandidateChunks(normalizedText))
         {
-            var matchWebIds = ExtractMatchWebIdsFromText(chunk);
-            var uuids = ExtractUuidsFromText(chunk);
-
-            if (matchWebIds.Count != 1 || uuids.Count == 0)
+            var discovery = TryExtractDiscoveryFromChunk(chunk);
+            if (discovery is null)
                 continue;
 
-            discovered[matchWebIds[0]] = new MatchDiscovery
-            {
-                MatchWebId = matchWebIds[0],
-                UuidMatch = uuids[0]
-            };
+            discovered[discovery.MatchWebId] = discovery;
         }
-
-        if (discovered.Count > 0)
-            return discovered.Values.OrderBy(x => x.MatchWebId).ToList();
 
         var uuidOccurrences = ExtractUuidOccurrences(normalizedText);
 
@@ -522,10 +529,50 @@ public sealed class MatchMappingSyncService
             if (nearestUuid is null)
                 continue;
 
+            var matchDate = TryExtractMatchDateAroundIndex(normalizedText, occurrence.Index);
+            if (IsFutureMatch(matchDate))
+                continue;
+
+            var existing = discovered.TryGetValue(occurrence.MatchWebId, out var existingDiscovery)
+                ? existingDiscovery
+                : null;
+
             discovered[occurrence.MatchWebId] = new MatchDiscovery
             {
                 MatchWebId = occurrence.MatchWebId,
-                UuidMatch = nearestUuid.Uuid
+                UuidMatch = nearestUuid.Uuid,
+                MatchDate = existing?.MatchDate ?? matchDate
+            };
+        }
+
+        var firstOccurrenceByMatch = ExtractMatchWebIdOccurrences(normalizedText)
+            .GroupBy(x => x.MatchWebId)
+            .ToDictionary(group => group.Key, group => group.Min(item => item.Index));
+
+        foreach (var matchWebId in discovered.Keys.ToList())
+        {
+            var current = discovered[matchWebId];
+            if (current.MatchDate.HasValue)
+                continue;
+
+            if (!firstOccurrenceByMatch.TryGetValue(matchWebId, out var index))
+                continue;
+
+            var matchDate = TryExtractMatchDateAroundIndex(normalizedText, index);
+            if (IsFutureMatch(matchDate))
+            {
+                discovered.Remove(matchWebId);
+                continue;
+            }
+
+            if (!matchDate.HasValue)
+                continue;
+
+            discovered[matchWebId] = new MatchDiscovery
+            {
+                MatchWebId = current.MatchWebId,
+                UuidMatch = current.UuidMatch,
+                MatchDate = matchDate
             };
         }
 
@@ -541,7 +588,7 @@ public sealed class MatchMappingSyncService
 
         var chunks = Regex.Split(
             text,
-            @"(?:</tr>|</li>|</article>|</section>|</tbody>|""\s*}\s*,\s*{""|\}\s*,\s*\{|\n\s*\n)",
+            @"(?:<div id=""fila"">|<div class=""row rowJornada shadowRow"">|</tr>|</li>|</article>|</section>|</tbody>|""\s*}\s*,\s*{""|\}\s*,\s*\{|\n\s*\n)",
             RegexOptions.IgnoreCase);
 
         foreach (var chunk in chunks)
@@ -549,7 +596,7 @@ public sealed class MatchMappingSyncService
             if (string.IsNullOrWhiteSpace(chunk))
                 continue;
 
-            if (!ContainsPotentialMatchWebId(chunk) || !ContainsPotentialUuid(chunk))
+            if (!ContainsPotentialMatchWebId(chunk))
                 continue;
 
             yield return chunk;
@@ -564,11 +611,22 @@ public sealed class MatchMappingSyncService
                MatchWebIdScriptRegex.IsMatch(text);
     }
 
-    private static bool ContainsPotentialUuid(string text)
+    private static MatchDiscovery? TryExtractDiscoveryFromChunk(string chunk)
     {
-        return UuidRouteRegex.IsMatch(text) ||
-               UuidJsonRegex.IsMatch(text) ||
-               UuidAttributeRegex.IsMatch(text);
+        var matchWebIds = ExtractMatchWebIdsFromText(chunk);
+        if (matchWebIds.Count != 1)
+            return null;
+
+        var matchDate = TryExtractMatchDateFromText(chunk);
+        if (IsFutureMatch(matchDate))
+            return null;
+
+        return new MatchDiscovery
+        {
+            MatchWebId = matchWebIds[0],
+            UuidMatch = ExtractUuidsFromText(chunk).FirstOrDefault(),
+            MatchDate = matchDate
+        };
     }
 
     private static IReadOnlyList<int> ExtractMatchWebIdsFromText(string text)
@@ -636,6 +694,81 @@ public sealed class MatchMappingSyncService
     private static int ParseMatchWebId(string value)
     {
         return int.TryParse(value, out var matchWebId) ? matchWebId : 0;
+    }
+
+    private static DateTime? TryExtractMatchDateFromText(string text)
+    {
+        var normalizedText = NormalizeChunkText(text);
+
+        foreach (var candidate in EnumerateDateCandidates(normalizedText))
+        {
+            if (TryParseMatchDate(candidate, out var matchDate))
+                return matchDate;
+        }
+
+        return null;
+    }
+
+    private static DateTime? TryExtractMatchDateAroundIndex(string text, int index)
+    {
+        var start = Math.Max(0, index - 1800);
+        var length = Math.Min(text.Length - start, 3200);
+        var window = text.Substring(start, length);
+        return TryExtractMatchDateFromText(window);
+    }
+
+    private static IEnumerable<string> EnumerateDateCandidates(string text)
+    {
+        foreach (var regex in new[] { NumericDateRegex, TextualDateRegex, EnglishDateRegex })
+        {
+            foreach (var match in regex.Matches(text).Cast<Match>())
+            {
+                var value = match.Value.Trim().Trim(',', '.', ';');
+                if (!string.IsNullOrWhiteSpace(value))
+                    yield return value;
+            }
+        }
+    }
+
+    private static string NormalizeChunkText(string text)
+    {
+        var withoutTags = HtmlTagRegex.Replace(text, " ");
+        return Regex.Replace(withoutTags, "\\s+", " ").Trim();
+    }
+
+    private static bool TryParseMatchDate(string rawValue, out DateTime matchDate)
+    {
+        var sanitized = rawValue
+            .Trim()
+            .Replace(" h", "", StringComparison.OrdinalIgnoreCase)
+            .Replace("h ", " ", StringComparison.OrdinalIgnoreCase);
+
+        foreach (var culture in SupportedDateCultures)
+        {
+            if (DateTime.TryParse(
+                    sanitized,
+                    culture,
+                    DateTimeStyles.AllowWhiteSpaces | DateTimeStyles.AssumeLocal,
+                    out matchDate))
+            {
+                return true;
+            }
+        }
+
+        matchDate = default;
+        return false;
+    }
+
+    private static bool IsFutureMatch(DateTime? matchDate)
+    {
+        if (!matchDate.HasValue)
+            return false;
+
+        var localMatchDate = matchDate.Value;
+        if (localMatchDate.TimeOfDay == TimeSpan.Zero)
+            return localMatchDate.Date > DateTime.Today;
+
+        return localMatchDate > DateTime.Now;
     }
 
     private static async Task<IReadOnlyList<string>> ReadRelevantResponseTextsAsync(IReadOnlyList<IResponse> responses)
