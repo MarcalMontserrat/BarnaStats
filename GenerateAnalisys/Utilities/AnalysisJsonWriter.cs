@@ -43,16 +43,21 @@ public static class AnalysisJsonWriter
         await WriteJsonAsync(analysisIndexPath, index);
         await WriteJsonAsync(competitionPath, analysis.Competition);
 
-        var expectedTeamFiles = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var expectedTeamDirectories = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
         foreach (var team in analysis.Teams)
         {
-            var fileName = GetTeamDetailFileName(team.TeamKey);
-            expectedTeamFiles.Add(fileName);
-            await WriteJsonAsync(Path.Combine(teamDetailsDir, fileName), team);
+            var teamDirectoryName = GetTeamDirectoryName(team.TeamKey);
+            expectedTeamDirectories.Add(teamDirectoryName);
+
+            var teamDirectory = Path.Combine(teamDetailsDir, teamDirectoryName);
+            Directory.CreateDirectory(teamDirectory);
+
+            await WriteJsonAsync(Path.Combine(teamDirectory, "matches.json"), team.MatchSummaries);
+            await WriteJsonAsync(Path.Combine(teamDirectory, "players.json"), team.MatchPlayers);
         }
 
-        DeleteStaleTeamFiles(teamDetailsDir, expectedTeamFiles);
+        DeleteStaleTeamFiles(teamDetailsDir, expectedTeamDirectories);
     }
 
     private static AnalysisIndex BuildIndex(AnalysisResult analysis)
@@ -71,7 +76,8 @@ public static class AnalysisJsonWriter
                     TeamName = team.TeamName,
                     MatchesPlayed = team.MatchesPlayed,
                     PlayersCount = team.PlayersCount,
-                    DataFile = $"teams/{GetTeamDetailFileName(team.TeamKey)}",
+                    MatchesFile = $"teams/{GetTeamDirectoryName(team.TeamKey)}/matches.json",
+                    PlayersFile = $"teams/{GetTeamDirectoryName(team.TeamKey)}/players.json",
                     Phases = team.Phases
                 })
                 .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
@@ -79,19 +85,24 @@ public static class AnalysisJsonWriter
         };
     }
 
-    private static string GetTeamDetailFileName(string teamKey)
+    private static string GetTeamDirectoryName(string teamKey)
     {
         var hash = SHA256.HashData(Encoding.UTF8.GetBytes(teamKey.Trim()));
-        return $"{Convert.ToHexString(hash).ToLowerInvariant()[..16]}.json";
+        return Convert.ToHexString(hash).ToLowerInvariant()[..16];
     }
 
-    private static void DeleteStaleTeamFiles(string teamDetailsDir, ISet<string> expectedTeamFiles)
+    private static void DeleteStaleTeamFiles(string teamDetailsDir, ISet<string> expectedTeamDirectories)
     {
-        foreach (var existingFile in Directory.GetFiles(teamDetailsDir, "*.json", SearchOption.TopDirectoryOnly))
+        foreach (var existingDirectory in Directory.GetDirectories(teamDetailsDir, "*", SearchOption.TopDirectoryOnly))
         {
-            if (expectedTeamFiles.Contains(Path.GetFileName(existingFile)))
+            if (expectedTeamDirectories.Contains(Path.GetFileName(existingDirectory)))
                 continue;
 
+            Directory.Delete(existingDirectory, recursive: true);
+        }
+
+        foreach (var existingFile in Directory.GetFiles(teamDetailsDir, "*.json", SearchOption.TopDirectoryOnly))
+        {
             File.Delete(existingFile);
         }
     }

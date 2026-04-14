@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-14T10:05:23.175666Z",
+  "generatedAtUtc": "2026-04-14T10:18:43.358987Z",
   "totalMatches": 317,
   "totalTeams": 38,
   "teams": [
@@ -10,7 +10,8 @@
       "teamName": "AE MINGUELLA B - PURE CUISINE",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "dataFile": "teams/9e5c1e731d4f2cc0.json",
+      "matchesFile": "teams/9e5c1e731d4f2cc0/matches.json",
+      "playersFile": "teams/9e5c1e731d4f2cc0/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -41,7 +42,8 @@
       "teamName": "AESE 1",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "dataFile": "teams/f0eebebe362397e6.json",
+      "matchesFile": "teams/f0eebebe362397e6/matches.json",
+      "playersFile": "teams/f0eebebe362397e6/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -72,7 +74,8 @@
       "teamName": "BASQUET ATENEU MONTSERRAT GROC",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "dataFile": "teams/4715df5fb9e1926f.json",
+      "matchesFile": "teams/4715df5fb9e1926f/matches.json",
+      "playersFile": "teams/4715df5fb9e1926f/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -103,7 +106,8 @@
       "teamName": "BC SANT JOAN DESPI B",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "dataFile": "teams/e443b6595272a2c8.json",
+      "matchesFile": "teams/e443b6595272a2c8/matches.json",
+      "playersFile": "teams/e443b6595272a2c8/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -134,7 +138,8 @@
       "teamName": "BC TECLA SALA  B",
       "matchesPlayed": 20,
       "playersCount": 11,
-      "dataFile": "teams/54663febd55e2cdd.json",
+      "matchesFile": "teams/54663febd55e2cdd/matches.json",
+      "playersFile": "teams/54663febd55e2cdd/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -165,7 +170,8 @@
       "teamName": "B\u00C0SQUET SAFA CLAROR 1",
       "matchesPlayed": 12,
       "playersCount": 11,
-      "dataFile": "teams/9e7d0f561d70dd6c.json",
+      "matchesFile": "teams/9e7d0f561d70dd6c/matches.json",
+      "playersFile": "teams/9e7d0f561d70dd6c/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -206,7 +212,8 @@
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "dataFile": "teams/bd48c0e4e6fb588a.json",
+      "matchesFile": "teams/bd48c0e4e6fb588a/matches.json",
+      "playersFile": "teams/bd48c0e4e6fb588a/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -237,7 +244,8 @@
       "teamName": "C.E. XAMBA",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "dataFile": "teams/37899cb045b1f771.json",
+      "matchesFile": "teams/37899cb045b1f771/matches.json",
+      "playersFile": "teams/37899cb045b1f771/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -268,7 +276,8 @@
       "teamName": "CB GAV\u00C0 VERMELL",
       "matchesPlayed": 14,
       "playersCount": 13,
-      "dataFile": "teams/77265e3d97ed4b85.json",
+      "matchesFile": "teams/77265e3d97ed4b85/matches.json",
+      "playersFile": "teams/77265e3d97ed4b85/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -299,7 +308,8 @@
       "teamName": "CB GRANOLLERS 2",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "dataFile": "teams/622a64e4b3699df1.json",
+      "matchesFile": "teams/622a64e4b3699df1/matches.json",
+      "playersFile": "teams/622a64e4b3699df1/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -330,7 +340,8 @@
       "teamName": "CB IGUALADA PMF U09",
       "matchesPlayed": 16,
       "playersCount": 10,
-      "dataFile": "teams/d8e23778b52898f6.json",
+      "matchesFile": "teams/d8e23778b52898f6/matches.json",
+      "playersFile": "teams/d8e23778b52898f6/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -361,7 +372,8 @@
       "teamName": "CB MANYANET LES CORTS GROC",
       "matchesPlayed": 16,
       "playersCount": 17,
-      "dataFile": "teams/761169bb34b98968.json",
+      "matchesFile": "teams/761169bb34b98968/matches.json",
+      "playersFile": "teams/761169bb34b98968/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -392,7 +404,8 @@
       "teamName": "CB SANT JUST U09",
       "matchesPlayed": 19,
       "playersCount": 9,
-      "dataFile": "teams/b794ac7942eb5e79.json",
+      "matchesFile": "teams/b794ac7942eb5e79/matches.json",
+      "playersFile": "teams/b794ac7942eb5e79/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -423,7 +436,8 @@
       "teamName": "CB TORELL\u00D3 PF GRIS - ALGASE TRAINING",
       "matchesPlayed": 9,
       "playersCount": 9,
-      "dataFile": "teams/50a9aa2c556c5d8a.json",
+      "matchesFile": "teams/50a9aa2c556c5d8a/matches.json",
+      "playersFile": "teams/50a9aa2c556c5d8a/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -444,7 +458,8 @@
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
       "matchesPlayed": 18,
       "playersCount": 10,
-      "dataFile": "teams/3772a48e846f632d.json",
+      "matchesFile": "teams/3772a48e846f632d/matches.json",
+      "playersFile": "teams/3772a48e846f632d/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -475,7 +490,8 @@
       "teamName": "CLUB BASQUET ARGENTONA",
       "matchesPlayed": 16,
       "playersCount": 9,
-      "dataFile": "teams/baaeb33773dc59a8.json",
+      "matchesFile": "teams/baaeb33773dc59a8/matches.json",
+      "playersFile": "teams/baaeb33773dc59a8/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -506,7 +522,8 @@
       "teamName": "DOMINIQUES BARCELONA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "dataFile": "teams/8cc1a38f96564348.json",
+      "matchesFile": "teams/8cc1a38f96564348/matches.json",
+      "playersFile": "teams/8cc1a38f96564348/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -537,7 +554,8 @@
       "teamName": "DOMINIQUES BARCELONA TARONJA",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "dataFile": "teams/b42fbc6da30a8f5c.json",
+      "matchesFile": "teams/b42fbc6da30a8f5c/matches.json",
+      "playersFile": "teams/b42fbc6da30a8f5c/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -568,7 +586,8 @@
       "teamName": "FC MARTINENC B\u00C0SQUET U9",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "dataFile": "teams/97fa651aa99737ce.json",
+      "matchesFile": "teams/97fa651aa99737ce/matches.json",
+      "playersFile": "teams/97fa651aa99737ce/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -609,7 +628,8 @@
       "teamName": "FEMENI MARESME 3 VILES BLAU - PMF",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "dataFile": "teams/91898a6f48e92e81.json",
+      "matchesFile": "teams/91898a6f48e92e81/matches.json",
+      "playersFile": "teams/91898a6f48e92e81/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -640,7 +660,8 @@
       "teamName": "FEMEN\u00CD OSONA SPARKS- OVA PROJECTS",
       "matchesPlayed": 15,
       "playersCount": 11,
-      "dataFile": "teams/93dbec7c884c1b45.json",
+      "matchesFile": "teams/93dbec7c884c1b45/matches.json",
+      "playersFile": "teams/93dbec7c884c1b45/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -671,7 +692,8 @@
       "teamName": "JAC SANTS BARCELONA U10",
       "matchesPlayed": 19,
       "playersCount": 13,
-      "dataFile": "teams/b6ff29141a2c2edc.json",
+      "matchesFile": "teams/b6ff29141a2c2edc/matches.json",
+      "playersFile": "teams/b6ff29141a2c2edc/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -702,7 +724,8 @@
       "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "dataFile": "teams/19248bcba2b8ea91.json",
+      "matchesFile": "teams/19248bcba2b8ea91/matches.json",
+      "playersFile": "teams/19248bcba2b8ea91/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -733,7 +756,8 @@
       "teamName": "JOVENTUT BADALONA B",
       "matchesPlayed": 14,
       "playersCount": 13,
-      "dataFile": "teams/bf304a129ae50a62.json",
+      "matchesFile": "teams/bf304a129ae50a62/matches.json",
+      "playersFile": "teams/bf304a129ae50a62/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -764,7 +788,8 @@
       "teamName": "JOVENTUT BADALONA VERD",
       "matchesPlayed": 17,
       "playersCount": 16,
-      "dataFile": "teams/b37fd9331b54f442.json",
+      "matchesFile": "teams/b37fd9331b54f442/matches.json",
+      "playersFile": "teams/b37fd9331b54f442/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -795,7 +820,8 @@
       "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLAU",
       "matchesPlayed": 18,
       "playersCount": 16,
-      "dataFile": "teams/c62fd51175997fe6.json",
+      "matchesFile": "teams/c62fd51175997fe6/matches.json",
+      "playersFile": "teams/c62fd51175997fe6/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -826,7 +852,8 @@
       "teamName": "LA VALLALTA BC LILA",
       "matchesPlayed": 20,
       "playersCount": 8,
-      "dataFile": "teams/296c022dca9c86f1.json",
+      "matchesFile": "teams/296c022dca9c86f1/matches.json",
+      "playersFile": "teams/296c022dca9c86f1/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -857,7 +884,8 @@
       "teamName": "LLU\u00CFSOS DE GR\u00C0CIA B",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "dataFile": "teams/65b3f382e77369e0.json",
+      "matchesFile": "teams/65b3f382e77369e0/matches.json",
+      "playersFile": "teams/65b3f382e77369e0/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -888,7 +916,8 @@
       "teamName": "NOU B\u00C0SQUET OLESA NEGRE",
       "matchesPlayed": 20,
       "playersCount": 14,
-      "dataFile": "teams/a8577d1e0374a287.json",
+      "matchesFile": "teams/a8577d1e0374a287/matches.json",
+      "playersFile": "teams/a8577d1e0374a287/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -919,7 +948,8 @@
       "teamName": "QBASKET SANT CUGAT",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "dataFile": "teams/380ab614d261aa97.json",
+      "matchesFile": "teams/380ab614d261aa97/matches.json",
+      "playersFile": "teams/380ab614d261aa97/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -950,7 +980,8 @@
       "teamName": "SANT GERVASI 2",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "dataFile": "teams/8552b641c8bcf763.json",
+      "matchesFile": "teams/8552b641c8bcf763/matches.json",
+      "playersFile": "teams/8552b641c8bcf763/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -981,7 +1012,8 @@
       "teamName": "SE LA SALLE BONANOVA VERMELL",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "dataFile": "teams/37c5c88ad1097ba7.json",
+      "matchesFile": "teams/37c5c88ad1097ba7/matches.json",
+      "playersFile": "teams/37c5c88ad1097ba7/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1012,7 +1044,8 @@
       "teamName": "SESE B",
       "matchesPlayed": 15,
       "playersCount": 16,
-      "dataFile": "teams/8e22d35106c597cd.json",
+      "matchesFile": "teams/8e22d35106c597cd/matches.json",
+      "playersFile": "teams/8e22d35106c597cd/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1043,7 +1076,8 @@
       "teamName": "SESE C",
       "matchesPlayed": 19,
       "playersCount": 12,
-      "dataFile": "teams/461930a8aa11573d.json",
+      "matchesFile": "teams/461930a8aa11573d/matches.json",
+      "playersFile": "teams/461930a8aa11573d/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1074,7 +1108,8 @@
       "teamName": "TALENOM BOET MATAR\u00D3 2017",
       "matchesPlayed": 19,
       "playersCount": 10,
-      "dataFile": "teams/64aff0e5ee296bce.json",
+      "matchesFile": "teams/64aff0e5ee296bce/matches.json",
+      "playersFile": "teams/64aff0e5ee296bce/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1105,7 +1140,8 @@
       "teamName": "U.E. CLARET B",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "dataFile": "teams/cabc80037d4e91a3.json",
+      "matchesFile": "teams/cabc80037d4e91a3/matches.json",
+      "playersFile": "teams/cabc80037d4e91a3/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1136,7 +1172,8 @@
       "teamName": "U.E.MATAR\u00D3 - PR2F",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "dataFile": "teams/4cbf4698891996cc.json",
+      "matchesFile": "teams/4cbf4698891996cc/matches.json",
+      "playersFile": "teams/4cbf4698891996cc/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1167,7 +1204,8 @@
       "teamName": "U.E.MATAR\u00D3 - PRBF",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "dataFile": "teams/30c1649a5c242434.json",
+      "matchesFile": "teams/30c1649a5c242434/matches.json",
+      "playersFile": "teams/30c1649a5c242434/players.json",
       "phases": [
         {
           "phaseNumber": 1,

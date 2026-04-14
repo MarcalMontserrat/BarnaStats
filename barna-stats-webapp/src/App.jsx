@@ -466,7 +466,8 @@ function App() {
         : (defaultTeam?.teamKey ?? "");
     const selectedTeamSummary = teams.find((team) => team.teamKey === effectiveTeamKey) ?? defaultTeam ?? null;
     const shouldLoadCompetition = route !== "sync";
-    const shouldLoadTeamDetail = route === "dashboard" && !!selectedTeamSummary?.dataFile;
+    const shouldLoadTeamMatches = route === "dashboard" && !!selectedTeamSummary?.matchesFile;
+    const shouldLoadTeamPlayers = route === "dashboard" && !!selectedTeamSummary?.playersFile;
     const {
         analysis: competition,
         loading: competitionLoading,
@@ -477,16 +478,25 @@ function App() {
             : null
     );
     const {
-        analysis: selectedTeam,
-        loading: selectedTeamLoading,
-        error: selectedTeamError
+        analysis: selectedTeamMatchSummaries,
+        loading: selectedTeamMatchesLoading,
+        error: selectedTeamMatchesError
     } = useAnalysisData(
-        shouldLoadTeamDetail
-            ? `/data/${selectedTeamSummary.dataFile}?v=${analysisVersion}`
+        shouldLoadTeamMatches
+            ? `/data/${selectedTeamSummary.matchesFile}?v=${analysisVersion}`
             : null
     );
-    const teamPlayers = selectedTeam?.matchPlayers ?? [];
-    const teamMatchSummaries = selectedTeam?.matchSummaries ?? [];
+    const {
+        analysis: selectedTeamPlayers,
+        loading: selectedTeamPlayersLoading,
+        error: selectedTeamPlayersError
+    } = useAnalysisData(
+        shouldLoadTeamPlayers
+            ? `/data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
+            : null
+    );
+    const teamPlayers = Array.isArray(selectedTeamPlayers) ? selectedTeamPlayers : [];
+    const teamMatchSummaries = Array.isArray(selectedTeamMatchSummaries) ? selectedTeamMatchSummaries : [];
     const availablePhases = [...new Set(teamMatchSummaries.map((match) => match.phaseNumber))]
         .sort((a, b) => a - b);
     const competitionPhaseOptions = buildCompetitionPhaseOptions(competition?.phases ?? []);
@@ -676,21 +686,21 @@ function App() {
                     </div>
                 </section>
 
-                {selectedTeamLoading ? (
+                {selectedTeamMatchesLoading || selectedTeamPlayersLoading ? (
                     <SectionFallback message="Cargando detalle del equipo..." />
                 ) : null}
 
-                {!selectedTeamLoading && selectedTeamError ? (
-                    <div style={appStyles.emptyState}>{selectedTeamError}</div>
+                {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && (selectedTeamMatchesError || selectedTeamPlayersError) ? (
+                    <div style={appStyles.emptyState}>{selectedTeamMatchesError || selectedTeamPlayersError}</div>
                 ) : null}
 
-                {!selectedTeamLoading && !selectedTeamError && competitionError ? (
+                {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && !selectedTeamMatchesError && !selectedTeamPlayersError && competitionError ? (
                     <div style={appStyles.emptyState}>
                         {competitionError}
                     </div>
                 ) : null}
 
-                {!selectedTeamLoading && !selectedTeamError ? (
+                {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && !selectedTeamMatchesError && !selectedTeamPlayersError ? (
                     <>
                 <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
                     <TeamSnapshotSection
@@ -710,7 +720,7 @@ function App() {
 
                 <Suspense fallback={<SectionFallback message="Cargando líderes del equipo..." />}>
                     <TeamLeadersSection
-                        teamName={selectedTeam.teamName}
+                        teamName={selectedTeamSummary.teamName}
                         seasonLabel={seasonLabel}
                         matchesCount={sortedMatches.length}
                         playersCount={playersArray.length}

@@ -29,3 +29,6 @@ barna-stats-webapp/public/data/*.csv
 # Keep the published JSON used by the web app
 !barna-stats-webapp/public/data/
 !barna-stats-webapp/public/data/analysis.json
+!barna-stats-webapp/public/data/competition.json
+!barna-stats-webapp/public/data/teams/
+!barna-stats-webapp/public/data/teams/**

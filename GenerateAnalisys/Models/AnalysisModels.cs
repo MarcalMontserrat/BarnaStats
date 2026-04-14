@@ -305,7 +305,8 @@ public sealed class AnalysisIndexTeam
     public string TeamName { get; init; } = "";
     public int MatchesPlayed { get; init; }
     public int PlayersCount { get; init; }
-    public string DataFile { get; init; } = "";
+    public string MatchesFile { get; init; } = "";
+    public string PlayersFile { get; init; } = "";
     public List<TeamPhaseInfo> Phases { get; init; } = [];
 }
 
