@@ -333,37 +333,40 @@ export function buildCompetitionPhaseOptions(phases) {
     });
 }
 
-export function filterCompetitionMatchesByPhaseOption(matches, phaseOptionValue) {
+export function buildTeamPhaseOptions(phases, levelValue = "all") {
+    const filteredPhases = filterRowsByLevel(phases ?? [], levelValue);
+    return buildCompetitionPhaseOptions(filteredPhases);
+}
+
+export function filterRowsByPhaseOption(rows, phaseOptionValue) {
     if (!phaseOptionValue || phaseOptionValue === "all") {
-        return matches ?? [];
+        return rows ?? [];
     }
 
     if (String(phaseOptionValue).startsWith("source:")) {
         const sourcePhaseId = Number(String(phaseOptionValue).slice("source:".length));
-        return (matches ?? []).filter((match) => Number(match.sourcePhaseId) === sourcePhaseId);
+        return (rows ?? []).filter((row) => Number(row.sourcePhaseId) === sourcePhaseId);
     }
 
     if (String(phaseOptionValue).startsWith("phase:")) {
         const phaseNumber = Number(String(phaseOptionValue).slice("phase:".length));
-        return (matches ?? []).filter((match) => Number(match.phaseNumber) === phaseNumber);
+        return (rows ?? []).filter((row) => Number(row.phaseNumber) === phaseNumber);
     }
 
-    return matches ?? [];
+    return rows ?? [];
+}
+
+export function filterCompetitionMatchesByPhaseOption(matches, phaseOptionValue) {
+    return filterRowsByPhaseOption(matches, phaseOptionValue);
 }
 
 export function buildLatestTeamContextByKey(teams) {
     const contexts = new Map();
 
     (teams ?? []).forEach((team) => {
-        const latestMatch = [...(team.matchSummaries ?? [])]
-            .filter((match) => match.levelName || match.groupCode || match.phaseName || match.categoryName)
+        const latestContext = [...(team.phases ?? [])]
+            .filter((phase) => phase.levelName || phase.groupCode || phase.phaseName || phase.categoryName)
             .sort((a, b) => {
-                const dateA = a.matchDate ? new Date(a.matchDate).getTime() : 0;
-                const dateB = b.matchDate ? new Date(b.matchDate).getTime() : 0;
-                if (dateA !== dateB) {
-                    return dateB - dateA;
-                }
-
                 if (Number(a.phaseNumber) !== Number(b.phaseNumber)) {
                     return Number(b.phaseNumber) - Number(a.phaseNumber);
                 }
@@ -371,19 +374,19 @@ export function buildLatestTeamContextByKey(teams) {
                 return Number(b.sourcePhaseId ?? 0) - Number(a.sourcePhaseId ?? 0);
             })[0];
 
-        if (!latestMatch) {
+        if (!latestContext) {
             return;
         }
 
         contexts.set(team.teamKey, {
-            phaseNumber: latestMatch.phaseNumber,
-            sourcePhaseId: latestMatch.sourcePhaseId ?? null,
-            categoryName: latestMatch.categoryName ?? "",
-            phaseName: latestMatch.phaseName ?? "",
-            levelName: latestMatch.levelName ?? "",
-            levelCode: latestMatch.levelCode ?? "",
-            groupCode: latestMatch.groupCode ?? "",
-            label: buildCompetitionPhaseLabel(latestMatch)
+            phaseNumber: latestContext.phaseNumber,
+            sourcePhaseId: latestContext.sourcePhaseId ?? null,
+            categoryName: latestContext.categoryName ?? "",
+            phaseName: latestContext.phaseName ?? "",
+            levelName: latestContext.levelName ?? "",
+            levelCode: latestContext.levelCode ?? "",
+            groupCode: latestContext.groupCode ?? "",
+            label: buildCompetitionPhaseLabel(latestContext)
         });
     });
 
@@ -405,6 +408,35 @@ export function buildLevelOptions(teamContexts) {
     });
 
     return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
+}
+
+export function buildLevelOptionsFromRows(rows) {
+    const options = new Map();
+
+    (rows ?? []).forEach((row) => {
+        const value = getLevelValue(row);
+        const label = String(row?.levelName ?? "").trim() || value;
+
+        if (!value || !label || options.has(value)) {
+            return;
+        }
+
+        options.set(value, {value, label});
+    });
+
+    return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
+}
+
+export function filterRowsByLevel(rows, levelValue) {
+    if (!levelValue || levelValue === "all") {
+        return rows ?? [];
+    }
+
+    return (rows ?? []).filter((row) => getLevelValue(row) === String(levelValue));
+}
+
+function getLevelValue(row) {
+    return String(row?.levelCode ?? "").trim() || String(row?.levelName ?? "").trim();
 }
 
 function ensureStandingRow(rows, teamName, teamKey) {

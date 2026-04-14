@@ -173,7 +173,7 @@ function PhaseComparisonSection({phaseSummaries, comparison}) {
 
             <div style={styles.grid}>
                 {phaseSummaries.map((phase) => (
-                    <PhaseCard key={phase.phaseNumber} phase={phase}/>
+                    <PhaseCard key={phase.phaseKey ?? `${phase.phaseNumber}-${phase.sourcePhaseId ?? "none"}`} phase={phase}/>
                 ))}
             </div>
 
