@@ -38,21 +38,24 @@ const styles = {
         alignItems: "center",
         gap: 8,
         padding: "9px 13px",
+        maxWidth: "100%",
         borderRadius: 999,
         background: "rgba(255, 249, 242, 0.9)",
         border: "1px solid rgba(107, 86, 58, 0.14)",
         color: "var(--navy)",
         fontSize: 13,
-        fontWeight: 700
+        fontWeight: 700,
+        whiteSpace: "normal",
+        overflowWrap: "anywhere"
     },
     layout: {
         display: "grid",
-        gridTemplateColumns: "minmax(0, 1.3fr) minmax(320px, 0.9fr)",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
         gap: 18
     },
     metricsGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 180px), 1fr))",
         gap: 14
     },
     metricCard: {
@@ -73,7 +76,8 @@ const styles = {
     metricValue: {
         fontFamily: "var(--font-display)",
         fontSize: "clamp(1.7rem, 2vw, 2.4rem)",
-        lineHeight: 0.95
+        lineHeight: 0.95,
+        overflowWrap: "anywhere"
     },
     metricSubtitle: {
         color: "var(--muted)",
@@ -103,16 +107,19 @@ const styles = {
     spotlightName: {
         fontFamily: "var(--font-display)",
         fontSize: "clamp(1.6rem, 2vw, 2.2rem)",
-        lineHeight: 0.95
+        lineHeight: 0.95,
+        overflowWrap: "anywhere"
     },
     spotlightValue: {
         fontSize: 16,
-        fontWeight: 800
+        fontWeight: 800,
+        overflowWrap: "anywhere"
     },
     spotlightMeta: {
         color: "rgba(255, 243, 227, 0.8)",
         fontSize: 14,
-        lineHeight: 1.55
+        lineHeight: 1.55,
+        overflowWrap: "anywhere"
     }
 };
 
