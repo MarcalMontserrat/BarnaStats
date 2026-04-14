@@ -296,3 +296,23 @@ public sealed class AnalysisResult
     public CompetitionAnalysis Competition { get; init; } = new();
     public List<TeamAnalysis> Teams { get; init; } = [];
 }
+
+public sealed class AnalysisIndexTeam
+{
+    public string TeamKey { get; init; } = "";
+    public int TeamIdIntern { get; init; }
+    public int TeamIdExtern { get; init; }
+    public string TeamName { get; init; } = "";
+    public int MatchesPlayed { get; init; }
+    public int PlayersCount { get; init; }
+    public string DataFile { get; init; } = "";
+    public List<TeamPhaseInfo> Phases { get; init; } = [];
+}
+
+public sealed class AnalysisIndex
+{
+    public DateTime GeneratedAtUtc { get; init; }
+    public int TotalMatches { get; init; }
+    public int TotalTeams { get; init; }
+    public List<AnalysisIndexTeam> Teams { get; init; } = [];
+}

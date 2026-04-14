@@ -1,11 +1,17 @@
 import {useEffect, useState} from "react";
 
 export function useAnalysisData(url) {
-    const [analysis, setAnalysis] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
+    const [requestState, setRequestState] = useState(() => ({
+        url: null,
+        analysis: null,
+        error: ""
+    }));
 
     useEffect(() => {
+        if (!url) {
+            return undefined;
+        }
+
         let cancelled = false;
 
         fetch(url)
@@ -18,15 +24,20 @@ export function useAnalysisData(url) {
             })
             .then((payload) => {
                 if (!cancelled) {
-                    setAnalysis(payload);
-                    setError("");
-                    setLoading(false);
+                    setRequestState({
+                        url,
+                        analysis: payload,
+                        error: ""
+                    });
                 }
             })
             .catch((err) => {
                 if (!cancelled) {
-                    setError(String(err));
-                    setLoading(false);
+                    setRequestState({
+                        url,
+                        analysis: null,
+                        error: String(err)
+                    });
                 }
             });
 
@@ -35,9 +46,11 @@ export function useAnalysisData(url) {
         };
     }, [url]);
 
+    const isCurrentRequest = !!url && requestState.url === url;
+
     return {
-        analysis,
-        loading,
-        error
+        analysis: url && isCurrentRequest ? requestState.analysis : null,
+        loading: !!url && !isCurrentRequest,
+        error: url && isCurrentRequest ? requestState.error : ""
     };
 }

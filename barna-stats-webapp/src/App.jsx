@@ -383,7 +383,11 @@ function parseHash(hash) {
 function App() {
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
     const [route, setRoute] = useState(() => parseHash(window.location.hash).route);
-    const {analysis, loading, error} = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
+    const {
+        analysis: analysisIndex,
+        loading: analysisIndexLoading,
+        error: analysisIndexError
+    } = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
     const {
         sources: savedResultsSources,
         loading: savedResultsSourcesLoading,
@@ -438,8 +442,7 @@ function App() {
         };
     }, []);
 
-    const teams = analysis?.teams ?? [];
-    const competition = analysis?.competition ?? null;
+    const teams = analysisIndex?.teams ?? [];
     const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
     const defaultTeam = teams.reduce((best, team) => {
         if (!best) {
@@ -461,7 +464,27 @@ function App() {
     const effectiveTeamKey = teams.some((team) => team.teamKey === selectedTeamKey)
         ? selectedTeamKey
         : (defaultTeam?.teamKey ?? "");
-    const selectedTeam = teams.find((team) => team.teamKey === effectiveTeamKey) ?? defaultTeam ?? null;
+    const selectedTeamSummary = teams.find((team) => team.teamKey === effectiveTeamKey) ?? defaultTeam ?? null;
+    const shouldLoadCompetition = route !== "sync";
+    const shouldLoadTeamDetail = route === "dashboard" && !!selectedTeamSummary?.dataFile;
+    const {
+        analysis: competition,
+        loading: competitionLoading,
+        error: competitionError
+    } = useAnalysisData(
+        shouldLoadCompetition
+            ? `/data/competition.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: selectedTeam,
+        loading: selectedTeamLoading,
+        error: selectedTeamError
+    } = useAnalysisData(
+        shouldLoadTeamDetail
+            ? `/data/${selectedTeamSummary.dataFile}?v=${analysisVersion}`
+            : null
+    );
     const teamPlayers = selectedTeam?.matchPlayers ?? [];
     const teamMatchSummaries = selectedTeam?.matchSummaries ?? [];
     const availablePhases = [...new Set(teamMatchSummaries.map((match) => match.phaseNumber))]
@@ -531,7 +554,7 @@ function App() {
     const teamAvg = getTeamAverage(players);
     const selectedTeamPhaseContext = selectedPhaseValue === null
         ? null
-        : (selectedTeam?.phases ?? []).find((phase) => Number(phase.phaseNumber) === selectedPhaseValue) ?? null;
+        : (selectedTeamSummary?.phases ?? []).find((phase) => Number(phase.phaseNumber) === selectedPhaseValue) ?? null;
     const selectedTeamLatestContext = latestTeamContexts.get(effectiveTeamKey) ?? null;
     const seasonLabel = selectedPhaseValue === null
         ? "Temporada completa"
@@ -540,7 +563,7 @@ function App() {
         ? "Clasificación acumulada"
         : `Clasificación de ${buildCompetitionPhaseLabel(selectedTeamPhaseContext ?? {phaseNumber: selectedPhaseValue})}`;
     const summaryText = selectedPhaseValue === null
-        ? `${selectedTeam?.matchesPlayed ?? 0} partidos · ${selectedTeam?.playersCount ?? 0} jugadoras`
+        ? `${selectedTeamSummary?.matchesPlayed ?? 0} partidos · ${selectedTeamSummary?.playersCount ?? 0} jugadoras`
         : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
 
     const handleToggleMatch = (matchWebId) => {
@@ -583,15 +606,15 @@ function App() {
     };
 
     const renderDashboard = () => {
-        if (loading) {
+        if (analysisIndexLoading) {
             return <div style={appStyles.emptyState}>Cargando análisis...</div>;
         }
 
-        if (error) {
-            return <div style={appStyles.emptyState}>{error}</div>;
+        if (analysisIndexError) {
+            return <div style={appStyles.emptyState}>{analysisIndexError}</div>;
         }
 
-        if (!selectedTeam) {
+        if (!selectedTeamSummary) {
             return <div style={appStyles.emptyState}>No hay equipos disponibles en el análisis.</div>;
         }
 
@@ -602,7 +625,7 @@ function App() {
                     <div style={appStyles.heroContent}>
                         <div style={appStyles.heroHeader}>
                             <div style={appStyles.heroKicker}>Vista del equipo</div>
-                            <h2 style={appStyles.heroTitle}>{selectedTeam.teamName}</h2>
+                            <h2 style={appStyles.heroTitle}>{selectedTeamSummary.teamName}</h2>
                             <p style={appStyles.heroSummary}>{summaryText}</p>
                         </div>
 
@@ -653,6 +676,22 @@ function App() {
                     </div>
                 </section>
 
+                {selectedTeamLoading ? (
+                    <SectionFallback message="Cargando detalle del equipo..." />
+                ) : null}
+
+                {!selectedTeamLoading && selectedTeamError ? (
+                    <div style={appStyles.emptyState}>{selectedTeamError}</div>
+                ) : null}
+
+                {!selectedTeamLoading && !selectedTeamError && competitionError ? (
+                    <div style={appStyles.emptyState}>
+                        {competitionError}
+                    </div>
+                ) : null}
+
+                {!selectedTeamLoading && !selectedTeamError ? (
+                    <>
                 <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
                     <TeamSnapshotSection
                         seasonLabel={seasonLabel}
@@ -708,6 +747,8 @@ function App() {
                         onTeamNavigate={handleTeamNavigate}
                     />
                 </Suspense>
+                    </>
+                ) : null}
             </>
         );
     };
@@ -740,7 +781,7 @@ function App() {
 
     const renderCompetitionPage = () => (
         <div style={appStyles.pageShell}>
-            <a href={selectedTeam ? buildTeamRoute(selectedTeam.teamKey) : DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
+            <a href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
                 Volver al panel
             </a>
 
@@ -752,6 +793,16 @@ function App() {
                 </p>
             </section>
 
+            {competitionLoading ? (
+                <SectionFallback message="Cargando datos de competición..." />
+            ) : null}
+
+            {!competitionLoading && competitionError ? (
+                <div style={appStyles.emptyState}>{competitionError}</div>
+            ) : null}
+
+            {!competitionLoading && !competitionError ? (
+                <>
             <section style={appStyles.competitionTabs}>
                 <div style={appStyles.competitionTabRow}>
                     {COMPETITION_TABS.map((tab) => (
@@ -816,6 +867,8 @@ function App() {
                     />
                 </Suspense>
             ) : null}
+                </>
+            ) : null}
         </div>
     );
 
@@ -845,7 +898,7 @@ function App() {
 
                     <div style={appStyles.nav}>
                         <a
-                            href={selectedTeam ? buildTeamRoute(selectedTeam.teamKey) : DASHBOARD_ROUTE}
+                            href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : DASHBOARD_ROUTE}
                             style={route === "dashboard"
                                 ? {...appStyles.navLink, ...appStyles.navLinkActive}
                                 : appStyles.navLink}

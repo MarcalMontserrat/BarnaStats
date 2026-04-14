@@ -13,12 +13,15 @@ var matchReportService = new OpenAiMatchReportService(paths.MatchReportsDir);
 var service = new MatchAnalysisService(matchReportService);
 var result = await service.ProcessAsync(paths.RawDataRootDir);
 
-await AnalysisJsonWriter.WriteAsync(paths.AnalysisJson, result);
-await AnalysisJsonWriter.WriteAsync(paths.WebAnalysisJson, result);
+await AnalysisJsonWriter.WriteAsync(paths, result);
 
 Console.WriteLine();
 Console.WriteLine("Hecho.");
-Console.WriteLine($"JSON análisis:     {Path.GetFullPath(paths.AnalysisJson)}");
-Console.WriteLine($"JSON para web:     {Path.GetFullPath(paths.WebAnalysisJson)}");
+Console.WriteLine($"Índice análisis:   {Path.GetFullPath(paths.AnalysisJson)}");
+Console.WriteLine($"Competición:       {Path.GetFullPath(paths.CompetitionJson)}");
+Console.WriteLine($"Equipos:           {Path.GetFullPath(paths.TeamDetailsDir)}");
+Console.WriteLine($"Índice web:        {Path.GetFullPath(paths.WebAnalysisJson)}");
+Console.WriteLine($"Competición web:   {Path.GetFullPath(paths.WebCompetitionJson)}");
+Console.WriteLine($"Equipos web:       {Path.GetFullPath(paths.WebTeamDetailsDir)}");
 Console.WriteLine($"Equipos analizados:{result.Teams.Count}");
 Console.WriteLine($"Partidos analizados:{result.TotalMatches}");

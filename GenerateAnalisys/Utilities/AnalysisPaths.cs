@@ -8,18 +8,28 @@ public sealed class AnalysisPaths
         RawDataRootDir = rawDataRootDir;
         OutputDir = rawDataRootDir;
         AnalysisJson = Path.Combine(OutputDir, "analysis.json");
+        AnalysisDomainDir = Path.Combine(OutputDir, "analysis");
+        CompetitionJson = Path.Combine(AnalysisDomainDir, "competition.json");
+        TeamDetailsDir = Path.Combine(AnalysisDomainDir, "teams");
         MatchReportsDir = Path.Combine(OutputDir, "match-reports");
         WebDataDir = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data");
         WebAnalysisJson = Path.Combine(WebDataDir, "analysis.json");
+        WebCompetitionJson = Path.Combine(WebDataDir, "competition.json");
+        WebTeamDetailsDir = Path.Combine(WebDataDir, "teams");
     }
 
     public string RepoRoot { get; }
     public string RawDataRootDir { get; }
     public string OutputDir { get; }
     public string AnalysisJson { get; }
+    public string AnalysisDomainDir { get; }
+    public string CompetitionJson { get; }
+    public string TeamDetailsDir { get; }
     public string MatchReportsDir { get; }
     public string WebDataDir { get; }
     public string WebAnalysisJson { get; }
+    public string WebCompetitionJson { get; }
+    public string WebTeamDetailsDir { get; }
 
     public static AnalysisPaths? ResolveDefault()
     {
