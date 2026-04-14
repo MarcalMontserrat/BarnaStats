@@ -118,6 +118,8 @@ function StandingsSection({
     selectedTeamKey,
     onTeamNavigate
 }) {
+    const showStandingsPoints = rows.some((row) => row.standingsPoints != null || row.points != null);
+
     return (
         <section style={styles.section}>
             <div style={styles.header}>
@@ -134,12 +136,11 @@ function StandingsSection({
                         {categoryOptions?.length > 0 ? (
                             <PrettySelect
                                 label="Categoría"
-                                value={String(selectedCategory ?? "all")}
+                                value={String(selectedCategory ?? "")}
                                 onChange={(event) => onSelectedCategoryChange(event.target.value)}
                                 ariaLabel="Selecciona categoría para la clasificación"
                                 minWidth="220px"
                             >
-                                <option value="all">Todas las categorías</option>
                                 {categoryOptions.map((cat) => (
                                     <option key={cat.value} value={cat.value}>
                                         {cat.label}
@@ -192,6 +193,9 @@ function StandingsSection({
                             <th style={styles.headerCell}>PJ</th>
                             <th style={styles.headerCell}>G</th>
                             <th style={styles.headerCell}>P</th>
+                            {showStandingsPoints ? (
+                                <th style={styles.headerCell}>Pts</th>
+                            ) : null}
                             <th style={styles.headerCell}>PF</th>
                             <th style={styles.headerCell}>PC</th>
                             <th style={styles.headerCell}>Dif</th>
@@ -219,6 +223,9 @@ function StandingsSection({
                                 <td style={styles.bodyCell}>{row.played}</td>
                                 <td style={styles.bodyCell}>{row.wins}</td>
                                 <td style={styles.bodyCell}>{row.losses}</td>
+                                {showStandingsPoints ? (
+                                    <td style={styles.bodyCell}>{row.standingsPoints ?? row.points ?? "—"}</td>
+                                ) : null}
                                 <td style={styles.bodyCell}>{row.pointsFor}</td>
                                 <td style={styles.bodyCell}>{row.pointsAgainst}</td>
                                 <td style={styles.bodyCell}>{row.pointDiff > 0 ? `+${row.pointDiff}` : row.pointDiff}</td>

@@ -61,8 +61,8 @@ public sealed class MatchAnalysisService
                             ?? match.Teams.Skip(1).FirstOrDefault()
                             ?? match.Teams.Last();
             var matchDate = TryParseMatchDate(match.Time);
-            var homeTeamKey = BuildTeamKey(localTeam);
-            var awayTeamKey = BuildTeamKey(visitTeam);
+            var homeTeamKey = BuildTeamKey(localTeam, phaseMetadata);
+            var awayTeamKey = BuildTeamKey(visitTeam, phaseMetadata);
 
             var matchTopScorer = match.Teams
                 .SelectMany(team => (team.Players ?? []).Select(player => new
@@ -84,7 +84,7 @@ public sealed class MatchAnalysisService
                 var rivalTeam = match.Teams.FirstOrDefault(other => !ReferenceEquals(other, team))
                                 ?? match.Teams.First();
 
-                var teamKey = BuildTeamKey(team);
+                var teamKey = BuildTeamKey(team, phaseMetadata);
 
                 if (!teamsByKey.TryGetValue(teamKey, out var accumulator))
                 {
@@ -134,7 +134,7 @@ public sealed class MatchAnalysisService
                     AwayTeam = visitTeam.Name ?? "",
                     AwayScore = visitTeam.Data?.Score ?? 0,
                     IsHome = isHome,
-                    RivalTeamKey = BuildTeamKey(rivalTeam),
+                    RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata),
                     RivalTeam = rivalTeam.Name ?? "",
                     OfficialTeamScore = team.Data?.Score ?? 0,
                     OfficialRivalScore = rivalTeam.Data?.Score ?? 0,
@@ -176,7 +176,7 @@ public sealed class MatchAnalysisService
                         LevelCode = phaseMetadata?.LevelCode ?? "",
                         GroupCode = phaseMetadata?.GroupCode ?? "",
                         IsHome = isHome,
-                        RivalTeamKey = BuildTeamKey(rivalTeam),
+                        RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata),
                         Rival = rivalTeam.Name ?? "",
                         PlayerActorId = player.ActorId,
                         PlayerName = playerName,
@@ -950,9 +950,17 @@ public sealed class MatchAnalysisService
         return int.TryParse(prefix, out var id) ? id : null;
     }
 
-    private static string BuildTeamKey(TeamInfo team)
+    private static string BuildTeamKey(TeamInfo team, PhaseMetadataFile? phaseMetadata)
     {
-        return NameNormalizer.Normalize(team.Name);
+        var categoryName = NameNormalizer.Normalize(phaseMetadata?.CategoryName);
+        var teamIdentity = team.TeamIdExtern > 0
+            ? $"TEAM:{team.TeamIdExtern}"
+            : NameNormalizer.Normalize(team.Name);
+
+        if (string.IsNullOrWhiteSpace(categoryName))
+            return teamIdentity;
+
+        return $"{categoryName}::{teamIdentity}";
     }
 
     private static string BuildPlayerKey(string teamKey, PlayerInfo player)
@@ -1018,8 +1026,19 @@ public sealed class MatchAnalysisService
             if (TeamIdExtern == 0 && team.TeamIdExtern > 0)
                 TeamIdExtern = team.TeamIdExtern;
 
-            if (string.IsNullOrWhiteSpace(TeamName) && !string.IsNullOrWhiteSpace(team.Name))
+            if (ShouldUseTeamName(team.Name, TeamName))
                 TeamName = team.Name!;
+        }
+
+        private static bool ShouldUseTeamName(string? candidateName, string currentName)
+        {
+            if (string.IsNullOrWhiteSpace(candidateName))
+                return false;
+
+            if (string.IsNullOrWhiteSpace(currentName))
+                return true;
+
+            return candidateName.Length > currentName.Length;
         }
     }
 }

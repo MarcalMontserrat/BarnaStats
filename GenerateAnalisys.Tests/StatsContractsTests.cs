@@ -115,8 +115,11 @@ public sealed class StatsContractsTests
                 throw new XunitException($"No se ha podido deserializar `{metadataPath}`.");
             }
 
-            if (string.IsNullOrWhiteSpace(metadata.PhaseName) ||
-                string.IsNullOrWhiteSpace(metadata.LevelName))
+            var hasPhaseIdentity = !string.IsNullOrWhiteSpace(metadata.PhaseName);
+            var hasLevelOrGroup = !string.IsNullOrWhiteSpace(metadata.LevelName) ||
+                                  !string.IsNullOrWhiteSpace(metadata.GroupCode);
+
+            if (!hasPhaseIdentity || !hasLevelOrGroup)
             {
                 throw new XunitException($"`{metadataPath}` no contiene la metadata mínima esperada.");
             }

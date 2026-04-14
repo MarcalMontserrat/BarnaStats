@@ -97,6 +97,7 @@ export function buildStandings(matches, phaseNumber) {
     return [...rows.values()]
         .map((row) => ({
             ...row,
+            standingsPoints: (row.wins * 2) + row.losses + row.ties,
             pointDiff: row.pointsFor - row.pointsAgainst,
             winRate: row.played > 0 ? row.wins / row.played : 0
         }))

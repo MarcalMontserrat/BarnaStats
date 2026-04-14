@@ -5,16 +5,22 @@ public sealed class RepoPaths
     private RepoPaths(string repoRoot)
     {
         RepoRoot = repoRoot;
+        BarnaStatsProjectDir = Path.Combine(repoRoot, "BarnaStats");
         BarnaStatsProjectFile = Path.Combine(repoRoot, "BarnaStats", "BarnaStats.csproj");
         GenerateAnalysisProjectFile = Path.Combine(repoRoot, "GenerateAnalisys", "GenerateAnalisys.csproj");
+        BarnaStatsOutputDir = Path.Combine(BarnaStatsProjectDir, "out");
+        BarnaStatsPhasesDir = Path.Combine(BarnaStatsOutputDir, "phases");
         AnalysisJson = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data", "analysis.json");
-        ResultsSourcesRegistryFile = Path.Combine(repoRoot, "BarnaStats", "out", "results_sources.json");
-        TempDir = Path.Combine(repoRoot, "BarnaStats", "out", "tmp");
+        ResultsSourcesRegistryFile = Path.Combine(BarnaStatsOutputDir, "results_sources.json");
+        TempDir = Path.Combine(BarnaStatsOutputDir, "tmp");
     }
 
     public string RepoRoot { get; }
+    public string BarnaStatsProjectDir { get; }
     public string BarnaStatsProjectFile { get; }
     public string GenerateAnalysisProjectFile { get; }
+    public string BarnaStatsOutputDir { get; }
+    public string BarnaStatsPhasesDir { get; }
     public string AnalysisJson { get; }
     public string ResultsSourcesRegistryFile { get; }
     public string TempDir { get; }

@@ -60,6 +60,29 @@ app.MapGet("/api/results-sources", async (ResultsSourceCatalogService catalogSer
     return Results.Ok(sources);
 });
 
+app.MapDelete("/api/results-sources/{phaseId:int}", async (int phaseId, SyncOrchestrator orchestrator) =>
+{
+    if (phaseId <= 0)
+    {
+        return Results.BadRequest(new
+        {
+            error = "El identificador de fase no es válido."
+        });
+    }
+
+    var result = await orchestrator.TryDeleteSavedSourceAsync(phaseId);
+
+    if (!string.IsNullOrWhiteSpace(result.Error))
+    {
+        return result.Error.Contains("sincronización en marcha", StringComparison.OrdinalIgnoreCase) ||
+               result.Error.Contains("mantenimiento en marcha", StringComparison.OrdinalIgnoreCase)
+            ? Results.Conflict(new { error = result.Error })
+            : Results.NotFound(new { error = result.Error });
+    }
+
+    return Results.Ok(result);
+});
+
 app.MapPost("/api/results-sources/sync-all", async (SyncOrchestrator orchestrator) =>
 {
     var startResult = await orchestrator.TryStartSavedSourcesAsync();

@@ -72,7 +72,7 @@ const styles = {
         cursor: "not-allowed",
         boxShadow: "none"
     },
-    inlineButton: {
+    inlineTextButton: {
         minHeight: 40,
         padding: "0 16px",
         borderRadius: 14,
@@ -82,6 +82,35 @@ const styles = {
         fontWeight: 800,
         cursor: "pointer",
         boxShadow: "0 12px 22px rgba(40, 30, 21, 0.12)"
+    },
+    inlineButton: {
+        minHeight: 40,
+        minWidth: 40,
+        width: 40,
+        padding: 0,
+        borderRadius: 14,
+        border: "none",
+        background: "linear-gradient(135deg, #1a3557 0%, #bc3f2b 100%)",
+        color: "#fff8ef",
+        fontWeight: 800,
+        cursor: "pointer",
+        boxShadow: "0 12px 22px rgba(40, 30, 21, 0.12)",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    inlineDangerButton: {
+        background: "linear-gradient(135deg, #7f2218 0%, #bc3f2b 100%)"
+    },
+    inlineActions: {
+        display: "flex",
+        gap: 8,
+        flexWrap: "wrap"
+    },
+    actionIcon: {
+        width: 18,
+        height: 18,
+        display: "block"
     },
     metaGrid: {
         display: "grid",
@@ -212,6 +241,29 @@ const STATUS_STYLES = {
     failed: {background: "#f8dcd6", color: "#9d2618"}
 };
 
+function SyncActionIcon() {
+    return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={styles.actionIcon} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M20 11a8 8 0 0 0-13.66-5.66"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 5v4h4"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 13a8 8 0 0 0 13.66 5.66"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M20 19v-4h-4"/>
+        </svg>
+    );
+}
+
+function TrashActionIcon() {
+    return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={styles.actionIcon} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 11v6"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M14 11v6"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/>
+        </svg>
+    );
+}
+
 function SyncPanel({
     apiAvailable,
     job,
@@ -220,8 +272,10 @@ function SyncPanel({
     savedSources,
     savedSourcesLoading,
     savedSourcesError,
+    deletingPhaseId,
     onStartSync,
-    onStartSyncAllSavedSources
+    onStartSyncAllSavedSources,
+    onDeleteSavedSource
 }) {
     const [sourceUrl, setSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
     const scopeLabel = job?.sourceKind === "phase"
@@ -237,7 +291,8 @@ function SyncPanel({
     }, [sourceUrl]);
 
     const status = job?.status ?? (apiAvailable ? "idle" : "offline");
-    const isBusy = starting || status === "pending" || status === "running";
+    const isDeleting = deletingPhaseId != null;
+    const isBusy = starting || status === "pending" || status === "running" || isDeleting;
     const statusLabel = status === "idle"
         ? "Lista"
         : status === "offline"
@@ -274,6 +329,22 @@ function SyncPanel({
         }
 
         await onStartSyncAllSavedSources();
+    };
+
+    const handleDeleteSavedSource = async (source) => {
+        if (!source?.phaseId || isBusy) {
+            return;
+        }
+
+        const confirmed = window.confirm(
+            `Se borrará la fase guardada "${formatSourceReference(source)}" y sus datos descargados.`
+        );
+
+        if (!confirmed) {
+            return;
+        }
+
+        await onDeleteSavedSource?.(Number(source.phaseId));
     };
 
     const formatSourceReference = (source) => {
@@ -342,8 +413,8 @@ function SyncPanel({
                         <button
                             type="button"
                             style={!savedSources?.length || isBusy
-                                ? {...styles.inlineButton, ...styles.mutedButton}
-                                : styles.inlineButton}
+                                ? {...styles.inlineTextButton, ...styles.mutedButton}
+                                : styles.inlineTextButton}
                             disabled={!savedSources?.length || isBusy}
                             onClick={() => void handleStartAllSavedSources()}
                         >
@@ -364,8 +435,8 @@ function SyncPanel({
                         <table style={styles.savedSourcesTable}>
                             <thead>
                             <tr>
-                                <th style={styles.savedSourcesHeaderCell}>Referencia</th>
                                 <th style={styles.savedSourcesHeaderCell}>Categoría</th>
+                                <th style={styles.savedSourcesHeaderCell}>Referencia</th>
                                 <th style={styles.savedSourcesHeaderCell}>Última sincronización</th>
                                 <th style={styles.savedSourcesHeaderCell}>Acción</th>
                             </tr>
@@ -374,24 +445,40 @@ function SyncPanel({
                             {savedSources.map((source) => (
                                 <tr key={source.sourceUrl}>
                                     <td style={styles.savedSourcesBodyCell}>
-                                        <div style={styles.savedSourcePrimary}>{formatSourceReference(source)}</div>
-                                        <div style={styles.savedSourceSecondary}>{source.sourceUrl}</div>
+                                        {source.categoryName || "Sin categoría"}
                                     </td>
                                     <td style={styles.savedSourcesBodyCell}>
-                                        {source.categoryName || "Sin categoría"}
+                                        <div style={styles.savedSourcePrimary}>{formatSourceReference(source)}</div>
+                                        <div style={styles.savedSourceSecondary}>{source.sourceUrl}</div>
                                     </td>
                                     <td style={styles.savedSourcesBodyCell}>
                                         {formatLastSync(source.lastSyncedAtUtc)}
                                     </td>
                                     <td style={styles.savedSourcesBodyCell}>
-                                        <button
-                                            type="button"
-                                            style={isBusy ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
-                                            disabled={isBusy}
-                                            onClick={() => void handleStartSavedSource(source.sourceUrl)}
-                                        >
-                                            Sincronizar
-                                        </button>
+                                        <div style={styles.inlineActions}>
+                                            <button
+                                                type="button"
+                                                style={isBusy ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
+                                                disabled={isBusy}
+                                                onClick={() => void handleStartSavedSource(source.sourceUrl)}
+                                                aria-label={`Sincronizar ${formatSourceReference(source)}`}
+                                                title="Sincronizar"
+                                            >
+                                                <SyncActionIcon/>
+                                            </button>
+                                            <button
+                                                type="button"
+                                                style={isBusy || !source.phaseId
+                                                    ? {...styles.inlineButton, ...styles.inlineDangerButton, ...styles.mutedButton}
+                                                    : {...styles.inlineButton, ...styles.inlineDangerButton}}
+                                                disabled={isBusy || !source.phaseId}
+                                                onClick={() => void handleDeleteSavedSource(source)}
+                                                aria-label={`Borrar ${formatSourceReference(source)}`}
+                                                title={deletingPhaseId === source.phaseId ? "Borrando..." : "Borrar"}
+                                            >
+                                                <TrashActionIcon/>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             ))}

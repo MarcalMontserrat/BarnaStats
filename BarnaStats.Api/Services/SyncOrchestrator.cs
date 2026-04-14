@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using BarnaStats.Api.Infrastructure;
 using BarnaStats.Api.Models;
@@ -15,8 +16,15 @@ public sealed class SyncOrchestrator
     private readonly Lock _lock = new();
     private readonly RepoPaths _repoPaths;
     private readonly ResultsSourceCatalogService _resultsSourceCatalogService;
+    private readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    };
 
     private SyncJob? _currentJob;
+    private bool _maintenanceInProgress;
 
     public SyncOrchestrator(RepoPaths repoPaths, ResultsSourceCatalogService resultsSourceCatalogService)
     {
@@ -47,6 +55,13 @@ public sealed class SyncOrchestrator
 
         lock (_lock)
         {
+            if (_maintenanceInProgress)
+            {
+                jobSnapshot = null;
+                error = "Hay una operación de mantenimiento en marcha. Espera a que termine.";
+                return false;
+            }
+
             if (_currentJob is { Status: SyncJobStatus.Pending or SyncJobStatus.Running })
             {
                 jobSnapshot = _currentJob.ToSnapshot();
@@ -72,6 +87,11 @@ public sealed class SyncOrchestrator
 
         lock (_lock)
         {
+            if (_maintenanceInProgress)
+            {
+                return new SyncStartResult(false, null, "Hay una operación de mantenimiento en marcha. Espera a que termine.");
+            }
+
             if (_currentJob is { Status: SyncJobStatus.Pending or SyncJobStatus.Running })
             {
                 return new SyncStartResult(false, _currentJob.ToSnapshot(), "Ya hay una sincronización en marcha.");
@@ -91,6 +111,44 @@ public sealed class SyncOrchestrator
 
             _ = Task.Run(() => RunSavedSourcesJobAsync(job, normalizedSources));
             return new SyncStartResult(true, job.ToSnapshot(), null);
+        }
+    }
+
+    public async Task<DeleteSavedSourceResult> TryDeleteSavedSourceAsync(int phaseId)
+    {
+        lock (_lock)
+        {
+            if (_maintenanceInProgress)
+            {
+                return new DeleteSavedSourceResult
+                {
+                    PhaseId = phaseId,
+                    Error = "Ya hay una operación de mantenimiento en marcha. Espera a que termine."
+                };
+            }
+
+            if (_currentJob is { Status: SyncJobStatus.Pending or SyncJobStatus.Running })
+            {
+                return new DeleteSavedSourceResult
+                {
+                    PhaseId = phaseId,
+                    Error = "No se puede borrar una fase mientras hay una sincronización en marcha."
+                };
+            }
+
+            _maintenanceInProgress = true;
+        }
+
+        try
+        {
+            return await DeleteSavedSourceCoreAsync(phaseId);
+        }
+        finally
+        {
+            lock (_lock)
+            {
+                _maintenanceInProgress = false;
+            }
         }
     }
 
@@ -304,6 +362,85 @@ public sealed class SyncOrchestrator
         return process.ExitCode;
     }
 
+    private async Task<DeleteSavedSourceResult> DeleteSavedSourceCoreAsync(int phaseId)
+    {
+        var entries = await LoadResultsSourceEntriesAsync();
+        var removedEntries = entries
+            .Where(entry => entry.PhaseId == phaseId || TryGetPhaseIdFromSourceUrl(entry.SourceUrl) == phaseId)
+            .ToList();
+        var phaseDir = Path.Combine(_repoPaths.BarnaStatsPhasesDir, phaseId.ToString());
+        var phaseDirectoryExists = Directory.Exists(phaseDir);
+
+        if (removedEntries.Count == 0 && !phaseDirectoryExists)
+        {
+            return new DeleteSavedSourceResult
+            {
+                PhaseId = phaseId,
+                Error = "La fase guardada ya no existe."
+            };
+        }
+
+        if (removedEntries.Count > 0)
+        {
+            var remainingEntries = entries
+                .Except(removedEntries)
+                .OrderBy(entry => entry.CategoryName, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(entry => entry.LevelName, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(entry => entry.GroupCode, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(entry => entry.PhaseName, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(entry => entry.PhaseId ?? int.MaxValue)
+                .ToList();
+
+            await SaveResultsSourceEntriesAsync(remainingEntries);
+        }
+
+        var deletedPhaseDirectory = false;
+        if (phaseDirectoryExists)
+        {
+            Directory.Delete(phaseDir, recursive: true);
+            deletedPhaseDirectory = true;
+        }
+
+        var sourceReference = removedEntries.FirstOrDefault() is { } removedSource
+            ? FormatSourceReference(removedSource)
+            : $"Fase {phaseId}";
+        var generateAnalysisLogs = new List<string>();
+        var analysisExitCode = await RunGenerateAnalysisProcessAsync(line =>
+        {
+            lock (generateAnalysisLogs)
+            {
+                generateAnalysisLogs.Add(line);
+            }
+        });
+        var analysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
+
+        if (analysisExitCode != 0)
+        {
+            return new DeleteSavedSourceResult
+            {
+                Deleted = true,
+                PhaseId = phaseId,
+                Reference = sourceReference,
+                RemovedRegistryEntries = removedEntries.Count,
+                DeletedPhaseDirectory = deletedPhaseDirectory,
+                AnalysisRegenerated = false,
+                AnalysisUpdatedAtUtc = analysisUpdatedAtUtc,
+                Warning = BuildGenerateAnalysisWarning(analysisExitCode, generateAnalysisLogs)
+            };
+        }
+
+        return new DeleteSavedSourceResult
+        {
+            Deleted = true,
+            PhaseId = phaseId,
+            Reference = sourceReference,
+            RemovedRegistryEntries = removedEntries.Count,
+            DeletedPhaseDirectory = deletedPhaseDirectory,
+            AnalysisRegenerated = true,
+            AnalysisUpdatedAtUtc = analysisUpdatedAtUtc
+        };
+    }
+
     private DateTimeOffset? ReadAnalysisUpdatedAtUtc()
     {
         if (!File.Exists(_repoPaths.AnalysisJson))
@@ -331,6 +468,21 @@ public sealed class SyncOrchestrator
         return true;
     }
 
+    private async Task<List<ResultsSourceSnapshot>> LoadResultsSourceEntriesAsync()
+    {
+        if (!File.Exists(_repoPaths.ResultsSourcesRegistryFile))
+            return [];
+
+        var json = await File.ReadAllTextAsync(_repoPaths.ResultsSourcesRegistryFile);
+        return JsonSerializer.Deserialize<List<ResultsSourceSnapshot>>(json, _jsonOptions) ?? [];
+    }
+
+    private async Task SaveResultsSourceEntriesAsync(IReadOnlyList<ResultsSourceSnapshot> entries)
+    {
+        var json = JsonSerializer.Serialize(entries, _jsonOptions);
+        await File.WriteAllTextAsync(_repoPaths.ResultsSourcesRegistryFile, json);
+    }
+
     private static SyncSourceInfo ParseSourceInfo(string sourceUrl)
     {
         var phaseMatch = PhaseIdRegex.Match(sourceUrl);
@@ -338,6 +490,18 @@ public sealed class SyncOrchestrator
             return new SyncSourceInfo("phase", phaseId);
 
         return new SyncSourceInfo(null, null);
+    }
+
+    private static int? TryGetPhaseIdFromSourceUrl(string? sourceUrl)
+    {
+        if (string.IsNullOrWhiteSpace(sourceUrl))
+            return null;
+
+        var phaseMatch = PhaseIdRegex.Match(sourceUrl);
+        if (!phaseMatch.Success || !int.TryParse(phaseMatch.Groups[1].Value, out var phaseId))
+            return null;
+
+        return phaseId;
     }
 
     private static string FormatSourceReference(ResultsSourceSnapshot source)
@@ -355,6 +519,15 @@ public sealed class SyncOrchestrator
         return source.PhaseId is { } phaseId
             ? $"Fase {phaseId}"
             : source.SourceUrl;
+    }
+
+    private static string BuildGenerateAnalysisWarning(int exitCode, IReadOnlyList<string> logs)
+    {
+        var lastLog = logs.LastOrDefault(line => !string.IsNullOrWhiteSpace(line));
+
+        return string.IsNullOrWhiteSpace(lastLog)
+            ? $"La fase se borró, pero GenerateAnalisys terminó con código {exitCode}."
+            : $"La fase se borró, pero GenerateAnalisys terminó con código {exitCode}: {lastLog}";
     }
 
     private sealed class SyncJob

@@ -23,10 +23,10 @@ if (args.Length > 0)
     switch (command)
     {
         case "sync-mappings":
-            await RunSyncMappingsAsync(args.Skip(1).ToArray());
+            Environment.ExitCode = await RunSyncMappingsAsync(args.Skip(1).ToArray()) ? 0 : 1;
             return;
         case "sync-all":
-            await RunSyncAllAsync(args.Skip(1).ToArray());
+            Environment.ExitCode = await RunSyncAllAsync(args.Skip(1).ToArray()) ? 0 : 1;
             return;
         case "help":
         case "--help":
@@ -36,25 +36,28 @@ if (args.Length > 0)
     }
 }
 
-await RunDownloadAsync(defaultStorage, forceRefresh: false);
+var initialDownloadResult = await RunDownloadAsync(defaultStorage, forceRefresh: false);
+if (!initialDownloadResult.Succeeded)
+    Environment.ExitCode = 1;
 
 return;
 
-async Task RunSyncMappingsAsync(string[] syncArgs)
+async Task<bool> RunSyncMappingsAsync(string[] syncArgs)
 {
     if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out _, out var explicitMatchIds))
-        return;
+        return false;
 
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
 
-    await ExecuteSyncMappingsAsync(storage, sourceUrl, includeAll, nonInteractive, explicitMatchIds);
+    var syncResult = await ExecuteSyncMappingsAsync(storage, sourceUrl, includeAll, nonInteractive, explicitMatchIds);
+    return syncResult.Succeeded;
 }
 
-async Task RunSyncAllAsync(string[] syncArgs)
+async Task<bool> RunSyncAllAsync(string[] syncArgs)
 {
     if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out var analysisDirtyMarkerFile, out var explicitMatchIds))
-        return;
+        return false;
 
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
@@ -62,13 +65,13 @@ async Task RunSyncAllAsync(string[] syncArgs)
     Console.WriteLine("Paso 1/3 · Sincronizando mappings");
     var syncResult = await ExecuteSyncMappingsAsync(storage, sourceUrl, includeAll, nonInteractive, explicitMatchIds);
     if (!syncResult.Succeeded)
-        return;
+        return false;
 
     Console.WriteLine();
     Console.WriteLine("Paso 2/3 · Descargando stats y moves");
     var downloadResult = await RunDownloadAsync(storage, forceRefresh);
     if (!downloadResult.Succeeded)
-        return;
+        return false;
 
     var analysisNeedsRefresh = syncResult.PhaseMetadataChanged || downloadResult.FilesChanged;
 
@@ -76,7 +79,7 @@ async Task RunSyncAllAsync(string[] syncArgs)
     {
         Console.WriteLine();
         Console.WriteLine("Paso 3/3 · Sin cambios en los datos. Se reutiliza el analysis.json actual.");
-        return;
+        return true;
     }
 
     if (!string.IsNullOrWhiteSpace(analysisDirtyMarkerFile))
@@ -84,12 +87,12 @@ async Task RunSyncAllAsync(string[] syncArgs)
         await WriteAnalysisDirtyMarkerAsync(analysisDirtyMarkerFile);
         Console.WriteLine();
         Console.WriteLine("Paso 3/3 · Cambios detectados. La regeneración de analysis.json queda diferida.");
-        return;
+        return true;
     }
 
     Console.WriteLine();
     Console.WriteLine("Paso 3/3 · Generando analysis.json");
-    await RunGenerateAnalysisAsync();
+    return await RunGenerateAnalysisAsync();
 }
 
 async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync(
@@ -131,6 +134,17 @@ async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync
             includeAll,
             sourceUrl,
             interactive: !nonInteractive);
+
+        if (!string.IsNullOrWhiteSpace(sourceUrl) &&
+            syncResult.DiscoveredMappings.Count == 0 &&
+            mappings.Count == 0)
+        {
+            Console.WriteLine();
+            Console.WriteLine("No se pudo extraer ningún partido desde la URL de resultados.");
+            Console.WriteLine("La web de basquetcatala puede estar mostrando un captcha/verificación de seguridad o una estructura no compatible.");
+            Console.WriteLine("Abre la URL en el navegador auxiliar, resuelve la verificación si aparece y vuelve a intentarlo.");
+            return (false, false);
+        }
 
         if (!string.IsNullOrWhiteSpace(sourceUrl) && syncResult.DiscoveredMappings.Count > 0)
         {

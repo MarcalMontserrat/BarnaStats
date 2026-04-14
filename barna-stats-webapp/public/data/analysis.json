@@ -1,17 +1,113 @@
 {
-  "generatedAtUtc": "2026-04-14T10:18:43.358987Z",
-  "totalMatches": 317,
-  "totalTeams": 38,
+  "generatedAtUtc": "2026-04-14T22:42:02.514165Z",
+  "totalMatches": 624,
+  "totalTeams": 66,
   "teams": [
     {
-      "teamKey": "AE MINGUELLA B - PURE CUISINE",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:78827",
+      "teamIdIntern": 451829,
+      "teamIdExtern": 78827,
+      "teamName": "A. BASQUET BUFAL\u00C0 FEMEN\u00CD",
+      "matchesPlayed": 22,
+      "playersCount": 15,
+      "matchesFile": "teams/d33c0db81b0773b2/matches.json",
+      "playersFile": "teams/d33c0db81b0773b2/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 12
+        }
+      ]
+    },
+    {
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
+      "teamIdIntern": 452782,
+      "teamIdExtern": 80546,
+      "teamName": "AB PREMI\u00C0",
+      "matchesPlayed": 21,
+      "playersCount": 14,
+      "matchesFile": "teams/c6cffd7c13431464/matches.json",
+      "playersFile": "teams/c6cffd7c13431464/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80531",
+      "teamIdIntern": 453278,
+      "teamIdExtern": 80531,
+      "teamName": "AE MINGUELLA B - PURE CUISINE",
+      "matchesPlayed": 22,
+      "playersCount": 19,
+      "matchesFile": "teams/a8630dda5a7d1d52/matches.json",
+      "playersFile": "teams/a8630dda5a7d1d52/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80510",
       "teamIdIntern": 454418,
       "teamIdExtern": 80510,
       "teamName": "AE MINGUELLA B - PURE CUISINE",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "matchesFile": "teams/9e5c1e731d4f2cc0/matches.json",
-      "playersFile": "teams/9e5c1e731d4f2cc0/players.json",
+      "matchesFile": "teams/3fb0ac138be1673e/matches.json",
+      "playersFile": "teams/3fb0ac138be1673e/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -36,14 +132,14 @@
       ]
     },
     {
-      "teamKey": "AESE 1",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256",
       "teamIdIntern": 454630,
       "teamIdExtern": 83256,
       "teamName": "AESE 1",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "matchesFile": "teams/f0eebebe362397e6/matches.json",
-      "playersFile": "teams/f0eebebe362397e6/players.json",
+      "matchesFile": "teams/98f3af0e0fd24b1f/matches.json",
+      "playersFile": "teams/98f3af0e0fd24b1f/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -68,14 +164,46 @@
       ]
     },
     {
-      "teamKey": "BASQUET ATENEU MONTSERRAT GROC",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79305",
+      "teamIdIntern": 452016,
+      "teamIdExtern": 79305,
+      "teamName": "BARICENTRO BARBERA",
+      "matchesPlayed": 22,
+      "playersCount": 18,
+      "matchesFile": "teams/d9cc1d62360daf09/matches.json",
+      "playersFile": "teams/d9cc1d62360daf09/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 12
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 10
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82648",
       "teamIdIntern": 464221,
       "teamIdExtern": 82648,
       "teamName": "BASQUET ATENEU MONTSERRAT GROC",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/4715df5fb9e1926f/matches.json",
-      "playersFile": "teams/4715df5fb9e1926f/players.json",
+      "matchesFile": "teams/39c4e21d7f52decc/matches.json",
+      "playersFile": "teams/39c4e21d7f52decc/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -100,14 +228,78 @@
       ]
     },
     {
-      "teamKey": "BC SANT JOAN DESPI B",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80817",
+      "teamIdIntern": 453036,
+      "teamIdExtern": 80817,
+      "teamName": "BASQUET CANYELLES",
+      "matchesPlayed": 22,
+      "playersCount": 13,
+      "matchesFile": "teams/c1e79f09faa730bd/matches.json",
+      "playersFile": "teams/c1e79f09faa730bd/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:78841",
+      "teamIdIntern": 453279,
+      "teamIdExtern": 78841,
+      "teamName": "BASQUETPIASABADELL - M3E2 ENGINYERIA HIGIENICO SANITARIA",
+      "matchesPlayed": 22,
+      "playersCount": 15,
+      "matchesFile": "teams/b9edaec017b890c2/matches.json",
+      "playersFile": "teams/b9edaec017b890c2/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81584",
       "teamIdIntern": 458156,
       "teamIdExtern": 81584,
       "teamName": "BC SANT JOAN DESPI B",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/e443b6595272a2c8/matches.json",
-      "playersFile": "teams/e443b6595272a2c8/players.json",
+      "matchesFile": "teams/481025476784e8d8/matches.json",
+      "playersFile": "teams/481025476784e8d8/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -132,14 +324,14 @@
       ]
     },
     {
-      "teamKey": "BC TECLA SALA B",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79727",
       "teamIdIntern": 458869,
       "teamIdExtern": 79727,
       "teamName": "BC TECLA SALA  B",
       "matchesPlayed": 20,
       "playersCount": 11,
-      "matchesFile": "teams/54663febd55e2cdd/matches.json",
-      "playersFile": "teams/54663febd55e2cdd/players.json",
+      "matchesFile": "teams/a5bca1e41bf8d84a/matches.json",
+      "playersFile": "teams/a5bca1e41bf8d84a/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -164,14 +356,46 @@
       ]
     },
     {
-      "teamKey": "BASQUET SAFA CLAROR 1",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79076",
+      "teamIdIntern": 452783,
+      "teamIdExtern": 79076,
+      "teamName": "B\u00C0SQUET PB9 \u0027A\u0027",
+      "matchesPlayed": 22,
+      "playersCount": 15,
+      "matchesFile": "teams/3dd39cabd6a0ffb2/matches.json",
+      "playersFile": "teams/3dd39cabd6a0ffb2/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455",
       "teamIdIntern": 464551,
       "teamIdExtern": 82455,
       "teamName": "B\u00C0SQUET SAFA CLAROR 1",
       "matchesPlayed": 12,
       "playersCount": 11,
-      "matchesFile": "teams/9e7d0f561d70dd6c/matches.json",
-      "playersFile": "teams/9e7d0f561d70dd6c/players.json",
+      "matchesFile": "teams/f17f56c7130da496/matches.json",
+      "playersFile": "teams/f17f56c7130da496/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -206,14 +430,78 @@
       ]
     },
     {
-      "teamKey": "C.B GRUP BARNA VERMELL 1ER ANY",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79988",
+      "teamIdIntern": 451828,
+      "teamIdExtern": 79988,
+      "teamName": "B\u00C0SQUET SAFA CLAROR B",
+      "matchesPlayed": 22,
+      "playersCount": 18,
+      "matchesFile": "teams/1d2084a183dc0ab4/matches.json",
+      "playersFile": "teams/1d2084a183dc0ab4/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 12
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80315",
+      "teamIdIntern": 452364,
+      "teamIdExtern": 80315,
+      "teamName": "C.B GRUP BARNA A",
+      "matchesPlayed": 22,
+      "playersCount": 16,
+      "matchesFile": "teams/86fe36e15a611347/matches.json",
+      "playersFile": "teams/86fe36e15a611347/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/bd48c0e4e6fb588a/matches.json",
-      "playersFile": "teams/bd48c0e4e6fb588a/players.json",
+      "matchesFile": "teams/96baf99cb0e51eed/matches.json",
+      "playersFile": "teams/96baf99cb0e51eed/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -238,14 +526,46 @@
       ]
     },
     {
-      "teamKey": "C.E. XAMBA",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80495",
+      "teamIdIntern": 451749,
+      "teamIdExtern": 80495,
+      "teamName": "C.B. SANTA COLOMA A",
+      "matchesPlayed": 22,
+      "playersCount": 14,
+      "matchesFile": "teams/499919a399116c37/matches.json",
+      "playersFile": "teams/499919a399116c37/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 12
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
       "teamIdIntern": 454079,
       "teamIdExtern": 78659,
       "teamName": "C.E. XAMBA",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/37899cb045b1f771/matches.json",
-      "playersFile": "teams/37899cb045b1f771/players.json",
+      "matchesFile": "teams/25623a9630db9b89/matches.json",
+      "playersFile": "teams/25623a9630db9b89/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -270,14 +590,14 @@
       ]
     },
     {
-      "teamKey": "CB GAVA VERMELL",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
       "teamName": "CB GAV\u00C0 VERMELL",
       "matchesPlayed": 14,
       "playersCount": 13,
-      "matchesFile": "teams/77265e3d97ed4b85/matches.json",
-      "playersFile": "teams/77265e3d97ed4b85/players.json",
+      "matchesFile": "teams/79f5f805b7006a11/matches.json",
+      "playersFile": "teams/79f5f805b7006a11/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -302,14 +622,46 @@
       ]
     },
     {
-      "teamKey": "CB GRANOLLERS 2",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78818",
+      "teamIdIntern": 451748,
+      "teamIdExtern": 78818,
+      "teamName": "CB GRANOLLERS 2",
+      "matchesPlayed": 22,
+      "playersCount": 22,
+      "matchesFile": "teams/20b1418220e330c2/matches.json",
+      "playersFile": "teams/20b1418220e330c2/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
       "teamIdIntern": 453738,
       "teamIdExtern": 78800,
       "teamName": "CB GRANOLLERS 2",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/622a64e4b3699df1/matches.json",
-      "playersFile": "teams/622a64e4b3699df1/players.json",
+      "matchesFile": "teams/c5c43b06a1e3c05c/matches.json",
+      "playersFile": "teams/c5c43b06a1e3c05c/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -334,14 +686,14 @@
       ]
     },
     {
-      "teamKey": "CB IGUALADA PMF U09",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226",
       "teamIdIntern": 455078,
       "teamIdExtern": 79226,
       "teamName": "CB IGUALADA PMF U09",
       "matchesPlayed": 16,
       "playersCount": 10,
-      "matchesFile": "teams/d8e23778b52898f6/matches.json",
-      "playersFile": "teams/d8e23778b52898f6/players.json",
+      "matchesFile": "teams/34a1d27d0ff1dffb/matches.json",
+      "playersFile": "teams/34a1d27d0ff1dffb/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -366,14 +718,78 @@
       ]
     },
     {
-      "teamKey": "CB MANYANET LES CORTS GROC",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79216",
+      "teamIdIntern": 453037,
+      "teamIdExtern": 79216,
+      "teamName": "CB IPSI B",
+      "matchesPlayed": 22,
+      "playersCount": 18,
+      "matchesFile": "teams/3c7036b16632ab4e/matches.json",
+      "playersFile": "teams/3c7036b16632ab4e/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 12
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79122",
+      "teamIdIntern": 452377,
+      "teamIdExtern": 79122,
+      "teamName": "CB LA VALL D\u0027EN BAS 1",
+      "matchesPlayed": 22,
+      "playersCount": 16,
+      "matchesFile": "teams/9e67a9dd6dac566e/matches.json",
+      "playersFile": "teams/9e67a9dd6dac566e/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 12
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 10
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
       "matchesPlayed": 16,
       "playersCount": 17,
-      "matchesFile": "teams/761169bb34b98968/matches.json",
-      "playersFile": "teams/761169bb34b98968/players.json",
+      "matchesFile": "teams/fe1059a223e4a6e3/matches.json",
+      "playersFile": "teams/fe1059a223e4a6e3/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -398,14 +814,78 @@
       ]
     },
     {
-      "teamKey": "CB SANT JUST U09",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80158",
+      "teamIdIntern": 453220,
+      "teamIdExtern": 80158,
+      "teamName": "CB RIPOLLET - AUTOESCOLA TATCHEPOL",
+      "matchesPlayed": 22,
+      "playersCount": 20,
+      "matchesFile": "teams/f3d2a883dd417040/matches.json",
+      "playersFile": "teams/f3d2a883dd417040/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80159",
+      "teamIdIntern": 453203,
+      "teamIdExtern": 80159,
+      "teamName": "CB RIPOLLET A",
+      "matchesPlayed": 22,
+      "playersCount": 17,
+      "matchesFile": "teams/27136c66338a5e0d/matches.json",
+      "playersFile": "teams/27136c66338a5e0d/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172",
       "teamIdIntern": 454101,
       "teamIdExtern": 83172,
       "teamName": "CB SANT JUST U09",
       "matchesPlayed": 19,
       "playersCount": 9,
-      "matchesFile": "teams/b794ac7942eb5e79/matches.json",
-      "playersFile": "teams/b794ac7942eb5e79/players.json",
+      "matchesFile": "teams/b815e57bf22ddda2/matches.json",
+      "playersFile": "teams/b815e57bf22ddda2/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -430,14 +910,14 @@
       ]
     },
     {
-      "teamKey": "CB TORELLO PF GRIS - ALGASE TRAINING",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82057",
       "teamIdIntern": 471430,
       "teamIdExtern": 82057,
       "teamName": "CB TORELL\u00D3 PF GRIS - ALGASE TRAINING",
       "matchesPlayed": 9,
       "playersCount": 9,
-      "matchesFile": "teams/50a9aa2c556c5d8a/matches.json",
-      "playersFile": "teams/50a9aa2c556c5d8a/players.json",
+      "matchesFile": "teams/23afb6c84ec4a603/matches.json",
+      "playersFile": "teams/23afb6c84ec4a603/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -452,14 +932,46 @@
       ]
     },
     {
-      "teamKey": "CENTRE CATOLIC L\u0027H",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
+      "teamIdIntern": 452017,
+      "teamIdExtern": 78904,
+      "teamName": "CB.CIUTAT VELLA A",
+      "matchesPlayed": 22,
+      "playersCount": 21,
+      "matchesFile": "teams/68c4f1464b1f7f6d/matches.json",
+      "playersFile": "teams/68c4f1464b1f7f6d/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
       "matchesPlayed": 18,
       "playersCount": 10,
-      "matchesFile": "teams/3772a48e846f632d/matches.json",
-      "playersFile": "teams/3772a48e846f632d/players.json",
+      "matchesFile": "teams/8304417c34b915f7/matches.json",
+      "playersFile": "teams/8304417c34b915f7/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -484,14 +996,46 @@
       ]
     },
     {
-      "teamKey": "CLUB BASQUET ARGENTONA",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78454",
+      "teamIdIntern": 452376,
+      "teamIdExtern": 78454,
+      "teamName": "CHAMPANILLO - AECAM MALGRAT",
+      "matchesPlayed": 22,
+      "playersCount": 16,
+      "matchesFile": "teams/43b0a647d3d684b4/matches.json",
+      "playersFile": "teams/43b0a647d3d684b4/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79269",
       "teamIdIntern": 459487,
       "teamIdExtern": 79269,
       "teamName": "CLUB BASQUET ARGENTONA",
       "matchesPlayed": 16,
       "playersCount": 9,
-      "matchesFile": "teams/baaeb33773dc59a8/matches.json",
-      "playersFile": "teams/baaeb33773dc59a8/players.json",
+      "matchesFile": "teams/e5aa3000c5bf7179/matches.json",
+      "playersFile": "teams/e5aa3000c5bf7179/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -516,14 +1060,14 @@
       ]
     },
     {
-      "teamKey": "DOMINIQUES BARCELONA NEGRE",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "matchesFile": "teams/8cc1a38f96564348/matches.json",
-      "playersFile": "teams/8cc1a38f96564348/players.json",
+      "matchesFile": "teams/066aaf592eb3d56d/matches.json",
+      "playersFile": "teams/066aaf592eb3d56d/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -548,14 +1092,14 @@
       ]
     },
     {
-      "teamKey": "DOMINIQUES BARCELONA TARONJA",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
       "teamIdIntern": 454114,
       "teamIdExtern": 82475,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "matchesFile": "teams/b42fbc6da30a8f5c/matches.json",
-      "playersFile": "teams/b42fbc6da30a8f5c/players.json",
+      "matchesFile": "teams/5fd9f490ede8f3b9/matches.json",
+      "playersFile": "teams/5fd9f490ede8f3b9/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -580,14 +1124,110 @@
       ]
     },
     {
-      "teamKey": "FC MARTINENC BASQUET U9",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78995",
+      "teamIdIntern": 453041,
+      "teamIdExtern": 78995,
+      "teamName": "EL C\u00CDRCOL COTONIFICI BADALONA A",
+      "matchesPlayed": 22,
+      "playersCount": 15,
+      "matchesFile": "teams/1185cd80a8e5d593/matches.json",
+      "playersFile": "teams/1185cd80a8e5d593/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 12
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79483",
+      "teamIdIntern": 452162,
+      "teamIdExtern": 79483,
+      "teamName": "ESCOLAPIS SARRI\u00C0 A",
+      "matchesPlayed": 22,
+      "playersCount": 16,
+      "matchesFile": "teams/2897ffbc667cdcd1/matches.json",
+      "playersFile": "teams/2897ffbc667cdcd1/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
+      "teamIdIntern": 453067,
+      "teamIdExtern": 80605,
+      "teamName": "FC MARTINENC B\u00C0SQUET A",
+      "matchesPlayed": 21,
+      "playersCount": 15,
+      "matchesFile": "teams/0e947d2e614b5c97/matches.json",
+      "playersFile": "teams/0e947d2e614b5c97/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80619",
       "teamIdIntern": 454631,
       "teamIdExtern": 80619,
       "teamName": "FC MARTINENC B\u00C0SQUET U9",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/97fa651aa99737ce/matches.json",
-      "playersFile": "teams/97fa651aa99737ce/players.json",
+      "matchesFile": "teams/842eecd53b95c7b1/matches.json",
+      "playersFile": "teams/842eecd53b95c7b1/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -622,14 +1262,14 @@
       ]
     },
     {
-      "teamKey": "FEMENI MARESME 3 VILES BLAU - PMF",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
       "teamName": "FEMENI MARESME 3 VILES BLAU - PMF",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/91898a6f48e92e81/matches.json",
-      "playersFile": "teams/91898a6f48e92e81/players.json",
+      "matchesFile": "teams/23b10d743142ff37/matches.json",
+      "playersFile": "teams/23b10d743142ff37/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -654,14 +1294,14 @@
       ]
     },
     {
-      "teamKey": "FEMENI OSONA SPARKS- OVA PROJECTS",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79532",
       "teamIdIntern": 454115,
       "teamIdExtern": 79532,
       "teamName": "FEMEN\u00CD OSONA SPARKS- OVA PROJECTS",
       "matchesPlayed": 15,
       "playersCount": 11,
-      "matchesFile": "teams/93dbec7c884c1b45/matches.json",
-      "playersFile": "teams/93dbec7c884c1b45/players.json",
+      "matchesFile": "teams/8309be0f6ee25c3e/matches.json",
+      "playersFile": "teams/8309be0f6ee25c3e/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -686,14 +1326,46 @@
       ]
     },
     {
-      "teamKey": "JAC SANTS BARCELONA U10",
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79263",
+      "teamIdIntern": 452163,
+      "teamIdExtern": 79263,
+      "teamName": "IBERSOFAS CB ARGENTONA",
+      "matchesPlayed": 22,
+      "playersCount": 17,
+      "matchesFile": "teams/cd33d9dd1b93f096/matches.json",
+      "playersFile": "teams/cd33d9dd1b93f096/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
       "teamIdIntern": 454013,
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
       "matchesPlayed": 19,
       "playersCount": 13,
-      "matchesFile": "teams/b6ff29141a2c2edc/matches.json",
-      "playersFile": "teams/b6ff29141a2c2edc/players.json",
+      "matchesFile": "teams/5fe6ae4cf1d1f14e/matches.json",
+      "playersFile": "teams/5fe6ae4cf1d1f14e/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -718,14 +1390,46 @@
       ]
     },
     {
-      "teamKey": "JESUITES GRACIA KOSTKA NEGRE",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81296",
+      "teamIdIntern": 453221,
+      "teamIdExtern": 81296,
+      "teamName": "JESU\u00CFTES CASP",
+      "matchesPlayed": 22,
+      "playersCount": 14,
+      "matchesFile": "teams/c8e6a07afd5b7243/matches.json",
+      "playersFile": "teams/c8e6a07afd5b7243/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 10
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 12
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81442",
       "teamIdIntern": 456005,
       "teamIdExtern": 81442,
       "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "matchesFile": "teams/19248bcba2b8ea91/matches.json",
-      "playersFile": "teams/19248bcba2b8ea91/players.json",
+      "matchesFile": "teams/6551f0be8257d3ed/matches.json",
+      "playersFile": "teams/6551f0be8257d3ed/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -750,14 +1454,14 @@
       ]
     },
     {
-      "teamKey": "JOVENTUT BADALONA B",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
       "teamIdIntern": 453739,
       "teamIdExtern": 80192,
       "teamName": "JOVENTUT BADALONA B",
       "matchesPlayed": 14,
       "playersCount": 13,
-      "matchesFile": "teams/bf304a129ae50a62/matches.json",
-      "playersFile": "teams/bf304a129ae50a62/players.json",
+      "matchesFile": "teams/e703c3d26a7cc879/matches.json",
+      "playersFile": "teams/e703c3d26a7cc879/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -782,14 +1486,14 @@
       ]
     },
     {
-      "teamKey": "JOVENTUT BADALONA VERD",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
       "teamIdIntern": 456901,
       "teamIdExtern": 80179,
       "teamName": "JOVENTUT BADALONA VERD",
       "matchesPlayed": 17,
       "playersCount": 16,
-      "matchesFile": "teams/b37fd9331b54f442/matches.json",
-      "playersFile": "teams/b37fd9331b54f442/players.json",
+      "matchesFile": "teams/e5339d651827cd27/matches.json",
+      "playersFile": "teams/e5339d651827cd27/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -814,14 +1518,14 @@
       ]
     },
     {
-      "teamKey": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLAU",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
       "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLAU",
       "matchesPlayed": 18,
       "playersCount": 16,
-      "matchesFile": "teams/c62fd51175997fe6/matches.json",
-      "playersFile": "teams/c62fd51175997fe6/players.json",
+      "matchesFile": "teams/0eda880cfcdc076c/matches.json",
+      "playersFile": "teams/0eda880cfcdc076c/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -846,14 +1550,14 @@
       ]
     },
     {
-      "teamKey": "LA VALLALTA BC LILA",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987",
       "teamIdIntern": 471431,
       "teamIdExtern": 83987,
       "teamName": "LA VALLALTA BC LILA",
       "matchesPlayed": 20,
       "playersCount": 8,
-      "matchesFile": "teams/296c022dca9c86f1/matches.json",
-      "playersFile": "teams/296c022dca9c86f1/players.json",
+      "matchesFile": "teams/bad593723359fb9e/matches.json",
+      "playersFile": "teams/bad593723359fb9e/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -878,14 +1582,46 @@
       ]
     },
     {
-      "teamKey": "LLUISOS DE GRACIA B",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81056",
+      "teamIdIntern": 453066,
+      "teamIdExtern": 81056,
+      "teamName": "LIMA-HORTA BARCELONA",
+      "matchesPlayed": 22,
+      "playersCount": 12,
+      "matchesFile": "teams/756d86a20007f313/matches.json",
+      "playersFile": "teams/756d86a20007f313/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
       "teamIdIntern": 456495,
       "teamIdExtern": 81522,
       "teamName": "LLU\u00CFSOS DE GR\u00C0CIA B",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/65b3f382e77369e0/matches.json",
-      "playersFile": "teams/65b3f382e77369e0/players.json",
+      "matchesFile": "teams/7997b8ab22d203d9/matches.json",
+      "playersFile": "teams/7997b8ab22d203d9/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -910,14 +1646,14 @@
       ]
     },
     {
-      "teamKey": "NOU BASQUET OLESA NEGRE",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83821",
       "teamIdIntern": 454012,
       "teamIdExtern": 83821,
       "teamName": "NOU B\u00C0SQUET OLESA NEGRE",
       "matchesPlayed": 20,
       "playersCount": 14,
-      "matchesFile": "teams/a8577d1e0374a287/matches.json",
-      "playersFile": "teams/a8577d1e0374a287/players.json",
+      "matchesFile": "teams/a42f6d7b7cf09f12/matches.json",
+      "playersFile": "teams/a42f6d7b7cf09f12/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -942,14 +1678,14 @@
       ]
     },
     {
-      "teamKey": "QBASKET SANT CUGAT",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315",
       "teamIdIntern": 453403,
       "teamIdExtern": 83315,
       "teamName": "QBASKET SANT CUGAT",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/380ab614d261aa97/matches.json",
-      "playersFile": "teams/380ab614d261aa97/players.json",
+      "matchesFile": "teams/0c3f3da94ef669a8/matches.json",
+      "playersFile": "teams/0c3f3da94ef669a8/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -974,14 +1710,78 @@
       ]
     },
     {
-      "teamKey": "SANT GERVASI 2",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80763",
+      "teamIdIntern": 452755,
+      "teamIdExtern": 80763,
+      "teamName": "QBASKET SANT CUGAT 1",
+      "matchesPlayed": 22,
+      "playersCount": 18,
+      "matchesFile": "teams/bdc159f515230d00/matches.json",
+      "playersFile": "teams/bdc159f515230d00/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78623",
+      "teamIdIntern": 453040,
+      "teamIdExtern": 78623,
+      "teamName": "SANT GERVASI 1",
+      "matchesPlayed": 22,
+      "playersCount": 19,
+      "matchesFile": "teams/6e3539cdd281cb31/matches.json",
+      "playersFile": "teams/6e3539cdd281cb31/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 457131,
       "teamIdExtern": 84386,
       "teamName": "SANT GERVASI 2",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/8552b641c8bcf763/matches.json",
-      "playersFile": "teams/8552b641c8bcf763/players.json",
+      "matchesFile": "teams/be79a9273f5bc1cf/matches.json",
+      "playersFile": "teams/be79a9273f5bc1cf/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1006,14 +1806,14 @@
       ]
     },
     {
-      "teamKey": "SE LA SALLE BONANOVA VERMELL",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518",
       "teamIdIntern": 458628,
       "teamIdExtern": 83518,
       "teamName": "SE LA SALLE BONANOVA VERMELL",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/37c5c88ad1097ba7/matches.json",
-      "playersFile": "teams/37c5c88ad1097ba7/players.json",
+      "matchesFile": "teams/f741373c26506df7/matches.json",
+      "playersFile": "teams/f741373c26506df7/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1038,14 +1838,14 @@
       ]
     },
     {
-      "teamKey": "SESE B",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862",
       "teamIdIntern": 454767,
       "teamIdExtern": 79862,
       "teamName": "SESE B",
       "matchesPlayed": 15,
       "playersCount": 16,
-      "matchesFile": "teams/8e22d35106c597cd/matches.json",
-      "playersFile": "teams/8e22d35106c597cd/players.json",
+      "matchesFile": "teams/f000d109f2961ca0/matches.json",
+      "playersFile": "teams/f000d109f2961ca0/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1070,14 +1870,14 @@
       ]
     },
     {
-      "teamKey": "SESE C",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
       "teamIdIntern": 458868,
       "teamIdExtern": 79870,
       "teamName": "SESE C",
       "matchesPlayed": 19,
       "playersCount": 12,
-      "matchesFile": "teams/461930a8aa11573d/matches.json",
-      "playersFile": "teams/461930a8aa11573d/players.json",
+      "matchesFile": "teams/ba150ecc28b9d6c7/matches.json",
+      "playersFile": "teams/ba150ecc28b9d6c7/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1102,14 +1902,14 @@
       ]
     },
     {
-      "teamKey": "TALENOM BOET MATARO 2017",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
       "teamName": "TALENOM BOET MATAR\u00D3 2017",
       "matchesPlayed": 19,
       "playersCount": 10,
-      "matchesFile": "teams/64aff0e5ee296bce/matches.json",
-      "playersFile": "teams/64aff0e5ee296bce/players.json",
+      "matchesFile": "teams/9c3e16ed35dc31c4/matches.json",
+      "playersFile": "teams/9c3e16ed35dc31c4/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1134,14 +1934,46 @@
       ]
     },
     {
-      "teamKey": "U.E. CLARET B",
+      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79299",
+      "teamIdIntern": 452754,
+      "teamIdExtern": 79299,
+      "teamName": "U.E. CLARET B",
+      "matchesPlayed": 22,
+      "playersCount": 13,
+      "matchesFile": "teams/e68d95a3acc5bcfb/matches.json",
+      "playersFile": "teams/e68d95a3acc5bcfb/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19817,
+          "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "02",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82119",
       "teamIdIntern": 456004,
       "teamIdExtern": 82119,
       "teamName": "U.E. CLARET B",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/cabc80037d4e91a3/matches.json",
-      "playersFile": "teams/cabc80037d4e91a3/players.json",
+      "matchesFile": "teams/1413c217ffe39522/matches.json",
+      "playersFile": "teams/1413c217ffe39522/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1166,14 +1998,14 @@
       ]
     },
     {
-      "teamKey": "U.E.MATARO - PR2F",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80890",
       "teamIdIntern": 457130,
       "teamIdExtern": 80890,
       "teamName": "U.E.MATAR\u00D3 - PR2F",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "matchesFile": "teams/4cbf4698891996cc/matches.json",
-      "playersFile": "teams/4cbf4698891996cc/players.json",
+      "matchesFile": "teams/e07b91305de7c0b2/matches.json",
+      "playersFile": "teams/e07b91305de7c0b2/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1198,14 +2030,14 @@
       ]
     },
     {
-      "teamKey": "U.E.MATARO - PRBF",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "matchesFile": "teams/30c1649a5c242434/matches.json",
-      "playersFile": "teams/30c1649a5c242434/players.json",
+      "matchesFile": "teams/2cf759afac283e34/matches.json",
+      "playersFile": "teams/2cf759afac283e34/players.json",
       "phases": [
         {
           "phaseNumber": 1,
@@ -1226,6 +2058,70 @@
           "levelCode": "B",
           "groupCode": "02",
           "matchesPlayed": 8
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79323",
+      "teamIdIntern": 453202,
+      "teamIdExtern": 79323,
+      "teamName": "UB MIR",
+      "matchesPlayed": 22,
+      "playersCount": 16,
+      "matchesFile": "teams/89c38edb7ba0c1f6/matches.json",
+      "playersFile": "teams/89c38edb7ba0c1f6/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        }
+      ]
+    },
+    {
+      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80400",
+      "teamIdIntern": 452365,
+      "teamIdExtern": 80400,
+      "teamName": "UB SANT ADRIA A",
+      "matchesPlayed": 22,
+      "playersCount": 17,
+      "matchesFile": "teams/daa06c2e8fca2e66/matches.json",
+      "playersFile": "teams/daa06c2e8fca2e66/players.json",
+      "phases": [
+        {
+          "phaseNumber": 1,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
+        },
+        {
+          "phaseNumber": 2,
+          "sourcePhaseId": 19778,
+          "categoryName": "Copa Catalunya Masculina",
+          "phaseName": "Fase Pr\u00E8via",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "01",
+          "matchesPlayed": 11
         }
       ]
     }

@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using System.Text;
 using BarnaStats.Models;
 using Microsoft.Playwright;
 using System.Globalization;
@@ -30,6 +31,9 @@ public sealed class MatchMappingSyncService
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private static readonly Regex MatchWebIdRouteRegex = new(
         "(?:/|\\\\/)partits(?:/|\\\\/)llistatpartits(?:/|\\\\/)(\\d+)(?:[/?#\"'<> ]|$)",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex MatchWebIdActaRouteRegex = new(
+        "(?:/|\\\\/)acta(?:/|\\\\/)(\\d+)(?:[/?#\"'<> ]|$)",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private static readonly Regex MatchWebIdJsonRegex = new(
         "\"matchWebId\"\\s*:\\s*(\\d+)",
@@ -66,6 +70,9 @@ public sealed class MatchMappingSyncService
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private static readonly Regex GroupPrefixRegex = new(
         @"^(grup|grupo)\s+",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex GroupCodeRegex = new(
+        @"^[A-Z0-9/]+$",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private readonly string _browserProfileDir;
 
@@ -134,6 +141,12 @@ public sealed class MatchMappingSyncService
         {
             if (!string.IsNullOrWhiteSpace(discovery.UuidMatch))
                 resolved[discovery.MatchWebId] = discovery.UuidMatch;
+        }
+
+        foreach (var mapping in existingMappings)
+        {
+            if (!string.IsNullOrWhiteSpace(mapping.UuidMatch))
+                resolved.TryAdd(mapping.MatchWebId, mapping.UuidMatch);
         }
 
         Console.WriteLine();
@@ -281,13 +294,18 @@ public sealed class MatchMappingSyncService
 
             var discovered = new Dictionary<int, MatchDiscovery>();
             var phaseMetadata = await ExtractPhaseMetadataAsync(page, sourceUrl);
+            var html = await page.ContentAsync();
 
-            MergeDiscoveries(discovered, await ExtractMappingsFromPageAsync(page));
+            MergeDiscoveries(discovered, ExtractDirectMappingsFromText(html));
 
-            foreach (var responseText in await ReadRelevantResponseTextsAsync(capturedResponses))
+            var relevantResponseTexts = await ReadRelevantResponseTextsAsync(capturedResponses);
+
+            foreach (var responseText in relevantResponseTexts)
             {
                 MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
             }
+
+            await WriteDebugArtifactsIfEnabledAsync(sourceUrl, page.Url, html, relevantResponseTexts);
 
             return new ResultsSourceInspection
             {
@@ -427,6 +445,7 @@ public sealed class MatchMappingSyncService
                 const seen = new Set();
                 const patterns = [
                     /(?:\/|\\\/)partits(?:\/|\\\/)llistatpartits(?:\/|\\\/)(\d+)(?:[/?#]|$)/ig,
+                    /(?:\/|\\\/)acta(?:\/|\\\/)(\d+)(?:[/?#]|$)/ig,
                     /data-match(?:-web)?-id=["']?(\d+)/ig,
                     /"matchWebId"\s*:\s*(\d+)/ig,
                     /showPartit\((\d+)\)/ig
@@ -637,6 +656,7 @@ public sealed class MatchMappingSyncService
     private static bool ContainsPotentialMatchWebId(string text)
     {
         return MatchWebIdRouteRegex.IsMatch(text) ||
+               MatchWebIdActaRouteRegex.IsMatch(text) ||
                MatchWebIdJsonRegex.IsMatch(text) ||
                MatchWebIdDataAttributeRegex.IsMatch(text) ||
                MatchWebIdScriptRegex.IsMatch(text);
@@ -665,6 +685,7 @@ public sealed class MatchMappingSyncService
         return new[]
             {
                 MatchWebIdRouteRegex,
+                MatchWebIdActaRouteRegex,
                 MatchWebIdJsonRegex,
                 MatchWebIdDataAttributeRegex,
                 MatchWebIdScriptRegex
@@ -698,6 +719,7 @@ public sealed class MatchMappingSyncService
         return new[]
             {
                 MatchWebIdRouteRegex,
+                MatchWebIdActaRouteRegex,
                 MatchWebIdJsonRegex,
                 MatchWebIdDataAttributeRegex,
                 MatchWebIdScriptRegex
@@ -869,7 +891,9 @@ public sealed class MatchMappingSyncService
             .Skip(1)
             .FirstOrDefault(segment => LevelPrefixRegex.IsMatch(segment));
 
-        if (string.IsNullOrWhiteSpace(levelSegment) && segments.Count >= 2)
+        if (string.IsNullOrWhiteSpace(levelSegment) &&
+            segments.Count >= 2 &&
+            !LooksLikeGroupOnlySegment(segments[1]))
         {
             levelSegment = segments[1];
         }
@@ -884,16 +908,32 @@ public sealed class MatchMappingSyncService
             .Where(segment => !string.Equals(segment, levelSegment, StringComparison.OrdinalIgnoreCase))
             .FirstOrDefault(segment =>
                 GroupPrefixRegex.IsMatch(segment) ||
-                Regex.IsMatch(segment, @"^[A-Z0-9/]+$", RegexOptions.IgnoreCase));
+                LooksLikeGroupOnlySegment(segment));
 
         if (string.IsNullOrWhiteSpace(groupSegment) && segments.Count >= 3)
         {
             groupSegment = segments[^1];
         }
 
+        if (string.IsNullOrWhiteSpace(groupSegment) &&
+            segments.Count == 2 &&
+            string.IsNullOrWhiteSpace(levelSegment) &&
+            LooksLikeGroupOnlySegment(segments[1]))
+        {
+            groupSegment = segments[1];
+        }
+
         metadata.GroupCode = string.IsNullOrWhiteSpace(groupSegment)
             ? null
             : GroupPrefixRegex.Replace(groupSegment, "").Trim();
+    }
+
+    private static bool LooksLikeGroupOnlySegment(string segment)
+    {
+        if (string.IsNullOrWhiteSpace(segment))
+            return false;
+
+        return GroupCodeRegex.IsMatch(segment.Trim());
     }
 
     private static bool IsFutureMatch(DateTime? matchDate)
@@ -929,6 +969,56 @@ public sealed class MatchMappingSyncService
         }
 
         return texts;
+    }
+
+    private static async Task WriteDebugArtifactsIfEnabledAsync(
+        string sourceUrl,
+        string currentPageUrl,
+        string html,
+        IReadOnlyList<string> responseTexts)
+    {
+        var debugDir = Environment.GetEnvironmentVariable("BARNASTATS_DEBUG_RESULTS_HTML_DIR");
+        if (string.IsNullOrWhiteSpace(debugDir))
+            return;
+
+        Directory.CreateDirectory(debugDir);
+
+        var slug = BuildDebugSlug(sourceUrl);
+        var pagePath = Path.Combine(debugDir, $"{slug}_page.html");
+        var responsesPath = Path.Combine(debugDir, $"{slug}_responses.txt");
+
+        await File.WriteAllTextAsync(pagePath, html);
+
+        var builder = new StringBuilder();
+        builder.AppendLine($"Source URL: {sourceUrl}");
+        builder.AppendLine($"Current page URL: {currentPageUrl}");
+        builder.AppendLine();
+
+        foreach (var responseText in responseTexts)
+        {
+            builder.AppendLine("===== RESPONSE =====");
+            builder.AppendLine(responseText);
+            builder.AppendLine();
+        }
+
+        await File.WriteAllTextAsync(responsesPath, builder.ToString());
+    }
+
+    private static string BuildDebugSlug(string sourceUrl)
+    {
+        if (Uri.TryCreate(sourceUrl, UriKind.Absolute, out var uri))
+        {
+            var segments = uri.AbsolutePath
+                .Split('/', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .TakeLast(2)
+                .ToArray();
+
+            if (segments.Length > 0)
+                return string.Join("_", segments);
+        }
+
+        var fallback = Regex.Replace(sourceUrl, "[^A-Za-z0-9]+", "_").Trim('_');
+        return string.IsNullOrWhiteSpace(fallback) ? "results" : fallback;
     }
 
     private static bool ShouldInspectResponse(IResponse response)

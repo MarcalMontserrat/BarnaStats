@@ -283,12 +283,11 @@ function GlobalLeadersSection({
                         {categoryOptions?.length > 0 ? (
                             <PrettySelect
                                 label="Categoría"
-                                value={String(selectedCategory ?? "all")}
+                                value={String(selectedCategory ?? "")}
                                 onChange={(event) => onSelectedCategoryChange(event.target.value)}
                                 ariaLabel="Selecciona categoría para los rankings de jugadoras"
                                 minWidth="240px"
                             >
-                                <option value="all">Todas las categorías</option>
                                 {categoryOptions.map((cat) => (
                                     <option key={cat.value} value={cat.value}>
                                         {cat.label}

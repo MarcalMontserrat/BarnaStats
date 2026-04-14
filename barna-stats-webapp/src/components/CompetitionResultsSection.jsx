@@ -219,12 +219,11 @@ function CompetitionResultsSection({
                         {categoryOptions?.length > 0 ? (
                             <PrettySelect
                                 label="Categoría"
-                                value={String(selectedCategory ?? "all")}
+                                value={String(selectedCategory ?? "")}
                                 onChange={(event) => onSelectedCategoryChange(event.target.value)}
                                 ariaLabel="Selecciona categoría para los resultados"
                                 minWidth="220px"
                             >
-                                <option value="all">Todas las categorías</option>
                                 {categoryOptions.map((cat) => (
                                     <option key={cat.value} value={cat.value}>
                                         {cat.label}
