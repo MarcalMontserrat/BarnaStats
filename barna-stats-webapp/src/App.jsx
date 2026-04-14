@@ -1,4 +1,4 @@
-import {lazy, Suspense, useEffect, useState} from "react";
+import {lazy, Suspense, useEffect, useRef, useState} from "react";
 import PrettySelect from "./components/PrettySelect.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
@@ -27,6 +27,7 @@ import {
     getChartData,
     getMvp,
     getPlayersList,
+    getSelectedPlayerSummary,
     getTeamAverage,
     getTopGlobalPlayers,
     getTopTeamPlayers,
@@ -66,6 +67,33 @@ const COMPETITION_TABS = [
         id: "leaders",
         label: "Jugadoras destacadas",
         description: "Ranking global de valoración media y anotación."
+    }
+];
+const TEAM_TABS = [
+    {
+        id: "snapshot",
+        label: "Resumen",
+        description: "Balance, posición, racha y quién está marcando diferencias en el tramo visible."
+    },
+    {
+        id: "leaders",
+        label: "Líderes",
+        description: "Las jugadoras más determinantes del equipo por valoración y anotación."
+    },
+    {
+        id: "phases",
+        label: "Fases",
+        description: "Comparativa entre fases o tramos para ver si el equipo mejora o cae."
+    },
+    {
+        id: "evolution",
+        label: "Evolución",
+        description: "Curva partido a partido de cada jugadora en puntos y valoración."
+    },
+    {
+        id: "matches",
+        label: "Partidos",
+        description: "Listado de encuentros con marcador, detalle individual y resumen si existe."
     }
 ];
 
@@ -461,6 +489,9 @@ function App() {
     const [selectedLeadersCategory, setSelectedLeadersCategory] = useState("all");
     const [rankingMinGames, setRankingMinGames] = useState("3");
     const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
+    const [selectedTeamTab, setSelectedTeamTab] = useState("snapshot");
+    const pendingScrollRestoreFrame = useRef(0);
+    const teamTabsRef = useRef(null);
 
     useEffect(() => {
         if (!window.location.hash) {
@@ -624,6 +655,7 @@ function App() {
 
     const playersList = getPlayersList(players);
     const chartData = getChartData(players, effectiveSelectedPlayer, selectedPhaseValue);
+    const selectedPlayerSummary = getSelectedPlayerSummary(players, effectiveSelectedPlayer);
     const sortedPlayers = sortPlayers(players);
     const sortedMatches = sortMatches(
         groupPlayersByMatch(sortedPlayers, matchSummaries)
@@ -735,6 +767,7 @@ function App() {
         ? selectedResultsPhase
         : "all";
     const activeCompetitionTab = COMPETITION_TABS.find((tab) => tab.id === selectedCompetitionTab) ?? COMPETITION_TABS[0];
+    const activeTeamTab = TEAM_TABS.find((tab) => tab.id === selectedTeamTab) ?? TEAM_TABS[0];
     const selectedTeamLatestContext = latestTeamContexts.get(effectiveTeamKey) ?? null;
     const selectedTeamScopePhases = selectedPhaseContext
         ? filterRowsByPhaseOption(selectedTeamSummary?.phases ?? [], effectiveSelectedPhase)
@@ -840,8 +873,53 @@ function App() {
         setSelectedPlayer(value);
     };
 
+    const handlePlayerNavigate = (playerName) => {
+        if (!playerName) {
+            return;
+        }
+
+        setSelectedPlayer(playerName);
+        setSelectedTeamTab("evolution");
+
+        window.requestAnimationFrame(() => {
+            teamTabsRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        });
+    };
+
     const handleStandingsPhaseChange = (phase) => {
         setSelectedStandingsPhase(String(phase || "all"));
+    };
+
+    const preserveScrollOnNextPaint = () => {
+        if (pendingScrollRestoreFrame.current) {
+            window.cancelAnimationFrame(pendingScrollRestoreFrame.current);
+        }
+
+        const scrollX = window.scrollX;
+        const scrollY = window.scrollY;
+
+        pendingScrollRestoreFrame.current = window.requestAnimationFrame(() => {
+            pendingScrollRestoreFrame.current = window.requestAnimationFrame(() => {
+                const maxScrollY = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
+                window.scrollTo({
+                    left: scrollX,
+                    top: Math.min(scrollY, maxScrollY)
+                });
+                pendingScrollRestoreFrame.current = 0;
+            });
+        });
+    };
+
+    const handleTeamTabChange = (tabId) => {
+        if (tabId === selectedTeamTab) {
+            return;
+        }
+
+        preserveScrollOnNextPaint();
+        setSelectedTeamTab(tabId);
     };
 
     useEffect(() => {
@@ -851,6 +929,12 @@ function App() {
 
         navigateToHash(buildTeamRoute(effectiveTeamKey));
     }, [effectiveTeamKey, route, selectedTeamKey]);
+
+    useEffect(() => () => {
+        if (pendingScrollRestoreFrame.current) {
+            window.cancelAnimationFrame(pendingScrollRestoreFrame.current);
+        }
+    }, []);
 
     const renderDashboard = () => {
         if (analysisIndexLoading) {
@@ -974,61 +1058,94 @@ function App() {
 
                 {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && !selectedTeamMatchesError && !selectedTeamPlayersError ? (
                     <>
-                <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
-                    <TeamSnapshotSection
-                        seasonLabel={seasonLabel}
-                        currentLevelLabel={selectedPhaseContext === null
-                            ? (selectedTeamLatestContext?.levelName ?? "")
-                            : (selectedPhaseContext?.levelName ?? "")}
-                        record={teamRecord}
-                        standingRow={selectedTeamStanding}
-                        standingLabel={standingLabel}
-                        bestWinStreak={bestWinStreak}
-                        teamAveragePoints={teamAvg}
-                        topScorer={topScorer}
-                        mvp={mvp}
-                    />
-                </Suspense>
+                <section ref={teamTabsRef} style={appStyles.competitionTabs}>
+                    <div style={appStyles.competitionTabRow}>
+                        {TEAM_TABS.map((tab) => (
+                            <button
+                                key={tab.id}
+                                type="button"
+                                style={tab.id === activeTeamTab.id
+                                    ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
+                                    : appStyles.competitionTab}
+                                onClick={() => handleTeamTabChange(tab.id)}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
 
-                <Suspense fallback={<SectionFallback message="Cargando líderes del equipo..." />}>
-                    <TeamLeadersSection
-                        teamName={selectedTeamSummary.teamName}
-                        seasonLabel={seasonLabel}
-                        matchesCount={sortedMatches.length}
-                        playersCount={playersArray.length}
-                        leadersByAvgValuation={teamLeadersByAvgValuation}
-                        leadersByPoints={teamLeadersByPoints}
-                    />
-                </Suspense>
+                    <p style={appStyles.competitionTabHint}>
+                        {activeTeamTab.description}
+                    </p>
+                </section>
 
-                <Suspense fallback={<SectionFallback message="Cargando comparativa por fases..." />}>
-                    <PhaseComparisonSection
-                        phaseSummaries={phaseSummaries}
-                        comparison={phaseComparison}
-                    />
-                </Suspense>
+                {activeTeamTab.id === "snapshot" ? (
+                    <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
+                        <TeamSnapshotSection
+                            seasonLabel={seasonLabel}
+                            currentLevelLabel={selectedPhaseContext === null
+                                ? (selectedTeamLatestContext?.levelName ?? "")
+                                : (selectedPhaseContext?.levelName ?? "")}
+                            record={teamRecord}
+                            standingRow={selectedTeamStanding}
+                            standingLabel={standingLabel}
+                            bestWinStreak={bestWinStreak}
+                            teamAveragePoints={teamAvg}
+                            topScorer={topScorer}
+                            mvp={mvp}
+                        />
+                    </Suspense>
+                ) : null}
 
-                <Suspense fallback={<SectionFallback message="Cargando evolución por jugadora..." />}>
-                    <PlayerEvolutionSection
-                        playersList={playersList}
-                        selectedPlayer={effectiveSelectedPlayer}
-                        onSelectedPlayerChange={handlePlayerChange}
-                        chartData={chartData}
-                    />
-                </Suspense>
+                {activeTeamTab.id === "leaders" ? (
+                    <Suspense fallback={<SectionFallback message="Cargando líderes del equipo..." />}>
+                        <TeamLeadersSection
+                            teamName={selectedTeamSummary.teamName}
+                            seasonLabel={seasonLabel}
+                            matchesCount={sortedMatches.length}
+                            playersCount={playersArray.length}
+                            leadersByAvgValuation={teamLeadersByAvgValuation}
+                            leadersByPoints={teamLeadersByPoints}
+                        />
+                    </Suspense>
+                ) : null}
 
-                <Suspense fallback={<SectionFallback message="Cargando detalle de partidos..." />}>
-                    <MatchListSection
-                        sortedMatches={sortedMatches}
-                        visibleMatches={visibleMatches}
-                        selectedMatch={selectedMatch}
-                        onSelectedMatchChange={setSelectedMatch}
-                        selectedPhase={selectedPhaseValue}
-                        openMatches={openMatches}
-                        onToggleMatch={handleToggleMatch}
-                        onTeamNavigate={handleTeamNavigate}
-                    />
-                </Suspense>
+                {activeTeamTab.id === "phases" ? (
+                    <Suspense fallback={<SectionFallback message="Cargando comparativa por fases..." />}>
+                        <PhaseComparisonSection
+                            phaseSummaries={phaseSummaries}
+                            comparison={phaseComparison}
+                        />
+                    </Suspense>
+                ) : null}
+
+                {activeTeamTab.id === "evolution" ? (
+                    <Suspense fallback={<SectionFallback message="Cargando evolución por jugadora..." />}>
+                        <PlayerEvolutionSection
+                            playersList={playersList}
+                            selectedPlayer={effectiveSelectedPlayer}
+                            onSelectedPlayerChange={handlePlayerChange}
+                            chartData={chartData}
+                            selectedPlayerSummary={selectedPlayerSummary}
+                        />
+                    </Suspense>
+                ) : null}
+
+                {activeTeamTab.id === "matches" ? (
+                    <Suspense fallback={<SectionFallback message="Cargando detalle de partidos..." />}>
+                        <MatchListSection
+                            sortedMatches={sortedMatches}
+                            visibleMatches={visibleMatches}
+                            selectedMatch={selectedMatch}
+                            onSelectedMatchChange={setSelectedMatch}
+                            selectedPhase={selectedPhaseValue}
+                            openMatches={openMatches}
+                            onToggleMatch={handleToggleMatch}
+                            onTeamNavigate={handleTeamNavigate}
+                            onPlayerNavigate={handlePlayerNavigate}
+                        />
+                    </Suspense>
+                ) : null}
                     </>
                 ) : null}
             </>

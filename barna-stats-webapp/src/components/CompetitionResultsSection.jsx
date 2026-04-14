@@ -115,9 +115,13 @@ const styles = {
         display: "grid",
         gridTemplateColumns: "minmax(0, 1fr) auto minmax(0, 1fr)",
         gap: 12,
-        alignItems: "center"
+        alignItems: "center",
+        minWidth: 0
     },
     teamButton: {
+        display: "block",
+        width: "100%",
+        minWidth: 0,
         padding: 0,
         border: "none",
         background: "transparent",
@@ -125,7 +129,10 @@ const styles = {
         fontWeight: 800,
         textAlign: "left",
         cursor: "pointer",
-        fontSize: 15
+        fontSize: 15,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
     },
     awayButton: {
         textAlign: "right"
@@ -295,6 +302,7 @@ function CompetitionResultsSection({
                                     <button
                                         type="button"
                                         style={styles.teamButton}
+                                        title={match.homeTeam}
                                         onClick={() => onTeamNavigate?.(match.homeTeamKey)}
                                     >
                                         {match.homeTeam}
@@ -307,6 +315,7 @@ function CompetitionResultsSection({
                                     <button
                                         type="button"
                                         style={{...styles.teamButton, ...styles.awayButton}}
+                                        title={match.awayTeam}
                                         onClick={() => onTeamNavigate?.(match.awayTeamKey)}
                                     >
                                         {match.awayTeam}

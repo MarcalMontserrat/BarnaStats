@@ -50,14 +50,40 @@ const styles = {
         boxShadow: "var(--shadow-md)",
         cursor: "pointer"
     },
+    matchHeaderWin: {
+        background: "linear-gradient(135deg, rgba(248, 252, 246, 0.98) 0%, rgba(235, 245, 234, 0.94) 100%)",
+        border: "1px solid rgba(84, 130, 92, 0.22)",
+        boxShadow: "inset 4px 0 0 rgba(84, 130, 92, 0.72), var(--shadow-md)"
+    },
+    matchHeaderLoss: {
+        background: "linear-gradient(135deg, rgba(255, 250, 248, 0.98) 0%, rgba(246, 236, 232, 0.94) 100%)",
+        border: "1px solid rgba(167, 90, 73, 0.2)",
+        boxShadow: "inset 4px 0 0 rgba(167, 90, 73, 0.68), var(--shadow-md)"
+    },
+    matchHeaderTie: {
+        background: "linear-gradient(135deg, rgba(255, 252, 247, 0.98) 0%, rgba(245, 239, 229, 0.94) 100%)",
+        border: "1px solid rgba(172, 132, 59, 0.2)",
+        boxShadow: "inset 4px 0 0 rgba(172, 132, 59, 0.7), var(--shadow-md)"
+    },
     matchHeaderMain: {
         display: "grid",
-        gap: 6
+        gap: 6,
+        flex: "1 1 320px",
+        minWidth: 0
     },
     matchTitle: {
         fontFamily: "var(--font-display)",
         fontSize: "clamp(1.25rem, 2vw, 1.65rem)",
-        lineHeight: 1
+        lineHeight: 1,
+        display: "flex",
+        alignItems: "baseline",
+        gap: 4,
+        minWidth: 0,
+        whiteSpace: "nowrap"
+    },
+    matchTitlePrefix: {
+        flex: "0 0 auto",
+        whiteSpace: "nowrap"
     },
     matchTitleButton: {
         padding: 0,
@@ -65,7 +91,20 @@ const styles = {
         background: "transparent",
         font: "inherit",
         color: "var(--accent-strong)",
-        cursor: "pointer"
+        cursor: "pointer",
+        flex: "1 1 auto",
+        minWidth: 0,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+        textAlign: "left"
+    },
+    matchTitleText: {
+        flex: "1 1 auto",
+        minWidth: 0,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
     },
     matchMeta: {
         color: "var(--muted)",
@@ -77,6 +116,32 @@ const styles = {
         flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "flex-end"
+    },
+    resultPill: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: 40,
+        padding: "0 14px",
+        borderRadius: 999,
+        fontWeight: 800,
+        fontSize: 13,
+        letterSpacing: "0.04em"
+    },
+    resultPillWin: {
+        background: "rgba(84, 130, 92, 0.14)",
+        color: "#31583a",
+        border: "1px solid rgba(84, 130, 92, 0.22)"
+    },
+    resultPillLoss: {
+        background: "rgba(167, 90, 73, 0.12)",
+        color: "#8b4436",
+        border: "1px solid rgba(167, 90, 73, 0.18)"
+    },
+    resultPillTie: {
+        background: "rgba(172, 132, 59, 0.12)",
+        color: "#8a6520",
+        border: "1px solid rgba(172, 132, 59, 0.2)"
     },
     scorePill: {
         display: "inline-flex",
@@ -146,6 +211,35 @@ const styles = {
     }
 };
 
+function getResultPresentation(result) {
+    switch (result) {
+    case "W":
+        return {
+            label: "Victoria",
+            headerStyle: styles.matchHeaderWin,
+            pillStyle: styles.resultPillWin
+        };
+    case "L":
+        return {
+            label: "Derrota",
+            headerStyle: styles.matchHeaderLoss,
+            pillStyle: styles.resultPillLoss
+        };
+    case "T":
+        return {
+            label: "Empate",
+            headerStyle: styles.matchHeaderTie,
+            pillStyle: styles.resultPillTie
+        };
+    default:
+        return {
+            label: "Pendiente",
+            headerStyle: null,
+            pillStyle: styles.metaPill
+        };
+    }
+}
+
 function MatchListSection({
     sortedMatches,
     visibleMatches,
@@ -154,7 +248,8 @@ function MatchListSection({
     selectedPhase,
     openMatches,
     onToggleMatch,
-    onTeamNavigate
+    onTeamNavigate,
+    onPlayerNavigate
 }) {
     const renderMatchReport = (match) => {
         if (!match.matchReport) {
@@ -202,13 +297,7 @@ function MatchListSection({
         );
     };
 
-    const formatMatchTitle = (match) => {
-        if (selectedPhase) {
-            return `Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
-        }
-
-        return `${buildCompetitionPhaseLabel(match)} · Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
-    };
+    const formatMatchTitle = (match) => `Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
 
     if (sortedMatches.length === 0) {
         return (
@@ -260,22 +349,27 @@ function MatchListSection({
                     : `${match.teamScore} - ${match.rivalScore}`;
                 const location = match.isHome ? "Casa" : "Fuera";
                 const isOpen = openMatches[match.matchWebId];
+                const resultPresentation = getResultPresentation(match.result);
 
                 return (
                     <div key={match.matchWebId} style={styles.matchCard}>
                         <div
-                            style={styles.matchHeader}
+                            style={{
+                                ...styles.matchHeader,
+                                ...(resultPresentation.headerStyle ?? {})
+                            }}
                             onClick={() => onToggleMatch(match.matchWebId)}
                         >
                             <div style={styles.matchHeaderMain}>
                                 <div style={styles.matchTitle}>
-                                    {selectedPhase
-                                        ? `Jornada ${match.phaseRound ?? "-"} · vs `
-                                        : `${buildCompetitionPhaseLabel(match)} · Jornada ${match.phaseRound ?? "-"} · vs `}
+                                    <span style={styles.matchTitlePrefix}>
+                                        {`Jornada ${match.phaseRound ?? "-"} · vs`}
+                                    </span>
                                     {match.rivalTeamKey ? (
                                         <button
                                             type="button"
                                             style={styles.matchTitleButton}
+                                            title={match.rival}
                                             onClick={(event) => {
                                                 event.stopPropagation();
                                                 onTeamNavigate?.(match.rivalTeamKey);
@@ -284,15 +378,25 @@ function MatchListSection({
                                             {match.rival}
                                         </button>
                                     ) : (
-                                        match.rival
+                                        <span style={styles.matchTitleText} title={match.rival}>
+                                            {match.rival}
+                                        </span>
                                     )}
                                 </div>
                                 <div style={styles.matchMeta}>
-                                    {match.result || "-"} · {location}
+                                    {selectedPhase
+                                        ? location
+                                        : `${buildCompetitionPhaseLabel(match)} · ${location}`}
                                 </div>
                             </div>
 
                             <div style={styles.headerAside}>
+                                <span style={{
+                                    ...styles.resultPill,
+                                    ...(resultPresentation.pillStyle ?? {})
+                                }}>
+                                    {resultPresentation.label}
+                                </span>
                                 <span style={styles.scorePill}>{scoreLine}</span>
                                 <span style={styles.metaPill}>
                                     {isOpen ? "Ocultar detalle" : "Ver detalle"}
@@ -302,7 +406,7 @@ function MatchListSection({
 
                         {isOpen ? (
                             <div style={styles.detailShell}>
-                                <MatchTable players={match.players}/>
+                                <MatchTable players={match.players} onPlayerNavigate={onPlayerNavigate}/>
                                 <MatchInsightsPanel insights={match.insights}/>
                                 {renderMatchReport(match)}
                             </div>

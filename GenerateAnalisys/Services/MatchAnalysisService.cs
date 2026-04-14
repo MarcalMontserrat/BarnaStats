@@ -185,7 +185,13 @@ public sealed class MatchAnalysisService
                         Points = data.Score,
                         Valuation = data.Valoration,
                         Fouls = data.Faults,
-                        PlusMinus = player.InOut
+                        PlusMinus = player.InOut,
+                        FtMade = data.ShotsOfOneSuccessful,
+                        FtAttempted = data.ShotsOfOneAttempted,
+                        TwoMade = data.ShotsOfTwoSuccessful,
+                        TwoAttempted = data.ShotsOfTwoAttempted,
+                        ThreeMade = data.ShotsOfThreeSuccessful,
+                        ThreeAttempted = data.ShotsOfThreeAttempted
                     });
 
                     var playerKey = BuildPlayerKey(teamKey, player);

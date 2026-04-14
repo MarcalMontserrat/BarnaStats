@@ -38,6 +38,9 @@ public sealed class StatsContractsTests
         Assert.Equal(18, visitTeam.Data?.Score);
         Assert.Equal("LUCIA ALZAMORA SANTA CRUZ", localTeam.Players[0].Name);
         Assert.Equal("1", localTeam.Players[0].Dorsal);
+        var playerWithMadeTwos = localTeam.Players.Single(player => player.Name == "LAIA HOSPITAL AUGE");
+        Assert.Equal(2, playerWithMadeTwos.Data?.ShotsOfTwoSuccessful);
+        Assert.Equal(2, playerWithMadeTwos.Data?.ShotsOfTwoAttempted);
     }
 
     [Fact]

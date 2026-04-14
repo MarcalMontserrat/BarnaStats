@@ -8,7 +8,7 @@ const tableStyles = {
     },
     table: {
         width: "100%",
-        minWidth: 620,
+        minWidth: 860,
         borderCollapse: "collapse",
         background: "rgba(255, 252, 247, 0.96)"
     },
@@ -49,11 +49,26 @@ const tableStyles = {
         background: "rgba(188, 63, 43, 0.12)",
         color: "var(--accent-strong)",
         fontWeight: 800
+    },
+    shotCell: {
+        fontVariantNumeric: "tabular-nums",
+        whiteSpace: "nowrap"
+    },
+    playerLink: {
+        padding: 0,
+        border: "none",
+        background: "transparent",
+        color: "var(--accent-strong)",
+        cursor: "pointer",
+        font: "inherit",
+        fontWeight: 800,
+        textAlign: "left"
     }
 };
 
-function MatchTable({players}) {
+function MatchTable({players, onPlayerNavigate}) {
     const sortedPlayers = [...players].sort((a, b) => b.points - a.points);
+    const formatShots = (made, attempted) => `${Number(made ?? 0)}/${Number(attempted ?? 0)}`;
 
     return (
         <div style={tableStyles.shell}>
@@ -63,6 +78,9 @@ function MatchTable({players}) {
                     <th style={tableStyles.headerCell}>Jugadora</th>
                     <th style={tableStyles.headerCell}>Dorsal</th>
                     <th style={tableStyles.headerCell}>Pts</th>
+                    <th style={tableStyles.headerCell}>TL</th>
+                    <th style={tableStyles.headerCell}>T2</th>
+                    <th style={tableStyles.headerCell}>T3</th>
                     <th style={tableStyles.headerCell}>Min</th>
                     <th style={tableStyles.headerCell}>Val</th>
                 </tr>
@@ -82,13 +100,35 @@ function MatchTable({players}) {
                             key={`${player.matchWebId}-${player.playerName}-${index}`}
                             style={{background: rowBackground}}
                         >
-                            <td style={tableStyles.bodyCell}>{player.playerName}</td>
+                            <td style={tableStyles.bodyCell}>
+                                {onPlayerNavigate ? (
+                                    <button
+                                        type="button"
+                                        style={tableStyles.playerLink}
+                                        title={`Ver estadísticas de ${player.playerName}`}
+                                        onClick={() => onPlayerNavigate(player.playerName)}
+                                    >
+                                        {player.playerName}
+                                    </button>
+                                ) : (
+                                    player.playerName
+                                )}
+                            </td>
                             <td style={tableStyles.bodyCell}>{player.dorsal}</td>
                             <td style={tableStyles.bodyCell}>
                                 <span style={tableStyles.pointsBadge}>
                                     {player.points}
                                     {medals ? <span style={tableStyles.medal}>{medals}</span> : null}
                                 </span>
+                            </td>
+                            <td style={{...tableStyles.bodyCell, ...tableStyles.shotCell}}>
+                                {formatShots(player.ftMade, player.ftAttempted)}
+                            </td>
+                            <td style={{...tableStyles.bodyCell, ...tableStyles.shotCell}}>
+                                {formatShots(player.twoMade, player.twoAttempted)}
+                            </td>
+                            <td style={{...tableStyles.bodyCell, ...tableStyles.shotCell}}>
+                                {formatShots(player.threeMade, player.threeAttempted)}
                             </td>
                             <td style={tableStyles.bodyCell}>{player.minutes}</td>
                             <td style={tableStyles.bodyCell}>{player.valuation}</td>

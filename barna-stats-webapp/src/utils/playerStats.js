@@ -169,6 +169,51 @@ export function getTeamAverage(players) {
     return players.reduce((sum, player) => sum + Number(player.points), 0) / matchesPlayed;
 }
 
+export function getSelectedPlayerSummary(players, selectedPlayer) {
+    if (!selectedPlayer) {
+        return null;
+    }
+
+    const selectedRows = (players ?? []).filter((player) => player.playerName === selectedPlayer);
+
+    if (selectedRows.length === 0) {
+        return null;
+    }
+
+    const games = selectedRows.length;
+    const points = selectedRows.reduce((sum, player) => sum + Number(player.points ?? 0), 0);
+    const valuation = selectedRows.reduce((sum, player) => sum + Number(player.valuation ?? 0), 0);
+    const minutes = selectedRows.reduce((sum, player) => sum + Number(player.minutes ?? 0), 0);
+    const ftMade = selectedRows.reduce((sum, player) => sum + Number(player.ftMade ?? 0), 0);
+    const ftAttempted = selectedRows.reduce((sum, player) => sum + Number(player.ftAttempted ?? 0), 0);
+    const twoMade = selectedRows.reduce((sum, player) => sum + Number(player.twoMade ?? 0), 0);
+    const twoAttempted = selectedRows.reduce((sum, player) => sum + Number(player.twoAttempted ?? 0), 0);
+    const threeMade = selectedRows.reduce((sum, player) => sum + Number(player.threeMade ?? 0), 0);
+    const threeAttempted = selectedRows.reduce((sum, player) => sum + Number(player.threeAttempted ?? 0), 0);
+
+    return {
+        name: selectedPlayer,
+        games,
+        points,
+        valuation,
+        minutes,
+        ftMade,
+        ftAttempted,
+        twoMade,
+        twoAttempted,
+        threeMade,
+        threeAttempted,
+        avgPoints: games > 0 ? points / games : 0,
+        avgValuation: games > 0 ? valuation / games : 0,
+        avgMinutes: games > 0 ? minutes / games : 0,
+        ftPercentage: ftAttempted > 0 ? (ftMade / ftAttempted) * 100 : 0,
+        twoPercentage: twoAttempted > 0 ? (twoMade / twoAttempted) * 100 : 0,
+        threePercentage: threeAttempted > 0 ? (threeMade / threeAttempted) * 100 : 0,
+        bestPointsGame: Math.max(...selectedRows.map((player) => Number(player.points ?? 0))),
+        bestValuationGame: Math.max(...selectedRows.map((player) => Number(player.valuation ?? 0)))
+    };
+}
+
 export function buildGlobalPlayers(teams) {
     return teams.flatMap((team) =>
         (team.seasonTotals ?? []).map((player) => {

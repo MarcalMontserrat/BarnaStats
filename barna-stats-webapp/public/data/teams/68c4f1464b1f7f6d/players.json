@@ -26,7 +26,13 @@
     "points": 18,
     "valuation": 6,
     "fouls": 0,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 4,
+    "ftAttempted": 5,
+    "twoMade": 4,
+    "twoAttempted": 7,
+    "threeMade": 2,
+    "threeAttempted": 10
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -55,7 +61,13 @@
     "points": 11,
     "valuation": 5,
     "fouls": 4,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 4,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -84,7 +96,13 @@
     "points": 8,
     "valuation": 4,
     "fouls": 1,
-    "plusMinus": -17
+    "plusMinus": -17,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 2,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -113,7 +131,13 @@
     "points": 7,
     "valuation": 4,
     "fouls": 3,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -142,7 +166,13 @@
     "points": 6,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -171,7 +201,13 @@
     "points": 4,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -200,7 +236,13 @@
     "points": 2,
     "valuation": 1,
     "fouls": 0,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 2,
+    "ftAttempted": 3,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -229,7 +271,13 @@
     "points": 1,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -258,7 +306,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -287,7 +341,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 1,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -316,7 +376,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 5,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -345,7 +411,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 0,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -374,7 +446,13 @@
     "points": 18,
     "valuation": 8,
     "fouls": 3,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 5,
+    "twoAttempted": 7,
+    "threeMade": 2,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -403,7 +481,13 @@
     "points": 13,
     "valuation": -3,
     "fouls": 4,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 9,
+    "ftAttempted": 16,
+    "twoMade": 2,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -432,7 +516,13 @@
     "points": 13,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": -13
+    "plusMinus": -13,
+    "ftMade": 3,
+    "ftAttempted": 5,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 2,
+    "threeAttempted": 10
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -461,7 +551,13 @@
     "points": 6,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 6,
+    "ftAttempted": 6,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -490,7 +586,13 @@
     "points": 5,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 6,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -519,7 +621,13 @@
     "points": 5,
     "valuation": -2,
     "fouls": 3,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -548,7 +656,13 @@
     "points": 4,
     "valuation": -7,
     "fouls": 5,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -577,7 +691,13 @@
     "points": 3,
     "valuation": 2,
     "fouls": 1,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -606,7 +726,13 @@
     "points": 3,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -635,7 +761,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 2,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -664,7 +796,13 @@
     "points": 0,
     "valuation": -8,
     "fouls": 3,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -693,7 +831,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -722,7 +866,13 @@
     "points": 19,
     "valuation": 12,
     "fouls": 2,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 4,
+    "ftAttempted": 5,
+    "twoMade": 6,
+    "twoAttempted": 7,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -751,7 +901,13 @@
     "points": 15,
     "valuation": 8,
     "fouls": 3,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 5,
+    "ftAttempted": 6,
+    "twoMade": 5,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -780,7 +936,13 @@
     "points": 12,
     "valuation": 5,
     "fouls": 0,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 5,
+    "ftAttempted": 6,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -809,7 +971,13 @@
     "points": 9,
     "valuation": 0,
     "fouls": 3,
-    "plusMinus": -11
+    "plusMinus": -11,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 2,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -838,7 +1006,13 @@
     "points": 8,
     "valuation": 1,
     "fouls": 3,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 2,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -867,7 +1041,13 @@
     "points": 8,
     "valuation": 5,
     "fouls": 2,
-    "plusMinus": 16
+    "plusMinus": 16,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 2,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -896,7 +1076,13 @@
     "points": 6,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 2,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -925,7 +1111,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -954,7 +1146,13 @@
     "points": 0,
     "valuation": -9,
     "fouls": 2,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -983,7 +1181,13 @@
     "points": 0,
     "valuation": -8,
     "fouls": 4,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1012,7 +1216,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1041,7 +1251,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1070,7 +1286,13 @@
     "points": 18,
     "valuation": 8,
     "fouls": 2,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 6,
+    "ftAttempted": 10,
+    "twoMade": 6,
+    "twoAttempted": 10,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1099,7 +1321,13 @@
     "points": 10,
     "valuation": 1,
     "fouls": 5,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 3,
+    "ftAttempted": 5,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1128,7 +1356,13 @@
     "points": 9,
     "valuation": 2,
     "fouls": 3,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 3,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1157,7 +1391,13 @@
     "points": 9,
     "valuation": 5,
     "fouls": 1,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 1,
+    "ftAttempted": 3,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 2,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1186,7 +1426,13 @@
     "points": 6,
     "valuation": 2,
     "fouls": 1,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 2,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1215,7 +1461,13 @@
     "points": 6,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": 14
+    "plusMinus": 14,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1244,7 +1496,13 @@
     "points": 3,
     "valuation": -7,
     "fouls": 1,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1273,7 +1531,13 @@
     "points": 3,
     "valuation": -6,
     "fouls": 4,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1302,7 +1566,13 @@
     "points": 2,
     "valuation": -4,
     "fouls": 3,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1331,7 +1601,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1360,7 +1636,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 0,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1389,7 +1671,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1418,7 +1706,13 @@
     "points": 29,
     "valuation": 16,
     "fouls": 0,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 9,
+    "threeMade": 7,
+    "threeAttempted": 14
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1447,7 +1741,13 @@
     "points": 16,
     "valuation": 4,
     "fouls": 3,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 4,
+    "ftAttempted": 10,
+    "twoMade": 6,
+    "twoAttempted": 9,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1476,7 +1776,13 @@
     "points": 12,
     "valuation": 6,
     "fouls": 3,
-    "plusMinus": -15
+    "plusMinus": -15,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 5,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1505,7 +1811,13 @@
     "points": 8,
     "valuation": 1,
     "fouls": 2,
-    "plusMinus": -9
+    "plusMinus": -9,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 4,
+    "twoAttempted": 9,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1534,7 +1846,13 @@
     "points": 5,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1563,7 +1881,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1592,7 +1916,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": -13
+    "plusMinus": -13,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1621,7 +1951,13 @@
     "points": 2,
     "valuation": -8,
     "fouls": 4,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1650,7 +1986,13 @@
     "points": 1,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1679,7 +2021,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1708,7 +2056,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 0,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1737,7 +2091,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1766,7 +2126,13 @@
     "points": 14,
     "valuation": -1,
     "fouls": 4,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 3,
+    "threeAttempted": 8
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1795,7 +2161,13 @@
     "points": 12,
     "valuation": 1,
     "fouls": 4,
-    "plusMinus": -9
+    "plusMinus": -9,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 6,
+    "threeMade": 2,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1824,7 +2196,13 @@
     "points": 11,
     "valuation": -10,
     "fouls": 5,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 7,
+    "ftAttempted": 11,
+    "twoMade": 2,
+    "twoAttempted": 12,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1853,7 +2231,13 @@
     "points": 10,
     "valuation": -7,
     "fouls": 4,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 2,
+    "ftAttempted": 7,
+    "twoMade": 4,
+    "twoAttempted": 12,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1882,7 +2266,13 @@
     "points": 5,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1911,7 +2301,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 3,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1940,7 +2336,13 @@
     "points": 4,
     "valuation": 0,
     "fouls": 2,
-    "plusMinus": -14
+    "plusMinus": -14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1969,7 +2371,13 @@
     "points": 3,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -1998,7 +2406,13 @@
     "points": 2,
     "valuation": -7,
     "fouls": 3,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2027,7 +2441,13 @@
     "points": 2,
     "valuation": -4,
     "fouls": 0,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2056,7 +2476,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2085,7 +2511,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 3,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2114,7 +2546,13 @@
     "points": 14,
     "valuation": 6,
     "fouls": 4,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 6,
+    "ftAttempted": 6,
+    "twoMade": 4,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2143,7 +2581,13 @@
     "points": 13,
     "valuation": -1,
     "fouls": 5,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 6,
+    "twoAttempted": 9,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2172,7 +2616,13 @@
     "points": 10,
     "valuation": 4,
     "fouls": 1,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2201,7 +2651,13 @@
     "points": 9,
     "valuation": -6,
     "fouls": 1,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 9,
+    "threeMade": 0,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2230,7 +2686,13 @@
     "points": 6,
     "valuation": -2,
     "fouls": 5,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 2,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2259,7 +2721,13 @@
     "points": 6,
     "valuation": -1,
     "fouls": 2,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 4,
+    "ftAttempted": 5,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2288,7 +2756,13 @@
     "points": 3,
     "valuation": -5,
     "fouls": 2,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2317,7 +2791,13 @@
     "points": 2,
     "valuation": -10,
     "fouls": 5,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2346,7 +2826,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2375,7 +2861,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2404,7 +2896,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2433,7 +2931,13 @@
     "points": 20,
     "valuation": 9,
     "fouls": 4,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 7,
+    "ftAttempted": 12,
+    "twoMade": 5,
+    "twoAttempted": 7,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2462,7 +2966,13 @@
     "points": 10,
     "valuation": -4,
     "fouls": 3,
-    "plusMinus": 9
+    "plusMinus": 9,
+    "ftMade": 7,
+    "ftAttempted": 9,
+    "twoMade": 0,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2491,7 +3001,13 @@
     "points": 8,
     "valuation": 1,
     "fouls": 2,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 2,
+    "ftAttempted": 3,
+    "twoMade": 3,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2520,7 +3036,13 @@
     "points": 8,
     "valuation": 3,
     "fouls": 3,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 4,
+    "ftAttempted": 4,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2549,7 +3071,13 @@
     "points": 6,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 2,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2578,7 +3106,13 @@
     "points": 5,
     "valuation": -9,
     "fouls": 4,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 6,
+    "threeMade": 1,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2607,7 +3141,13 @@
     "points": 5,
     "valuation": -2,
     "fouls": 5,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2636,7 +3176,13 @@
     "points": 2,
     "valuation": -11,
     "fouls": 4,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2665,7 +3211,13 @@
     "points": 2,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2694,7 +3246,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2723,7 +3281,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 0,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 0,
+    "ftAttempted": 1,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2752,7 +3316,13 @@
     "points": 17,
     "valuation": 11,
     "fouls": 0,
-    "plusMinus": 19
+    "plusMinus": 19,
+    "ftMade": 6,
+    "ftAttempted": 7,
+    "twoMade": 4,
+    "twoAttempted": 6,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2781,7 +3351,13 @@
     "points": 15,
     "valuation": -8,
     "fouls": 5,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 9,
+    "ftAttempted": 20,
+    "twoMade": 3,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2810,7 +3386,13 @@
     "points": 9,
     "valuation": -2,
     "fouls": 4,
-    "plusMinus": 23
+    "plusMinus": 23,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 4,
+    "twoAttempted": 10,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2839,7 +3421,13 @@
     "points": 8,
     "valuation": -3,
     "fouls": 5,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 4,
+    "ftAttempted": 4,
+    "twoMade": 2,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2868,7 +3456,13 @@
     "points": 5,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": -13
+    "plusMinus": -13,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 7,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2897,7 +3491,13 @@
     "points": 4,
     "valuation": -6,
     "fouls": 5,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2926,7 +3526,13 @@
     "points": 3,
     "valuation": -4,
     "fouls": 3,
-    "plusMinus": -22
+    "plusMinus": -22,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2955,7 +3561,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -2984,7 +3596,13 @@
     "points": 2,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -13
+    "plusMinus": -13,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3013,7 +3631,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 4,
-    "plusMinus": 20
+    "plusMinus": 20,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3042,7 +3666,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3071,7 +3701,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3100,7 +3736,13 @@
     "points": 15,
     "valuation": 9,
     "fouls": 4,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 3,
+    "ftAttempted": 3,
+    "twoMade": 3,
+    "twoAttempted": 4,
+    "threeMade": 2,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3129,7 +3771,13 @@
     "points": 13,
     "valuation": -2,
     "fouls": 5,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 6,
+    "twoAttempted": 11,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3158,7 +3806,13 @@
     "points": 11,
     "valuation": 5,
     "fouls": 5,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3187,7 +3841,13 @@
     "points": 10,
     "valuation": 2,
     "fouls": 1,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 5,
+    "ftAttempted": 7,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3216,7 +3876,13 @@
     "points": 7,
     "valuation": 4,
     "fouls": 1,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3245,7 +3911,13 @@
     "points": 6,
     "valuation": 1,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3274,7 +3946,13 @@
     "points": 5,
     "valuation": -2,
     "fouls": 3,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3303,7 +3981,13 @@
     "points": 2,
     "valuation": -8,
     "fouls": 4,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3332,7 +4016,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3361,7 +4051,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 1,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 0,
+    "ftAttempted": 1,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3390,7 +4086,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3419,7 +4121,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3448,7 +4156,13 @@
     "points": 26,
     "valuation": 8,
     "fouls": 4,
-    "plusMinus": 26
+    "plusMinus": 26,
+    "ftMade": 10,
+    "ftAttempted": 14,
+    "twoMade": 5,
+    "twoAttempted": 12,
+    "threeMade": 2,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3477,7 +4191,13 @@
     "points": 25,
     "valuation": 15,
     "fouls": 3,
-    "plusMinus": 16
+    "plusMinus": 16,
+    "ftMade": 7,
+    "ftAttempted": 9,
+    "twoMade": 3,
+    "twoAttempted": 5,
+    "threeMade": 4,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3506,7 +4226,13 @@
     "points": 11,
     "valuation": 4,
     "fouls": 1,
-    "plusMinus": 16
+    "plusMinus": 16,
+    "ftMade": 4,
+    "ftAttempted": 4,
+    "twoMade": 2,
+    "twoAttempted": 6,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3535,7 +4261,13 @@
     "points": 6,
     "valuation": -5,
     "fouls": 4,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3564,7 +4296,13 @@
     "points": 6,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 25
+    "plusMinus": 25,
+    "ftMade": 4,
+    "ftAttempted": 5,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3593,7 +4331,13 @@
     "points": 4,
     "valuation": -6,
     "fouls": 4,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3622,7 +4366,13 @@
     "points": 3,
     "valuation": 1,
     "fouls": 0,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3651,7 +4401,13 @@
     "points": 2,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": -15
+    "plusMinus": -15,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3680,7 +4436,13 @@
     "points": 2,
     "valuation": -1,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3709,7 +4471,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3738,7 +4506,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": -9
+    "plusMinus": -9,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3767,7 +4541,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3796,7 +4576,13 @@
     "points": 16,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 7,
+    "ftAttempted": 15,
+    "twoMade": 3,
+    "twoAttempted": 10,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3825,7 +4611,13 @@
     "points": 11,
     "valuation": 2,
     "fouls": 3,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 4,
+    "ftAttempted": 6,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3854,7 +4646,13 @@
     "points": 8,
     "valuation": -9,
     "fouls": 1,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 2,
+    "ftAttempted": 8,
+    "twoMade": 3,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3883,7 +4681,13 @@
     "points": 8,
     "valuation": -2,
     "fouls": 4,
-    "plusMinus": -18
+    "plusMinus": -18,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3912,7 +4716,13 @@
     "points": 5,
     "valuation": -2,
     "fouls": 0,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3941,7 +4751,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 5,
-    "plusMinus": -13
+    "plusMinus": -13,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3970,7 +4786,13 @@
     "points": 2,
     "valuation": -5,
     "fouls": 4,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -3999,7 +4821,13 @@
     "points": 1,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4028,7 +4856,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4057,7 +4891,13 @@
     "points": 12,
     "valuation": -3,
     "fouls": 0,
-    "plusMinus": -14
+    "plusMinus": -14,
+    "ftMade": 5,
+    "ftAttempted": 8,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 10
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4086,7 +4926,13 @@
     "points": 11,
     "valuation": -7,
     "fouls": 5,
-    "plusMinus": -9
+    "plusMinus": -9,
+    "ftMade": 3,
+    "ftAttempted": 6,
+    "twoMade": 4,
+    "twoAttempted": 10,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4115,7 +4961,13 @@
     "points": 10,
     "valuation": 1,
     "fouls": 2,
-    "plusMinus": -18
+    "plusMinus": -18,
+    "ftMade": 3,
+    "ftAttempted": 7,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4144,7 +4996,13 @@
     "points": 9,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 8,
+    "threeMade": 1,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4173,7 +5031,13 @@
     "points": 6,
     "valuation": -2,
     "fouls": 4,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4202,7 +5066,13 @@
     "points": 3,
     "valuation": -7,
     "fouls": 4,
-    "plusMinus": -16
+    "plusMinus": -16,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4231,7 +5101,13 @@
     "points": 2,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4260,7 +5136,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4289,7 +5171,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 4,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4318,7 +5206,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4347,7 +5241,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": -18
+    "plusMinus": -18,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4376,7 +5276,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 0,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4405,7 +5311,13 @@
     "points": 20,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 6,
+    "ftAttempted": 15,
+    "twoMade": 7,
+    "twoAttempted": 14,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4434,7 +5346,13 @@
     "points": 13,
     "valuation": 7,
     "fouls": 2,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 4,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4463,7 +5381,13 @@
     "points": 12,
     "valuation": 4,
     "fouls": 4,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 6,
+    "ftAttempted": 6,
+    "twoMade": 3,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4492,7 +5416,13 @@
     "points": 7,
     "valuation": -3,
     "fouls": 5,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 3,
+    "ftAttempted": 6,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4521,7 +5451,13 @@
     "points": 3,
     "valuation": -5,
     "fouls": 5,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4550,7 +5486,13 @@
     "points": 2,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": -9
+    "plusMinus": -9,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4579,7 +5521,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4608,7 +5556,13 @@
     "points": 2,
     "valuation": -10,
     "fouls": 2,
-    "plusMinus": -11
+    "plusMinus": -11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4637,7 +5591,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4666,7 +5626,13 @@
     "points": 0,
     "valuation": -6,
     "fouls": 3,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4695,7 +5661,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4724,7 +5696,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4753,7 +5731,13 @@
     "points": 18,
     "valuation": 5,
     "fouls": 0,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 5,
+    "ftAttempted": 7,
+    "twoMade": 5,
+    "twoAttempted": 11,
+    "threeMade": 1,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4782,7 +5766,13 @@
     "points": 13,
     "valuation": 0,
     "fouls": 5,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 4,
+    "twoAttempted": 9,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4811,7 +5801,13 @@
     "points": 10,
     "valuation": 0,
     "fouls": 3,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 2,
+    "threeAttempted": 8
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4840,7 +5836,13 @@
     "points": 7,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4869,7 +5871,13 @@
     "points": 5,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4898,7 +5906,13 @@
     "points": 4,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4927,7 +5941,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4956,7 +5976,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -10
+    "plusMinus": -10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -4985,7 +6011,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5014,7 +6046,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5043,7 +6081,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5072,7 +6116,13 @@
     "points": 0,
     "valuation": -8,
     "fouls": 1,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5101,7 +6151,13 @@
     "points": 24,
     "valuation": 11,
     "fouls": 5,
-    "plusMinus": 36
+    "plusMinus": 36,
+    "ftMade": 6,
+    "ftAttempted": 7,
+    "twoMade": 9,
+    "twoAttempted": 14,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5130,7 +6186,13 @@
     "points": 13,
     "valuation": 5,
     "fouls": 4,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 5,
+    "ftAttempted": 7,
+    "twoMade": 4,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5159,7 +6221,13 @@
     "points": 12,
     "valuation": 1,
     "fouls": 3,
-    "plusMinus": 25
+    "plusMinus": 25,
+    "ftMade": 4,
+    "ftAttempted": 4,
+    "twoMade": 1,
+    "twoAttempted": 5,
+    "threeMade": 2,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5188,7 +6256,13 @@
     "points": 12,
     "valuation": 1,
     "fouls": 3,
-    "plusMinus": 36
+    "plusMinus": 36,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 5,
+    "twoAttempted": 10,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5217,7 +6291,13 @@
     "points": 8,
     "valuation": 3,
     "fouls": 1,
-    "plusMinus": 27
+    "plusMinus": 27,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 2,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5246,7 +6326,13 @@
     "points": 5,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": 21
+    "plusMinus": 21,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5275,7 +6361,13 @@
     "points": 4,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5304,7 +6396,13 @@
     "points": 2,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5333,7 +6431,13 @@
     "points": 1,
     "valuation": -10,
     "fouls": 4,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5362,7 +6466,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5391,7 +6501,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5420,7 +6536,13 @@
     "points": 35,
     "valuation": 20,
     "fouls": 1,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 4,
+    "ftAttempted": 7,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 9,
+    "threeAttempted": 17
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5449,7 +6571,13 @@
     "points": 18,
     "valuation": 6,
     "fouls": 4,
-    "plusMinus": -11
+    "plusMinus": -11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 5,
+    "threeMade": 4,
+    "threeAttempted": 10
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5478,7 +6606,13 @@
     "points": 8,
     "valuation": -3,
     "fouls": 5,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 4,
+    "ftAttempted": 7,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5507,7 +6641,13 @@
     "points": 3,
     "valuation": -10,
     "fouls": 4,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5536,7 +6676,13 @@
     "points": 3,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5565,7 +6711,13 @@
     "points": 3,
     "valuation": -9,
     "fouls": 5,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5594,7 +6746,13 @@
     "points": 3,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -17
+    "plusMinus": -17,
+    "ftMade": 3,
+    "ftAttempted": 6,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5623,7 +6781,13 @@
     "points": 2,
     "valuation": 1,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5652,7 +6816,13 @@
     "points": 2,
     "valuation": -12,
     "fouls": 4,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5681,7 +6851,13 @@
     "points": 0,
     "valuation": -6,
     "fouls": 3,
-    "plusMinus": 9
+    "plusMinus": 9,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5710,7 +6886,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5739,7 +6921,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5768,7 +6956,13 @@
     "points": 20,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 3,
+    "ftAttempted": 11,
+    "twoMade": 7,
+    "twoAttempted": 16,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5797,7 +6991,13 @@
     "points": 20,
     "valuation": 15,
     "fouls": 4,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 7,
+    "twoAttempted": 7,
+    "threeMade": 2,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5826,7 +7026,13 @@
     "points": 12,
     "valuation": 7,
     "fouls": 3,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5855,7 +7061,13 @@
     "points": 9,
     "valuation": 4,
     "fouls": 2,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 3,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5884,7 +7096,13 @@
     "points": 8,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 2,
+    "twoAttempted": 7,
+    "threeMade": 1,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5913,7 +7131,13 @@
     "points": 6,
     "valuation": -2,
     "fouls": 4,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5942,7 +7166,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 3,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5971,7 +7201,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6000,7 +7236,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6029,7 +7271,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6058,7 +7306,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6087,7 +7341,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6116,7 +7376,13 @@
     "points": 17,
     "valuation": 7,
     "fouls": 4,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 4,
+    "twoMade": 7,
+    "twoAttempted": 9,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6145,7 +7411,13 @@
     "points": 8,
     "valuation": -2,
     "fouls": 4,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 1,
+    "ftAttempted": 3,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6174,7 +7446,13 @@
     "points": 6,
     "valuation": 2,
     "fouls": 0,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6203,7 +7481,13 @@
     "points": 5,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6232,7 +7516,13 @@
     "points": 5,
     "valuation": 1,
     "fouls": 3,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6261,7 +7551,13 @@
     "points": 4,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6290,7 +7586,13 @@
     "points": 3,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 4
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6319,7 +7621,13 @@
     "points": 3,
     "valuation": -6,
     "fouls": 1,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 1,
+    "ftAttempted": 3,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 5
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6348,7 +7656,13 @@
     "points": 1,
     "valuation": -5,
     "fouls": 2,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6377,7 +7691,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6406,7 +7726,13 @@
     "points": 0,
     "valuation": -9,
     "fouls": 2,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6435,7 +7761,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 0,
-    "plusMinus": -8
+    "plusMinus": -8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6464,7 +7796,13 @@
     "points": 25,
     "valuation": 15,
     "fouls": 0,
-    "plusMinus": 18
+    "plusMinus": 18,
+    "ftMade": 6,
+    "ftAttempted": 9,
+    "twoMade": 2,
+    "twoAttempted": 4,
+    "threeMade": 5,
+    "threeAttempted": 10
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6493,7 +7831,13 @@
     "points": 9,
     "valuation": -2,
     "fouls": 4,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 4,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6522,7 +7866,13 @@
     "points": 8,
     "valuation": -5,
     "fouls": 4,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 1,
+    "ftAttempted": 1,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6551,7 +7901,13 @@
     "points": 6,
     "valuation": -1,
     "fouls": 4,
-    "plusMinus": 23
+    "plusMinus": 23,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6580,7 +7936,13 @@
     "points": 6,
     "valuation": -11,
     "fouls": 4,
-    "plusMinus": 17
+    "plusMinus": 17,
+    "ftMade": 0,
+    "ftAttempted": 1,
+    "twoMade": 3,
+    "twoAttempted": 11,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6609,7 +7971,13 @@
     "points": 5,
     "valuation": -5,
     "fouls": 2,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 5,
+    "ftAttempted": 6,
+    "twoMade": 0,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6638,7 +8006,13 @@
     "points": 5,
     "valuation": -3,
     "fouls": 4,
-    "plusMinus": 20
+    "plusMinus": 20,
+    "ftMade": 3,
+    "ftAttempted": 6,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6667,7 +8041,13 @@
     "points": 4,
     "valuation": 1,
     "fouls": 2,
-    "plusMinus": -6
+    "plusMinus": -6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6696,7 +8076,13 @@
     "points": 2,
     "valuation": -5,
     "fouls": 4,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6725,7 +8111,13 @@
     "points": 1,
     "valuation": -3,
     "fouls": 0,
-    "plusMinus": -10
+    "plusMinus": -10,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6754,7 +8146,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6783,7 +8181,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 2,
-    "plusMinus": -9
+    "plusMinus": -9,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6812,7 +8216,13 @@
     "points": 21,
     "valuation": 8,
     "fouls": 4,
-    "plusMinus": 21
+    "plusMinus": 21,
+    "ftMade": 13,
+    "ftAttempted": 17,
+    "twoMade": 4,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6841,7 +8251,13 @@
     "points": 18,
     "valuation": 12,
     "fouls": 1,
-    "plusMinus": 21
+    "plusMinus": 21,
+    "ftMade": 3,
+    "ftAttempted": 6,
+    "twoMade": 3,
+    "twoAttempted": 5,
+    "threeMade": 3,
+    "threeAttempted": 3
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6870,7 +8286,13 @@
     "points": 11,
     "valuation": 6,
     "fouls": 2,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 3,
+    "threeAttempted": 6
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6899,7 +8321,13 @@
     "points": 11,
     "valuation": 5,
     "fouls": 0,
-    "plusMinus": 23
+    "plusMinus": 23,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 3,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6928,7 +8356,13 @@
     "points": 9,
     "valuation": 5,
     "fouls": 1,
-    "plusMinus": 9
+    "plusMinus": 9,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 4,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6957,7 +8391,13 @@
     "points": 9,
     "valuation": 1,
     "fouls": 4,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 4,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -6986,7 +8426,13 @@
     "points": 7,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 18
+    "plusMinus": 18,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7015,7 +8461,13 @@
     "points": 3,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 1,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7044,7 +8496,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 1,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7073,7 +8531,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7102,7 +8566,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7131,7 +8601,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7160,7 +8636,13 @@
     "points": 13,
     "valuation": -1,
     "fouls": 2,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 5,
+    "ftAttempted": 10,
+    "twoMade": 4,
+    "twoAttempted": 10,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7189,7 +8671,13 @@
     "points": 12,
     "valuation": 6,
     "fouls": 1,
-    "plusMinus": 9
+    "plusMinus": 9,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 3,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7218,7 +8706,13 @@
     "points": 11,
     "valuation": 2,
     "fouls": 0,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 3,
+    "threeMade": 3,
+    "threeAttempted": 7
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7247,7 +8741,13 @@
     "points": 7,
     "valuation": -2,
     "fouls": 3,
-    "plusMinus": 17
+    "plusMinus": 17,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7276,7 +8776,13 @@
     "points": 4,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -14
+    "plusMinus": -14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7305,7 +8811,13 @@
     "points": 4,
     "valuation": -1,
     "fouls": 2,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7334,7 +8846,13 @@
     "points": 4,
     "valuation": -5,
     "fouls": 3,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 4,
+    "ftAttempted": 6,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 2
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7363,7 +8881,13 @@
     "points": 4,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": -13
+    "plusMinus": -13,
+    "ftMade": 2,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7392,7 +8916,13 @@
     "points": 3,
     "valuation": -3,
     "fouls": 2,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 1,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7421,7 +8951,13 @@
     "points": 0,
     "valuation": -7,
     "fouls": 5,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7450,7 +8986,13 @@
     "points": 0,
     "valuation": -6,
     "fouls": 4,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -7479,6 +9021,12 @@
     "points": 0,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": -2
+    "plusMinus": -2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   }
 ]

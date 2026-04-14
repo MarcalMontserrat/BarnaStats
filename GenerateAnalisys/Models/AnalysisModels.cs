@@ -96,6 +96,12 @@ public sealed class MatchPlayerRow
     public int Valuation { get; set; }
     public int Fouls { get; set; }
     public int PlusMinus { get; set; }
+    public int FtMade { get; set; }
+    public int FtAttempted { get; set; }
+    public int TwoMade { get; set; }
+    public int TwoAttempted { get; set; }
+    public int ThreeMade { get; set; }
+    public int ThreeAttempted { get; set; }
 }
 
 public sealed class MatchMVP

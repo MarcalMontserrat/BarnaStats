@@ -26,7 +26,13 @@
     "points": 20,
     "valuation": 15,
     "fouls": 2,
-    "plusMinus": 41
+    "plusMinus": 41,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 8,
+    "twoAttempted": 8,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -55,7 +61,13 @@
     "points": 16,
     "valuation": 10,
     "fouls": 2,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 0,
+    "ftAttempted": 4,
+    "twoMade": 8,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -84,7 +96,13 @@
     "points": 14,
     "valuation": 11,
     "fouls": 1,
-    "plusMinus": 38
+    "plusMinus": 38,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -113,7 +131,13 @@
     "points": 11,
     "valuation": 7,
     "fouls": 2,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 3,
+    "ftAttempted": 5,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -142,7 +166,13 @@
     "points": 8,
     "valuation": 2,
     "fouls": 4,
-    "plusMinus": 16
+    "plusMinus": 16,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -171,7 +201,13 @@
     "points": 4,
     "valuation": 3,
     "fouls": 1,
-    "plusMinus": -4
+    "plusMinus": -4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -200,7 +236,13 @@
     "points": 2,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -229,7 +271,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -12
+    "plusMinus": -12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -258,7 +306,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 41
+    "plusMinus": 41,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -287,7 +341,13 @@
     "points": 18,
     "valuation": 10,
     "fouls": 4,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 4,
+    "twoMade": 9,
+    "twoAttempted": 9,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -316,7 +376,13 @@
     "points": 9,
     "valuation": 9,
     "fouls": 0,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -345,7 +411,13 @@
     "points": 4,
     "valuation": 1,
     "fouls": 3,
-    "plusMinus": 4
+    "plusMinus": 4,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -374,7 +446,13 @@
     "points": 2,
     "valuation": 2,
     "fouls": 0,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -403,7 +481,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": -16
+    "plusMinus": -16,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -432,7 +516,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 1,
-    "plusMinus": -14
+    "plusMinus": -14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -461,7 +551,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -490,7 +586,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -14
+    "plusMinus": -14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -519,7 +621,13 @@
     "points": 18,
     "valuation": 14,
     "fouls": 3,
-    "plusMinus": 25
+    "plusMinus": 25,
+    "ftMade": 4,
+    "ftAttempted": 5,
+    "twoMade": 7,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -548,7 +656,13 @@
     "points": 11,
     "valuation": 9,
     "fouls": 0,
-    "plusMinus": 31
+    "plusMinus": 31,
+    "ftMade": 1,
+    "ftAttempted": 3,
+    "twoMade": 5,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -577,7 +691,13 @@
     "points": 9,
     "valuation": 6,
     "fouls": 1,
-    "plusMinus": 16
+    "plusMinus": 16,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -606,7 +726,13 @@
     "points": 7,
     "valuation": 5,
     "fouls": 1,
-    "plusMinus": 24
+    "plusMinus": 24,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -635,7 +761,13 @@
     "points": 4,
     "valuation": 3,
     "fouls": 1,
-    "plusMinus": 26
+    "plusMinus": 26,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -664,7 +796,13 @@
     "points": 2,
     "valuation": 2,
     "fouls": 0,
-    "plusMinus": 24
+    "plusMinus": 24,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -693,7 +831,13 @@
     "points": 2,
     "valuation": -4,
     "fouls": 1,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 0,
+    "ftAttempted": 5,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -722,7 +866,13 @@
     "points": 2,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -751,7 +901,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -780,7 +936,13 @@
     "points": 17,
     "valuation": 11,
     "fouls": 1,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 3,
+    "ftAttempted": 8,
+    "twoMade": 7,
+    "twoAttempted": 7,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -809,7 +971,13 @@
     "points": 10,
     "valuation": 4,
     "fouls": 4,
-    "plusMinus": 27
+    "plusMinus": 27,
+    "ftMade": 1,
+    "ftAttempted": 3,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -838,7 +1006,13 @@
     "points": 10,
     "valuation": 10,
     "fouls": 0,
-    "plusMinus": 24
+    "plusMinus": 24,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 5,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -867,7 +1041,13 @@
     "points": 10,
     "valuation": 2,
     "fouls": 1,
-    "plusMinus": 18
+    "plusMinus": 18,
+    "ftMade": 2,
+    "ftAttempted": 9,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -896,7 +1076,13 @@
     "points": 5,
     "valuation": 1,
     "fouls": 4,
-    "plusMinus": 21
+    "plusMinus": 21,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -925,7 +1111,13 @@
     "points": 4,
     "valuation": 0,
     "fouls": 2,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -954,7 +1146,13 @@
     "points": 4,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 14
+    "plusMinus": 14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -983,7 +1181,13 @@
     "points": 2,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1012,7 +1216,13 @@
     "points": 18,
     "valuation": 12,
     "fouls": 2,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 0,
+    "ftAttempted": 4,
+    "twoMade": 9,
+    "twoAttempted": 9,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1041,7 +1251,13 @@
     "points": 8,
     "valuation": 5,
     "fouls": 3,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1070,7 +1286,13 @@
     "points": 7,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1099,7 +1321,13 @@
     "points": 6,
     "valuation": 0,
     "fouls": 4,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1128,7 +1356,13 @@
     "points": 6,
     "valuation": 6,
     "fouls": 0,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1157,7 +1391,13 @@
     "points": 2,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1186,7 +1426,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1215,7 +1461,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 0,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1244,7 +1496,13 @@
     "points": 30,
     "valuation": 19,
     "fouls": 3,
-    "plusMinus": 45
+    "plusMinus": 45,
+    "ftMade": 1,
+    "ftAttempted": 9,
+    "twoMade": 13,
+    "twoAttempted": 13,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1273,7 +1531,13 @@
     "points": 13,
     "valuation": 5,
     "fouls": 2,
-    "plusMinus": 33
+    "plusMinus": 33,
+    "ftMade": 1,
+    "ftAttempted": 7,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1302,7 +1566,13 @@
     "points": 12,
     "valuation": 5,
     "fouls": 5,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1331,7 +1601,13 @@
     "points": 6,
     "valuation": 1,
     "fouls": 3,
-    "plusMinus": 29
+    "plusMinus": 29,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1360,7 +1636,13 @@
     "points": 6,
     "valuation": 4,
     "fouls": 2,
-    "plusMinus": 32
+    "plusMinus": 32,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1389,7 +1671,13 @@
     "points": 3,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": 39
+    "plusMinus": 39,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1418,7 +1706,13 @@
     "points": 2,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 20
+    "plusMinus": 20,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1447,7 +1741,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1476,7 +1776,13 @@
     "points": 19,
     "valuation": 8,
     "fouls": 3,
-    "plusMinus": 28
+    "plusMinus": 28,
+    "ftMade": 4,
+    "ftAttempted": 12,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1505,7 +1811,13 @@
     "points": 16,
     "valuation": 14,
     "fouls": 2,
-    "plusMinus": 19
+    "plusMinus": 19,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 8,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1534,7 +1846,13 @@
     "points": 8,
     "valuation": 8,
     "fouls": 0,
-    "plusMinus": 19
+    "plusMinus": 19,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1563,7 +1881,13 @@
     "points": 7,
     "valuation": 2,
     "fouls": 4,
-    "plusMinus": 25
+    "plusMinus": 25,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1592,7 +1916,13 @@
     "points": 5,
     "valuation": 4,
     "fouls": 1,
-    "plusMinus": 30
+    "plusMinus": 30,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1621,7 +1951,13 @@
     "points": 5,
     "valuation": 5,
     "fouls": 0,
-    "plusMinus": 14
+    "plusMinus": 14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1650,7 +1986,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 19
+    "plusMinus": 19,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1679,7 +2021,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1708,7 +2056,13 @@
     "points": 14,
     "valuation": 8,
     "fouls": 3,
-    "plusMinus": 26
+    "plusMinus": 26,
+    "ftMade": 3,
+    "ftAttempted": 6,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1737,7 +2091,13 @@
     "points": 10,
     "valuation": 5,
     "fouls": 1,
-    "plusMinus": 27
+    "plusMinus": 27,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1766,7 +2126,13 @@
     "points": 10,
     "valuation": 7,
     "fouls": 3,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 5,
+    "twoAttempted": 5,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1795,7 +2161,13 @@
     "points": 8,
     "valuation": 4,
     "fouls": 0,
-    "plusMinus": 37
+    "plusMinus": 37,
+    "ftMade": 2,
+    "ftAttempted": 6,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1824,7 +2196,13 @@
     "points": 6,
     "valuation": -7,
     "fouls": 3,
-    "plusMinus": 22
+    "plusMinus": 22,
+    "ftMade": 2,
+    "ftAttempted": 12,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1853,7 +2231,13 @@
     "points": 4,
     "valuation": 2,
     "fouls": 2,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1882,7 +2266,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": 29
+    "plusMinus": 29,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1911,7 +2301,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": 14
+    "plusMinus": 14,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1940,7 +2336,13 @@
     "points": 30,
     "valuation": 21,
     "fouls": 4,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 6,
+    "ftAttempted": 11,
+    "twoMade": 12,
+    "twoAttempted": 12,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1969,7 +2371,13 @@
     "points": 8,
     "valuation": 5,
     "fouls": 3,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -1998,7 +2406,13 @@
     "points": 6,
     "valuation": 5,
     "fouls": 1,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2027,7 +2441,13 @@
     "points": 5,
     "valuation": 0,
     "fouls": 3,
-    "plusMinus": 17
+    "plusMinus": 17,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2056,7 +2476,13 @@
     "points": 3,
     "valuation": 2,
     "fouls": 1,
-    "plusMinus": 19
+    "plusMinus": 19,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2085,7 +2511,13 @@
     "points": 2,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2114,7 +2546,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": 15
+    "plusMinus": 15,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2143,7 +2581,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 3,
-    "plusMinus": 6
+    "plusMinus": 6,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2172,7 +2616,13 @@
     "points": 12,
     "valuation": 7,
     "fouls": 5,
-    "plusMinus": -16
+    "plusMinus": -16,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2201,7 +2651,13 @@
     "points": 7,
     "valuation": 2,
     "fouls": 3,
-    "plusMinus": -5
+    "plusMinus": -5,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2230,7 +2686,13 @@
     "points": 4,
     "valuation": 4,
     "fouls": 0,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2259,7 +2721,13 @@
     "points": 2,
     "valuation": 2,
     "fouls": 0,
-    "plusMinus": -15
+    "plusMinus": -15,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2288,7 +2756,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2317,7 +2791,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -28
+    "plusMinus": -28,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2346,7 +2826,13 @@
     "points": 0,
     "valuation": 0,
     "fouls": 0,
-    "plusMinus": -16
+    "plusMinus": -16,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2375,7 +2861,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -18
+    "plusMinus": -18,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2404,7 +2896,13 @@
     "points": 15,
     "valuation": 12,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2433,7 +2931,13 @@
     "points": 8,
     "valuation": 6,
     "fouls": 0,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 2,
+    "ftAttempted": 4,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2462,7 +2966,13 @@
     "points": 6,
     "valuation": 6,
     "fouls": 0,
-    "plusMinus": -10
+    "plusMinus": -10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2491,7 +3001,13 @@
     "points": 5,
     "valuation": -7,
     "fouls": 1,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 3,
+    "ftAttempted": 14,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2520,7 +3036,13 @@
     "points": 5,
     "valuation": 0,
     "fouls": 2,
-    "plusMinus": -10
+    "plusMinus": -10,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2549,7 +3071,13 @@
     "points": 3,
     "valuation": 2,
     "fouls": 1,
-    "plusMinus": 7
+    "plusMinus": 7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2578,7 +3106,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2607,7 +3141,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2636,7 +3176,13 @@
     "points": 14,
     "valuation": 11,
     "fouls": 2,
-    "plusMinus": 1
+    "plusMinus": 1,
+    "ftMade": 3,
+    "ftAttempted": 4,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2665,7 +3211,13 @@
     "points": 13,
     "valuation": 7,
     "fouls": 4,
-    "plusMinus": 21
+    "plusMinus": 21,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 5,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2694,7 +3246,13 @@
     "points": 7,
     "valuation": 3,
     "fouls": 3,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2723,7 +3281,13 @@
     "points": 6,
     "valuation": 1,
     "fouls": 5,
-    "plusMinus": 5
+    "plusMinus": 5,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2752,7 +3316,13 @@
     "points": 2,
     "valuation": -1,
     "fouls": 3,
-    "plusMinus": 13
+    "plusMinus": 13,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2781,7 +3351,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 2,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2810,7 +3386,13 @@
     "points": 1,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 0
+    "plusMinus": 0,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2839,7 +3421,13 @@
     "points": 0,
     "valuation": -4,
     "fouls": 4,
-    "plusMinus": 10
+    "plusMinus": 10,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2868,7 +3456,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2897,7 +3491,13 @@
     "points": 25,
     "valuation": 18,
     "fouls": 2,
-    "plusMinus": 23
+    "plusMinus": 23,
+    "ftMade": 5,
+    "ftAttempted": 10,
+    "twoMade": 10,
+    "twoAttempted": 10,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2926,7 +3526,13 @@
     "points": 12,
     "valuation": 5,
     "fouls": 5,
-    "plusMinus": 24
+    "plusMinus": 24,
+    "ftMade": 4,
+    "ftAttempted": 6,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2955,7 +3561,13 @@
     "points": 5,
     "valuation": 4,
     "fouls": 1,
-    "plusMinus": 16
+    "plusMinus": 16,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -2984,7 +3596,13 @@
     "points": 4,
     "valuation": 4,
     "fouls": 0,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3013,7 +3631,13 @@
     "points": 2,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 19
+    "plusMinus": 19,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3042,7 +3666,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 0,
-    "plusMinus": 21
+    "plusMinus": 21,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3071,7 +3701,13 @@
     "points": 0,
     "valuation": -5,
     "fouls": 5,
-    "plusMinus": 3
+    "plusMinus": 3,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3100,7 +3736,13 @@
     "points": 0,
     "valuation": -2,
     "fouls": 2,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3129,7 +3771,13 @@
     "points": 16,
     "valuation": 8,
     "fouls": 5,
-    "plusMinus": 9
+    "plusMinus": 9,
+    "ftMade": 1,
+    "ftAttempted": 4,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3158,7 +3806,13 @@
     "points": 13,
     "valuation": 6,
     "fouls": 3,
-    "plusMinus": -3
+    "plusMinus": -3,
+    "ftMade": 2,
+    "ftAttempted": 5,
+    "twoMade": 4,
+    "twoAttempted": 4,
+    "threeMade": 1,
+    "threeAttempted": 2
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3187,7 +3841,13 @@
     "points": 12,
     "valuation": 7,
     "fouls": 1,
-    "plusMinus": -1
+    "plusMinus": -1,
+    "ftMade": 0,
+    "ftAttempted": 4,
+    "twoMade": 6,
+    "twoAttempted": 6,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3216,7 +3876,13 @@
     "points": 4,
     "valuation": 4,
     "fouls": 0,
-    "plusMinus": 8
+    "plusMinus": 8,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3245,7 +3911,13 @@
     "points": 3,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3274,7 +3946,13 @@
     "points": 0,
     "valuation": -3,
     "fouls": 1,
-    "plusMinus": 9
+    "plusMinus": 9,
+    "ftMade": 0,
+    "ftAttempted": 2,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3303,7 +3981,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": -7
+    "plusMinus": -7,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3332,7 +4016,13 @@
     "points": 0,
     "valuation": -1,
     "fouls": 1,
-    "plusMinus": 12
+    "plusMinus": 12,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 0,
+    "twoAttempted": 0,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3361,7 +4051,13 @@
     "points": 17,
     "valuation": 13,
     "fouls": 2,
-    "plusMinus": 30
+    "plusMinus": 30,
+    "ftMade": 1,
+    "ftAttempted": 3,
+    "twoMade": 8,
+    "twoAttempted": 8,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3390,7 +4086,13 @@
     "points": 15,
     "valuation": 13,
     "fouls": 2,
-    "plusMinus": 27
+    "plusMinus": 27,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 3,
+    "twoAttempted": 3,
+    "threeMade": 3,
+    "threeAttempted": 3
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3419,7 +4121,13 @@
     "points": 14,
     "valuation": 11,
     "fouls": 2,
-    "plusMinus": 27
+    "plusMinus": 27,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 5,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3448,7 +4156,13 @@
     "points": 13,
     "valuation": 13,
     "fouls": 0,
-    "plusMinus": 20
+    "plusMinus": 20,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 5,
+    "twoAttempted": 5,
+    "threeMade": 1,
+    "threeAttempted": 1
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3477,7 +4191,13 @@
     "points": 4,
     "valuation": 4,
     "fouls": 0,
-    "plusMinus": 29
+    "plusMinus": 29,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 2,
+    "twoAttempted": 2,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3506,7 +4226,13 @@
     "points": 3,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 2
+    "plusMinus": 2,
+    "ftMade": 1,
+    "ftAttempted": 2,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3535,7 +4261,13 @@
     "points": 2,
     "valuation": 0,
     "fouls": 2,
-    "plusMinus": 24
+    "plusMinus": 24,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   },
   {
     "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -3564,6 +4296,12 @@
     "points": 2,
     "valuation": 1,
     "fouls": 1,
-    "plusMinus": 11
+    "plusMinus": 11,
+    "ftMade": 0,
+    "ftAttempted": 0,
+    "twoMade": 1,
+    "twoAttempted": 1,
+    "threeMade": 0,
+    "threeAttempted": 0
   }
 ]
