@@ -102,7 +102,7 @@ public sealed class SyncOrchestrator
 
         try
         {
-            var exitCode = await RunSyncAllProcessAsync(job.SourceUrl, job.ForceRefresh, job.AppendLog);
+            var exitCode = await RunSyncAllProcessAsync(job.SourceUrl, job.ForceRefresh, analysisDirtyMarker: null, appendLog: job.AppendLog);
             job.ExitCode = exitCode;
             job.CompletedAtUtc = DateTimeOffset.UtcNow;
             job.AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
@@ -135,9 +135,14 @@ public sealed class SyncOrchestrator
         job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {savedSources.Count} fases guardadas.");
 
         var failures = new List<string>();
+        var analysisDirtyMarker = Path.Combine(_repoPaths.TempDir, $"analysis-dirty-{job.JobId}.marker");
 
         try
         {
+            Directory.CreateDirectory(_repoPaths.TempDir);
+            if (File.Exists(analysisDirtyMarker))
+                File.Delete(analysisDirtyMarker);
+
             for (var index = 0; index < savedSources.Count; index++)
             {
                 var source = savedSources[index];
@@ -149,11 +154,25 @@ public sealed class SyncOrchestrator
                 var exitCode = await RunSyncAllProcessAsync(
                     source.SourceUrl.Trim(),
                     forceRefresh: false,
+                    analysisDirtyMarker,
                     appendLog: line => job.AppendLog($"{prefix} {line}")
                 );
 
                 if (exitCode != 0)
                     failures.Add($"{reference} (código {exitCode})");
+            }
+
+            if (File.Exists(analysisDirtyMarker))
+            {
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Cambios detectados. Regenerando analysis.json una sola vez al final.");
+                var analysisExitCode = await RunGenerateAnalysisProcessAsync(job.AppendLog);
+
+                if (analysisExitCode != 0)
+                    failures.Add($"GenerateAnalisys (código {analysisExitCode})");
+            }
+            else
+            {
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sin cambios acumulados. Se reutiliza el analysis.json actual.");
             }
 
             job.CompletedAtUtc = DateTimeOffset.UtcNow;
@@ -181,9 +200,18 @@ public sealed class SyncOrchestrator
             job.Error = ex.Message;
             job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {ex.Message}");
         }
+        finally
+        {
+            if (File.Exists(analysisDirtyMarker))
+                File.Delete(analysisDirtyMarker);
+        }
     }
 
-    private async Task<int> RunSyncAllProcessAsync(string sourceUrl, bool forceRefresh, Action<string> appendLog)
+    private async Task<int> RunSyncAllProcessAsync(
+        string sourceUrl,
+        bool forceRefresh,
+        string? analysisDirtyMarker,
+        Action<string> appendLog)
     {
         var startInfo = new ProcessStartInfo
         {
@@ -204,6 +232,11 @@ public sealed class SyncOrchestrator
         startInfo.ArgumentList.Add("--non-interactive");
         if (forceRefresh)
             startInfo.ArgumentList.Add("--force");
+        if (!string.IsNullOrWhiteSpace(analysisDirtyMarker))
+        {
+            startInfo.ArgumentList.Add("--analysis-dirty-marker");
+            startInfo.ArgumentList.Add(analysisDirtyMarker);
+        }
         startInfo.ArgumentList.Add(sourceUrl);
 
         using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
@@ -222,6 +255,47 @@ public sealed class SyncOrchestrator
 
         if (!process.Start())
             throw new InvalidOperationException("No se pudo arrancar el proceso de sync-all.");
+
+        process.BeginOutputReadLine();
+        process.BeginErrorReadLine();
+
+        await process.WaitForExitAsync();
+        return process.ExitCode;
+    }
+
+    private async Task<int> RunGenerateAnalysisProcessAsync(Action<string> appendLog)
+    {
+        var startInfo = new ProcessStartInfo
+        {
+            FileName = "dotnet",
+            WorkingDirectory = _repoPaths.RepoRoot,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            StandardOutputEncoding = Encoding.UTF8,
+            StandardErrorEncoding = Encoding.UTF8
+        };
+
+        startInfo.ArgumentList.Add("run");
+        startInfo.ArgumentList.Add("--project");
+        startInfo.ArgumentList.Add(_repoPaths.GenerateAnalysisProjectFile);
+
+        using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
+
+        process.OutputDataReceived += (_, args) =>
+        {
+            if (!string.IsNullOrWhiteSpace(args.Data))
+                appendLog(args.Data);
+        };
+
+        process.ErrorDataReceived += (_, args) =>
+        {
+            if (!string.IsNullOrWhiteSpace(args.Data))
+                appendLog($"[stderr] {args.Data}");
+        };
+
+        if (!process.Start())
+            throw new InvalidOperationException("No se pudo arrancar el proceso de GenerateAnalisys.");
 
         process.BeginOutputReadLine();
         process.BeginErrorReadLine();

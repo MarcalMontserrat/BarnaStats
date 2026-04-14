@@ -6,14 +6,18 @@ public sealed class RepoPaths
     {
         RepoRoot = repoRoot;
         BarnaStatsProjectFile = Path.Combine(repoRoot, "BarnaStats", "BarnaStats.csproj");
+        GenerateAnalysisProjectFile = Path.Combine(repoRoot, "GenerateAnalisys", "GenerateAnalisys.csproj");
         AnalysisJson = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data", "analysis.json");
         ResultsSourcesRegistryFile = Path.Combine(repoRoot, "BarnaStats", "out", "results_sources.json");
+        TempDir = Path.Combine(repoRoot, "BarnaStats", "out", "tmp");
     }
 
     public string RepoRoot { get; }
     public string BarnaStatsProjectFile { get; }
+    public string GenerateAnalysisProjectFile { get; }
     public string AnalysisJson { get; }
     public string ResultsSourcesRegistryFile { get; }
+    public string TempDir { get; }
 
     public static RepoPaths ResolveDefault()
     {

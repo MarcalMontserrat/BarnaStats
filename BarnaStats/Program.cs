@@ -42,7 +42,7 @@ return;
 
 async Task RunSyncMappingsAsync(string[] syncArgs)
 {
-    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out var explicitMatchIds))
+    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out _, out var explicitMatchIds))
         return;
 
     var storage = paths.CreateStorage(scope);
@@ -53,7 +53,7 @@ async Task RunSyncMappingsAsync(string[] syncArgs)
 
 async Task RunSyncAllAsync(string[] syncArgs)
 {
-    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out var explicitMatchIds))
+    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out var analysisDirtyMarkerFile, out var explicitMatchIds))
         return;
 
     var storage = paths.CreateStorage(scope);
@@ -76,6 +76,14 @@ async Task RunSyncAllAsync(string[] syncArgs)
     {
         Console.WriteLine();
         Console.WriteLine("Paso 3/3 · Sin cambios en los datos. Se reutiliza el analysis.json actual.");
+        return;
+    }
+
+    if (!string.IsNullOrWhiteSpace(analysisDirtyMarkerFile))
+    {
+        await WriteAnalysisDirtyMarkerAsync(analysisDirtyMarkerFile);
+        Console.WriteLine();
+        Console.WriteLine("Paso 3/3 · Cambios detectados. La regeneración de analysis.json queda diferida.");
         return;
     }
 
@@ -402,6 +410,17 @@ async Task<bool> WriteFileIfChangedAsync(string path, string content)
     return true;
 }
 
+async Task WriteAnalysisDirtyMarkerAsync(string markerFile)
+{
+    var fullMarkerPath = Path.GetFullPath(markerFile);
+    var markerDir = Path.GetDirectoryName(fullMarkerPath);
+
+    if (!string.IsNullOrWhiteSpace(markerDir))
+        Directory.CreateDirectory(markerDir);
+
+    await File.WriteAllTextAsync(fullMarkerPath, DateTimeOffset.UtcNow.ToString("O"));
+}
+
 bool DeleteStaleMatchFiles(TeamStoragePaths storage, int matchWebId, string currentUuidMatch)
 {
     var deletedAny = false;
@@ -553,6 +572,7 @@ bool TryParseSyncArgs(
     out bool includeAll,
     out bool nonInteractive,
     out bool forceRefresh,
+    out string? analysisDirtyMarkerFile,
     out HashSet<int> explicitMatchIds)
 {
     sourceUrl = null;
@@ -560,6 +580,7 @@ bool TryParseSyncArgs(
     includeAll = false;
     nonInteractive = false;
     forceRefresh = false;
+    analysisDirtyMarkerFile = null;
     explicitMatchIds = [];
 
     for (var i = 0; i < syncArgs.Length; i += 1)
@@ -581,6 +602,20 @@ bool TryParseSyncArgs(
         if (arg.Equals("--force", StringComparison.OrdinalIgnoreCase))
         {
             forceRefresh = true;
+            continue;
+        }
+
+        if (arg.Equals("--analysis-dirty-marker", StringComparison.OrdinalIgnoreCase))
+        {
+            if (i + 1 >= syncArgs.Length)
+            {
+                Console.WriteLine("Falta la ruta del marker después de --analysis-dirty-marker.");
+                PrintHelp();
+                return false;
+            }
+
+            analysisDirtyMarkerFile = syncArgs[i + 1];
+            i += 1;
             continue;
         }
 
