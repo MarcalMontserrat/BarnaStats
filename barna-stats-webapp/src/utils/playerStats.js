@@ -3,7 +3,29 @@ export function getPlayersList(players) {
         .sort((a, b) => a.localeCompare(b, "es"));
 }
 
+function usesSplitSeasonSegments(players) {
+    const sourcePhaseIds = [...new Set(
+        (players ?? [])
+            .map((row) => Number(row.sourcePhaseId ?? 0))
+            .filter((value) => Number.isFinite(value) && value > 0)
+    )];
+
+    if (sourcePhaseIds.length !== 1) {
+        return false;
+    }
+
+    const phaseNumbers = new Set(
+        (players ?? [])
+            .map((row) => Number(row.phaseNumber ?? 0))
+            .filter((value) => Number.isFinite(value) && value > 0)
+    );
+
+    return phaseNumbers.size > 1;
+}
+
 export function getChartData(players, selectedPlayer, selectedPhase) {
+    const useSeasonSegments = usesSplitSeasonSegments(players);
+
     return players
         .filter((row) => row.playerName === selectedPlayer)
         .sort((a, b) => {
@@ -18,7 +40,9 @@ export function getChartData(players, selectedPlayer, selectedPhase) {
             return a.matchWebId - b.matchWebId;
         })
         .map((row) => ({
-            match: selectedPhase
+            match: useSeasonSegments
+                ? `T${row.phaseNumber ?? "-"} · J${row.phaseRound ?? "-"}`
+                : selectedPhase
                 ? `J${row.phaseRound ?? "-"}`
                 : `F${row.phaseNumber ?? "-"} · J${row.phaseRound ?? "-"}`,
             matchId: row.matchWebId,

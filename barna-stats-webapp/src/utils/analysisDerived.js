@@ -131,24 +131,50 @@ export function buildPhaseSummaries(matchSummaries, matchPlayers) {
         accumulator[player.matchWebId] = (accumulator[player.matchWebId] ?? 0) + Number(player.valuation ?? 0);
         return accumulator;
     }, {});
+    const phaseNumbersBySource = new Map();
+
+    (matchSummaries ?? []).forEach((match) => {
+        const sourcePhaseId = Number(match?.sourcePhaseId ?? 0);
+        const phaseNumber = Number(match?.phaseNumber ?? 0);
+
+        if (!Number.isFinite(sourcePhaseId) || sourcePhaseId <= 0) {
+            return;
+        }
+
+        if (!Number.isFinite(phaseNumber) || phaseNumber <= 0) {
+            return;
+        }
+
+        if (!phaseNumbersBySource.has(sourcePhaseId)) {
+            phaseNumbersBySource.set(sourcePhaseId, new Set());
+        }
+
+        phaseNumbersBySource.get(sourcePhaseId).add(phaseNumber);
+    });
 
     const summariesByPhase = new Map();
 
     (matchSummaries ?? []).forEach((match) => {
-        const phaseKey = match.sourcePhaseId
-            ? `source:${match.sourcePhaseId}`
-            : `phase:${Number(match.phaseNumber)}`;
+        const sourcePhaseId = Number(match.sourcePhaseId ?? 0);
+        const phaseNumber = Number(match.phaseNumber ?? 0);
+        const isSplitSourcePhase = sourcePhaseId > 0
+            && (phaseNumbersBySource.get(sourcePhaseId)?.size ?? 0) > 1;
+        const phaseKey = sourcePhaseId > 0
+            ? (isSplitSourcePhase ? `source:${sourcePhaseId}:segment:${phaseNumber}` : `source:${sourcePhaseId}`)
+            : `phase:${phaseNumber}`;
 
         if (!summariesByPhase.has(phaseKey)) {
             summariesByPhase.set(phaseKey, {
                 phaseKey,
-                phaseNumber: Number(match.phaseNumber),
+                phaseNumber,
                 sourcePhaseId: match.sourcePhaseId ?? null,
                 categoryName: match.categoryName ?? "",
                 phaseName: match.phaseName ?? "",
                 levelName: match.levelName ?? "",
                 levelCode: match.levelCode ?? "",
                 groupCode: match.groupCode ?? "",
+                segmentNumber: isSplitSourcePhase ? phaseNumber : null,
+                segmentLabel: isSplitSourcePhase ? `Tramo ${phaseNumber}` : "",
                 matches: 0,
                 wins: 0,
                 losses: 0,
@@ -284,9 +310,11 @@ export function getLongestWinStreak(matchSummaries) {
 export function buildCompetitionPhaseLabel(phase, options = {}) {
     const {includeCategory = false} = options;
     const phaseName = String(phase?.phaseName ?? "").trim() || `Fase ${phase?.phaseNumber ?? "-"}`;
+    const segmentLabel = String(phase?.segmentLabel ?? "").trim();
     const levelName = String(phase?.levelName ?? "").trim();
     const groupCode = String(phase?.groupCode ?? "").trim();
     const extras = [
+        segmentLabel,
         levelName,
         groupCode ? `Grupo ${groupCode}` : ""
     ].filter(Boolean);
