@@ -270,8 +270,8 @@ function GlobalLeadersSection({
                     <div style={styles.eyebrow}>Líderes individuales</div>
                     <h2 style={styles.title}>Jugadoras destacadas de la competición</h2>
                     <p style={styles.subtitle}>
-                        Consulta de un vistazo quién lidera la valoración media y quién sostiene el mayor peso anotador,
-                        con su equipo al lado para dar el contexto que importa.
+                        Mira de un vistazo quién manda en valoración media y quién lleva el peso anotador,
+                        con su equipo al lado para poner cada dato en contexto.
                     </p>
                 </div>
 

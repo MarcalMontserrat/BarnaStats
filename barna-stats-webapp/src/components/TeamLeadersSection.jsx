@@ -216,8 +216,8 @@ function TeamLeadersSection({
                 <div style={styles.eyebrow}>Ranking del equipo</div>
                 <h2 style={styles.title}>{teamName}</h2>
                 <p style={styles.subtitle}>
-                    Lectura rápida del equipo seleccionado para ver quién domina la valoración y quién concentra la
-                    anotación en el tramo que tienes filtrado.
+                    Lectura rápida del equipo seleccionado para ver quién destaca en valoración y quién lleva el peso
+                    anotador en el tramo filtrado.
                 </p>
             </div>
 
