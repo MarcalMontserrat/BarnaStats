@@ -36,6 +36,12 @@ public sealed class MatchSummary
     public int MatchExternId { get; set; }
     public DateTime? MatchDate { get; set; }
     public int PhaseNumber { get; set; }
+    public int? SourcePhaseId { get; set; }
+    public string CategoryName { get; set; } = "";
+    public string PhaseName { get; set; } = "";
+    public string LevelName { get; set; } = "";
+    public string LevelCode { get; set; } = "";
+    public string GroupCode { get; set; } = "";
     public int PhaseRound { get; set; }
     public int RoundNumber { get; set; }
     public string HomeTeam { get; set; } = "";
@@ -72,6 +78,12 @@ public sealed class MatchPlayerRow
     public int MatchExternId { get; set; }
     public DateTime? MatchDate { get; set; }
     public int PhaseNumber { get; set; }
+    public int? SourcePhaseId { get; set; }
+    public string CategoryName { get; set; } = "";
+    public string PhaseName { get; set; } = "";
+    public string LevelName { get; set; } = "";
+    public string LevelCode { get; set; } = "";
+    public string GroupCode { get; set; } = "";
     public int PhaseRound { get; set; }
     public bool IsHome { get; set; }
     public string RivalTeamKey { get; set; } = "";
@@ -155,7 +167,13 @@ public sealed class MatchInsights
 
 public sealed class CompetitionPhase
 {
+    public int? SourcePhaseId { get; init; }
     public int PhaseNumber { get; init; }
+    public string CategoryName { get; init; } = "";
+    public string PhaseName { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public string LevelCode { get; init; } = "";
+    public string GroupCode { get; init; } = "";
     public int MatchesCount { get; init; }
 }
 
@@ -176,6 +194,12 @@ public sealed class CompetitionMatch
     public int MatchExternId { get; init; }
     public DateTime? MatchDate { get; init; }
     public int PhaseNumber { get; init; }
+    public int? SourcePhaseId { get; init; }
+    public string CategoryName { get; init; } = "";
+    public string PhaseName { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public string LevelCode { get; init; } = "";
+    public string GroupCode { get; init; } = "";
     public string HomeTeamKey { get; init; } = "";
     public string HomeTeam { get; init; } = "";
     public int HomeScore { get; init; }
@@ -199,6 +223,18 @@ public sealed class CompetitionStandingRow
     public int PointsFor { get; init; }
     public int PointsAgainst { get; init; }
     public int PointDiff { get; init; }
+}
+
+public sealed class TeamPhaseInfo
+{
+    public int PhaseNumber { get; init; }
+    public int? SourcePhaseId { get; init; }
+    public string CategoryName { get; init; } = "";
+    public string PhaseName { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public string LevelCode { get; init; } = "";
+    public string GroupCode { get; init; } = "";
+    public int MatchesPlayed { get; init; }
 }
 
 public sealed class CompetitionPhaseStandings
@@ -244,6 +280,7 @@ public sealed class TeamAnalysis
     public string TeamName { get; init; } = "";
     public int MatchesPlayed { get; init; }
     public int PlayersCount { get; init; }
+    public List<TeamPhaseInfo> Phases { get; init; } = [];
     public List<MatchSummary> MatchSummaries { get; init; } = [];
     public List<MatchPlayerRow> MatchPlayers { get; init; } = [];
     public List<PlayerSeasonTotal> SeasonTotals { get; init; } = [];

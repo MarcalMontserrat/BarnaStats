@@ -6,12 +6,14 @@ public sealed class TeamStoragePaths
         StorageScope scope,
         string rootDir,
         string mappingFile,
+        string phaseMetadataFile,
         string statsDir,
         string movesDir)
     {
         Scope = scope;
         RootDir = rootDir;
         MappingFile = mappingFile;
+        PhaseMetadataFile = phaseMetadataFile;
         StatsDir = statsDir;
         MovesDir = movesDir;
     }
@@ -19,6 +21,7 @@ public sealed class TeamStoragePaths
     public StorageScope Scope { get; }
     public string RootDir { get; }
     public string MappingFile { get; }
+    public string PhaseMetadataFile { get; }
     public string StatsDir { get; }
     public string MovesDir { get; }
 

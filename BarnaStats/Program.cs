@@ -176,6 +176,16 @@ async Task<bool> ExecuteSyncMappingsAsync(
 
         await SaveMappingsAsync(storage.MappingFile, orderedMappings, jsonOptions);
 
+        if (syncResult.PhaseMetadata is not null)
+        {
+            if (storage.Scope.Kind == StorageScopeKind.Phase && storage.Scope.Id is > 0)
+            {
+                syncResult.PhaseMetadata.PhaseId = storage.Scope.Id;
+            }
+
+            await SavePhaseMetadataAsync(storage.PhaseMetadataFile, syncResult.PhaseMetadata, jsonOptions);
+        }
+
         Console.WriteLine();
 
         if (syncResult.TargetMatchWebIds.Count == 0)
@@ -196,6 +206,10 @@ async Task<bool> ExecuteSyncMappingsAsync(
         }
 
         Console.WriteLine($"Mapping guardado en: {Path.GetFullPath(storage.MappingFile)}");
+        if (syncResult.PhaseMetadata is not null)
+        {
+            Console.WriteLine($"Metadata de fase guardada en: {Path.GetFullPath(storage.PhaseMetadataFile)}");
+        }
     }
     catch (Exception ex)
     {
@@ -318,6 +332,12 @@ async Task SaveMappingsAsync(string mappingFile, List<MatchMapping> mappings, Js
     await File.WriteAllTextAsync(mappingFile, json);
 }
 
+async Task SavePhaseMetadataAsync(string phaseMetadataFile, PhaseMetadata metadata, JsonSerializerOptions options)
+{
+    var json = JsonSerializer.Serialize(metadata, options);
+    await File.WriteAllTextAsync(phaseMetadataFile, json);
+}
+
 void PrintHelp()
 {
     Console.WriteLine("Uso:");
@@ -347,6 +367,7 @@ void PrintHelp()
     Console.WriteLine();
     Console.WriteLine("  Estructura por scope:");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/match_mapping.json");
+    Console.WriteLine("    BarnaStats/out/phases/{phaseId}/phase_metadata.json");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/stats");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/moves");
 }

@@ -54,6 +54,7 @@ public sealed class BarnaStatsPaths
                 scope,
                 teamRootDir,
                 Path.Combine(teamRootDir, "match_mapping.json"),
+                Path.Combine(teamRootDir, "phase_metadata.json"),
                 Path.Combine(teamRootDir, "stats"),
                 Path.Combine(teamRootDir, "moves"));
         }
@@ -65,6 +66,7 @@ public sealed class BarnaStatsPaths
                 scope,
                 phaseRootDir,
                 Path.Combine(phaseRootDir, "match_mapping.json"),
+                Path.Combine(phaseRootDir, "phase_metadata.json"),
                 Path.Combine(phaseRootDir, "stats"),
                 Path.Combine(phaseRootDir, "moves"));
         }
@@ -73,6 +75,7 @@ public sealed class BarnaStatsPaths
             StorageScope.Root(),
             ProjectDir,
             MappingFile,
+            Path.Combine(ProjectDir, "phase_metadata.json"),
             StatsDir,
             MovesDir);
     }

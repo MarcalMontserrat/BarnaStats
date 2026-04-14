@@ -26,16 +26,12 @@ public sealed class MatchAnalysisService
         var statsFiles = GetUniqueStatsFiles(rawDataRootDir)
             .ToList();
 
-        foreach (var statsPath in statsFiles)
+        foreach (var statsFile in statsFiles)
         {
+            var statsPath = statsFile.Path;
             var fileName = Path.GetFileName(statsPath);
-            var matchWebId = TryGetMatchWebIdFromFileName(fileName);
-
-            if (matchWebId is null)
-            {
-                Console.WriteLine($"No se pudo inferir matchWebId desde {fileName}");
-                continue;
-            }
+            var matchWebId = statsFile.MatchWebId;
+            var phaseMetadata = statsFile.PhaseMetadata;
 
             Console.WriteLine($"Procesando partido {matchWebId}...");
 
@@ -51,7 +47,7 @@ public sealed class MatchAnalysisService
             var movesRaw = await TryReadMovesRawAsync(statsPath);
             var moves = DeserializeMoves(movesRaw);
             var matchReport = await _matchReportService.GetOrGenerateAsync(
-                matchWebId.Value,
+                matchWebId,
                 match,
                 json,
                 movesRaw);
@@ -122,11 +118,17 @@ public sealed class MatchAnalysisService
                     TeamName = team.Name ?? "",
                     HomeTeamKey = homeTeamKey,
                     AwayTeamKey = awayTeamKey,
-                    MatchWebId = matchWebId.Value,
+                    MatchWebId = matchWebId,
                     MatchInternId = match.IdMatchIntern,
                     MatchExternId = match.IdMatchExtern,
                     MatchDate = matchDate,
                     PhaseNumber = GetPhaseNumber(matchDate),
+                    SourcePhaseId = phaseMetadata?.PhaseId,
+                    CategoryName = phaseMetadata?.CategoryName ?? "",
+                    PhaseName = phaseMetadata?.PhaseName ?? "",
+                    LevelName = phaseMetadata?.LevelName ?? "",
+                    LevelCode = phaseMetadata?.LevelCode ?? "",
+                    GroupCode = phaseMetadata?.GroupCode ?? "",
                     HomeTeam = localTeam.Name ?? "",
                     HomeScore = localTeam.Data?.Score ?? 0,
                     AwayTeam = visitTeam.Name ?? "",
@@ -162,10 +164,17 @@ public sealed class MatchAnalysisService
                         TeamIdIntern = team.TeamIdIntern,
                         TeamIdExtern = team.TeamIdExtern,
                         TeamName = team.Name ?? "",
-                        MatchWebId = matchWebId.Value,
+                        MatchWebId = matchWebId,
                         MatchInternId = match.IdMatchIntern,
                         MatchExternId = match.IdMatchExtern,
                         MatchDate = matchDate,
+                        PhaseNumber = GetPhaseNumber(matchDate),
+                        SourcePhaseId = phaseMetadata?.PhaseId,
+                        CategoryName = phaseMetadata?.CategoryName ?? "",
+                        PhaseName = phaseMetadata?.PhaseName ?? "",
+                        LevelName = phaseMetadata?.LevelName ?? "",
+                        LevelCode = phaseMetadata?.LevelCode ?? "",
+                        GroupCode = phaseMetadata?.GroupCode ?? "",
                         IsHome = isHome,
                         RivalTeamKey = BuildTeamKey(rivalTeam),
                         Rival = rivalTeam.Name ?? "",
@@ -261,6 +270,12 @@ public sealed class MatchAnalysisService
 
             row.MatchDate = summary.MatchDate;
             row.PhaseNumber = summary.PhaseNumber;
+            row.SourcePhaseId = summary.SourcePhaseId;
+            row.CategoryName = summary.CategoryName;
+            row.PhaseName = summary.PhaseName;
+            row.LevelName = summary.LevelName;
+            row.LevelCode = summary.LevelCode;
+            row.GroupCode = summary.GroupCode;
             row.PhaseRound = summary.PhaseRound;
         }
 
@@ -280,6 +295,7 @@ public sealed class MatchAnalysisService
             TeamName = accumulator.TeamName,
             MatchesPlayed = matchSummaries.Count,
             PlayersCount = seasonTotals.Count,
+            Phases = BuildTeamPhases(matchSummaries),
             MatchSummaries = matchSummaries,
             MatchPlayers = matchPlayers,
             SeasonTotals = seasonTotals,
@@ -287,6 +303,35 @@ public sealed class MatchAnalysisService
             Ranking = BuildRanking(seasonTotals),
             Evolution = BuildEvolution(matchPlayers)
         };
+    }
+
+    private static List<TeamPhaseInfo> BuildTeamPhases(IEnumerable<MatchSummary> matchSummaries)
+    {
+        return matchSummaries
+            .GroupBy(summary => new
+            {
+                summary.PhaseNumber,
+                summary.SourcePhaseId,
+                summary.CategoryName,
+                summary.PhaseName,
+                summary.LevelName,
+                summary.LevelCode,
+                summary.GroupCode
+            })
+            .OrderBy(group => group.Key.PhaseNumber)
+            .ThenBy(group => group.Key.SourcePhaseId ?? int.MaxValue)
+            .Select(group => new TeamPhaseInfo
+            {
+                PhaseNumber = group.Key.PhaseNumber,
+                SourcePhaseId = group.Key.SourcePhaseId,
+                CategoryName = group.Key.CategoryName,
+                PhaseName = group.Key.PhaseName,
+                LevelName = group.Key.LevelName,
+                LevelCode = group.Key.LevelCode,
+                GroupCode = group.Key.GroupCode,
+                MatchesPlayed = group.Count()
+            })
+            .ToList();
     }
 
     private static CompetitionAnalysis BuildCompetitionAnalysis(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
@@ -306,11 +351,27 @@ public sealed class MatchAnalysisService
 
         var competitionMatches = BuildCompetitionMatches(teamAnalyses);
         var competitionPhases = competitionMatches
-            .GroupBy(match => match.PhaseNumber)
-            .OrderBy(group => group.Key)
+            .GroupBy(match => new
+            {
+                match.PhaseNumber,
+                match.SourcePhaseId,
+                match.CategoryName,
+                match.PhaseName,
+                match.LevelName,
+                match.LevelCode,
+                match.GroupCode
+            })
+            .OrderBy(group => group.Key.PhaseNumber)
+            .ThenBy(group => group.Key.SourcePhaseId ?? int.MaxValue)
             .Select(group => new CompetitionPhase
             {
-                PhaseNumber = group.Key,
+                PhaseNumber = group.Key.PhaseNumber,
+                SourcePhaseId = group.Key.SourcePhaseId,
+                CategoryName = group.Key.CategoryName,
+                PhaseName = group.Key.PhaseName,
+                LevelName = group.Key.LevelName,
+                LevelCode = group.Key.LevelCode,
+                GroupCode = group.Key.GroupCode,
                 MatchesCount = group.Count()
             })
             .ToList();
@@ -345,6 +406,12 @@ public sealed class MatchAnalysisService
                     MatchExternId = homePerspective.MatchExternId,
                     MatchDate = homePerspective.MatchDate,
                     PhaseNumber = homePerspective.PhaseNumber,
+                    SourcePhaseId = homePerspective.SourcePhaseId,
+                    CategoryName = homePerspective.CategoryName,
+                    PhaseName = homePerspective.PhaseName,
+                    LevelName = homePerspective.LevelName,
+                    LevelCode = homePerspective.LevelCode,
+                    GroupCode = homePerspective.GroupCode,
                     HomeTeamKey = homePerspective.HomeTeamKey,
                     HomeTeam = homePerspective.HomeTeam,
                     HomeScore = homeScore,
@@ -496,17 +563,19 @@ public sealed class MatchAnalysisService
             .ToList();
     }
 
-    private static IEnumerable<string> GetUniqueStatsFiles(string rawDataRootDir)
+    private IEnumerable<StatsFileContext> GetUniqueStatsFiles(string rawDataRootDir)
     {
         var selectedPaths = new List<string>();
         var duplicateMatchWebIds = new List<int>();
+        var phaseMetadataByRoot = new Dictionary<string, PhaseMetadataFile?>(StringComparer.OrdinalIgnoreCase);
 
         var candidates = Directory.GetFiles(rawDataRootDir, "*_stats.json", SearchOption.AllDirectories)
             .Select(path => new
             {
                 Path = path,
                 MatchWebId = TryGetMatchWebIdFromFileName(Path.GetFileName(path)),
-                IsTeamScoped = path.Contains($"{Path.DirectorySeparatorChar}teams{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase),
+                IsScoped = path.Contains($"{Path.DirectorySeparatorChar}teams{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase) ||
+                           path.Contains($"{Path.DirectorySeparatorChar}phases{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase),
                 LastWriteTimeUtc = File.GetLastWriteTimeUtc(path)
             })
             .Where(x => x.MatchWebId.HasValue)
@@ -516,7 +585,7 @@ public sealed class MatchAnalysisService
         foreach (var group in candidates)
         {
             var selected = group
-                .OrderByDescending(x => x.IsTeamScoped)
+                .OrderByDescending(x => x.IsScoped)
                 .ThenByDescending(x => x.LastWriteTimeUtc)
                 .ThenBy(x => x.Path, StringComparer.OrdinalIgnoreCase)
                 .First();
@@ -532,7 +601,54 @@ public sealed class MatchAnalysisService
             Console.WriteLine($"Duplicados detectados en {duplicateMatchWebIds.Count} partidos. Se prioriza la versión más reciente, dando preferencia a las carpetas con scope dedicado como `out/phases`.");
         }
 
-        return selectedPaths;
+        return selectedPaths.Select(path => new StatsFileContext(
+            path,
+            TryGetMatchWebIdFromFileName(Path.GetFileName(path))!.Value,
+            GetPhaseMetadataForStatsPath(path, phaseMetadataByRoot)));
+    }
+
+    private PhaseMetadataFile? GetPhaseMetadataForStatsPath(
+        string statsPath,
+        IDictionary<string, PhaseMetadataFile?> phaseMetadataByRoot)
+    {
+        var statsDir = Path.GetDirectoryName(statsPath);
+        if (string.IsNullOrWhiteSpace(statsDir))
+            return null;
+
+        var phaseRootDir = Directory.GetParent(statsDir)?.FullName;
+        if (string.IsNullOrWhiteSpace(phaseRootDir))
+            return null;
+
+        var directoryName = Path.GetFileName(Path.GetDirectoryName(statsPath));
+        if (!string.Equals(directoryName, "stats", StringComparison.OrdinalIgnoreCase))
+            return null;
+
+        var phasesSegment = $"{Path.DirectorySeparatorChar}phases{Path.DirectorySeparatorChar}";
+        if (!phaseRootDir.Contains(phasesSegment, StringComparison.OrdinalIgnoreCase))
+            return null;
+
+        if (phaseMetadataByRoot.TryGetValue(phaseRootDir, out var cachedMetadata))
+            return cachedMetadata;
+
+        var phaseMetadataPath = Path.Combine(phaseRootDir, "phase_metadata.json");
+        if (!File.Exists(phaseMetadataPath))
+        {
+            phaseMetadataByRoot[phaseRootDir] = null;
+            return null;
+        }
+
+        try
+        {
+            var json = File.ReadAllText(phaseMetadataPath);
+            var metadata = JsonSerializer.Deserialize<PhaseMetadataFile>(json, _jsonOptions);
+            phaseMetadataByRoot[phaseRootDir] = metadata;
+            return metadata;
+        }
+        catch
+        {
+            phaseMetadataByRoot[phaseRootDir] = null;
+            return null;
+        }
     }
 
     private static List<MoveEvent> DeserializeMoves(string? movesRaw)
@@ -851,6 +967,11 @@ public sealed class MatchAnalysisService
         int VisitScore,
         int DeltaLocal,
         int DeltaVisit);
+
+    private sealed record StatsFileContext(
+        string Path,
+        int MatchWebId,
+        PhaseMetadataFile? PhaseMetadata);
 
     private sealed class MutableStandingRow
     {

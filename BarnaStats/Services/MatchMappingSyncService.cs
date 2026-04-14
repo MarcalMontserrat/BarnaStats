@@ -2,6 +2,7 @@ using System.Text.RegularExpressions;
 using BarnaStats.Models;
 using Microsoft.Playwright;
 using System.Globalization;
+using System.Net;
 
 namespace BarnaStats.Services;
 
@@ -51,6 +52,21 @@ public sealed class MatchMappingSyncService
     private static readonly Regex HtmlTagRegex = new(
         "<[^>]+>",
         RegexOptions.Compiled);
+    private static readonly Regex TitleCategoryRegex = new(
+        @"id\s*=\s*[""']titleCategory[""'][^>]*>(.*?)</",
+        RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Compiled);
+    private static readonly Regex SubTitleRegex = new(
+        @"id\s*=\s*[""']subTitle[""'][^>]*>(.*?)</",
+        RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Compiled);
+    private static readonly Regex SegmentSeparatorRegex = new(
+        @"\s*-\s*",
+        RegexOptions.Compiled);
+    private static readonly Regex LevelPrefixRegex = new(
+        @"^(nivell|nivel)\s+",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex GroupPrefixRegex = new(
+        @"^(grup|grupo)\s+",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private readonly string _browserProfileDir;
 
     public MatchMappingSyncService(string browserProfileDir)
@@ -97,9 +113,10 @@ public sealed class MatchMappingSyncService
             await page.WaitForTimeoutAsync(1000);
         }
 
-        var discoveredMappings = string.IsNullOrWhiteSpace(sourceUrl)
-            ? Array.Empty<MatchDiscovery>()
+        var sourceInspection = string.IsNullOrWhiteSpace(sourceUrl)
+            ? null
             : await DiscoverMappingsAsync(page, sourceUrl, interactive);
+        var discoveredMappings = sourceInspection?.DiscoveredMappings ?? Array.Empty<MatchDiscovery>();
 
         var discoveredMatchWebIds = discoveredMappings
             .Select(x => x.MatchWebId)
@@ -141,7 +158,8 @@ public sealed class MatchMappingSyncService
         {
             DiscoveredMappings = discoveredMappings,
             TargetMatchWebIds = targetMatchWebIds,
-            ResolvedUuids = resolved
+            ResolvedUuids = resolved,
+            PhaseMetadata = sourceInspection?.PhaseMetadata
         };
     }
 
@@ -195,16 +213,24 @@ public sealed class MatchMappingSyncService
         }
     }
 
-    private async Task<IReadOnlyList<MatchDiscovery>> DiscoverMappingsAsync(IPage page, string sourceUrl, bool interactive)
+    private async Task<ResultsSourceInspection> DiscoverMappingsAsync(IPage page, string sourceUrl, bool interactive)
     {
         for (var attempt = 1; ; attempt += 1)
         {
-            var discoveredMappings = await DiscoverMappingsFromResultsAsync(page, sourceUrl);
+            var inspection = await DiscoverMappingsFromResultsAsync(page, sourceUrl);
+            var discoveredMappings = inspection.DiscoveredMappings;
 
             if (discoveredMappings.Count > 0)
             {
                 Console.WriteLine($"  OK -> {discoveredMappings.Count} partidos encontrados");
-                return discoveredMappings;
+                if (inspection.PhaseMetadata is not null)
+                {
+                    var metadata = inspection.PhaseMetadata;
+                    Console.WriteLine(
+                        $"  Metadata -> {metadata.CategoryName ?? "sin categoría"} · {metadata.LevelName ?? "sin nivel"} · grupo {metadata.GroupCode ?? "?"}");
+                }
+
+                return inspection;
             }
 
             Console.WriteLine("  No se pudo extraer ningún partido de la fuente.");
@@ -215,7 +241,7 @@ public sealed class MatchMappingSyncService
                 if (attempt >= AutomaticRetryAttempts)
                 {
                     Console.WriteLine("  SKIP automático de la fuente tras agotar reintentos.");
-                    return Array.Empty<MatchDiscovery>();
+                    return ResultsSourceInspection.Empty;
                 }
 
                 Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
@@ -230,12 +256,12 @@ public sealed class MatchMappingSyncService
             if (input == "skip")
             {
                 Console.WriteLine("  SKIP");
-                return Array.Empty<MatchDiscovery>();
+                return ResultsSourceInspection.Empty;
             }
         }
     }
 
-    private async Task<IReadOnlyList<MatchDiscovery>> DiscoverMappingsFromResultsAsync(IPage page, string sourceUrl)
+    private async Task<ResultsSourceInspection> DiscoverMappingsFromResultsAsync(IPage page, string sourceUrl)
     {
         var capturedResponses = new List<IResponse>();
         void HandleResponse(object? _, IResponse response) => capturedResponses.Add(response);
@@ -254,6 +280,7 @@ public sealed class MatchMappingSyncService
             await page.WaitForTimeoutAsync(1500);
 
             var discovered = new Dictionary<int, MatchDiscovery>();
+            var phaseMetadata = await ExtractPhaseMetadataAsync(page, sourceUrl);
 
             MergeDiscoveries(discovered, await ExtractMappingsFromPageAsync(page));
 
@@ -262,9 +289,13 @@ public sealed class MatchMappingSyncService
                 MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
             }
 
-            return discovered.Values
-                .OrderBy(x => x.MatchWebId)
-                .ToList();
+            return new ResultsSourceInspection
+            {
+                DiscoveredMappings = discovered.Values
+                    .OrderBy(x => x.MatchWebId)
+                    .ToList(),
+                PhaseMetadata = phaseMetadata
+            };
         }
         finally
         {
@@ -759,6 +790,112 @@ public sealed class MatchMappingSyncService
         return false;
     }
 
+    private static async Task<PhaseMetadata?> ExtractPhaseMetadataAsync(IPage page, string sourceUrl)
+    {
+        var categoryName = await TryGetTextContentAsync(page, "#titleCategory");
+        var subTitle = await TryGetTextContentAsync(page, "#subTitle");
+
+        if (string.IsNullOrWhiteSpace(categoryName) || string.IsNullOrWhiteSpace(subTitle))
+        {
+            var html = await page.ContentAsync();
+            categoryName ??= ExtractElementTextById(html, TitleCategoryRegex);
+            subTitle ??= ExtractElementTextById(html, SubTitleRegex);
+        }
+
+        categoryName = NormalizeMetadataValue(categoryName);
+        subTitle = NormalizeMetadataValue(subTitle);
+
+        if (string.IsNullOrWhiteSpace(categoryName) && string.IsNullOrWhiteSpace(subTitle))
+            return null;
+
+        var metadata = new PhaseMetadata
+        {
+            SourceUrl = sourceUrl,
+            CategoryName = categoryName,
+            SubTitle = subTitle
+        };
+
+        PopulatePhaseMetadata(metadata);
+        return metadata;
+    }
+
+    private static async Task<string?> TryGetTextContentAsync(IPage page, string selector)
+    {
+        var locator = page.Locator(selector);
+        if (await locator.CountAsync() == 0)
+            return null;
+
+        return await locator.First.TextContentAsync();
+    }
+
+    private static string? ExtractElementTextById(string html, Regex regex)
+    {
+        if (string.IsNullOrWhiteSpace(html))
+            return null;
+
+        var match = regex.Match(html);
+        return match.Success ? match.Groups[1].Value : null;
+    }
+
+    private static string? NormalizeMetadataValue(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return null;
+
+        var decoded = WebUtility.HtmlDecode(value);
+        var withoutTags = HtmlTagRegex.Replace(decoded, " ");
+        var collapsed = Regex.Replace(withoutTags, "\\s+", " ").Trim();
+        return string.IsNullOrWhiteSpace(collapsed) ? null : collapsed;
+    }
+
+    private static void PopulatePhaseMetadata(PhaseMetadata metadata)
+    {
+        if (string.IsNullOrWhiteSpace(metadata.SubTitle))
+            return;
+
+        var segments = SegmentSeparatorRegex
+            .Split(metadata.SubTitle)
+            .Select(NormalizeMetadataValue)
+            .Where(segment => !string.IsNullOrWhiteSpace(segment))
+            .Cast<string>()
+            .ToList();
+
+        if (segments.Count == 0)
+            return;
+
+        metadata.PhaseName = segments[0];
+
+        var levelSegment = segments
+            .Skip(1)
+            .FirstOrDefault(segment => LevelPrefixRegex.IsMatch(segment));
+
+        if (string.IsNullOrWhiteSpace(levelSegment) && segments.Count >= 2)
+        {
+            levelSegment = segments[1];
+        }
+
+        metadata.LevelName = levelSegment;
+        metadata.LevelCode = string.IsNullOrWhiteSpace(levelSegment)
+            ? null
+            : LevelPrefixRegex.Replace(levelSegment, "").Trim();
+
+        var groupSegment = segments
+            .Skip(1)
+            .Where(segment => !string.Equals(segment, levelSegment, StringComparison.OrdinalIgnoreCase))
+            .FirstOrDefault(segment =>
+                GroupPrefixRegex.IsMatch(segment) ||
+                Regex.IsMatch(segment, @"^[A-Z0-9/]+$", RegexOptions.IgnoreCase));
+
+        if (string.IsNullOrWhiteSpace(groupSegment) && segments.Count >= 3)
+        {
+            groupSegment = segments[^1];
+        }
+
+        metadata.GroupCode = string.IsNullOrWhiteSpace(groupSegment)
+            ? null
+            : GroupPrefixRegex.Replace(groupSegment, "").Trim();
+    }
+
     private static bool IsFutureMatch(DateTime? matchDate)
     {
         if (!matchDate.HasValue)
@@ -816,5 +953,16 @@ public sealed class MatchMappingSyncService
                contentType.Contains("json", StringComparison.OrdinalIgnoreCase) ||
                contentType.Contains("javascript", StringComparison.OrdinalIgnoreCase) ||
                contentType.Contains("text", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private sealed class ResultsSourceInspection
+    {
+        public static ResultsSourceInspection Empty { get; } = new()
+        {
+            DiscoveredMappings = Array.Empty<MatchDiscovery>()
+        };
+
+        public required IReadOnlyList<MatchDiscovery> DiscoveredMappings { get; init; }
+        public PhaseMetadata? PhaseMetadata { get; init; }
     }
 }
