@@ -4,6 +4,8 @@ import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
+    buildCategoryOptions,
+    buildCategoryOptionsFromRows,
     buildCompetitionPhaseLabel,
     buildCompetitionPhaseOptions,
     buildTeamRecord,
@@ -16,6 +18,7 @@ import {
     buildLevelOptions,
     buildLevelOptionsFromRows,
     filterCompetitionMatchesByPhaseOption,
+    filterRowsByCategory,
     filterRowsByLevel,
     filterRowsByPhaseOption,
     getLongestWinStreak
@@ -418,15 +421,19 @@ function App() {
     const initialHashState = parseHash(window.location.hash);
     const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
     const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
+    const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
     const [selectedPhase, setSelectedPhase] = useState("");
     const [selectedPlayer, setSelectedPlayer] = useState("");
     const [selectedMatch, setSelectedMatch] = useState("");
     const [openMatches, setOpenMatches] = useState({});
     const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("all");
     const [selectedStandingsLevel, setSelectedStandingsLevel] = useState("all");
+    const [selectedStandingsCategory, setSelectedStandingsCategory] = useState("all");
     const [selectedResultsPhase, setSelectedResultsPhase] = useState("all");
     const [selectedResultsLevel, setSelectedResultsLevel] = useState("all");
+    const [selectedResultsCategory, setSelectedResultsCategory] = useState("all");
     const [selectedLeadersLevel, setSelectedLeadersLevel] = useState("all");
+    const [selectedLeadersCategory, setSelectedLeadersCategory] = useState("all");
     const [rankingMinGames, setRankingMinGames] = useState("3");
     const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
 
@@ -465,6 +472,7 @@ function App() {
     const teams = analysisIndex?.teams ?? [];
     const latestTeamContexts = buildLatestTeamContextByKey(teams);
     const dashboardLevelOptions = buildLevelOptions(latestTeamContexts);
+    const dashboardCategoryOptions = buildCategoryOptions(latestTeamContexts);
     const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
     const globalDefaultTeam = teams.reduce((best, team) => {
         if (!best) {
@@ -483,13 +491,26 @@ function App() {
         return best;
     }, null);
     const effectiveTeamLevel = selectedTeamLevel || "all";
-    const dashboardTeams = effectiveTeamLevel === "all"
-        ? sortedTeams
-        : sortedTeams.filter((team) => {
-            const teamContext = latestTeamContexts.get(team.teamKey);
+    const effectiveTeamCategory = selectedTeamCategory || "all";
+    const dashboardTeams = sortedTeams.filter((team) => {
+        const teamContext = latestTeamContexts.get(team.teamKey);
+
+        if (effectiveTeamLevel !== "all") {
             const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
-            return levelKey === effectiveTeamLevel;
-        });
+            if (levelKey !== effectiveTeamLevel) {
+                return false;
+            }
+        }
+
+        if (effectiveTeamCategory !== "all") {
+            const cat = String(teamContext?.categoryName ?? "").trim();
+            if (cat !== effectiveTeamCategory) {
+                return false;
+            }
+        }
+
+        return true;
+    });
     const dashboardDefaultTeam = dashboardTeams.reduce((best, team) => {
         if (!best) {
             return team;
@@ -549,6 +570,7 @@ function App() {
     const teamMatchSummaries = Array.isArray(selectedTeamMatchSummaries) ? selectedTeamMatchSummaries : [];
     const teamPhaseOptions = buildTeamPhaseOptions(selectedTeamSummary?.phases ?? []);
     const competitionLevelOptions = buildLevelOptionsFromRows(competition?.phases ?? []);
+    const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
     const effectiveSelectedPhase = !selectedPhase || teamPhaseOptions.some((phase) => phase.value === selectedPhase)
         ? (selectedPhase || "all")
         : "all";
@@ -580,6 +602,7 @@ function App() {
     const standingsLevelOptions = buildLevelOptions(latestTeamContexts);
     const rankingMinGamesValue = Number(rankingMinGames || 1);
     const effectiveLeadersLevel = selectedLeadersLevel || "all";
+    const effectiveLeadersCategory = selectedLeadersCategory || "all";
     const filteredCompetitionPlayers = competitionPlayerLeaders
         .filter((player) => player.games >= rankingMinGamesValue)
         .filter((player) => {
@@ -590,20 +613,35 @@ function App() {
             const teamContext = latestTeamContexts.get(player.teamKey);
             const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
             return levelKey === effectiveLeadersLevel;
+        })
+        .filter((player) => {
+            if (effectiveLeadersCategory === "all") {
+                return true;
+            }
+
+            const teamContext = latestTeamContexts.get(player.teamKey);
+            return String(teamContext?.categoryName ?? "").trim() === effectiveLeadersCategory;
         });
     const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredCompetitionPlayers, "avgValuation", 8);
     const globalLeadersByPoints = getTopGlobalPlayers(filteredCompetitionPlayers, "points", 8);
     const effectiveStandingsLevel = selectedStandingsLevel || "all";
+    const effectiveStandingsCategory = selectedStandingsCategory || "all";
     const standingsPhaseOptions = buildCompetitionPhaseOptions(
-        filterRowsByLevel(competition?.phases ?? [], effectiveStandingsLevel)
+        filterRowsByCategory(
+            filterRowsByLevel(competition?.phases ?? [], effectiveStandingsLevel),
+            effectiveStandingsCategory
+        )
     );
     const effectiveCompetitionPhase = selectedStandingsPhase === "all" ||
     standingsPhaseOptions.some((phase) => phase.value === selectedStandingsPhase)
         ? selectedStandingsPhase
         : "all";
-    const competitionMatchesForStandings = filterRowsByLevel(
-        filterCompetitionMatchesByPhaseOption(competitionMatches, effectiveCompetitionPhase),
-        effectiveStandingsLevel
+    const competitionMatchesForStandings = filterRowsByCategory(
+        filterRowsByLevel(
+            filterCompetitionMatchesByPhaseOption(competitionMatches, effectiveCompetitionPhase),
+            effectiveStandingsLevel
+        ),
+        effectiveStandingsCategory
     );
     const competitionStandingsRows = buildStandings(competitionMatchesForStandings, null)
         .map((row) => {
@@ -621,8 +659,12 @@ function App() {
             position: index + 1
         }));
     const effectiveResultsLevel = selectedResultsLevel || "all";
+    const effectiveResultsCategory = selectedResultsCategory || "all";
     const resultsPhaseOptions = buildCompetitionPhaseOptions(
-        filterRowsByLevel(competition?.phases ?? [], effectiveResultsLevel)
+        filterRowsByCategory(
+            filterRowsByLevel(competition?.phases ?? [], effectiveResultsLevel),
+            effectiveResultsCategory
+        )
     );
     const effectiveResultsPhase = selectedResultsPhase === "all" ||
     resultsPhaseOptions.some((phase) => phase.value === selectedResultsPhase)
@@ -686,6 +728,15 @@ function App() {
 
     const handleTeamLevelChange = (event) => {
         setSelectedTeamLevel(event.target.value);
+        setSelectedTeamCategory("all");
+        setSelectedPhase("");
+        setSelectedPlayer("");
+        setSelectedMatch("");
+        setOpenMatches({});
+    };
+
+    const handleTeamCategoryChange = (event) => {
+        setSelectedTeamCategory(event.target.value);
         setSelectedPhase("");
         setSelectedPlayer("");
         setSelectedMatch("");
@@ -740,6 +791,22 @@ function App() {
 
                         <div style={appStyles.heroActions}>
                             <div style={appStyles.filterDeck}>
+                                <PrettySelect
+                                    label="Categoría"
+                                    value={selectedTeamCategory}
+                                    onChange={handleTeamCategoryChange}
+                                    ariaLabel="Filtra equipos por categoría"
+                                    minWidth="220px"
+                                    labelColor="rgba(255, 247, 237, 0.82)"
+                                >
+                                    <option value="all">Todas las categorías</option>
+                                    {dashboardCategoryOptions.map((cat) => (
+                                        <option key={cat.value} value={cat.value}>
+                                            {cat.label}
+                                        </option>
+                                    ))}
+                                </PrettySelect>
+
                                 <PrettySelect
                                     label="Nivel"
                                     value={selectedTeamLevel}
@@ -953,6 +1020,9 @@ function App() {
                         levelOptions={standingsLevelOptions}
                         selectedLevel={effectiveStandingsLevel}
                         onSelectedLevelChange={setSelectedStandingsLevel}
+                        categoryOptions={competitionCategoryOptions}
+                        selectedCategory={effectiveStandingsCategory}
+                        onSelectedCategoryChange={setSelectedStandingsCategory}
                         selectedTeamKey={effectiveTeamKey}
                         onTeamNavigate={handleTeamNavigate}
                     />
@@ -969,6 +1039,9 @@ function App() {
                         levelOptions={competitionLevelOptions}
                         selectedLevel={effectiveResultsLevel}
                         onSelectedLevelChange={setSelectedResultsLevel}
+                        categoryOptions={competitionCategoryOptions}
+                        selectedCategory={effectiveResultsCategory}
+                        onSelectedCategoryChange={setSelectedResultsCategory}
                         selectedTeamKey={effectiveTeamKey}
                         onTeamNavigate={handleTeamNavigate}
                     />
@@ -985,6 +1058,9 @@ function App() {
                         levelOptions={competitionLevelOptions}
                         selectedLevel={effectiveLeadersLevel}
                         onSelectedLevelChange={setSelectedLeadersLevel}
+                        categoryOptions={competitionCategoryOptions}
+                        selectedCategory={effectiveLeadersCategory}
+                        onSelectedCategoryChange={setSelectedLeadersCategory}
                         rankingMinGames={rankingMinGames}
                         onRankingMinGamesChange={setRankingMinGames}
                         onTeamNavigate={handleTeamNavigate}

@@ -2,6 +2,7 @@ import PrettySelect from "./PrettySelect.jsx";
 import {
     buildCompetitionPhaseLabel,
     filterCompetitionMatchesByPhaseOption,
+    filterRowsByCategory,
     filterRowsByLevel
 } from "../utils/analysisDerived.js";
 
@@ -177,12 +178,18 @@ function CompetitionResultsSection({
     levelOptions,
     selectedLevel,
     onSelectedLevelChange,
+    categoryOptions,
+    selectedCategory,
+    onSelectedCategoryChange,
     selectedTeamKey,
     onTeamNavigate
 }) {
-    const filteredMatches = [...filterRowsByLevel(
-        filterCompetitionMatchesByPhaseOption(matches, selectedPhase),
-        selectedLevel
+    const filteredMatches = [...filterRowsByCategory(
+        filterRowsByLevel(
+            filterCompetitionMatchesByPhaseOption(matches, selectedPhase),
+            selectedLevel
+        ),
+        selectedCategory
     )]
         .sort((a, b) => {
             const dateA = a.matchDate ? new Date(a.matchDate).getTime() : 0;
@@ -209,6 +216,22 @@ function CompetitionResultsSection({
 
                 <div style={styles.filtersCard}>
                     <div style={styles.filtersRow}>
+                        {categoryOptions?.length > 0 ? (
+                            <PrettySelect
+                                label="Categoría"
+                                value={String(selectedCategory ?? "all")}
+                                onChange={(event) => onSelectedCategoryChange(event.target.value)}
+                                ariaLabel="Selecciona categoría para los resultados"
+                                minWidth="220px"
+                            >
+                                <option value="all">Todas las categorías</option>
+                                {categoryOptions.map((cat) => (
+                                    <option key={cat.value} value={cat.value}>
+                                        {cat.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
                         <PrettySelect
                             label="Fase"
                             value={String(selectedPhase ?? "all")}
