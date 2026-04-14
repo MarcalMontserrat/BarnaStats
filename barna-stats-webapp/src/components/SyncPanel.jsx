@@ -313,7 +313,7 @@ function SyncPanel({
                 </div>
                 <div style={styles.helper}>
                     Pega la URL oficial de resultados y la app obtendrá los partidos de la fase, descargará `stats`
-                    y `moves` y actualizará el análisis de la web. Si aparece un captcha, se abrirá el navegador auxiliar.
+                    y `moves` y actualizará el análisis de la web. Esta sincronización individual fuerza la descarga de la fase. Si aparece un captcha, se abrirá el navegador auxiliar.
                 </div>
             </div>
 
@@ -351,7 +351,7 @@ function SyncPanel({
                         </button>
                     </div>
                     <div style={styles.savedSourcesHelper}>
-                        Aquí quedan registradas las URLs de resultados ya usadas para que puedas repetir la sincronización sin volver a pegarlas.
+                        Aquí quedan registradas las URLs de resultados ya usadas para que puedas repetir la sincronización sin volver a pegarlas. `Sincronizar todo` reutiliza la caché y solo descarga lo que falte o cambie.
                     </div>
                 </div>
 

@@ -77,7 +77,10 @@ export function useSyncJob(onJobSucceeded) {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({sourceUrl})
+                body: JSON.stringify({
+                    sourceUrl,
+                    forceRefresh: true
+                })
             });
 
             const hasJson = response.headers

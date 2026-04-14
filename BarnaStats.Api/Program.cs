@@ -86,7 +86,7 @@ app.MapPost("/api/sync-jobs", (StartSyncRequest request, SyncOrchestrator orches
         });
     }
 
-    var started = orchestrator.TryStart(request.SourceUrl, out var jobSnapshot, out var error);
+    var started = orchestrator.TryStart(request.SourceUrl, request.ForceRefresh, out var jobSnapshot, out var error);
 
     if (!started)
     {

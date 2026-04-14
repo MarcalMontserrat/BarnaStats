@@ -32,7 +32,7 @@ public sealed class SyncOrchestrator
         }
     }
 
-    public bool TryStart(string sourceUrl, out SyncJobSnapshot? jobSnapshot, out string? error)
+    public bool TryStart(string sourceUrl, bool forceRefresh, out SyncJobSnapshot? jobSnapshot, out string? error)
     {
         sourceUrl = sourceUrl.Trim();
 
@@ -54,7 +54,7 @@ public sealed class SyncOrchestrator
                 return false;
             }
 
-            var job = new SyncJob(normalizedUrl, sourceInfo);
+            var job = new SyncJob(normalizedUrl, sourceInfo, forceRefresh);
             _currentJob = job;
             jobSnapshot = job.ToSnapshot();
             error = null;
@@ -98,11 +98,11 @@ public sealed class SyncOrchestrator
     {
         job.StartedAtUtc = DateTimeOffset.UtcNow;
         job.Status = SyncJobStatus.Running;
-        job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {job.SourceUrl}");
+        job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {job.SourceUrl}{(job.ForceRefresh ? " (modo forzado)" : "")}");
 
         try
         {
-            var exitCode = await RunSyncAllProcessAsync(job.SourceUrl, job.AppendLog);
+            var exitCode = await RunSyncAllProcessAsync(job.SourceUrl, job.ForceRefresh, job.AppendLog);
             job.ExitCode = exitCode;
             job.CompletedAtUtc = DateTimeOffset.UtcNow;
             job.AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
@@ -148,7 +148,8 @@ public sealed class SyncOrchestrator
 
                 var exitCode = await RunSyncAllProcessAsync(
                     source.SourceUrl.Trim(),
-                    line => job.AppendLog($"{prefix} {line}")
+                    forceRefresh: false,
+                    appendLog: line => job.AppendLog($"{prefix} {line}")
                 );
 
                 if (exitCode != 0)
@@ -182,7 +183,7 @@ public sealed class SyncOrchestrator
         }
     }
 
-    private async Task<int> RunSyncAllProcessAsync(string sourceUrl, Action<string> appendLog)
+    private async Task<int> RunSyncAllProcessAsync(string sourceUrl, bool forceRefresh, Action<string> appendLog)
     {
         var startInfo = new ProcessStartInfo
         {
@@ -201,6 +202,8 @@ public sealed class SyncOrchestrator
         startInfo.ArgumentList.Add("--");
         startInfo.ArgumentList.Add("sync-all");
         startInfo.ArgumentList.Add("--non-interactive");
+        if (forceRefresh)
+            startInfo.ArgumentList.Add("--force");
         startInfo.ArgumentList.Add(sourceUrl);
 
         using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
@@ -284,17 +287,18 @@ public sealed class SyncOrchestrator
     {
         private const int MaxLogs = 400;
 
-        public SyncJob(string sourceUrl, SyncSourceInfo sourceInfo)
-            : this(sourceUrl, sourceInfo.Kind, sourceInfo.SourceId)
+        public SyncJob(string sourceUrl, SyncSourceInfo sourceInfo, bool forceRefresh)
+            : this(sourceUrl, sourceInfo.Kind, sourceInfo.SourceId, forceRefresh)
         {
         }
 
-        private SyncJob(string sourceUrl, string? sourceKind, int? sourceId)
+        private SyncJob(string sourceUrl, string? sourceKind, int? sourceId, bool forceRefresh)
         {
             JobId = Guid.NewGuid().ToString("N");
             SourceUrl = sourceUrl;
             SourceKind = sourceKind;
             SourceId = sourceId;
+            ForceRefresh = forceRefresh;
             CreatedAtUtc = DateTimeOffset.UtcNow;
         }
 
@@ -302,6 +306,7 @@ public sealed class SyncOrchestrator
         public string SourceUrl { get; }
         public string? SourceKind { get; }
         public int? SourceId { get; }
+        public bool ForceRefresh { get; }
         public DateTimeOffset CreatedAtUtc { get; }
         public DateTimeOffset? StartedAtUtc { get; set; }
         public DateTimeOffset? CompletedAtUtc { get; set; }
@@ -314,7 +319,7 @@ public sealed class SyncOrchestrator
 
         public static SyncJob CreateBatch(int sourceCount)
         {
-            return new SyncJob("Fases guardadas", "registry", sourceCount);
+            return new SyncJob("Fases guardadas", "registry", sourceCount, false);
         }
 
         public void AppendLog(string line)
