@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 
@@ -9,49 +9,7 @@ export function useSyncJob(enabled = true, onJobSucceeded) {
     const [error, setError] = useState("");
     const completedJobRef = useRef("");
 
-    useEffect(() => {
-        if (!enabled) {
-            return undefined;
-        }
-
-        void refreshCurrentJob();
-    }, [enabled]);
-
-    useEffect(() => {
-        if (!enabled) {
-            return undefined;
-        }
-
-        if (job?.status !== "pending" && job?.status !== "running") {
-            return undefined;
-        }
-
-        const intervalId = window.setInterval(() => {
-            void refreshCurrentJob();
-        }, 1500);
-
-        return () => {
-            window.clearInterval(intervalId);
-        };
-    }, [job?.status]);
-
-    useEffect(() => {
-        if (!job || job.status === "pending" || job.status === "running") {
-            return;
-        }
-
-        if (completedJobRef.current === job.jobId) {
-            return;
-        }
-
-        completedJobRef.current = job.jobId;
-
-        if (job.status === "succeeded" || job.analysisUpdatedAtUtc) {
-            onJobSucceeded?.(job);
-        }
-    }, [enabled, job, onJobSucceeded]);
-
-    async function refreshCurrentJob() {
+    const refreshCurrentJob = useCallback(async () => {
         if (!enabled) {
             return;
         }
@@ -77,7 +35,49 @@ export function useSyncJob(enabled = true, onJobSucceeded) {
             setApiAvailable(false);
             setError(String(err));
         }
-    }
+    }, [enabled]);
+
+    useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+
+        void refreshCurrentJob();
+    }, [enabled, refreshCurrentJob]);
+
+    useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+
+        if (job?.status !== "pending" && job?.status !== "running") {
+            return undefined;
+        }
+
+        const intervalId = window.setInterval(() => {
+            void refreshCurrentJob();
+        }, 1500);
+
+        return () => {
+            window.clearInterval(intervalId);
+        };
+    }, [enabled, job?.status, refreshCurrentJob]);
+
+    useEffect(() => {
+        if (!job || job.status === "pending" || job.status === "running") {
+            return;
+        }
+
+        if (completedJobRef.current === job.jobId) {
+            return;
+        }
+
+        completedJobRef.current = job.jobId;
+
+        if (job.status === "succeeded" || job.analysisUpdatedAtUtc) {
+            onJobSucceeded?.(job);
+        }
+    }, [enabled, job, onJobSucceeded]);
 
     async function startSync(sourceUrl) {
         if (!enabled) {

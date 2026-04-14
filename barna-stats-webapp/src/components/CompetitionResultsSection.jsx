@@ -1,5 +1,9 @@
 import PrettySelect from "./PrettySelect.jsx";
-import {buildCompetitionPhaseLabel, filterCompetitionMatchesByPhaseOption} from "../utils/analysisDerived.js";
+import {
+    buildCompetitionPhaseLabel,
+    filterCompetitionMatchesByPhaseOption,
+    filterRowsByLevel
+} from "../utils/analysisDerived.js";
 
 const styles = {
     section: {
@@ -169,10 +173,16 @@ function CompetitionResultsSection({
     phaseOptions,
     selectedPhase,
     onSelectedPhaseChange,
+    levelOptions,
+    selectedLevel,
+    onSelectedLevelChange,
     selectedTeamKey,
     onTeamNavigate
 }) {
-    const filteredMatches = [...filterCompetitionMatchesByPhaseOption(matches, selectedPhase)]
+    const filteredMatches = [...filterRowsByLevel(
+        filterCompetitionMatchesByPhaseOption(matches, selectedPhase),
+        selectedLevel
+    )]
         .sort((a, b) => {
             const dateA = a.matchDate ? new Date(a.matchDate).getTime() : 0;
             const dateB = b.matchDate ? new Date(b.matchDate).getTime() : 0;
@@ -212,7 +222,23 @@ function CompetitionResultsSection({
                                 </option>
                             ))}
                         </PrettySelect>
-                        <span style={styles.controlHint}>Este selector solo afecta al listado de partidos.</span>
+                        {levelOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Nivel"
+                                value={String(selectedLevel ?? "all")}
+                                onChange={(event) => onSelectedLevelChange(event.target.value)}
+                                ariaLabel="Selecciona nivel para los resultados"
+                                minWidth="220px"
+                            >
+                                <option value="all">Todos los niveles</option>
+                                {levelOptions.map((level) => (
+                                    <option key={level.value} value={level.value}>
+                                        {level.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+                        <span style={styles.controlHint}>Estos filtros solo afectan al listado de partidos.</span>
                     </div>
                 </div>
 

@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 
@@ -7,15 +7,7 @@ export function useResultsSources(enabled = true) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        if (!enabled) {
-            return undefined;
-        }
-
-        void refreshSources();
-    }, [enabled]);
-
-    async function refreshSources() {
+    const refreshSources = useCallback(async () => {
         if (!enabled) {
             return;
         }
@@ -37,7 +29,15 @@ export function useResultsSources(enabled = true) {
         } finally {
             setLoading(false);
         }
-    }
+    }, [enabled]);
+
+    useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+
+        void refreshSources();
+    }, [enabled, refreshSources]);
 
     return {
         sources: enabled ? sources : [],

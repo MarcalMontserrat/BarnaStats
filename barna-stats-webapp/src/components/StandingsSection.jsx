@@ -108,7 +108,6 @@ function StandingsSection({
     phaseOptions,
     selectedPhase,
     onSelectedPhaseChange,
-    showLevelFilter,
     levelOptions,
     selectedLevel,
     onSelectedLevelChange,
@@ -142,7 +141,7 @@ function StandingsSection({
                                 </option>
                             ))}
                         </PrettySelect>
-                        {showLevelFilter && levelOptions.length > 0 ? (
+                        {levelOptions.length > 0 ? (
                             <PrettySelect
                                 label="Nivel"
                                 value={String(selectedLevel ?? "all")}
@@ -158,7 +157,7 @@ function StandingsSection({
                                 ))}
                             </PrettySelect>
                         ) : null}
-                        <span style={styles.controlHint}>Este selector solo afecta a la clasificación.</span>
+                        <span style={styles.controlHint}>Estos filtros solo afectan a la clasificación.</span>
                     </div>
                 </div>
             </div>

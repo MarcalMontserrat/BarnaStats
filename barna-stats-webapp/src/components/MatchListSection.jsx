@@ -1,6 +1,7 @@
 import MatchInsightsPanel from "./MatchInsightsPanel.jsx";
 import MatchTable from "./MatchTable.jsx";
 import PrettySelect from "./PrettySelect.jsx";
+import {buildCompetitionPhaseLabel} from "../utils/analysisDerived.js";
 
 const styles = {
     section: {
@@ -206,7 +207,7 @@ function MatchListSection({
             return `Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
         }
 
-        return `Fase ${match.phaseNumber ?? "-"} · Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
+        return `${buildCompetitionPhaseLabel(match)} · Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
     };
 
     if (sortedMatches.length === 0) {
@@ -268,7 +269,9 @@ function MatchListSection({
                         >
                             <div style={styles.matchHeaderMain}>
                                 <div style={styles.matchTitle}>
-                                    {selectedPhase ? `Jornada ${match.phaseRound ?? "-"} · vs ` : `Fase ${match.phaseNumber ?? "-"} · Jornada ${match.phaseRound ?? "-"} · vs `}
+                                    {selectedPhase
+                                        ? `Jornada ${match.phaseRound ?? "-"} · vs `
+                                        : `${buildCompetitionPhaseLabel(match)} · Jornada ${match.phaseRound ?? "-"} · vs `}
                                     {match.rivalTeamKey ? (
                                         <button
                                             type="button"

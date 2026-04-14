@@ -255,6 +255,9 @@ function GlobalLeadersSection({
     totalTeams,
     leadersByAvgValuation,
     leadersByPoints,
+    levelOptions,
+    selectedLevel,
+    onSelectedLevelChange,
     rankingMinGames,
     onRankingMinGamesChange,
     onTeamNavigate
@@ -273,6 +276,22 @@ function GlobalLeadersSection({
                     </div>
 
                     <div style={styles.controlBlock}>
+                        {levelOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Nivel"
+                                value={String(selectedLevel ?? "all")}
+                                onChange={(event) => onSelectedLevelChange(event.target.value)}
+                                ariaLabel="Selecciona nivel para los rankings de jugadoras"
+                                minWidth="240px"
+                            >
+                                <option value="all">Todos los niveles</option>
+                                {levelOptions.map((level) => (
+                                    <option key={level.value} value={level.value}>
+                                        {level.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
                         <PrettySelect
                             label="Mínimo de partidos"
                             value={rankingMinGames}
@@ -284,7 +303,7 @@ function GlobalLeadersSection({
                             <option value="3">3 partidos</option>
                             <option value="5">5 partidos</option>
                         </PrettySelect>
-                        <span style={styles.controlHint}>Este filtro solo afecta a los rankings de jugadoras.</span>
+                        <span style={styles.controlHint}>Estos filtros solo afectan a los rankings de jugadoras.</span>
                     </div>
                 </div>
             </div>
