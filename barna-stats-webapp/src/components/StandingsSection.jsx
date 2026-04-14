@@ -61,7 +61,7 @@ const styles = {
     },
     table: {
         width: "100%",
-        minWidth: 760,
+        minWidth: 860,
         borderCollapse: "collapse",
         background: "rgba(255, 252, 247, 0.96)"
     },
@@ -105,9 +105,13 @@ const styles = {
 
 function StandingsSection({
     rows,
-    availablePhases,
+    phaseOptions,
     selectedPhase,
     onSelectedPhaseChange,
+    showLevelFilter,
+    levelOptions,
+    selectedLevel,
+    onSelectedLevelChange,
     selectedTeamKey,
     onTeamNavigate
 }) {
@@ -132,12 +136,28 @@ function StandingsSection({
                             minWidth="220px"
                         >
                             <option value="all">Todas las fases</option>
-                            {availablePhases.map((phase) => (
-                                <option key={phase} value={phase}>
-                                    Fase {phase}
+                            {phaseOptions.map((phase) => (
+                                <option key={phase.value} value={phase.value}>
+                                    {phase.label}
                                 </option>
                             ))}
                         </PrettySelect>
+                        {showLevelFilter && levelOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Nivel"
+                                value={String(selectedLevel ?? "all")}
+                                onChange={(event) => onSelectedLevelChange(event.target.value)}
+                                ariaLabel="Selecciona nivel para la clasificación"
+                                minWidth="220px"
+                            >
+                                <option value="all">Todos los niveles</option>
+                                {levelOptions.map((level) => (
+                                    <option key={level.value} value={level.value}>
+                                        {level.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
                         <span style={styles.controlHint}>Este selector solo afecta a la clasificación.</span>
                     </div>
                 </div>
@@ -156,6 +176,7 @@ function StandingsSection({
                             <th style={styles.headerCell}>PF</th>
                             <th style={styles.headerCell}>PC</th>
                             <th style={styles.headerCell}>Dif</th>
+                            <th style={styles.headerCell}>Nivel</th>
                         </tr>
                         </thead>
 
@@ -181,6 +202,7 @@ function StandingsSection({
                                 <td style={styles.bodyCell}>{row.pointsFor}</td>
                                 <td style={styles.bodyCell}>{row.pointsAgainst}</td>
                                 <td style={styles.bodyCell}>{row.pointDiff > 0 ? `+${row.pointDiff}` : row.pointDiff}</td>
+                                <td style={styles.bodyCell}>{row.levelLabel || "—"}</td>
                             </tr>
                         ))}
                         </tbody>

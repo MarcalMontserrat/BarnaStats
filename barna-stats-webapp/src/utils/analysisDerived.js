@@ -134,10 +134,20 @@ export function buildPhaseSummaries(matchSummaries, matchPlayers) {
     const summariesByPhase = new Map();
 
     (matchSummaries ?? []).forEach((match) => {
-        const phaseKey = Number(match.phaseNumber);
+        const phaseKey = match.sourcePhaseId
+            ? `source:${match.sourcePhaseId}`
+            : `phase:${Number(match.phaseNumber)}`;
+
         if (!summariesByPhase.has(phaseKey)) {
             summariesByPhase.set(phaseKey, {
-                phaseNumber: phaseKey,
+                phaseKey,
+                phaseNumber: Number(match.phaseNumber),
+                sourcePhaseId: match.sourcePhaseId ?? null,
+                categoryName: match.categoryName ?? "",
+                phaseName: match.phaseName ?? "",
+                levelName: match.levelName ?? "",
+                levelCode: match.levelCode ?? "",
+                groupCode: match.groupCode ?? "",
                 matches: 0,
                 wins: 0,
                 losses: 0,
@@ -164,7 +174,13 @@ export function buildPhaseSummaries(matchSummaries, matchPlayers) {
     });
 
     return [...summariesByPhase.values()]
-        .sort((a, b) => a.phaseNumber - b.phaseNumber)
+        .sort((a, b) => {
+            if (a.phaseNumber !== b.phaseNumber) {
+                return a.phaseNumber - b.phaseNumber;
+            }
+
+            return Number(a.sourcePhaseId ?? Number.MAX_SAFE_INTEGER) - Number(b.sourcePhaseId ?? Number.MAX_SAFE_INTEGER);
+        })
         .map((phase) => ({
             ...phase,
             avgPointsFor: phase.matches > 0 ? phase.pointsFor / phase.matches : 0,
@@ -262,6 +278,133 @@ export function getLongestWinStreak(matchSummaries) {
     });
 
     return longest;
+}
+
+export function buildCompetitionPhaseLabel(phase, options = {}) {
+    const {includeCategory = false} = options;
+    const phaseName = String(phase?.phaseName ?? "").trim() || `Fase ${phase?.phaseNumber ?? "-"}`;
+    const levelName = String(phase?.levelName ?? "").trim();
+    const groupCode = String(phase?.groupCode ?? "").trim();
+    const extras = [
+        levelName,
+        groupCode ? `Grupo ${groupCode}` : ""
+    ].filter(Boolean);
+    const baseLabel = extras.length > 0
+        ? `${phaseName} · ${extras.join(" · ")}`
+        : phaseName;
+    const categoryName = String(phase?.categoryName ?? "").trim();
+
+    return includeCategory && categoryName
+        ? `${categoryName} · ${baseLabel}`
+        : baseLabel;
+}
+
+export function buildCompetitionPhaseOptions(phases) {
+    const options = new Map();
+
+    (phases ?? []).forEach((phase) => {
+        const value = phase?.sourcePhaseId
+            ? `source:${phase.sourcePhaseId}`
+            : `phase:${phase.phaseNumber}`;
+
+        if (options.has(value)) {
+            return;
+        }
+
+        options.set(value, {
+            value,
+            phaseNumber: Number(phase?.phaseNumber ?? 0),
+            sourcePhaseId: phase?.sourcePhaseId ?? null,
+            categoryName: phase?.categoryName ?? "",
+            phaseName: phase?.phaseName ?? "",
+            levelName: phase?.levelName ?? "",
+            levelCode: phase?.levelCode ?? "",
+            groupCode: phase?.groupCode ?? "",
+            label: buildCompetitionPhaseLabel(phase)
+        });
+    });
+
+    return [...options.values()].sort((a, b) => {
+        if (a.phaseNumber !== b.phaseNumber) {
+            return a.phaseNumber - b.phaseNumber;
+        }
+
+        return Number(a.sourcePhaseId ?? Number.MAX_SAFE_INTEGER) - Number(b.sourcePhaseId ?? Number.MAX_SAFE_INTEGER);
+    });
+}
+
+export function filterCompetitionMatchesByPhaseOption(matches, phaseOptionValue) {
+    if (!phaseOptionValue || phaseOptionValue === "all") {
+        return matches ?? [];
+    }
+
+    if (String(phaseOptionValue).startsWith("source:")) {
+        const sourcePhaseId = Number(String(phaseOptionValue).slice("source:".length));
+        return (matches ?? []).filter((match) => Number(match.sourcePhaseId) === sourcePhaseId);
+    }
+
+    if (String(phaseOptionValue).startsWith("phase:")) {
+        const phaseNumber = Number(String(phaseOptionValue).slice("phase:".length));
+        return (matches ?? []).filter((match) => Number(match.phaseNumber) === phaseNumber);
+    }
+
+    return matches ?? [];
+}
+
+export function buildLatestTeamContextByKey(teams) {
+    const contexts = new Map();
+
+    (teams ?? []).forEach((team) => {
+        const latestMatch = [...(team.matchSummaries ?? [])]
+            .filter((match) => match.levelName || match.groupCode || match.phaseName || match.categoryName)
+            .sort((a, b) => {
+                const dateA = a.matchDate ? new Date(a.matchDate).getTime() : 0;
+                const dateB = b.matchDate ? new Date(b.matchDate).getTime() : 0;
+                if (dateA !== dateB) {
+                    return dateB - dateA;
+                }
+
+                if (Number(a.phaseNumber) !== Number(b.phaseNumber)) {
+                    return Number(b.phaseNumber) - Number(a.phaseNumber);
+                }
+
+                return Number(b.sourcePhaseId ?? 0) - Number(a.sourcePhaseId ?? 0);
+            })[0];
+
+        if (!latestMatch) {
+            return;
+        }
+
+        contexts.set(team.teamKey, {
+            phaseNumber: latestMatch.phaseNumber,
+            sourcePhaseId: latestMatch.sourcePhaseId ?? null,
+            categoryName: latestMatch.categoryName ?? "",
+            phaseName: latestMatch.phaseName ?? "",
+            levelName: latestMatch.levelName ?? "",
+            levelCode: latestMatch.levelCode ?? "",
+            groupCode: latestMatch.groupCode ?? "",
+            label: buildCompetitionPhaseLabel(latestMatch)
+        });
+    });
+
+    return contexts;
+}
+
+export function buildLevelOptions(teamContexts) {
+    const options = new Map();
+
+    [...(teamContexts?.values?.() ?? [])].forEach((context) => {
+        const value = String(context?.levelCode ?? "").trim() || String(context?.levelName ?? "").trim();
+        const label = String(context?.levelName ?? "").trim() || value;
+
+        if (!value || !label || options.has(value)) {
+            return;
+        }
+
+        options.set(value, {value, label});
+    });
+
+    return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
 }
 
 function ensureStandingRow(rows, teamName, teamKey) {

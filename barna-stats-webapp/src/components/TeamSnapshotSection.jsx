@@ -143,6 +143,7 @@ function formatAverage(value) {
 
 function TeamSnapshotSection({
     seasonLabel,
+    currentLevelLabel,
     record,
     standingRow,
     standingLabel,
@@ -167,6 +168,9 @@ function TeamSnapshotSection({
                 <span style={styles.metaChip}>{seasonLabel}</span>
                 <span style={styles.metaChip}>{record.matches} partidos</span>
                 <span style={styles.metaChip}>{standingLabel}</span>
+                {currentLevelLabel ? (
+                    <span style={styles.metaChip}>{currentLevelLabel}</span>
+                ) : null}
             </div>
 
             <div style={styles.layout}>

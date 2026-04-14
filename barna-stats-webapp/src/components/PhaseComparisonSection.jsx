@@ -1,3 +1,5 @@
+import {buildCompetitionPhaseLabel} from "../utils/analysisDerived.js";
+
 const styles = {
     section: {
         display: "grid",
@@ -126,7 +128,7 @@ function formatSigned(value, digits = 1) {
 function PhaseCard({phase}) {
     return (
         <article style={styles.card}>
-            <div style={styles.cardKicker}>Fase {phase.phaseNumber}</div>
+            <div style={styles.cardKicker}>{buildCompetitionPhaseLabel(phase)}</div>
             <h3 style={styles.cardTitle}>{phase.wins}-{phase.losses}{phase.ties ? `-${phase.ties}` : ""}</h3>
 
             <div style={styles.metrics}>

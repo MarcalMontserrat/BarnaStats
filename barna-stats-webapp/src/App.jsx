@@ -13,11 +13,16 @@ import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
+    buildCompetitionPhaseLabel,
+    buildCompetitionPhaseOptions,
     buildTeamRecord,
     buildPhaseComparison,
     buildPhaseSummaries,
     buildStandings,
     buildTeamRoute,
+    buildLatestTeamContextByKey,
+    buildLevelOptions,
+    filterCompetitionMatchesByPhaseOption,
     getLongestWinStreak
 } from "./utils/analysisDerived.js";
 import {
@@ -386,6 +391,7 @@ function App() {
     const [selectedMatch, setSelectedMatch] = useState("");
     const [openMatches, setOpenMatches] = useState({});
     const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("all");
+    const [selectedStandingsLevel, setSelectedStandingsLevel] = useState("all");
     const [selectedResultsPhase, setSelectedResultsPhase] = useState("all");
     const [rankingMinGames, setRankingMinGames] = useState("3");
     const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
@@ -442,9 +448,7 @@ function App() {
     const teamMatchSummaries = selectedTeam?.matchSummaries ?? [];
     const availablePhases = [...new Set(teamMatchSummaries.map((match) => match.phaseNumber))]
         .sort((a, b) => a - b);
-    const competitionPhaseNumbers = (competition?.phases ?? [])
-        .map((phase) => phase.phaseNumber)
-        .sort((a, b) => a - b);
+    const competitionPhaseOptions = buildCompetitionPhaseOptions(competition?.phases ?? []);
     const selectedPhaseValue = selectedPhase ? Number(selectedPhase) : null;
     const matchSummaries = selectedPhaseValue === null
         ? teamMatchSummaries
@@ -471,17 +475,33 @@ function App() {
     const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
     const competitionPlayerLeaders = competition?.playerLeaders ?? [];
     const competitionMatches = competition?.matches ?? [];
+    const latestTeamContexts = buildLatestTeamContextByKey(teams);
+    const standingsLevelOptions = buildLevelOptions(latestTeamContexts);
     const rankingMinGamesValue = Number(rankingMinGames || 1);
     const filteredCompetitionPlayers = competitionPlayerLeaders
         .filter((player) => player.games >= rankingMinGamesValue);
     const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredCompetitionPlayers, "avgValuation", 8);
     const globalLeadersByPoints = getTopGlobalPlayers(filteredCompetitionPlayers, "points", 8);
     const effectiveCompetitionPhase = selectedStandingsPhase || "all";
-    const competitionStandingsRows = effectiveCompetitionPhase === "all"
-        ? buildStandings(competitionMatches, null)
-        : (competition?.standingsByPhase
-            ?.find((phase) => String(phase.phaseNumber) === String(effectiveCompetitionPhase))
-            ?.rows ?? []);
+    const effectiveStandingsLevel = selectedStandingsLevel || "all";
+    const shouldFilterStandingsByLevel = effectiveCompetitionPhase === "all";
+    const competitionMatchesForStandings = filterCompetitionMatchesByPhaseOption(competitionMatches, effectiveCompetitionPhase);
+    const competitionStandingsRows = buildStandings(competitionMatchesForStandings, null)
+        .map((row) => {
+            const latestContext = latestTeamContexts.get(row.teamKey);
+            const levelKey = String(latestContext?.levelCode ?? "").trim() || String(latestContext?.levelName ?? "").trim();
+
+            return {
+                ...row,
+                levelKey,
+                levelLabel: latestContext?.levelName ?? ""
+            };
+        })
+        .filter((row) => !shouldFilterStandingsByLevel || effectiveStandingsLevel === "all" || row.levelKey === effectiveStandingsLevel)
+        .map((row, index) => ({
+            ...row,
+            position: index + 1
+        }));
     const effectiveResultsPhase = selectedResultsPhase || "all";
     const activeCompetitionTab = COMPETITION_TABS.find((tab) => tab.id === selectedCompetitionTab) ?? COMPETITION_TABS[0];
     const teamStandingsRows = buildStandings(competitionMatches, selectedPhaseValue);
@@ -491,12 +511,16 @@ function App() {
     const topScorer = getTopScorer(playersArray);
     const mvp = getMvp(playersArray);
     const teamAvg = getTeamAverage(players);
+    const selectedTeamPhaseContext = selectedPhaseValue === null
+        ? null
+        : (selectedTeam?.phases ?? []).find((phase) => Number(phase.phaseNumber) === selectedPhaseValue) ?? null;
+    const selectedTeamLatestContext = latestTeamContexts.get(effectiveTeamKey) ?? null;
     const seasonLabel = selectedPhaseValue === null
         ? "Temporada completa"
-        : `Fase ${selectedPhaseValue}`;
+        : buildCompetitionPhaseLabel(selectedTeamPhaseContext ?? {phaseNumber: selectedPhaseValue});
     const standingLabel = selectedPhaseValue === null
         ? "Clasificación acumulada"
-        : `Clasificación de la fase ${selectedPhaseValue}`;
+        : `Clasificación de ${buildCompetitionPhaseLabel(selectedTeamPhaseContext ?? {phaseNumber: selectedPhaseValue})}`;
     const summaryText = selectedPhaseValue === null
         ? `${selectedTeam?.matchesPlayed ?? 0} partidos · ${selectedTeam?.playersCount ?? 0} jugadoras`
         : `Fase ${selectedPhaseValue} · ${sortedMatches.length} partidos`;
@@ -613,6 +637,9 @@ function App() {
 
                 <TeamSnapshotSection
                     seasonLabel={seasonLabel}
+                    currentLevelLabel={selectedPhaseValue === null
+                        ? (selectedTeamLatestContext?.levelName ?? "")
+                        : (selectedTeamPhaseContext?.levelName ?? "")}
                     record={teamRecord}
                     standingRow={selectedTeamStanding}
                     standingLabel={standingLabel}
@@ -718,9 +745,13 @@ function App() {
             {activeCompetitionTab.id === "standings" ? (
                 <StandingsSection
                     rows={competitionStandingsRows}
-                    availablePhases={competitionPhaseNumbers}
+                    phaseOptions={competitionPhaseOptions}
                     selectedPhase={effectiveCompetitionPhase}
                     onSelectedPhaseChange={handleStandingsPhaseChange}
+                    showLevelFilter={shouldFilterStandingsByLevel}
+                    levelOptions={standingsLevelOptions}
+                    selectedLevel={shouldFilterStandingsByLevel ? effectiveStandingsLevel : "all"}
+                    onSelectedLevelChange={setSelectedStandingsLevel}
                     selectedTeamKey={effectiveTeamKey}
                     onTeamNavigate={handleTeamNavigate}
                 />
@@ -729,7 +760,7 @@ function App() {
             {activeCompetitionTab.id === "matches" ? (
                 <CompetitionResultsSection
                     matches={competitionMatches}
-                    availablePhases={competitionPhaseNumbers}
+                    phaseOptions={competitionPhaseOptions}
                     selectedPhase={effectiveResultsPhase}
                     onSelectedPhaseChange={setSelectedResultsPhase}
                     selectedTeamKey={effectiveTeamKey}

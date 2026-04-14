@@ -1,4 +1,5 @@
 import PrettySelect from "./PrettySelect.jsx";
+import {buildCompetitionPhaseLabel, filterCompetitionMatchesByPhaseOption} from "../utils/analysisDerived.js";
 
 const styles = {
     section: {
@@ -165,14 +166,13 @@ function formatDate(value) {
 
 function CompetitionResultsSection({
     matches,
-    availablePhases,
+    phaseOptions,
     selectedPhase,
     onSelectedPhaseChange,
     selectedTeamKey,
     onTeamNavigate
 }) {
-    const filteredMatches = [...(matches ?? [])]
-        .filter((match) => selectedPhase === "all" || Number(match.phaseNumber) === Number(selectedPhase))
+    const filteredMatches = [...filterCompetitionMatchesByPhaseOption(matches, selectedPhase)]
         .sort((a, b) => {
             const dateA = a.matchDate ? new Date(a.matchDate).getTime() : 0;
             const dateB = b.matchDate ? new Date(b.matchDate).getTime() : 0;
@@ -206,9 +206,9 @@ function CompetitionResultsSection({
                             minWidth="220px"
                         >
                             <option value="all">Todas las fases</option>
-                            {availablePhases.map((phase) => (
-                                <option key={phase} value={phase}>
-                                    Fase {phase}
+                            {phaseOptions.map((phase) => (
+                                <option key={phase.value} value={phase.value}>
+                                    {phase.label}
                                 </option>
                             ))}
                         </PrettySelect>
@@ -238,7 +238,7 @@ function CompetitionResultsSection({
                                     : styles.row}
                             >
                                 <div style={styles.rowMeta}>
-                                    <span style={styles.metaPill}>Fase {match.phaseNumber}</span>
+                                    <span style={styles.metaPill}>{buildCompetitionPhaseLabel(match)}</span>
                                     <span style={styles.metaPill}>{formatDate(match.matchDate)}</span>
                                 </div>
 
