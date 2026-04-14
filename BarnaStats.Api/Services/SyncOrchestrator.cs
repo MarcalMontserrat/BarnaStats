@@ -14,12 +14,14 @@ public sealed class SyncOrchestrator
 
     private readonly Lock _lock = new();
     private readonly RepoPaths _repoPaths;
+    private readonly ResultsSourceCatalogService _resultsSourceCatalogService;
 
     private SyncJob? _currentJob;
 
-    public SyncOrchestrator(RepoPaths repoPaths)
+    public SyncOrchestrator(RepoPaths repoPaths, ResultsSourceCatalogService resultsSourceCatalogService)
     {
         _repoPaths = repoPaths;
+        _resultsSourceCatalogService = resultsSourceCatalogService;
     }
 
     public SyncJobSnapshot? GetCurrentJob()
@@ -62,6 +64,36 @@ public sealed class SyncOrchestrator
         }
     }
 
+    public async Task<SyncStartResult> TryStartSavedSourcesAsync()
+    {
+        var savedSources = await _resultsSourceCatalogService.GetAllAsync();
+        if (savedSources.Count == 0)
+            return new SyncStartResult(false, null, "Todavía no hay fases guardadas para sincronizar.");
+
+        lock (_lock)
+        {
+            if (_currentJob is { Status: SyncJobStatus.Pending or SyncJobStatus.Running })
+            {
+                return new SyncStartResult(false, _currentJob.ToSnapshot(), "Ya hay una sincronización en marcha.");
+            }
+
+            var normalizedSources = savedSources
+                .Where(source => !string.IsNullOrWhiteSpace(source.SourceUrl))
+                .GroupBy(source => source.SourceUrl.Trim(), StringComparer.OrdinalIgnoreCase)
+                .Select(group => group.First())
+                .ToList();
+
+            if (normalizedSources.Count == 0)
+                return new SyncStartResult(false, null, "Las fases guardadas no tienen URLs válidas.");
+
+            var job = SyncJob.CreateBatch(normalizedSources.Count);
+            _currentJob = job;
+
+            _ = Task.Run(() => RunSavedSourcesJobAsync(job, normalizedSources));
+            return new SyncStartResult(true, job.ToSnapshot(), null);
+        }
+    }
+
     private async Task RunJobAsync(SyncJob job)
     {
         job.StartedAtUtc = DateTimeOffset.UtcNow;
@@ -70,52 +102,12 @@ public sealed class SyncOrchestrator
 
         try
         {
-            var startInfo = new ProcessStartInfo
-            {
-                FileName = "dotnet",
-                WorkingDirectory = _repoPaths.RepoRoot,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                UseShellExecute = false,
-                StandardOutputEncoding = Encoding.UTF8,
-                StandardErrorEncoding = Encoding.UTF8
-            };
-
-            startInfo.ArgumentList.Add("run");
-            startInfo.ArgumentList.Add("--project");
-            startInfo.ArgumentList.Add(_repoPaths.BarnaStatsProjectFile);
-            startInfo.ArgumentList.Add("--");
-            startInfo.ArgumentList.Add("sync-all");
-            startInfo.ArgumentList.Add("--non-interactive");
-            startInfo.ArgumentList.Add(job.SourceUrl);
-
-            using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
-
-            process.OutputDataReceived += (_, args) =>
-            {
-                if (!string.IsNullOrWhiteSpace(args.Data))
-                    job.AppendLog(args.Data);
-            };
-
-            process.ErrorDataReceived += (_, args) =>
-            {
-                if (!string.IsNullOrWhiteSpace(args.Data))
-                    job.AppendLog($"[stderr] {args.Data}");
-            };
-
-            if (!process.Start())
-                throw new InvalidOperationException("No se pudo arrancar el proceso de sync-all.");
-
-            process.BeginOutputReadLine();
-            process.BeginErrorReadLine();
-
-            await process.WaitForExitAsync();
-
-            job.ExitCode = process.ExitCode;
+            var exitCode = await RunSyncAllProcessAsync(job.SourceUrl, job.AppendLog);
+            job.ExitCode = exitCode;
             job.CompletedAtUtc = DateTimeOffset.UtcNow;
             job.AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
 
-            if (process.ExitCode == 0)
+            if (exitCode == 0)
             {
                 job.Status = SyncJobStatus.Succeeded;
                 job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sincronización completada.");
@@ -123,7 +115,7 @@ public sealed class SyncOrchestrator
             else
             {
                 job.Status = SyncJobStatus.Failed;
-                job.Error = $"sync-all terminó con código {process.ExitCode}.";
+                job.Error = $"sync-all terminó con código {exitCode}.";
                 job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {job.Error}");
             }
         }
@@ -134,6 +126,105 @@ public sealed class SyncOrchestrator
             job.Error = ex.Message;
             job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {ex.Message}");
         }
+    }
+
+    private async Task RunSavedSourcesJobAsync(SyncJob job, IReadOnlyList<ResultsSourceSnapshot> savedSources)
+    {
+        job.StartedAtUtc = DateTimeOffset.UtcNow;
+        job.Status = SyncJobStatus.Running;
+        job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {savedSources.Count} fases guardadas.");
+
+        var failures = new List<string>();
+
+        try
+        {
+            for (var index = 0; index < savedSources.Count; index++)
+            {
+                var source = savedSources[index];
+                var prefix = $"[{index + 1}/{savedSources.Count}]";
+                var reference = FormatSourceReference(source);
+
+                job.AppendLog($"{prefix} {reference}");
+
+                var exitCode = await RunSyncAllProcessAsync(
+                    source.SourceUrl.Trim(),
+                    line => job.AppendLog($"{prefix} {line}")
+                );
+
+                if (exitCode != 0)
+                    failures.Add($"{reference} (código {exitCode})");
+            }
+
+            job.CompletedAtUtc = DateTimeOffset.UtcNow;
+            job.AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
+            job.ExitCode = failures.Count == 0 ? 0 : 1;
+
+            if (failures.Count == 0)
+            {
+                job.Status = SyncJobStatus.Succeeded;
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sincronización completa de todas las fases guardadas.");
+                return;
+            }
+
+            job.Status = SyncJobStatus.Failed;
+            job.Error = failures.Count == 1
+                ? $"Falló 1 fase guardada: {failures[0]}."
+                : $"Fallaron {failures.Count} fases guardadas. Revisa el log para el detalle.";
+            job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {job.Error}");
+        }
+        catch (Exception ex)
+        {
+            job.Status = SyncJobStatus.Failed;
+            job.CompletedAtUtc = DateTimeOffset.UtcNow;
+            job.ExitCode = 1;
+            job.Error = ex.Message;
+            job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {ex.Message}");
+        }
+    }
+
+    private async Task<int> RunSyncAllProcessAsync(string sourceUrl, Action<string> appendLog)
+    {
+        var startInfo = new ProcessStartInfo
+        {
+            FileName = "dotnet",
+            WorkingDirectory = _repoPaths.RepoRoot,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            StandardOutputEncoding = Encoding.UTF8,
+            StandardErrorEncoding = Encoding.UTF8
+        };
+
+        startInfo.ArgumentList.Add("run");
+        startInfo.ArgumentList.Add("--project");
+        startInfo.ArgumentList.Add(_repoPaths.BarnaStatsProjectFile);
+        startInfo.ArgumentList.Add("--");
+        startInfo.ArgumentList.Add("sync-all");
+        startInfo.ArgumentList.Add("--non-interactive");
+        startInfo.ArgumentList.Add(sourceUrl);
+
+        using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
+
+        process.OutputDataReceived += (_, args) =>
+        {
+            if (!string.IsNullOrWhiteSpace(args.Data))
+                appendLog(args.Data);
+        };
+
+        process.ErrorDataReceived += (_, args) =>
+        {
+            if (!string.IsNullOrWhiteSpace(args.Data))
+                appendLog($"[stderr] {args.Data}");
+        };
+
+        if (!process.Start())
+            throw new InvalidOperationException("No se pudo arrancar el proceso de sync-all.");
+
+        process.BeginOutputReadLine();
+        process.BeginErrorReadLine();
+
+        await process.WaitForExitAsync();
+        return process.ExitCode;
     }
 
     private DateTimeOffset? ReadAnalysisUpdatedAtUtc()
@@ -167,11 +258,26 @@ public sealed class SyncOrchestrator
     {
         var phaseMatch = PhaseIdRegex.Match(sourceUrl);
         if (phaseMatch.Success && int.TryParse(phaseMatch.Groups[1].Value, out var phaseId))
-        {
             return new SyncSourceInfo("phase", phaseId);
-        }
 
         return new SyncSourceInfo(null, null);
+    }
+
+    private static string FormatSourceReference(ResultsSourceSnapshot source)
+    {
+        var parts = new[]
+        {
+            source.LevelName,
+            string.IsNullOrWhiteSpace(source.GroupCode) ? null : $"Grupo {source.GroupCode}",
+            source.PhaseName
+        }.Where(part => !string.IsNullOrWhiteSpace(part)).ToArray();
+
+        if (parts.Length > 0)
+            return string.Join(" · ", parts!);
+
+        return source.PhaseId is { } phaseId
+            ? $"Fase {phaseId}"
+            : source.SourceUrl;
     }
 
     private sealed class SyncJob
@@ -179,11 +285,16 @@ public sealed class SyncOrchestrator
         private const int MaxLogs = 400;
 
         public SyncJob(string sourceUrl, SyncSourceInfo sourceInfo)
+            : this(sourceUrl, sourceInfo.Kind, sourceInfo.SourceId)
+        {
+        }
+
+        private SyncJob(string sourceUrl, string? sourceKind, int? sourceId)
         {
             JobId = Guid.NewGuid().ToString("N");
             SourceUrl = sourceUrl;
-            SourceKind = sourceInfo.Kind;
-            SourceId = sourceInfo.SourceId;
+            SourceKind = sourceKind;
+            SourceId = sourceId;
             CreatedAtUtc = DateTimeOffset.UtcNow;
         }
 
@@ -200,6 +311,11 @@ public sealed class SyncOrchestrator
         public DateTimeOffset? AnalysisUpdatedAtUtc { get; set; }
 
         private List<string> Logs { get; } = [];
+
+        public static SyncJob CreateBatch(int sourceCount)
+        {
+            return new SyncJob("Fases guardadas", "registry", sourceCount);
+        }
 
         public void AppendLog(string line)
         {
@@ -237,6 +353,7 @@ public sealed class SyncOrchestrator
         }
     }
 
+    public sealed record SyncStartResult(bool Started, SyncJobSnapshot? JobSnapshot, string? Error);
     private sealed record SyncSourceInfo(string? Kind, int? SourceId);
 
     private enum SyncJobStatus

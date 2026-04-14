@@ -28,7 +28,7 @@ export function useSyncJob(onJobSucceeded) {
     }, [job?.status]);
 
     useEffect(() => {
-        if (job?.status !== "succeeded") {
+        if (!job || job.status === "pending" || job.status === "running") {
             return;
         }
 
@@ -37,7 +37,10 @@ export function useSyncJob(onJobSucceeded) {
         }
 
         completedJobRef.current = job.jobId;
-        onJobSucceeded?.(job);
+
+        if (job.status === "succeeded" || job.analysisUpdatedAtUtc) {
+            onJobSucceeded?.(job);
+        }
     }, [job, onJobSucceeded]);
 
     async function refreshCurrentJob() {
@@ -103,12 +106,48 @@ export function useSyncJob(onJobSucceeded) {
         }
     }
 
+    async function startSyncAllSavedSources() {
+        setStarting(true);
+        setError("");
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/results-sources/sync-all`, {
+                method: "POST"
+            });
+
+            const hasJson = response.headers
+                .get("content-type")
+                ?.includes("application/json");
+            const payload = hasJson ? await response.json() : null;
+
+            if (!response.ok) {
+                setApiAvailable(true);
+
+                if (payload?.currentJob) {
+                    setJob(payload.currentJob);
+                }
+
+                throw new Error(payload?.error ?? "No se pudo arrancar la sincronización completa.");
+            }
+
+            setApiAvailable(true);
+            setJob(payload);
+            return true;
+        } catch (err) {
+            setError(String(err));
+            return false;
+        } finally {
+            setStarting(false);
+        }
+    }
+
     return {
         apiAvailable,
         starting,
         error,
         job,
         startSync,
+        startSyncAllSavedSources,
         refreshCurrentJob
     };
 }

@@ -60,6 +60,22 @@ app.MapGet("/api/results-sources", async (ResultsSourceCatalogService catalogSer
     return Results.Ok(sources);
 });
 
+app.MapPost("/api/results-sources/sync-all", async (SyncOrchestrator orchestrator) =>
+{
+    var startResult = await orchestrator.TryStartSavedSourcesAsync();
+
+    if (!startResult.Started)
+    {
+        return Results.Conflict(new
+        {
+            error = startResult.Error,
+            currentJob = startResult.JobSnapshot
+        });
+    }
+
+    return Results.Accepted("/api/sync-jobs/current", startResult.JobSnapshot);
+});
+
 app.MapPost("/api/sync-jobs", (StartSyncRequest request, SyncOrchestrator orchestrator) =>
 {
     if (string.IsNullOrWhiteSpace(request.SourceUrl))

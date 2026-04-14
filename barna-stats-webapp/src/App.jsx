@@ -378,7 +378,8 @@ function App() {
         starting: syncStarting,
         error: syncError,
         job,
-        startSync
+        startSync,
+        startSyncAllSavedSources
     } = useSyncJob(() => {
         setAnalysisVersion(Date.now());
         void refreshSavedResultsSources();
@@ -703,6 +704,7 @@ function App() {
                 savedSourcesLoading={savedResultsSourcesLoading}
                 savedSourcesError={savedResultsSourcesError}
                 onStartSync={startSync}
+                onStartSyncAllSavedSources={startSyncAllSavedSources}
             />
         </div>
     );

@@ -120,7 +120,14 @@ const styles = {
     },
     savedSourcesHeader: {
         display: "grid",
-        gap: 6
+        gap: 10
+    },
+    savedSourcesHeaderRow: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: 12,
+        flexWrap: "wrap"
     },
     savedSourcesTitle: {
         margin: 0,
@@ -213,12 +220,17 @@ function SyncPanel({
     savedSources,
     savedSourcesLoading,
     savedSourcesError,
-    onStartSync
+    onStartSync,
+    onStartSyncAllSavedSources
 }) {
     const [sourceUrl, setSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
     const scopeLabel = job?.sourceKind === "phase"
         ? `Fase ${job.sourceId ?? "-"}`
-        : `Fuente ${job?.sourceId ?? "-"}`;
+        : job?.sourceKind === "registry"
+            ? "Todas las fases guardadas"
+            : job
+                ? "Fuente manual"
+                : "";
 
     useEffect(() => {
         window.localStorage.setItem("barna-sync-source-url", sourceUrl);
@@ -254,6 +266,14 @@ function SyncPanel({
 
         setSourceUrl(savedSourceUrl);
         await onStartSync(savedSourceUrl);
+    };
+
+    const handleStartAllSavedSources = async () => {
+        if (!savedSources?.length || isBusy) {
+            return;
+        }
+
+        await onStartSyncAllSavedSources();
     };
 
     const formatSourceReference = (source) => {
@@ -317,7 +337,19 @@ function SyncPanel({
 
             <div style={styles.savedSourcesSection}>
                 <div style={styles.savedSourcesHeader}>
-                    <h3 style={styles.savedSourcesTitle}>Fases guardadas</h3>
+                    <div style={styles.savedSourcesHeaderRow}>
+                        <h3 style={styles.savedSourcesTitle}>Fases guardadas</h3>
+                        <button
+                            type="button"
+                            style={!savedSources?.length || isBusy
+                                ? {...styles.inlineButton, ...styles.mutedButton}
+                                : styles.inlineButton}
+                            disabled={!savedSources?.length || isBusy}
+                            onClick={() => void handleStartAllSavedSources()}
+                        >
+                            {isBusy ? "Sincronizando..." : "Sincronizar todo"}
+                        </button>
+                    </div>
                     <div style={styles.savedSourcesHelper}>
                         Aquí quedan registradas las URLs de resultados ya usadas para que puedas repetir la sincronización sin volver a pegarlas.
                     </div>
