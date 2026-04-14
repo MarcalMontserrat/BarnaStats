@@ -737,6 +737,7 @@ function App() {
 
     const handleTeamCategoryChange = (event) => {
         setSelectedTeamCategory(event.target.value);
+        setSelectedTeamLevel("all");
         setSelectedPhase("");
         setSelectedPlayer("");
         setSelectedMatch("");
@@ -791,21 +792,23 @@ function App() {
 
                         <div style={appStyles.heroActions}>
                             <div style={appStyles.filterDeck}>
-                                <PrettySelect
-                                    label="Categoría"
-                                    value={selectedTeamCategory}
-                                    onChange={handleTeamCategoryChange}
-                                    ariaLabel="Filtra equipos por categoría"
-                                    minWidth="220px"
-                                    labelColor="rgba(255, 247, 237, 0.82)"
-                                >
-                                    <option value="all">Todas las categorías</option>
-                                    {dashboardCategoryOptions.map((cat) => (
-                                        <option key={cat.value} value={cat.value}>
-                                            {cat.label}
-                                        </option>
-                                    ))}
-                                </PrettySelect>
+                                {dashboardCategoryOptions.length > 0 ? (
+                                    <PrettySelect
+                                        label="Categoría"
+                                        value={selectedTeamCategory}
+                                        onChange={handleTeamCategoryChange}
+                                        ariaLabel="Filtra equipos por categoría"
+                                        minWidth="220px"
+                                        labelColor="rgba(255, 247, 237, 0.82)"
+                                    >
+                                        <option value="all">Todas las categorías</option>
+                                        {dashboardCategoryOptions.map((cat) => (
+                                            <option key={cat.value} value={cat.value}>
+                                                {cat.label}
+                                            </option>
+                                        ))}
+                                    </PrettySelect>
+                                ) : null}
 
                                 <PrettySelect
                                     label="Nivel"
