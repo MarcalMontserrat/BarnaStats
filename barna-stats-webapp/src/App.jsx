@@ -605,15 +605,22 @@ function App() {
         filterCompetitionMatchesByPhaseOption(competitionMatches, effectiveCompetitionPhase),
         effectiveStandingsLevel
     );
+    const teamTotalValuationByKey = competitionPlayerLeaders.reduce((map, player) => {
+        const key = player.teamKey;
+        map.set(key, (map.get(key) ?? 0) + Number(player.valuation ?? 0));
+        return map;
+    }, new Map());
     const competitionStandingsRows = buildStandings(competitionMatchesForStandings, null)
         .map((row) => {
             const latestContext = latestTeamContexts.get(row.teamKey);
             const levelKey = String(latestContext?.levelCode ?? "").trim() || String(latestContext?.levelName ?? "").trim();
+            const totalValuation = teamTotalValuationByKey.get(row.teamKey) ?? 0;
 
             return {
                 ...row,
                 levelKey,
-                levelLabel: latestContext?.levelName ?? ""
+                levelLabel: latestContext?.levelName ?? "",
+                avgValuation: row.played > 0 ? totalValuation / row.played : 0
             };
         })
         .map((row, index) => ({

@@ -62,7 +62,7 @@ const styles = {
     },
     table: {
         width: "100%",
-        minWidth: 860,
+        minWidth: 940,
         borderCollapse: "collapse",
         background: "rgba(255, 252, 247, 0.96)"
     },
@@ -176,6 +176,7 @@ function StandingsSection({
                             <th style={styles.headerCell}>PF</th>
                             <th style={styles.headerCell}>PC</th>
                             <th style={styles.headerCell}>Dif</th>
+                            <th style={styles.headerCell}>Val.</th>
                             <th style={styles.headerCell}>Nivel</th>
                         </tr>
                         </thead>
@@ -202,6 +203,7 @@ function StandingsSection({
                                 <td style={styles.bodyCell}>{row.pointsFor}</td>
                                 <td style={styles.bodyCell}>{row.pointsAgainst}</td>
                                 <td style={styles.bodyCell}>{row.pointDiff > 0 ? `+${row.pointDiff}` : row.pointDiff}</td>
+                                <td style={styles.bodyCell}>{row.avgValuation != null ? row.avgValuation.toFixed(1) : "—"}</td>
                                 <td style={styles.bodyCell}>{row.levelLabel || "—"}</td>
                             </tr>
                         ))}
