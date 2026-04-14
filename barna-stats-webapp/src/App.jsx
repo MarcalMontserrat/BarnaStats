@@ -10,6 +10,7 @@ import MatchListSection from "./components/MatchListSection.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
 import SyncPanel from "./components/SyncPanel.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
+import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
     buildTeamRecord,
@@ -362,6 +363,12 @@ function App() {
     const [route, setRoute] = useState(() => parseHash(window.location.hash).route);
     const {analysis, loading, error} = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
     const {
+        sources: savedResultsSources,
+        loading: savedResultsSourcesLoading,
+        error: savedResultsSourcesError,
+        refreshSources: refreshSavedResultsSources
+    } = useResultsSources();
+    const {
         apiAvailable,
         starting: syncStarting,
         error: syncError,
@@ -369,6 +376,7 @@ function App() {
         startSync
     } = useSyncJob(() => {
         setAnalysisVersion(Date.now());
+        void refreshSavedResultsSources();
     });
 
     const initialHashState = parseHash(window.location.hash);
@@ -664,6 +672,9 @@ function App() {
                 job={job}
                 starting={syncStarting}
                 error={syncError}
+                savedSources={savedResultsSources}
+                savedSourcesLoading={savedResultsSourcesLoading}
+                savedSourcesError={savedResultsSourcesError}
                 onStartSync={startSync}
             />
         </div>

@@ -28,6 +28,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddSingleton(repoPaths);
 builder.Services.AddSingleton<SyncOrchestrator>();
+builder.Services.AddSingleton<ResultsSourceCatalogService>();
 
 var app = builder.Build();
 
@@ -51,6 +52,12 @@ app.MapGet("/api/sync-jobs/current", (SyncOrchestrator orchestrator) =>
     return currentJob is null
         ? Results.NoContent()
         : Results.Ok(currentJob);
+});
+
+app.MapGet("/api/results-sources", async (ResultsSourceCatalogService catalogService) =>
+{
+    var sources = await catalogService.GetAllAsync();
+    return Results.Ok(sources);
 });
 
 app.MapPost("/api/sync-jobs", (StartSyncRequest request, SyncOrchestrator orchestrator) =>

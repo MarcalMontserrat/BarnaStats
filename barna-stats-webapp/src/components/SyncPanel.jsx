@@ -72,6 +72,17 @@ const styles = {
         cursor: "not-allowed",
         boxShadow: "none"
     },
+    inlineButton: {
+        minHeight: 40,
+        padding: "0 16px",
+        borderRadius: 14,
+        border: "none",
+        background: "linear-gradient(135deg, #1a3557 0%, #bc3f2b 100%)",
+        color: "#fff8ef",
+        fontWeight: 800,
+        cursor: "pointer",
+        boxShadow: "0 12px 22px rgba(40, 30, 21, 0.12)"
+    },
     metaGrid: {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
@@ -102,6 +113,68 @@ const styles = {
         color: "#9d2618",
         fontSize: 14,
         lineHeight: 1.6
+    },
+    savedSourcesSection: {
+        display: "grid",
+        gap: 12
+    },
+    savedSourcesHeader: {
+        display: "grid",
+        gap: 6
+    },
+    savedSourcesTitle: {
+        margin: 0,
+        fontSize: "1.2rem"
+    },
+    savedSourcesHelper: {
+        color: "var(--muted)",
+        fontSize: 14,
+        lineHeight: 1.6
+    },
+    savedSourcesTableShell: {
+        overflowX: "auto",
+        borderRadius: "var(--radius-lg)",
+        border: "1px solid rgba(107, 86, 58, 0.12)",
+        background: "rgba(255, 251, 245, 0.78)"
+    },
+    savedSourcesTable: {
+        width: "100%",
+        minWidth: 760,
+        borderCollapse: "collapse"
+    },
+    savedSourcesHeaderCell: {
+        padding: "14px 16px",
+        textAlign: "left",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        color: "var(--muted)",
+        borderBottom: "1px solid rgba(107, 86, 58, 0.12)"
+    },
+    savedSourcesBodyCell: {
+        padding: "16px",
+        fontSize: 14,
+        lineHeight: 1.55,
+        borderBottom: "1px solid rgba(107, 86, 58, 0.08)",
+        verticalAlign: "middle"
+    },
+    savedSourcePrimary: {
+        fontWeight: 800,
+        color: "var(--text)"
+    },
+    savedSourceSecondary: {
+        marginTop: 4,
+        color: "var(--muted)",
+        fontSize: 12,
+        wordBreak: "break-word"
+    },
+    savedSourcesEmpty: {
+        padding: 16,
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 251, 245, 0.88)",
+        border: "1px dashed rgba(107, 86, 58, 0.16)",
+        color: "var(--muted)"
     },
     logs: {
         margin: 0,
@@ -137,6 +210,9 @@ function SyncPanel({
     job,
     starting,
     error,
+    savedSources,
+    savedSourcesLoading,
+    savedSourcesError,
     onStartSync
 }) {
     const [sourceUrl, setSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
@@ -171,6 +247,41 @@ function SyncPanel({
         await onStartSync(sourceUrl.trim());
     };
 
+    const handleStartSavedSource = async (savedSourceUrl) => {
+        if (!savedSourceUrl || isBusy) {
+            return;
+        }
+
+        setSourceUrl(savedSourceUrl);
+        await onStartSync(savedSourceUrl);
+    };
+
+    const formatSourceReference = (source) => {
+        const parts = [
+            source.levelName,
+            source.groupCode ? `Grupo ${source.groupCode}` : "",
+            source.phaseName
+        ].filter(Boolean);
+
+        if (parts.length > 0) {
+            return parts.join(" · ");
+        }
+
+        if (source.phaseId) {
+            return `Fase ${source.phaseId}`;
+        }
+
+        return "Fuente sin referencia";
+    };
+
+    const formatLastSync = (value) => {
+        if (!value) {
+            return "Nunca";
+        }
+
+        return new Date(value).toLocaleString("es-ES");
+    };
+
     return (
         <form style={styles.panel} onSubmit={handleSubmit}>
             <div style={styles.intro}>
@@ -202,6 +313,64 @@ function SyncPanel({
                 >
                     {isBusy ? "Importando..." : "Importar fase"}
                 </button>
+            </div>
+
+            <div style={styles.savedSourcesSection}>
+                <div style={styles.savedSourcesHeader}>
+                    <h3 style={styles.savedSourcesTitle}>Fases guardadas</h3>
+                    <div style={styles.savedSourcesHelper}>
+                        Aquí quedan registradas las URLs de resultados ya usadas para que puedas repetir la sincronización sin volver a pegarlas.
+                    </div>
+                </div>
+
+                {savedSourcesLoading ? (
+                    <div style={styles.savedSourcesEmpty}>Cargando fases guardadas...</div>
+                ) : savedSourcesError ? (
+                    <div style={styles.error}>{savedSourcesError}</div>
+                ) : savedSources?.length ? (
+                    <div style={styles.savedSourcesTableShell}>
+                        <table style={styles.savedSourcesTable}>
+                            <thead>
+                            <tr>
+                                <th style={styles.savedSourcesHeaderCell}>Referencia</th>
+                                <th style={styles.savedSourcesHeaderCell}>Categoría</th>
+                                <th style={styles.savedSourcesHeaderCell}>Última sincronización</th>
+                                <th style={styles.savedSourcesHeaderCell}>Acción</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {savedSources.map((source) => (
+                                <tr key={source.sourceUrl}>
+                                    <td style={styles.savedSourcesBodyCell}>
+                                        <div style={styles.savedSourcePrimary}>{formatSourceReference(source)}</div>
+                                        <div style={styles.savedSourceSecondary}>{source.sourceUrl}</div>
+                                    </td>
+                                    <td style={styles.savedSourcesBodyCell}>
+                                        {source.categoryName || "Sin categoría"}
+                                    </td>
+                                    <td style={styles.savedSourcesBodyCell}>
+                                        {formatLastSync(source.lastSyncedAtUtc)}
+                                    </td>
+                                    <td style={styles.savedSourcesBodyCell}>
+                                        <button
+                                            type="button"
+                                            style={isBusy ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
+                                            disabled={isBusy}
+                                            onClick={() => void handleStartSavedSource(source.sourceUrl)}
+                                        >
+                                            Sincronizar
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
+                ) : (
+                    <div style={styles.savedSourcesEmpty}>
+                        Todavía no hay fases guardadas. Cuando sincronices una URL de resultados, aparecerá aquí.
+                    </div>
+                )}
             </div>
 
             {job ? (

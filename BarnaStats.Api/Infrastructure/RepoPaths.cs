@@ -7,11 +7,13 @@ public sealed class RepoPaths
         RepoRoot = repoRoot;
         BarnaStatsProjectFile = Path.Combine(repoRoot, "BarnaStats", "BarnaStats.csproj");
         AnalysisJson = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data", "analysis.json");
+        ResultsSourcesRegistryFile = Path.Combine(repoRoot, "BarnaStats", "out", "results_sources.json");
     }
 
     public string RepoRoot { get; }
     public string BarnaStatsProjectFile { get; }
     public string AnalysisJson { get; }
+    public string ResultsSourcesRegistryFile { get; }
 
     public static RepoPaths ResolveDefault()
     {

@@ -186,6 +186,16 @@ async Task<bool> ExecuteSyncMappingsAsync(
             await SavePhaseMetadataAsync(storage.PhaseMetadataFile, syncResult.PhaseMetadata, jsonOptions);
         }
 
+        if (!string.IsNullOrWhiteSpace(sourceUrl))
+        {
+            await SaveResultsSourceRegistryEntryAsync(
+                paths.ResultsSourcesRegistryFile,
+                sourceUrl,
+                storage,
+                syncResult.PhaseMetadata,
+                jsonOptions);
+        }
+
         Console.WriteLine();
 
         if (syncResult.TargetMatchWebIds.Count == 0)
@@ -338,6 +348,64 @@ async Task SavePhaseMetadataAsync(string phaseMetadataFile, PhaseMetadata metada
     await File.WriteAllTextAsync(phaseMetadataFile, json);
 }
 
+async Task SaveResultsSourceRegistryEntryAsync(
+    string registryFile,
+    string sourceUrl,
+    TeamStoragePaths storage,
+    PhaseMetadata? phaseMetadata,
+    JsonSerializerOptions options)
+{
+    var entries = await LoadResultsSourceRegistryAsync(registryFile, options);
+    var now = DateTimeOffset.UtcNow;
+    var normalizedSourceUrl = sourceUrl.Trim();
+    var phaseId = phaseMetadata?.PhaseId
+                  ?? (storage.Scope.Kind == StorageScopeKind.Phase ? storage.Scope.Id : null);
+
+    var existingEntry = entries.FirstOrDefault(entry =>
+        string.Equals(entry.SourceUrl, normalizedSourceUrl, StringComparison.OrdinalIgnoreCase) ||
+        (phaseId.HasValue && entry.PhaseId == phaseId));
+
+    if (existingEntry is null)
+    {
+        existingEntry = new ResultsSourceRegistryEntry
+        {
+            SourceUrl = normalizedSourceUrl,
+            PhaseId = phaseId,
+            CreatedAtUtc = now
+        };
+        entries.Add(existingEntry);
+    }
+
+    existingEntry.SourceUrl = normalizedSourceUrl;
+    existingEntry.PhaseId = phaseId;
+    existingEntry.CategoryName = phaseMetadata?.CategoryName ?? existingEntry.CategoryName;
+    existingEntry.PhaseName = phaseMetadata?.PhaseName ?? existingEntry.PhaseName;
+    existingEntry.LevelName = phaseMetadata?.LevelName ?? existingEntry.LevelName;
+    existingEntry.LevelCode = phaseMetadata?.LevelCode ?? existingEntry.LevelCode;
+    existingEntry.GroupCode = phaseMetadata?.GroupCode ?? existingEntry.GroupCode;
+    existingEntry.LastSyncedAtUtc = now;
+
+    var orderedEntries = entries
+        .OrderBy(entry => entry.CategoryName, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(entry => entry.LevelName, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(entry => entry.GroupCode, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(entry => entry.PhaseName, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(entry => entry.PhaseId ?? int.MaxValue)
+        .ToList();
+
+    var json = JsonSerializer.Serialize(orderedEntries, options);
+    await File.WriteAllTextAsync(registryFile, json);
+}
+
+async Task<List<ResultsSourceRegistryEntry>> LoadResultsSourceRegistryAsync(string registryFile, JsonSerializerOptions options)
+{
+    if (!File.Exists(registryFile))
+        return [];
+
+    var json = await File.ReadAllTextAsync(registryFile);
+    return JsonSerializer.Deserialize<List<ResultsSourceRegistryEntry>>(json, options) ?? [];
+}
+
 void PrintHelp()
 {
     Console.WriteLine("Uso:");
@@ -366,6 +434,7 @@ void PrintHelp()
     Console.WriteLine("    Igual que sync-all, pero sin pedir ENTER en consola mientras resuelves captcha.");
     Console.WriteLine();
     Console.WriteLine("  Estructura por scope:");
+    Console.WriteLine("    BarnaStats/out/results_sources.json");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/match_mapping.json");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/phase_metadata.json");
     Console.WriteLine("    BarnaStats/out/phases/{phaseId}/stats");
