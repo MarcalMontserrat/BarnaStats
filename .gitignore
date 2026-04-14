@@ -22,6 +22,7 @@
 !.env.example
 
 # Generated analysis artifacts
+/out/
 BarnaStats/out/
 barna-stats-webapp/public/data/*.csv
 

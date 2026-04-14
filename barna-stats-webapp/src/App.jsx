@@ -1,14 +1,5 @@
-import {useEffect, useState} from "react";
-import GlobalLeadersSection from "./components/GlobalLeadersSection.jsx";
-import PhaseComparisonSection from "./components/PhaseComparisonSection.jsx";
-import StandingsSection from "./components/StandingsSection.jsx";
-import CompetitionResultsSection from "./components/CompetitionResultsSection.jsx";
-import TeamLeadersSection from "./components/TeamLeadersSection.jsx";
-import TeamSnapshotSection from "./components/TeamSnapshotSection.jsx";
-import PlayerEvolutionSection from "./components/PlayerEvolutionSection.jsx";
-import MatchListSection from "./components/MatchListSection.jsx";
+import {lazy, Suspense, useEffect, useState} from "react";
 import PrettySelect from "./components/PrettySelect.jsx";
-import SyncPanel from "./components/SyncPanel.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
@@ -39,6 +30,16 @@ import {
     sortMatches,
     sortPlayers
 } from "./utils/playerStats.js";
+
+const GlobalLeadersSection = lazy(() => import("./components/GlobalLeadersSection.jsx"));
+const PhaseComparisonSection = lazy(() => import("./components/PhaseComparisonSection.jsx"));
+const StandingsSection = lazy(() => import("./components/StandingsSection.jsx"));
+const CompetitionResultsSection = lazy(() => import("./components/CompetitionResultsSection.jsx"));
+const TeamLeadersSection = lazy(() => import("./components/TeamLeadersSection.jsx"));
+const TeamSnapshotSection = lazy(() => import("./components/TeamSnapshotSection.jsx"));
+const PlayerEvolutionSection = lazy(() => import("./components/PlayerEvolutionSection.jsx"));
+const MatchListSection = lazy(() => import("./components/MatchListSection.jsx"));
+const SyncPanel = lazy(() => import("./components/SyncPanel.jsx"));
 
 const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
@@ -244,6 +245,14 @@ const appStyles = {
         border: "1px solid var(--border)",
         color: "var(--muted)"
     },
+    loadingCard: {
+        padding: 24,
+        borderRadius: "var(--radius-lg)",
+        background: "rgba(255, 251, 245, 0.86)",
+        border: "1px solid rgba(107, 86, 58, 0.12)",
+        boxShadow: "var(--shadow-sm)",
+        color: "var(--muted)"
+    },
     syncPage: {
         display: "grid",
         gap: 18,
@@ -341,6 +350,14 @@ const appStyles = {
         fontWeight: 800
     }
 };
+
+function SectionFallback({message}) {
+    return (
+        <div style={appStyles.loadingCard}>
+            {message}
+        </div>
+    );
+}
 
 function parseHash(hash) {
     if (hash === SYNC_ROUTE) {
@@ -636,51 +653,61 @@ function App() {
                     </div>
                 </section>
 
-                <TeamSnapshotSection
-                    seasonLabel={seasonLabel}
-                    currentLevelLabel={selectedPhaseValue === null
-                        ? (selectedTeamLatestContext?.levelName ?? "")
-                        : (selectedTeamPhaseContext?.levelName ?? "")}
-                    record={teamRecord}
-                    standingRow={selectedTeamStanding}
-                    standingLabel={standingLabel}
-                    bestWinStreak={bestWinStreak}
-                    teamAveragePoints={teamAvg}
-                    topScorer={topScorer}
-                    mvp={mvp}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
+                    <TeamSnapshotSection
+                        seasonLabel={seasonLabel}
+                        currentLevelLabel={selectedPhaseValue === null
+                            ? (selectedTeamLatestContext?.levelName ?? "")
+                            : (selectedTeamPhaseContext?.levelName ?? "")}
+                        record={teamRecord}
+                        standingRow={selectedTeamStanding}
+                        standingLabel={standingLabel}
+                        bestWinStreak={bestWinStreak}
+                        teamAveragePoints={teamAvg}
+                        topScorer={topScorer}
+                        mvp={mvp}
+                    />
+                </Suspense>
 
-                <TeamLeadersSection
-                    teamName={selectedTeam.teamName}
-                    seasonLabel={seasonLabel}
-                    matchesCount={sortedMatches.length}
-                    playersCount={playersArray.length}
-                    leadersByAvgValuation={teamLeadersByAvgValuation}
-                    leadersByPoints={teamLeadersByPoints}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando líderes del equipo..." />}>
+                    <TeamLeadersSection
+                        teamName={selectedTeam.teamName}
+                        seasonLabel={seasonLabel}
+                        matchesCount={sortedMatches.length}
+                        playersCount={playersArray.length}
+                        leadersByAvgValuation={teamLeadersByAvgValuation}
+                        leadersByPoints={teamLeadersByPoints}
+                    />
+                </Suspense>
 
-                <PhaseComparisonSection
-                    phaseSummaries={phaseSummaries}
-                    comparison={phaseComparison}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando comparativa por fases..." />}>
+                    <PhaseComparisonSection
+                        phaseSummaries={phaseSummaries}
+                        comparison={phaseComparison}
+                    />
+                </Suspense>
 
-                <PlayerEvolutionSection
-                    playersList={playersList}
-                    selectedPlayer={effectiveSelectedPlayer}
-                    onSelectedPlayerChange={handlePlayerChange}
-                    chartData={chartData}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando evolución por jugadora..." />}>
+                    <PlayerEvolutionSection
+                        playersList={playersList}
+                        selectedPlayer={effectiveSelectedPlayer}
+                        onSelectedPlayerChange={handlePlayerChange}
+                        chartData={chartData}
+                    />
+                </Suspense>
 
-                <MatchListSection
-                    sortedMatches={sortedMatches}
-                    visibleMatches={visibleMatches}
-                    selectedMatch={selectedMatch}
-                    onSelectedMatchChange={setSelectedMatch}
-                    selectedPhase={selectedPhaseValue}
-                    openMatches={openMatches}
-                    onToggleMatch={handleToggleMatch}
-                    onTeamNavigate={handleTeamNavigate}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando detalle de partidos..." />}>
+                    <MatchListSection
+                        sortedMatches={sortedMatches}
+                        visibleMatches={visibleMatches}
+                        selectedMatch={selectedMatch}
+                        onSelectedMatchChange={setSelectedMatch}
+                        selectedPhase={selectedPhaseValue}
+                        openMatches={openMatches}
+                        onToggleMatch={handleToggleMatch}
+                        onTeamNavigate={handleTeamNavigate}
+                    />
+                </Suspense>
             </>
         );
     };
@@ -695,17 +722,19 @@ function App() {
                 </p>
             </section>
 
-            <SyncPanel
-                apiAvailable={apiAvailable}
-                job={job}
-                starting={syncStarting}
-                error={syncError}
-                savedSources={savedResultsSources}
-                savedSourcesLoading={savedResultsSourcesLoading}
-                savedSourcesError={savedResultsSourcesError}
-                onStartSync={startSync}
-                onStartSyncAllSavedSources={startSyncAllSavedSources}
-            />
+            <Suspense fallback={<SectionFallback message="Cargando panel de sincronización..." />}>
+                <SyncPanel
+                    apiAvailable={apiAvailable}
+                    job={job}
+                    starting={syncStarting}
+                    error={syncError}
+                    savedSources={savedResultsSources}
+                    savedSourcesLoading={savedResultsSourcesLoading}
+                    savedSourcesError={savedResultsSourcesError}
+                    onStartSync={startSync}
+                    onStartSyncAllSavedSources={startSyncAllSavedSources}
+                />
+            </Suspense>
         </div>
     );
 
@@ -745,41 +774,47 @@ function App() {
             </section>
 
             {activeCompetitionTab.id === "standings" ? (
-                <StandingsSection
-                    rows={competitionStandingsRows}
-                    phaseOptions={competitionPhaseOptions}
-                    selectedPhase={effectiveCompetitionPhase}
-                    onSelectedPhaseChange={handleStandingsPhaseChange}
-                    showLevelFilter={shouldFilterStandingsByLevel}
-                    levelOptions={standingsLevelOptions}
-                    selectedLevel={shouldFilterStandingsByLevel ? effectiveStandingsLevel : "all"}
-                    onSelectedLevelChange={setSelectedStandingsLevel}
-                    selectedTeamKey={effectiveTeamKey}
-                    onTeamNavigate={handleTeamNavigate}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando clasificación..." />}>
+                    <StandingsSection
+                        rows={competitionStandingsRows}
+                        phaseOptions={competitionPhaseOptions}
+                        selectedPhase={effectiveCompetitionPhase}
+                        onSelectedPhaseChange={handleStandingsPhaseChange}
+                        showLevelFilter={shouldFilterStandingsByLevel}
+                        levelOptions={standingsLevelOptions}
+                        selectedLevel={shouldFilterStandingsByLevel ? effectiveStandingsLevel : "all"}
+                        onSelectedLevelChange={setSelectedStandingsLevel}
+                        selectedTeamKey={effectiveTeamKey}
+                        onTeamNavigate={handleTeamNavigate}
+                    />
+                </Suspense>
             ) : null}
 
             {activeCompetitionTab.id === "matches" ? (
-                <CompetitionResultsSection
-                    matches={competitionMatches}
-                    phaseOptions={competitionPhaseOptions}
-                    selectedPhase={effectiveResultsPhase}
-                    onSelectedPhaseChange={setSelectedResultsPhase}
-                    selectedTeamKey={effectiveTeamKey}
-                    onTeamNavigate={handleTeamNavigate}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
+                    <CompetitionResultsSection
+                        matches={competitionMatches}
+                        phaseOptions={competitionPhaseOptions}
+                        selectedPhase={effectiveResultsPhase}
+                        onSelectedPhaseChange={setSelectedResultsPhase}
+                        selectedTeamKey={effectiveTeamKey}
+                        onTeamNavigate={handleTeamNavigate}
+                    />
+                </Suspense>
             ) : null}
 
             {activeCompetitionTab.id === "leaders" ? (
-                <GlobalLeadersSection
-                    totalPlayers={competitionPlayerLeaders.length}
-                    totalTeams={competition?.totalTeams ?? teams.length}
-                    leadersByAvgValuation={globalLeadersByAvgValuation}
-                    leadersByPoints={globalLeadersByPoints}
-                    rankingMinGames={rankingMinGames}
-                    onRankingMinGamesChange={setRankingMinGames}
-                    onTeamNavigate={handleTeamNavigate}
-                />
+                <Suspense fallback={<SectionFallback message="Cargando líderes globales..." />}>
+                    <GlobalLeadersSection
+                        totalPlayers={competitionPlayerLeaders.length}
+                        totalTeams={competition?.totalTeams ?? teams.length}
+                        leadersByAvgValuation={globalLeadersByAvgValuation}
+                        leadersByPoints={globalLeadersByPoints}
+                        rankingMinGames={rankingMinGames}
+                        onRankingMinGamesChange={setRankingMinGames}
+                        onTeamNavigate={handleTeamNavigate}
+                    />
+                </Suspense>
             ) : null}
         </div>
     );
