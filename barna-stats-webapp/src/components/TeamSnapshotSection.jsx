@@ -158,9 +158,9 @@ function TeamSnapshotSection({
         <section style={styles.section}>
             <div style={styles.header}>
                 <div style={styles.eyebrow}>Resumen del equipo</div>
-                <h2 style={styles.title}>Dónde está el equipo ahora</h2>
+                <h2 style={styles.title}>En qué punto está el equipo</h2>
                 <p style={styles.subtitle}>
-                    Una lectura rápida del tramo que tienes filtrado para entender balance, posición y quién está tirando del carro.
+                    Una lectura rápida del tramo filtrado para situar al equipo, ver su balance y detectar quién está marcando diferencias.
                 </p>
             </div>
 
@@ -190,7 +190,7 @@ function TeamSnapshotSection({
                     <div style={styles.metricCard}>
                         <div style={styles.metricLabel}>Mejor racha</div>
                         <div style={styles.metricValue}>{bestWinStreak}</div>
-                        <div style={styles.metricSubtitle}>Victorias consecutivas en este tramo.</div>
+                        <div style={styles.metricSubtitle}>Victorias seguidas en el tramo visible.</div>
                     </div>
 
                     <div style={styles.metricCard}>
@@ -214,7 +214,7 @@ function TeamSnapshotSection({
                         <div style={styles.spotlightMeta}>
                             {topScorer
                                 ? `${formatAverage(topScorer.avgPoints)} por partido en ${topScorer.games} encuentros.`
-                                : "No hay suficientes partidos para destacarla todavía."}
+                                : "Aún no hay datos suficientes para destacarla."}
                         </div>
                     </div>
 
@@ -225,7 +225,7 @@ function TeamSnapshotSection({
                         <div style={styles.spotlightMeta}>
                             {mvp
                                 ? `${formatAverage(mvp.avgValuation)} de media en ${mvp.games} partidos.`
-                                : "No hay suficientes partidos para destacarla todavía."}
+                                : "Aún no hay datos suficientes para destacarla."}
                         </div>
                     </div>
                 </div>

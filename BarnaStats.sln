@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateAnalisys", "Generat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarnaStats.Api", "BarnaStats.Api\BarnaStats.Api.csproj", "{D67F70CB-6B6E-4BE4-A850-AF2C11CA0B51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateAnalisys.Tests", "GenerateAnalisys.Tests\GenerateAnalisys.Tests.csproj", "{C480C3B3-AADC-4771-8856-2DFB9524F573}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,18 @@ Global
 		{D67F70CB-6B6E-4BE4-A850-AF2C11CA0B51}.Release|x64.Build.0 = Release|Any CPU
 		{D67F70CB-6B6E-4BE4-A850-AF2C11CA0B51}.Release|x86.ActiveCfg = Release|Any CPU
 		{D67F70CB-6B6E-4BE4-A850-AF2C11CA0B51}.Release|x86.Build.0 = Release|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Debug|x64.Build.0 = Debug|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Debug|x86.Build.0 = Debug|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Release|x64.ActiveCfg = Release|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Release|x64.Build.0 = Release|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Release|x86.ActiveCfg = Release|Any CPU
+		{C480C3B3-AADC-4771-8856-2DFB9524F573}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

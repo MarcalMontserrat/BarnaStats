@@ -120,7 +120,7 @@ function StandingsSection({
             <div style={styles.header}>
                 <div style={styles.titleBlock}>
                     <div style={styles.eyebrow}>Clasificación</div>
-                    <h2 style={styles.title}>Cómo está la competición</h2>
+                    <h2 style={styles.title}>Cómo va la competición</h2>
                     <p style={styles.subtitle}>
                         Tabla de la fase elegida para situar al equipo seleccionado y abrir cualquier rival con un clic.
                     </p>

@@ -908,7 +908,7 @@ function App() {
                 <div style={appStyles.syncEyebrow}>Competición</div>
                 <h2 style={appStyles.syncTitle}>Clasificación, resultados y líderes globales</h2>
                 <p style={appStyles.syncBody}>
-                    Aquí tienes la lectura global de la competición: clasificación, partidos jugados y jugadoras destacadas en un mismo espacio.
+                    Vista global de la competición para seguir la clasificación, revisar los partidos y localizar a las jugadoras más destacadas.
                 </p>
             </section>
 
@@ -1002,10 +1002,10 @@ function App() {
             ? "Competición"
             : "Cuaderno de juego";
     const pageNote = route === "sync"
-        ? "Añade nuevas fases desde la fuente oficial sin pasar por la terminal."
+        ? "Carga nuevas fases desde la fuente oficial sin pasar por la terminal."
         : route === "competition"
-            ? "Clasificación, resultados y líderes individuales en un espacio separado del análisis propio de cada equipo."
-            : "Sigue la temporada por equipo y por fase, con detalle de cada partido y lectura visual de su evolución.";
+            ? "Clasificación, resultados y líderes individuales, separados del panel de cada equipo."
+            : "Sigue la temporada por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.";
 
     return (
         <div style={appStyles.page}>
@@ -1027,7 +1027,7 @@ function App() {
                                 ? {...appStyles.navLink, ...appStyles.navLinkActive}
                                 : appStyles.navLink}
                         >
-                            Resultados
+                            Panel
                         </a>
                         {syncUiEnabled ? (
                             <a

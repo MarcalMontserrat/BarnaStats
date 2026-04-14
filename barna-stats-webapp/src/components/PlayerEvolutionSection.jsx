@@ -69,7 +69,7 @@ function PlayerEvolutionSection({
     return (
         <section style={styles.panel}>
             <div style={styles.header}>
-                <div style={styles.eyebrow}>Tracking</div>
+                <div style={styles.eyebrow}>Seguimiento</div>
                 <h2 style={styles.title}>Evolución por jugadora</h2>
                 <p style={styles.subtitle}>
                     Sigue la progresión de puntos y valoración a lo largo de la temporada o de la fase filtrada.

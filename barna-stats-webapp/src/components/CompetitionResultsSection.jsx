@@ -203,7 +203,7 @@ function CompetitionResultsSection({
                     <div style={styles.eyebrow}>Resultados</div>
                     <h2 style={styles.title}>Partidos de la competición</h2>
                     <p style={styles.subtitle}>
-                        Recorrido completo de los encuentros cargados, ordenados del más reciente al más antiguo.
+                        Consulta los partidos cargados, ordenados del más reciente al más antiguo.
                     </p>
                 </div>
 
