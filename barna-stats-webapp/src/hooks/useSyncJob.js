@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from "react";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 
-export function useSyncJob(onJobSucceeded) {
+export function useSyncJob(enabled = true, onJobSucceeded) {
     const [job, setJob] = useState(null);
     const [apiAvailable, setApiAvailable] = useState(true);
     const [starting, setStarting] = useState(false);
@@ -10,10 +10,18 @@ export function useSyncJob(onJobSucceeded) {
     const completedJobRef = useRef("");
 
     useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+
         void refreshCurrentJob();
-    }, []);
+    }, [enabled]);
 
     useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+
         if (job?.status !== "pending" && job?.status !== "running") {
             return undefined;
         }
@@ -41,9 +49,13 @@ export function useSyncJob(onJobSucceeded) {
         if (job.status === "succeeded" || job.analysisUpdatedAtUtc) {
             onJobSucceeded?.(job);
         }
-    }, [job, onJobSucceeded]);
+    }, [enabled, job, onJobSucceeded]);
 
     async function refreshCurrentJob() {
+        if (!enabled) {
+            return;
+        }
+
         try {
             const response = await fetch(`${API_BASE_URL}/api/sync-jobs/current`);
 
@@ -68,6 +80,10 @@ export function useSyncJob(onJobSucceeded) {
     }
 
     async function startSync(sourceUrl) {
+        if (!enabled) {
+            return false;
+        }
+
         setStarting(true);
         setError("");
 
@@ -110,6 +126,10 @@ export function useSyncJob(onJobSucceeded) {
     }
 
     async function startSyncAllSavedSources() {
+        if (!enabled) {
+            return false;
+        }
+
         setStarting(true);
         setError("");
 
@@ -145,10 +165,10 @@ export function useSyncJob(onJobSucceeded) {
     }
 
     return {
-        apiAvailable,
-        starting,
-        error,
-        job,
+        apiAvailable: enabled ? apiAvailable : false,
+        starting: enabled ? starting : false,
+        error: enabled ? error : "",
+        job: enabled ? job : null,
         startSync,
         startSyncAllSavedSources,
         refreshCurrentJob

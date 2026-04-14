@@ -381,19 +381,20 @@ function parseHash(hash) {
 }
 
 function App() {
+    const syncUiEnabled = import.meta.env.VITE_ENABLE_SYNC_UI !== "false";
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
     const [route, setRoute] = useState(() => parseHash(window.location.hash).route);
     const {
         analysis: analysisIndex,
         loading: analysisIndexLoading,
         error: analysisIndexError
-    } = useAnalysisData(`/data/analysis.json?v=${analysisVersion}`);
+    } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
     const {
         sources: savedResultsSources,
         loading: savedResultsSourcesLoading,
         error: savedResultsSourcesError,
         refreshSources: refreshSavedResultsSources
-    } = useResultsSources();
+    } = useResultsSources(syncUiEnabled);
     const {
         apiAvailable,
         starting: syncStarting,
@@ -401,7 +402,7 @@ function App() {
         job,
         startSync,
         startSyncAllSavedSources
-    } = useSyncJob(() => {
+    } = useSyncJob(syncUiEnabled, () => {
         setAnalysisVersion(Date.now());
         void refreshSavedResultsSources();
     });
@@ -442,6 +443,14 @@ function App() {
         };
     }, []);
 
+    useEffect(() => {
+        if (syncUiEnabled || route !== "sync") {
+            return;
+        }
+
+        window.location.hash = DASHBOARD_ROUTE;
+    }, [route, syncUiEnabled]);
+
     const teams = analysisIndex?.teams ?? [];
     const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
     const defaultTeam = teams.reduce((best, team) => {
@@ -474,7 +483,7 @@ function App() {
         error: competitionError
     } = useAnalysisData(
         shouldLoadCompetition
-            ? `/data/competition.json?v=${analysisVersion}`
+            ? `data/competition.json?v=${analysisVersion}`
             : null
     );
     const {
@@ -483,7 +492,7 @@ function App() {
         error: selectedTeamMatchesError
     } = useAnalysisData(
         shouldLoadTeamMatches
-            ? `/data/${selectedTeamSummary.matchesFile}?v=${analysisVersion}`
+            ? `data/${selectedTeamSummary.matchesFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -492,7 +501,7 @@ function App() {
         error: selectedTeamPlayersError
     } = useAnalysisData(
         shouldLoadTeamPlayers
-            ? `/data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
+            ? `data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
             : null
     );
     const teamPlayers = Array.isArray(selectedTeamPlayers) ? selectedTeamPlayers : [];
@@ -915,18 +924,20 @@ function App() {
                         >
                             Resultados
                         </a>
-                        <a
-                            href={SYNC_ROUTE}
-                            style={route === "sync"
-                                ? {...appStyles.navLink, ...appStyles.navLinkActive}
-                                : appStyles.navLink}
-                        >
-                            Cargar fase
-                        </a>
+                        {syncUiEnabled ? (
+                            <a
+                                href={SYNC_ROUTE}
+                                style={route === "sync"
+                                    ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                    : appStyles.navLink}
+                            >
+                                Cargar fase
+                            </a>
+                        ) : null}
                     </div>
                 </div>
 
-                {route === "sync"
+                {route === "sync" && syncUiEnabled
                     ? renderSyncPage()
                     : route === "competition"
                         ? renderCompetitionPage()

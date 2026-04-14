@@ -84,3 +84,24 @@ dotnet run --project GenerateAnalisys/GenerateAnalisys.csproj
 ```
 
 El análisis publicado para la web queda en `barna-stats-webapp/public/data/analysis.json`.
+
+## GitHub Pages
+
+El repo queda preparado para publicar la parte web en GitHub Pages como sitio estático.
+
+- El workflow está en `.github/workflows/deploy-pages.yml`.
+- En Pages solo se publica la app React y los JSON generados de `barna-stats-webapp/public/data`.
+- La parte de sincronización no aparece en GitHub Pages, porque allí no existe la API local ni el pipeline `.NET`.
+
+Para que funcione bien al publicar:
+
+- mantén commiteados `barna-stats-webapp/public/data/analysis.json`
+- mantén commiteados `barna-stats-webapp/public/data/competition.json`
+- mantén commiteado `barna-stats-webapp/public/data/teams/`
+
+La ingesta y regeneración de datos sigue siendo local:
+
+```bash
+dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all https://www.basquetcatala.cat/competicions/resultats/20855/0
+dotnet run --project GenerateAnalisys/GenerateAnalisys.csproj
+```

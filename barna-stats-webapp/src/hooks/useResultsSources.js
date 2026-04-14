@@ -2,16 +2,24 @@ import {useEffect, useState} from "react";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 
-export function useResultsSources() {
+export function useResultsSources(enabled = true) {
     const [sources, setSources] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
     useEffect(() => {
+        if (!enabled) {
+            return undefined;
+        }
+
         void refreshSources();
-    }, []);
+    }, [enabled]);
 
     async function refreshSources() {
+        if (!enabled) {
+            return;
+        }
+
         setLoading(true);
 
         try {
@@ -32,9 +40,9 @@ export function useResultsSources() {
     }
 
     return {
-        sources,
-        loading,
-        error,
+        sources: enabled ? sources : [],
+        loading: enabled ? loading : false,
+        error: enabled ? error : "",
         refreshSources
     };
 }
