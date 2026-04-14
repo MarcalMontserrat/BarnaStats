@@ -259,6 +259,9 @@ function GlobalLeadersSection({
     levelOptions,
     selectedLevel,
     onSelectedLevelChange,
+    categoryOptions,
+    selectedCategory,
+    onSelectedCategoryChange,
     rankingMinGames,
     onRankingMinGamesChange,
     onTeamNavigate
@@ -277,6 +280,22 @@ function GlobalLeadersSection({
 
                 <div style={styles.filtersCard}>
                     <div style={styles.filtersRow}>
+                        {categoryOptions?.length > 0 ? (
+                            <PrettySelect
+                                label="Categoría"
+                                value={String(selectedCategory ?? "all")}
+                                onChange={(event) => onSelectedCategoryChange(event.target.value)}
+                                ariaLabel="Selecciona categoría para los rankings de jugadoras"
+                                minWidth="240px"
+                            >
+                                <option value="all">Todas las categorías</option>
+                                {categoryOptions.map((cat) => (
+                                    <option key={cat.value} value={cat.value}>
+                                        {cat.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
                         {levelOptions.length > 0 ? (
                             <PrettySelect
                                 label="Nivel"

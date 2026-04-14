@@ -112,6 +112,9 @@ function StandingsSection({
     levelOptions,
     selectedLevel,
     onSelectedLevelChange,
+    categoryOptions,
+    selectedCategory,
+    onSelectedCategoryChange,
     selectedTeamKey,
     onTeamNavigate
 }) {
@@ -128,6 +131,22 @@ function StandingsSection({
 
                 <div style={styles.filtersCard}>
                     <div style={styles.filtersRow}>
+                        {categoryOptions?.length > 0 ? (
+                            <PrettySelect
+                                label="Categoría"
+                                value={String(selectedCategory ?? "all")}
+                                onChange={(event) => onSelectedCategoryChange(event.target.value)}
+                                ariaLabel="Selecciona categoría para la clasificación"
+                                minWidth="220px"
+                            >
+                                <option value="all">Todas las categorías</option>
+                                {categoryOptions.map((cat) => (
+                                    <option key={cat.value} value={cat.value}>
+                                        {cat.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
                         <PrettySelect
                             label="Fase"
                             value={String(selectedPhase ?? "")}

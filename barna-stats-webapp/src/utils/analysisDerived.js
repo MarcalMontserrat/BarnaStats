@@ -421,6 +421,34 @@ export function buildLevelOptionsFromRows(rows) {
     return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
 }
 
+export function buildCategoryOptionsFromRows(rows) {
+    const options = new Map();
+
+    (rows ?? []).forEach((row) => {
+        const value = String(row?.categoryName ?? "").trim();
+
+        if (!value || options.has(value)) {
+            return;
+        }
+
+        options.set(value, {value, label: value});
+    });
+
+    return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
+}
+
+export function buildCategoryOptions(teamContexts) {
+    return buildCategoryOptionsFromRows([...(teamContexts?.values?.() ?? [])]);
+}
+
+export function filterRowsByCategory(rows, categoryValue) {
+    if (!categoryValue || categoryValue === "all") {
+        return rows ?? [];
+    }
+
+    return (rows ?? []).filter((row) => String(row?.categoryName ?? "").trim() === String(categoryValue));
+}
+
 export function filterRowsByLevel(rows, levelValue) {
     if (!levelValue || levelValue === "all") {
         return rows ?? [];
