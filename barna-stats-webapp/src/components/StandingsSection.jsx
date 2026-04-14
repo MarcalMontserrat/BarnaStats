@@ -15,17 +15,10 @@ const styles = {
         display: "grid",
         gap: 16
     },
-    headerTop: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
-        gap: 16,
-        flexWrap: "wrap"
-    },
     titleBlock: {
         display: "grid",
         gap: 8,
-        minWidth: "min(100%, 520px)"
+        maxWidth: 760
     },
     eyebrow: {
         color: "var(--accent)",
@@ -42,11 +35,19 @@ const styles = {
         maxWidth: 760,
         lineHeight: 1.6
     },
-    controlBlock: {
+    filtersCard: {
         display: "grid",
-        gap: 8,
-        justifyItems: "end",
-        flex: "0 0 auto"
+        gap: 10,
+        padding: "16px 18px",
+        borderRadius: "var(--radius-lg)",
+        background: "rgba(255, 249, 242, 0.82)",
+        border: "1px solid rgba(107, 86, 58, 0.12)"
+    },
+    filtersRow: {
+        display: "flex",
+        gap: 14,
+        flexWrap: "wrap",
+        alignItems: "end"
     },
     controlHint: {
         color: "var(--muted)",
@@ -117,16 +118,16 @@ function StandingsSection({
     return (
         <section style={styles.section}>
             <div style={styles.header}>
-                <div style={styles.headerTop}>
-                    <div style={styles.titleBlock}>
-                        <div style={styles.eyebrow}>Clasificación</div>
-                        <h2 style={styles.title}>Cómo está la competición</h2>
-                        <p style={styles.subtitle}>
-                            Tabla de la fase elegida para situar al equipo seleccionado y abrir cualquier rival con un clic.
-                        </p>
-                    </div>
+                <div style={styles.titleBlock}>
+                    <div style={styles.eyebrow}>Clasificación</div>
+                    <h2 style={styles.title}>Cómo está la competición</h2>
+                    <p style={styles.subtitle}>
+                        Tabla de la fase elegida para situar al equipo seleccionado y abrir cualquier rival con un clic.
+                    </p>
+                </div>
 
-                    <div style={styles.controlBlock}>
+                <div style={styles.filtersCard}>
+                    <div style={styles.filtersRow}>
                         <PrettySelect
                             label="Fase"
                             value={String(selectedPhase ?? "")}
@@ -157,8 +158,8 @@ function StandingsSection({
                                 ))}
                             </PrettySelect>
                         ) : null}
-                        <span style={styles.controlHint}>Estos filtros solo afectan a la clasificación.</span>
                     </div>
+                    <span style={styles.controlHint}>Estos filtros solo afectan a la clasificación.</span>
                 </div>
             </div>
 

@@ -15,17 +15,10 @@ const styles = {
         display: "grid",
         gap: 16
     },
-    headerTop: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
-        gap: 16,
-        flexWrap: "wrap"
-    },
     titleBlock: {
         display: "grid",
         gap: 10,
-        minWidth: "min(100%, 540px)"
+        maxWidth: 760
     },
     eyebrow: {
         color: "var(--accent)",
@@ -47,11 +40,19 @@ const styles = {
         gap: 10,
         flexWrap: "wrap"
     },
-    controlBlock: {
+    filtersCard: {
         display: "grid",
-        gap: 8,
-        justifyItems: "end",
-        flex: "0 0 auto"
+        gap: 10,
+        padding: "16px 18px",
+        borderRadius: "var(--radius-lg)",
+        background: "rgba(255, 249, 242, 0.82)",
+        border: "1px solid rgba(107, 86, 58, 0.12)"
+    },
+    filtersRow: {
+        display: "flex",
+        gap: 14,
+        flexWrap: "wrap",
+        alignItems: "end"
     },
     controlHint: {
         color: "var(--muted)",
@@ -265,17 +266,17 @@ function GlobalLeadersSection({
     return (
         <section style={styles.section}>
             <div style={styles.header}>
-                <div style={styles.headerTop}>
-                    <div style={styles.titleBlock}>
-                        <div style={styles.eyebrow}>Líderes individuales</div>
-                        <h2 style={styles.title}>Jugadoras destacadas de la competición</h2>
-                        <p style={styles.subtitle}>
-                            Consulta de un vistazo quién lidera la valoración media y quién sostiene el mayor peso anotador,
-                            con su equipo al lado para dar el contexto que importa.
-                        </p>
-                    </div>
+                <div style={styles.titleBlock}>
+                    <div style={styles.eyebrow}>Líderes individuales</div>
+                    <h2 style={styles.title}>Jugadoras destacadas de la competición</h2>
+                    <p style={styles.subtitle}>
+                        Consulta de un vistazo quién lidera la valoración media y quién sostiene el mayor peso anotador,
+                        con su equipo al lado para dar el contexto que importa.
+                    </p>
+                </div>
 
-                    <div style={styles.controlBlock}>
+                <div style={styles.filtersCard}>
+                    <div style={styles.filtersRow}>
                         {levelOptions.length > 0 ? (
                             <PrettySelect
                                 label="Nivel"
@@ -303,8 +304,8 @@ function GlobalLeadersSection({
                             <option value="3">3 partidos</option>
                             <option value="5">5 partidos</option>
                         </PrettySelect>
-                        <span style={styles.controlHint}>Estos filtros solo afectan a los rankings de jugadoras.</span>
                     </div>
+                    <span style={styles.controlHint}>Estos filtros solo afectan a los rankings de jugadoras.</span>
                 </div>
             </div>
 
