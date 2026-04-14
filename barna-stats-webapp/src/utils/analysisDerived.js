@@ -324,13 +324,7 @@ export function buildCompetitionPhaseOptions(phases) {
         });
     });
 
-    return [...options.values()].sort((a, b) => {
-        if (a.phaseNumber !== b.phaseNumber) {
-            return a.phaseNumber - b.phaseNumber;
-        }
-
-        return Number(a.sourcePhaseId ?? Number.MAX_SAFE_INTEGER) - Number(b.sourcePhaseId ?? Number.MAX_SAFE_INTEGER);
-    });
+    return [...options.values()].sort(comparePhaseDisplayOrder);
 }
 
 export function buildTeamPhaseOptions(phases, levelValue = "all") {
@@ -437,6 +431,74 @@ export function filterRowsByLevel(rows, levelValue) {
 
 function getLevelValue(row) {
     return String(row?.levelCode ?? "").trim() || String(row?.levelName ?? "").trim();
+}
+
+function comparePhaseDisplayOrder(a, b) {
+    const phaseDelta = Number(a?.phaseNumber ?? Number.MAX_SAFE_INTEGER) - Number(b?.phaseNumber ?? Number.MAX_SAFE_INTEGER);
+    if (phaseDelta !== 0) {
+        return phaseDelta;
+    }
+
+    const levelDelta = compareLevelKeys(getLevelSortKey(a), getLevelSortKey(b));
+    if (levelDelta !== 0) {
+        return levelDelta;
+    }
+
+    const groupDelta = compareGroupCodes(a?.groupCode, b?.groupCode);
+    if (groupDelta !== 0) {
+        return groupDelta;
+    }
+
+    return Number(a?.sourcePhaseId ?? Number.MAX_SAFE_INTEGER) - Number(b?.sourcePhaseId ?? Number.MAX_SAFE_INTEGER);
+}
+
+function getLevelSortKey(row) {
+    const levelCode = String(row?.levelCode ?? "").trim();
+    if (levelCode) {
+        return levelCode;
+    }
+
+    return String(row?.levelName ?? "")
+        .replace(/^nivell\s+/i, "")
+        .trim();
+}
+
+function compareLevelKeys(a, b) {
+    const left = String(a ?? "").trim();
+    const right = String(b ?? "").trim();
+
+    if (!left && !right) {
+        return 0;
+    }
+
+    if (!left) {
+        return 1;
+    }
+
+    if (!right) {
+        return -1;
+    }
+
+    return left.localeCompare(right, "es", {numeric: true, sensitivity: "base"});
+}
+
+function compareGroupCodes(a, b) {
+    const left = String(a ?? "").trim();
+    const right = String(b ?? "").trim();
+
+    if (!left && !right) {
+        return 0;
+    }
+
+    if (!left) {
+        return 1;
+    }
+
+    if (!right) {
+        return -1;
+    }
+
+    return left.localeCompare(right, "es", {numeric: true, sensitivity: "base"});
 }
 
 function ensureStandingRow(rows, teamName, teamKey) {
