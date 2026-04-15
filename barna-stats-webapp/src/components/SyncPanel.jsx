@@ -1,4 +1,11 @@
 import {useEffect, useState} from "react";
+import PrettySelect from "./PrettySelect.jsx";
+import {
+    buildResultsUrl,
+    GENDER_OPTIONS,
+    TERRITORY_OPTIONS,
+    useBasquetCatalaSourceBuilder
+} from "../hooks/useBasquetCatalaSourceBuilder.js";
 
 const styles = {
     panel: {
@@ -45,6 +52,24 @@ const styles = {
         gap: 12,
         flexWrap: "wrap"
     },
+    builderSection: {
+        display: "grid",
+        gap: 16,
+        padding: 18,
+        borderRadius: "var(--radius-lg)",
+        background: "rgba(255, 251, 245, 0.82)",
+        border: "1px solid rgba(107, 86, 58, 0.12)"
+    },
+    builderGrid: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+        gap: 14
+    },
+    builderHint: {
+        color: "var(--muted)",
+        fontSize: 13,
+        lineHeight: 1.6
+    },
     input: {
         flex: "1 1 520px",
         minHeight: 56,
@@ -55,6 +80,10 @@ const styles = {
         boxShadow: "inset 0 1px 0 rgba(255,255,255,0.9)",
         color: "var(--text)",
         fontSize: 15
+    },
+    readOnlyInput: {
+        background: "rgba(246, 237, 224, 0.94)",
+        color: "var(--navy)"
     },
     button: {
         minHeight: 56,
@@ -142,6 +171,22 @@ const styles = {
         color: "#9d2618",
         fontSize: 14,
         lineHeight: 1.6
+    },
+    subtleError: {
+        color: "#9d2618",
+        fontSize: 13,
+        lineHeight: 1.6
+    },
+    manualSection: {
+        display: "grid",
+        gap: 12
+    },
+    sectionLabel: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase"
     },
     savedSourcesSection: {
         display: "grid",
@@ -241,6 +286,8 @@ const STATUS_STYLES = {
     failed: {background: "#f8dcd6", color: "#9d2618"}
 };
 
+const ALL_PHASES_VALUE = "__all__";
+
 function SyncActionIcon() {
     return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={styles.actionIcon} aria-hidden="true">
@@ -274,21 +321,74 @@ function SyncPanel({
     savedSourcesError,
     deletingPhaseId,
     onStartSync,
+    onStartSyncBatch,
     onStartSyncAllSavedSources,
     onDeleteSavedSource
 }) {
-    const [sourceUrl, setSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
+    const [manualSourceUrl, setManualSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
+    const [selectedGender, setSelectedGender] = useState(() => window.localStorage.getItem("barna-sync-gender") ?? "F");
+    const [selectedTerritory, setSelectedTerritory] = useState(() => window.localStorage.getItem("barna-sync-territory") ?? "0");
+    const [selectedCategory, setSelectedCategory] = useState(() => window.localStorage.getItem("barna-sync-category") ?? "");
+    const [selectedPhase, setSelectedPhase] = useState(() => window.localStorage.getItem("barna-sync-phase") ?? "");
+    const {
+        categories,
+        categoriesLoading,
+        categoriesError,
+        phases,
+        phasesLoading,
+        phasesError
+    } = useBasquetCatalaSourceBuilder(true, selectedGender, selectedTerritory, selectedCategory);
+    const canSyncAllPhases = phases.length > 1;
+    const effectiveSelectedCategory = categories.some((option) => option.value === selectedCategory)
+        ? selectedCategory
+        : "";
+    const effectiveSelectedPhase = phases.some((option) => option.value === selectedPhase)
+        ? selectedPhase
+        : (selectedPhase === ALL_PHASES_VALUE && canSyncAllPhases ? ALL_PHASES_VALUE : "");
+    const isAllPhasesSelection = effectiveSelectedPhase === ALL_PHASES_VALUE;
+    const selectedCategoryLabel = categories.find((option) => option.value === effectiveSelectedCategory)?.label ?? "";
+    const selectedGenderLabel = GENDER_OPTIONS.find((option) => option.value === selectedGender)?.label ?? selectedGender;
+    const selectedTerritoryLabel = TERRITORY_OPTIONS.find((option) => option.value === selectedTerritory)?.label ?? selectedTerritory;
+    const batchSources = isAllPhasesSelection
+        ? phases.map((option) => ({
+            sourceUrl: buildResultsUrl(option.value),
+            label: option.label
+        }))
+        : [];
+    const generatedSourceUrl = buildResultsUrl(effectiveSelectedPhase);
+    const generatedSelectionSummary = isAllPhasesSelection
+        ? `${batchSources.length} fases seleccionadas`
+        : generatedSourceUrl;
+    const effectiveSourceUrl = generatedSourceUrl || manualSourceUrl.trim();
     const scopeLabel = job?.sourceKind === "phase"
         ? `Fase ${job.sourceId ?? "-"}`
         : job?.sourceKind === "registry"
             ? "Todas las fases guardadas"
+            : job?.sourceKind === "selection"
+                ? `Selección de ${job.sourceId ?? "-"} fases`
             : job
                 ? "Fuente manual"
                 : "";
 
     useEffect(() => {
-        window.localStorage.setItem("barna-sync-source-url", sourceUrl);
-    }, [sourceUrl]);
+        window.localStorage.setItem("barna-sync-source-url", manualSourceUrl);
+    }, [manualSourceUrl]);
+
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-gender", selectedGender);
+    }, [selectedGender]);
+
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-territory", selectedTerritory);
+    }, [selectedTerritory]);
+
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-category", selectedCategory);
+    }, [selectedCategory]);
+
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-phase", selectedPhase);
+    }, [selectedPhase]);
 
     const status = job?.status ?? (apiAvailable ? "idle" : "offline");
     const isDeleting = deletingPhaseId != null;
@@ -307,11 +407,31 @@ function SyncPanel({
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!sourceUrl.trim() || isBusy) {
+        if (isBusy) {
             return;
         }
 
-        await onStartSync(sourceUrl.trim());
+        if (isAllPhasesSelection) {
+            if (!batchSources.length) {
+                return;
+            }
+
+            const description = [
+                selectedGenderLabel,
+                selectedTerritoryLabel,
+                selectedCategoryLabel,
+                "Todas las fases"
+            ].filter(Boolean).join(" · ");
+
+            await onStartSyncBatch(batchSources, description);
+            return;
+        }
+
+        if (!effectiveSourceUrl) {
+            return;
+        }
+
+        await onStartSync(effectiveSourceUrl);
     };
 
     const handleStartSavedSource = async (savedSourceUrl) => {
@@ -319,8 +439,29 @@ function SyncPanel({
             return;
         }
 
-        setSourceUrl(savedSourceUrl);
+        setManualSourceUrl(savedSourceUrl);
         await onStartSync(savedSourceUrl);
+    };
+
+    const handleGenderChange = (event) => {
+        setSelectedGender(event.target.value);
+        setSelectedCategory("");
+        setSelectedPhase("");
+    };
+
+    const handleTerritoryChange = (event) => {
+        setSelectedTerritory(event.target.value);
+        setSelectedCategory("");
+        setSelectedPhase("");
+    };
+
+    const handleCategoryChange = (event) => {
+        setSelectedCategory(event.target.value);
+        setSelectedPhase("");
+    };
+
+    const handlePhaseChange = (event) => {
+        setSelectedPhase(event.target.value);
     };
 
     const handleStartAllSavedSources = async () => {
@@ -383,27 +524,160 @@ function SyncPanel({
                     </span>
                 </div>
                 <div style={styles.helper}>
-                    Pega la URL oficial de resultados y la app obtendrá los partidos de la fase, descargará `stats`
-                    y `moves` y actualizará el análisis de la web. Esta sincronización individual fuerza la descarga de la fase. Si aparece un captcha, se abrirá el navegador auxiliar.
+                    Selecciona género, territorio, categoría y fase para construir la URL oficial por detrás. La app
+                    obtendrá los partidos de la fase, descargará `stats` y `moves` y actualizará el análisis de la web.
+                    Si aparece un captcha, se abrirá el navegador auxiliar.
+                </div>
+            </div>
+
+            <div style={styles.builderSection}>
+                <div style={styles.builderGrid}>
+                    <PrettySelect
+                        label="Género"
+                        value={selectedGender}
+                        onChange={handleGenderChange}
+                        ariaLabel="Selecciona género"
+                        minWidth="220px"
+                    >
+                        {GENDER_OPTIONS.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </PrettySelect>
+
+                    <PrettySelect
+                        label="Territorio"
+                        value={selectedTerritory}
+                        onChange={handleTerritoryChange}
+                        ariaLabel="Selecciona territorio"
+                        minWidth="240px"
+                    >
+                        {TERRITORY_OPTIONS.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </PrettySelect>
+
+                    <PrettySelect
+                        label="Categoría"
+                        value={effectiveSelectedCategory}
+                        onChange={handleCategoryChange}
+                        ariaLabel="Selecciona categoría"
+                        minWidth="280px"
+                    >
+                        <option value="">
+                            {categoriesLoading
+                                ? "Cargando categorías..."
+                                : categories.length > 0
+                                    ? "Selecciona categoría"
+                                    : "No hay categorías"}
+                        </option>
+                        {categories.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </PrettySelect>
+
+                    <PrettySelect
+                        label="Fase"
+                        value={effectiveSelectedPhase}
+                        onChange={handlePhaseChange}
+                        ariaLabel="Selecciona fase"
+                        minWidth="280px"
+                    >
+                        <option value="">
+                            {!selectedCategory
+                                ? "Selecciona categoría primero"
+                                : phasesLoading
+                                    ? "Cargando fases..."
+                                    : phases.length > 0
+                                        ? "Selecciona fase"
+                                        : "No hay fases"}
+                        </option>
+                        {canSyncAllPhases ? (
+                            <option value={ALL_PHASES_VALUE}>
+                                {`Todas las fases (${phases.length})`}
+                            </option>
+                        ) : null}
+                        {phases.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </PrettySelect>
+                </div>
+
+                <div style={styles.builderHint}>
+                    La URL final se construye automáticamente a partir de la fase elegida. Si marcas `Todas las fases`,
+                    se lanzará un batch con todas las fases visibles de esa categoría.
+                </div>
+
+                {categoriesError ? (
+                    <div style={styles.subtleError}>{categoriesError}</div>
+                ) : null}
+
+                {phasesError ? (
+                    <div style={styles.subtleError}>{phasesError}</div>
+                ) : null}
+            </div>
+
+            <div style={styles.manualSection}>
+                <div style={styles.sectionLabel}>URL generada</div>
+                <div style={styles.controls}>
+                    <input
+                        type="text"
+                        value={generatedSelectionSummary}
+                        placeholder="Selecciona una fase para generar la URL de resultados"
+                        style={{...styles.input, ...styles.readOnlyInput}}
+                        readOnly
+                    />
+                    <button
+                        type="submit"
+                        style={(!effectiveSourceUrl && !isAllPhasesSelection) || isBusy
+                            ? {...styles.button, ...styles.mutedButton}
+                            : styles.button}
+                        disabled={(!effectiveSourceUrl && !isAllPhasesSelection) || isBusy}
+                    >
+                        {isBusy
+                            ? "Importando..."
+                            : isAllPhasesSelection
+                                ? "Importar todas las fases"
+                                : "Importar fase"}
+                    </button>
+                </div>
+                <div style={styles.builderHint}>
+                    Si no eliges una fase, puedes seguir usando una URL manual como alternativa.
+                </div>
+            </div>
+
+            <div style={styles.manualSection}>
+                <div style={styles.sectionLabel}>URL manual opcional</div>
+                <div style={styles.controls}>
+                    <input
+                        type="url"
+                        value={manualSourceUrl}
+                        onChange={(event) => setManualSourceUrl(event.target.value)}
+                        placeholder="https://www.basquetcatala.cat/competicions/resultats/20855/0"
+                        style={styles.input}
+                        disabled={isBusy || Boolean(generatedSourceUrl) || isAllPhasesSelection}
+                    />
+                </div>
+                <div style={styles.builderHint}>
+                    La URL manual solo se usa cuando no hay una fase seleccionada en los desplegables.
                 </div>
             </div>
 
             <div style={styles.controls}>
                 <input
-                    type="url"
-                    value={sourceUrl}
-                    onChange={(event) => setSourceUrl(event.target.value)}
-                    placeholder="https://www.basquetcatala.cat/competicions/resultats/20855/0"
-                    style={styles.input}
-                    disabled={isBusy}
+                    type="text"
+                    value={isAllPhasesSelection ? generatedSelectionSummary : effectiveSourceUrl}
+                    placeholder="La fuente activa aparecerá aquí"
+                    style={{...styles.input, ...styles.readOnlyInput}}
+                    readOnly
                 />
-                <button
-                    type="submit"
-                    style={isBusy ? {...styles.button, ...styles.mutedButton} : styles.button}
-                    disabled={isBusy}
-                >
-                    {isBusy ? "Importando..." : "Importar fase"}
-                </button>
             </div>
 
             <div style={styles.savedSourcesSection}>

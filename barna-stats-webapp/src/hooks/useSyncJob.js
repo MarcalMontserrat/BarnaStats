@@ -125,6 +125,53 @@ export function useSyncJob(enabled = true, onJobSucceeded) {
         }
     }
 
+    async function startSyncBatch(sources, description = "") {
+        if (!enabled) {
+            return false;
+        }
+
+        setStarting(true);
+        setError("");
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/api/sync-jobs/batch`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    sources,
+                    description,
+                    forceRefresh: true
+                })
+            });
+
+            const hasJson = response.headers
+                .get("content-type")
+                ?.includes("application/json");
+            const payload = hasJson ? await response.json() : null;
+
+            if (!response.ok) {
+                setApiAvailable(true);
+
+                if (payload?.currentJob) {
+                    setJob(payload.currentJob);
+                }
+
+                throw new Error(payload?.error ?? "No se pudo arrancar la sincronización por lotes.");
+            }
+
+            setApiAvailable(true);
+            setJob(payload);
+            return true;
+        } catch (err) {
+            setError(String(err));
+            return false;
+        } finally {
+            setStarting(false);
+        }
+    }
+
     async function startSyncAllSavedSources() {
         if (!enabled) {
             return false;
@@ -170,6 +217,7 @@ export function useSyncJob(enabled = true, onJobSucceeded) {
         error: enabled ? error : "",
         job: enabled ? job : null,
         startSync,
+        startSyncBatch,
         startSyncAllSavedSources,
         refreshCurrentJob
     };

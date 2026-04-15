@@ -550,6 +550,7 @@ function App() {
         error: syncError,
         job,
         startSync,
+        startSyncBatch,
         startSyncAllSavedSources
     } = useSyncJob(syncUiEnabled, () => {
         setAnalysisVersion(Date.now());
@@ -1308,6 +1309,7 @@ function App() {
                     savedSourcesError={savedResultsSourcesError}
                     deletingPhaseId={deletingSavedPhaseId}
                     onStartSync={startSync}
+                    onStartSyncBatch={startSyncBatch}
                     onStartSyncAllSavedSources={startSyncAllSavedSources}
                     onDeleteSavedSource={async (phaseId) => {
                         const result = await deleteSavedResultsSource(phaseId);

@@ -106,11 +106,75 @@ public sealed class SyncOrchestrator
             if (normalizedSources.Count == 0)
                 return new SyncStartResult(false, null, "Las fases guardadas no tienen URLs válidas.");
 
-            var job = SyncJob.CreateBatch(normalizedSources.Count);
+            var job = SyncJob.CreateBatch("Fases guardadas", "registry", normalizedSources.Count, forceRefresh: false);
             _currentJob = job;
 
-            _ = Task.Run(() => RunSavedSourcesJobAsync(job, normalizedSources));
+            var batchSources = normalizedSources
+                .Select(source => new BatchSourceEntry(source.SourceUrl.Trim(), FormatSourceReference(source)))
+                .ToList();
+
+            _ = Task.Run(() => RunBatchJobAsync(
+                job,
+                batchSources,
+                forceRefresh: false,
+                startMessage: $"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {batchSources.Count} fases guardadas.",
+                successMessage: $"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sincronización completa de todas las fases guardadas.",
+                singleFailureLabel: "fase guardada",
+                pluralFailureLabel: "fases guardadas"
+            ));
             return new SyncStartResult(true, job.ToSnapshot(), null);
+        }
+    }
+
+    public bool TryStartBatch(
+        IReadOnlyList<SyncSourceSelectionItem> sources,
+        bool forceRefresh,
+        string? description,
+        out SyncJobSnapshot? jobSnapshot,
+        out string? error)
+    {
+        var batchSources = TryBuildBatchSourceEntries(sources, out error);
+        if (batchSources.Count == 0)
+        {
+            jobSnapshot = null;
+            error ??= "No hay fases válidas para sincronizar.";
+            return false;
+        }
+
+        lock (_lock)
+        {
+            if (_maintenanceInProgress)
+            {
+                jobSnapshot = null;
+                error = "Hay una operación de mantenimiento en marcha. Espera a que termine.";
+                return false;
+            }
+
+            if (_currentJob is { Status: SyncJobStatus.Pending or SyncJobStatus.Running })
+            {
+                jobSnapshot = _currentJob.ToSnapshot();
+                error = "Ya hay una sincronización en marcha.";
+                return false;
+            }
+
+            var jobLabel = string.IsNullOrWhiteSpace(description)
+                ? $"Selección de {batchSources.Count} fases"
+                : description.Trim();
+            var job = SyncJob.CreateBatch(jobLabel, "selection", batchSources.Count, forceRefresh);
+            _currentJob = job;
+            jobSnapshot = job.ToSnapshot();
+            error = null;
+
+            _ = Task.Run(() => RunBatchJobAsync(
+                job,
+                batchSources,
+                forceRefresh,
+                startMessage: $"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {batchSources.Count} fases seleccionadas.",
+                successMessage: $"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sincronización completa de todas las fases seleccionadas.",
+                singleFailureLabel: "fase seleccionada",
+                pluralFailureLabel: "fases seleccionadas"
+            ));
+            return true;
         }
     }
 
@@ -186,11 +250,18 @@ public sealed class SyncOrchestrator
         }
     }
 
-    private async Task RunSavedSourcesJobAsync(SyncJob job, IReadOnlyList<ResultsSourceSnapshot> savedSources)
+    private async Task RunBatchJobAsync(
+        SyncJob job,
+        IReadOnlyList<BatchSourceEntry> sources,
+        bool forceRefresh,
+        string startMessage,
+        string successMessage,
+        string singleFailureLabel,
+        string pluralFailureLabel)
     {
         job.StartedAtUtc = DateTimeOffset.UtcNow;
         job.Status = SyncJobStatus.Running;
-        job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {savedSources.Count} fases guardadas.");
+        job.AppendLog(startMessage);
 
         var failures = new List<string>();
         var analysisDirtyMarker = Path.Combine(_repoPaths.TempDir, $"analysis-dirty-{job.JobId}.marker");
@@ -201,17 +272,17 @@ public sealed class SyncOrchestrator
             if (File.Exists(analysisDirtyMarker))
                 File.Delete(analysisDirtyMarker);
 
-            for (var index = 0; index < savedSources.Count; index++)
+            for (var index = 0; index < sources.Count; index++)
             {
-                var source = savedSources[index];
-                var prefix = $"[{index + 1}/{savedSources.Count}]";
-                var reference = FormatSourceReference(source);
+                var source = sources[index];
+                var prefix = $"[{index + 1}/{sources.Count}]";
+                var reference = source.Reference;
 
                 job.AppendLog($"{prefix} {reference}");
 
                 var exitCode = await RunSyncAllProcessAsync(
-                    source.SourceUrl.Trim(),
-                    forceRefresh: false,
+                    source.SourceUrl,
+                    forceRefresh,
                     analysisDirtyMarker,
                     appendLog: line => job.AppendLog($"{prefix} {line}")
                 );
@@ -240,14 +311,14 @@ public sealed class SyncOrchestrator
             if (failures.Count == 0)
             {
                 job.Status = SyncJobStatus.Succeeded;
-                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sincronización completa de todas las fases guardadas.");
+                job.AppendLog(successMessage);
                 return;
             }
 
             job.Status = SyncJobStatus.Failed;
             job.Error = failures.Count == 1
-                ? $"Falló 1 fase guardada: {failures[0]}."
-                : $"Fallaron {failures.Count} fases guardadas. Revisa el log para el detalle.";
+                ? $"Falló 1 {singleFailureLabel}: {failures[0]}."
+                : $"Fallaron {failures.Count} {pluralFailureLabel}. Revisa el log para el detalle.";
             job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {job.Error}");
         }
         catch (Exception ex)
@@ -504,6 +575,39 @@ public sealed class SyncOrchestrator
         return phaseId;
     }
 
+    private static List<BatchSourceEntry> TryBuildBatchSourceEntries(
+        IReadOnlyList<SyncSourceSelectionItem> sources,
+        out string? error)
+    {
+        error = null;
+        var results = new List<BatchSourceEntry>();
+        var seenUrls = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var source in sources)
+        {
+            var rawUrl = source.SourceUrl?.Trim() ?? "";
+            if (string.IsNullOrWhiteSpace(rawUrl))
+                continue;
+
+            if (!TryNormalizeSourceUrl(rawUrl, out var normalizedUrl))
+            {
+                error = "Una de las URLs de resultados no parece válida.";
+                return [];
+            }
+
+            if (!seenUrls.Add(normalizedUrl))
+                continue;
+
+            var reference = string.IsNullOrWhiteSpace(source.Label)
+                ? (TryGetPhaseIdFromSourceUrl(normalizedUrl) is { } phaseId ? $"Fase {phaseId}" : normalizedUrl)
+                : source.Label.Trim();
+
+            results.Add(new BatchSourceEntry(normalizedUrl, reference));
+        }
+
+        return results;
+    }
+
     private static string FormatSourceReference(ResultsSourceSnapshot source)
     {
         var parts = new[]
@@ -564,9 +668,9 @@ public sealed class SyncOrchestrator
 
         private List<string> Logs { get; } = [];
 
-        public static SyncJob CreateBatch(int sourceCount)
+        public static SyncJob CreateBatch(string sourceUrl, string sourceKind, int sourceCount, bool forceRefresh)
         {
-            return new SyncJob("Fases guardadas", "registry", sourceCount, false);
+            return new SyncJob(sourceUrl, sourceKind, sourceCount, forceRefresh);
         }
 
         public void AppendLog(string line)
@@ -606,6 +710,7 @@ public sealed class SyncOrchestrator
     }
 
     public sealed record SyncStartResult(bool Started, SyncJobSnapshot? JobSnapshot, string? Error);
+    private sealed record BatchSourceEntry(string SourceUrl, string Reference);
     private sealed record SyncSourceInfo(string? Kind, int? SourceId);
 
     private enum SyncJobStatus
