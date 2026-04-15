@@ -737,12 +737,11 @@ function App() {
     const selectedPhaseValue = selectedPhaseContext?.phaseNumber ?? null;
     const matchSummaries = filterRowsByPhaseOption(teamMatchSummaries, effectiveSelectedPhase);
     const players = filterRowsByPhaseOption(teamPlayers, effectiveSelectedPhase);
+    const playersList = getPlayersList(players);
     const effectiveSelectedPlayer = selectedPlayer &&
-    players.some((player) => player.playerName === selectedPlayer)
+    playersList.some((player) => player.value === selectedPlayer)
         ? selectedPlayer
         : "";
-
-    const playersList = getPlayersList(players);
     const chartData = getChartData(players, effectiveSelectedPlayer, selectedPhaseValue);
     const selectedPlayerSummary = getSelectedPlayerSummary(players, effectiveSelectedPlayer);
     const sortedPlayers = sortPlayers(players);
@@ -960,12 +959,12 @@ function App() {
         setSelectedPlayer(value);
     };
 
-    const handlePlayerNavigate = (playerName) => {
-        if (!playerName) {
+    const handlePlayerNavigate = (playerIdentityKey) => {
+        if (!playerIdentityKey) {
             return;
         }
 
-        setSelectedPlayer(playerName);
+        setSelectedPlayer(playerIdentityKey);
         setSelectedTeamTab("evolution");
 
         window.requestAnimationFrame(() => {

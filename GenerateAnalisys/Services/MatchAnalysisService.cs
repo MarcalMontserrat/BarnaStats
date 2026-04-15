@@ -61,6 +61,8 @@ public sealed class MatchAnalysisService
                             ?? match.Teams.Skip(1).FirstOrDefault()
                             ?? match.Teams.Last();
             var matchDate = TryParseMatchDate(match.Time);
+            var seasonStartYear = ResolveSeasonStartYear(phaseMetadata, matchDate);
+            var seasonLabel = ResolveSeasonLabel(phaseMetadata, seasonStartYear);
             var homeTeamKey = BuildTeamKey(localTeam, phaseMetadata);
             var awayTeamKey = BuildTeamKey(visitTeam, phaseMetadata);
 
@@ -116,6 +118,8 @@ public sealed class MatchAnalysisService
                     TeamIdIntern = team.TeamIdIntern,
                     TeamIdExtern = team.TeamIdExtern,
                     TeamName = team.Name ?? "",
+                    SeasonStartYear = seasonStartYear,
+                    SeasonLabel = seasonLabel,
                     HomeTeamKey = homeTeamKey,
                     AwayTeamKey = awayTeamKey,
                     MatchWebId = matchWebId,
@@ -157,6 +161,8 @@ public sealed class MatchAnalysisService
                     var data = player.Data ?? new StatBlock();
                     var playerName = player.Name ?? "";
                     var dorsal = player.Dorsal ?? "";
+                    var playerUuid = NormalizePlayerUuid(player.Uuid);
+                    var playerIdentityKey = BuildPlayerIdentityKey(playerUuid, player.ActorId, playerName);
 
                     accumulator.MatchPlayerRows.Add(new MatchPlayerRow
                     {
@@ -164,6 +170,8 @@ public sealed class MatchAnalysisService
                         TeamIdIntern = team.TeamIdIntern,
                         TeamIdExtern = team.TeamIdExtern,
                         TeamName = team.Name ?? "",
+                        SeasonStartYear = seasonStartYear,
+                        SeasonLabel = seasonLabel,
                         MatchWebId = matchWebId,
                         MatchInternId = match.IdMatchIntern,
                         MatchExternId = match.IdMatchExtern,
@@ -178,7 +186,9 @@ public sealed class MatchAnalysisService
                         IsHome = isHome,
                         RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata),
                         Rival = rivalTeam.Name ?? "",
+                        PlayerUuid = playerUuid,
                         PlayerActorId = player.ActorId,
+                        PlayerIdentityKey = playerIdentityKey,
                         PlayerName = playerName,
                         Dorsal = dorsal,
                         Minutes = player.TimePlayed,
@@ -204,7 +214,11 @@ public sealed class MatchAnalysisService
                             TeamIdIntern = team.TeamIdIntern,
                             TeamIdExtern = team.TeamIdExtern,
                             TeamName = team.Name ?? "",
+                            SeasonStartYear = seasonStartYear,
+                            SeasonLabel = seasonLabel,
+                            PlayerUuid = playerUuid,
                             PlayerActorId = player.ActorId,
+                            PlayerIdentityKey = playerIdentityKey,
                             PlayerName = playerName,
                             ShirtNumber = dorsal
                         };
@@ -277,6 +291,8 @@ public sealed class MatchAnalysisService
             row.MatchDate = summary.MatchDate;
             row.PhaseNumber = summary.PhaseNumber;
             row.SourcePhaseId = summary.SourcePhaseId;
+            row.SeasonStartYear = summary.SeasonStartYear;
+            row.SeasonLabel = summary.SeasonLabel;
             row.CategoryName = summary.CategoryName;
             row.PhaseName = summary.PhaseName;
             row.LevelName = summary.LevelName;
@@ -316,6 +332,8 @@ public sealed class MatchAnalysisService
         return matchSummaries
             .GroupBy(summary => new
             {
+                summary.SeasonStartYear,
+                summary.SeasonLabel,
                 summary.PhaseNumber,
                 summary.SourcePhaseId,
                 summary.CategoryName,
@@ -328,6 +346,8 @@ public sealed class MatchAnalysisService
             .ThenBy(group => group.Key.SourcePhaseId ?? int.MaxValue)
             .Select(group => new TeamPhaseInfo
             {
+                SeasonStartYear = group.Key.SeasonStartYear,
+                SeasonLabel = group.Key.SeasonLabel,
                 PhaseNumber = group.Key.PhaseNumber,
                 SourcePhaseId = group.Key.SourcePhaseId,
                 CategoryName = group.Key.CategoryName,
@@ -359,6 +379,8 @@ public sealed class MatchAnalysisService
         var competitionPhases = competitionMatches
             .GroupBy(match => new
             {
+                match.SeasonStartYear,
+                match.SeasonLabel,
                 match.PhaseNumber,
                 match.SourcePhaseId,
                 match.CategoryName,
@@ -371,6 +393,8 @@ public sealed class MatchAnalysisService
             .ThenBy(group => group.Key.SourcePhaseId ?? int.MaxValue)
             .Select(group => new CompetitionPhase
             {
+                SeasonStartYear = group.Key.SeasonStartYear,
+                SeasonLabel = group.Key.SeasonLabel,
                 PhaseNumber = group.Key.PhaseNumber,
                 SourcePhaseId = group.Key.SourcePhaseId,
                 CategoryName = group.Key.CategoryName,
@@ -407,6 +431,8 @@ public sealed class MatchAnalysisService
 
                 return new CompetitionMatch
                 {
+                    SeasonStartYear = homePerspective.SeasonStartYear,
+                    SeasonLabel = homePerspective.SeasonLabel,
                     MatchWebId = homePerspective.MatchWebId,
                     MatchInternId = homePerspective.MatchInternId,
                     MatchExternId = homePerspective.MatchExternId,
@@ -437,11 +463,19 @@ public sealed class MatchAnalysisService
     private static List<CompetitionPhaseStandings> BuildCompetitionStandings(IReadOnlyCollection<CompetitionMatch> matches)
     {
         return matches
-            .GroupBy(match => match.PhaseNumber)
-            .OrderBy(group => group.Key)
+            .GroupBy(match => new
+            {
+                match.SeasonStartYear,
+                match.SeasonLabel,
+                match.PhaseNumber
+            })
+            .OrderBy(group => group.Key.SeasonStartYear ?? int.MaxValue)
+            .ThenBy(group => group.Key.PhaseNumber)
             .Select(group => new CompetitionPhaseStandings
             {
-                PhaseNumber = group.Key,
+                SeasonStartYear = group.Key.SeasonStartYear,
+                SeasonLabel = group.Key.SeasonLabel,
+                PhaseNumber = group.Key.PhaseNumber,
                 Rows = BuildCompetitionStandingRows(group)
             })
             .ToList();
@@ -523,12 +557,16 @@ public sealed class MatchAnalysisService
             .SelectMany(team => team.SeasonTotals)
             .Select(player => new CompetitionPlayerLeader
             {
-                Key = $"{player.TeamKey}:{player.PlayerName}:{player.ShirtNumber}",
+                Key = $"{player.TeamKey}:{player.PlayerIdentityKey}:{player.ShirtNumber}",
                 TeamKey = player.TeamKey,
                 TeamIdIntern = player.TeamIdIntern,
                 TeamIdExtern = player.TeamIdExtern,
                 TeamName = player.TeamName,
+                SeasonStartYear = player.SeasonStartYear,
+                SeasonLabel = player.SeasonLabel,
+                PlayerUuid = player.PlayerUuid,
                 PlayerActorId = player.PlayerActorId,
+                PlayerIdentityKey = player.PlayerIdentityKey,
                 PlayerName = player.PlayerName,
                 ShirtNumber = player.ShirtNumber,
                 Games = player.Games,
@@ -558,7 +596,9 @@ public sealed class MatchAnalysisService
                 return new MatchMVP
                 {
                     MatchWebId = group.Key,
+                    PlayerUuid = mvp.PlayerUuid,
                     PlayerActorId = mvp.PlayerActorId,
+                    PlayerIdentityKey = mvp.PlayerIdentityKey,
                     PlayerName = mvp.PlayerName,
                     Points = mvp.Points,
                     Valuation = mvp.Valuation,
@@ -864,7 +904,9 @@ public sealed class MatchAnalysisService
         return seasonTotals
             .Select(player => new PlayerRanking
             {
+                PlayerUuid = player.PlayerUuid,
                 PlayerActorId = player.PlayerActorId,
+                PlayerIdentityKey = player.PlayerIdentityKey,
                 PlayerName = player.PlayerName,
                 Dorsal = player.ShirtNumber,
                 Games = player.Games,
@@ -889,7 +931,9 @@ public sealed class MatchAnalysisService
                     .ThenBy(row => row.MatchWebId)
                     .Select((row, index) => new PlayerEvolution
                     {
+                        PlayerUuid = row.PlayerUuid,
                         PlayerActorId = row.PlayerActorId,
+                        PlayerIdentityKey = row.PlayerIdentityKey,
                         PlayerName = row.PlayerName,
                         PhaseNumber = row.PhaseNumber,
                         PhaseRound = row.PhaseRound,
@@ -907,7 +951,7 @@ public sealed class MatchAnalysisService
 
     private static string BuildEvolutionKey(MatchPlayerRow row)
     {
-        return $"{row.TeamKey}|{NameNormalizer.Normalize(row.PlayerName)}";
+        return $"{row.TeamKey}|{row.PlayerIdentityKey}";
     }
 
     private static string BuildResult(int teamScore, int rivalScore)
@@ -971,7 +1015,48 @@ public sealed class MatchAnalysisService
 
     private static string BuildPlayerKey(string teamKey, PlayerInfo player)
     {
-        return $"{teamKey}|{NameNormalizer.Normalize(player.Name)}";
+        return $"{teamKey}|{BuildPlayerIdentityKey(player.Uuid, player.ActorId, player.Name)}";
+    }
+
+    private static string BuildPlayerIdentityKey(string? playerUuid, long playerActorId, string? playerName)
+    {
+        var normalizedUuid = NormalizePlayerUuid(playerUuid);
+        if (!string.IsNullOrWhiteSpace(normalizedUuid))
+            return $"UUID:{normalizedUuid}";
+
+        if (playerActorId > 0)
+            return $"PLAYER:{playerActorId}";
+
+        return $"NAME:{NameNormalizer.Normalize(playerName)}";
+    }
+
+    private static string NormalizePlayerUuid(string? playerUuid)
+    {
+        return string.IsNullOrWhiteSpace(playerUuid)
+            ? ""
+            : playerUuid.Trim().ToLowerInvariant();
+    }
+
+    private static int? ResolveSeasonStartYear(PhaseMetadataFile? phaseMetadata, DateTime? matchDate)
+    {
+        if (phaseMetadata?.SeasonStartYear is > 0)
+            return phaseMetadata.SeasonStartYear;
+
+        if (!matchDate.HasValue)
+            return null;
+
+        return matchDate.Value.Month >= 7 ? matchDate.Value.Year : matchDate.Value.Year - 1;
+    }
+
+    private static string ResolveSeasonLabel(PhaseMetadataFile? phaseMetadata, int? seasonStartYear)
+    {
+        if (!string.IsNullOrWhiteSpace(phaseMetadata?.SeasonLabel))
+            return phaseMetadata.SeasonLabel;
+
+        if (!seasonStartYear.HasValue)
+            return "";
+
+        return $"{seasonStartYear.Value}-{seasonStartYear.Value + 1}";
     }
 
     private sealed record ScoringEvent(

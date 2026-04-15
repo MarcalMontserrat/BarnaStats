@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-15T13:59:45.997858Z",
+  "generatedAtUtc": "2026-04-15T20:36:40.339578Z",
   "totalMatches": 1961,
   "totalTeams": 213,
   "teams": [
@@ -14,6 +14,8 @@
       "playersFile": "teams/8108607aa18e813b/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20783,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -24,6 +26,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -46,6 +50,8 @@
       "playersFile": "teams/d33c0db81b0773b2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -56,6 +62,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -78,6 +86,8 @@
       "playersFile": "teams/cb996455350dd578/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20777,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -88,6 +98,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -110,6 +122,8 @@
       "playersFile": "teams/d9117727d2e9c5a9/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20786,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -120,6 +134,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -142,6 +158,8 @@
       "playersFile": "teams/ed626068e1415324/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20780,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -152,6 +170,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -174,6 +194,8 @@
       "playersFile": "teams/c6cffd7c13431464/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -184,6 +206,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -206,6 +230,8 @@
       "playersFile": "teams/c576d346b803ec5f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20777,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -216,6 +242,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -238,6 +266,8 @@
       "playersFile": "teams/6c5d11bf04818a51/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -248,6 +278,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21240,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -258,6 +290,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21902,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -280,6 +314,8 @@
       "playersFile": "teams/c211a61131174332/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20821,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -290,6 +326,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -312,6 +350,8 @@
       "playersFile": "teams/a8630dda5a7d1d52/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -322,6 +362,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -344,6 +386,8 @@
       "playersFile": "teams/3fb0ac138be1673e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20855,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -354,6 +398,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -376,6 +422,8 @@
       "playersFile": "teams/46143b40f701d02d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -398,6 +446,8 @@
       "playersFile": "teams/98f3af0e0fd24b1f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -408,6 +458,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -430,6 +482,8 @@
       "playersFile": "teams/ebd88ade6dba4b54/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -440,6 +494,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21234,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -450,6 +506,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21896,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -472,6 +530,8 @@
       "playersFile": "teams/d9cc1d62360daf09/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -482,6 +542,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -504,6 +566,8 @@
       "playersFile": "teams/39c4e21d7f52decc/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20856,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -514,6 +578,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21631,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -536,6 +602,8 @@
       "playersFile": "teams/c1e79f09faa730bd/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -546,6 +614,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -568,6 +638,8 @@
       "playersFile": "teams/583a7d1c0d16bc7c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20776,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -578,6 +650,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -595,11 +669,13 @@
       "teamIdExtern": 83847,
       "teamName": "BASQUET NEUS",
       "matchesPlayed": 17,
-      "playersCount": 12,
+      "playersCount": 11,
       "matchesFile": "teams/d4471e654f4d9ac6/matches.json",
       "playersFile": "teams/d4471e654f4d9ac6/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20780,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -610,6 +686,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -627,11 +705,13 @@
       "teamIdExtern": 78839,
       "teamName": "BASQUETPIASABADELL",
       "matchesPlayed": 18,
-      "playersCount": 15,
+      "playersCount": 13,
       "matchesFile": "teams/2873e85f92f3609f/matches.json",
       "playersFile": "teams/2873e85f92f3609f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20778,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -642,6 +722,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -664,6 +746,8 @@
       "playersFile": "teams/b9edaec017b890c2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -674,6 +758,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -696,6 +782,8 @@
       "playersFile": "teams/1e0e96ed8781fd0b/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20785,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -706,6 +794,8 @@
           "matchesPlayed": 6
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -728,6 +818,8 @@
       "playersFile": "teams/481025476784e8d8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20853,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -738,6 +830,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -760,6 +854,8 @@
       "playersFile": "teams/e9ce0771e0635954/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20823,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -770,6 +866,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -792,6 +890,8 @@
       "playersFile": "teams/a5bca1e41bf8d84a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20857,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -802,6 +902,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21643,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -824,6 +926,8 @@
       "playersFile": "teams/aba4c4f7121f24f5/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20779,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -834,6 +938,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -856,6 +962,8 @@
       "playersFile": "teams/025613ba3b870539/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -866,6 +974,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21238,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -876,6 +986,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21901,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -898,6 +1010,8 @@
       "playersFile": "teams/ce40677b4b0e40ad/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20782,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -908,6 +1022,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -930,6 +1046,8 @@
       "playersFile": "teams/3dd39cabd6a0ffb2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -940,6 +1058,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -962,6 +1082,8 @@
       "playersFile": "teams/f17f56c7130da496/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -972,6 +1094,8 @@
           "matchesPlayed": 5
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -982,6 +1106,8 @@
           "matchesPlayed": 1
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1004,6 +1130,8 @@
       "playersFile": "teams/d483d90d890dda47/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20787,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1014,6 +1142,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1036,6 +1166,8 @@
       "playersFile": "teams/1d2084a183dc0ab4/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -1046,6 +1178,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -1068,6 +1202,8 @@
       "playersFile": "teams/719b5218cb1a5efc/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20780,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1078,6 +1214,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1100,6 +1238,8 @@
       "playersFile": "teams/b28b91409ef4ef57/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20782,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1110,6 +1250,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1132,6 +1274,8 @@
       "playersFile": "teams/86fe36e15a611347/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -1142,6 +1286,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -1164,6 +1310,8 @@
       "playersFile": "teams/5c518bad5e327950/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20785,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1174,6 +1322,8 @@
           "matchesPlayed": 6
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1196,6 +1346,8 @@
       "playersFile": "teams/96baf99cb0e51eed/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20855,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1206,6 +1358,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21630,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1228,6 +1382,8 @@
       "playersFile": "teams/5cbc9844685b81a5/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20782,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1238,6 +1394,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1260,6 +1418,8 @@
       "playersFile": "teams/cce4ddf86429b26a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20774,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1270,6 +1430,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1292,6 +1454,8 @@
       "playersFile": "teams/25b698c54ccb1929/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1314,6 +1478,8 @@
       "playersFile": "teams/499919a399116c37/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -1324,6 +1490,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -1346,6 +1514,8 @@
       "playersFile": "teams/75e11bbaf2b921f2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20775,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1356,6 +1526,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1378,6 +1550,8 @@
       "playersFile": "teams/1e4bc438327f6eef/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1388,6 +1562,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21235,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1398,6 +1574,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21896,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1420,6 +1598,8 @@
       "playersFile": "teams/340fedfae07e09e8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20775,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1430,6 +1610,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1452,6 +1634,8 @@
       "playersFile": "teams/25623a9630db9b89/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20853,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1462,6 +1646,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21643,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1484,6 +1670,8 @@
       "playersFile": "teams/3427b593a82abc09/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1494,6 +1682,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21239,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1504,6 +1694,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21900,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1526,6 +1718,8 @@
       "playersFile": "teams/af209faf361aba06/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20821,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1536,6 +1730,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1558,6 +1754,8 @@
       "playersFile": "teams/2700761a1f4a29d8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20784,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1568,6 +1766,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1590,6 +1790,8 @@
       "playersFile": "teams/d069e05080db1667/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20779,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1600,6 +1802,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1622,6 +1826,8 @@
       "playersFile": "teams/cf3b7c1ef67d4e6b/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20776,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1632,6 +1838,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1654,6 +1862,8 @@
       "playersFile": "teams/340c94478b4971a7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1664,6 +1874,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21235,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1686,6 +1898,8 @@
       "playersFile": "teams/edf6ca9e2256924f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20773,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1696,6 +1910,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1718,6 +1934,8 @@
       "playersFile": "teams/c3bd1c17b4476737/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20776,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1728,6 +1946,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1750,6 +1970,8 @@
       "playersFile": "teams/ddb2ba498069d6ec/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1760,6 +1982,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21236,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1770,6 +1994,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21899,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1792,6 +2018,8 @@
       "playersFile": "teams/79f5f805b7006a11/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1802,6 +2030,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1819,11 +2049,13 @@
       "teamIdExtern": 78807,
       "teamName": "CB GRANOLLERS 1",
       "matchesPlayed": 23,
-      "playersCount": 16,
+      "playersCount": 15,
       "matchesFile": "teams/a4e3e83f6ba3a3bc/matches.json",
       "playersFile": "teams/a4e3e83f6ba3a3bc/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1834,6 +2066,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21240,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1844,6 +2078,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21901,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -1866,6 +2102,8 @@
       "playersFile": "teams/b1d75b631fab8b23/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20823,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1876,6 +2114,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -1898,6 +2138,8 @@
       "playersFile": "teams/20b1418220e330c2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -1908,6 +2150,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -1930,6 +2174,8 @@
       "playersFile": "teams/c5c43b06a1e3c05c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20217,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1940,6 +2186,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1962,6 +2210,8 @@
       "playersFile": "teams/34a1d27d0ff1dffb/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1972,6 +2222,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21630,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1989,11 +2241,13 @@
       "teamIdExtern": 79214,
       "teamName": "CB IPSI 08",
       "matchesPlayed": 23,
-      "playersCount": 13,
+      "playersCount": 14,
       "matchesFile": "teams/ba122a9760d369f1/matches.json",
       "playersFile": "teams/ba122a9760d369f1/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2004,6 +2258,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21238,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2014,6 +2270,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21900,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2036,6 +2294,8 @@
       "playersFile": "teams/3c7036b16632ab4e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -2046,6 +2306,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -2068,6 +2330,8 @@
       "playersFile": "teams/67ecfdc0a5fdc32b/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20782,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2078,6 +2342,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2100,6 +2366,8 @@
       "playersFile": "teams/9e67a9dd6dac566e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -2110,6 +2378,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -2132,6 +2402,8 @@
       "playersFile": "teams/6067bea7f4743408/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20774,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2142,6 +2414,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2164,6 +2438,8 @@
       "playersFile": "teams/e7c351faa9fd795e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2186,6 +2462,8 @@
       "playersFile": "teams/fe1059a223e4a6e3/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20856,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -2196,6 +2474,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21631,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -2218,6 +2498,8 @@
       "playersFile": "teams/40fbd083f867da7d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2228,6 +2510,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21238,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2238,6 +2522,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21900,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2260,6 +2546,8 @@
       "playersFile": "teams/460a3f3e092febe4/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20821,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2270,6 +2558,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2292,6 +2582,8 @@
       "playersFile": "teams/51bab6e21cace1dd/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20776,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2302,6 +2594,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2319,11 +2613,13 @@
       "teamIdExtern": 83826,
       "teamName": "CB NAV\u00C0S",
       "matchesPlayed": 15,
-      "playersCount": 15,
+      "playersCount": 16,
       "matchesFile": "teams/4e518fd8dbb3e652/matches.json",
       "playersFile": "teams/4e518fd8dbb3e652/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20781,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2334,6 +2630,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2356,6 +2654,8 @@
       "playersFile": "teams/7c97c92e3572446a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2378,6 +2678,8 @@
       "playersFile": "teams/d3330149999ea8c7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2388,6 +2690,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21236,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2398,6 +2702,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21898,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2420,6 +2726,8 @@
       "playersFile": "teams/a34941b59935ca17/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20918,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2430,6 +2738,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2452,6 +2762,8 @@
       "playersFile": "teams/f3d2a883dd417040/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -2462,6 +2774,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -2484,6 +2798,8 @@
       "playersFile": "teams/27136c66338a5e0d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -2494,6 +2810,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -2516,6 +2834,8 @@
       "playersFile": "teams/96090006a06a6d90/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2526,6 +2846,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21240,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2536,6 +2858,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21902,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2558,6 +2882,8 @@
       "playersFile": "teams/58bb960d1763c6d6/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20776,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2568,6 +2894,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2590,6 +2918,8 @@
       "playersFile": "teams/b815e57bf22ddda2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20857,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -2600,6 +2930,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21643,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -2622,6 +2954,8 @@
       "playersFile": "teams/baee4c482bdc68b5/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20774,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2632,6 +2966,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2654,6 +2990,8 @@
       "playersFile": "teams/379e25cf971aec7d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2664,6 +3002,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21238,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2674,6 +3014,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21900,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2696,6 +3038,8 @@
       "playersFile": "teams/23afb6c84ec4a603/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20858,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -2713,11 +3057,13 @@
       "teamIdExtern": 82057,
       "teamName": "CB TORELL\u00D3 PF GRIS - ALGASE TRAINING",
       "matchesPlayed": 10,
-      "playersCount": 12,
+      "playersCount": 11,
       "matchesFile": "teams/a259775f6fa96c95/matches.json",
       "playersFile": "teams/a259775f6fa96c95/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2735,11 +3081,13 @@
       "teamIdExtern": 82054,
       "teamName": "CB TORELL\u00D3 PF VERMELL - - PERRUQUERIA XAMPR\u00D3",
       "matchesPlayed": 20,
-      "playersCount": 11,
+      "playersCount": 10,
       "matchesFile": "teams/9f120d9b23f3a60b/matches.json",
       "playersFile": "teams/9f120d9b23f3a60b/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20918,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2750,6 +3098,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2772,6 +3122,8 @@
       "playersFile": "teams/436e7a93edeb6318/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2782,6 +3134,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21234,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2792,6 +3146,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21896,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2814,6 +3170,8 @@
       "playersFile": "teams/5dfa2443077c7b89/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2824,6 +3182,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21235,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2834,6 +3194,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21897,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2856,6 +3218,8 @@
       "playersFile": "teams/b5289a3b22f461ed/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20822,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2866,6 +3230,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2888,6 +3254,8 @@
       "playersFile": "teams/e4be98655e221e7a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20775,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2898,6 +3266,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -2920,6 +3290,8 @@
       "playersFile": "teams/cd0b738a027d2996/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2930,6 +3302,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21236,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2940,6 +3314,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21898,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2957,11 +3333,13 @@
       "teamIdExtern": 78904,
       "teamName": "CB.CIUTAT VELLA A",
       "matchesPlayed": 22,
-      "playersCount": 21,
+      "playersCount": 23,
       "matchesFile": "teams/68c4f1464b1f7f6d/matches.json",
       "playersFile": "teams/68c4f1464b1f7f6d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -2972,6 +3350,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -2994,6 +3374,8 @@
       "playersFile": "teams/4b247912acfe14cf/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20786,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3004,6 +3386,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3026,6 +3410,8 @@
       "playersFile": "teams/0b4b458066a9266d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20822,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3036,6 +3422,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3058,6 +3446,8 @@
       "playersFile": "teams/f0b1c200e32d2947/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3068,6 +3458,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21237,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3078,6 +3470,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21898,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3100,6 +3494,8 @@
       "playersFile": "teams/877be18d2190c697/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20784,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3110,6 +3506,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3132,6 +3530,8 @@
       "playersFile": "teams/0c179beb57efc933/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3142,6 +3542,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21239,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3152,6 +3554,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21901,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3169,11 +3573,13 @@
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
       "matchesPlayed": 18,
-      "playersCount": 10,
+      "playersCount": 9,
       "matchesFile": "teams/8304417c34b915f7/matches.json",
       "playersFile": "teams/8304417c34b915f7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20853,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3184,6 +3590,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21630,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3206,6 +3614,8 @@
       "playersFile": "teams/43b0a647d3d684b4/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -3216,6 +3626,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -3238,6 +3650,8 @@
       "playersFile": "teams/e5aa3000c5bf7179/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20217,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3248,6 +3662,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3270,6 +3686,8 @@
       "playersFile": "teams/343e63e2d251700f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20773,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3280,6 +3698,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3302,6 +3722,8 @@
       "playersFile": "teams/284ba030791e68bb/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20783,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3312,6 +3734,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3334,6 +3758,8 @@
       "playersFile": "teams/b249bf256f87b4e5/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3344,6 +3770,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21239,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3354,6 +3782,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21902,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3376,6 +3806,8 @@
       "playersFile": "teams/6ef9eacd9a073a94/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20787,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3386,6 +3818,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3408,6 +3842,8 @@
       "playersFile": "teams/0d0e02f454104f86/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20784,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3418,6 +3854,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3440,6 +3878,8 @@
       "playersFile": "teams/9740a2573600c3da/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3450,6 +3890,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21240,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3460,6 +3902,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21900,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3482,6 +3926,8 @@
       "playersFile": "teams/f12b3da75df7c33f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3492,6 +3938,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21235,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3502,6 +3950,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21897,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3524,6 +3974,8 @@
       "playersFile": "teams/49d29d70c01e6527/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3534,6 +3986,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21236,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3544,6 +3998,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21898,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3566,6 +4022,8 @@
       "playersFile": "teams/16c889ca6094e976/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20782,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3576,6 +4034,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3598,6 +4058,8 @@
       "playersFile": "teams/12fac861175bc3f7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20784,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3608,6 +4070,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3630,6 +4094,8 @@
       "playersFile": "teams/e6855cae0e27d791/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20778,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3640,6 +4106,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3662,6 +4130,8 @@
       "playersFile": "teams/1841992c4a9ba706/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3672,6 +4142,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21239,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3682,6 +4154,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21900,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -3704,6 +4178,8 @@
       "playersFile": "teams/066aaf592eb3d56d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20853,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3714,6 +4190,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21631,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3736,6 +4214,8 @@
       "playersFile": "teams/5fd9f490ede8f3b9/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20217,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3746,6 +4226,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -3768,6 +4250,8 @@
       "playersFile": "teams/f3c51192cb90c1dd/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20787,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3778,6 +4262,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3800,6 +4286,8 @@
       "playersFile": "teams/e15529b17430f370/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20784,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3810,6 +4298,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3832,6 +4322,8 @@
       "playersFile": "teams/1185cd80a8e5d593/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -3842,6 +4334,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -3864,6 +4358,8 @@
       "playersFile": "teams/22865e021686336f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20777,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3874,6 +4370,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3896,6 +4394,8 @@
       "playersFile": "teams/1ad8c743c24cbb21/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20779,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3906,6 +4406,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -3928,6 +4430,8 @@
       "playersFile": "teams/2897ffbc667cdcd1/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -3938,6 +4442,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -3960,6 +4466,8 @@
       "playersFile": "teams/0e947d2e614b5c97/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -3970,6 +4478,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -3992,6 +4502,8 @@
       "playersFile": "teams/4e7e9e2f87cdf4b8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4002,6 +4514,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21237,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4012,6 +4526,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21898,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4034,6 +4550,8 @@
       "playersFile": "teams/842eecd53b95c7b1/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4044,6 +4562,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 20854,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4054,6 +4574,8 @@
           "matchesPlayed": 1
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21630,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4076,6 +4598,8 @@
       "playersFile": "teams/a70442a233875bb5/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20822,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4086,6 +4610,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4108,6 +4634,8 @@
       "playersFile": "teams/23b10d743142ff37/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20858,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4118,6 +4646,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21642,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4135,11 +4665,13 @@
       "teamIdExtern": 79533,
       "teamName": "FEMEN\u00CD OSONA LIBERTY- OVA PROJECTS",
       "matchesPlayed": 20,
-      "playersCount": 19,
+      "playersCount": 20,
       "matchesFile": "teams/021f43c3dbb0683b/matches.json",
       "playersFile": "teams/021f43c3dbb0683b/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20822,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4150,6 +4682,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4172,6 +4706,8 @@
       "playersFile": "teams/0ebde4ab2b700353/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20774,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4182,6 +4718,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4204,6 +4742,8 @@
       "playersFile": "teams/8309be0f6ee25c3e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20217,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4214,6 +4754,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4236,6 +4778,8 @@
       "playersFile": "teams/26e6ffd87ec578a3/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4246,6 +4790,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21234,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4268,6 +4814,8 @@
       "playersFile": "teams/ac7dfcfb0e799af8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20823,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4278,6 +4826,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4300,6 +4850,8 @@
       "playersFile": "teams/915c7e980248aea4/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4310,6 +4862,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21235,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4320,6 +4874,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21897,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4342,6 +4898,8 @@
       "playersFile": "teams/e6cf661ef68a0c6f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20777,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4352,6 +4910,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4374,6 +4934,8 @@
       "playersFile": "teams/680351d05433f63d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4384,6 +4946,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21240,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4394,6 +4958,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21902,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4416,6 +4982,8 @@
       "playersFile": "teams/cd33d9dd1b93f096/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -4426,6 +4994,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -4448,6 +5018,8 @@
       "playersFile": "teams/a6fa0835d93ee82f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20821,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4458,6 +5030,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4480,6 +5054,8 @@
       "playersFile": "teams/d82ffb632c3e22d0/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4490,6 +5066,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21237,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4500,6 +5078,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21899,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4517,11 +5097,13 @@
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
       "matchesPlayed": 19,
-      "playersCount": 13,
+      "playersCount": 12,
       "matchesFile": "teams/5fe6ae4cf1d1f14e/matches.json",
       "playersFile": "teams/5fe6ae4cf1d1f14e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20857,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4532,6 +5114,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21630,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4554,6 +5138,8 @@
       "playersFile": "teams/65477e092172189c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20779,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4564,6 +5150,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4586,6 +5174,8 @@
       "playersFile": "teams/c8e6a07afd5b7243/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -4596,6 +5186,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -4618,6 +5210,8 @@
       "playersFile": "teams/6551f0be8257d3ed/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20856,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4628,6 +5222,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21631,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4650,6 +5246,8 @@
       "playersFile": "teams/8e813a551b6bdf67/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20780,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4660,6 +5258,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4682,6 +5282,8 @@
       "playersFile": "teams/737955eb0fc8b1a1/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4692,6 +5294,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21234,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4702,6 +5306,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21897,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -4724,6 +5330,8 @@
       "playersFile": "teams/92c751fb6bb2628e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20821,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4734,6 +5342,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4756,6 +5366,8 @@
       "playersFile": "teams/e924c33bb25731ed/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20918,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4766,6 +5378,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4783,11 +5397,13 @@
       "teamIdExtern": 80192,
       "teamName": "JOVENTUT BADALONA B",
       "matchesPlayed": 15,
-      "playersCount": 13,
+      "playersCount": 15,
       "matchesFile": "teams/e703c3d26a7cc879/matches.json",
       "playersFile": "teams/e703c3d26a7cc879/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20217,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4798,6 +5414,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4815,11 +5433,13 @@
       "teamIdExtern": 80179,
       "teamName": "JOVENTUT BADALONA VERD",
       "matchesPlayed": 17,
-      "playersCount": 16,
+      "playersCount": 15,
       "matchesFile": "teams/e5339d651827cd27/matches.json",
       "playersFile": "teams/e5339d651827cd27/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20855,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4830,6 +5450,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21642,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4852,6 +5474,8 @@
       "playersFile": "teams/1c217d2201e13f8f/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20786,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4862,6 +5486,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4879,11 +5505,13 @@
       "teamIdExtern": 82181,
       "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLAU",
       "matchesPlayed": 18,
-      "playersCount": 16,
+      "playersCount": 14,
       "matchesFile": "teams/0eda880cfcdc076c/matches.json",
       "playersFile": "teams/0eda880cfcdc076c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20857,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4894,6 +5522,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21642,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4916,6 +5546,8 @@
       "playersFile": "teams/2400eefbdca48953/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20823,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4926,6 +5558,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4948,6 +5582,8 @@
       "playersFile": "teams/45ed0d7f19e9e19e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20781,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4958,6 +5594,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -4980,6 +5618,8 @@
       "playersFile": "teams/bad593723359fb9e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20858,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -4990,6 +5630,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21642,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5012,6 +5654,8 @@
       "playersFile": "teams/11c9b06ca67b4ba8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20773,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5022,6 +5666,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5044,6 +5690,8 @@
       "playersFile": "teams/756d86a20007f313/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -5054,6 +5702,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -5076,6 +5726,8 @@
       "playersFile": "teams/7cd414bbd0badfa7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20778,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5086,6 +5738,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21543,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5108,6 +5762,8 @@
       "playersFile": "teams/7997b8ab22d203d9/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20856,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5118,6 +5774,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5135,11 +5793,13 @@
       "teamIdExtern": 79030,
       "teamName": "MANRESA CBF 2",
       "matchesPlayed": 17,
-      "playersCount": 14,
+      "playersCount": 15,
       "matchesFile": "teams/607d6d7db147dbe2/matches.json",
       "playersFile": "teams/607d6d7db147dbe2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20781,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5150,6 +5810,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5172,6 +5834,8 @@
       "playersFile": "teams/3fd4d6759518a4aa/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20773,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5182,6 +5846,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21546,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5204,6 +5870,8 @@
       "playersFile": "teams/1131802994b3e9dd/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20783,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5214,6 +5882,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5236,6 +5906,8 @@
       "playersFile": "teams/dcf1b04c3dca1dc6/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20822,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5246,6 +5918,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5263,11 +5937,13 @@
       "teamIdExtern": 83832,
       "teamName": "NAVAS REFORMAS - CB. GAV\u00C0 BLAU",
       "matchesPlayed": 14,
-      "playersCount": 16,
+      "playersCount": 17,
       "matchesFile": "teams/4453edff2e128743/matches.json",
       "playersFile": "teams/4453edff2e128743/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20785,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5278,6 +5954,8 @@
           "matchesPlayed": 6
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5300,6 +5978,8 @@
       "playersFile": "teams/4e694b8ea7d0b0f7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5310,6 +5990,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21237,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5320,6 +6002,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21899,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5342,6 +6026,8 @@
       "playersFile": "teams/a42f6d7b7cf09f12/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20857,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5352,6 +6038,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21643,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5369,11 +6057,13 @@
       "teamIdExtern": 83820,
       "teamName": "NOU B\u00C0SQUET OLESA VERMELL",
       "matchesPlayed": 15,
-      "playersCount": 13,
+      "playersCount": 14,
       "matchesFile": "teams/02a2e35b4d32ffe2/matches.json",
       "playersFile": "teams/02a2e35b4d32ffe2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20781,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5384,6 +6074,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21538,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5401,11 +6093,13 @@
       "teamIdExtern": 79509,
       "teamName": "PAIDOS-ASFE U10F BLANC",
       "matchesPlayed": 15,
-      "playersCount": 16,
+      "playersCount": 19,
       "matchesFile": "teams/15dbc97d78490b1e/matches.json",
       "playersFile": "teams/15dbc97d78490b1e/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20781,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5416,6 +6110,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5438,6 +6134,8 @@
       "playersFile": "teams/e2b3255b627cf556/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20918,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5448,6 +6146,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5465,11 +6165,13 @@
       "teamIdExtern": 79506,
       "teamName": "PAIDOS-ASFE U9F",
       "matchesPlayed": 16,
-      "playersCount": 12,
+      "playersCount": 13,
       "matchesFile": "teams/9bd5bf73e254b8ac/matches.json",
       "playersFile": "teams/9bd5bf73e254b8ac/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20773,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5480,6 +6182,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5502,6 +6206,8 @@
       "playersFile": "teams/22ed7d6317adc721/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5512,6 +6218,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21237,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5522,6 +6230,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21898,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5544,6 +6254,8 @@
       "playersFile": "teams/c77a6d582b881027/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19859,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5554,6 +6266,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21238,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5564,6 +6278,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21902,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5581,11 +6297,13 @@
       "teamIdExtern": 83315,
       "teamName": "QBASKET SANT CUGAT",
       "matchesPlayed": 17,
-      "playersCount": 12,
+      "playersCount": 11,
       "matchesFile": "teams/0c3f3da94ef669a8/matches.json",
       "playersFile": "teams/0c3f3da94ef669a8/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20856,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5596,6 +6314,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5613,11 +6333,13 @@
       "teamIdExtern": 80763,
       "teamName": "QBASKET SANT CUGAT 1",
       "matchesPlayed": 22,
-      "playersCount": 18,
+      "playersCount": 17,
       "matchesFile": "teams/bdc159f515230d00/matches.json",
       "playersFile": "teams/bdc159f515230d00/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -5628,6 +6350,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -5650,6 +6374,8 @@
       "playersFile": "teams/eab3a7b77dff2287/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5672,6 +6398,8 @@
       "playersFile": "teams/ed154a8fc53ac69c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5682,6 +6410,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21236,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5692,6 +6422,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21899,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5709,11 +6441,13 @@
       "teamIdExtern": 83279,
       "teamName": "RIO LOGISTIC CB LLI\u00C7A D\u2019AMUNT",
       "matchesPlayed": 15,
-      "playersCount": 11,
+      "playersCount": 10,
       "matchesFile": "teams/0fa6c31fb9010327/matches.json",
       "playersFile": "teams/0fa6c31fb9010327/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20777,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5724,6 +6458,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5746,6 +6482,8 @@
       "playersFile": "teams/70d793f955f0a8cb/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20780,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5756,6 +6494,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5778,6 +6518,8 @@
       "playersFile": "teams/6e3539cdd281cb31/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -5788,6 +6530,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -5810,6 +6554,8 @@
       "playersFile": "teams/377d255bb9059636/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5820,6 +6566,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21234,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5830,6 +6578,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21897,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -5852,6 +6602,8 @@
       "playersFile": "teams/ab4484d6c8783024/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20774,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5862,6 +6614,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5884,6 +6638,8 @@
       "playersFile": "teams/be79a9273f5bc1cf/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20858,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5894,6 +6650,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21642,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5916,6 +6674,8 @@
       "playersFile": "teams/ab2e6a05b2a3a5a0/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20777,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5926,6 +6686,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5948,6 +6710,8 @@
       "playersFile": "teams/04d632b6e4f40876/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20786,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5958,6 +6722,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -5980,6 +6746,8 @@
       "playersFile": "teams/f741373c26506df7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20855,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -5990,6 +6758,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21591,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6007,11 +6777,13 @@
       "teamIdExtern": 79859,
       "teamName": "SESE A",
       "matchesPlayed": 18,
-      "playersCount": 14,
+      "playersCount": 16,
       "matchesFile": "teams/742478f3eb475109/matches.json",
       "playersFile": "teams/742478f3eb475109/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20823,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6022,6 +6794,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6039,11 +6813,13 @@
       "teamIdExtern": 79862,
       "teamName": "SESE B",
       "matchesPlayed": 15,
-      "playersCount": 16,
+      "playersCount": 17,
       "matchesFile": "teams/f000d109f2961ca0/matches.json",
       "playersFile": "teams/f000d109f2961ca0/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20853,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6054,6 +6830,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21590,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6076,6 +6854,8 @@
       "playersFile": "teams/ba150ecc28b9d6c7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20857,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6086,6 +6866,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21643,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6108,6 +6890,8 @@
       "playersFile": "teams/86ae406f490d3425/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6118,6 +6902,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21236,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6128,6 +6914,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21899,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6150,6 +6938,8 @@
       "playersFile": "teams/bc438264270b867a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6160,6 +6950,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21239,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6170,6 +6962,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21901,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6192,6 +6986,8 @@
       "playersFile": "teams/4ac318f46effcb54/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20775,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6202,6 +6998,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6219,11 +7017,13 @@
       "teamIdExtern": 79663,
       "teamName": "TALENOM BOET MATAR\u00D3 2017",
       "matchesPlayed": 19,
-      "playersCount": 10,
+      "playersCount": 9,
       "matchesFile": "teams/9c3e16ed35dc31c4/matches.json",
       "playersFile": "teams/9c3e16ed35dc31c4/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20858,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6234,6 +7034,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21642,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6256,6 +7058,8 @@
       "playersFile": "teams/210712fc3aba75ce/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19862,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6266,6 +7070,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21237,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6276,6 +7082,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21899,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6293,11 +7101,13 @@
       "teamIdExtern": 79828,
       "teamName": "U. B. LLEFI\u00C0  A - PERE GARCIA ASSEGURANCES",
       "matchesPlayed": 23,
-      "playersCount": 23,
+      "playersCount": 22,
       "matchesFile": "teams/d655862b84191bd6/matches.json",
       "playersFile": "teams/d655862b84191bd6/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19861,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6308,6 +7118,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21239,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6318,6 +7130,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21901,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6340,6 +7154,8 @@
       "playersFile": "teams/e41da550e16c5760/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20787,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6350,6 +7166,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21537,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6372,6 +7190,8 @@
       "playersFile": "teams/e68d95a3acc5bcfb/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -6382,6 +7202,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -6404,6 +7226,8 @@
       "playersFile": "teams/1413c217ffe39522/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20856,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6414,6 +7238,8 @@
           "matchesPlayed": 9
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21630,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6436,6 +7262,8 @@
       "playersFile": "teams/1872624c78534ecd/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20778,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6446,6 +7274,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21544,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6468,6 +7298,8 @@
       "playersFile": "teams/8307113966464f9d/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6478,6 +7310,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21240,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6488,6 +7322,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21902,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6510,6 +7346,8 @@
       "playersFile": "teams/9cea1396ad96e2a5/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20783,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6520,6 +7358,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6542,6 +7382,8 @@
       "playersFile": "teams/e07b91305de7c0b2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20858,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6552,6 +7394,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21643,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6574,6 +7418,8 @@
       "playersFile": "teams/1271c2470142e1e2/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20918,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6584,6 +7430,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21535,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6601,11 +7449,13 @@
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
       "matchesPlayed": 16,
-      "playersCount": 12,
+      "playersCount": 11,
       "matchesFile": "teams/2cf759afac283e34/matches.json",
       "playersFile": "teams/2cf759afac283e34/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20855,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6616,6 +7466,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21631,
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -6633,11 +7485,13 @@
       "teamIdExtern": 79955,
       "teamName": "U10 JOVENTUT LES CORTS",
       "matchesPlayed": 17,
-      "playersCount": 10,
+      "playersCount": 9,
       "matchesFile": "teams/d6163b004c931deb/matches.json",
       "playersFile": "teams/d6163b004c931deb/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20787,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6648,6 +7502,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21539,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6670,6 +7526,8 @@
       "playersFile": "teams/89c38edb7ba0c1f6/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -6680,6 +7538,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -6702,6 +7562,8 @@
       "playersFile": "teams/57c9608ecec5e806/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20918,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6712,6 +7574,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21536,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6734,6 +7598,8 @@
       "playersFile": "teams/4aa407be2fcbf8a4/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20822,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6744,6 +7610,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21545,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6766,6 +7634,8 @@
       "playersFile": "teams/daa06c2e8fca2e66/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -6776,6 +7646,8 @@
           "matchesPlayed": 11
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 19778,
           "categoryName": "Copa Catalunya Masculina",
@@ -6793,11 +7665,13 @@
       "teamIdExtern": 82149,
       "teamName": "UE SANT ANDREU GROC",
       "matchesPlayed": 16,
-      "playersCount": 16,
+      "playersCount": 17,
       "matchesFile": "teams/1ed865583ca93297/matches.json",
       "playersFile": "teams/1ed865583ca93297/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20778,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6808,6 +7682,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6830,6 +7706,8 @@
       "playersFile": "teams/18bcca924fdade8c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20786,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6840,6 +7718,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21540,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6862,6 +7742,8 @@
       "playersFile": "teams/9c35b2feb758a3a7/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19860,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6872,6 +7754,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21235,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6882,6 +7766,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21896,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -6899,11 +7785,13 @@
       "teamIdExtern": 80594,
       "teamName": "UE.MONTGAT - VERMELL",
       "matchesPlayed": 17,
-      "playersCount": 14,
+      "playersCount": 13,
       "matchesFile": "teams/0d179e7fcf117edc/matches.json",
       "playersFile": "teams/0d179e7fcf117edc/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20783,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6914,6 +7802,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6936,6 +7826,8 @@
       "playersFile": "teams/0d62bfe0b1ba869a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20775,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6946,6 +7838,8 @@
           "matchesPlayed": 7
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21542,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6968,6 +7862,8 @@
       "playersFile": "teams/7ebaeae6e05400e1/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -6990,6 +7886,8 @@
       "playersFile": "teams/50bcdb952f4a5789/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19863,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -7000,6 +7898,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21238,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -7010,6 +7910,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21901,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -7032,6 +7934,8 @@
       "playersFile": "teams/f5f4bc2552afa7bb/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 19864,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -7042,6 +7946,8 @@
           "matchesPlayed": 12
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21234,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -7052,6 +7958,8 @@
           "matchesPlayed": 10
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21897,
           "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -7074,6 +7982,8 @@
       "playersFile": "teams/3f3e40894b70456c/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20785,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -7084,6 +7994,8 @@
           "matchesPlayed": 6
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21541,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -7106,6 +8018,8 @@
       "playersFile": "teams/faf7fa7f6eec9ed1/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21547,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -7128,6 +8042,8 @@
       "playersFile": "teams/2a595e34bb165a1a/players.json",
       "phases": [
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 1,
           "sourcePhaseId": 20779,
           "categoryName": "C.t. Pre-mini Femen\u00ED",
@@ -7138,6 +8054,8 @@
           "matchesPlayed": 8
         },
         {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
           "phaseNumber": 2,
           "sourcePhaseId": 21548,
           "categoryName": "C.t. Pre-mini Femen\u00ED",

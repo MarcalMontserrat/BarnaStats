@@ -206,6 +206,9 @@ async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync
             .OrderBy(x => x.MatchWebId)
             .ToList();
 
+        if (syncResult.PhaseMetadata is not null)
+            PopulatePhaseSeasonMetadata(syncResult.PhaseMetadata, orderedMappings);
+
         await SaveMappingsAsync(storage.MappingFile, orderedMappings, jsonOptions);
 
         if (syncResult.PhaseMetadata is not null)
@@ -493,6 +496,8 @@ async Task SaveResultsSourceRegistryEntryAsync(
 
     existingEntry.SourceUrl = normalizedSourceUrl;
     existingEntry.PhaseId = phaseId;
+    existingEntry.SeasonStartYear = phaseMetadata?.SeasonStartYear ?? existingEntry.SeasonStartYear;
+    existingEntry.SeasonLabel = phaseMetadata?.SeasonLabel ?? existingEntry.SeasonLabel;
     existingEntry.CategoryName = phaseMetadata?.CategoryName ?? existingEntry.CategoryName;
     existingEntry.PhaseName = phaseMetadata?.PhaseName ?? existingEntry.PhaseName;
     existingEntry.LevelName = phaseMetadata?.LevelName ?? existingEntry.LevelName;
@@ -519,6 +524,48 @@ async Task<List<ResultsSourceRegistryEntry>> LoadResultsSourceRegistryAsync(stri
 
     var json = await File.ReadAllTextAsync(registryFile);
     return JsonSerializer.Deserialize<List<ResultsSourceRegistryEntry>>(json, options) ?? [];
+}
+
+void PopulatePhaseSeasonMetadata(PhaseMetadata metadata, IReadOnlyCollection<MatchMapping> orderedMappings)
+{
+    if (metadata.SeasonStartYear.HasValue)
+    {
+        metadata.SeasonLabel = NormalizeSeasonLabel(metadata.SeasonStartYear.Value, metadata.SeasonLabel);
+        return;
+    }
+
+    var inferredSeasonStartYear = orderedMappings
+        .Select(mapping => mapping.MatchDate)
+        .Where(matchDate => matchDate.HasValue)
+        .Select(matchDate => InferSeasonStartYear(matchDate!.Value))
+        .GroupBy(year => year)
+        .OrderByDescending(group => group.Count())
+        .ThenByDescending(group => group.Key)
+        .Select(group => (int?)group.Key)
+        .FirstOrDefault();
+
+    if (!inferredSeasonStartYear.HasValue)
+        return;
+
+    metadata.SeasonStartYear = inferredSeasonStartYear.Value;
+    metadata.SeasonLabel = BuildSeasonLabel(inferredSeasonStartYear.Value);
+}
+
+int InferSeasonStartYear(DateTime matchDate)
+{
+    return matchDate.Month >= 7 ? matchDate.Year : matchDate.Year - 1;
+}
+
+string NormalizeSeasonLabel(int seasonStartYear, string? seasonLabel)
+{
+    return string.IsNullOrWhiteSpace(seasonLabel)
+        ? BuildSeasonLabel(seasonStartYear)
+        : seasonLabel.Trim();
+}
+
+string BuildSeasonLabel(int seasonStartYear)
+{
+    return $"{seasonStartYear}-{seasonStartYear + 1}";
 }
 
 void PrintHelp()

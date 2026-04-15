@@ -97,7 +97,7 @@ function MatchTable({players, onPlayerNavigate}) {
 
                     return (
                         <tr
-                            key={`${player.matchWebId}-${player.playerName}-${index}`}
+                            key={`${player.matchWebId}-${player.playerIdentityKey ?? player.playerName}-${index}`}
                             style={{background: rowBackground}}
                         >
                             <td style={tableStyles.bodyCell}>
@@ -106,7 +106,7 @@ function MatchTable({players, onPlayerNavigate}) {
                                         type="button"
                                         style={tableStyles.playerLink}
                                         title={`Ver estadísticas de ${player.playerName}`}
-                                        onClick={() => onPlayerNavigate(player.playerName)}
+                                        onClick={() => onPlayerNavigate(player.playerIdentityKey ?? player.playerName)}
                                     >
                                         {player.playerName}
                                     </button>

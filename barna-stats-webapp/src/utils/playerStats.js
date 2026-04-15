@@ -1,6 +1,50 @@
+function resolvePlayerIdentityKey(player) {
+    if (player?.playerIdentityKey) {
+        return String(player.playerIdentityKey);
+    }
+
+    if (player?.playerUuid) {
+        return `UUID:${String(player.playerUuid).trim().toLowerCase()}`;
+    }
+
+    if (Number(player?.playerActorId) > 0) {
+        return `PLAYER:${player.playerActorId}`;
+    }
+
+    return `NAME:${String(player?.playerName ?? "").trim().toLowerCase()}`;
+}
+
 export function getPlayersList(players) {
-    return [...new Set(players.map((player) => player.playerName))]
-        .sort((a, b) => a.localeCompare(b, "es"));
+    const entriesByKey = new Map();
+
+    (players ?? []).forEach((player) => {
+        const value = resolvePlayerIdentityKey(player);
+        if (!value || entriesByKey.has(value)) {
+            return;
+        }
+
+        entriesByKey.set(value, {
+            value,
+            label: player.playerName ?? "",
+            dorsal: player.dorsal ?? player.shirtNumber ?? ""
+        });
+    });
+
+    const entries = [...entriesByKey.values()];
+    const labelCounts = entries.reduce((counts, entry) => {
+        const key = entry.label;
+        counts.set(key, (counts.get(key) ?? 0) + 1);
+        return counts;
+    }, new Map());
+
+    return entries
+        .map((entry) => ({
+            value: entry.value,
+            label: (labelCounts.get(entry.label) ?? 0) > 1 && entry.dorsal
+                ? `${entry.label} · #${entry.dorsal}`
+                : entry.label
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label, "es"));
 }
 
 function usesSplitSeasonSegments(players) {
@@ -27,7 +71,7 @@ export function getChartData(players, selectedPlayer, selectedPhase) {
     const useSeasonSegments = usesSplitSeasonSegments(players);
 
     return players
-        .filter((row) => row.playerName === selectedPlayer)
+        .filter((row) => resolvePlayerIdentityKey(row) === selectedPlayer)
         .sort((a, b) => {
             if (a.phaseNumber !== b.phaseNumber) {
                 return a.phaseNumber - b.phaseNumber;
@@ -126,21 +170,23 @@ export function buildPlayersArray(players) {
     const totalsByPlayer = {};
 
     players.forEach((player) => {
-        if (!totalsByPlayer[player.playerName]) {
-            totalsByPlayer[player.playerName] = {
+        const playerKey = resolvePlayerIdentityKey(player);
+        if (!totalsByPlayer[playerKey]) {
+            totalsByPlayer[playerKey] = {
+                key: playerKey,
+                name: player.playerName ?? "",
                 points: 0,
                 valuation: 0,
                 games: 0
             };
         }
 
-        totalsByPlayer[player.playerName].points += Number(player.points);
-        totalsByPlayer[player.playerName].valuation += Number(player.valuation);
-        totalsByPlayer[player.playerName].games += 1;
+        totalsByPlayer[playerKey].points += Number(player.points);
+        totalsByPlayer[playerKey].valuation += Number(player.valuation);
+        totalsByPlayer[playerKey].games += 1;
     });
 
-    return Object.entries(totalsByPlayer).map(([name, stats]) => ({
-        name,
+    return Object.values(totalsByPlayer).map((stats) => ({
         ...stats,
         avgPoints: stats.games > 0 ? stats.points / stats.games : 0,
         avgValuation: stats.games > 0 ? stats.valuation / stats.games : 0,
@@ -174,7 +220,7 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
         return null;
     }
 
-    const selectedRows = (players ?? []).filter((player) => player.playerName === selectedPlayer);
+    const selectedRows = (players ?? []).filter((player) => resolvePlayerIdentityKey(player) === selectedPlayer);
 
     if (selectedRows.length === 0) {
         return null;
@@ -192,7 +238,8 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
     const threeAttempted = selectedRows.reduce((sum, player) => sum + Number(player.threeAttempted ?? 0), 0);
 
     return {
-        name: selectedPlayer,
+        key: selectedPlayer,
+        name: selectedRows[0]?.playerName ?? selectedPlayer,
         games,
         points,
         valuation,
@@ -220,9 +267,12 @@ export function buildGlobalPlayers(teams) {
             const games = Number(player.games) || 0;
             const points = Number(player.points) || 0;
             const valuation = Number(player.valuation) || 0;
+            const playerIdentityKey = resolvePlayerIdentityKey(player);
 
             return {
-                key: `${player.teamKey ?? team.teamKey}:${player.playerName}:${player.shirtNumber ?? ""}`,
+                key: `${player.teamKey ?? team.teamKey}:${playerIdentityKey}`,
+                playerIdentityKey,
+                playerActorId: Number(player.playerActorId) || 0,
                 teamKey: player.teamKey ?? team.teamKey,
                 teamName: player.teamName ?? team.teamName,
                 playerName: player.playerName,

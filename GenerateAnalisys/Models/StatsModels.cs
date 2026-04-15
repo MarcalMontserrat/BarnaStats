@@ -73,6 +73,9 @@ public sealed class PlayerInfo
     [JsonPropertyName("actorId")]
     public long ActorId { get; set; }
 
+    [JsonPropertyName("uuid")]
+    public string? Uuid { get; set; }
+
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

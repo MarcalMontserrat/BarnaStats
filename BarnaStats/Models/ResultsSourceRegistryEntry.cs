@@ -4,6 +4,8 @@ public sealed class ResultsSourceRegistryEntry
 {
     public string SourceUrl { get; set; } = "";
     public int? PhaseId { get; set; }
+    public int? SeasonStartYear { get; set; }
+    public string SeasonLabel { get; set; } = "";
     public string CategoryName { get; set; } = "";
     public string PhaseName { get; set; } = "";
     public string LevelName { get; set; } = "";

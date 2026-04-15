@@ -4,6 +4,8 @@ public sealed class ResultsSourceSnapshot
 {
     public string SourceUrl { get; init; } = "";
     public int? PhaseId { get; init; }
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public string CategoryName { get; init; } = "";
     public string PhaseName { get; init; } = "";
     public string LevelName { get; init; } = "";

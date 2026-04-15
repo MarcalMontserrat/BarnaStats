@@ -126,9 +126,9 @@ function PlayerEvolutionSection({
                     minWidth="340px"
                 >
                     <option value="">Selecciona jugadora</option>
-                    {playersList.map((name) => (
-                        <option key={name} value={name}>
-                            {name}
+                    {playersList.map((player) => (
+                        <option key={player.value} value={player.value}>
+                            {player.label}
                         </option>
                     ))}
                 </PrettySelect>

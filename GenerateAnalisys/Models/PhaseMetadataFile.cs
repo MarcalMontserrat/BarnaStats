@@ -4,6 +4,8 @@ public sealed class PhaseMetadataFile
 {
     public int? PhaseId { get; set; }
     public string SourceUrl { get; set; } = "";
+    public int? SeasonStartYear { get; set; }
+    public string SeasonLabel { get; set; } = "";
     public string CategoryName { get; set; } = "";
     public string SubTitle { get; set; } = "";
     public string PhaseName { get; set; } = "";

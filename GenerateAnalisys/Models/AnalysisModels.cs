@@ -6,7 +6,11 @@ public sealed class PlayerSeasonTotal
     public int TeamIdIntern { get; set; }
     public int TeamIdExtern { get; set; }
     public string TeamName { get; set; } = "";
+    public int? SeasonStartYear { get; set; }
+    public string SeasonLabel { get; set; } = "";
+    public string PlayerUuid { get; set; } = "";
     public long PlayerActorId { get; set; }
+    public string PlayerIdentityKey { get; set; } = "";
     public string PlayerName { get; set; } = "";
     public string ShirtNumber { get; set; } = "";
     public int Games { get; set; }
@@ -29,6 +33,8 @@ public sealed class MatchSummary
     public int TeamIdIntern { get; set; }
     public int TeamIdExtern { get; set; }
     public string TeamName { get; set; } = "";
+    public int? SeasonStartYear { get; set; }
+    public string SeasonLabel { get; set; } = "";
     public string HomeTeamKey { get; set; } = "";
     public string AwayTeamKey { get; set; } = "";
     public int MatchWebId { get; set; }
@@ -73,6 +79,8 @@ public sealed class MatchPlayerRow
     public int TeamIdIntern { get; set; }
     public int TeamIdExtern { get; set; }
     public string TeamName { get; set; } = "";
+    public int? SeasonStartYear { get; set; }
+    public string SeasonLabel { get; set; } = "";
     public int MatchWebId { get; set; }
     public int MatchInternId { get; set; }
     public int MatchExternId { get; set; }
@@ -88,7 +96,9 @@ public sealed class MatchPlayerRow
     public bool IsHome { get; set; }
     public string RivalTeamKey { get; set; } = "";
     public string Rival { get; set; } = "";
+    public string PlayerUuid { get; set; } = "";
     public long PlayerActorId { get; set; }
+    public string PlayerIdentityKey { get; set; } = "";
     public string PlayerName { get; set; } = "";
     public string Dorsal { get; set; } = "";
     public int Minutes { get; set; }
@@ -107,7 +117,9 @@ public sealed class MatchPlayerRow
 public sealed class MatchMVP
 {
     public int MatchWebId { get; set; }
+    public string PlayerUuid { get; set; } = "";
     public long PlayerActorId { get; set; }
+    public string PlayerIdentityKey { get; set; } = "";
     public string PlayerName { get; set; } = "";
     public int Points { get; set; }
     public int Valuation { get; set; }
@@ -116,7 +128,9 @@ public sealed class MatchMVP
 
 public sealed class PlayerRanking
 {
+    public string PlayerUuid { get; set; } = "";
     public long PlayerActorId { get; set; }
+    public string PlayerIdentityKey { get; set; } = "";
     public string PlayerName { get; set; } = "";
     public string Dorsal { get; set; } = "";
     public int Games { get; set; }
@@ -129,7 +143,9 @@ public sealed class PlayerRanking
 
 public sealed class PlayerEvolution
 {
+    public string PlayerUuid { get; set; } = "";
     public long PlayerActorId { get; set; }
+    public string PlayerIdentityKey { get; set; } = "";
     public string PlayerName { get; set; } = "";
     public int PhaseNumber { get; set; }
     public int PhaseRound { get; set; }
@@ -173,6 +189,8 @@ public sealed class MatchInsights
 
 public sealed class CompetitionPhase
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public int? SourcePhaseId { get; init; }
     public int PhaseNumber { get; init; }
     public string CategoryName { get; init; } = "";
@@ -195,6 +213,8 @@ public sealed class CompetitionTeamOverview
 
 public sealed class CompetitionMatch
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public int MatchWebId { get; init; }
     public int MatchInternId { get; init; }
     public int MatchExternId { get; init; }
@@ -233,6 +253,8 @@ public sealed class CompetitionStandingRow
 
 public sealed class TeamPhaseInfo
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public int PhaseNumber { get; init; }
     public int? SourcePhaseId { get; init; }
     public string CategoryName { get; init; } = "";
@@ -245,6 +267,8 @@ public sealed class TeamPhaseInfo
 
 public sealed class CompetitionPhaseStandings
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public int PhaseNumber { get; init; }
     public List<CompetitionStandingRow> Rows { get; init; } = [];
 }
@@ -256,7 +280,11 @@ public sealed class CompetitionPlayerLeader
     public int TeamIdIntern { get; init; }
     public int TeamIdExtern { get; init; }
     public string TeamName { get; init; } = "";
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public string PlayerUuid { get; init; } = "";
     public long PlayerActorId { get; init; }
+    public string PlayerIdentityKey { get; init; } = "";
     public string PlayerName { get; init; } = "";
     public string ShirtNumber { get; init; } = "";
     public int Games { get; init; }
