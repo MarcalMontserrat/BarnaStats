@@ -1,7 +1,8 @@
 .pretty-select-field {
   display: grid;
   gap: 8px;
-  width: min(100%, var(--pretty-select-min-width, 260px));
+  width: min(100%, max(var(--pretty-select-min-width, 260px), var(--pretty-select-ideal-width, 260px)));
+  max-width: 100%;
 }
 
 .pretty-select-label {
