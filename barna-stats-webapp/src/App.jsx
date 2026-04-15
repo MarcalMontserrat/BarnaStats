@@ -1,6 +1,8 @@
 import {lazy, Suspense, useEffect, useRef, useState} from "react";
+import AutocompleteField from "./components/AutocompleteField.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
+import {useSeasonDirectoryData} from "./hooks/useSeasonDirectoryData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
@@ -37,6 +39,10 @@ import {
     sortMatches,
     sortPlayers
 } from "./utils/playerStats.js";
+import {
+    buildHistoricalPlayerEntities,
+    buildHistoricalTeamEntities
+} from "./utils/historicalDirectory.js";
 
 const GlobalLeadersSection = lazy(() => import("./components/GlobalLeadersSection.jsx"));
 const PhaseComparisonSection = lazy(() => import("./components/PhaseComparisonSection.jsx"));
@@ -464,6 +470,73 @@ const appStyles = {
         fontSize: 14,
         lineHeight: 1.6
     },
+    seasonCards: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
+        gap: 18
+    },
+    seasonCard: {
+        display: "grid",
+        gap: 18,
+        padding: "22px 20px",
+        borderRadius: "var(--radius-xl)",
+        background: "linear-gradient(180deg, rgba(255, 252, 247, 0.94) 0%, rgba(248, 240, 229, 0.94) 100%)",
+        border: "1px solid rgba(107, 86, 58, 0.14)",
+        boxShadow: "var(--shadow-md)"
+    },
+    seasonCardHeader: {
+        display: "grid",
+        gap: 8
+    },
+    seasonCardEyebrow: {
+        color: "var(--accent)",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.12em",
+        textTransform: "uppercase"
+    },
+    seasonCardTitle: {
+        fontSize: "clamp(1.55rem, 2vw, 2rem)"
+    },
+    seasonCardMeta: {
+        color: "var(--muted)",
+        fontSize: 14,
+        lineHeight: 1.6
+    },
+    seasonMetricsGrid: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 140px), 1fr))",
+        gap: 12
+    },
+    seasonMetricCard: {
+        display: "grid",
+        gap: 6,
+        padding: "14px 16px",
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 251, 245, 0.94)",
+        border: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    seasonMetricLabel: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase"
+    },
+    seasonMetricValue: {
+        fontFamily: "var(--font-display)",
+        fontSize: "1.65rem",
+        lineHeight: 0.95
+    },
+    seasonMetricMeta: {
+        color: "var(--muted)",
+        fontSize: 13
+    },
+    aggregateGrid: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 180px), 1fr))",
+        gap: 14
+    },
     pageBackLink: {
         display: "inline-flex",
         alignItems: "center",
@@ -486,6 +559,31 @@ function SectionFallback({message}) {
             {message}
         </div>
     );
+}
+
+function formatDecimal(value, digits = 1) {
+    return Number(value ?? 0).toLocaleString("es-ES", {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits
+    });
+}
+
+function formatSignedNumber(value, digits = 0) {
+    const number = Number(value ?? 0);
+    const prefix = number > 0 ? "+" : "";
+
+    return `${prefix}${number.toLocaleString("es-ES", {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits
+    })}`;
+}
+
+function formatRecordLine(record) {
+    if ((record?.ties ?? 0) > 0) {
+        return `${record?.wins ?? 0}-${record?.losses ?? 0}-${record?.ties ?? 0}`;
+    }
+
+    return `${record?.wins ?? 0}-${record?.losses ?? 0}`;
 }
 
 function buildHash(path, params = {}) {
@@ -608,7 +706,6 @@ function App() {
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
     const [route, setRoute] = useState(() => initialHashState.route);
     const [selectedSeasonLabel, setSelectedSeasonLabel] = useState(() => initialHashState.seasonLabel ?? "");
-    const [selectedDirectoryPlayer, setSelectedDirectoryPlayer] = useState(() => initialHashState.playerKey ?? "");
     const {
         analysis: seasonsIndex,
         loading: seasonsIndexLoading,
@@ -626,7 +723,7 @@ function App() {
         ?? null;
     const isHistoryRoute = route === "history";
     const isPlayersRoute = route === "players";
-    const isTeamRoute = route === "dashboard" || route === "history";
+    const isTeamRoute = route === "dashboard";
     const isCurrentSeasonRoute = route === "dashboard" || route === "competition";
     const {
         analysis: currentAnalysisIndex,
@@ -684,6 +781,12 @@ function App() {
             ? `data/${selectedSeasonEntry.competitionFile}?v=${analysisVersion}`
             : null
     );
+    const {
+        index: historicalDirectoryIndex,
+        seasons: historicalSeasonDatasets,
+        loading: historicalDirectoryLoading,
+        error: historicalDirectoryError
+    } = useSeasonDirectoryData(isHistoryRoute || isPlayersRoute, analysisVersion);
 
     const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
     const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
@@ -703,10 +806,10 @@ function App() {
     const [rankingMinGames, setRankingMinGames] = useState("3");
     const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
     const [selectedTeamTab, setSelectedTeamTab] = useState("snapshot");
-    const [selectedDirectoryCategory, setSelectedDirectoryCategory] = useState("all");
-    const [selectedDirectoryLevel, setSelectedDirectoryLevel] = useState("all");
-    const [selectedDirectoryTeam, setSelectedDirectoryTeam] = useState("all");
-    const [selectedDirectoryPhase, setSelectedDirectoryPhase] = useState("");
+    const [historyTeamQuery, setHistoryTeamQuery] = useState("");
+    const [selectedHistoryTeamKey, setSelectedHistoryTeamKey] = useState("");
+    const [playerDirectoryQuery, setPlayerDirectoryQuery] = useState("");
+    const [selectedHistoricalPlayerKey, setSelectedHistoricalPlayerKey] = useState("");
     const pendingScrollRestoreFrame = useRef(0);
     const teamTabsRef = useRef(null);
 
@@ -720,12 +823,10 @@ function App() {
             setRoute(nextState.route);
             setSelectedSeasonLabel(nextState.seasonLabel ?? "");
             setSelectedTeamKey(nextState.teamKey ?? "");
-            setSelectedDirectoryPlayer(nextState.playerKey ?? "");
             setSelectedPhase("");
             setSelectedPlayer("");
             setSelectedMatch("");
             setOpenMatches({});
-            setSelectedDirectoryPhase("");
         };
 
         window.addEventListener("hashchange", handleHashChange);
@@ -766,6 +867,22 @@ function App() {
     const activeBrowseSeasonLabel = (isHistoryRoute || isPlayersRoute)
         ? effectiveExplorerSeasonLabel
         : currentSeasonLabel;
+    const historicalTeamEntities = buildHistoricalTeamEntities(historicalSeasonDatasets);
+    const historicalTeamOptions = historicalTeamEntities.map((entity) => ({
+        value: entity.key,
+        label: entity.label,
+        meta: entity.meta,
+        searchText: entity.searchText
+    }));
+    const selectedHistoricalTeam = historicalTeamEntities.find((entity) => entity.key === selectedHistoryTeamKey) ?? null;
+    const historicalPlayerEntities = buildHistoricalPlayerEntities(historicalSeasonDatasets);
+    const historicalPlayerOptions = historicalPlayerEntities.map((entity) => ({
+        value: entity.key,
+        label: entity.label,
+        meta: entity.meta,
+        searchText: entity.searchText
+    }));
+    const selectedHistoricalPlayer = historicalPlayerEntities.find((entity) => entity.key === selectedHistoricalPlayerKey) ?? null;
     const teams = analysisIndex?.teams ?? [];
     const latestTeamContexts = buildLatestTeamContextByKey(teams);
     const dashboardCategoryOptions = buildCategoryOptions(latestTeamContexts);
@@ -852,8 +969,6 @@ function App() {
     const competitionPlayerLeaders = competition?.playerLeaders ?? [];
     const competitionMatches = competition?.matches ?? [];
     const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
-    const selectedDirectoryPlayerDetails = competitionPlayerLeaders.find((player) => player.key === selectedDirectoryPlayer) ?? null;
-    const selectedDirectoryTeamSummary = teams.find((team) => team.teamKey === selectedDirectoryPlayerDetails?.teamKey) ?? null;
     const shouldLoadTeamMatches = isTeamRoute && !!selectedTeamSummary?.matchesFile;
     const shouldLoadTeamPlayers = isTeamRoute && !!selectedTeamSummary?.playersFile;
     const {
@@ -872,15 +987,6 @@ function App() {
     } = useAnalysisData(
         shouldLoadTeamPlayers
             ? `data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
-            : null
-    );
-    const {
-        analysis: selectedDirectoryPlayerRows,
-        loading: selectedDirectoryPlayerRowsLoading,
-        error: selectedDirectoryPlayerRowsError
-    } = useAnalysisData(
-        isPlayersRoute && selectedDirectoryTeamSummary?.playersFile
-            ? `data/${selectedDirectoryTeamSummary.playersFile}?v=${analysisVersion}`
             : null
     );
     const teamPlayers = Array.isArray(selectedTeamPlayers) ? selectedTeamPlayers : [];
@@ -1040,95 +1146,6 @@ function App() {
         ? "Clasificación acumulada"
         : `Clasificación de ${buildCompetitionPhaseLabel(selectedPhaseContext)}`;
     const teamHeroSummary = `${selectedTeamSummary?.matchesPlayed ?? 0} partidos en total · ${selectedTeamSummary?.playersCount ?? 0} jugadoras registradas`;
-    const effectiveDirectoryCategory = competitionCategoryOptions.some((option) => option.value === selectedDirectoryCategory)
-        ? selectedDirectoryCategory
-        : (competitionCategoryOptions[0]?.value ?? "all");
-    const directoryLevelOptions = buildLevelOptionsFromRows(
-        filterRowsByCategory(competition?.phases ?? [], effectiveDirectoryCategory)
-    );
-    const effectiveDirectoryLevel = directoryLevelOptions.some((option) => option.value === selectedDirectoryLevel)
-        ? selectedDirectoryLevel
-        : "all";
-    const directoryTeamOptions = sortedTeams
-        .filter((team) => {
-            const teamContext = latestTeamContexts.get(team.teamKey);
-            const categoryName = String(teamContext?.categoryName ?? "").trim();
-            const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
-
-            if (effectiveDirectoryCategory !== "all" && categoryName !== effectiveDirectoryCategory) {
-                return false;
-            }
-
-            if (effectiveDirectoryLevel !== "all" && levelKey !== effectiveDirectoryLevel) {
-                return false;
-            }
-
-            return true;
-        })
-        .map((team) => ({
-            value: team.teamKey,
-            label: team.teamName
-        }));
-    const effectiveDirectoryTeam = directoryTeamOptions.some((option) => option.value === selectedDirectoryTeam)
-        ? selectedDirectoryTeam
-        : "all";
-    const directoryPlayers = competitionPlayerLeaders
-        .filter((player) => {
-            const teamContext = latestTeamContexts.get(player.teamKey);
-            const categoryName = String(teamContext?.categoryName ?? "").trim();
-            const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
-
-            if (effectiveDirectoryCategory !== "all" && categoryName !== effectiveDirectoryCategory) {
-                return false;
-            }
-
-            if (effectiveDirectoryLevel !== "all" && levelKey !== effectiveDirectoryLevel) {
-                return false;
-            }
-
-            if (effectiveDirectoryTeam !== "all" && player.teamKey !== effectiveDirectoryTeam) {
-                return false;
-            }
-
-            return true;
-        })
-        .sort((a, b) => {
-            const nameDelta = a.playerName.localeCompare(b.playerName, "es");
-            if (nameDelta !== 0) {
-                return nameDelta;
-            }
-
-            return a.teamName.localeCompare(b.teamName, "es");
-        });
-    const directoryPlayerOptions = directoryPlayers.map((player) => ({
-        value: player.key,
-        label: `${player.playerName} · ${player.teamName}${player.shirtNumber ? ` · #${player.shirtNumber}` : ""}`
-    }));
-    const effectiveDirectoryPlayerEntry = directoryPlayers.find((player) => player.key === selectedDirectoryPlayer) ?? null;
-    const directoryPlayerRows = Array.isArray(selectedDirectoryPlayerRows) ? selectedDirectoryPlayerRows : [];
-    const directoryPhaseOptions = buildTeamPhaseOptions(selectedDirectoryTeamSummary?.phases ?? []);
-    const effectiveDirectoryPhase = !selectedDirectoryPhase || directoryPhaseOptions.some((phase) => phase.value === selectedDirectoryPhase)
-        ? (selectedDirectoryPhase || "all")
-        : "all";
-    const selectedDirectoryPhaseContext = effectiveDirectoryPhase === "all"
-        ? null
-        : (filterRowsByPhaseOption(selectedDirectoryTeamSummary?.phases ?? [], effectiveDirectoryPhase)[0] ?? null);
-    const selectedDirectoryPhaseValue = selectedDirectoryPhaseContext?.phaseNumber ?? null;
-    const effectiveDirectoryPlayerIdentityKey = effectiveDirectoryPlayerEntry?.playerIdentityKey ?? "";
-    const filteredDirectoryPlayerRows = filterRowsByPhaseOption(directoryPlayerRows, effectiveDirectoryPhase);
-    const directoryChartData = getChartData(
-        filteredDirectoryPlayerRows,
-        effectiveDirectoryPlayerIdentityKey,
-        selectedDirectoryPhaseValue
-    );
-    const directorySelectedPlayerSummary = getSelectedPlayerSummary(
-        filteredDirectoryPlayerRows,
-        effectiveDirectoryPlayerIdentityKey
-    );
-    const directoryScopeLabel = selectedDirectoryPhaseContext === null
-        ? "Temporada completa"
-        : buildCompetitionPhaseLabel(selectedDirectoryPhaseContext);
-    const selectedDirectoryTeamContext = latestTeamContexts.get(effectiveDirectoryPlayerEntry?.teamKey ?? "") ?? null;
 
     const handleToggleMatch = (matchWebId) => {
         setOpenMatches((prev) => ({
@@ -1216,11 +1233,6 @@ function App() {
         setSelectedPlayer("");
         setSelectedMatch("");
         setOpenMatches({});
-        setSelectedDirectoryPlayer("");
-        setSelectedDirectoryCategory("all");
-        setSelectedDirectoryLevel("all");
-        setSelectedDirectoryTeam("all");
-        setSelectedDirectoryPhase("");
         setSelectedStandingsPhase("all");
         setSelectedStandingsLevel("all");
         setSelectedStandingsCategory("all");
@@ -1242,39 +1254,30 @@ function App() {
         setSelectedPlayer(value);
     };
 
-    const handleDirectoryCategoryChange = (event) => {
-        setSelectedDirectoryCategory(event.target.value);
-        setSelectedDirectoryLevel("all");
-        setSelectedDirectoryTeam("all");
-        setSelectedDirectoryPlayer("");
-        setSelectedDirectoryPhase("");
-        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel));
+    const handleHistoryTeamQueryChange = (value) => {
+        setHistoryTeamQuery(value);
+
+        if (!String(value ?? "").trim()) {
+            setSelectedHistoryTeamKey("");
+        }
     };
 
-    const handleDirectoryLevelChange = (event) => {
-        setSelectedDirectoryLevel(event.target.value);
-        setSelectedDirectoryTeam("all");
-        setSelectedDirectoryPlayer("");
-        setSelectedDirectoryPhase("");
-        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel));
+    const handleHistoryTeamSelect = (option) => {
+        setSelectedHistoryTeamKey(option.value);
+        setHistoryTeamQuery(option.label);
     };
 
-    const handleDirectoryTeamChange = (event) => {
-        setSelectedDirectoryTeam(event.target.value);
-        setSelectedDirectoryPlayer("");
-        setSelectedDirectoryPhase("");
-        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel));
+    const handleHistoricalPlayerQueryChange = (value) => {
+        setPlayerDirectoryQuery(value);
+
+        if (!String(value ?? "").trim()) {
+            setSelectedHistoricalPlayerKey("");
+        }
     };
 
-    const handleDirectoryPlayerChange = (event) => {
-        const nextPlayerKey = event.target.value;
-        setSelectedDirectoryPlayer(nextPlayerKey);
-        setSelectedDirectoryPhase("");
-        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel, nextPlayerKey));
-    };
-
-    const handleDirectoryPhaseChange = (event) => {
-        setSelectedDirectoryPhase(event.target.value);
+    const handleHistoricalPlayerSelect = (option) => {
+        setSelectedHistoricalPlayerKey(option.value);
+        setPlayerDirectoryQuery(option.label);
     };
 
     const handlePlayerNavigate = (playerIdentityKey) => {
@@ -1780,122 +1783,66 @@ function App() {
         </div>
     );
 
-    const renderPlayersPage = () => {
-        if (seasonsIndexLoading && !selectedSeasonEntry) {
-            return <div style={appStyles.emptyState}>Cargando temporadas...</div>;
+    const renderHistoryPage = () => {
+        if (historicalDirectoryLoading) {
+            return <div style={appStyles.emptyState}>Cargando archivo histórico...</div>;
         }
 
-        if (analysisIndexLoading || competitionLoading) {
-            return <div style={appStyles.emptyState}>Cargando directorio de jugadoras...</div>;
+        if (historicalDirectoryError) {
+            return <div style={appStyles.emptyState}>{historicalDirectoryError}</div>;
         }
 
-        if (analysisIndexError || competitionError || (seasonsIndexError && !selectedSeasonEntry)) {
-            return <div style={appStyles.emptyState}>{analysisIndexError || competitionError || seasonsIndexError}</div>;
-        }
+        const totalPublishedSeasons = historicalDirectoryIndex?.seasons?.length ?? historicalSeasonDatasets.length;
 
         return (
             <div style={appStyles.pageShell}>
                 <section style={appStyles.syncIntro}>
-                    <div style={appStyles.syncEyebrow}>Jugadoras</div>
-                    <h2 style={appStyles.syncTitle}>Buscador de jugadoras por temporada</h2>
+                    <div style={appStyles.syncEyebrow}>Histórico</div>
+                    <h2 style={appStyles.syncTitle}>Busca un equipo y compáralo temporada a temporada</h2>
                     <p style={appStyles.syncBody}>
-                        Selecciona una temporada, acota por categoría, nivel o equipo y entra en la ficha de cualquier
-                        jugadora para seguir su producción a lo largo del curso.
+                        Esta vista no va por fase. Busca el equipo por nombre y verás su rendimiento separado por
+                        temporada, con una lectura limpia de clasificación, puntos, diferencial y valoración media.
                     </p>
                 </section>
 
                 <section style={appStyles.teamSelectorSection}>
                     <div style={appStyles.teamSelectorHeader}>
-                        <div style={appStyles.syncEyebrow}>Buscador global</div>
-                        <h2 style={appStyles.teamSelectorTitle}>Encuentra la jugadora que quieres analizar</h2>
+                        <div style={appStyles.syncEyebrow}>Buscador</div>
+                        <h2 style={appStyles.teamSelectorTitle}>Encuentra un equipo en el archivo</h2>
                         <p style={appStyles.teamSelectorBody}>
-                            Los filtros acotan el universo de jugadoras de la temporada seleccionada. Cuando eliges una,
-                            cargamos su detalle desde el equipo correcto de ese curso.
+                            Empieza a escribir y el buscador te propondrá coincidencias. Cuando eliges un equipo, debajo
+                            se abre su histórico temporada a temporada.
                         </p>
                     </div>
 
                     <div style={appStyles.filterDeck}>
-                        {competitionCategoryOptions.length > 0 ? (
-                            <PrettySelect
-                                label="Categoría"
-                                value={effectiveDirectoryCategory}
-                                onChange={handleDirectoryCategoryChange}
-                                ariaLabel="Filtra jugadoras por categoría"
-                                minWidth="220px"
-                            >
-                                {competitionCategoryOptions.map((cat) => (
-                                    <option key={cat.value} value={cat.value}>
-                                        {cat.label}
-                                    </option>
-                                ))}
-                            </PrettySelect>
-                        ) : null}
-
-                        {directoryLevelOptions.length > 0 ? (
-                            <PrettySelect
-                                label="Nivel"
-                                value={effectiveDirectoryLevel}
-                                onChange={handleDirectoryLevelChange}
-                                ariaLabel="Filtra jugadoras por nivel"
-                                minWidth="220px"
-                            >
-                                <option value="all">Todos los niveles</option>
-                                {directoryLevelOptions.map((level) => (
-                                    <option key={level.value} value={level.value}>
-                                        {level.label}
-                                    </option>
-                                ))}
-                            </PrettySelect>
-                        ) : null}
-
-                        <PrettySelect
+                        <AutocompleteField
                             label="Equipo"
-                            value={effectiveDirectoryTeam}
-                            onChange={handleDirectoryTeamChange}
-                            ariaLabel="Filtra jugadoras por equipo"
-                            minWidth="320px"
-                        >
-                            <option value="all">Todos los equipos</option>
-                            {directoryTeamOptions.map((team) => (
-                                <option key={team.value} value={team.value}>
-                                    {team.label}
-                                </option>
-                            ))}
-                        </PrettySelect>
-
-                        <PrettySelect
-                            label="Jugadora"
-                            value={effectiveDirectoryPlayerEntry?.key ?? ""}
-                            onChange={handleDirectoryPlayerChange}
-                            ariaLabel="Selecciona jugadora"
-                            minWidth="360px"
-                        >
-                            <option value="">Selecciona jugadora</option>
-                            {directoryPlayerOptions.map((player) => (
-                                <option key={player.value} value={player.value}>
-                                    {player.label}
-                                </option>
-                            ))}
-                        </PrettySelect>
+                            value={historyTeamQuery}
+                            onValueChange={handleHistoryTeamQueryChange}
+                            onSelectOption={handleHistoryTeamSelect}
+                            options={historicalTeamOptions}
+                            placeholder="Escribe el nombre del equipo"
+                            ariaLabel="Busca un equipo histórico por nombre"
+                            noResultsText="No se han encontrado equipos con ese nombre"
+                            minWidth="min(100%, 520px)"
+                        />
                     </div>
 
                     <div style={appStyles.teamSelectorMetaRow}>
-                        <span style={appStyles.teamSelectorChip}>{directoryPlayers.length} jugadoras visibles</span>
-                        {activeBrowseSeasonLabel ? (
-                            <span style={appStyles.teamSelectorChip}>{activeBrowseSeasonLabel}</span>
-                        ) : null}
-                        {effectiveDirectoryCategory !== "all" ? (
-                            <span style={appStyles.teamSelectorChip}>{effectiveDirectoryCategory}</span>
-                        ) : null}
-                        {effectiveDirectoryLevel !== "all" ? (
-                            <span style={appStyles.teamSelectorChip}>{effectiveDirectoryLevel}</span>
+                        <span style={appStyles.teamSelectorChip}>{historicalTeamEntities.length} equipos indexados</span>
+                        <span style={appStyles.teamSelectorChip}>{totalPublishedSeasons} temporadas publicadas</span>
+                        {selectedHistoricalTeam ? (
+                            <span style={appStyles.teamSelectorChip}>
+                                {selectedHistoricalTeam.seasonSummaries.length} temporada{selectedHistoricalTeam.seasonSummaries.length === 1 ? "" : "s"} encontrada{selectedHistoricalTeam.seasonSummaries.length === 1 ? "" : "s"}
+                            </span>
                         ) : null}
                     </div>
                 </section>
 
-                {!effectiveDirectoryPlayerEntry ? (
+                {!selectedHistoricalTeam ? (
                     <div style={appStyles.emptyState}>
-                        Selecciona una jugadora para abrir su ficha de temporada.
+                        Selecciona un equipo para ver cómo cambia su rendimiento con el paso de las temporadas.
                     </div>
                 ) : (
                     <>
@@ -1903,103 +1850,246 @@ function App() {
                             <div style={appStyles.heroPattern}/>
                             <div style={appStyles.heroContent}>
                                 <div style={appStyles.heroHeader}>
-                                    <div style={appStyles.heroKicker}>Ficha de jugadora</div>
-                                    <h2 style={appStyles.heroTitle}>{effectiveDirectoryPlayerEntry.playerName}</h2>
+                                    <div style={appStyles.heroKicker}>Archivo del equipo</div>
+                                    <h2 style={appStyles.heroTitle}>{selectedHistoricalTeam.label}</h2>
                                     <p style={appStyles.heroSummary}>
-                                        {effectiveDirectoryPlayerEntry.teamName} · {effectiveDirectoryPlayerEntry.games} partidos · {effectiveDirectoryPlayerEntry.points} puntos · {" "}
-                                        {Number(effectiveDirectoryPlayerEntry.avgPoints ?? 0).toLocaleString("es-ES", {
-                                            minimumFractionDigits: 1,
-                                            maximumFractionDigits: 1
-                                        })}{" "}
-                                        puntos por partido.
+                                        {selectedHistoricalTeam.seasonSummaries.length} temporada{selectedHistoricalTeam.seasonSummaries.length === 1 ? "" : "s"} registradas en el archivo.
+                                        Aquí solo miramos el rendimiento global de cada curso, sin entrar en fases.
                                     </p>
                                 </div>
 
                                 <div style={appStyles.heroMetaRow}>
-                                    {activeBrowseSeasonLabel ? (
-                                        <span style={appStyles.metaChip}>{activeBrowseSeasonLabel}</span>
-                                    ) : null}
-                                    <span style={appStyles.metaChip}>{effectiveDirectoryPlayerEntry.teamName}</span>
-                                    {selectedDirectoryTeamContext?.categoryName ? (
-                                        <span style={appStyles.metaChip}>{selectedDirectoryTeamContext.categoryName}</span>
-                                    ) : null}
-                                    {selectedDirectoryTeamContext?.levelName ? (
-                                        <span style={appStyles.metaChip}>{selectedDirectoryTeamContext.levelName}</span>
-                                    ) : null}
-                                    <span style={appStyles.metaChip}>{effectiveDirectoryPlayerEntry.valuation} valoración total</span>
-                                </div>
-
-                                <div style={appStyles.heroActions}>
-                                    <a
-                                        href={buildHistoryRoute(
-                                            effectiveDirectoryPlayerEntry.teamKey,
-                                            effectiveExplorerSeasonLabel || currentSeasonLabel
-                                        )}
-                                        style={appStyles.secondaryLink}
-                                    >
-                                        Ver equipo en esta temporada
-                                    </a>
+                                    {selectedHistoricalTeam.seasonSummaries.map((seasonSummary) => (
+                                        <span key={seasonSummary.key} style={appStyles.metaChip}>{seasonSummary.seasonLabel}</span>
+                                    ))}
                                 </div>
                             </div>
                         </section>
 
-                        {selectedDirectoryPlayerRowsLoading ? (
-                            <SectionFallback message="Cargando detalle de la jugadora..." />
-                        ) : null}
-
-                        {!selectedDirectoryPlayerRowsLoading && selectedDirectoryPlayerRowsError ? (
-                            <div style={appStyles.emptyState}>{selectedDirectoryPlayerRowsError}</div>
-                        ) : null}
-
-                        {!selectedDirectoryPlayerRowsLoading && !selectedDirectoryPlayerRowsError ? (
-                            <>
-                                <section style={appStyles.teamScopeSection}>
-                                    <div style={appStyles.teamScopeHeader}>
-                                        <div style={appStyles.syncEyebrow}>Filtro local</div>
-                                        <h3 style={appStyles.teamScopeTitle}>Qué tramo de su temporada quieres leer</h3>
-                                        <p style={appStyles.teamScopeBody}>
-                                            La fase solo afecta a la ficha de la jugadora: resumen y curva partido a partido.
+                        <section style={appStyles.seasonCards}>
+                            {selectedHistoricalTeam.seasonSummaries.map((seasonSummary) => (
+                                <article key={seasonSummary.key} style={appStyles.seasonCard}>
+                                    <div style={appStyles.seasonCardHeader}>
+                                        <div style={appStyles.seasonCardEyebrow}>{seasonSummary.seasonLabel}</div>
+                                        <h3 style={appStyles.seasonCardTitle}>{seasonSummary.teamName}</h3>
+                                        <p style={appStyles.seasonCardMeta}>
+                                            {seasonSummary.categoryName || "Sin categoría visible"}
+                                            {seasonSummary.levelName ? ` · ${seasonSummary.levelName}` : ""}
+                                            {` · ${seasonSummary.matchesPlayed} partidos`}
                                         </p>
                                     </div>
 
-                                    <div style={appStyles.teamScopeActions}>
-                                        <PrettySelect
-                                            label="Fase"
-                                            value={effectiveDirectoryPhase === "all" ? "" : effectiveDirectoryPhase}
-                                            onChange={handleDirectoryPhaseChange}
-                                            ariaLabel="Selecciona fase para la jugadora"
-                                            minWidth="260px"
-                                        >
-                                            <option value="">Temporada completa</option>
-                                            {directoryPhaseOptions.map((phase) => (
-                                                <option key={phase.value} value={phase.value}>
-                                                    {phase.label}
-                                                </option>
-                                            ))}
-                                        </PrettySelect>
+                                    <div style={appStyles.seasonMetricsGrid}>
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Posición</div>
+                                            <div style={appStyles.seasonMetricValue}>
+                                                {seasonSummary.standingPosition ? `#${seasonSummary.standingPosition}` : "—"}
+                                            </div>
+                                            <div style={appStyles.seasonMetricMeta}>Clasificación acumulada</div>
+                                        </div>
 
-                                        <div style={appStyles.teamScopeMetaRow}>
-                                            <span style={appStyles.teamScopeChip}>{directoryScopeLabel}</span>
-                                            <span style={appStyles.teamScopeChip}>{directorySelectedPlayerSummary?.games ?? 0} partidos visibles</span>
-                                            <span style={appStyles.teamScopeChip}>
-                                                {selectedDirectoryTeamContext?.levelName ?? "Sin nivel"}
-                                            </span>
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Balance</div>
+                                            <div style={appStyles.seasonMetricValue}>
+                                                {formatRecordLine(seasonSummary)}
+                                            </div>
+                                            <div style={appStyles.seasonMetricMeta}>Victorias, derrotas y empates</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Puntos a favor</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.pointsFor}</div>
+                                            <div style={appStyles.seasonMetricMeta}>Producción total del curso</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Puntos en contra</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.pointsAgainst}</div>
+                                            <div style={appStyles.seasonMetricMeta}>Concedidos en toda la temporada</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Diferencial</div>
+                                            <div style={appStyles.seasonMetricValue}>{formatSignedNumber(seasonSummary.pointDiff, 0)}</div>
+                                            <div style={appStyles.seasonMetricMeta}>Puntos a favor menos puntos en contra</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Val media</div>
+                                            <div style={appStyles.seasonMetricValue}>{formatDecimal(seasonSummary.avgValuation, 1)}</div>
+                                            <div style={appStyles.seasonMetricMeta}>Valoración media por partido</div>
                                         </div>
                                     </div>
-                                </section>
+                                </article>
+                            ))}
+                        </section>
+                    </>
+                )}
+            </div>
+        );
+    };
 
-                                <Suspense fallback={<SectionFallback message="Cargando evolución de la jugadora..." />}>
-                                    <PlayerEvolutionSection
-                                        hideSelector
-                                        playersList={[]}
-                                        selectedPlayer={effectiveDirectoryPlayerIdentityKey}
-                                        onSelectedPlayerChange={() => {}}
-                                        chartData={directoryChartData}
-                                        selectedPlayerSummary={directorySelectedPlayerSummary}
-                                    />
-                                </Suspense>
-                            </>
+    const renderPlayersPage = () => {
+        if (historicalDirectoryLoading) {
+            return <div style={appStyles.emptyState}>Cargando archivo de jugadoras...</div>;
+        }
+
+        if (historicalDirectoryError) {
+            return <div style={appStyles.emptyState}>{historicalDirectoryError}</div>;
+        }
+
+        const totalPublishedSeasons = historicalDirectoryIndex?.seasons?.length ?? historicalSeasonDatasets.length;
+        const playerTotals = selectedHistoricalPlayer?.totals ?? null;
+
+        return (
+            <div style={appStyles.pageShell}>
+                <section style={appStyles.syncIntro}>
+                    <div style={appStyles.syncEyebrow}>Jugadoras</div>
+                    <h2 style={appStyles.syncTitle}>Busca una jugadora y abre su histórico</h2>
+                    <p style={appStyles.syncBody}>
+                        Esta pantalla ya no va por una sola temporada. Busca por nombre y verás el acumulado completo y
+                        el detalle separado por temporada para seguir su evolución real.
+                    </p>
+                </section>
+
+                <section style={appStyles.teamSelectorSection}>
+                    <div style={appStyles.teamSelectorHeader}>
+                        <div style={appStyles.syncEyebrow}>Buscador</div>
+                        <h2 style={appStyles.teamSelectorTitle}>Encuentra una jugadora por nombre</h2>
+                        <p style={appStyles.teamSelectorBody}>
+                            El buscador autocompleta mientras escribes. Al seleccionar una jugadora se abre su resumen
+                            acumulado y, debajo, la lectura temporada a temporada.
+                        </p>
+                    </div>
+
+                    <div style={appStyles.filterDeck}>
+                        <AutocompleteField
+                            label="Jugadora"
+                            value={playerDirectoryQuery}
+                            onValueChange={handleHistoricalPlayerQueryChange}
+                            onSelectOption={handleHistoricalPlayerSelect}
+                            options={historicalPlayerOptions}
+                            placeholder="Escribe el nombre de la jugadora"
+                            ariaLabel="Busca una jugadora por nombre"
+                            noResultsText="No se han encontrado jugadoras con ese nombre"
+                            minWidth="min(100%, 520px)"
+                        />
+                    </div>
+
+                    <div style={appStyles.teamSelectorMetaRow}>
+                        <span style={appStyles.teamSelectorChip}>{historicalPlayerEntities.length} jugadoras indexadas</span>
+                        <span style={appStyles.teamSelectorChip}>{totalPublishedSeasons} temporadas publicadas</span>
+                        {selectedHistoricalPlayer ? (
+                            <span style={appStyles.teamSelectorChip}>
+                                {selectedHistoricalPlayer.seasonSummaries.length} temporada{selectedHistoricalPlayer.seasonSummaries.length === 1 ? "" : "s"} registrada{selectedHistoricalPlayer.seasonSummaries.length === 1 ? "" : "s"}
+                            </span>
                         ) : null}
+                    </div>
+                </section>
+
+                {!selectedHistoricalPlayer || !playerTotals ? (
+                    <div style={appStyles.emptyState}>
+                        Selecciona una jugadora para ver su producción acumulada y su desglose por temporada.
+                    </div>
+                ) : (
+                    <>
+                        <section style={appStyles.hero}>
+                            <div style={appStyles.heroPattern}/>
+                            <div style={appStyles.heroContent}>
+                                <div style={appStyles.heroHeader}>
+                                    <div style={appStyles.heroKicker}>Ficha histórica</div>
+                                    <h2 style={appStyles.heroTitle}>{selectedHistoricalPlayer.label}</h2>
+                                    <p style={appStyles.heroSummary}>
+                                        {playerTotals.points} puntos, {playerTotals.valuation} de valoración y {playerTotals.games} partidos
+                                        acumulados en {playerTotals.seasons} temporada{playerTotals.seasons === 1 ? "" : "s"}.
+                                    </p>
+                                </div>
+
+                                <div style={appStyles.heroMetaRow}>
+                                    <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgPoints, 1)} puntos por partido</span>
+                                    <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgValuation, 1)} valoración media</span>
+                                    <span style={appStyles.metaChip}>{playerTotals.minutes} minutos acumulados</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section style={appStyles.aggregateGrid}>
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Temporadas</div>
+                                <div style={appStyles.seasonMetricValue}>{playerTotals.seasons}</div>
+                                <div style={appStyles.seasonMetricMeta}>Cursos registrados en el archivo</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Partidos</div>
+                                <div style={appStyles.seasonMetricValue}>{playerTotals.games}</div>
+                                <div style={appStyles.seasonMetricMeta}>Encuentros acumulados</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Puntos</div>
+                                <div style={appStyles.seasonMetricValue}>{playerTotals.points}</div>
+                                <div style={appStyles.seasonMetricMeta}>Anotación total acumulada</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Valoración</div>
+                                <div style={appStyles.seasonMetricValue}>{playerTotals.valuation}</div>
+                                <div style={appStyles.seasonMetricMeta}>Valoración total acumulada</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Val media</div>
+                                <div style={appStyles.seasonMetricValue}>{formatDecimal(playerTotals.avgValuation, 1)}</div>
+                                <div style={appStyles.seasonMetricMeta}>Valoración media global</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Pts/partido</div>
+                                <div style={appStyles.seasonMetricValue}>{formatDecimal(playerTotals.avgPoints, 1)}</div>
+                                <div style={appStyles.seasonMetricMeta}>Producción anotadora global</div>
+                            </div>
+                        </section>
+
+                        <section style={appStyles.seasonCards}>
+                            {selectedHistoricalPlayer.seasonSummaries.map((seasonSummary) => (
+                                <article key={seasonSummary.key} style={appStyles.seasonCard}>
+                                    <div style={appStyles.seasonCardHeader}>
+                                        <div style={appStyles.seasonCardEyebrow}>{seasonSummary.seasonLabel}</div>
+                                        <h3 style={appStyles.seasonCardTitle}>{seasonSummary.playerName}</h3>
+                                        <p style={appStyles.seasonCardMeta}>
+                                            {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}
+                                        </p>
+                                    </div>
+
+                                    <div style={appStyles.seasonMetricsGrid}>
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Partidos</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.games}</div>
+                                            <div style={appStyles.seasonMetricMeta}>Encuentros de la temporada</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Puntos</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.points}</div>
+                                            <div style={appStyles.seasonMetricMeta}>{formatDecimal(seasonSummary.avgPoints, 1)} por partido</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Valoración</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.valuation}</div>
+                                            <div style={appStyles.seasonMetricMeta}>{formatDecimal(seasonSummary.avgValuation, 1)} de media</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Minutos</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.minutes}</div>
+                                            <div style={appStyles.seasonMetricMeta}>{formatDecimal(seasonSummary.avgMinutes, 1)} por partido</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
+                        </section>
                     </>
                 )}
             </div>
@@ -2020,14 +2110,14 @@ function App() {
         : route === "competition"
             ? "Clasificación, resultados y líderes individuales, separados del panel de cada equipo."
             : route === "history"
-                ? "Explora temporadas anteriores sin tocar la navegación principal del curso actual."
+                ? "Buscador histórico de equipos con el rendimiento separado por temporada."
                 : route === "players"
-                    ? "Buscador global para abrir la ficha de cualquier jugadora dentro de una temporada concreta."
+                    ? "Buscador histórico de jugadoras con acumulado global y detalle temporada a temporada."
                     : "Sigue la temporada actual por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.";
-    const pageSeasonNote = route === "history" || route === "players"
-        ? effectiveExplorerSeasonLabel
-        : currentSeasonLabel;
-    const shouldShowSeasonSelector = (route === "history" || route === "players") && seasonOptions.length > 0;
+    const pageSeasonNote = route === "dashboard" || route === "competition"
+        ? currentSeasonLabel
+        : "";
+    const shouldShowSeasonSelector = false;
 
     return (
         <div style={appStyles.page}>
@@ -2086,7 +2176,7 @@ function App() {
                             </a>
 
                             <a
-                                href={buildHistoryRoute("", effectiveExplorerSeasonLabel || currentSeasonLabel)}
+                                href={buildHistoryRoute()}
                                 style={route === "history"
                                     ? {...appStyles.navLink, ...appStyles.navLinkActive}
                                     : appStyles.navLink}
@@ -2095,10 +2185,7 @@ function App() {
                             </a>
 
                             <a
-                                href={buildPlayersRoute(
-                                    effectiveExplorerSeasonLabel || currentSeasonLabel,
-                                    route === "players" ? selectedDirectoryPlayer : ""
-                                )}
+                                href={buildPlayersRoute()}
                                 style={route === "players"
                                     ? {...appStyles.navLink, ...appStyles.navLinkActive}
                                     : appStyles.navLink}
@@ -2124,6 +2211,8 @@ function App() {
                     ? renderSyncPage()
                     : route === "competition"
                         ? renderCompetitionPage()
+                        : route === "history"
+                            ? renderHistoryPage()
                         : route === "players"
                             ? renderPlayersPage()
                             : renderTeamPage()}
