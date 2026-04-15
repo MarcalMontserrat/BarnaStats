@@ -63,8 +63,8 @@ public sealed class MatchAnalysisService
             var matchDate = TryParseMatchDate(match.Time);
             var seasonStartYear = ResolveSeasonStartYear(phaseMetadata, matchDate);
             var seasonLabel = ResolveSeasonLabel(phaseMetadata, seasonStartYear);
-            var homeTeamKey = BuildTeamKey(localTeam, phaseMetadata);
-            var awayTeamKey = BuildTeamKey(visitTeam, phaseMetadata);
+            var homeTeamKey = BuildTeamKey(localTeam, phaseMetadata, seasonLabel);
+            var awayTeamKey = BuildTeamKey(visitTeam, phaseMetadata, seasonLabel);
 
             var matchTopScorer = match.Teams
                 .SelectMany(team => (team.Players ?? []).Select(player => new
@@ -86,7 +86,7 @@ public sealed class MatchAnalysisService
                 var rivalTeam = match.Teams.FirstOrDefault(other => !ReferenceEquals(other, team))
                                 ?? match.Teams.First();
 
-                var teamKey = BuildTeamKey(team, phaseMetadata);
+                var teamKey = BuildTeamKey(team, phaseMetadata, seasonLabel);
 
                 if (!teamsByKey.TryGetValue(teamKey, out var accumulator))
                 {
@@ -138,7 +138,7 @@ public sealed class MatchAnalysisService
                     AwayTeam = visitTeam.Name ?? "",
                     AwayScore = visitTeam.Data?.Score ?? 0,
                     IsHome = isHome,
-                    RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata),
+                    RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata, seasonLabel),
                     RivalTeam = rivalTeam.Name ?? "",
                     OfficialTeamScore = team.Data?.Score ?? 0,
                     OfficialRivalScore = rivalTeam.Data?.Score ?? 0,
@@ -184,7 +184,7 @@ public sealed class MatchAnalysisService
                         LevelCode = phaseMetadata?.LevelCode ?? "",
                         GroupCode = phaseMetadata?.GroupCode ?? "",
                         IsHome = isHome,
-                        RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata),
+                        RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata, seasonLabel),
                         Rival = rivalTeam.Name ?? "",
                         PlayerUuid = playerUuid,
                         PlayerActorId = player.ActorId,
@@ -249,6 +249,8 @@ public sealed class MatchAnalysisService
 
         return new AnalysisResult
         {
+            SeasonStartYear = ResolveSingleSeasonStartYear(teamAnalyses),
+            SeasonLabel = ResolveSingleSeasonLabel(teamAnalyses),
             GeneratedAtUtc = DateTime.UtcNow,
             TotalMatches = processedMatches,
             Competition = BuildCompetitionAnalysis(teamAnalyses),
@@ -311,6 +313,8 @@ public sealed class MatchAnalysisService
 
         return new TeamAnalysis
         {
+            SeasonStartYear = matchSummaries.Select(summary => summary.SeasonStartYear).FirstOrDefault(value => value.HasValue),
+            SeasonLabel = matchSummaries.Select(summary => summary.SeasonLabel).FirstOrDefault(label => !string.IsNullOrWhiteSpace(label)) ?? "",
             TeamKey = accumulator.TeamKey,
             TeamIdIntern = accumulator.TeamIdIntern,
             TeamIdExtern = accumulator.TeamIdExtern,
@@ -408,6 +412,8 @@ public sealed class MatchAnalysisService
 
         return new CompetitionAnalysis
         {
+            SeasonStartYear = ResolveSingleSeasonStartYear(teamAnalyses),
+            SeasonLabel = ResolveSingleSeasonLabel(teamAnalyses),
             TotalTeams = competitionTeams.Count,
             TotalMatches = competitionMatches.Count,
             Phases = competitionPhases,
@@ -1000,17 +1006,27 @@ public sealed class MatchAnalysisService
         return int.TryParse(prefix, out var id) ? id : null;
     }
 
-    private static string BuildTeamKey(TeamInfo team, PhaseMetadataFile? phaseMetadata)
+    private static string BuildTeamKey(TeamInfo team, PhaseMetadataFile? phaseMetadata, string? seasonLabel)
     {
+        var normalizedSeasonLabel = NameNormalizer.Normalize(seasonLabel);
         var categoryName = NameNormalizer.Normalize(phaseMetadata?.CategoryName);
         var teamIdentity = team.TeamIdExtern > 0
             ? $"TEAM:{team.TeamIdExtern}"
             : NameNormalizer.Normalize(team.Name);
 
-        if (string.IsNullOrWhiteSpace(categoryName))
-            return teamIdentity;
+        var scopeSegments = new List<string>();
+        if (!string.IsNullOrWhiteSpace(normalizedSeasonLabel))
+            scopeSegments.Add(normalizedSeasonLabel);
 
-        return $"{categoryName}::{teamIdentity}";
+        if (string.IsNullOrWhiteSpace(categoryName))
+        {
+            scopeSegments.Add(teamIdentity);
+            return string.Join("::", scopeSegments);
+        }
+
+        scopeSegments.Add(categoryName);
+        scopeSegments.Add(teamIdentity);
+        return string.Join("::", scopeSegments);
     }
 
     private static string BuildPlayerKey(string teamKey, PlayerInfo player)
@@ -1057,6 +1073,31 @@ public sealed class MatchAnalysisService
             return "";
 
         return $"{seasonStartYear.Value}-{seasonStartYear.Value + 1}";
+    }
+
+    private static int? ResolveSingleSeasonStartYear(IEnumerable<TeamAnalysis> teamAnalyses)
+    {
+        var seasons = teamAnalyses
+            .Select(team => team.SeasonStartYear)
+            .Where(value => value.HasValue)
+            .Select(value => value!.Value)
+            .Distinct()
+            .Take(2)
+            .ToList();
+
+        return seasons.Count == 1 ? seasons[0] : null;
+    }
+
+    private static string ResolveSingleSeasonLabel(IEnumerable<TeamAnalysis> teamAnalyses)
+    {
+        var labels = teamAnalyses
+            .Select(team => team.SeasonLabel)
+            .Where(label => !string.IsNullOrWhiteSpace(label))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Take(2)
+            .ToList();
+
+        return labels.Count == 1 ? labels[0] : "";
     }
 
     private sealed record ScoringEvent(

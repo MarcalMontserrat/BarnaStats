@@ -297,6 +297,8 @@ public sealed class CompetitionPlayerLeader
 
 public sealed class CompetitionAnalysis
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public int TotalTeams { get; init; }
     public int TotalMatches { get; init; }
     public List<CompetitionPhase> Phases { get; init; } = [];
@@ -308,6 +310,8 @@ public sealed class CompetitionAnalysis
 
 public sealed class TeamAnalysis
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public string TeamKey { get; init; } = "";
     public int TeamIdIntern { get; init; }
     public int TeamIdExtern { get; init; }
@@ -325,6 +329,8 @@ public sealed class TeamAnalysis
 
 public sealed class AnalysisResult
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public DateTime GeneratedAtUtc { get; init; }
     public int TotalMatches { get; init; }
     public CompetitionAnalysis Competition { get; init; } = new();
@@ -333,6 +339,8 @@ public sealed class AnalysisResult
 
 public sealed class AnalysisIndexTeam
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public string TeamKey { get; init; } = "";
     public int TeamIdIntern { get; init; }
     public int TeamIdExtern { get; init; }
@@ -346,8 +354,27 @@ public sealed class AnalysisIndexTeam
 
 public sealed class AnalysisIndex
 {
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
     public DateTime GeneratedAtUtc { get; init; }
     public int TotalMatches { get; init; }
     public int TotalTeams { get; init; }
     public List<AnalysisIndexTeam> Teams { get; init; } = [];
+}
+
+public sealed class SeasonDatasetSummary
+{
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public int TotalTeams { get; init; }
+    public int TotalMatches { get; init; }
+    public string AnalysisFile { get; init; } = "";
+    public string CompetitionFile { get; init; } = "";
+}
+
+public sealed class SeasonDatasetIndex
+{
+    public DateTime GeneratedAtUtc { get; init; }
+    public string DefaultSeasonLabel { get; init; } = "";
+    public List<SeasonDatasetSummary> Seasons { get; init; } = [];
 }

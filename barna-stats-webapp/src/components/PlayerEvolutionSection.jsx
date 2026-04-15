@@ -105,7 +105,8 @@ function PlayerEvolutionSection({
     selectedPlayer,
     onSelectedPlayerChange,
     chartData,
-    selectedPlayerSummary
+    selectedPlayerSummary,
+    hideSelector = false
 }) {
     return (
         <section style={styles.panel}>
@@ -117,22 +118,24 @@ function PlayerEvolutionSection({
                 </p>
             </div>
 
-            <div style={styles.controls}>
-                <PrettySelect
-                    label="Jugadora"
-                    value={selectedPlayer}
-                    onChange={(event) => onSelectedPlayerChange(event.target.value)}
-                    ariaLabel="Selecciona jugadora"
-                    minWidth="340px"
-                >
-                    <option value="">Selecciona jugadora</option>
-                    {playersList.map((player) => (
-                        <option key={player.value} value={player.value}>
-                            {player.label}
-                        </option>
-                    ))}
-                </PrettySelect>
-            </div>
+            {!hideSelector ? (
+                <div style={styles.controls}>
+                    <PrettySelect
+                        label="Jugadora"
+                        value={selectedPlayer}
+                        onChange={(event) => onSelectedPlayerChange(event.target.value)}
+                        ariaLabel="Selecciona jugadora"
+                        minWidth="340px"
+                    >
+                        <option value="">Selecciona jugadora</option>
+                        {playersList.map((player) => (
+                            <option key={player.value} value={player.value}>
+                                {player.label}
+                            </option>
+                        ))}
+                    </PrettySelect>
+                </div>
+            ) : null}
 
             {selectedPlayer ? (
                 <>

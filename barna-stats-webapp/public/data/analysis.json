@@ -1,17 +1,21 @@
 {
-  "generatedAtUtc": "2026-04-15T20:36:40.339578Z",
+  "seasonStartYear": 2025,
+  "seasonLabel": "2025-2026",
+  "generatedAtUtc": "2026-04-15T20:51:06.710498Z",
   "totalMatches": 1961,
   "totalTeams": 213,
   "teams": [
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82353",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353",
       "teamIdIntern": 454283,
       "teamIdExtern": 82353,
       "teamName": "30\u00BA HOTELS - AECAM MALGRAT",
       "matchesPlayed": 17,
       "playersCount": 14,
-      "matchesFile": "teams/8108607aa18e813b/matches.json",
-      "playersFile": "teams/8108607aa18e813b/players.json",
+      "matchesFile": "teams/9452c4ea89309111/matches.json",
+      "playersFile": "teams/9452c4ea89309111/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -40,14 +44,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:78827",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827",
       "teamIdIntern": 451829,
       "teamIdExtern": 78827,
       "teamName": "A. BASQUET BUFAL\u00C0 FEMEN\u00CD",
       "matchesPlayed": 22,
       "playersCount": 15,
-      "matchesFile": "teams/d33c0db81b0773b2/matches.json",
-      "playersFile": "teams/d33c0db81b0773b2/players.json",
+      "matchesFile": "teams/42d28612118a1cbb/matches.json",
+      "playersFile": "teams/42d28612118a1cbb/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -76,14 +82,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80464",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80464",
       "teamIdIntern": 453794,
       "teamIdExtern": 80464,
       "teamName": "A.E SANT ANDREU NATZARET",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/cb996455350dd578/matches.json",
-      "playersFile": "teams/cb996455350dd578/players.json",
+      "matchesFile": "teams/6c8706cca9b3a948/matches.json",
+      "playersFile": "teams/6c8706cca9b3a948/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -112,14 +120,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79136",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79136",
       "teamIdIntern": 453543,
       "teamIdExtern": 79136,
       "teamName": "A.E. BADALON\u00C8S - PINTURAS CORBACHO",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "matchesFile": "teams/d9117727d2e9c5a9/matches.json",
-      "playersFile": "teams/d9117727d2e9c5a9/players.json",
+      "matchesFile": "teams/34dbfa6839d26a56/matches.json",
+      "playersFile": "teams/34dbfa6839d26a56/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -148,14 +158,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81963",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81963",
       "teamIdIntern": 455001,
       "teamIdExtern": 81963,
       "teamName": "A.E.E. COL\u00B7LEGI CULTURAL BADALONA",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/ed626068e1415324/matches.json",
-      "playersFile": "teams/ed626068e1415324/players.json",
+      "matchesFile": "teams/17b7e828fa704b15/matches.json",
+      "playersFile": "teams/17b7e828fa704b15/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -184,14 +196,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
       "teamIdIntern": 452782,
       "teamIdExtern": 80546,
       "teamName": "AB PREMI\u00C0",
       "matchesPlayed": 21,
       "playersCount": 14,
-      "matchesFile": "teams/c6cffd7c13431464/matches.json",
-      "playersFile": "teams/c6cffd7c13431464/players.json",
+      "matchesFile": "teams/6a3d53b3e75ff282/matches.json",
+      "playersFile": "teams/6a3d53b3e75ff282/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -220,14 +234,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81625",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
       "teamIdIntern": 455124,
       "teamIdExtern": 81625,
       "teamName": "AB PREMI\u00C0",
       "matchesPlayed": 19,
       "playersCount": 11,
-      "matchesFile": "teams/c576d346b803ec5f/matches.json",
-      "playersFile": "teams/c576d346b803ec5f/players.json",
+      "matchesFile": "teams/135d80ba3f3ea172/matches.json",
+      "playersFile": "teams/135d80ba3f3ea172/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -256,14 +272,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512",
       "teamIdIntern": 451062,
       "teamIdExtern": 80512,
       "teamName": "AE MINGUELLA A - PURE CUISINE",
       "matchesPlayed": 23,
       "playersCount": 22,
-      "matchesFile": "teams/6c5d11bf04818a51/matches.json",
-      "playersFile": "teams/6c5d11bf04818a51/players.json",
+      "matchesFile": "teams/e86cc1fdffa80b89/matches.json",
+      "playersFile": "teams/e86cc1fdffa80b89/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -304,14 +322,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80522",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80522",
       "teamIdIntern": 453643,
       "teamIdExtern": 80522,
       "teamName": "AE MINGUELLA A - PURE CUISINE",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/c211a61131174332/matches.json",
-      "playersFile": "teams/c211a61131174332/players.json",
+      "matchesFile": "teams/d5092b55498ce2e8/matches.json",
+      "playersFile": "teams/d5092b55498ce2e8/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -340,14 +360,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80531",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80531",
       "teamIdIntern": 453278,
       "teamIdExtern": 80531,
       "teamName": "AE MINGUELLA B - PURE CUISINE",
       "matchesPlayed": 22,
       "playersCount": 19,
-      "matchesFile": "teams/a8630dda5a7d1d52/matches.json",
-      "playersFile": "teams/a8630dda5a7d1d52/players.json",
+      "matchesFile": "teams/d81fdff683df2b42/matches.json",
+      "playersFile": "teams/d81fdff683df2b42/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -376,14 +398,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80510",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80510",
       "teamIdIntern": 454418,
       "teamIdExtern": 80510,
       "teamName": "AE MINGUELLA B - PURE CUISINE",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "matchesFile": "teams/3fb0ac138be1673e/matches.json",
-      "playersFile": "teams/3fb0ac138be1673e/players.json",
+      "matchesFile": "teams/14ce198986683894/matches.json",
+      "playersFile": "teams/14ce198986683894/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -412,14 +436,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:85940",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85940",
       "teamIdIntern": 506256,
       "teamIdExtern": 85940,
       "teamName": "AEC COLLBLANC",
       "matchesPlayed": 10,
       "playersCount": 10,
-      "matchesFile": "teams/46143b40f701d02d/matches.json",
-      "playersFile": "teams/46143b40f701d02d/players.json",
+      "matchesFile": "teams/9d6f95886c5c0778/matches.json",
+      "playersFile": "teams/9d6f95886c5c0778/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -436,14 +462,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256",
       "teamIdIntern": 454630,
       "teamIdExtern": 83256,
       "teamName": "AESE 1",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "matchesFile": "teams/98f3af0e0fd24b1f/matches.json",
-      "playersFile": "teams/98f3af0e0fd24b1f/players.json",
+      "matchesFile": "teams/a116cc0e3fee3fbb/matches.json",
+      "playersFile": "teams/a116cc0e3fee3fbb/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -472,14 +500,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79804",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79804",
       "teamIdIntern": 450289,
       "teamIdExtern": 79804,
       "teamName": "ASSOLIM - LLU\u00CFSOS DE GR\u00C0CIA  A",
       "matchesPlayed": 23,
       "playersCount": 13,
-      "matchesFile": "teams/ebd88ade6dba4b54/matches.json",
-      "playersFile": "teams/ebd88ade6dba4b54/players.json",
+      "matchesFile": "teams/19b8251604ccc16d/matches.json",
+      "playersFile": "teams/19b8251604ccc16d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -520,14 +550,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79305",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79305",
       "teamIdIntern": 452016,
       "teamIdExtern": 79305,
       "teamName": "BARICENTRO BARBERA",
       "matchesPlayed": 22,
       "playersCount": 18,
-      "matchesFile": "teams/d9cc1d62360daf09/matches.json",
-      "playersFile": "teams/d9cc1d62360daf09/players.json",
+      "matchesFile": "teams/2205160646d7a7ab/matches.json",
+      "playersFile": "teams/2205160646d7a7ab/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -556,14 +588,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82648",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82648",
       "teamIdIntern": 464221,
       "teamIdExtern": 82648,
       "teamName": "BASQUET ATENEU MONTSERRAT GROC",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/39c4e21d7f52decc/matches.json",
-      "playersFile": "teams/39c4e21d7f52decc/players.json",
+      "matchesFile": "teams/b00655bce0c78335/matches.json",
+      "playersFile": "teams/b00655bce0c78335/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -592,14 +626,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80817",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80817",
       "teamIdIntern": 453036,
       "teamIdExtern": 80817,
       "teamName": "BASQUET CANYELLES",
       "matchesPlayed": 22,
       "playersCount": 13,
-      "matchesFile": "teams/c1e79f09faa730bd/matches.json",
-      "playersFile": "teams/c1e79f09faa730bd/players.json",
+      "matchesFile": "teams/45c6dd2a9365499f/matches.json",
+      "playersFile": "teams/45c6dd2a9365499f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -628,14 +664,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83386",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386",
       "teamIdIntern": 458510,
       "teamIdExtern": 83386,
       "teamName": "BASQUET MOLINS",
       "matchesPlayed": 16,
       "playersCount": 14,
-      "matchesFile": "teams/583a7d1c0d16bc7c/matches.json",
-      "playersFile": "teams/583a7d1c0d16bc7c/players.json",
+      "matchesFile": "teams/2a2b3f12deddedcd/matches.json",
+      "playersFile": "teams/2a2b3f12deddedcd/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -664,14 +702,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83847",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
       "teamIdIntern": 455000,
       "teamIdExtern": 83847,
       "teamName": "BASQUET NEUS",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/d4471e654f4d9ac6/matches.json",
-      "playersFile": "teams/d4471e654f4d9ac6/players.json",
+      "matchesFile": "teams/b1149ad39d279baf/matches.json",
+      "playersFile": "teams/b1149ad39d279baf/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -700,14 +740,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:78839",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839",
       "teamIdIntern": 453460,
       "teamIdExtern": 78839,
       "teamName": "BASQUETPIASABADELL",
       "matchesPlayed": 18,
       "playersCount": 13,
-      "matchesFile": "teams/2873e85f92f3609f/matches.json",
-      "playersFile": "teams/2873e85f92f3609f/players.json",
+      "matchesFile": "teams/3d97b8917babcd8d/matches.json",
+      "playersFile": "teams/3d97b8917babcd8d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -736,14 +778,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:78841",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78841",
       "teamIdIntern": 453279,
       "teamIdExtern": 78841,
       "teamName": "BASQUETPIASABADELL - M3E2 ENGINYERIA HIGIENICO SANITARIA",
       "matchesPlayed": 22,
       "playersCount": 15,
-      "matchesFile": "teams/b9edaec017b890c2/matches.json",
-      "playersFile": "teams/b9edaec017b890c2/players.json",
+      "matchesFile": "teams/e3a3f7e09c1b9f21/matches.json",
+      "playersFile": "teams/e3a3f7e09c1b9f21/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -772,14 +816,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81593",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81593",
       "teamIdIntern": 455643,
       "teamIdExtern": 81593,
       "teamName": "BC SANT JOAN DESPI A",
       "matchesPlayed": 14,
       "playersCount": 11,
-      "matchesFile": "teams/1e0e96ed8781fd0b/matches.json",
-      "playersFile": "teams/1e0e96ed8781fd0b/players.json",
+      "matchesFile": "teams/5eb90ec865dbba12/matches.json",
+      "playersFile": "teams/5eb90ec865dbba12/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -808,14 +854,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81584",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81584",
       "teamIdIntern": 458156,
       "teamIdExtern": 81584,
       "teamName": "BC SANT JOAN DESPI B",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/481025476784e8d8/matches.json",
-      "playersFile": "teams/481025476784e8d8/players.json",
+      "matchesFile": "teams/bfc3e0bc5faa3fab/matches.json",
+      "playersFile": "teams/bfc3e0bc5faa3fab/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -844,14 +892,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79709",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
       "teamIdIntern": 459741,
       "teamIdExtern": 79709,
       "teamName": "BC TECLA SALA  A",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/e9ce0771e0635954/matches.json",
-      "playersFile": "teams/e9ce0771e0635954/players.json",
+      "matchesFile": "teams/d292b90ae73b6681/matches.json",
+      "playersFile": "teams/d292b90ae73b6681/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -880,14 +930,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79727",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79727",
       "teamIdIntern": 458869,
       "teamIdExtern": 79727,
       "teamName": "BC TECLA SALA  B",
       "matchesPlayed": 20,
       "playersCount": 11,
-      "matchesFile": "teams/a5bca1e41bf8d84a/matches.json",
-      "playersFile": "teams/a5bca1e41bf8d84a/players.json",
+      "matchesFile": "teams/681f0004cf2b1687/matches.json",
+      "playersFile": "teams/681f0004cf2b1687/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -916,14 +968,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80451",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80451",
       "teamIdIntern": 461250,
       "teamIdExtern": 80451,
       "teamName": "BF CORNELLA",
       "matchesPlayed": 13,
       "playersCount": 14,
-      "matchesFile": "teams/aba4c4f7121f24f5/matches.json",
-      "playersFile": "teams/aba4c4f7121f24f5/players.json",
+      "matchesFile": "teams/831bef2aa2393680/matches.json",
+      "playersFile": "teams/831bef2aa2393680/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -952,14 +1006,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443",
       "teamIdIntern": 450616,
       "teamIdExtern": 80443,
       "teamName": "BF CORNELLA A",
       "matchesPlayed": 23,
       "playersCount": 12,
-      "matchesFile": "teams/025613ba3b870539/matches.json",
-      "playersFile": "teams/025613ba3b870539/players.json",
+      "matchesFile": "teams/11b53d100a731bd0/matches.json",
+      "playersFile": "teams/11b53d100a731bd0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1000,14 +1056,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83664",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83664",
       "teamIdIntern": 456643,
       "teamIdExtern": 83664,
       "teamName": "BQ MANYANET MOLINS",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/ce40677b4b0e40ad/matches.json",
-      "playersFile": "teams/ce40677b4b0e40ad/players.json",
+      "matchesFile": "teams/4d496a1f8bc8bf15/matches.json",
+      "playersFile": "teams/4d496a1f8bc8bf15/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1036,14 +1094,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79076",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076",
       "teamIdIntern": 452783,
       "teamIdExtern": 79076,
       "teamName": "B\u00C0SQUET PB9 \u0027A\u0027",
       "matchesPlayed": 22,
       "playersCount": 15,
-      "matchesFile": "teams/3dd39cabd6a0ffb2/matches.json",
-      "playersFile": "teams/3dd39cabd6a0ffb2/players.json",
+      "matchesFile": "teams/fb8a0c31eb82226d/matches.json",
+      "playersFile": "teams/fb8a0c31eb82226d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1072,14 +1132,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455",
       "teamIdIntern": 464551,
       "teamIdExtern": 82455,
       "teamName": "B\u00C0SQUET SAFA CLAROR 1",
       "matchesPlayed": 12,
       "playersCount": 11,
-      "matchesFile": "teams/f17f56c7130da496/matches.json",
-      "playersFile": "teams/f17f56c7130da496/players.json",
+      "matchesFile": "teams/f2ba98b4142cd821/matches.json",
+      "playersFile": "teams/f2ba98b4142cd821/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1120,14 +1182,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82443",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82443",
       "teamIdIntern": 458714,
       "teamIdExtern": 82443,
       "teamName": "B\u00C0SQUET SAFA CLAROR 2",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "matchesFile": "teams/d483d90d890dda47/matches.json",
-      "playersFile": "teams/d483d90d890dda47/players.json",
+      "matchesFile": "teams/39cae0749af7b14c/matches.json",
+      "playersFile": "teams/39cae0749af7b14c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1156,14 +1220,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79988",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79988",
       "teamIdIntern": 451828,
       "teamIdExtern": 79988,
       "teamName": "B\u00C0SQUET SAFA CLAROR B",
       "matchesPlayed": 22,
       "playersCount": 18,
-      "matchesFile": "teams/1d2084a183dc0ab4/matches.json",
-      "playersFile": "teams/1d2084a183dc0ab4/players.json",
+      "matchesFile": "teams/929d6a671fe5d25b/matches.json",
+      "playersFile": "teams/929d6a671fe5d25b/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1192,14 +1258,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79461",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79461",
       "teamIdIntern": 453443,
       "teamIdExtern": 79461,
       "teamName": "B\u00C0SQUET SANT BOI",
       "matchesPlayed": 18,
       "playersCount": 10,
-      "matchesFile": "teams/719b5218cb1a5efc/matches.json",
-      "playersFile": "teams/719b5218cb1a5efc/players.json",
+      "matchesFile": "teams/e8d3e06eca832343/matches.json",
+      "playersFile": "teams/e8d3e06eca832343/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1228,14 +1296,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81997",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81997",
       "teamIdIntern": 454433,
       "teamIdExtern": 81997,
       "teamName": "B\u00C0SQUET SANT SADURN\u00CD",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "matchesFile": "teams/b28b91409ef4ef57/matches.json",
-      "playersFile": "teams/b28b91409ef4ef57/players.json",
+      "matchesFile": "teams/62639a143e47c1a5/matches.json",
+      "playersFile": "teams/62639a143e47c1a5/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1264,14 +1334,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80315",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80315",
       "teamIdIntern": 452364,
       "teamIdExtern": 80315,
       "teamName": "C.B GRUP BARNA A",
       "matchesPlayed": 22,
       "playersCount": 16,
-      "matchesFile": "teams/86fe36e15a611347/matches.json",
-      "playersFile": "teams/86fe36e15a611347/players.json",
+      "matchesFile": "teams/1cdded8f4496ee58/matches.json",
+      "playersFile": "teams/1cdded8f4496ee58/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1300,14 +1372,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81185",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
       "teamIdIntern": 454749,
       "teamIdExtern": 81185,
       "teamName": "C.B GRUP BARNA A",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/5c518bad5e327950/matches.json",
-      "playersFile": "teams/5c518bad5e327950/players.json",
+      "matchesFile": "teams/46c1f0dc18d1aaf0/matches.json",
+      "playersFile": "teams/46c1f0dc18d1aaf0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1336,14 +1410,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/96baf99cb0e51eed/matches.json",
-      "playersFile": "teams/96baf99cb0e51eed/players.json",
+      "matchesFile": "teams/9d5846387df09ab0/matches.json",
+      "playersFile": "teams/9d5846387df09ab0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1372,14 +1448,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82074",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82074",
       "teamIdIntern": 459379,
       "teamIdExtern": 82074,
       "teamName": "C.B. ESPARREGUERA",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/5cbc9844685b81a5/matches.json",
-      "playersFile": "teams/5cbc9844685b81a5/players.json",
+      "matchesFile": "teams/8a678de0b6dc9c91/matches.json",
+      "playersFile": "teams/8a678de0b6dc9c91/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1408,14 +1486,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83799",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799",
       "teamIdIntern": 453804,
       "teamIdExtern": 83799,
       "teamName": "C.B. LLINARS",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/cce4ddf86429b26a/matches.json",
-      "playersFile": "teams/cce4ddf86429b26a/players.json",
+      "matchesFile": "teams/292b9e67d8683f22/matches.json",
+      "playersFile": "teams/292b9e67d8683f22/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1444,14 +1524,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:85394",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85394",
       "teamIdIntern": 506257,
       "teamIdExtern": 85394,
       "teamName": "C.B. PRAT - MONTIBELLO",
       "matchesPlayed": 10,
       "playersCount": 12,
-      "matchesFile": "teams/25b698c54ccb1929/matches.json",
-      "playersFile": "teams/25b698c54ccb1929/players.json",
+      "matchesFile": "teams/ff14e6bdcd912add/matches.json",
+      "playersFile": "teams/ff14e6bdcd912add/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1468,14 +1550,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80495",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495",
       "teamIdIntern": 451749,
       "teamIdExtern": 80495,
       "teamName": "C.B. SANTA COLOMA A",
       "matchesPlayed": 22,
       "playersCount": 14,
-      "matchesFile": "teams/499919a399116c37/matches.json",
-      "playersFile": "teams/499919a399116c37/players.json",
+      "matchesFile": "teams/7629f545c9c612a6/matches.json",
+      "playersFile": "teams/7629f545c9c612a6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1504,14 +1588,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81486",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81486",
       "teamIdIntern": 458166,
       "teamIdExtern": 81486,
       "teamName": "C.B. VILANOVA DEL VALLES NEGRE-SISQUELLA GRUP",
       "matchesPlayed": 16,
       "playersCount": 10,
-      "matchesFile": "teams/75e11bbaf2b921f2/matches.json",
-      "playersFile": "teams/75e11bbaf2b921f2/players.json",
+      "matchesFile": "teams/2c4f487d7f4fc82d/matches.json",
+      "playersFile": "teams/2c4f487d7f4fc82d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1540,14 +1626,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883",
       "teamIdIntern": 450497,
       "teamIdExtern": 78883,
       "teamName": "C.B. VILASSAR DE MAR 1984 NEGRE",
       "matchesPlayed": 23,
       "playersCount": 15,
-      "matchesFile": "teams/1e4bc438327f6eef/matches.json",
-      "playersFile": "teams/1e4bc438327f6eef/players.json",
+      "matchesFile": "teams/0f8855637c897dee/matches.json",
+      "playersFile": "teams/0f8855637c897dee/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1588,14 +1676,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:84290",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
       "teamIdIntern": 453921,
       "teamIdExtern": 84290,
       "teamName": "C.B.VILASSAR DE MAR 1984",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/340fedfae07e09e8/matches.json",
-      "playersFile": "teams/340fedfae07e09e8/players.json",
+      "matchesFile": "teams/cb66ef49b8ef470a/matches.json",
+      "playersFile": "teams/cb66ef49b8ef470a/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1624,14 +1714,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
       "teamIdIntern": 454079,
       "teamIdExtern": 78659,
       "teamName": "C.E. XAMBA",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/25623a9630db9b89/matches.json",
-      "playersFile": "teams/25623a9630db9b89/players.json",
+      "matchesFile": "teams/93cace61ae2319bf/matches.json",
+      "playersFile": "teams/93cace61ae2319bf/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1660,14 +1752,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78650",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78650",
       "teamIdIntern": 450206,
       "teamIdExtern": 78650,
       "teamName": "C.E. XAMBA NEGRE",
       "matchesPlayed": 23,
       "playersCount": 13,
-      "matchesFile": "teams/3427b593a82abc09/matches.json",
-      "playersFile": "teams/3427b593a82abc09/players.json",
+      "matchesFile": "teams/54999a198a3a66ec/matches.json",
+      "playersFile": "teams/54999a198a3a66ec/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1708,14 +1802,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:78653",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78653",
       "teamIdIntern": 459045,
       "teamIdExtern": 78653,
       "teamName": "C.E. XAMBA NEGRE",
       "matchesPlayed": 17,
       "playersCount": 10,
-      "matchesFile": "teams/af209faf361aba06/matches.json",
-      "playersFile": "teams/af209faf361aba06/players.json",
+      "matchesFile": "teams/dbb19f7eff3659ec/matches.json",
+      "playersFile": "teams/dbb19f7eff3659ec/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1744,14 +1840,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81783",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
       "teamIdIntern": 453926,
       "teamIdExtern": 81783,
       "teamName": "C.E.B. SANT JORDI",
       "matchesPlayed": 15,
       "playersCount": 8,
-      "matchesFile": "teams/2700761a1f4a29d8/matches.json",
-      "playersFile": "teams/2700761a1f4a29d8/players.json",
+      "matchesFile": "teams/5cc7714cef8e53de/matches.json",
+      "playersFile": "teams/5cc7714cef8e53de/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1780,14 +1878,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81887",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81887",
       "teamIdIntern": 454292,
       "teamIdExtern": 81887,
       "teamName": "C.E.MARISTES SANTS LES CORTS",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "matchesFile": "teams/d069e05080db1667/matches.json",
-      "playersFile": "teams/d069e05080db1667/players.json",
+      "matchesFile": "teams/4cc1c40e62edce3f/matches.json",
+      "playersFile": "teams/4cc1c40e62edce3f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1816,14 +1916,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:84066",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
       "teamName": "CALAFELL AM ATTIA TRADING",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/cf3b7c1ef67d4e6b/matches.json",
-      "playersFile": "teams/cf3b7c1ef67d4e6b/players.json",
+      "matchesFile": "teams/db1b9bd2403944f9/matches.json",
+      "playersFile": "teams/db1b9bd2403944f9/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1852,14 +1954,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229",
       "teamIdIntern": 451083,
       "teamIdExtern": 79229,
       "teamName": "CAMPUS UDL - CB IGUALADA JF U18",
       "matchesPlayed": 21,
       "playersCount": 12,
-      "matchesFile": "teams/340c94478b4971a7/matches.json",
-      "playersFile": "teams/340c94478b4971a7/players.json",
+      "matchesFile": "teams/f7fefc8a20680e41/matches.json",
+      "playersFile": "teams/f7fefc8a20680e41/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1888,14 +1992,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81875",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81875",
       "teamIdIntern": 463745,
       "teamIdExtern": 81875,
       "teamName": "CB ART\u00C9S",
       "matchesPlayed": 17,
       "playersCount": 15,
-      "matchesFile": "teams/edf6ca9e2256924f/matches.json",
-      "playersFile": "teams/edf6ca9e2256924f/players.json",
+      "matchesFile": "teams/bd0cb110b71bbd46/matches.json",
+      "playersFile": "teams/bd0cb110b71bbd46/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1924,14 +2030,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82735",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735",
       "teamIdIntern": 453854,
       "teamIdExtern": 82735,
       "teamName": "CB CASTELLDEFELS 1617F",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/c3bd1c17b4476737/matches.json",
-      "playersFile": "teams/c3bd1c17b4476737/players.json",
+      "matchesFile": "teams/0e173dc0973f6f68/matches.json",
+      "playersFile": "teams/0e173dc0973f6f68/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -1960,14 +2068,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80367",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80367",
       "teamIdIntern": 450154,
       "teamIdExtern": 80367,
       "teamName": "CB CERVERA MOBEL L\u00CDNEA NEGRE",
       "matchesPlayed": 23,
       "playersCount": 11,
-      "matchesFile": "teams/ddb2ba498069d6ec/matches.json",
-      "playersFile": "teams/ddb2ba498069d6ec/players.json",
+      "matchesFile": "teams/4fbd4ecfe8985871/matches.json",
+      "playersFile": "teams/4fbd4ecfe8985871/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2008,14 +2118,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
       "teamName": "CB GAV\u00C0 VERMELL",
       "matchesPlayed": 14,
       "playersCount": 13,
-      "matchesFile": "teams/79f5f805b7006a11/matches.json",
-      "playersFile": "teams/79f5f805b7006a11/players.json",
+      "matchesFile": "teams/a1685b4a0e1d32d7/matches.json",
+      "playersFile": "teams/a1685b4a0e1d32d7/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2044,14 +2156,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807",
       "teamIdIntern": 450548,
       "teamIdExtern": 78807,
       "teamName": "CB GRANOLLERS 1",
       "matchesPlayed": 23,
       "playersCount": 15,
-      "matchesFile": "teams/a4e3e83f6ba3a3bc/matches.json",
-      "playersFile": "teams/a4e3e83f6ba3a3bc/players.json",
+      "matchesFile": "teams/3d83a27ed396f68d/matches.json",
+      "playersFile": "teams/3d83a27ed396f68d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2092,14 +2206,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:78824",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824",
       "teamIdIntern": 453870,
       "teamIdExtern": 78824,
       "teamName": "CB GRANOLLERS 1",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/b1d75b631fab8b23/matches.json",
-      "playersFile": "teams/b1d75b631fab8b23/players.json",
+      "matchesFile": "teams/977a3f0b835bee77/matches.json",
+      "playersFile": "teams/977a3f0b835bee77/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2128,14 +2244,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78818",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78818",
       "teamIdIntern": 451748,
       "teamIdExtern": 78818,
       "teamName": "CB GRANOLLERS 2",
       "matchesPlayed": 22,
       "playersCount": 22,
-      "matchesFile": "teams/20b1418220e330c2/matches.json",
-      "playersFile": "teams/20b1418220e330c2/players.json",
+      "matchesFile": "teams/d211e63a88288815/matches.json",
+      "playersFile": "teams/d211e63a88288815/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2164,14 +2282,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
       "teamIdIntern": 453738,
       "teamIdExtern": 78800,
       "teamName": "CB GRANOLLERS 2",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/c5c43b06a1e3c05c/matches.json",
-      "playersFile": "teams/c5c43b06a1e3c05c/players.json",
+      "matchesFile": "teams/fad3564a44d115ee/matches.json",
+      "playersFile": "teams/fad3564a44d115ee/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2200,14 +2320,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226",
       "teamIdIntern": 455078,
       "teamIdExtern": 79226,
       "teamName": "CB IGUALADA PMF U09",
       "matchesPlayed": 16,
       "playersCount": 10,
-      "matchesFile": "teams/34a1d27d0ff1dffb/matches.json",
-      "playersFile": "teams/34a1d27d0ff1dffb/players.json",
+      "matchesFile": "teams/dd0241de255cf60f/matches.json",
+      "playersFile": "teams/dd0241de255cf60f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2236,14 +2358,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79214",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79214",
       "teamIdIntern": 450496,
       "teamIdExtern": 79214,
       "teamName": "CB IPSI 08",
       "matchesPlayed": 23,
       "playersCount": 14,
-      "matchesFile": "teams/ba122a9760d369f1/matches.json",
-      "playersFile": "teams/ba122a9760d369f1/players.json",
+      "matchesFile": "teams/9932b927f2ac2d7f/matches.json",
+      "playersFile": "teams/9932b927f2ac2d7f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2284,14 +2408,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79216",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79216",
       "teamIdIntern": 453037,
       "teamIdExtern": 79216,
       "teamName": "CB IPSI B",
       "matchesPlayed": 22,
       "playersCount": 18,
-      "matchesFile": "teams/3c7036b16632ab4e/matches.json",
-      "playersFile": "teams/3c7036b16632ab4e/players.json",
+      "matchesFile": "teams/34b9d3fa7d4a2282/matches.json",
+      "playersFile": "teams/34b9d3fa7d4a2282/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2320,14 +2446,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81426",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81426",
       "teamIdIntern": 456642,
       "teamIdExtern": 81426,
       "teamName": "CB JOVENTUT CASTELLDEFELS",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/67ecfdc0a5fdc32b/matches.json",
-      "playersFile": "teams/67ecfdc0a5fdc32b/players.json",
+      "matchesFile": "teams/39d07981580e6648/matches.json",
+      "playersFile": "teams/39d07981580e6648/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2356,14 +2484,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79122",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79122",
       "teamIdIntern": 452377,
       "teamIdExtern": 79122,
       "teamName": "CB LA VALL D\u0027EN BAS 1",
       "matchesPlayed": 22,
       "playersCount": 16,
-      "matchesFile": "teams/9e67a9dd6dac566e/matches.json",
-      "playersFile": "teams/9e67a9dd6dac566e/players.json",
+      "matchesFile": "teams/9ee030e828c3aaa4/matches.json",
+      "playersFile": "teams/9ee030e828c3aaa4/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2392,14 +2522,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:84151",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151",
       "teamIdIntern": 453841,
       "teamIdExtern": 84151,
       "teamName": "CB LES FRANQUESES",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/6067bea7f4743408/matches.json",
-      "playersFile": "teams/6067bea7f4743408/players.json",
+      "matchesFile": "teams/d16b0563f03a9bd8/matches.json",
+      "playersFile": "teams/d16b0563f03a9bd8/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2428,14 +2560,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:85306",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306",
       "teamIdIntern": 507514,
       "teamIdExtern": 85306,
       "teamName": "CB MANLLEU (U10F)",
       "matchesPlayed": 10,
       "playersCount": 9,
-      "matchesFile": "teams/e7c351faa9fd795e/matches.json",
-      "playersFile": "teams/e7c351faa9fd795e/players.json",
+      "matchesFile": "teams/0504cb129553d0c1/matches.json",
+      "playersFile": "teams/0504cb129553d0c1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2452,14 +2586,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
       "matchesPlayed": 16,
       "playersCount": 17,
-      "matchesFile": "teams/fe1059a223e4a6e3/matches.json",
-      "playersFile": "teams/fe1059a223e4a6e3/players.json",
+      "matchesFile": "teams/d08efbc8f9176a7d/matches.json",
+      "playersFile": "teams/d08efbc8f9176a7d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2488,14 +2624,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
       "teamIdIntern": 450173,
       "teamIdExtern": 79980,
       "teamName": "CB MANYANET LES CORTS VERD",
       "matchesPlayed": 23,
       "playersCount": 13,
-      "matchesFile": "teams/40fbd083f867da7d/matches.json",
-      "playersFile": "teams/40fbd083f867da7d/players.json",
+      "matchesFile": "teams/f4588c93b16d7d02/matches.json",
+      "playersFile": "teams/f4588c93b16d7d02/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2536,14 +2674,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81467",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81467",
       "teamIdIntern": 453644,
       "teamIdExtern": 81467,
       "teamName": "CB MANYANET LES CORTS VERD",
       "matchesPlayed": 15,
       "playersCount": 14,
-      "matchesFile": "teams/460a3f3e092febe4/matches.json",
-      "playersFile": "teams/460a3f3e092febe4/players.json",
+      "matchesFile": "teams/ac98380e08cab574/matches.json",
+      "playersFile": "teams/ac98380e08cab574/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2572,14 +2712,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81661",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
       "teamName": "CB MONTPEDR\u00D3S",
       "matchesPlayed": 18,
       "playersCount": 10,
-      "matchesFile": "teams/51bab6e21cace1dd/matches.json",
-      "playersFile": "teams/51bab6e21cace1dd/players.json",
+      "matchesFile": "teams/ee4e61a492c7e7ee/matches.json",
+      "playersFile": "teams/ee4e61a492c7e7ee/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2608,14 +2750,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83826",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826",
       "teamIdIntern": 458853,
       "teamIdExtern": 83826,
       "teamName": "CB NAV\u00C0S",
       "matchesPlayed": 15,
       "playersCount": 16,
-      "matchesFile": "teams/4e518fd8dbb3e652/matches.json",
-      "playersFile": "teams/4e518fd8dbb3e652/players.json",
+      "matchesFile": "teams/59dbe6cd06f2e982/matches.json",
+      "playersFile": "teams/59dbe6cd06f2e982/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2644,14 +2788,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:85973",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973",
       "teamIdIntern": 506606,
       "teamIdExtern": 85973,
       "teamName": "CB NAV\u00C0S B",
       "matchesPlayed": 8,
       "playersCount": 10,
-      "matchesFile": "teams/7c97c92e3572446a/matches.json",
-      "playersFile": "teams/7c97c92e3572446a/players.json",
+      "matchesFile": "teams/d22b079bcfba00c0/matches.json",
+      "playersFile": "teams/d22b079bcfba00c0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2668,14 +2814,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78572",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78572",
       "teamIdIntern": 450500,
       "teamIdExtern": 78572,
       "teamName": "CB OLOT PERE BOADA EMPRESA CONSTRUCTORA",
       "matchesPlayed": 23,
       "playersCount": 18,
-      "matchesFile": "teams/d3330149999ea8c7/matches.json",
-      "playersFile": "teams/d3330149999ea8c7/players.json",
+      "matchesFile": "teams/cdfc81f030fb7a62/matches.json",
+      "playersFile": "teams/cdfc81f030fb7a62/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2716,14 +2864,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82641",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82641",
       "teamIdIntern": 454232,
       "teamIdExtern": 82641,
       "teamName": "CB PARETS",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "matchesFile": "teams/a34941b59935ca17/matches.json",
-      "playersFile": "teams/a34941b59935ca17/players.json",
+      "matchesFile": "teams/8ca203ecf156234a/matches.json",
+      "playersFile": "teams/8ca203ecf156234a/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2752,14 +2902,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80158",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80158",
       "teamIdIntern": 453220,
       "teamIdExtern": 80158,
       "teamName": "CB RIPOLLET - AUTOESCOLA TATCHEPOL",
       "matchesPlayed": 22,
       "playersCount": 20,
-      "matchesFile": "teams/f3d2a883dd417040/matches.json",
-      "playersFile": "teams/f3d2a883dd417040/players.json",
+      "matchesFile": "teams/d5584ffc220a8432/matches.json",
+      "playersFile": "teams/d5584ffc220a8432/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2788,14 +2940,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80159",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80159",
       "teamIdIntern": 453203,
       "teamIdExtern": 80159,
       "teamName": "CB RIPOLLET A",
       "matchesPlayed": 22,
       "playersCount": 17,
-      "matchesFile": "teams/27136c66338a5e0d/matches.json",
-      "playersFile": "teams/27136c66338a5e0d/players.json",
+      "matchesFile": "teams/9b10dc09cab24ad3/matches.json",
+      "playersFile": "teams/9b10dc09cab24ad3/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2824,14 +2978,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
       "teamIdIntern": 450360,
       "teamIdExtern": 80338,
       "teamName": "CB SANT ANDREU",
       "matchesPlayed": 23,
       "playersCount": 17,
-      "matchesFile": "teams/96090006a06a6d90/matches.json",
-      "playersFile": "teams/96090006a06a6d90/players.json",
+      "matchesFile": "teams/5e022349f1f34c55/matches.json",
+      "playersFile": "teams/5e022349f1f34c55/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2872,14 +3028,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82786",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82786",
       "teamIdIntern": 453855,
       "teamIdExtern": 82786,
       "teamName": "CB SANT ANDREU",
       "matchesPlayed": 16,
       "playersCount": 15,
-      "matchesFile": "teams/58bb960d1763c6d6/matches.json",
-      "playersFile": "teams/58bb960d1763c6d6/players.json",
+      "matchesFile": "teams/4b4c9d21e616f06f/matches.json",
+      "playersFile": "teams/4b4c9d21e616f06f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2908,14 +3066,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172",
       "teamIdIntern": 454101,
       "teamIdExtern": 83172,
       "teamName": "CB SANT JUST U09",
       "matchesPlayed": 19,
       "playersCount": 9,
-      "matchesFile": "teams/b815e57bf22ddda2/matches.json",
-      "playersFile": "teams/b815e57bf22ddda2/players.json",
+      "matchesFile": "teams/bed819c414281ecf/matches.json",
+      "playersFile": "teams/bed819c414281ecf/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2944,14 +3104,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82708",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
       "teamIdIntern": 453840,
       "teamIdExtern": 82708,
       "teamName": "CB SANTPEDOR",
       "matchesPlayed": 16,
       "playersCount": 10,
-      "matchesFile": "teams/baee4c482bdc68b5/matches.json",
-      "playersFile": "teams/baee4c482bdc68b5/players.json",
+      "matchesFile": "teams/27d714e347517424/matches.json",
+      "playersFile": "teams/27d714e347517424/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -2980,14 +3142,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
       "teamIdIntern": 451323,
       "teamIdExtern": 78420,
       "teamName": "CB TARRAGONA",
       "matchesPlayed": 23,
       "playersCount": 24,
-      "matchesFile": "teams/379e25cf971aec7d/matches.json",
-      "playersFile": "teams/379e25cf971aec7d/players.json",
+      "matchesFile": "teams/98cf1de147b12eea/matches.json",
+      "playersFile": "teams/98cf1de147b12eea/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3028,14 +3192,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82057",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82057",
       "teamIdIntern": 471430,
       "teamIdExtern": 82057,
       "teamName": "CB TORELL\u00D3 PF GRIS - ALGASE TRAINING",
       "matchesPlayed": 9,
       "playersCount": 9,
-      "matchesFile": "teams/23afb6c84ec4a603/matches.json",
-      "playersFile": "teams/23afb6c84ec4a603/players.json",
+      "matchesFile": "teams/d8c76dad36bc1b8b/matches.json",
+      "playersFile": "teams/d8c76dad36bc1b8b/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3052,14 +3218,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82057",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057",
       "teamIdIntern": 506936,
       "teamIdExtern": 82057,
       "teamName": "CB TORELL\u00D3 PF GRIS - ALGASE TRAINING",
       "matchesPlayed": 10,
       "playersCount": 11,
-      "matchesFile": "teams/a259775f6fa96c95/matches.json",
-      "playersFile": "teams/a259775f6fa96c95/players.json",
+      "matchesFile": "teams/b22bd67222c42121/matches.json",
+      "playersFile": "teams/b22bd67222c42121/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3076,14 +3244,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82054",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82054",
       "teamIdIntern": 454834,
       "teamIdExtern": 82054,
       "teamName": "CB TORELL\u00D3 PF VERMELL - - PERRUQUERIA XAMPR\u00D3",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "matchesFile": "teams/9f120d9b23f3a60b/matches.json",
-      "playersFile": "teams/9f120d9b23f3a60b/players.json",
+      "matchesFile": "teams/f001a8014782daec/matches.json",
+      "playersFile": "teams/f001a8014782daec/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3112,14 +3282,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78412",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78412",
       "teamIdIntern": 450906,
       "teamIdExtern": 78412,
       "teamName": "CB VALLS SOLIDITY",
       "matchesPlayed": 22,
       "playersCount": 15,
-      "matchesFile": "teams/436e7a93edeb6318/matches.json",
-      "playersFile": "teams/436e7a93edeb6318/players.json",
+      "matchesFile": "teams/d7c38735f251ac06/matches.json",
+      "playersFile": "teams/d7c38735f251ac06/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3160,14 +3332,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000",
       "teamIdIntern": 450631,
       "teamIdExtern": 80000,
       "teamName": "CB VILADECANS",
       "matchesPlayed": 23,
       "playersCount": 13,
-      "matchesFile": "teams/5dfa2443077c7b89/matches.json",
-      "playersFile": "teams/5dfa2443077c7b89/players.json",
+      "matchesFile": "teams/f51b7edb836cc91d/matches.json",
+      "playersFile": "teams/f51b7edb836cc91d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3208,14 +3382,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81714",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81714",
       "teamIdIntern": 453708,
       "teamIdExtern": 81714,
       "teamName": "CB VILASSAR DE DALT",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/b5289a3b22f461ed/matches.json",
-      "playersFile": "teams/b5289a3b22f461ed/players.json",
+      "matchesFile": "teams/09364531e2df2cdf/matches.json",
+      "playersFile": "teams/09364531e2df2cdf/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3244,14 +3420,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:78693",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78693",
       "teamIdIntern": 456882,
       "teamIdExtern": 78693,
       "teamName": "CB. CANET",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/e4be98655e221e7a/matches.json",
-      "playersFile": "teams/e4be98655e221e7a/players.json",
+      "matchesFile": "teams/e239ef14de6c88f1/matches.json",
+      "playersFile": "teams/e239ef14de6c88f1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3280,14 +3458,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80344",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80344",
       "teamIdIntern": 450630,
       "teamIdExtern": 80344,
       "teamName": "CB. CORNELLA",
       "matchesPlayed": 23,
       "playersCount": 26,
-      "matchesFile": "teams/cd0b738a027d2996/matches.json",
-      "playersFile": "teams/cd0b738a027d2996/players.json",
+      "matchesFile": "teams/dca1290a0a37e8d3/matches.json",
+      "playersFile": "teams/dca1290a0a37e8d3/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3328,14 +3508,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78904",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904",
       "teamIdIntern": 452017,
       "teamIdExtern": 78904,
       "teamName": "CB.CIUTAT VELLA A",
       "matchesPlayed": 22,
       "playersCount": 23,
-      "matchesFile": "teams/68c4f1464b1f7f6d/matches.json",
-      "playersFile": "teams/68c4f1464b1f7f6d/players.json",
+      "matchesFile": "teams/ece1447221aacbca/matches.json",
+      "playersFile": "teams/ece1447221aacbca/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3364,14 +3546,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83203",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203",
       "teamIdIntern": 453542,
       "teamIdExtern": 83203,
       "teamName": "CBF CERDANYOLA U10\u00A0VERD",
       "matchesPlayed": 17,
       "playersCount": 10,
-      "matchesFile": "teams/4b247912acfe14cf/matches.json",
-      "playersFile": "teams/4b247912acfe14cf/players.json",
+      "matchesFile": "teams/c2510cca343c97d6/matches.json",
+      "playersFile": "teams/c2510cca343c97d6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3400,14 +3584,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80111",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80111",
       "teamIdIntern": 454372,
       "teamIdExtern": 80111,
       "teamName": "CBS FEM  U10",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "matchesFile": "teams/0b4b458066a9266d/matches.json",
-      "playersFile": "teams/0b4b458066a9266d/players.json",
+      "matchesFile": "teams/d9a8b7c870286310/matches.json",
+      "playersFile": "teams/d9a8b7c870286310/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3436,14 +3622,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78938",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78938",
       "teamIdIntern": 450681,
       "teamIdExtern": 78938,
       "teamName": "CE SAGRAT COR DIPUTACIO",
       "matchesPlayed": 23,
       "playersCount": 14,
-      "matchesFile": "teams/f0b1c200e32d2947/matches.json",
-      "playersFile": "teams/f0b1c200e32d2947/players.json",
+      "matchesFile": "teams/c23e0e5a0d853429/matches.json",
+      "playersFile": "teams/c23e0e5a0d853429/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3484,14 +3672,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:78612",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612",
       "teamIdIntern": 458414,
       "teamIdExtern": 78612,
       "teamName": "CE SANT NICOLAU",
       "matchesPlayed": 16,
       "playersCount": 8,
-      "matchesFile": "teams/877be18d2190c697/matches.json",
-      "playersFile": "teams/877be18d2190c697/players.json",
+      "matchesFile": "teams/c32e4d37509cdde6/matches.json",
+      "playersFile": "teams/c32e4d37509cdde6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3520,14 +3710,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
       "teamIdIntern": 450155,
       "teamIdExtern": 78605,
       "teamName": "CE SANT NICOLAU 1",
       "matchesPlayed": 23,
       "playersCount": 16,
-      "matchesFile": "teams/0c179beb57efc933/matches.json",
-      "playersFile": "teams/0c179beb57efc933/players.json",
+      "matchesFile": "teams/5f0254908a3e0543/matches.json",
+      "playersFile": "teams/5f0254908a3e0543/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3568,14 +3760,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
       "matchesPlayed": 18,
       "playersCount": 9,
-      "matchesFile": "teams/8304417c34b915f7/matches.json",
-      "playersFile": "teams/8304417c34b915f7/players.json",
+      "matchesFile": "teams/3828684d4df0fd63/matches.json",
+      "playersFile": "teams/3828684d4df0fd63/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3604,14 +3798,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78454",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78454",
       "teamIdIntern": 452376,
       "teamIdExtern": 78454,
       "teamName": "CHAMPANILLO - AECAM MALGRAT",
       "matchesPlayed": 22,
       "playersCount": 16,
-      "matchesFile": "teams/43b0a647d3d684b4/matches.json",
-      "playersFile": "teams/43b0a647d3d684b4/players.json",
+      "matchesFile": "teams/fb021735d83ec067/matches.json",
+      "playersFile": "teams/fb021735d83ec067/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3640,14 +3836,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79269",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79269",
       "teamIdIntern": 459487,
       "teamIdExtern": 79269,
       "teamName": "CLUB BASQUET ARGENTONA",
       "matchesPlayed": 16,
       "playersCount": 9,
-      "matchesFile": "teams/e5aa3000c5bf7179/matches.json",
-      "playersFile": "teams/e5aa3000c5bf7179/players.json",
+      "matchesFile": "teams/b4f55ec1f7a42c57/matches.json",
+      "playersFile": "teams/b4f55ec1f7a42c57/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3676,14 +3874,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83588",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83588",
       "teamIdIntern": 455411,
       "teamIdExtern": 83588,
       "teamName": "CLUB B\u00C0SQUET PUIG-REIG",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/343e63e2d251700f/matches.json",
-      "playersFile": "teams/343e63e2d251700f/players.json",
+      "matchesFile": "teams/b7addf2406a4f57d/matches.json",
+      "playersFile": "teams/b7addf2406a4f57d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3712,14 +3912,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82626",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626",
       "teamIdIntern": 453836,
       "teamIdExtern": 82626,
       "teamName": "CLUB B\u00C0SQUET SANT CELONI - U10F",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/284ba030791e68bb/matches.json",
-      "playersFile": "teams/284ba030791e68bb/players.json",
+      "matchesFile": "teams/5b5bed90b1ff02b7/matches.json",
+      "playersFile": "teams/5b5bed90b1ff02b7/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3748,14 +3950,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79780",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79780",
       "teamIdIntern": 450586,
       "teamIdExtern": 79780,
       "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
       "matchesPlayed": 23,
       "playersCount": 20,
-      "matchesFile": "teams/b249bf256f87b4e5/matches.json",
-      "playersFile": "teams/b249bf256f87b4e5/players.json",
+      "matchesFile": "teams/edfe4abacfd90b84/matches.json",
+      "playersFile": "teams/edfe4abacfd90b84/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3796,14 +4000,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79015",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79015",
       "teamIdIntern": 456679,
       "teamIdExtern": 79015,
       "teamName": "CLUB ESPORTIU MARISTES RUB\u00CD",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/6ef9eacd9a073a94/matches.json",
-      "playersFile": "teams/6ef9eacd9a073a94/players.json",
+      "matchesFile": "teams/6ee60152f315710f/matches.json",
+      "playersFile": "teams/6ee60152f315710f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3832,14 +4038,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79686",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79686",
       "teamIdIntern": 453927,
       "teamIdExtern": 79686,
       "teamName": "CLUB NATACIO TERRASSA",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/0d0e02f454104f86/matches.json",
-      "playersFile": "teams/0d0e02f454104f86/players.json",
+      "matchesFile": "teams/083c327e774fea6f/matches.json",
+      "playersFile": "teams/083c327e774fea6f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3868,14 +4076,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269",
       "teamIdIntern": 450094,
       "teamIdExtern": 80269,
       "teamName": "CLUB NATACI\u00D3 SABADELL A",
       "matchesPlayed": 23,
       "playersCount": 16,
-      "matchesFile": "teams/9740a2573600c3da/matches.json",
-      "playersFile": "teams/9740a2573600c3da/players.json",
+      "matchesFile": "teams/496dd3129b63238d/matches.json",
+      "playersFile": "teams/496dd3129b63238d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3916,14 +4126,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79683",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79683",
       "teamIdIntern": 450095,
       "teamIdExtern": 79683,
       "teamName": "CLUB NATACI\u00D3 TERRASSA",
       "matchesPlayed": 23,
       "playersCount": 14,
-      "matchesFile": "teams/f12b3da75df7c33f/matches.json",
-      "playersFile": "teams/f12b3da75df7c33f/players.json",
+      "matchesFile": "teams/e0bca85bf3417866/matches.json",
+      "playersFile": "teams/e0bca85bf3417866/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -3964,14 +4176,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326",
       "teamIdIntern": 450680,
       "teamIdExtern": 80326,
       "teamName": "CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A",
       "matchesPlayed": 23,
       "playersCount": 16,
-      "matchesFile": "teams/49d29d70c01e6527/matches.json",
-      "playersFile": "teams/49d29d70c01e6527/players.json",
+      "matchesFile": "teams/90e4dad440b0e700/matches.json",
+      "playersFile": "teams/90e4dad440b0e700/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4012,14 +4226,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79233",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79233",
       "teamIdIntern": 454432,
       "teamIdExtern": 79233,
       "teamName": "CL\u00CDNICA DENTAL BAUSILI \u0026 JANER - CL\u00CDNICA DENTAL - CB IGUALADA PMF U10",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/16c889ca6094e976/matches.json",
-      "playersFile": "teams/16c889ca6094e976/players.json",
+      "matchesFile": "teams/d129e757d2716cb1/matches.json",
+      "playersFile": "teams/d129e757d2716cb1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4048,14 +4264,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81497",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497",
       "teamIdIntern": 455025,
       "teamIdExtern": 81497,
       "teamName": "CN CALDES",
       "matchesPlayed": 16,
       "playersCount": 9,
-      "matchesFile": "teams/12fac861175bc3f7/matches.json",
-      "playersFile": "teams/12fac861175bc3f7/players.json",
+      "matchesFile": "teams/983905afaf3a1064/matches.json",
+      "playersFile": "teams/983905afaf3a1064/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4084,14 +4302,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79401",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401",
       "teamIdIntern": 453461,
       "teamIdExtern": 79401,
       "teamName": "CREU ALTA SABADELL",
       "matchesPlayed": 18,
       "playersCount": 13,
-      "matchesFile": "teams/e6855cae0e27d791/matches.json",
-      "playersFile": "teams/e6855cae0e27d791/players.json",
+      "matchesFile": "teams/00b5f8b2dad513b6/matches.json",
+      "playersFile": "teams/00b5f8b2dad513b6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4120,14 +4340,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749",
       "teamIdIntern": 450201,
       "teamIdExtern": 79749,
       "teamName": "C\u00C0MPING BIANYA ROSER VERMELL",
       "matchesPlayed": 23,
       "playersCount": 12,
-      "matchesFile": "teams/1841992c4a9ba706/matches.json",
-      "playersFile": "teams/1841992c4a9ba706/players.json",
+      "matchesFile": "teams/f3539d9d0ca94e39/matches.json",
+      "playersFile": "teams/f3539d9d0ca94e39/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4168,14 +4390,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "matchesFile": "teams/066aaf592eb3d56d/matches.json",
-      "playersFile": "teams/066aaf592eb3d56d/players.json",
+      "matchesFile": "teams/18552d39c04035d5/matches.json",
+      "playersFile": "teams/18552d39c04035d5/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4204,14 +4428,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
       "teamIdIntern": 454114,
       "teamIdExtern": 82475,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/5fd9f490ede8f3b9/matches.json",
-      "playersFile": "teams/5fd9f490ede8f3b9/players.json",
+      "matchesFile": "teams/e66e2dcabe34422f/matches.json",
+      "playersFile": "teams/e66e2dcabe34422f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4240,14 +4466,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82479",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82479",
       "teamIdIntern": 454824,
       "teamIdExtern": 82479,
       "teamName": "DOMINIQUES BARCELONA VERD",
       "matchesPlayed": 14,
       "playersCount": 15,
-      "matchesFile": "teams/f3c51192cb90c1dd/matches.json",
-      "playersFile": "teams/f3c51192cb90c1dd/players.json",
+      "matchesFile": "teams/d237c35a50c1c5b1/matches.json",
+      "playersFile": "teams/d237c35a50c1c5b1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4276,14 +4504,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81157",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157",
       "teamIdIntern": 455024,
       "teamIdExtern": 81157,
       "teamName": "E.B. ROSELLA",
       "matchesPlayed": 17,
       "playersCount": 10,
-      "matchesFile": "teams/e15529b17430f370/matches.json",
-      "playersFile": "teams/e15529b17430f370/players.json",
+      "matchesFile": "teams/a8d441edca4905c4/matches.json",
+      "playersFile": "teams/a8d441edca4905c4/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4312,14 +4542,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78995",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78995",
       "teamIdIntern": 453041,
       "teamIdExtern": 78995,
       "teamName": "EL C\u00CDRCOL COTONIFICI BADALONA A",
       "matchesPlayed": 22,
       "playersCount": 15,
-      "matchesFile": "teams/1185cd80a8e5d593/matches.json",
-      "playersFile": "teams/1185cd80a8e5d593/players.json",
+      "matchesFile": "teams/75be5f7bd081d929/matches.json",
+      "playersFile": "teams/75be5f7bd081d929/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4348,14 +4580,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82719",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
       "teamName": "EL MASNOU BASQUETBOL",
       "matchesPlayed": 19,
       "playersCount": 9,
-      "matchesFile": "teams/22865e021686336f/matches.json",
-      "playersFile": "teams/22865e021686336f/players.json",
+      "matchesFile": "teams/b9bf446f9bd76cab/matches.json",
+      "playersFile": "teams/b9bf446f9bd76cab/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4384,14 +4618,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81620",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81620",
       "teamIdIntern": 454096,
       "teamIdExtern": 81620,
       "teamName": "ESCOLA IPSI 16",
       "matchesPlayed": 15,
       "playersCount": 11,
-      "matchesFile": "teams/1ad8c743c24cbb21/matches.json",
-      "playersFile": "teams/1ad8c743c24cbb21/players.json",
+      "matchesFile": "teams/9d2fda037010c7e6/matches.json",
+      "playersFile": "teams/9d2fda037010c7e6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4420,14 +4656,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79483",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483",
       "teamIdIntern": 452162,
       "teamIdExtern": 79483,
       "teamName": "ESCOLAPIS SARRI\u00C0 A",
       "matchesPlayed": 22,
       "playersCount": 16,
-      "matchesFile": "teams/2897ffbc667cdcd1/matches.json",
-      "playersFile": "teams/2897ffbc667cdcd1/players.json",
+      "matchesFile": "teams/338e997586c9faaa/matches.json",
+      "playersFile": "teams/338e997586c9faaa/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4456,14 +4694,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
       "teamIdIntern": 453067,
       "teamIdExtern": 80605,
       "teamName": "FC MARTINENC B\u00C0SQUET A",
       "matchesPlayed": 21,
       "playersCount": 15,
-      "matchesFile": "teams/0e947d2e614b5c97/matches.json",
-      "playersFile": "teams/0e947d2e614b5c97/players.json",
+      "matchesFile": "teams/73c1479a879397e1/matches.json",
+      "playersFile": "teams/73c1479a879397e1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4492,14 +4732,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
       "teamIdIntern": 450288,
       "teamIdExtern": 80600,
       "teamName": "FC MARTINENC B\u00C0SQUET U18",
       "matchesPlayed": 23,
       "playersCount": 21,
-      "matchesFile": "teams/4e7e9e2f87cdf4b8/matches.json",
-      "playersFile": "teams/4e7e9e2f87cdf4b8/players.json",
+      "matchesFile": "teams/e9db66d0bd9395df/matches.json",
+      "playersFile": "teams/e9db66d0bd9395df/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4540,14 +4782,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80619",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80619",
       "teamIdIntern": 454631,
       "teamIdExtern": 80619,
       "teamName": "FC MARTINENC B\u00C0SQUET U9",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/842eecd53b95c7b1/matches.json",
-      "playersFile": "teams/842eecd53b95c7b1/players.json",
+      "matchesFile": "teams/8426bf3a30977413/matches.json",
+      "playersFile": "teams/8426bf3a30977413/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4588,14 +4832,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83217",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83217",
       "teamIdIntern": 453709,
       "teamIdExtern": 83217,
       "teamName": "FEMENI MARESME 3 VILES - PMF",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "matchesFile": "teams/a70442a233875bb5/matches.json",
-      "playersFile": "teams/a70442a233875bb5/players.json",
+      "matchesFile": "teams/3e46052b15f18324/matches.json",
+      "playersFile": "teams/3e46052b15f18324/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4624,14 +4870,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
       "teamName": "FEMENI MARESME 3 VILES BLAU - PMF",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/23b10d743142ff37/matches.json",
-      "playersFile": "teams/23b10d743142ff37/players.json",
+      "matchesFile": "teams/81d1237e28bed4bc/matches.json",
+      "playersFile": "teams/81d1237e28bed4bc/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4660,14 +4908,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79533",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79533",
       "teamIdIntern": 458748,
       "teamIdExtern": 79533,
       "teamName": "FEMEN\u00CD OSONA LIBERTY- OVA PROJECTS",
       "matchesPlayed": 20,
       "playersCount": 20,
-      "matchesFile": "teams/021f43c3dbb0683b/matches.json",
-      "playersFile": "teams/021f43c3dbb0683b/players.json",
+      "matchesFile": "teams/b7844cc459e64c2d/matches.json",
+      "playersFile": "teams/b7844cc459e64c2d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4696,14 +4946,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79527",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527",
       "teamIdIntern": 453805,
       "teamIdExtern": 79527,
       "teamName": "FEMEN\u00CD OSONA MYSTICS- OVA PROJECTS",
       "matchesPlayed": 18,
       "playersCount": 15,
-      "matchesFile": "teams/0ebde4ab2b700353/matches.json",
-      "playersFile": "teams/0ebde4ab2b700353/players.json",
+      "matchesFile": "teams/cc8c12effed9412f/matches.json",
+      "playersFile": "teams/cc8c12effed9412f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4732,14 +4984,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79532",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79532",
       "teamIdIntern": 454115,
       "teamIdExtern": 79532,
       "teamName": "FEMEN\u00CD OSONA SPARKS- OVA PROJECTS",
       "matchesPlayed": 15,
       "playersCount": 11,
-      "matchesFile": "teams/8309be0f6ee25c3e/matches.json",
-      "playersFile": "teams/8309be0f6ee25c3e/players.json",
+      "matchesFile": "teams/a02f0d90be3f9bb8/matches.json",
+      "playersFile": "teams/a02f0d90be3f9bb8/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4768,14 +5022,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79518",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79518",
       "teamIdIntern": 450233,
       "teamIdExtern": 79518,
       "teamName": "FEMEN\u00CD OSONA- OVA PROJECTS",
       "matchesPlayed": 22,
       "playersCount": 15,
-      "matchesFile": "teams/26e6ffd87ec578a3/matches.json",
-      "playersFile": "teams/26e6ffd87ec578a3/players.json",
+      "matchesFile": "teams/f2fec2faf5d3d509/matches.json",
+      "playersFile": "teams/f2fec2faf5d3d509/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4804,14 +5060,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80235",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235",
       "teamIdIntern": 454788,
       "teamIdExtern": 80235,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/ac7dfcfb0e799af8/matches.json",
-      "playersFile": "teams/ac7dfcfb0e799af8/players.json",
+      "matchesFile": "teams/3ba523b8b1a1e42c/matches.json",
+      "playersFile": "teams/3ba523b8b1a1e42c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4840,14 +5098,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79289",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79289",
       "teamIdIntern": 451252,
       "teamIdExtern": 79289,
       "teamName": "GEIEG VEDRUNA CATALUNYA TELECOM",
       "matchesPlayed": 23,
       "playersCount": 18,
-      "matchesFile": "teams/915c7e980248aea4/matches.json",
-      "playersFile": "teams/915c7e980248aea4/players.json",
+      "matchesFile": "teams/b7e519f88a9a5dc1/matches.json",
+      "playersFile": "teams/b7e519f88a9a5dc1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4888,14 +5148,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82569",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569",
       "teamIdIntern": 453795,
       "teamIdExtern": 82569,
       "teamName": "GRAMENET BC",
       "matchesPlayed": 19,
       "playersCount": 12,
-      "matchesFile": "teams/e6cf661ef68a0c6f/matches.json",
-      "playersFile": "teams/e6cf661ef68a0c6f/players.json",
+      "matchesFile": "teams/3e61f178f945c122/matches.json",
+      "playersFile": "teams/3e61f178f945c122/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4924,14 +5186,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80635",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80635",
       "teamIdIntern": 450200,
       "teamIdExtern": 80635,
       "teamName": "GRAMENET BC TARONJA",
       "matchesPlayed": 23,
       "playersCount": 14,
-      "matchesFile": "teams/680351d05433f63d/matches.json",
-      "playersFile": "teams/680351d05433f63d/players.json",
+      "matchesFile": "teams/51b1c91250fe346a/matches.json",
+      "playersFile": "teams/51b1c91250fe346a/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -4972,14 +5236,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79263",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79263",
       "teamIdIntern": 452163,
       "teamIdExtern": 79263,
       "teamName": "IBERSOFAS CB ARGENTONA",
       "matchesPlayed": 22,
       "playersCount": 17,
-      "matchesFile": "teams/cd33d9dd1b93f096/matches.json",
-      "playersFile": "teams/cd33d9dd1b93f096/players.json",
+      "matchesFile": "teams/dabdb48bfef51d89/matches.json",
+      "playersFile": "teams/dabdb48bfef51d89/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5008,14 +5274,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79031",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79031",
       "teamIdIntern": 453642,
       "teamIdExtern": 79031,
       "teamName": "INOXFORMA MANRESA CBF 1",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "matchesFile": "teams/a6fa0835d93ee82f/matches.json",
-      "playersFile": "teams/a6fa0835d93ee82f/players.json",
+      "matchesFile": "teams/4a95592c6e6e143f/matches.json",
+      "playersFile": "teams/4a95592c6e6e143f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5044,14 +5312,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674",
       "teamIdIntern": 450617,
       "teamIdExtern": 78674,
       "teamName": "ISEFI C.B. L\u0027HOSPITALET A",
       "matchesPlayed": 23,
       "playersCount": 16,
-      "matchesFile": "teams/d82ffb632c3e22d0/matches.json",
-      "playersFile": "teams/d82ffb632c3e22d0/players.json",
+      "matchesFile": "teams/926bfc84636c1bd7/matches.json",
+      "playersFile": "teams/926bfc84636c1bd7/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5092,14 +5362,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
       "teamIdIntern": 454013,
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
       "matchesPlayed": 19,
       "playersCount": 12,
-      "matchesFile": "teams/5fe6ae4cf1d1f14e/matches.json",
-      "playersFile": "teams/5fe6ae4cf1d1f14e/players.json",
+      "matchesFile": "teams/e7f569b34084c7b6/matches.json",
+      "playersFile": "teams/e7f569b34084c7b6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5128,14 +5400,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83463",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83463",
       "teamIdIntern": 454293,
       "teamIdExtern": 83463,
       "teamName": "JAC SANTS BARCELONA U10 1",
       "matchesPlayed": 15,
       "playersCount": 16,
-      "matchesFile": "teams/65477e092172189c/matches.json",
-      "playersFile": "teams/65477e092172189c/players.json",
+      "matchesFile": "teams/19e7e8cc070e3c8d/matches.json",
+      "playersFile": "teams/19e7e8cc070e3c8d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5164,14 +5438,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81296",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296",
       "teamIdIntern": 453221,
       "teamIdExtern": 81296,
       "teamName": "JESU\u00CFTES CASP",
       "matchesPlayed": 22,
       "playersCount": 14,
-      "matchesFile": "teams/c8e6a07afd5b7243/matches.json",
-      "playersFile": "teams/c8e6a07afd5b7243/players.json",
+      "matchesFile": "teams/a09f822a4b726d4a/matches.json",
+      "playersFile": "teams/a09f822a4b726d4a/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5200,14 +5476,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81442",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81442",
       "teamIdIntern": 456005,
       "teamIdExtern": 81442,
       "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 12,
-      "matchesFile": "teams/6551f0be8257d3ed/matches.json",
-      "playersFile": "teams/6551f0be8257d3ed/players.json",
+      "matchesFile": "teams/80e74993d83261c4/matches.json",
+      "playersFile": "teams/80e74993d83261c4/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5236,14 +5514,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81443",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81443",
       "teamIdIntern": 453442,
       "teamIdExtern": 81443,
       "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/8e813a551b6bdf67/matches.json",
-      "playersFile": "teams/8e813a551b6bdf67/players.json",
+      "matchesFile": "teams/0948b15d39af47cf/matches.json",
+      "playersFile": "teams/0948b15d39af47cf/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5272,14 +5552,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80683",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80683",
       "teamIdIntern": 450481,
       "teamIdExtern": 80683,
       "teamName": "JET TERRASSA U18",
       "matchesPlayed": 23,
       "playersCount": 18,
-      "matchesFile": "teams/737955eb0fc8b1a1/matches.json",
-      "playersFile": "teams/737955eb0fc8b1a1/players.json",
+      "matchesFile": "teams/6890ee6dd483689b/matches.json",
+      "playersFile": "teams/6890ee6dd483689b/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5320,14 +5602,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80171",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80171",
       "teamIdIntern": 453645,
       "teamIdExtern": 80171,
       "teamName": "JOVENTUT BADALONA 1",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/92c751fb6bb2628e/matches.json",
-      "playersFile": "teams/92c751fb6bb2628e/players.json",
+      "matchesFile": "teams/12841b249d319c85/matches.json",
+      "playersFile": "teams/12841b249d319c85/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5356,14 +5640,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80193",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80193",
       "teamIdIntern": 457306,
       "teamIdExtern": 80193,
       "teamName": "JOVENTUT BADALONA A",
       "matchesPlayed": 20,
       "playersCount": 12,
-      "matchesFile": "teams/e924c33bb25731ed/matches.json",
-      "playersFile": "teams/e924c33bb25731ed/players.json",
+      "matchesFile": "teams/ff39d2160e0522b8/matches.json",
+      "playersFile": "teams/ff39d2160e0522b8/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5392,14 +5678,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
       "teamIdIntern": 453739,
       "teamIdExtern": 80192,
       "teamName": "JOVENTUT BADALONA B",
       "matchesPlayed": 15,
       "playersCount": 15,
-      "matchesFile": "teams/e703c3d26a7cc879/matches.json",
-      "playersFile": "teams/e703c3d26a7cc879/players.json",
+      "matchesFile": "teams/682e1a4b9988af53/matches.json",
+      "playersFile": "teams/682e1a4b9988af53/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5428,14 +5716,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
       "teamIdIntern": 456901,
       "teamIdExtern": 80179,
       "teamName": "JOVENTUT BADALONA VERD",
       "matchesPlayed": 17,
       "playersCount": 15,
-      "matchesFile": "teams/e5339d651827cd27/matches.json",
-      "playersFile": "teams/e5339d651827cd27/players.json",
+      "matchesFile": "teams/abc8a1f90c82269a/matches.json",
+      "playersFile": "teams/abc8a1f90c82269a/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5464,14 +5754,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82180",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82180",
       "teamIdIntern": 453628,
       "teamIdExtern": 82180,
       "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLANC",
       "matchesPlayed": 15,
       "playersCount": 11,
-      "matchesFile": "teams/1c217d2201e13f8f/matches.json",
-      "playersFile": "teams/1c217d2201e13f8f/players.json",
+      "matchesFile": "teams/ebd0d4125206dcb8/matches.json",
+      "playersFile": "teams/ebd0d4125206dcb8/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5500,14 +5792,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
       "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLAU",
       "matchesPlayed": 18,
       "playersCount": 14,
-      "matchesFile": "teams/0eda880cfcdc076c/matches.json",
-      "playersFile": "teams/0eda880cfcdc076c/players.json",
+      "matchesFile": "teams/e8ed6eff0ff4e591/matches.json",
+      "playersFile": "teams/e8ed6eff0ff4e591/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5536,14 +5830,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81761",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81761",
       "teamIdIntern": 453871,
       "teamIdExtern": 81761,
       "teamName": "LA SALLE MANRESA A",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/2400eefbdca48953/matches.json",
-      "playersFile": "teams/2400eefbdca48953/players.json",
+      "matchesFile": "teams/e7500147ce4ebf69/matches.json",
+      "playersFile": "teams/e7500147ce4ebf69/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5572,14 +5868,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81762",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81762",
       "teamIdIntern": 454421,
       "teamIdExtern": 81762,
       "teamName": "LA SALLE MANRESA B",
       "matchesPlayed": 17,
       "playersCount": 15,
-      "matchesFile": "teams/45ed0d7f19e9e19e/matches.json",
-      "playersFile": "teams/45ed0d7f19e9e19e/players.json",
+      "matchesFile": "teams/fbc09bd48c98068c/matches.json",
+      "playersFile": "teams/fbc09bd48c98068c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5608,14 +5906,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987",
       "teamIdIntern": 471431,
       "teamIdExtern": 83987,
       "teamName": "LA VALLALTA BC LILA",
       "matchesPlayed": 20,
       "playersCount": 8,
-      "matchesFile": "teams/bad593723359fb9e/matches.json",
-      "playersFile": "teams/bad593723359fb9e/players.json",
+      "matchesFile": "teams/717d10a3b9f827df/matches.json",
+      "playersFile": "teams/717d10a3b9f827df/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5644,14 +5944,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81764",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81764",
       "teamIdIntern": 455410,
       "teamIdExtern": 81764,
       "teamName": "LIDIA QUINTANA FISIOTER\u00C0PIA - S.A. S\u00DARIA",
       "matchesPlayed": 17,
       "playersCount": 14,
-      "matchesFile": "teams/11c9b06ca67b4ba8/matches.json",
-      "playersFile": "teams/11c9b06ca67b4ba8/players.json",
+      "matchesFile": "teams/bbf3cdc84ff718ed/matches.json",
+      "playersFile": "teams/bbf3cdc84ff718ed/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5680,14 +5982,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81056",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81056",
       "teamIdIntern": 453066,
       "teamIdExtern": 81056,
       "teamName": "LIMA-HORTA BARCELONA",
       "matchesPlayed": 22,
       "playersCount": 12,
-      "matchesFile": "teams/756d86a20007f313/matches.json",
-      "playersFile": "teams/756d86a20007f313/players.json",
+      "matchesFile": "teams/755fcfdbe288e00e/matches.json",
+      "playersFile": "teams/755fcfdbe288e00e/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5716,14 +6020,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81529",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81529",
       "teamIdIntern": 456651,
       "teamIdExtern": 81529,
       "teamName": "LLU\u00CFSOS DE GR\u00C0CIA A",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/7cd414bbd0badfa7/matches.json",
-      "playersFile": "teams/7cd414bbd0badfa7/players.json",
+      "matchesFile": "teams/cd03e0d596a66a9f/matches.json",
+      "playersFile": "teams/cd03e0d596a66a9f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5752,14 +6058,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
       "teamIdIntern": 456495,
       "teamIdExtern": 81522,
       "teamName": "LLU\u00CFSOS DE GR\u00C0CIA B",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/7997b8ab22d203d9/matches.json",
-      "playersFile": "teams/7997b8ab22d203d9/players.json",
+      "matchesFile": "teams/7c8c00d3c19197dd/matches.json",
+      "playersFile": "teams/7c8c00d3c19197dd/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5788,14 +6096,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79030",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79030",
       "teamIdIntern": 454420,
       "teamIdExtern": 79030,
       "teamName": "MANRESA CBF 2",
       "matchesPlayed": 17,
       "playersCount": 15,
-      "matchesFile": "teams/607d6d7db147dbe2/matches.json",
-      "playersFile": "teams/607d6d7db147dbe2/players.json",
+      "matchesFile": "teams/5378d43571ee1695/matches.json",
+      "playersFile": "teams/5378d43571ee1695/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5824,14 +6134,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79034",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034",
       "teamIdIntern": 459283,
       "teamIdExtern": 79034,
       "teamName": "MANRESA CBF 3",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/3fd4d6759518a4aa/matches.json",
-      "playersFile": "teams/3fd4d6759518a4aa/players.json",
+      "matchesFile": "teams/acf1bf340df0cb94/matches.json",
+      "playersFile": "teams/acf1bf340df0cb94/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5860,14 +6172,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83619",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83619",
       "teamIdIntern": 453837,
       "teamIdExtern": 83619,
       "teamName": "MARISTES ADEMAR",
       "matchesPlayed": 15,
       "playersCount": 10,
-      "matchesFile": "teams/1131802994b3e9dd/matches.json",
-      "playersFile": "teams/1131802994b3e9dd/players.json",
+      "matchesFile": "teams/10ea5952a2293a02/matches.json",
+      "playersFile": "teams/10ea5952a2293a02/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5896,14 +6210,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81412",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81412",
       "teamIdIntern": 454340,
       "teamIdExtern": 81412,
       "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - PAF",
       "matchesPlayed": 18,
       "playersCount": 13,
-      "matchesFile": "teams/dcf1b04c3dca1dc6/matches.json",
-      "playersFile": "teams/dcf1b04c3dca1dc6/players.json",
+      "matchesFile": "teams/feb5421517d7c7d1/matches.json",
+      "playersFile": "teams/feb5421517d7c7d1/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5932,14 +6248,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83832",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832",
       "teamIdIntern": 455642,
       "teamIdExtern": 83832,
       "teamName": "NAVAS REFORMAS - CB. GAV\u00C0 BLAU",
       "matchesPlayed": 14,
       "playersCount": 17,
-      "matchesFile": "teams/4453edff2e128743/matches.json",
-      "playersFile": "teams/4453edff2e128743/players.json",
+      "matchesFile": "teams/f0e04537e77c5b56/matches.json",
+      "playersFile": "teams/f0e04537e77c5b56/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -5968,14 +6286,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78861",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78861",
       "teamIdIntern": 450480,
       "teamIdExtern": 78861,
       "teamName": "NAYOX FOR\u00C7A LLEIDA A",
       "matchesPlayed": 23,
       "playersCount": 23,
-      "matchesFile": "teams/4e694b8ea7d0b0f7/matches.json",
-      "playersFile": "teams/4e694b8ea7d0b0f7/players.json",
+      "matchesFile": "teams/d6886174cb0d3237/matches.json",
+      "playersFile": "teams/d6886174cb0d3237/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6016,14 +6336,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83821",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83821",
       "teamIdIntern": 454012,
       "teamIdExtern": 83821,
       "teamName": "NOU B\u00C0SQUET OLESA NEGRE",
       "matchesPlayed": 20,
       "playersCount": 14,
-      "matchesFile": "teams/a42f6d7b7cf09f12/matches.json",
-      "playersFile": "teams/a42f6d7b7cf09f12/players.json",
+      "matchesFile": "teams/3709d9142384e369/matches.json",
+      "playersFile": "teams/3709d9142384e369/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6052,14 +6374,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83820",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83820",
       "teamIdIntern": 459123,
       "teamIdExtern": 83820,
       "teamName": "NOU B\u00C0SQUET OLESA VERMELL",
       "matchesPlayed": 15,
       "playersCount": 14,
-      "matchesFile": "teams/02a2e35b4d32ffe2/matches.json",
-      "playersFile": "teams/02a2e35b4d32ffe2/players.json",
+      "matchesFile": "teams/e020952e317f5dba/matches.json",
+      "playersFile": "teams/e020952e317f5dba/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6088,14 +6412,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79509",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79509",
       "teamIdIntern": 459122,
       "teamIdExtern": 79509,
       "teamName": "PAIDOS-ASFE U10F BLANC",
       "matchesPlayed": 15,
       "playersCount": 19,
-      "matchesFile": "teams/15dbc97d78490b1e/matches.json",
-      "playersFile": "teams/15dbc97d78490b1e/players.json",
+      "matchesFile": "teams/7b7b9f8fd09b4a4c/matches.json",
+      "playersFile": "teams/7b7b9f8fd09b4a4c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6124,14 +6450,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79503",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79503",
       "teamIdIntern": 454233,
       "teamIdExtern": 79503,
       "teamName": "PAIDOS-ASFE U10F VERD",
       "matchesPlayed": 20,
       "playersCount": 13,
-      "matchesFile": "teams/e2b3255b627cf556/matches.json",
-      "playersFile": "teams/e2b3255b627cf556/players.json",
+      "matchesFile": "teams/41fa0d25c793aac5/matches.json",
+      "playersFile": "teams/41fa0d25c793aac5/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6160,14 +6488,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79506",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506",
       "teamIdIntern": 458390,
       "teamIdExtern": 79506,
       "teamName": "PAIDOS-ASFE U9F",
       "matchesPlayed": 16,
       "playersCount": 13,
-      "matchesFile": "teams/9bd5bf73e254b8ac/matches.json",
-      "playersFile": "teams/9bd5bf73e254b8ac/players.json",
+      "matchesFile": "teams/3363346b17881f47/matches.json",
+      "playersFile": "teams/3363346b17881f47/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6196,14 +6526,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79515",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79515",
       "teamIdIntern": 450232,
       "teamIdExtern": 79515,
       "teamName": "PETROPINTO ASFE U18 VERD",
       "matchesPlayed": 23,
       "playersCount": 22,
-      "matchesFile": "teams/22ed7d6317adc721/matches.json",
-      "playersFile": "teams/22ed7d6317adc721/players.json",
+      "matchesFile": "teams/51b44f298e2d7051/matches.json",
+      "playersFile": "teams/51b44f298e2d7051/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6244,14 +6576,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80699",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80699",
       "teamIdIntern": 451290,
       "teamIdExtern": 80699,
       "teamName": "PUJOL MOLLERUSSA SOLUXIONS",
       "matchesPlayed": 23,
       "playersCount": 13,
-      "matchesFile": "teams/c77a6d582b881027/matches.json",
-      "playersFile": "teams/c77a6d582b881027/players.json",
+      "matchesFile": "teams/c5ae41000c86985c/matches.json",
+      "playersFile": "teams/c5ae41000c86985c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6292,14 +6626,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315",
       "teamIdIntern": 453403,
       "teamIdExtern": 83315,
       "teamName": "QBASKET SANT CUGAT",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/0c3f3da94ef669a8/matches.json",
-      "playersFile": "teams/0c3f3da94ef669a8/players.json",
+      "matchesFile": "teams/a2d08522a0b36d44/matches.json",
+      "playersFile": "teams/a2d08522a0b36d44/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6328,14 +6664,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80763",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763",
       "teamIdIntern": 452755,
       "teamIdExtern": 80763,
       "teamName": "QBASKET SANT CUGAT 1",
       "matchesPlayed": 22,
       "playersCount": 17,
-      "matchesFile": "teams/bdc159f515230d00/matches.json",
-      "playersFile": "teams/bdc159f515230d00/players.json",
+      "matchesFile": "teams/859a339697fde7c4/matches.json",
+      "playersFile": "teams/859a339697fde7c4/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6364,14 +6702,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:85230",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85230",
       "teamIdIntern": 515568,
       "teamIdExtern": 85230,
       "teamName": "QBASKET SANT CUGAT NEGRE",
       "matchesPlayed": 8,
       "playersCount": 10,
-      "matchesFile": "teams/eab3a7b77dff2287/matches.json",
-      "playersFile": "teams/eab3a7b77dff2287/players.json",
+      "matchesFile": "teams/b3bba8cf5eead867/matches.json",
+      "playersFile": "teams/b3bba8cf5eead867/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6388,14 +6728,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80555",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80555",
       "teamIdIntern": 450207,
       "teamIdExtern": 80555,
       "teamName": "REUS DEPORTIU VERMELL",
       "matchesPlayed": 23,
       "playersCount": 12,
-      "matchesFile": "teams/ed154a8fc53ac69c/matches.json",
-      "playersFile": "teams/ed154a8fc53ac69c/players.json",
+      "matchesFile": "teams/d9404a72306162fd/matches.json",
+      "playersFile": "teams/d9404a72306162fd/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6436,14 +6778,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83279",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83279",
       "teamIdIntern": 453936,
       "teamIdExtern": 83279,
       "teamName": "RIO LOGISTIC CB LLI\u00C7A D\u2019AMUNT",
       "matchesPlayed": 15,
       "playersCount": 10,
-      "matchesFile": "teams/0fa6c31fb9010327/matches.json",
-      "playersFile": "teams/0fa6c31fb9010327/players.json",
+      "matchesFile": "teams/381a8b949f131097/matches.json",
+      "playersFile": "teams/381a8b949f131097/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6472,14 +6816,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82820",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82820",
       "teamIdIntern": 461858,
       "teamIdExtern": 82820,
       "teamName": "S. E. SANT JOAN DE MATA",
       "matchesPlayed": 16,
       "playersCount": 12,
-      "matchesFile": "teams/70d793f955f0a8cb/matches.json",
-      "playersFile": "teams/70d793f955f0a8cb/players.json",
+      "matchesFile": "teams/6a0cb804eeeedb1d/matches.json",
+      "playersFile": "teams/6a0cb804eeeedb1d/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6508,14 +6854,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78623",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78623",
       "teamIdIntern": 453040,
       "teamIdExtern": 78623,
       "teamName": "SANT GERVASI 1",
       "matchesPlayed": 22,
       "playersCount": 19,
-      "matchesFile": "teams/6e3539cdd281cb31/matches.json",
-      "playersFile": "teams/6e3539cdd281cb31/players.json",
+      "matchesFile": "teams/4b86b28d46104e19/matches.json",
+      "playersFile": "teams/4b86b28d46104e19/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6544,14 +6892,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628",
       "teamIdIntern": 450132,
       "teamIdExtern": 78628,
       "teamName": "SANT GERVASI 1",
       "matchesPlayed": 23,
       "playersCount": 15,
-      "matchesFile": "teams/377d255bb9059636/matches.json",
-      "playersFile": "teams/377d255bb9059636/players.json",
+      "matchesFile": "teams/29ae3e1a975d20a6/matches.json",
+      "playersFile": "teams/29ae3e1a975d20a6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6592,14 +6942,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:78578",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78578",
       "teamIdIntern": 459710,
       "teamIdExtern": 78578,
       "teamName": "SANT GERVASI 1",
       "matchesPlayed": 16,
       "playersCount": 15,
-      "matchesFile": "teams/ab4484d6c8783024/matches.json",
-      "playersFile": "teams/ab4484d6c8783024/players.json",
+      "matchesFile": "teams/e464241a301438b0/matches.json",
+      "playersFile": "teams/e464241a301438b0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6628,14 +6980,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 457131,
       "teamIdExtern": 84386,
       "teamName": "SANT GERVASI 2",
       "matchesPlayed": 18,
       "playersCount": 11,
-      "matchesFile": "teams/be79a9273f5bc1cf/matches.json",
-      "playersFile": "teams/be79a9273f5bc1cf/players.json",
+      "matchesFile": "teams/e2fc64881e75ccd6/matches.json",
+      "playersFile": "teams/e2fc64881e75ccd6/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6664,14 +7018,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79314",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79314",
       "teamIdIntern": 453937,
       "teamIdExtern": 79314,
       "teamName": "SANT QUIRZE B\u00C0SQUET CLUB",
       "matchesPlayed": 19,
       "playersCount": 14,
-      "matchesFile": "teams/ab2e6a05b2a3a5a0/matches.json",
-      "playersFile": "teams/ab2e6a05b2a3a5a0/players.json",
+      "matchesFile": "teams/44420e60e6e46295/matches.json",
+      "playersFile": "teams/44420e60e6e46295/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6700,14 +7056,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:83519",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83519",
       "teamIdIntern": 453629,
       "teamIdExtern": 83519,
       "teamName": "SE LA SALLE BONANOVA NEGRE",
       "matchesPlayed": 15,
       "playersCount": 15,
-      "matchesFile": "teams/04d632b6e4f40876/matches.json",
-      "playersFile": "teams/04d632b6e4f40876/players.json",
+      "matchesFile": "teams/ae50feefd02eb5a4/matches.json",
+      "playersFile": "teams/ae50feefd02eb5a4/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6736,14 +7094,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518",
       "teamIdIntern": 458628,
       "teamIdExtern": 83518,
       "teamName": "SE LA SALLE BONANOVA VERMELL",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/f741373c26506df7/matches.json",
-      "playersFile": "teams/f741373c26506df7/players.json",
+      "matchesFile": "teams/659f6c4e12a145ff/matches.json",
+      "playersFile": "teams/659f6c4e12a145ff/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6772,14 +7132,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79859",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79859",
       "teamIdIntern": 454789,
       "teamIdExtern": 79859,
       "teamName": "SESE A",
       "matchesPlayed": 18,
       "playersCount": 16,
-      "matchesFile": "teams/742478f3eb475109/matches.json",
-      "playersFile": "teams/742478f3eb475109/players.json",
+      "matchesFile": "teams/a1d01fc4ea44eb08/matches.json",
+      "playersFile": "teams/a1d01fc4ea44eb08/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6808,14 +7170,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862",
       "teamIdIntern": 454767,
       "teamIdExtern": 79862,
       "teamName": "SESE B",
       "matchesPlayed": 15,
       "playersCount": 17,
-      "matchesFile": "teams/f000d109f2961ca0/matches.json",
-      "playersFile": "teams/f000d109f2961ca0/players.json",
+      "matchesFile": "teams/64957d7004ddf45b/matches.json",
+      "playersFile": "teams/64957d7004ddf45b/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6844,14 +7208,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
       "teamIdIntern": 458868,
       "teamIdExtern": 79870,
       "teamName": "SESE C",
       "matchesPlayed": 19,
       "playersCount": 12,
-      "matchesFile": "teams/ba150ecc28b9d6c7/matches.json",
-      "playersFile": "teams/ba150ecc28b9d6c7/players.json",
+      "matchesFile": "teams/1c8ade8517e38abb/matches.json",
+      "playersFile": "teams/1c8ade8517e38abb/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6880,14 +7246,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78732",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78732",
       "teamIdIntern": 451293,
       "teamIdExtern": 78732,
       "teamName": "SHAD CB MOLLET A",
       "matchesPlayed": 23,
       "playersCount": 12,
-      "matchesFile": "teams/86ae406f490d3425/matches.json",
-      "playersFile": "teams/86ae406f490d3425/players.json",
+      "matchesFile": "teams/bafd15bec5e90f73/matches.json",
+      "playersFile": "teams/bafd15bec5e90f73/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6928,14 +7296,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79813",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79813",
       "teamIdIntern": 450501,
       "teamIdExtern": 79813,
       "teamName": "SOL GIRON\u00C8S BISBAL B\u00C0SQUET",
       "matchesPlayed": 23,
       "playersCount": 12,
-      "matchesFile": "teams/bc438264270b867a/matches.json",
-      "playersFile": "teams/bc438264270b867a/players.json",
+      "matchesFile": "teams/bf8ca2465f151e68/matches.json",
+      "playersFile": "teams/bf8ca2465f151e68/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -6976,14 +7346,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79658",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658",
       "teamIdIntern": 456883,
       "teamIdExtern": 79658,
       "teamName": "TALENOM BOET MATAR\u00D3 2016",
       "matchesPlayed": 17,
       "playersCount": 12,
-      "matchesFile": "teams/4ac318f46effcb54/matches.json",
-      "playersFile": "teams/4ac318f46effcb54/players.json",
+      "matchesFile": "teams/9acd85deb7fbcf76/matches.json",
+      "playersFile": "teams/9acd85deb7fbcf76/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7012,14 +7384,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
       "teamName": "TALENOM BOET MATAR\u00D3 2017",
       "matchesPlayed": 19,
       "playersCount": 9,
-      "matchesFile": "teams/9c3e16ed35dc31c4/matches.json",
-      "playersFile": "teams/9c3e16ed35dc31c4/players.json",
+      "matchesFile": "teams/e40819918e6d5569/matches.json",
+      "playersFile": "teams/e40819918e6d5569/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7048,14 +7422,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79337",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79337",
       "teamIdIntern": 450361,
       "teamIdExtern": 79337,
       "teamName": "TGN B\u00C0SQUET 08-09A",
       "matchesPlayed": 23,
       "playersCount": 15,
-      "matchesFile": "teams/210712fc3aba75ce/matches.json",
-      "playersFile": "teams/210712fc3aba75ce/players.json",
+      "matchesFile": "teams/f9114131232b5764/matches.json",
+      "playersFile": "teams/f9114131232b5764/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7096,14 +7472,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828",
       "teamIdIntern": 450133,
       "teamIdExtern": 79828,
       "teamName": "U. B. LLEFI\u00C0  A - PERE GARCIA ASSEGURANCES",
       "matchesPlayed": 23,
       "playersCount": 22,
-      "matchesFile": "teams/d655862b84191bd6/matches.json",
-      "playersFile": "teams/d655862b84191bd6/players.json",
+      "matchesFile": "teams/dffcb475975e63fb/matches.json",
+      "playersFile": "teams/dffcb475975e63fb/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7144,14 +7522,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82116",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82116",
       "teamIdIntern": 456678,
       "teamIdExtern": 82116,
       "teamName": "U.E. CLARET A",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/e41da550e16c5760/matches.json",
-      "playersFile": "teams/e41da550e16c5760/players.json",
+      "matchesFile": "teams/f56cc01396e9a37a/matches.json",
+      "playersFile": "teams/f56cc01396e9a37a/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7180,14 +7560,16 @@
       ]
     },
     {
-      "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:79299",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79299",
       "teamIdIntern": 452754,
       "teamIdExtern": 79299,
       "teamName": "U.E. CLARET B",
       "matchesPlayed": 22,
       "playersCount": 13,
-      "matchesFile": "teams/e68d95a3acc5bcfb/matches.json",
-      "playersFile": "teams/e68d95a3acc5bcfb/players.json",
+      "matchesFile": "teams/ad378122573aff9c/matches.json",
+      "playersFile": "teams/ad378122573aff9c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7216,14 +7598,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82119",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82119",
       "teamIdIntern": 456004,
       "teamIdExtern": 82119,
       "teamName": "U.E. CLARET B",
       "matchesPlayed": 18,
       "playersCount": 12,
-      "matchesFile": "teams/1413c217ffe39522/matches.json",
-      "playersFile": "teams/1413c217ffe39522/players.json",
+      "matchesFile": "teams/0f5d21e8d5bd69c0/matches.json",
+      "playersFile": "teams/0f5d21e8d5bd69c0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7252,14 +7636,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82789",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82789",
       "teamIdIntern": 456650,
       "teamIdExtern": 82789,
       "teamName": "U.E. HORTA",
       "matchesPlayed": 17,
       "playersCount": 11,
-      "matchesFile": "teams/1872624c78534ecd/matches.json",
-      "playersFile": "teams/1872624c78534ecd/players.json",
+      "matchesFile": "teams/4f14b4f36fde4218/matches.json",
+      "playersFile": "teams/4f14b4f36fde4218/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7288,14 +7674,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80877",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80877",
       "teamIdIntern": 450852,
       "teamIdExtern": 80877,
       "teamName": "U.E.MATAR\u00D3 - J1F",
       "matchesPlayed": 23,
       "playersCount": 21,
-      "matchesFile": "teams/8307113966464f9d/matches.json",
-      "playersFile": "teams/8307113966464f9d/players.json",
+      "matchesFile": "teams/2d00c9e0e823db4e/matches.json",
+      "playersFile": "teams/2d00c9e0e823db4e/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7336,14 +7724,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80873",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80873",
       "teamIdIntern": 461572,
       "teamIdExtern": 80873,
       "teamName": "U.E.MATAR\u00D3 - PR1F",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/9cea1396ad96e2a5/matches.json",
-      "playersFile": "teams/9cea1396ad96e2a5/players.json",
+      "matchesFile": "teams/6c278c2b30e5e3b4/matches.json",
+      "playersFile": "teams/6c278c2b30e5e3b4/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7372,14 +7762,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80890",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80890",
       "teamIdIntern": 457130,
       "teamIdExtern": 80890,
       "teamName": "U.E.MATAR\u00D3 - PR2F",
       "matchesPlayed": 20,
       "playersCount": 10,
-      "matchesFile": "teams/e07b91305de7c0b2/matches.json",
-      "playersFile": "teams/e07b91305de7c0b2/players.json",
+      "matchesFile": "teams/eca6f9f18dbe812f/matches.json",
+      "playersFile": "teams/eca6f9f18dbe812f/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7408,14 +7800,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80876",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876",
       "teamIdIntern": 454835,
       "teamIdExtern": 80876,
       "teamName": "U.E.MATAR\u00D3 - PRAF",
       "matchesPlayed": 20,
       "playersCount": 11,
-      "matchesFile": "teams/1271c2470142e1e2/matches.json",
-      "playersFile": "teams/1271c2470142e1e2/players.json",
+      "matchesFile": "teams/5546becbde43f5ec/matches.json",
+      "playersFile": "teams/5546becbde43f5ec/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7444,14 +7838,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
       "matchesPlayed": 16,
       "playersCount": 11,
-      "matchesFile": "teams/2cf759afac283e34/matches.json",
-      "playersFile": "teams/2cf759afac283e34/players.json",
+      "matchesFile": "teams/f2133414870ef719/matches.json",
+      "playersFile": "teams/f2133414870ef719/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7480,14 +7876,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:79955",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79955",
       "teamIdIntern": 454825,
       "teamIdExtern": 79955,
       "teamName": "U10 JOVENTUT LES CORTS",
       "matchesPlayed": 17,
       "playersCount": 9,
-      "matchesFile": "teams/d6163b004c931deb/matches.json",
-      "playersFile": "teams/d6163b004c931deb/players.json",
+      "matchesFile": "teams/577d9c34a91e5b43/matches.json",
+      "playersFile": "teams/577d9c34a91e5b43/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7516,14 +7914,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79323",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79323",
       "teamIdIntern": 453202,
       "teamIdExtern": 79323,
       "teamName": "UB MIR",
       "matchesPlayed": 22,
       "playersCount": 16,
-      "matchesFile": "teams/89c38edb7ba0c1f6/matches.json",
-      "playersFile": "teams/89c38edb7ba0c1f6/players.json",
+      "matchesFile": "teams/0ef030794d34faf8/matches.json",
+      "playersFile": "teams/0ef030794d34faf8/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7552,14 +7952,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81567",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81567",
       "teamIdIntern": 457307,
       "teamIdExtern": 81567,
       "teamName": "UB MIR A",
       "matchesPlayed": 20,
       "playersCount": 11,
-      "matchesFile": "teams/57c9608ecec5e806/matches.json",
-      "playersFile": "teams/57c9608ecec5e806/players.json",
+      "matchesFile": "teams/0f655be3733953bd/matches.json",
+      "playersFile": "teams/0f655be3733953bd/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7588,14 +7990,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81569",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
       "teamIdIntern": 454341,
       "teamIdExtern": 81569,
       "teamName": "UB MIR B",
       "matchesPlayed": 18,
       "playersCount": 13,
-      "matchesFile": "teams/4aa407be2fcbf8a4/matches.json",
-      "playersFile": "teams/4aa407be2fcbf8a4/players.json",
+      "matchesFile": "teams/9bae5ee874b0cafe/matches.json",
+      "playersFile": "teams/9bae5ee874b0cafe/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7624,14 +8028,16 @@
       ]
     },
     {
-      "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80400",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80400",
       "teamIdIntern": 452365,
       "teamIdExtern": 80400,
       "teamName": "UB SANT ADRIA A",
       "matchesPlayed": 22,
       "playersCount": 17,
-      "matchesFile": "teams/daa06c2e8fca2e66/matches.json",
-      "playersFile": "teams/daa06c2e8fca2e66/players.json",
+      "matchesFile": "teams/3e53c8feca29c603/matches.json",
+      "playersFile": "teams/3e53c8feca29c603/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7660,14 +8066,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82149",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82149",
       "teamIdIntern": 459676,
       "teamIdExtern": 82149,
       "teamName": "UE SANT ANDREU GROC",
       "matchesPlayed": 16,
       "playersCount": 17,
-      "matchesFile": "teams/1ed865583ca93297/matches.json",
-      "playersFile": "teams/1ed865583ca93297/players.json",
+      "matchesFile": "teams/c255ac6f09412ff0/matches.json",
+      "playersFile": "teams/c255ac6f09412ff0/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7696,14 +8104,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82150",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82150",
       "teamIdIntern": 459078,
       "teamIdExtern": 82150,
       "teamName": "UE SANT ANDREU VERMELL",
       "matchesPlayed": 14,
       "playersCount": 12,
-      "matchesFile": "teams/18bcca924fdade8c/matches.json",
-      "playersFile": "teams/18bcca924fdade8c/players.json",
+      "matchesFile": "teams/692b62cf101bf7c7/matches.json",
+      "playersFile": "teams/692b62cf101bf7c7/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7732,14 +8142,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80219",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80219",
       "teamIdIntern": 450172,
       "teamIdExtern": 80219,
       "teamName": "UE SANT CUGAT - OCCIDENT 2008",
       "matchesPlayed": 23,
       "playersCount": 19,
-      "matchesFile": "teams/9c35b2feb758a3a7/matches.json",
-      "playersFile": "teams/9c35b2feb758a3a7/players.json",
+      "matchesFile": "teams/5c19335284220aac/matches.json",
+      "playersFile": "teams/5c19335284220aac/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7780,14 +8192,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:80594",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594",
       "teamIdIntern": 454282,
       "teamIdExtern": 80594,
       "teamName": "UE.MONTGAT - VERMELL",
       "matchesPlayed": 17,
       "playersCount": 13,
-      "matchesFile": "teams/0d179e7fcf117edc/matches.json",
-      "playersFile": "teams/0d179e7fcf117edc/players.json",
+      "matchesFile": "teams/df9641ad603d1738/matches.json",
+      "playersFile": "teams/df9641ad603d1738/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7816,14 +8230,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:81421",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81421",
       "teamIdIntern": 453920,
       "teamIdExtern": 81421,
       "teamName": "UER PINEDA DE MAR A",
       "matchesPlayed": 15,
       "playersCount": 13,
-      "matchesFile": "teams/0d62bfe0b1ba869a/matches.json",
-      "playersFile": "teams/0d62bfe0b1ba869a/players.json",
+      "matchesFile": "teams/6aba1f813deca790/matches.json",
+      "playersFile": "teams/6aba1f813deca790/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7852,14 +8268,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:84520",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84520",
       "teamIdIntern": 507707,
       "teamIdExtern": 84520,
       "teamName": "UER PINEDA DE MAR B",
       "matchesPlayed": 9,
       "playersCount": 11,
-      "matchesFile": "teams/7ebaeae6e05400e1/matches.json",
-      "playersFile": "teams/7ebaeae6e05400e1/players.json",
+      "matchesFile": "teams/b4673e6b81ac11eb/matches.json",
+      "playersFile": "teams/b4673e6b81ac11eb/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7876,14 +8294,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028",
       "teamIdIntern": 450549,
       "teamIdExtern": 79028,
       "teamName": "UMANRESA MANRESA CBF 1",
       "matchesPlayed": 23,
       "playersCount": 25,
-      "matchesFile": "teams/50bcdb952f4a5789/matches.json",
-      "playersFile": "teams/50bcdb952f4a5789/players.json",
+      "matchesFile": "teams/5c73ac70d0da92c5/matches.json",
+      "playersFile": "teams/5c73ac70d0da92c5/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7924,14 +8344,16 @@
       ]
     },
     {
-      "teamKey": "C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80908",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80908",
       "teamIdIntern": 450587,
       "teamIdExtern": 80908,
       "teamName": "VEDRUNA GR\u00C0CIA VERD",
       "matchesPlayed": 23,
       "playersCount": 12,
-      "matchesFile": "teams/f5f4bc2552afa7bb/matches.json",
-      "playersFile": "teams/f5f4bc2552afa7bb/players.json",
+      "matchesFile": "teams/be558695a5749f96/matches.json",
+      "playersFile": "teams/be558695a5749f96/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -7972,14 +8394,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82766",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
       "teamName": "VEDRUNA GR\u00C0CIA VERD",
       "matchesPlayed": 15,
       "playersCount": 14,
-      "matchesFile": "teams/3f3e40894b70456c/matches.json",
-      "playersFile": "teams/3f3e40894b70456c/players.json",
+      "matchesFile": "teams/ab0ae3906f382736/matches.json",
+      "playersFile": "teams/ab0ae3906f382736/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -8008,14 +8432,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:84676",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
       "teamName": "VILAB\u00C0SQUET VILADECANS PMF BLANC",
       "matchesPlayed": 10,
       "playersCount": 16,
-      "matchesFile": "teams/faf7fa7f6eec9ed1/matches.json",
-      "playersFile": "teams/faf7fa7f6eec9ed1/players.json",
+      "matchesFile": "teams/ddbc936336b3f28c/matches.json",
+      "playersFile": "teams/ddbc936336b3f28c/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,
@@ -8032,14 +8458,16 @@
       ]
     },
     {
-      "teamKey": "C.T. PRE-MINI FEMENI::TEAM:82384",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384",
       "teamIdIntern": 454097,
       "teamIdExtern": 82384,
       "teamName": "VILAB\u00C0SQUET VILADECANS PMF BLAU",
       "matchesPlayed": 17,
       "playersCount": 10,
-      "matchesFile": "teams/2a595e34bb165a1a/matches.json",
-      "playersFile": "teams/2a595e34bb165a1a/players.json",
+      "matchesFile": "teams/50bd3ea128544c75/matches.json",
+      "playersFile": "teams/50bd3ea128544c75/players.json",
       "phases": [
         {
           "seasonStartYear": 2025,

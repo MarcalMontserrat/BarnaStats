@@ -51,7 +51,10 @@ const SyncPanel = lazy(() => import("./components/SyncPanel.jsx"));
 const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
 const COMPETITION_ROUTE = "#/competition";
+const HISTORY_ROUTE = "#/history";
+const PLAYERS_ROUTE = "#/players";
 const TEAM_ROUTE_PREFIX = "#/team/";
+const HISTORY_TEAM_ROUTE_PREFIX = "#/history/";
 const COMPETITION_TABS = [
     {
         id: "standings",
@@ -143,6 +146,13 @@ const appStyles = {
         gap: 18,
         flexWrap: "wrap",
         animation: "fade-up 650ms ease both"
+    },
+    topBarActions: {
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+        gap: 14,
+        flexWrap: "wrap"
     },
     brand: {
         display: "grid",
@@ -478,25 +488,89 @@ function SectionFallback({message}) {
     );
 }
 
+function buildHash(path, params = {}) {
+    const query = new URLSearchParams();
+
+    Object.entries(params).forEach(([key, value]) => {
+        if (!value) {
+            return;
+        }
+
+        query.set(key, String(value));
+    });
+
+    const queryString = query.toString();
+    return queryString ? `${path}?${queryString}` : path;
+}
+
+function buildDashboardRoute() {
+    return DASHBOARD_ROUTE;
+}
+
+function buildCompetitionRoute() {
+    return COMPETITION_ROUTE;
+}
+
+function buildHistoryRoute(teamKey = "", seasonLabel = "") {
+    const path = teamKey
+        ? `${HISTORY_ROUTE}/${encodeURIComponent(teamKey)}`
+        : HISTORY_ROUTE;
+
+    return buildHash(path, {season: seasonLabel});
+}
+
+function buildPlayersRoute(seasonLabel = "", playerKey = "") {
+    return buildHash(PLAYERS_ROUTE, {
+        season: seasonLabel,
+        player: playerKey
+    });
+}
+
 function parseHash(hash) {
-    if (hash === SYNC_ROUTE) {
-        return {route: "sync", teamKey: null};
+    const [path, queryString = ""] = String(hash ?? "").split("?");
+    const params = new URLSearchParams(queryString);
+    const seasonLabel = params.get("season") ?? "";
+    const playerKey = params.get("player") ?? "";
+
+    if (path === SYNC_ROUTE) {
+        return {route: "sync", teamKey: null, seasonLabel, playerKey: ""};
     }
 
-    if (hash === COMPETITION_ROUTE || hash === "#/rankings" || hash === "#/global") {
-        return {route: "competition", teamKey: null};
+    if (path === COMPETITION_ROUTE || path === "#/rankings" || path === "#/global") {
+        return {route: "competition", teamKey: null, seasonLabel: "", playerKey: ""};
     }
 
-    if (hash.startsWith(TEAM_ROUTE_PREFIX)) {
-        const encodedTeamKey = hash.slice(TEAM_ROUTE_PREFIX.length);
+    if (path === PLAYERS_ROUTE) {
+        return {route: "players", teamKey: null, seasonLabel, playerKey};
+    }
+
+    if (path === HISTORY_ROUTE) {
+        return {route: "history", teamKey: null, seasonLabel, playerKey: ""};
+    }
+
+    if (path.startsWith(HISTORY_TEAM_ROUTE_PREFIX)) {
+        const encodedTeamKey = path.slice(HISTORY_TEAM_ROUTE_PREFIX.length);
 
         return {
-            route: "dashboard",
-            teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null
+            route: "history",
+            teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null,
+            seasonLabel,
+            playerKey: ""
         };
     }
 
-    return {route: "dashboard", teamKey: null};
+    if (path.startsWith(TEAM_ROUTE_PREFIX)) {
+        const encodedTeamKey = path.slice(TEAM_ROUTE_PREFIX.length);
+
+        return {
+            route: "dashboard",
+            teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null,
+            seasonLabel: "",
+            playerKey: ""
+        };
+    }
+
+    return {route: "dashboard", teamKey: null, seasonLabel: "", playerKey: ""};
 }
 
 function navigateToHash(hash) {
@@ -505,8 +579,9 @@ function navigateToHash(hash) {
 
 function buildPhaseScopeKey(row) {
     const sourcePhaseId = Number(row?.sourcePhaseId ?? 0);
+    const seasonLabel = String(row?.seasonLabel ?? "").trim();
     if (sourcePhaseId > 0) {
-        return `source:${sourcePhaseId}`;
+        return `source:${seasonLabel}:${sourcePhaseId}`;
     }
 
     const phaseNumber = Number(row?.phaseNumber ?? 0);
@@ -515,7 +590,7 @@ function buildPhaseScopeKey(row) {
     const groupCode = String(row?.groupCode ?? "").trim();
     const phaseName = String(row?.phaseName ?? "").trim();
 
-    return `phase:${phaseNumber}|${categoryName}|${levelKey}|${groupCode}|${phaseName}`;
+    return `phase:${seasonLabel}|${phaseNumber}|${categoryName}|${levelKey}|${groupCode}|${phaseName}`;
 }
 
 function filterMatchesByPhaseScopes(matches, phases, fallbackCategoryName = "") {
@@ -529,13 +604,48 @@ function filterMatchesByPhaseScopes(matches, phases, fallbackCategoryName = "") 
 
 function App() {
     const syncUiEnabled = import.meta.env.VITE_ENABLE_SYNC_UI !== "false";
+    const initialHashState = parseHash(window.location.hash);
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
-    const [route, setRoute] = useState(() => parseHash(window.location.hash).route);
+    const [route, setRoute] = useState(() => initialHashState.route);
+    const [selectedSeasonLabel, setSelectedSeasonLabel] = useState(() => initialHashState.seasonLabel ?? "");
+    const [selectedDirectoryPlayer, setSelectedDirectoryPlayer] = useState(() => initialHashState.playerKey ?? "");
     const {
-        analysis: analysisIndex,
-        loading: analysisIndexLoading,
-        error: analysisIndexError
-    } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
+        analysis: seasonsIndex,
+        loading: seasonsIndexLoading,
+        error: seasonsIndexError
+    } = useAnalysisData(`data/seasons/index.json?v=${analysisVersion}`);
+    const seasonOptions = seasonsIndex?.seasons ?? [];
+    const defaultSeasonLabel = seasonsIndex?.defaultSeasonLabel
+        || seasonOptions[0]?.seasonLabel
+        || "";
+    const effectiveExplorerSeasonLabel = seasonOptions.some((season) => season.seasonLabel === selectedSeasonLabel)
+        ? selectedSeasonLabel
+        : defaultSeasonLabel;
+    const selectedSeasonEntry = seasonOptions.find((season) => season.seasonLabel === effectiveExplorerSeasonLabel)
+        ?? seasonOptions[0]
+        ?? null;
+    const isHistoryRoute = route === "history";
+    const isPlayersRoute = route === "players";
+    const isTeamRoute = route === "dashboard" || route === "history";
+    const isCurrentSeasonRoute = route === "dashboard" || route === "competition";
+    const {
+        analysis: currentAnalysisIndex,
+        loading: currentAnalysisIndexLoading,
+        error: currentAnalysisIndexError
+    } = useAnalysisData(
+        isCurrentSeasonRoute
+            ? `data/analysis.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: explorerAnalysisIndex,
+        loading: explorerAnalysisIndexLoading,
+        error: explorerAnalysisIndexError
+    } = useAnalysisData(
+        (isHistoryRoute || isPlayersRoute) && selectedSeasonEntry
+            ? `data/${selectedSeasonEntry.analysisFile}?v=${analysisVersion}`
+            : null
+    );
     const {
         sources: savedResultsSources,
         loading: savedResultsSourcesLoading,
@@ -556,8 +666,25 @@ function App() {
         setAnalysisVersion(Date.now());
         void refreshSavedResultsSources();
     });
+    const {
+        analysis: currentCompetition,
+        loading: currentCompetitionLoading,
+        error: currentCompetitionError
+    } = useAnalysisData(
+        isCurrentSeasonRoute
+            ? `data/competition.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: explorerCompetition,
+        loading: explorerCompetitionLoading,
+        error: explorerCompetitionError
+    } = useAnalysisData(
+        (isHistoryRoute || isPlayersRoute) && selectedSeasonEntry
+            ? `data/${selectedSeasonEntry.competitionFile}?v=${analysisVersion}`
+            : null
+    );
 
-    const initialHashState = parseHash(window.location.hash);
     const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
     const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
     const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
@@ -576,25 +703,29 @@ function App() {
     const [rankingMinGames, setRankingMinGames] = useState("3");
     const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
     const [selectedTeamTab, setSelectedTeamTab] = useState("snapshot");
+    const [selectedDirectoryCategory, setSelectedDirectoryCategory] = useState("all");
+    const [selectedDirectoryLevel, setSelectedDirectoryLevel] = useState("all");
+    const [selectedDirectoryTeam, setSelectedDirectoryTeam] = useState("all");
+    const [selectedDirectoryPhase, setSelectedDirectoryPhase] = useState("");
     const pendingScrollRestoreFrame = useRef(0);
     const teamTabsRef = useRef(null);
 
     useEffect(() => {
         if (!window.location.hash) {
-            navigateToHash(DASHBOARD_ROUTE);
+            navigateToHash(buildDashboardRoute());
         }
 
         const handleHashChange = () => {
             const nextState = parseHash(window.location.hash);
             setRoute(nextState.route);
-
-            if (nextState.teamKey) {
-                setSelectedTeamKey(nextState.teamKey);
-                setSelectedPhase("");
-                setSelectedPlayer("");
-                setSelectedMatch("");
-                setOpenMatches({});
-            }
+            setSelectedSeasonLabel(nextState.seasonLabel ?? "");
+            setSelectedTeamKey(nextState.teamKey ?? "");
+            setSelectedDirectoryPlayer(nextState.playerKey ?? "");
+            setSelectedPhase("");
+            setSelectedPlayer("");
+            setSelectedMatch("");
+            setOpenMatches({});
+            setSelectedDirectoryPhase("");
         };
 
         window.addEventListener("hashchange", handleHashChange);
@@ -608,9 +739,33 @@ function App() {
             return;
         }
 
-        navigateToHash(DASHBOARD_ROUTE);
+        navigateToHash(buildDashboardRoute());
     }, [route, syncUiEnabled]);
 
+    const analysisIndex = (isHistoryRoute || isPlayersRoute)
+        ? explorerAnalysisIndex
+        : currentAnalysisIndex;
+    const analysisIndexLoading = (isHistoryRoute || isPlayersRoute)
+        ? explorerAnalysisIndexLoading
+        : currentAnalysisIndexLoading;
+    const analysisIndexError = (isHistoryRoute || isPlayersRoute)
+        ? explorerAnalysisIndexError
+        : currentAnalysisIndexError;
+    const competition = (isHistoryRoute || isPlayersRoute)
+        ? explorerCompetition
+        : currentCompetition;
+    const competitionLoading = (isHistoryRoute || isPlayersRoute)
+        ? explorerCompetitionLoading
+        : currentCompetitionLoading;
+    const competitionError = (isHistoryRoute || isPlayersRoute)
+        ? explorerCompetitionError
+        : currentCompetitionError;
+    const currentSeasonLabel = currentAnalysisIndex?.seasonLabel
+        || currentCompetition?.seasonLabel
+        || defaultSeasonLabel;
+    const activeBrowseSeasonLabel = (isHistoryRoute || isPlayersRoute)
+        ? effectiveExplorerSeasonLabel
+        : currentSeasonLabel;
     const teams = analysisIndex?.teams ?? [];
     const latestTeamContexts = buildLatestTeamContextByKey(teams);
     const dashboardCategoryOptions = buildCategoryOptions(latestTeamContexts);
@@ -688,24 +843,19 @@ function App() {
     const selectedTeamKeyFromAll = teams.some((team) => team.teamKey === selectedTeamKey)
         ? selectedTeamKey
         : (globalDefaultTeam?.teamKey ?? "");
-    const effectiveTeamKey = route === "dashboard"
+    const effectiveTeamKey = isTeamRoute
         ? (dashboardTeams.some((team) => team.teamKey === selectedTeamKey)
             ? selectedTeamKey
             : (dashboardDefaultTeam?.teamKey ?? selectedTeamKeyFromAll))
         : selectedTeamKeyFromAll;
     const selectedTeamSummary = teams.find((team) => team.teamKey === effectiveTeamKey) ?? globalDefaultTeam ?? null;
-    const shouldLoadCompetition = route !== "sync";
-    const shouldLoadTeamMatches = route === "dashboard" && !!selectedTeamSummary?.matchesFile;
-    const shouldLoadTeamPlayers = route === "dashboard" && !!selectedTeamSummary?.playersFile;
-    const {
-        analysis: competition,
-        loading: competitionLoading,
-        error: competitionError
-    } = useAnalysisData(
-        shouldLoadCompetition
-            ? `data/competition.json?v=${analysisVersion}`
-            : null
-    );
+    const competitionPlayerLeaders = competition?.playerLeaders ?? [];
+    const competitionMatches = competition?.matches ?? [];
+    const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
+    const selectedDirectoryPlayerDetails = competitionPlayerLeaders.find((player) => player.key === selectedDirectoryPlayer) ?? null;
+    const selectedDirectoryTeamSummary = teams.find((team) => team.teamKey === selectedDirectoryPlayerDetails?.teamKey) ?? null;
+    const shouldLoadTeamMatches = isTeamRoute && !!selectedTeamSummary?.matchesFile;
+    const shouldLoadTeamPlayers = isTeamRoute && !!selectedTeamSummary?.playersFile;
     const {
         analysis: selectedTeamMatchSummaries,
         loading: selectedTeamMatchesLoading,
@@ -724,10 +874,18 @@ function App() {
             ? `data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
             : null
     );
+    const {
+        analysis: selectedDirectoryPlayerRows,
+        loading: selectedDirectoryPlayerRowsLoading,
+        error: selectedDirectoryPlayerRowsError
+    } = useAnalysisData(
+        isPlayersRoute && selectedDirectoryTeamSummary?.playersFile
+            ? `data/${selectedDirectoryTeamSummary.playersFile}?v=${analysisVersion}`
+            : null
+    );
     const teamPlayers = Array.isArray(selectedTeamPlayers) ? selectedTeamPlayers : [];
     const teamMatchSummaries = Array.isArray(selectedTeamMatchSummaries) ? selectedTeamMatchSummaries : [];
     const teamPhaseOptions = buildTeamPhaseOptions(selectedTeamSummary?.phases ?? []);
-    const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
     const effectiveSelectedPhase = !selectedPhase || teamPhaseOptions.some((phase) => phase.value === selectedPhase)
         ? (selectedPhase || "all")
         : "all";
@@ -754,8 +912,6 @@ function App() {
     const phaseComparison = buildPhaseComparison(phaseSummaries);
     const teamLeadersByAvgValuation = getTopTeamPlayers(playersArray, "avgValuation", 8);
     const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
-    const competitionPlayerLeaders = competition?.playerLeaders ?? [];
-    const competitionMatches = competition?.matches ?? [];
     const rankingMinGamesValue = Number(rankingMinGames || 1);
     const effectiveLeadersCategory = competitionCategoryOptions.some((option) => option.value === selectedLeadersCategory)
         ? selectedLeadersCategory
@@ -884,6 +1040,95 @@ function App() {
         ? "Clasificación acumulada"
         : `Clasificación de ${buildCompetitionPhaseLabel(selectedPhaseContext)}`;
     const teamHeroSummary = `${selectedTeamSummary?.matchesPlayed ?? 0} partidos en total · ${selectedTeamSummary?.playersCount ?? 0} jugadoras registradas`;
+    const effectiveDirectoryCategory = competitionCategoryOptions.some((option) => option.value === selectedDirectoryCategory)
+        ? selectedDirectoryCategory
+        : (competitionCategoryOptions[0]?.value ?? "all");
+    const directoryLevelOptions = buildLevelOptionsFromRows(
+        filterRowsByCategory(competition?.phases ?? [], effectiveDirectoryCategory)
+    );
+    const effectiveDirectoryLevel = directoryLevelOptions.some((option) => option.value === selectedDirectoryLevel)
+        ? selectedDirectoryLevel
+        : "all";
+    const directoryTeamOptions = sortedTeams
+        .filter((team) => {
+            const teamContext = latestTeamContexts.get(team.teamKey);
+            const categoryName = String(teamContext?.categoryName ?? "").trim();
+            const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
+
+            if (effectiveDirectoryCategory !== "all" && categoryName !== effectiveDirectoryCategory) {
+                return false;
+            }
+
+            if (effectiveDirectoryLevel !== "all" && levelKey !== effectiveDirectoryLevel) {
+                return false;
+            }
+
+            return true;
+        })
+        .map((team) => ({
+            value: team.teamKey,
+            label: team.teamName
+        }));
+    const effectiveDirectoryTeam = directoryTeamOptions.some((option) => option.value === selectedDirectoryTeam)
+        ? selectedDirectoryTeam
+        : "all";
+    const directoryPlayers = competitionPlayerLeaders
+        .filter((player) => {
+            const teamContext = latestTeamContexts.get(player.teamKey);
+            const categoryName = String(teamContext?.categoryName ?? "").trim();
+            const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
+
+            if (effectiveDirectoryCategory !== "all" && categoryName !== effectiveDirectoryCategory) {
+                return false;
+            }
+
+            if (effectiveDirectoryLevel !== "all" && levelKey !== effectiveDirectoryLevel) {
+                return false;
+            }
+
+            if (effectiveDirectoryTeam !== "all" && player.teamKey !== effectiveDirectoryTeam) {
+                return false;
+            }
+
+            return true;
+        })
+        .sort((a, b) => {
+            const nameDelta = a.playerName.localeCompare(b.playerName, "es");
+            if (nameDelta !== 0) {
+                return nameDelta;
+            }
+
+            return a.teamName.localeCompare(b.teamName, "es");
+        });
+    const directoryPlayerOptions = directoryPlayers.map((player) => ({
+        value: player.key,
+        label: `${player.playerName} · ${player.teamName}${player.shirtNumber ? ` · #${player.shirtNumber}` : ""}`
+    }));
+    const effectiveDirectoryPlayerEntry = directoryPlayers.find((player) => player.key === selectedDirectoryPlayer) ?? null;
+    const directoryPlayerRows = Array.isArray(selectedDirectoryPlayerRows) ? selectedDirectoryPlayerRows : [];
+    const directoryPhaseOptions = buildTeamPhaseOptions(selectedDirectoryTeamSummary?.phases ?? []);
+    const effectiveDirectoryPhase = !selectedDirectoryPhase || directoryPhaseOptions.some((phase) => phase.value === selectedDirectoryPhase)
+        ? (selectedDirectoryPhase || "all")
+        : "all";
+    const selectedDirectoryPhaseContext = effectiveDirectoryPhase === "all"
+        ? null
+        : (filterRowsByPhaseOption(selectedDirectoryTeamSummary?.phases ?? [], effectiveDirectoryPhase)[0] ?? null);
+    const selectedDirectoryPhaseValue = selectedDirectoryPhaseContext?.phaseNumber ?? null;
+    const effectiveDirectoryPlayerIdentityKey = effectiveDirectoryPlayerEntry?.playerIdentityKey ?? "";
+    const filteredDirectoryPlayerRows = filterRowsByPhaseOption(directoryPlayerRows, effectiveDirectoryPhase);
+    const directoryChartData = getChartData(
+        filteredDirectoryPlayerRows,
+        effectiveDirectoryPlayerIdentityKey,
+        selectedDirectoryPhaseValue
+    );
+    const directorySelectedPlayerSummary = getSelectedPlayerSummary(
+        filteredDirectoryPlayerRows,
+        effectiveDirectoryPlayerIdentityKey
+    );
+    const directoryScopeLabel = selectedDirectoryPhaseContext === null
+        ? "Temporada completa"
+        : buildCompetitionPhaseLabel(selectedDirectoryPhaseContext);
+    const selectedDirectoryTeamContext = latestTeamContexts.get(effectiveDirectoryPlayerEntry?.teamKey ?? "") ?? null;
 
     const handleToggleMatch = (matchWebId) => {
         setOpenMatches((prev) => ({
@@ -892,7 +1137,7 @@ function App() {
         }));
     };
 
-    const handleTeamNavigate = (teamKey) => {
+    const handleTeamNavigate = (teamKey, targetRoute = (isHistoryRoute || isPlayersRoute ? "history" : "dashboard")) => {
         if (!teamKey) {
             return;
         }
@@ -907,7 +1152,11 @@ function App() {
         setSelectedPlayer("");
         setSelectedMatch("");
         setOpenMatches({});
-        navigateToHash(buildTeamRoute(teamKey));
+        navigateToHash(
+            targetRoute === "history"
+                ? buildHistoryRoute(teamKey, effectiveExplorerSeasonLabel || currentSeasonLabel)
+                : buildTeamRoute(teamKey)
+        );
     };
 
     const handleTeamChange = (event) => {
@@ -955,8 +1204,77 @@ function App() {
         setSelectedLeadersLevel("all");
     };
 
+    const handleSeasonChange = (event) => {
+        const nextSeasonLabel = event.target.value;
+        if (!nextSeasonLabel || nextSeasonLabel === effectiveExplorerSeasonLabel) {
+            return;
+        }
+
+        setSelectedSeasonLabel(nextSeasonLabel);
+        setSelectedTeamKey("");
+        setSelectedPhase("");
+        setSelectedPlayer("");
+        setSelectedMatch("");
+        setOpenMatches({});
+        setSelectedDirectoryPlayer("");
+        setSelectedDirectoryCategory("all");
+        setSelectedDirectoryLevel("all");
+        setSelectedDirectoryTeam("all");
+        setSelectedDirectoryPhase("");
+        setSelectedStandingsPhase("all");
+        setSelectedStandingsLevel("all");
+        setSelectedStandingsCategory("all");
+        setSelectedResultsPhase("all");
+        setSelectedResultsLevel("all");
+        setSelectedResultsCategory("all");
+        setSelectedLeadersLevel("all");
+        setSelectedLeadersCategory("all");
+
+        if (route === "players") {
+            navigateToHash(buildPlayersRoute(nextSeasonLabel));
+            return;
+        }
+
+        navigateToHash(buildHistoryRoute("", nextSeasonLabel));
+    };
+
     const handlePlayerChange = (value) => {
         setSelectedPlayer(value);
+    };
+
+    const handleDirectoryCategoryChange = (event) => {
+        setSelectedDirectoryCategory(event.target.value);
+        setSelectedDirectoryLevel("all");
+        setSelectedDirectoryTeam("all");
+        setSelectedDirectoryPlayer("");
+        setSelectedDirectoryPhase("");
+        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel));
+    };
+
+    const handleDirectoryLevelChange = (event) => {
+        setSelectedDirectoryLevel(event.target.value);
+        setSelectedDirectoryTeam("all");
+        setSelectedDirectoryPlayer("");
+        setSelectedDirectoryPhase("");
+        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel));
+    };
+
+    const handleDirectoryTeamChange = (event) => {
+        setSelectedDirectoryTeam(event.target.value);
+        setSelectedDirectoryPlayer("");
+        setSelectedDirectoryPhase("");
+        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel));
+    };
+
+    const handleDirectoryPlayerChange = (event) => {
+        const nextPlayerKey = event.target.value;
+        setSelectedDirectoryPlayer(nextPlayerKey);
+        setSelectedDirectoryPhase("");
+        navigateToHash(buildPlayersRoute(effectiveExplorerSeasonLabel || currentSeasonLabel, nextPlayerKey));
+    };
+
+    const handleDirectoryPhaseChange = (event) => {
+        setSelectedDirectoryPhase(event.target.value);
     };
 
     const handlePlayerNavigate = (playerIdentityKey) => {
@@ -1018,12 +1336,16 @@ function App() {
     };
 
     useEffect(() => {
-        if (route !== "dashboard" || !effectiveTeamKey || effectiveTeamKey === selectedTeamKey) {
+        if (!isTeamRoute || !effectiveTeamKey || effectiveTeamKey === selectedTeamKey) {
             return;
         }
 
-        navigateToHash(buildTeamRoute(effectiveTeamKey));
-    }, [effectiveTeamKey, route, selectedTeamKey]);
+        navigateToHash(
+            isHistoryRoute
+                ? buildHistoryRoute(effectiveTeamKey, effectiveExplorerSeasonLabel || currentSeasonLabel)
+                : buildTeamRoute(effectiveTeamKey)
+        );
+    }, [currentSeasonLabel, effectiveExplorerSeasonLabel, effectiveTeamKey, isHistoryRoute, isTeamRoute, selectedTeamKey]);
 
     useEffect(() => () => {
         if (pendingScrollRestoreFrame.current) {
@@ -1031,13 +1353,17 @@ function App() {
         }
     }, []);
 
-    const renderDashboard = () => {
+    const renderTeamPage = () => {
+        if (isHistoryRoute && seasonsIndexLoading && !selectedSeasonEntry) {
+            return <div style={appStyles.emptyState}>Cargando temporadas...</div>;
+        }
+
         if (analysisIndexLoading) {
             return <div style={appStyles.emptyState}>Cargando análisis...</div>;
         }
 
-        if (analysisIndexError) {
-            return <div style={appStyles.emptyState}>{analysisIndexError}</div>;
+        if (analysisIndexError || (isHistoryRoute && seasonsIndexError && !selectedSeasonEntry)) {
+            return <div style={appStyles.emptyState}>{analysisIndexError || seasonsIndexError}</div>;
         }
 
         if (!selectedTeamSummary) {
@@ -1046,13 +1372,29 @@ function App() {
 
         return (
             <>
+                {isHistoryRoute ? (
+                    <section style={appStyles.syncIntro}>
+                        <div style={appStyles.syncEyebrow}>Archivo</div>
+                        <h2 style={appStyles.syncTitle}>Histórico de equipos por temporada</h2>
+                        <p style={appStyles.syncBody}>
+                            Esta vista sirve para entrar en cualquier temporada publicada y leer el recorrido completo
+                            de un equipo sin contaminar el panel actual.
+                        </p>
+                    </section>
+                ) : null}
+
                 <section style={appStyles.teamSelectorSection}>
                     <div style={appStyles.teamSelectorHeader}>
-                        <div style={appStyles.syncEyebrow}>Selector global</div>
-                        <h2 style={appStyles.teamSelectorTitle}>Elige el equipo que quieres analizar</h2>
+                        <div style={appStyles.syncEyebrow}>{isHistoryRoute ? "Búsqueda" : "Selector global"}</div>
+                        <h2 style={appStyles.teamSelectorTitle}>
+                            {isHistoryRoute
+                                ? "Busca un equipo dentro del archivo"
+                                : "Elige el equipo que quieres analizar"}
+                        </h2>
                         <p style={appStyles.teamSelectorBody}>
-                            Categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra
-                            cómo lees su temporada.
+                            {isHistoryRoute
+                                ? "La temporada se elige arriba. Categoría y nivel acotan el archivo y, una vez dentro del equipo, la fase te deja leer cada tramo con claridad."
+                                : "Categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra cómo lees su temporada."}
                         </p>
                     </div>
 
@@ -1120,12 +1462,15 @@ function App() {
                     <div style={appStyles.heroPattern}/>
                     <div style={appStyles.heroContent}>
                         <div style={appStyles.heroHeader}>
-                            <div style={appStyles.heroKicker}>Vista del equipo</div>
+                            <div style={appStyles.heroKicker}>{isHistoryRoute ? "Archivo del equipo" : "Vista del equipo"}</div>
                             <h2 style={appStyles.heroTitle}>{selectedTeamSummary.teamName}</h2>
                             <p style={appStyles.heroSummary}>{teamHeroSummary}</p>
                         </div>
 
                         <div style={appStyles.heroMetaRow}>
+                            {activeBrowseSeasonLabel ? (
+                                <span style={appStyles.metaChip}>{activeBrowseSeasonLabel}</span>
+                            ) : null}
                             {selectedTeamLatestContext?.categoryName ? (
                                 <span style={appStyles.metaChip}>{selectedTeamLatestContext.categoryName}</span>
                             ) : null}
@@ -1135,11 +1480,13 @@ function App() {
                             <span style={appStyles.metaChip}>{selectedTeamSummary.matchesPlayed ?? 0} partidos totales</span>
                         </div>
 
-                        <div style={appStyles.heroActions}>
-                            <a href={COMPETITION_ROUTE} style={appStyles.secondaryLink}>
-                                Ver competición
-                            </a>
-                        </div>
+                        {!isHistoryRoute ? (
+                            <div style={appStyles.heroActions}>
+                                <a href={buildCompetitionRoute()} style={appStyles.secondaryLink}>
+                                    Ver competición
+                                </a>
+                            </div>
+                        ) : null}
                     </div>
                 </section>
 
@@ -1325,7 +1672,10 @@ function App() {
 
     const renderCompetitionPage = () => (
         <div style={appStyles.pageShell}>
-            <a href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : DASHBOARD_ROUTE} style={appStyles.pageBackLink}>
+            <a
+                href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : buildDashboardRoute()}
+                style={appStyles.pageBackLink}
+            >
                 Volver al panel
             </a>
 
@@ -1430,16 +1780,254 @@ function App() {
         </div>
     );
 
+    const renderPlayersPage = () => {
+        if (seasonsIndexLoading && !selectedSeasonEntry) {
+            return <div style={appStyles.emptyState}>Cargando temporadas...</div>;
+        }
+
+        if (analysisIndexLoading || competitionLoading) {
+            return <div style={appStyles.emptyState}>Cargando directorio de jugadoras...</div>;
+        }
+
+        if (analysisIndexError || competitionError || (seasonsIndexError && !selectedSeasonEntry)) {
+            return <div style={appStyles.emptyState}>{analysisIndexError || competitionError || seasonsIndexError}</div>;
+        }
+
+        return (
+            <div style={appStyles.pageShell}>
+                <section style={appStyles.syncIntro}>
+                    <div style={appStyles.syncEyebrow}>Jugadoras</div>
+                    <h2 style={appStyles.syncTitle}>Buscador de jugadoras por temporada</h2>
+                    <p style={appStyles.syncBody}>
+                        Selecciona una temporada, acota por categoría, nivel o equipo y entra en la ficha de cualquier
+                        jugadora para seguir su producción a lo largo del curso.
+                    </p>
+                </section>
+
+                <section style={appStyles.teamSelectorSection}>
+                    <div style={appStyles.teamSelectorHeader}>
+                        <div style={appStyles.syncEyebrow}>Buscador global</div>
+                        <h2 style={appStyles.teamSelectorTitle}>Encuentra la jugadora que quieres analizar</h2>
+                        <p style={appStyles.teamSelectorBody}>
+                            Los filtros acotan el universo de jugadoras de la temporada seleccionada. Cuando eliges una,
+                            cargamos su detalle desde el equipo correcto de ese curso.
+                        </p>
+                    </div>
+
+                    <div style={appStyles.filterDeck}>
+                        {competitionCategoryOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Categoría"
+                                value={effectiveDirectoryCategory}
+                                onChange={handleDirectoryCategoryChange}
+                                ariaLabel="Filtra jugadoras por categoría"
+                                minWidth="220px"
+                            >
+                                {competitionCategoryOptions.map((cat) => (
+                                    <option key={cat.value} value={cat.value}>
+                                        {cat.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+
+                        {directoryLevelOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Nivel"
+                                value={effectiveDirectoryLevel}
+                                onChange={handleDirectoryLevelChange}
+                                ariaLabel="Filtra jugadoras por nivel"
+                                minWidth="220px"
+                            >
+                                <option value="all">Todos los niveles</option>
+                                {directoryLevelOptions.map((level) => (
+                                    <option key={level.value} value={level.value}>
+                                        {level.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+
+                        <PrettySelect
+                            label="Equipo"
+                            value={effectiveDirectoryTeam}
+                            onChange={handleDirectoryTeamChange}
+                            ariaLabel="Filtra jugadoras por equipo"
+                            minWidth="320px"
+                        >
+                            <option value="all">Todos los equipos</option>
+                            {directoryTeamOptions.map((team) => (
+                                <option key={team.value} value={team.value}>
+                                    {team.label}
+                                </option>
+                            ))}
+                        </PrettySelect>
+
+                        <PrettySelect
+                            label="Jugadora"
+                            value={effectiveDirectoryPlayerEntry?.key ?? ""}
+                            onChange={handleDirectoryPlayerChange}
+                            ariaLabel="Selecciona jugadora"
+                            minWidth="360px"
+                        >
+                            <option value="">Selecciona jugadora</option>
+                            {directoryPlayerOptions.map((player) => (
+                                <option key={player.value} value={player.value}>
+                                    {player.label}
+                                </option>
+                            ))}
+                        </PrettySelect>
+                    </div>
+
+                    <div style={appStyles.teamSelectorMetaRow}>
+                        <span style={appStyles.teamSelectorChip}>{directoryPlayers.length} jugadoras visibles</span>
+                        {activeBrowseSeasonLabel ? (
+                            <span style={appStyles.teamSelectorChip}>{activeBrowseSeasonLabel}</span>
+                        ) : null}
+                        {effectiveDirectoryCategory !== "all" ? (
+                            <span style={appStyles.teamSelectorChip}>{effectiveDirectoryCategory}</span>
+                        ) : null}
+                        {effectiveDirectoryLevel !== "all" ? (
+                            <span style={appStyles.teamSelectorChip}>{effectiveDirectoryLevel}</span>
+                        ) : null}
+                    </div>
+                </section>
+
+                {!effectiveDirectoryPlayerEntry ? (
+                    <div style={appStyles.emptyState}>
+                        Selecciona una jugadora para abrir su ficha de temporada.
+                    </div>
+                ) : (
+                    <>
+                        <section style={appStyles.hero}>
+                            <div style={appStyles.heroPattern}/>
+                            <div style={appStyles.heroContent}>
+                                <div style={appStyles.heroHeader}>
+                                    <div style={appStyles.heroKicker}>Ficha de jugadora</div>
+                                    <h2 style={appStyles.heroTitle}>{effectiveDirectoryPlayerEntry.playerName}</h2>
+                                    <p style={appStyles.heroSummary}>
+                                        {effectiveDirectoryPlayerEntry.teamName} · {effectiveDirectoryPlayerEntry.games} partidos · {effectiveDirectoryPlayerEntry.points} puntos · {" "}
+                                        {Number(effectiveDirectoryPlayerEntry.avgPoints ?? 0).toLocaleString("es-ES", {
+                                            minimumFractionDigits: 1,
+                                            maximumFractionDigits: 1
+                                        })}{" "}
+                                        puntos por partido.
+                                    </p>
+                                </div>
+
+                                <div style={appStyles.heroMetaRow}>
+                                    {activeBrowseSeasonLabel ? (
+                                        <span style={appStyles.metaChip}>{activeBrowseSeasonLabel}</span>
+                                    ) : null}
+                                    <span style={appStyles.metaChip}>{effectiveDirectoryPlayerEntry.teamName}</span>
+                                    {selectedDirectoryTeamContext?.categoryName ? (
+                                        <span style={appStyles.metaChip}>{selectedDirectoryTeamContext.categoryName}</span>
+                                    ) : null}
+                                    {selectedDirectoryTeamContext?.levelName ? (
+                                        <span style={appStyles.metaChip}>{selectedDirectoryTeamContext.levelName}</span>
+                                    ) : null}
+                                    <span style={appStyles.metaChip}>{effectiveDirectoryPlayerEntry.valuation} valoración total</span>
+                                </div>
+
+                                <div style={appStyles.heroActions}>
+                                    <a
+                                        href={buildHistoryRoute(
+                                            effectiveDirectoryPlayerEntry.teamKey,
+                                            effectiveExplorerSeasonLabel || currentSeasonLabel
+                                        )}
+                                        style={appStyles.secondaryLink}
+                                    >
+                                        Ver equipo en esta temporada
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        {selectedDirectoryPlayerRowsLoading ? (
+                            <SectionFallback message="Cargando detalle de la jugadora..." />
+                        ) : null}
+
+                        {!selectedDirectoryPlayerRowsLoading && selectedDirectoryPlayerRowsError ? (
+                            <div style={appStyles.emptyState}>{selectedDirectoryPlayerRowsError}</div>
+                        ) : null}
+
+                        {!selectedDirectoryPlayerRowsLoading && !selectedDirectoryPlayerRowsError ? (
+                            <>
+                                <section style={appStyles.teamScopeSection}>
+                                    <div style={appStyles.teamScopeHeader}>
+                                        <div style={appStyles.syncEyebrow}>Filtro local</div>
+                                        <h3 style={appStyles.teamScopeTitle}>Qué tramo de su temporada quieres leer</h3>
+                                        <p style={appStyles.teamScopeBody}>
+                                            La fase solo afecta a la ficha de la jugadora: resumen y curva partido a partido.
+                                        </p>
+                                    </div>
+
+                                    <div style={appStyles.teamScopeActions}>
+                                        <PrettySelect
+                                            label="Fase"
+                                            value={effectiveDirectoryPhase === "all" ? "" : effectiveDirectoryPhase}
+                                            onChange={handleDirectoryPhaseChange}
+                                            ariaLabel="Selecciona fase para la jugadora"
+                                            minWidth="260px"
+                                        >
+                                            <option value="">Temporada completa</option>
+                                            {directoryPhaseOptions.map((phase) => (
+                                                <option key={phase.value} value={phase.value}>
+                                                    {phase.label}
+                                                </option>
+                                            ))}
+                                        </PrettySelect>
+
+                                        <div style={appStyles.teamScopeMetaRow}>
+                                            <span style={appStyles.teamScopeChip}>{directoryScopeLabel}</span>
+                                            <span style={appStyles.teamScopeChip}>{directorySelectedPlayerSummary?.games ?? 0} partidos visibles</span>
+                                            <span style={appStyles.teamScopeChip}>
+                                                {selectedDirectoryTeamContext?.levelName ?? "Sin nivel"}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <Suspense fallback={<SectionFallback message="Cargando evolución de la jugadora..." />}>
+                                    <PlayerEvolutionSection
+                                        hideSelector
+                                        playersList={[]}
+                                        selectedPlayer={effectiveDirectoryPlayerIdentityKey}
+                                        onSelectedPlayerChange={() => {}}
+                                        chartData={directoryChartData}
+                                        selectedPlayerSummary={directorySelectedPlayerSummary}
+                                    />
+                                </Suspense>
+                            </>
+                        ) : null}
+                    </>
+                )}
+            </div>
+        );
+    };
+
     const pageTitle = route === "sync"
         ? "Importar datos"
         : route === "competition"
             ? "Competición"
-            : "Cuaderno de juego";
+            : route === "history"
+                ? "Archivo de equipos"
+                : route === "players"
+                    ? "Jugadoras"
+                    : "Cuaderno de juego";
     const pageNote = route === "sync"
         ? "Carga nuevas fases desde la fuente oficial sin pasar por la terminal."
         : route === "competition"
             ? "Clasificación, resultados y líderes individuales, separados del panel de cada equipo."
-            : "Sigue la temporada por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.";
+            : route === "history"
+                ? "Explora temporadas anteriores sin tocar la navegación principal del curso actual."
+                : route === "players"
+                    ? "Buscador global para abrir la ficha de cualquier jugadora dentro de una temporada concreta."
+                    : "Sigue la temporada actual por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.";
+    const pageSeasonNote = route === "history" || route === "players"
+        ? effectiveExplorerSeasonLabel
+        : currentSeasonLabel;
+    const shouldShowSeasonSelector = (route === "history" || route === "players") && seasonOptions.length > 0;
 
     return (
         <div style={appStyles.page}>
@@ -1451,28 +2039,84 @@ function App() {
                     <div style={appStyles.brand}>
                         <p style={appStyles.eyebrow}>BarnaStats</p>
                         <h1 style={appStyles.brandTitle}>{pageTitle}</h1>
-                        <p style={appStyles.brandNote}>{pageNote}</p>
+                        <p style={appStyles.brandNote}>
+                            {pageNote}
+                            {pageSeasonNote
+                                ? `${route === "history" || route === "players"
+                                    ? " Temporada consultada"
+                                    : " Temporada actual"}: ${pageSeasonNote}.`
+                                : ""}
+                        </p>
                     </div>
 
-                    <div style={appStyles.nav}>
-                        <a
-                            href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : DASHBOARD_ROUTE}
-                            style={route === "dashboard"
-                                ? {...appStyles.navLink, ...appStyles.navLinkActive}
-                                : appStyles.navLink}
-                        >
-                            Panel
-                        </a>
-                        {syncUiEnabled ? (
+                    <div style={appStyles.topBarActions}>
+                        {shouldShowSeasonSelector ? (
+                            <PrettySelect
+                                label="Temporada"
+                                value={effectiveExplorerSeasonLabel}
+                                onChange={handleSeasonChange}
+                                ariaLabel="Selecciona temporada"
+                                minWidth="190px"
+                            >
+                                {seasonOptions.map((season) => (
+                                    <option key={season.seasonLabel} value={season.seasonLabel}>
+                                        {season.seasonLabel}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+
+                        <div style={appStyles.nav}>
                             <a
-                                href={SYNC_ROUTE}
-                                style={route === "sync"
+                                href={buildDashboardRoute()}
+                                style={route === "dashboard"
                                     ? {...appStyles.navLink, ...appStyles.navLinkActive}
                                     : appStyles.navLink}
                             >
-                                Cargar fase
+                                Equipo
                             </a>
-                        ) : null}
+
+                            <a
+                                href={buildCompetitionRoute()}
+                                style={route === "competition"
+                                    ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                    : appStyles.navLink}
+                            >
+                                Competición
+                            </a>
+
+                            <a
+                                href={buildHistoryRoute("", effectiveExplorerSeasonLabel || currentSeasonLabel)}
+                                style={route === "history"
+                                    ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                    : appStyles.navLink}
+                            >
+                                Histórico
+                            </a>
+
+                            <a
+                                href={buildPlayersRoute(
+                                    effectiveExplorerSeasonLabel || currentSeasonLabel,
+                                    route === "players" ? selectedDirectoryPlayer : ""
+                                )}
+                                style={route === "players"
+                                    ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                    : appStyles.navLink}
+                            >
+                                Jugadoras
+                            </a>
+
+                            {syncUiEnabled ? (
+                                <a
+                                    href={SYNC_ROUTE}
+                                    style={route === "sync"
+                                        ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                        : appStyles.navLink}
+                                >
+                                    Cargar fase
+                                </a>
+                            ) : null}
+                        </div>
                     </div>
                 </div>
 
@@ -1480,7 +2124,9 @@ function App() {
                     ? renderSyncPage()
                     : route === "competition"
                         ? renderCompetitionPage()
-                        : renderDashboard()}
+                        : route === "players"
+                            ? renderPlayersPage()
+                            : renderTeamPage()}
             </div>
         </div>
     );

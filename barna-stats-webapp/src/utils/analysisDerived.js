@@ -9,8 +9,15 @@ export function normalizeTeamName(value) {
         .join(" ");
 }
 
-export function buildTeamRoute(teamKey) {
-    return `#/team/${encodeURIComponent(teamKey)}`;
+export function buildTeamRoute(teamKey, seasonLabel = "") {
+    const path = `#/team/${encodeURIComponent(teamKey)}`;
+    if (!seasonLabel) {
+        return path;
+    }
+
+    const params = new URLSearchParams();
+    params.set("season", seasonLabel);
+    return `${path}?${params.toString()}`;
 }
 
 export function getAllPhaseNumbers(teams) {
