@@ -1,6 +1,6 @@
 {
-  "generatedAtUtc": "2026-04-14T23:25:42.110618Z",
-  "totalMatches": 624,
+  "generatedAtUtc": "2026-04-15T11:24:31.510075Z",
+  "totalMatches": 625,
   "totalTeams": 66,
   "teams": [
     {
@@ -1096,7 +1096,7 @@
       "teamIdIntern": 454114,
       "teamIdExtern": 82475,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "matchesPlayed": 15,
+      "matchesPlayed": 16,
       "playersCount": 13,
       "matchesFile": "teams/5fd9f490ede8f3b9/matches.json",
       "playersFile": "teams/5fd9f490ede8f3b9/players.json",
@@ -1119,7 +1119,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "01",
-          "matchesPlayed": 7
+          "matchesPlayed": 8
         }
       ]
     },
@@ -1458,7 +1458,7 @@
       "teamIdIntern": 453739,
       "teamIdExtern": 80192,
       "teamName": "JOVENTUT BADALONA B",
-      "matchesPlayed": 14,
+      "matchesPlayed": 15,
       "playersCount": 13,
       "matchesFile": "teams/e703c3d26a7cc879/matches.json",
       "playersFile": "teams/e703c3d26a7cc879/players.json",
@@ -1481,7 +1481,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "01",
-          "matchesPlayed": 7
+          "matchesPlayed": 8
         }
       ]
     },

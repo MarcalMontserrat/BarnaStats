@@ -264,12 +264,97 @@ const appStyles = {
         gap: 14,
         flexWrap: "wrap"
     },
+    teamSelectorSection: {
+        display: "grid",
+        gap: 18,
+        padding: "clamp(20px, 4vw, 30px)",
+        borderRadius: "var(--radius-xl)",
+        background: "linear-gradient(160deg, rgba(255, 252, 247, 0.92) 0%, rgba(247, 238, 225, 0.94) 100%)",
+        border: "1px solid var(--border)",
+        boxShadow: "var(--shadow-md)",
+        animation: "fade-up 700ms ease both"
+    },
+    teamSelectorHeader: {
+        display: "grid",
+        gap: 10,
+        maxWidth: 780
+    },
+    teamSelectorTitle: {
+        fontSize: "clamp(1.9rem, 3vw, 2.8rem)"
+    },
+    teamSelectorBody: {
+        color: "var(--muted)",
+        lineHeight: 1.6
+    },
+    teamSelectorMetaRow: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    teamSelectorChip: {
+        display: "inline-flex",
+        alignItems: "center",
+        minHeight: 38,
+        padding: "0 14px",
+        borderRadius: 999,
+        background: "rgba(255, 250, 243, 0.96)",
+        border: "1px solid rgba(107, 86, 58, 0.14)",
+        color: "var(--navy)",
+        fontSize: 13,
+        fontWeight: 700
+    },
     heroActions: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-end",
         gap: 16,
         flexWrap: "wrap"
+    },
+    teamScopeSection: {
+        display: "grid",
+        gap: 16,
+        padding: "clamp(18px, 3vw, 26px)",
+        borderRadius: "var(--radius-xl)",
+        background: "linear-gradient(180deg, rgba(255, 251, 245, 0.9) 0%, rgba(248, 240, 229, 0.92) 100%)",
+        border: "1px solid rgba(107, 86, 58, 0.14)",
+        boxShadow: "var(--shadow-md)",
+        animation: "fade-up 760ms ease both"
+    },
+    teamScopeHeader: {
+        display: "grid",
+        gap: 8,
+        maxWidth: 760
+    },
+    teamScopeTitle: {
+        fontSize: "clamp(1.5rem, 2.4vw, 2rem)"
+    },
+    teamScopeBody: {
+        color: "var(--muted)",
+        lineHeight: 1.6
+    },
+    teamScopeActions: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        gap: 16,
+        flexWrap: "wrap"
+    },
+    teamScopeMetaRow: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    teamScopeChip: {
+        display: "inline-flex",
+        alignItems: "center",
+        minHeight: 38,
+        padding: "0 14px",
+        borderRadius: 999,
+        background: "rgba(255, 251, 245, 0.94)",
+        border: "1px solid rgba(107, 86, 58, 0.14)",
+        color: "var(--navy)",
+        fontSize: 13,
+        fontWeight: 700
     },
     emptyState: {
         background: "linear-gradient(180deg, rgba(255, 252, 247, 0.92) 0%, rgba(252, 246, 239, 0.88) 100%)",
@@ -561,6 +646,9 @@ function App() {
     const effectiveTeamLevel = dashboardLevelOptions.some((option) => option.value === selectedTeamLevel)
         ? selectedTeamLevel
         : "all";
+    const effectiveTeamLevelLabel = effectiveTeamLevel === "all"
+        ? ""
+        : (dashboardLevelOptions.find((option) => option.value === effectiveTeamLevel)?.label ?? effectiveTeamLevel);
     const dashboardTeams = sortedTeams.filter((team) => {
         const teamContext = latestTeamContexts.get(team.teamKey);
 
@@ -795,9 +883,7 @@ function App() {
     const standingLabel = selectedPhaseContext === null
         ? "Clasificación acumulada"
         : `Clasificación de ${buildCompetitionPhaseLabel(selectedPhaseContext)}`;
-    const summaryText = selectedPhaseContext === null
-        ? `${selectedTeamSummary?.matchesPlayed ?? 0} partidos · ${selectedTeamSummary?.playersCount ?? 0} jugadoras`
-        : `${buildCompetitionPhaseLabel(selectedPhaseContext)} · ${sortedMatches.length} partidos`;
+    const teamHeroSummary = `${selectedTeamSummary?.matchesPlayed ?? 0} partidos en total · ${selectedTeamSummary?.playersCount ?? 0} jugadoras registradas`;
 
     const handleToggleMatch = (matchWebId) => {
         setOpenMatches((prev) => ({
@@ -922,6 +1008,15 @@ function App() {
         setSelectedTeamTab(tabId);
     };
 
+    const handleCompetitionTabChange = (tabId) => {
+        if (tabId === selectedCompetitionTab) {
+            return;
+        }
+
+        preserveScrollOnNextPaint();
+        setSelectedCompetitionTab(tabId);
+    };
+
     useEffect(() => {
         if (route !== "dashboard" || !effectiveTeamKey || effectiveTeamKey === selectedTeamKey) {
             return;
@@ -951,90 +1046,96 @@ function App() {
 
         return (
             <>
+                <section style={appStyles.teamSelectorSection}>
+                    <div style={appStyles.teamSelectorHeader}>
+                        <div style={appStyles.syncEyebrow}>Selector global</div>
+                        <h2 style={appStyles.teamSelectorTitle}>Elige el equipo que quieres analizar</h2>
+                        <p style={appStyles.teamSelectorBody}>
+                            Categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra
+                            cómo lees su temporada.
+                        </p>
+                    </div>
+
+                    <div style={appStyles.filterDeck}>
+                        {dashboardCategoryOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Categoría"
+                                value={effectiveTeamCategory}
+                                onChange={handleTeamCategoryChange}
+                                ariaLabel="Filtra equipos por categoría"
+                                minWidth="220px"
+                            >
+                                {dashboardCategoryOptions.map((cat) => (
+                                    <option key={cat.value} value={cat.value}>
+                                        {cat.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+
+                        {dashboardLevelOptions.length > 0 ? (
+                            <PrettySelect
+                                label="Nivel"
+                                value={effectiveTeamLevel}
+                                onChange={handleTeamLevelChange}
+                                ariaLabel="Filtra equipos por nivel actual"
+                                minWidth="220px"
+                            >
+                                <option value="all">Todos los niveles</option>
+                                {dashboardLevelOptions.map((level) => (
+                                    <option key={level.value} value={level.value}>
+                                        {level.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+
+                        <PrettySelect
+                            label="Equipo"
+                            value={effectiveTeamKey}
+                            onChange={handleTeamChange}
+                            ariaLabel="Selecciona equipo"
+                            minWidth="360px"
+                        >
+                            {dashboardTeams.map((team) => (
+                                <option key={team.teamKey} value={team.teamKey}>
+                                    {team.teamName}
+                                </option>
+                            ))}
+                        </PrettySelect>
+                    </div>
+
+                    <div style={appStyles.teamSelectorMetaRow}>
+                        <span style={appStyles.teamSelectorChip}>{dashboardTeams.length} equipos visibles</span>
+                        {effectiveTeamCategory !== "all" ? (
+                            <span style={appStyles.teamSelectorChip}>{effectiveTeamCategory}</span>
+                        ) : null}
+                        {effectiveTeamLevel !== "all" ? (
+                            <span style={appStyles.teamSelectorChip}>{effectiveTeamLevelLabel}</span>
+                        ) : null}
+                    </div>
+                </section>
+
                 <section style={appStyles.hero}>
                     <div style={appStyles.heroPattern}/>
                     <div style={appStyles.heroContent}>
                         <div style={appStyles.heroHeader}>
                             <div style={appStyles.heroKicker}>Vista del equipo</div>
                             <h2 style={appStyles.heroTitle}>{selectedTeamSummary.teamName}</h2>
-                            <p style={appStyles.heroSummary}>{summaryText}</p>
+                            <p style={appStyles.heroSummary}>{teamHeroSummary}</p>
                         </div>
 
                         <div style={appStyles.heroMetaRow}>
-                            <span style={appStyles.metaChip}>{seasonLabel}</span>
-                            <span style={appStyles.metaChip}>{sortedMatches.length} partidos visibles</span>
-                            <span style={appStyles.metaChip}>{playersArray.length} jugadoras</span>
+                            {selectedTeamLatestContext?.categoryName ? (
+                                <span style={appStyles.metaChip}>{selectedTeamLatestContext.categoryName}</span>
+                            ) : null}
+                            {selectedTeamLatestContext?.levelName ? (
+                                <span style={appStyles.metaChip}>{selectedTeamLatestContext.levelName}</span>
+                            ) : null}
+                            <span style={appStyles.metaChip}>{selectedTeamSummary.matchesPlayed ?? 0} partidos totales</span>
                         </div>
 
                         <div style={appStyles.heroActions}>
-                            <div style={appStyles.filterDeck}>
-                                {dashboardCategoryOptions.length > 0 ? (
-                                    <PrettySelect
-                                        label="Categoría"
-                                        value={effectiveTeamCategory}
-                                        onChange={handleTeamCategoryChange}
-                                        ariaLabel="Filtra equipos por categoría"
-                                        minWidth="220px"
-                                        labelColor="rgba(255, 247, 237, 0.82)"
-                                    >
-                                        {dashboardCategoryOptions.map((cat) => (
-                                            <option key={cat.value} value={cat.value}>
-                                                {cat.label}
-                                            </option>
-                                        ))}
-                                    </PrettySelect>
-                                ) : null}
-
-                                {dashboardLevelOptions.length > 0 ? (
-                                    <PrettySelect
-                                        label="Nivel"
-                                        value={effectiveTeamLevel}
-                                        onChange={handleTeamLevelChange}
-                                        ariaLabel="Filtra equipos por nivel actual"
-                                        minWidth="220px"
-                                        labelColor="rgba(255, 247, 237, 0.82)"
-                                    >
-                                        <option value="all">Todos los niveles</option>
-                                        {dashboardLevelOptions.map((level) => (
-                                            <option key={level.value} value={level.value}>
-                                                {level.label}
-                                            </option>
-                                        ))}
-                                    </PrettySelect>
-                                ) : null}
-
-                                <PrettySelect
-                                    label="Equipo"
-                                    value={effectiveTeamKey}
-                                    onChange={handleTeamChange}
-                                    ariaLabel="Selecciona equipo"
-                                    minWidth="360px"
-                                    labelColor="rgba(255, 247, 237, 0.82)"
-                                >
-                                    {dashboardTeams.map((team) => (
-                                        <option key={team.teamKey} value={team.teamKey}>
-                                            {team.teamName}
-                                        </option>
-                                    ))}
-                                </PrettySelect>
-
-                                <PrettySelect
-                                    label="Fase"
-                                    value={effectiveSelectedPhase === "all" ? "" : effectiveSelectedPhase}
-                                    onChange={handlePhaseChange}
-                                    ariaLabel="Selecciona fase"
-                                    minWidth="220px"
-                                    labelColor="rgba(255, 247, 237, 0.82)"
-                                >
-                                    <option value="">Temporada completa</option>
-                                    {teamPhaseOptions.map((phase) => (
-                                        <option key={phase.value} value={phase.value}>
-                                            {phase.label}
-                                        </option>
-                                    ))}
-                                </PrettySelect>
-                            </div>
-
                             <a href={COMPETITION_ROUTE} style={appStyles.secondaryLink}>
                                 Ver competición
                             </a>
@@ -1058,94 +1159,128 @@ function App() {
 
                 {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && !selectedTeamMatchesError && !selectedTeamPlayersError ? (
                     <>
-                <section ref={teamTabsRef} style={appStyles.competitionTabs}>
-                    <div style={appStyles.competitionTabRow}>
-                        {TEAM_TABS.map((tab) => (
-                            <button
-                                key={tab.id}
-                                type="button"
-                                style={tab.id === activeTeamTab.id
-                                    ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
-                                    : appStyles.competitionTab}
-                                onClick={() => handleTeamTabChange(tab.id)}
-                            >
-                                {tab.label}
-                            </button>
-                        ))}
-                    </div>
+                        <section ref={teamTabsRef} style={appStyles.teamScopeSection}>
+                            <div style={appStyles.teamScopeHeader}>
+                                <div style={appStyles.syncEyebrow}>Filtro global</div>
+                                <h3 style={appStyles.teamScopeTitle}>Qué tramo quieres leer</h3>
+                                <p style={appStyles.teamScopeBody}>
+                                    La fase modifica todo el panel del equipo: resumen, líderes, comparativa, evolución y
+                                    partidos.
+                                </p>
+                            </div>
 
-                    <p style={appStyles.competitionTabHint}>
-                        {activeTeamTab.description}
-                    </p>
-                </section>
+                            <div style={appStyles.teamScopeActions}>
+                                <PrettySelect
+                                    label="Fase"
+                                    value={effectiveSelectedPhase === "all" ? "" : effectiveSelectedPhase}
+                                    onChange={handlePhaseChange}
+                                    ariaLabel="Selecciona fase"
+                                    minWidth="260px"
+                                >
+                                    <option value="">Temporada completa</option>
+                                    {teamPhaseOptions.map((phase) => (
+                                        <option key={phase.value} value={phase.value}>
+                                            {phase.label}
+                                        </option>
+                                    ))}
+                                </PrettySelect>
 
-                {activeTeamTab.id === "snapshot" ? (
-                    <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
-                        <TeamSnapshotSection
-                            seasonLabel={seasonLabel}
-                            currentLevelLabel={selectedPhaseContext === null
-                                ? (selectedTeamLatestContext?.levelName ?? "")
-                                : (selectedPhaseContext?.levelName ?? "")}
-                            record={teamRecord}
-                            standingRow={selectedTeamStanding}
-                            standingLabel={standingLabel}
-                            bestWinStreak={bestWinStreak}
-                            teamAveragePoints={teamAvg}
-                            topScorer={topScorer}
-                            mvp={mvp}
-                        />
-                    </Suspense>
-                ) : null}
+                                <div style={appStyles.teamScopeMetaRow}>
+                                    <span style={appStyles.teamScopeChip}>{seasonLabel}</span>
+                                    <span style={appStyles.teamScopeChip}>{sortedMatches.length} partidos visibles</span>
+                                    <span style={appStyles.teamScopeChip}>{playersArray.length} jugadoras</span>
+                                </div>
+                            </div>
+                        </section>
 
-                {activeTeamTab.id === "leaders" ? (
-                    <Suspense fallback={<SectionFallback message="Cargando líderes del equipo..." />}>
-                        <TeamLeadersSection
-                            teamName={selectedTeamSummary.teamName}
-                            seasonLabel={seasonLabel}
-                            matchesCount={sortedMatches.length}
-                            playersCount={playersArray.length}
-                            leadersByAvgValuation={teamLeadersByAvgValuation}
-                            leadersByPoints={teamLeadersByPoints}
-                        />
-                    </Suspense>
-                ) : null}
+                        <section style={appStyles.competitionTabs}>
+                            <div style={appStyles.competitionTabRow}>
+                                {TEAM_TABS.map((tab) => (
+                                    <button
+                                        key={tab.id}
+                                        type="button"
+                                        style={tab.id === activeTeamTab.id
+                                            ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
+                                            : appStyles.competitionTab}
+                                        onClick={() => handleTeamTabChange(tab.id)}
+                                    >
+                                        {tab.label}
+                                    </button>
+                                ))}
+                            </div>
 
-                {activeTeamTab.id === "phases" ? (
-                    <Suspense fallback={<SectionFallback message="Cargando comparativa por fases..." />}>
-                        <PhaseComparisonSection
-                            phaseSummaries={phaseSummaries}
-                            comparison={phaseComparison}
-                        />
-                    </Suspense>
-                ) : null}
+                            <p style={appStyles.competitionTabHint}>
+                                {activeTeamTab.description}
+                            </p>
+                        </section>
 
-                {activeTeamTab.id === "evolution" ? (
-                    <Suspense fallback={<SectionFallback message="Cargando evolución por jugadora..." />}>
-                        <PlayerEvolutionSection
-                            playersList={playersList}
-                            selectedPlayer={effectiveSelectedPlayer}
-                            onSelectedPlayerChange={handlePlayerChange}
-                            chartData={chartData}
-                            selectedPlayerSummary={selectedPlayerSummary}
-                        />
-                    </Suspense>
-                ) : null}
+                        {activeTeamTab.id === "snapshot" ? (
+                            <Suspense fallback={<SectionFallback message="Cargando el resumen del equipo..." />}>
+                                <TeamSnapshotSection
+                                    seasonLabel={seasonLabel}
+                                    currentLevelLabel={selectedPhaseContext === null
+                                        ? (selectedTeamLatestContext?.levelName ?? "")
+                                        : (selectedPhaseContext?.levelName ?? "")}
+                                    record={teamRecord}
+                                    standingRow={selectedTeamStanding}
+                                    standingLabel={standingLabel}
+                                    bestWinStreak={bestWinStreak}
+                                    teamAveragePoints={teamAvg}
+                                    topScorer={topScorer}
+                                    mvp={mvp}
+                                />
+                            </Suspense>
+                        ) : null}
 
-                {activeTeamTab.id === "matches" ? (
-                    <Suspense fallback={<SectionFallback message="Cargando detalle de partidos..." />}>
-                        <MatchListSection
-                            sortedMatches={sortedMatches}
-                            visibleMatches={visibleMatches}
-                            selectedMatch={selectedMatch}
-                            onSelectedMatchChange={setSelectedMatch}
-                            selectedPhase={selectedPhaseValue}
-                            openMatches={openMatches}
-                            onToggleMatch={handleToggleMatch}
-                            onTeamNavigate={handleTeamNavigate}
-                            onPlayerNavigate={handlePlayerNavigate}
-                        />
-                    </Suspense>
-                ) : null}
+                        {activeTeamTab.id === "leaders" ? (
+                            <Suspense fallback={<SectionFallback message="Cargando líderes del equipo..." />}>
+                                <TeamLeadersSection
+                                    teamName={selectedTeamSummary.teamName}
+                                    seasonLabel={seasonLabel}
+                                    matchesCount={sortedMatches.length}
+                                    playersCount={playersArray.length}
+                                    leadersByAvgValuation={teamLeadersByAvgValuation}
+                                    leadersByPoints={teamLeadersByPoints}
+                                />
+                            </Suspense>
+                        ) : null}
+
+                        {activeTeamTab.id === "phases" ? (
+                            <Suspense fallback={<SectionFallback message="Cargando comparativa por fases..." />}>
+                                <PhaseComparisonSection
+                                    phaseSummaries={phaseSummaries}
+                                    comparison={phaseComparison}
+                                />
+                            </Suspense>
+                        ) : null}
+
+                        {activeTeamTab.id === "evolution" ? (
+                            <Suspense fallback={<SectionFallback message="Cargando evolución por jugadora..." />}>
+                                <PlayerEvolutionSection
+                                    playersList={playersList}
+                                    selectedPlayer={effectiveSelectedPlayer}
+                                    onSelectedPlayerChange={handlePlayerChange}
+                                    chartData={chartData}
+                                    selectedPlayerSummary={selectedPlayerSummary}
+                                />
+                            </Suspense>
+                        ) : null}
+
+                        {activeTeamTab.id === "matches" ? (
+                            <Suspense fallback={<SectionFallback message="Cargando detalle de partidos..." />}>
+                                <MatchListSection
+                                    sortedMatches={sortedMatches}
+                                    visibleMatches={visibleMatches}
+                                    selectedMatch={selectedMatch}
+                                    onSelectedMatchChange={setSelectedMatch}
+                                    selectedPhase={selectedPhaseValue}
+                                    openMatches={openMatches}
+                                    onToggleMatch={handleToggleMatch}
+                                    onTeamNavigate={handleTeamNavigate}
+                                    onPlayerNavigate={handlePlayerNavigate}
+                                />
+                            </Suspense>
+                        ) : null}
                     </>
                 ) : null}
             </>
@@ -1211,84 +1346,84 @@ function App() {
 
             {!competitionLoading && !competitionError ? (
                 <>
-            <section style={appStyles.competitionTabs}>
-                <div style={appStyles.competitionTabRow}>
-                    {COMPETITION_TABS.map((tab) => (
-                        <button
-                            key={tab.id}
-                            type="button"
-                            style={tab.id === activeCompetitionTab.id
-                                ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
-                                : appStyles.competitionTab}
-                            onClick={() => setSelectedCompetitionTab(tab.id)}
-                        >
-                            {tab.label}
-                        </button>
-                    ))}
-                </div>
+                    <section style={appStyles.competitionTabs}>
+                        <div style={appStyles.competitionTabRow}>
+                            {COMPETITION_TABS.map((tab) => (
+                                <button
+                                    key={tab.id}
+                                    type="button"
+                                    style={tab.id === activeCompetitionTab.id
+                                        ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
+                                        : appStyles.competitionTab}
+                                    onClick={() => handleCompetitionTabChange(tab.id)}
+                                >
+                                    {tab.label}
+                                </button>
+                            ))}
+                        </div>
 
-                <p style={appStyles.competitionTabHint}>
-                    {activeCompetitionTab.description}
-                </p>
-            </section>
+                        <p style={appStyles.competitionTabHint}>
+                            {activeCompetitionTab.description}
+                        </p>
+                    </section>
 
-            {activeCompetitionTab.id === "standings" ? (
-                <Suspense fallback={<SectionFallback message="Cargando clasificación..." />}>
-                    <StandingsSection
-                        rows={competitionStandingsRows}
-                        phaseOptions={standingsPhaseOptions}
-                        selectedPhase={effectiveCompetitionPhase}
-                        onSelectedPhaseChange={handleStandingsPhaseChange}
-                        levelOptions={standingsLevelOptions}
-                        selectedLevel={effectiveStandingsLevel}
-                        onSelectedLevelChange={setSelectedStandingsLevel}
-                        categoryOptions={competitionCategoryOptions}
-                        selectedCategory={effectiveStandingsCategory}
-                        onSelectedCategoryChange={handleStandingsCategoryChange}
-                        selectedTeamKey={effectiveTeamKey}
-                        onTeamNavigate={handleTeamNavigate}
-                    />
-                </Suspense>
-            ) : null}
+                    {activeCompetitionTab.id === "standings" ? (
+                        <Suspense fallback={<SectionFallback message="Cargando clasificación..." />}>
+                            <StandingsSection
+                                rows={competitionStandingsRows}
+                                phaseOptions={standingsPhaseOptions}
+                                selectedPhase={effectiveCompetitionPhase}
+                                onSelectedPhaseChange={handleStandingsPhaseChange}
+                                levelOptions={standingsLevelOptions}
+                                selectedLevel={effectiveStandingsLevel}
+                                onSelectedLevelChange={setSelectedStandingsLevel}
+                                categoryOptions={competitionCategoryOptions}
+                                selectedCategory={effectiveStandingsCategory}
+                                onSelectedCategoryChange={handleStandingsCategoryChange}
+                                selectedTeamKey={effectiveTeamKey}
+                                onTeamNavigate={handleTeamNavigate}
+                            />
+                        </Suspense>
+                    ) : null}
 
-            {activeCompetitionTab.id === "matches" ? (
-                <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
-                    <CompetitionResultsSection
-                        matches={competitionMatches}
-                        phaseOptions={resultsPhaseOptions}
-                        selectedPhase={effectiveResultsPhase}
-                        onSelectedPhaseChange={setSelectedResultsPhase}
-                        levelOptions={resultsLevelOptions}
-                        selectedLevel={effectiveResultsLevel}
-                        onSelectedLevelChange={setSelectedResultsLevel}
-                        categoryOptions={competitionCategoryOptions}
-                        selectedCategory={effectiveResultsCategory}
-                        onSelectedCategoryChange={handleResultsCategoryChange}
-                        selectedTeamKey={effectiveTeamKey}
-                        onTeamNavigate={handleTeamNavigate}
-                    />
-                </Suspense>
-            ) : null}
+                    {activeCompetitionTab.id === "matches" ? (
+                        <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
+                            <CompetitionResultsSection
+                                matches={competitionMatches}
+                                phaseOptions={resultsPhaseOptions}
+                                selectedPhase={effectiveResultsPhase}
+                                onSelectedPhaseChange={setSelectedResultsPhase}
+                                levelOptions={resultsLevelOptions}
+                                selectedLevel={effectiveResultsLevel}
+                                onSelectedLevelChange={setSelectedResultsLevel}
+                                categoryOptions={competitionCategoryOptions}
+                                selectedCategory={effectiveResultsCategory}
+                                onSelectedCategoryChange={handleResultsCategoryChange}
+                                selectedTeamKey={effectiveTeamKey}
+                                onTeamNavigate={handleTeamNavigate}
+                            />
+                        </Suspense>
+                    ) : null}
 
-            {activeCompetitionTab.id === "leaders" ? (
-                <Suspense fallback={<SectionFallback message="Cargando líderes globales..." />}>
-                    <GlobalLeadersSection
-                        totalPlayers={competitionPlayerLeaders.length}
-                        totalTeams={competition?.totalTeams ?? teams.length}
-                        leadersByAvgValuation={globalLeadersByAvgValuation}
-                        leadersByPoints={globalLeadersByPoints}
-                        levelOptions={leadersLevelOptions}
-                        selectedLevel={effectiveLeadersLevel}
-                        onSelectedLevelChange={setSelectedLeadersLevel}
-                        categoryOptions={competitionCategoryOptions}
-                        selectedCategory={effectiveLeadersCategory}
-                        onSelectedCategoryChange={handleLeadersCategoryChange}
-                        rankingMinGames={rankingMinGames}
-                        onRankingMinGamesChange={setRankingMinGames}
-                        onTeamNavigate={handleTeamNavigate}
-                    />
-                </Suspense>
-            ) : null}
+                    {activeCompetitionTab.id === "leaders" ? (
+                        <Suspense fallback={<SectionFallback message="Cargando líderes globales..." />}>
+                            <GlobalLeadersSection
+                                totalPlayers={competitionPlayerLeaders.length}
+                                totalTeams={competition?.totalTeams ?? teams.length}
+                                leadersByAvgValuation={globalLeadersByAvgValuation}
+                                leadersByPoints={globalLeadersByPoints}
+                                levelOptions={leadersLevelOptions}
+                                selectedLevel={effectiveLeadersLevel}
+                                onSelectedLevelChange={setSelectedLeadersLevel}
+                                categoryOptions={competitionCategoryOptions}
+                                selectedCategory={effectiveLeadersCategory}
+                                onSelectedCategoryChange={handleLeadersCategoryChange}
+                                rankingMinGames={rankingMinGames}
+                                onRankingMinGamesChange={setRankingMinGames}
+                                onTeamNavigate={handleTeamNavigate}
+                            />
+                        </Suspense>
+                    ) : null}
                 </>
             ) : null}
         </div>

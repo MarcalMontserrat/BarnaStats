@@ -1,6 +1,6 @@
 {
   "totalTeams": 66,
-  "totalMatches": 624,
+  "totalMatches": 625,
   "phases": [
     {
       "sourcePhaseId": 19778,
@@ -130,7 +130,7 @@
       "levelName": "Nivell A",
       "levelCode": "A",
       "groupCode": "01",
-      "matchesCount": 27
+      "matchesCount": 28
     },
     {
       "sourcePhaseId": 21591,
@@ -461,7 +461,7 @@
       "teamIdIntern": 454114,
       "teamIdExtern": 82475,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "matchesPlayed": 15,
+      "matchesPlayed": 16,
       "playersCount": 13
     },
     {
@@ -549,7 +549,7 @@
       "teamIdIntern": 453739,
       "teamIdExtern": 80192,
       "teamName": "JOVENTUT BADALONA B",
-      "matchesPlayed": 14,
+      "matchesPlayed": 15,
       "playersCount": 13
     },
     {
@@ -14441,6 +14441,28 @@
       "topScorer": "ANA\u00CFS MARTIN ALEXANDRINE",
       "topScorerTeam": "BC TECLA SALA  B",
       "topScorerPoints": 19
+    },
+    {
+      "matchWebId": 65947,
+      "matchInternId": 251988,
+      "matchExternId": 1169050,
+      "matchDate": "2026-04-14T18:30:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21590,
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "phaseName": "Segona Fase",
+      "levelName": "Nivell A",
+      "levelCode": "A",
+      "groupCode": "01",
+      "homeTeamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "homeTeam": "DOMINIQUES BARCELONA TARONJA",
+      "homeScore": 54,
+      "awayTeamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "awayTeam": "JOVENTUT BADALONA B",
+      "awayScore": 24,
+      "topScorer": "MARTINA SOLE ABELLO",
+      "topScorerTeam": "DOMINIQUES BARCELONA TARONJA",
+      "topScorerPoints": 15
     }
   ],
   "standingsByPhase": [
@@ -15426,6 +15448,18 @@
         },
         {
           "position": 16,
+          "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+          "teamName": "DOMINIQUES BARCELONA TARONJA",
+          "played": 8,
+          "wins": 7,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 388,
+          "pointsAgainst": 280,
+          "pointDiff": 108
+        },
+        {
+          "position": 17,
           "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
           "teamName": "JOVENTUT BADALONA VERD",
           "played": 9,
@@ -15435,18 +15469,6 @@
           "pointsFor": 524,
           "pointsAgainst": 224,
           "pointDiff": 300
-        },
-        {
-          "position": 17,
-          "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-          "teamName": "DOMINIQUES BARCELONA TARONJA",
-          "played": 7,
-          "wins": 6,
-          "losses": 1,
-          "ties": 0,
-          "pointsFor": 334,
-          "pointsAgainst": 256,
-          "pointDiff": 78
         },
         {
           "position": 18,
@@ -15716,13 +15738,13 @@
           "position": 40,
           "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
           "teamName": "JOVENTUT BADALONA B",
-          "played": 7,
+          "played": 8,
           "wins": 4,
-          "losses": 3,
+          "losses": 4,
           "ties": 0,
-          "pointsFor": 340,
-          "pointsAgainst": 308,
-          "pointDiff": 32
+          "pointsFor": 364,
+          "pointsAgainst": 362,
+          "pointDiff": 2
         },
         {
           "position": 41,
@@ -16381,6 +16403,22 @@
       "avgValuation": 1.7272727272727273
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:MARTINA SOLE ABELLO:5",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446572,
+      "playerName": "MARTINA SOLE ABELLO",
+      "shirtNumber": "5",
+      "games": 16,
+      "minutes": 532,
+      "points": 266,
+      "avgPoints": 16.625,
+      "valuation": 179,
+      "avgValuation": 11.1875
+    },
+    {
       "key": "COPA CATALUNYA MASCULINA::TEAM:78454:ALBERT TARDIO MARTI:1",
       "teamKey": "COPA CATALUNYA MASCULINA::TEAM:78454",
       "teamIdIntern": 452376,
@@ -16443,22 +16481,6 @@
       "avgPoints": 11.5,
       "valuation": 169,
       "avgValuation": 7.681818181818182
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:MARTINA SOLE ABELLO:5",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446572,
-      "playerName": "MARTINA SOLE ABELLO",
-      "shirtNumber": "5",
-      "games": 15,
-      "minutes": 496,
-      "points": 251,
-      "avgPoints": 16.733333333333334,
-      "valuation": 169,
-      "avgValuation": 11.266666666666667
     },
     {
       "key": "COPA CATALUNYA MASCULINA::TEAM:78995:RAMON GOTZENS PRUNEDA:5",
@@ -17197,6 +17219,22 @@
       "avgValuation": 4.818181818181818
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:CLAUDIA ROCA MARTI:78",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446575,
+      "playerName": "CLAUDIA ROCA MARTI",
+      "shirtNumber": "78",
+      "games": 16,
+      "minutes": 561,
+      "points": 188,
+      "avgPoints": 11.75,
+      "valuation": 89,
+      "avgValuation": 5.5625
+    },
+    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:HAWA TRAORE SANOGO:28",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
       "teamIdIntern": 483801,
@@ -17307,22 +17345,6 @@
       "avgPoints": 10.764705882352942,
       "valuation": 133,
       "avgValuation": 7.823529411764706
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:CLAUDIA ROCA MARTI:78",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446575,
-      "playerName": "CLAUDIA ROCA MARTI",
-      "shirtNumber": "78",
-      "games": 15,
-      "minutes": 528,
-      "points": 182,
-      "avgPoints": 12.133333333333333,
-      "valuation": 89,
-      "avgValuation": 5.933333333333334
     },
     {
       "key": "COPA CATALUNYA MASCULINA::TEAM:80495:NIL FARRE FLORES:14",
@@ -18317,6 +18339,22 @@
       "avgValuation": 5.125
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:A\u00CFSHA SABALY SEGOVIA:24",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 453739,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 7440252,
+      "playerName": "A\u00CFSHA SABALY SEGOVIA",
+      "shirtNumber": "24",
+      "games": 13,
+      "minutes": 333,
+      "points": 134,
+      "avgPoints": 10.307692307692308,
+      "valuation": 88,
+      "avgValuation": 6.769230769230769
+    },
+    {
       "key": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81056:JULIA VI\u00D1ALLONGA GIMFERRER:9",
       "teamKey": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81056",
       "teamIdIntern": 453066,
@@ -18507,22 +18545,6 @@
       "avgPoints": 7.9375,
       "valuation": 110,
       "avgValuation": 6.875
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:A\u00CFSHA SABALY SEGOVIA:24",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 453739,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 7440252,
-      "playerName": "A\u00CFSHA SABALY SEGOVIA",
-      "shirtNumber": "24",
-      "games": 12,
-      "minutes": 309,
-      "points": 126,
-      "avgPoints": 10.5,
-      "valuation": 84,
-      "avgValuation": 7
     },
     {
       "key": "COPA CATALUNYA MASCULINA::TEAM:78995:POL DIAZ SANCHEZ:11",
@@ -18811,6 +18833,22 @@
       "avgPoints": 5.2272727272727275,
       "valuation": 21,
       "avgValuation": 0.9545454545454546
+    },
+    {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:NOA BARDERA PRADO:21",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446571,
+      "playerName": "NOA BARDERA PRADO",
+      "shirtNumber": "21",
+      "games": 16,
+      "minutes": 510,
+      "points": 115,
+      "avgPoints": 7.1875,
+      "valuation": 62,
+      "avgValuation": 3.875
     },
     {
       "key": "1A. TERRITORIAL SENIOR FEMENI::TEAM:81296:ANDREA GALLARDO MOLINA:6",
@@ -19371,22 +19409,6 @@
       "avgPoints": 4.590909090909091,
       "valuation": -76,
       "avgValuation": -3.4545454545454546
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:NOA BARDERA PRADO:21",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446571,
-      "playerName": "NOA BARDERA PRADO",
-      "shirtNumber": "21",
-      "games": 15,
-      "minutes": 474,
-      "points": 101,
-      "avgPoints": 6.733333333333333,
-      "valuation": 54,
-      "avgValuation": 3.6
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987:ROMINA FERN\u00C1NDEZ SENDER:21",
@@ -20133,12 +20155,12 @@
       "playerActorId": 7440257,
       "playerName": "LAIA ROSA PICA",
       "shirtNumber": "29",
-      "games": 13,
-      "minutes": 324,
+      "games": 14,
+      "minutes": 348,
       "points": 89,
-      "avgPoints": 6.846153846153846,
-      "valuation": 55,
-      "avgValuation": 4.230769230769231
+      "avgPoints": 6.357142857142857,
+      "valuation": 54,
+      "avgValuation": 3.857142857142857
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79269:MARTINA REDONDO ACE\u00D1A:20",
@@ -20349,6 +20371,22 @@
       "avgValuation": 2.05
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:CLARA CASTRO GUBERT:7",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446574,
+      "playerName": "CLARA CASTRO GUBERT",
+      "shirtNumber": "7",
+      "games": 10,
+      "minutes": 294,
+      "points": 85,
+      "avgPoints": 8.5,
+      "valuation": 44,
+      "avgValuation": 4.4
+    },
+    {
       "key": "COPA CATALUNYA MASCULINA::TEAM:79305:ERIC CLAPE ARIMON:17",
       "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79305",
       "teamIdIntern": 452016,
@@ -20395,6 +20433,22 @@
       "avgPoints": 4.666666666666667,
       "valuation": 58,
       "avgValuation": 3.2222222222222223
+    },
+    {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:C.S.O.:23",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 453739,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 7440253,
+      "playerName": "C.S.O.",
+      "shirtNumber": "23",
+      "games": 15,
+      "minutes": 356,
+      "points": 84,
+      "avgPoints": 5.6,
+      "valuation": 67,
+      "avgValuation": 4.466666666666667
     },
     {
       "key": "1A. TERRITORIAL SENIOR FEMENI::TEAM:80763:CARLOTA FERRER PARLADE:7",
@@ -20573,20 +20627,20 @@
       "avgValuation": 9.11111111111111
     },
     {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:C.S.O.:23",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 453739,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 7440253,
-      "playerName": "C.S.O.",
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:ANNA VILANOVA GAREA:23",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446573,
+      "playerName": "ANNA VILANOVA GAREA",
       "shirtNumber": "23",
-      "games": 14,
-      "minutes": 332,
+      "games": 16,
+      "minutes": 498,
       "points": 82,
-      "avgPoints": 5.857142857142857,
-      "valuation": 66,
-      "avgValuation": 4.714285714285714
+      "avgPoints": 5.125,
+      "valuation": 49,
+      "avgValuation": 3.0625
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:CLAUDIA PORTO ALFONSO:13",
@@ -21101,38 +21155,6 @@
       "avgValuation": 2.8421052631578947
     },
     {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:ANNA VILANOVA GAREA:23",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446573,
-      "playerName": "ANNA VILANOVA GAREA",
-      "shirtNumber": "23",
-      "games": 15,
-      "minutes": 465,
-      "points": 76,
-      "avgPoints": 5.066666666666666,
-      "valuation": 45,
-      "avgValuation": 3
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:CLARA CASTRO GUBERT:7",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446574,
-      "playerName": "CLARA CASTRO GUBERT",
-      "shirtNumber": "7",
-      "games": 9,
-      "minutes": 264,
-      "points": 76,
-      "avgPoints": 8.444444444444445,
-      "valuation": 38,
-      "avgValuation": 4.222222222222222
-    },
-    {
       "key": "COPA CATALUNYA MASCULINA::TEAM:79483:DAVID REVENT\u00D3S RIBA:6",
       "teamKey": "COPA CATALUNYA MASCULINA::TEAM:79483",
       "teamIdIntern": 452162,
@@ -21613,6 +21635,22 @@
       "avgValuation": 3.0714285714285716
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:M.S.O.:25",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 453739,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 7440254,
+      "playerName": "M.S.O.",
+      "shirtNumber": "25",
+      "games": 14,
+      "minutes": 324,
+      "points": 66,
+      "avgPoints": 4.714285714285714,
+      "valuation": 53,
+      "avgValuation": 3.7857142857142856
+    },
+    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659:AL\u00C8XIA SABAT\u00C9 VIDAL:7",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
       "teamIdIntern": 454079,
@@ -21707,6 +21745,22 @@
       "avgPoints": 3.4210526315789473,
       "valuation": 29,
       "avgValuation": 1.5263157894736843
+    },
+    {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:VALENTINA ROCIO DOMINGUEZ FALCONI:13",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 453739,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 7440260,
+      "playerName": "VALENTINA ROCIO DOMINGUEZ FALCONI",
+      "shirtNumber": "13",
+      "games": 13,
+      "minutes": 312,
+      "points": 65,
+      "avgPoints": 5,
+      "valuation": 29,
+      "avgValuation": 2.230769230769231
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:AINET SERRA GONZALEZ:9",
@@ -21805,6 +21859,22 @@
       "avgValuation": -1.4736842105263157
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:GALA PELA\u00D3 SALVAD\u00D3:55",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446576,
+      "playerName": "GALA PELA\u00D3 SALVAD\u00D3",
+      "shirtNumber": "55",
+      "games": 16,
+      "minutes": 441,
+      "points": 63,
+      "avgPoints": 3.9375,
+      "valuation": 43,
+      "avgValuation": 2.6875
+    },
+    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172:GINA ARAEZ CABA:21",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172",
       "teamIdIntern": 454101,
@@ -21819,22 +21889,6 @@
       "avgPoints": 3.9375,
       "valuation": 26,
       "avgValuation": 1.625
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:M.S.O.:25",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 453739,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 7440254,
-      "playerName": "M.S.O.",
-      "shirtNumber": "25",
-      "games": 13,
-      "minutes": 300,
-      "points": 63,
-      "avgPoints": 4.846153846153846,
-      "valuation": 51,
-      "avgValuation": 3.923076923076923
     },
     {
       "key": "COPA CATALUNYA MASCULINA::TEAM:80159:MUSA SAMBA:49",
@@ -21933,22 +21987,6 @@
       "avgValuation": -0.6190476190476191
     },
     {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:VALENTINA ROCIO DOMINGUEZ FALCONI:13",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 453739,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 7440260,
-      "playerName": "VALENTINA ROCIO DOMINGUEZ FALCONI",
-      "shirtNumber": "13",
-      "games": 12,
-      "minutes": 288,
-      "points": 62,
-      "avgPoints": 5.166666666666667,
-      "valuation": 30,
-      "avgValuation": 2.5
-    },
-    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79727:ARIADNA MARINA HERNANDEZ SANCHEZ:21",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79727",
       "teamIdIntern": 458869,
@@ -21979,22 +22017,6 @@
       "avgPoints": 4.357142857142857,
       "valuation": 18,
       "avgValuation": 1.2857142857142858
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:GALA PELA\u00D3 SALVAD\u00D3:55",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446576,
-      "playerName": "GALA PELA\u00D3 SALVAD\u00D3",
-      "shirtNumber": "55",
-      "games": 15,
-      "minutes": 411,
-      "points": 61,
-      "avgPoints": 4.066666666666666,
-      "valuation": 43,
-      "avgValuation": 2.8666666666666667
     },
     {
       "key": "COPA CATALUNYA MASCULINA::TEAM:80159:JORDI PUIG GARCIA:99",
@@ -24349,6 +24371,22 @@
       "avgValuation": 0.6470588235294118
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:LEA MORENO GARCIA:10",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 453739,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 7440255,
+      "playerName": "LEA MORENO GARCIA",
+      "shirtNumber": "10",
+      "games": 15,
+      "minutes": 364,
+      "points": 30,
+      "avgPoints": 2,
+      "valuation": 7,
+      "avgValuation": 0.4666666666666667
+    },
+    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659:J\u00DALIA AGUILERA LLOBET:19",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
       "teamIdIntern": 454079,
@@ -24443,22 +24481,6 @@
       "avgPoints": 2,
       "valuation": 14,
       "avgValuation": 1
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:LEA MORENO GARCIA:10",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 453739,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 7440255,
-      "playerName": "LEA MORENO GARCIA",
-      "shirtNumber": "10",
-      "games": 14,
-      "minutes": 339,
-      "points": 28,
-      "avgPoints": 2,
-      "valuation": 5,
-      "avgValuation": 0.35714285714285715
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:MARTINA HERN\u00C1NDEZ D\u00CDEZ:60",
@@ -25437,6 +25459,22 @@
       "avgValuation": -1.4615384615384615
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:HAWA TRAORE SANOGO:25",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 506581,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 71781776184224659,
+      "playerName": "HAWA TRAORE SANOGO",
+      "shirtNumber": "25",
+      "games": 4,
+      "minutes": 86,
+      "points": 21,
+      "avgPoints": 5.25,
+      "valuation": 2,
+      "avgValuation": 0.5
+    },
+    {
       "key": "COPA CATALUNYA MASCULINA::TEAM:80495:JAN MENA MARTIN:1",
       "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80495",
       "teamIdIntern": 451749,
@@ -25701,12 +25739,12 @@
       "playerActorId": 74481761376623129,
       "playerName": "CHRISTELLE GIL ALVARO",
       "shirtNumber": "40",
-      "games": 9,
-      "minutes": 216,
+      "games": 10,
+      "minutes": 234,
       "points": 19,
-      "avgPoints": 2.111111111111111,
+      "avgPoints": 1.9,
       "valuation": 3,
-      "avgValuation": 0.3333333333333333
+      "avgValuation": 0.3
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315:MAR GIBERT BORRAZ:6",
@@ -25949,22 +25987,6 @@
       "avgValuation": -2.235294117647059
     },
     {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:HAWA TRAORE SANOGO:28",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 520770,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 9559031,
-      "playerName": "HAWA TRAORE SANOGO",
-      "shirtNumber": "28",
-      "games": 3,
-      "minutes": 62,
-      "points": 17,
-      "avgPoints": 5.666666666666667,
-      "valuation": 2,
-      "avgValuation": 0.6666666666666666
-    },
-    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518:HEIDI KATJA ST\u00D6BER CALVET:78",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518",
       "teamIdIntern": 458628,
@@ -26187,6 +26209,22 @@
       "avgPoints": 1.875,
       "valuation": -11,
       "avgValuation": -1.375
+    },
+    {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:CLAUDIA CASTELLET BLANCO:27",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
+      "teamIdIntern": 454114,
+      "teamIdExtern": 82475,
+      "teamName": "DOMINIQUES BARCELONA TARONJA",
+      "playerActorId": 7446578,
+      "playerName": "CLAUDIA CASTELLET BLANCO",
+      "shirtNumber": "27",
+      "games": 16,
+      "minutes": 416,
+      "points": 15,
+      "avgPoints": 0.9375,
+      "valuation": -15,
+      "avgValuation": -0.9375
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:MARIA BERNSHTAM BATLLE:8",
@@ -26459,22 +26497,6 @@
       "avgPoints": 0.8666666666666667,
       "valuation": -10,
       "avgValuation": -0.6666666666666666
-    },
-    {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:CLAUDIA CASTELLET BLANCO:27",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
-      "teamIdIntern": 454114,
-      "teamIdExtern": 82475,
-      "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "playerActorId": 7446578,
-      "playerName": "CLAUDIA CASTELLET BLANCO",
-      "shirtNumber": "27",
-      "games": 15,
-      "minutes": 392,
-      "points": 13,
-      "avgPoints": 0.8666666666666667,
-      "valuation": -17,
-      "avgValuation": -1.1333333333333333
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862:DANIELA SORIANO GUTI\u00C9RREZ:14",
@@ -27085,6 +27107,22 @@
       "avgValuation": -1.7333333333333334
     },
     {
+      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:EMMA CRISOL CARRERAS:19",
+      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
+      "teamIdIntern": 453739,
+      "teamIdExtern": 80192,
+      "teamName": "JOVENTUT BADALONA B",
+      "playerActorId": 7440258,
+      "playerName": "EMMA CRISOL CARRERAS",
+      "shirtNumber": "19",
+      "games": 12,
+      "minutes": 249,
+      "points": 10,
+      "avgPoints": 0.8333333333333334,
+      "valuation": 6,
+      "avgValuation": 0.5
+    },
+    {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:EMMA PAULO SOUTO:30",
       "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
       "teamIdIntern": 454766,
@@ -27677,22 +27715,6 @@
       "avgValuation": 0.2727272727272727
     },
     {
-      "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:EMMA CRISOL CARRERAS:19",
-      "teamKey": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
-      "teamIdIntern": 453739,
-      "teamIdExtern": 80192,
-      "teamName": "JOVENTUT BADALONA B",
-      "playerActorId": 7440258,
-      "playerName": "EMMA CRISOL CARRERAS",
-      "shirtNumber": "19",
-      "games": 11,
-      "minutes": 225,
-      "points": 8,
-      "avgPoints": 0.7272727272727273,
-      "valuation": 6,
-      "avgValuation": 0.5454545454545454
-    },
-    {
       "key": "COPA CATALUNYA MASCULINA::TEAM:80400:IKER SILES NAVARRO:5",
       "teamKey": "COPA CATALUNYA MASCULINA::TEAM:80400",
       "teamIdIntern": 452365,
@@ -28053,12 +28075,12 @@
       "playerActorId": 75111759560527934,
       "playerName": "GINA CRUZ HERRERO",
       "shirtNumber": "8",
-      "games": 14,
-      "minutes": 299,
+      "games": 15,
+      "minutes": 323,
       "points": 6,
-      "avgPoints": 0.42857142857142855,
+      "avgPoints": 0.4,
       "valuation": -16,
-      "avgValuation": -1.1428571428571428
+      "avgValuation": -1.0666666666666667
     },
     {
       "key": "C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:HIAWA TRAORE SANOGO:28",
@@ -28181,12 +28203,12 @@
       "playerActorId": 7440256,
       "playerName": "QUERALT MELERO VARGAS",
       "shirtNumber": "14",
-      "games": 11,
-      "minutes": 243,
+      "games": 12,
+      "minutes": 266,
       "points": 6,
-      "avgPoints": 0.5454545454545454,
-      "valuation": -2,
-      "avgValuation": -0.18181818181818182
+      "avgPoints": 0.5,
+      "valuation": -4,
+      "avgValuation": -0.3333333333333333
     },
     {
       "key": "COPA CATALUNYA MASCULINA::TEAM:78904:QUIM BENAVENT BASSAS:33",
