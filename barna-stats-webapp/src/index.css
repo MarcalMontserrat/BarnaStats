@@ -117,7 +117,7 @@ a {
 /* Portrait mobile: hide team names in match cards to avoid overlap */
 @media (orientation: portrait) and (max-width: 640px) {
   .match-team-text {
-    display: none;
+    display: none !important;
   }
 
   .match-team-side {
