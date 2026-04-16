@@ -57,7 +57,6 @@ const styles = {
     },
     tableShell: {
         overflowX: "auto",
-        WebkitOverflowScrolling: "touch",
         borderRadius: "var(--radius-lg)",
         border: "1px solid rgba(26, 53, 87, 0.1)",
         boxShadow: "var(--shadow-sm)"
