@@ -240,6 +240,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                     games: 0,
                     points: 0,
                     valuation: 0,
+                    fouls: 0,
                     minutes: 0,
                     teams: new Map()
                 });
@@ -249,6 +250,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
             seasonSummary.games += Number(player.games ?? 0);
             seasonSummary.points += Number(player.points ?? 0);
             seasonSummary.valuation += Number(player.valuation ?? 0);
+            seasonSummary.fouls += Number(player.fouls ?? 0);
             seasonSummary.minutes += Number(player.minutes ?? 0);
             seasonSummary.playerName = player.playerName ?? seasonSummary.playerName;
 
@@ -278,9 +280,11 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                         games: seasonSummary.games,
                         points: seasonSummary.points,
                         valuation: seasonSummary.valuation,
+                        fouls: seasonSummary.fouls,
                         minutes: seasonSummary.minutes,
                         avgPoints: seasonSummary.games > 0 ? seasonSummary.points / seasonSummary.games : 0,
                         avgValuation: seasonSummary.games > 0 ? seasonSummary.valuation / seasonSummary.games : 0,
+                        avgFouls: seasonSummary.games > 0 ? seasonSummary.fouls / seasonSummary.games : 0,
                         avgMinutes: seasonSummary.games > 0 ? seasonSummary.minutes / seasonSummary.games : 0,
                         teamNames,
                         primaryTeamName: teamNames[0] ?? "",
@@ -292,6 +296,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
             const totalGames = seasonSummaries.reduce((sum, season) => sum + season.games, 0);
             const totalPoints = seasonSummaries.reduce((sum, season) => sum + season.points, 0);
             const totalValuation = seasonSummaries.reduce((sum, season) => sum + season.valuation, 0);
+            const totalFouls = seasonSummaries.reduce((sum, season) => sum + season.fouls, 0);
             const totalMinutes = seasonSummaries.reduce((sum, season) => sum + season.minutes, 0);
             const latestSeason = seasonSummaries[0] ?? null;
             const metaParts = [];
@@ -314,9 +319,11 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                     games: totalGames,
                     points: totalPoints,
                     valuation: totalValuation,
+                    fouls: totalFouls,
                     minutes: totalMinutes,
                     avgPoints: totalGames > 0 ? totalPoints / totalGames : 0,
                     avgValuation: totalGames > 0 ? totalValuation / totalGames : 0,
+                    avgFouls: totalGames > 0 ? totalFouls / totalGames : 0,
                     avgMinutes: totalGames > 0 ? totalMinutes / totalGames : 0
                 },
                 seasonSummaries

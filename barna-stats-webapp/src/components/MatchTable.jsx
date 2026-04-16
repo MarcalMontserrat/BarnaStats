@@ -8,7 +8,7 @@ const tableStyles = {
     },
     table: {
         width: "100%",
-        minWidth: 860,
+        minWidth: 940,
         borderCollapse: "collapse",
         background: "rgba(255, 252, 247, 0.96)"
     },
@@ -82,6 +82,7 @@ function MatchTable({players, onPlayerNavigate}) {
                     <th style={tableStyles.headerCell}>T2</th>
                     <th style={tableStyles.headerCell}>T3</th>
                     <th style={tableStyles.headerCell}>Min</th>
+                    <th style={tableStyles.headerCell}>Flt</th>
                     <th style={tableStyles.headerCell}>Val</th>
                 </tr>
                 </thead>
@@ -131,6 +132,7 @@ function MatchTable({players, onPlayerNavigate}) {
                                 {formatShots(player.threeMade, player.threeAttempted)}
                             </td>
                             <td style={tableStyles.bodyCell}>{player.minutes}</td>
+                            <td style={tableStyles.bodyCell}>{player.fouls ?? 0}</td>
                             <td style={tableStyles.bodyCell}>{player.valuation}</td>
                         </tr>
                     );

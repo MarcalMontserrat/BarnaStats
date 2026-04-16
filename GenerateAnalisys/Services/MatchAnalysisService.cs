@@ -580,7 +580,9 @@ public sealed class MatchAnalysisService
                 Points = player.Points,
                 AvgPoints = player.Games > 0 ? (double)player.Points / player.Games : 0,
                 Valuation = player.Valuation,
-                AvgValuation = player.Games > 0 ? (double)player.Valuation / player.Games : 0
+                AvgValuation = player.Games > 0 ? (double)player.Valuation / player.Games : 0,
+                Fouls = player.Fouls,
+                AvgFouls = player.Games > 0 ? (double)player.Fouls / player.Games : 0
             })
             .OrderByDescending(player => player.Points)
             .ThenBy(player => player.PlayerName, StringComparer.OrdinalIgnoreCase)

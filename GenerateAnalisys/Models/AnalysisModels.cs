@@ -293,6 +293,8 @@ public sealed class CompetitionPlayerLeader
     public double AvgPoints { get; init; }
     public int Valuation { get; init; }
     public double AvgValuation { get; init; }
+    public int Fouls { get; init; }
+    public double AvgFouls { get; init; }
 }
 
 public sealed class CompetitionAnalysis

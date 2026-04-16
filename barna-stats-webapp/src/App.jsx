@@ -2000,14 +2000,15 @@ function App() {
                                     <div style={appStyles.heroKicker}>Ficha histórica</div>
                                     <h2 style={appStyles.heroTitle}>{selectedHistoricalPlayer.label}</h2>
                                     <p style={appStyles.heroSummary}>
-                                        {playerTotals.points} puntos, {playerTotals.valuation} de valoración y {playerTotals.games} partidos
-                                        acumulados en {playerTotals.seasons} temporada{playerTotals.seasons === 1 ? "" : "s"}.
+                                        {playerTotals.points} puntos, {playerTotals.valuation} de valoración, {playerTotals.fouls} faltas
+                                        y {playerTotals.games} partidos acumulados en {playerTotals.seasons} temporada{playerTotals.seasons === 1 ? "" : "s"}.
                                     </p>
                                 </div>
 
                                 <div style={appStyles.heroMetaRow}>
                                     <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgPoints, 1)} puntos por partido</span>
                                     <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgValuation, 1)} valoración media</span>
+                                    <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgFouls, 1)} faltas por partido</span>
                                     <span style={appStyles.metaChip}>{playerTotals.minutes} minutos acumulados</span>
                                 </div>
                             </div>
@@ -2039,6 +2040,12 @@ function App() {
                             </div>
 
                             <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Faltas</div>
+                                <div style={appStyles.seasonMetricValue}>{playerTotals.fouls}</div>
+                                <div style={appStyles.seasonMetricMeta}>Faltas personales acumuladas</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
                                 <div style={appStyles.seasonMetricLabel}>Val media</div>
                                 <div style={appStyles.seasonMetricValue}>{formatDecimal(playerTotals.avgValuation, 1)}</div>
                                 <div style={appStyles.seasonMetricMeta}>Valoración media global</div>
@@ -2048,6 +2055,12 @@ function App() {
                                 <div style={appStyles.seasonMetricLabel}>Pts/partido</div>
                                 <div style={appStyles.seasonMetricValue}>{formatDecimal(playerTotals.avgPoints, 1)}</div>
                                 <div style={appStyles.seasonMetricMeta}>Producción anotadora global</div>
+                            </div>
+
+                            <div style={appStyles.seasonMetricCard}>
+                                <div style={appStyles.seasonMetricLabel}>Flt/partido</div>
+                                <div style={appStyles.seasonMetricValue}>{formatDecimal(playerTotals.avgFouls, 1)}</div>
+                                <div style={appStyles.seasonMetricMeta}>Carga de faltas global</div>
                             </div>
                         </section>
 
@@ -2079,6 +2092,12 @@ function App() {
                                             <div style={appStyles.seasonMetricLabel}>Valoración</div>
                                             <div style={appStyles.seasonMetricValue}>{seasonSummary.valuation}</div>
                                             <div style={appStyles.seasonMetricMeta}>{formatDecimal(seasonSummary.avgValuation, 1)} de media</div>
+                                        </div>
+
+                                        <div style={appStyles.seasonMetricCard}>
+                                            <div style={appStyles.seasonMetricLabel}>Faltas</div>
+                                            <div style={appStyles.seasonMetricValue}>{seasonSummary.fouls}</div>
+                                            <div style={appStyles.seasonMetricMeta}>{formatDecimal(seasonSummary.avgFouls, 1)} por partido</div>
                                         </div>
 
                                         <div style={appStyles.seasonMetricCard}>

@@ -166,6 +166,12 @@ function PlayerEvolutionSection({
                             </div>
 
                             <div style={styles.summaryCard}>
+                                <div style={styles.summaryLabel}>Faltas</div>
+                                <div style={styles.summaryValue}>{selectedPlayerSummary.fouls}</div>
+                                <div style={styles.summaryMeta}>{formatMetric(selectedPlayerSummary.avgFouls)} por partido.</div>
+                            </div>
+
+                            <div style={styles.summaryCard}>
                                 <div style={styles.summaryLabel}>Tope de puntos</div>
                                 <div style={styles.summaryValue}>{selectedPlayerSummary.bestPointsGame}</div>
                                 <div style={styles.summaryMeta}>Mejor partido en anotación.</div>
