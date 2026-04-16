@@ -2,7 +2,7 @@
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
   "totalTeams": 213,
-  "totalMatches": 1961,
+  "totalMatches": 1962,
   "phases": [
     {
       "seasonStartYear": 2025,
@@ -566,7 +566,7 @@
       "levelName": "Nivell B2",
       "levelCode": "B2",
       "groupCode": "01",
-      "matchesCount": 34
+      "matchesCount": 35
     },
     {
       "seasonStartYear": 2025,
@@ -1047,7 +1047,7 @@
       "teamIdIntern": 459741,
       "teamIdExtern": 79709,
       "teamName": "BC TECLA SALA  A",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 11
     },
     {
@@ -1143,7 +1143,7 @@
       "teamIdIntern": 454749,
       "teamIdExtern": 81185,
       "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 13
     },
     {
@@ -49627,6 +49627,30 @@
       "topScorer": "MARTINA SOLE ABELLO",
       "topScorerTeam": "DOMINIQUES BARCELONA TARONJA",
       "topScorerPoints": 15
+    },
+    {
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "matchWebId": 65932,
+      "matchInternId": 277323,
+      "matchExternId": 1168369,
+      "matchDate": "2026-04-15T20:30:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21537,
+      "categoryName": "C.t. Pre-mini Femen\u00ED",
+      "phaseName": "Segona Fase",
+      "levelName": "Nivell B2",
+      "levelCode": "B2",
+      "groupCode": "01",
+      "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "homeTeam": "BC TECLA SALA  A",
+      "homeScore": 64,
+      "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "awayTeam": "C.B GRUP BARNA A",
+      "awayScore": 76,
+      "topScorer": "CARLA PULIDO GONZALEZ",
+      "topScorerTeam": "C.B GRUP BARNA A",
+      "topScorerPoints": 24
     }
   ],
   "standingsByPhase": [
@@ -52248,6 +52272,18 @@
         },
         {
           "position": 13,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+          "teamName": "C.B GRUP BARNA A",
+          "played": 11,
+          "wins": 9,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 596,
+          "pointsAgainst": 469,
+          "pointDiff": 127
+        },
+        {
+          "position": 14,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
           "teamName": "AB PREMI\u00C0",
           "played": 11,
@@ -52259,7 +52295,7 @@
           "pointDiff": 115
         },
         {
-          "position": 14,
+          "position": 15,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
           "teamName": "FC MARTINENC B\u00C0SQUET A",
           "played": 11,
@@ -52271,7 +52307,7 @@
           "pointDiff": 109
         },
         {
-          "position": 15,
+          "position": 16,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
           "teamName": "CB TARRAGONA",
           "played": 11,
@@ -52283,7 +52319,7 @@
           "pointDiff": 85
         },
         {
-          "position": 16,
+          "position": 17,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79988",
           "teamName": "B\u00C0SQUET SAFA CLAROR B",
           "played": 12,
@@ -52295,7 +52331,7 @@
           "pointDiff": 110
         },
         {
-          "position": 17,
+          "position": 18,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
           "teamName": "U.E.MATAR\u00D3 - PRBF",
           "played": 8,
@@ -52307,7 +52343,7 @@
           "pointDiff": 434
         },
         {
-          "position": 18,
+          "position": 19,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973",
           "teamName": "CB NAV\u00C0S B",
           "played": 8,
@@ -52319,7 +52355,7 @@
           "pointDiff": 270
         },
         {
-          "position": 19,
+          "position": 20,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85230",
           "teamName": "QBASKET SANT CUGAT NEGRE",
           "played": 8,
@@ -52331,7 +52367,7 @@
           "pointDiff": 207
         },
         {
-          "position": 20,
+          "position": 21,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
           "teamName": "C.B.VILASSAR DE MAR 1984",
           "played": 9,
@@ -52343,7 +52379,7 @@
           "pointDiff": 425
         },
         {
-          "position": 21,
+          "position": 22,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
           "teamName": "VEDRUNA GR\u00C0CIA VERD",
           "played": 9,
@@ -52355,7 +52391,7 @@
           "pointDiff": 351
         },
         {
-          "position": 22,
+          "position": 23,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
           "teamName": "BASQUET NEUS",
           "played": 9,
@@ -52367,7 +52403,7 @@
           "pointDiff": 145
         },
         {
-          "position": 23,
+          "position": 24,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
           "teamName": "EL MASNOU BASQUETBOL",
           "played": 9,
@@ -52379,7 +52415,7 @@
           "pointDiff": 114
         },
         {
-          "position": 24,
+          "position": 25,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79503",
           "teamName": "PAIDOS-ASFE U10F VERD",
           "played": 10,
@@ -52391,7 +52427,7 @@
           "pointDiff": 283
         },
         {
-          "position": 25,
+          "position": 26,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
           "teamName": "JAC SANTS BARCELONA U10",
           "played": 10,
@@ -52403,7 +52439,7 @@
           "pointDiff": 280
         },
         {
-          "position": 26,
+          "position": 27,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81426",
           "teamName": "CB JOVENTUT CASTELLDEFELS",
           "played": 10,
@@ -52415,7 +52451,7 @@
           "pointDiff": 158
         },
         {
-          "position": 27,
+          "position": 28,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
           "teamName": "VILAB\u00C0SQUET VILADECANS PMF BLANC",
           "played": 10,
@@ -52427,7 +52463,7 @@
           "pointDiff": 147
         },
         {
-          "position": 28,
+          "position": 29,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
           "teamName": "SESE C",
           "played": 10,
@@ -52437,18 +52473,6 @@
           "pointsFor": 436,
           "pointsAgainst": 295,
           "pointDiff": 141
-        },
-        {
-          "position": 29,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-          "teamName": "C.B GRUP BARNA A",
-          "played": 10,
-          "wins": 8,
-          "losses": 2,
-          "ties": 0,
-          "pointsFor": 520,
-          "pointsAgainst": 405,
-          "pointDiff": 115
         },
         {
           "position": 30,
@@ -52968,18 +52992,6 @@
         },
         {
           "position": 73,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-          "teamName": "BC TECLA SALA  A",
-          "played": 10,
-          "wins": 6,
-          "losses": 3,
-          "ties": 1,
-          "pointsFor": 523,
-          "pointsAgainst": 471,
-          "pointDiff": 52
-        },
-        {
-          "position": 74,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569",
           "teamName": "GRAMENET BC",
           "played": 10,
@@ -52991,7 +53003,7 @@
           "pointDiff": 83
         },
         {
-          "position": 75,
+          "position": 74,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401",
           "teamName": "CREU ALTA SABADELL",
           "played": 10,
@@ -53003,7 +53015,7 @@
           "pointDiff": 56
         },
         {
-          "position": 76,
+          "position": 75,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
           "teamName": "SANT GERVASI 2",
           "played": 10,
@@ -53015,7 +53027,7 @@
           "pointDiff": 52
         },
         {
-          "position": 77,
+          "position": 76,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81875",
           "teamName": "CB ART\u00C9S",
           "played": 10,
@@ -53025,6 +53037,18 @@
           "pointsFor": 457,
           "pointsAgainst": 411,
           "pointDiff": 46
+        },
+        {
+          "position": 77,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+          "teamName": "BC TECLA SALA  A",
+          "played": 11,
+          "wins": 6,
+          "losses": 4,
+          "ties": 1,
+          "pointsFor": 587,
+          "pointsAgainst": 547,
+          "pointDiff": 40
         },
         {
           "position": 78,
@@ -54893,6 +54917,28 @@
       "avgFouls": 3.5652173913043477
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:9b560b5e-7d89-46c1-a42a-51ef7303e3f9:16",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "9b560b5e-7d89-46c1-a42a-51ef7303e3f9",
+      "playerActorId": 7456910,
+      "playerIdentityKey": "UUID:9b560b5e-7d89-46c1-a42a-51ef7303e3f9",
+      "playerName": "CARLA PULIDO GONZALEZ",
+      "shirtNumber": "16",
+      "games": 17,
+      "minutes": 522,
+      "points": 356,
+      "avgPoints": 20.941176470588236,
+      "valuation": 318,
+      "avgValuation": 18.705882352941178,
+      "fouls": 15,
+      "avgFouls": 0.8823529411764706
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80367:UUID:01327e1e-98d1-11e9-a2a5-0216824770c2:17",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80367",
       "teamIdIntern": 450154,
@@ -55001,28 +55047,6 @@
       "avgValuation": 9.173913043478262,
       "fouls": 61,
       "avgFouls": 2.652173913043478
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:9b560b5e-7d89-46c1-a42a-51ef7303e3f9:16",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "9b560b5e-7d89-46c1-a42a-51ef7303e3f9",
-      "playerActorId": 7456910,
-      "playerIdentityKey": "UUID:9b560b5e-7d89-46c1-a42a-51ef7303e3f9",
-      "playerName": "CARLA PULIDO GONZALEZ",
-      "shirtNumber": "16",
-      "games": 16,
-      "minutes": 486,
-      "points": 332,
-      "avgPoints": 20.75,
-      "valuation": 295,
-      "avgValuation": 18.4375,
-      "fouls": 15,
-      "avgFouls": 0.9375
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81467:UUID:cbc485d9-7e0d-4b25-a822-8c6b16c64df0:4",
@@ -56609,6 +56633,28 @@
       "avgFouls": 2.5789473684210527
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:9f746308-d70a-4b9f-a24a-e325d5aae2d4:16",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "9f746308-d70a-4b9f-a24a-e325d5aae2d4",
+      "playerActorId": 7544227,
+      "playerIdentityKey": "UUID:9f746308-d70a-4b9f-a24a-e325d5aae2d4",
+      "playerName": "JOHANNA ZARELY VALLADOLID CARRANZA",
+      "shirtNumber": "16",
+      "games": 17,
+      "minutes": 538,
+      "points": 244,
+      "avgPoints": 14.352941176470589,
+      "valuation": 156,
+      "avgValuation": 9.176470588235293,
+      "fouls": 27,
+      "avgFouls": 1.588235294117647
+    },
+    {
       "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79263:UUID:006ffce3-98d1-11e9-a2a5-0216824770c2:0",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79263",
       "teamIdIntern": 452163,
@@ -57113,28 +57159,6 @@
       "avgValuation": 11.294117647058824,
       "fouls": 13,
       "avgFouls": 0.7647058823529411
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:9f746308-d70a-4b9f-a24a-e325d5aae2d4:16",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "9f746308-d70a-4b9f-a24a-e325d5aae2d4",
-      "playerActorId": 7544227,
-      "playerIdentityKey": "UUID:9f746308-d70a-4b9f-a24a-e325d5aae2d4",
-      "playerName": "JOHANNA ZARELY VALLADOLID CARRANZA",
-      "shirtNumber": "16",
-      "games": 16,
-      "minutes": 508,
-      "points": 227,
-      "avgPoints": 14.1875,
-      "valuation": 140,
-      "avgValuation": 8.75,
-      "fouls": 26,
-      "avgFouls": 1.625
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749:UUID:00dbeef4-98d1-11e9-a2a5-0216824770c2:30",
@@ -60371,6 +60395,28 @@
       "avgFouls": 2.3
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:0c6a66ec-51cf-4d41-be2a-6b266e1fd466:31",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "0c6a66ec-51cf-4d41-be2a-6b266e1fd466",
+      "playerActorId": 7544232,
+      "playerIdentityKey": "UUID:0c6a66ec-51cf-4d41-be2a-6b266e1fd466",
+      "playerName": "EMMA LLOP FERNANDEZ",
+      "shirtNumber": "31",
+      "games": 17,
+      "minutes": 566,
+      "points": 173,
+      "avgPoints": 10.176470588235293,
+      "valuation": 108,
+      "avgValuation": 6.352941176470588,
+      "fouls": 36,
+      "avgFouls": 2.1176470588235294
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807:UUID:01241cef-98d1-11e9-a2a5-0216824770c2:5",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807",
       "teamIdIntern": 450548,
@@ -60567,28 +60613,6 @@
       "avgValuation": 8.533333333333333,
       "fouls": 21,
       "avgFouls": 1.4
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:0c6a66ec-51cf-4d41-be2a-6b266e1fd466:31",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "0c6a66ec-51cf-4d41-be2a-6b266e1fd466",
-      "playerActorId": 7544232,
-      "playerIdentityKey": "UUID:0c6a66ec-51cf-4d41-be2a-6b266e1fd466",
-      "playerName": "EMMA LLOP FERNANDEZ",
-      "shirtNumber": "31",
-      "games": 16,
-      "minutes": 536,
-      "points": 168,
-      "avgPoints": 10.5,
-      "valuation": 109,
-      "avgValuation": 6.8125,
-      "fouls": 32,
-      "avgFouls": 2
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:012c5288-98d1-11e9-a2a5-0216824770c2:19",
@@ -62153,6 +62177,28 @@
       "avgFouls": 1.8235294117647058
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:1a569b3d-b889-4372-8be0-06159c3e983c:7",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "1a569b3d-b889-4372-8be0-06159c3e983c",
+      "playerActorId": 7544233,
+      "playerIdentityKey": "UUID:1a569b3d-b889-4372-8be0-06159c3e983c",
+      "playerName": "HELENA ROIG MARTINEZ",
+      "shirtNumber": "7",
+      "games": 18,
+      "minutes": 494,
+      "points": 150,
+      "avgPoints": 8.333333333333334,
+      "valuation": 105,
+      "avgValuation": 5.833333333333333,
+      "fouls": 20,
+      "avgFouls": 1.1111111111111112
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:2cf3c218-3570-4c08-a818-396b26e894da:10",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
       "teamIdIntern": 456900,
@@ -62371,28 +62417,6 @@
       "avgValuation": 4.4375,
       "fouls": 43,
       "avgFouls": 2.6875
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:1a569b3d-b889-4372-8be0-06159c3e983c:7",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "1a569b3d-b889-4372-8be0-06159c3e983c",
-      "playerActorId": 7544233,
-      "playerIdentityKey": "UUID:1a569b3d-b889-4372-8be0-06159c3e983c",
-      "playerName": "HELENA ROIG MARTINEZ",
-      "shirtNumber": "7",
-      "games": 17,
-      "minutes": 470,
-      "points": 147,
-      "avgPoints": 8.647058823529411,
-      "valuation": 104,
-      "avgValuation": 6.117647058823529,
-      "fouls": 19,
-      "avgFouls": 1.1176470588235294
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78650:UUID:48a387b3-5b2d-4a2d-8eee-488bd604933b:33",
@@ -66157,6 +66181,28 @@
       "avgFouls": 0.5294117647058824
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e:19",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "f07007f7-a07d-4c23-9ea8-cef809fd396e",
+      "playerActorId": 7456913,
+      "playerIdentityKey": "UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e",
+      "playerName": "M.C.M.",
+      "shirtNumber": "19",
+      "games": 16,
+      "minutes": 466,
+      "points": 120,
+      "avgPoints": 7.5,
+      "valuation": 70,
+      "avgValuation": 4.375,
+      "fouls": 36,
+      "avgFouls": 2.25
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81443:UUID:76eafba5-7e63-4019-8c4a-aaf1662a72be:24",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81443",
       "teamIdIntern": 453442,
@@ -66221,6 +66267,28 @@
       "avgValuation": 7.285714285714286,
       "fouls": 10,
       "avgFouls": 0.7142857142857143
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:897a3d05-abf9-420d-b56e-7ba7a9996831:12",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "897a3d05-abf9-420d-b56e-7ba7a9996831",
+      "playerActorId": 7544226,
+      "playerIdentityKey": "UUID:897a3d05-abf9-420d-b56e-7ba7a9996831",
+      "playerName": "ALBA G\u00C1MEZ GRAGERA",
+      "shirtNumber": "12",
+      "games": 16,
+      "minutes": 502,
+      "points": 119,
+      "avgPoints": 7.4375,
+      "valuation": 62,
+      "avgValuation": 3.875,
+      "fouls": 16,
+      "avgFouls": 1
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82149:UUID:62b85a74-04f5-4e45-ac55-50aba0e74198:17",
@@ -66883,6 +66951,28 @@
       "avgFouls": 1.9130434782608696
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc:23",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 464925,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "37982bdd-7972-4bb1-a7c5-f26a0cccf3cc",
+      "playerActorId": 7651127,
+      "playerIdentityKey": "UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc",
+      "playerName": "SOFIA MOYA KLOTZ",
+      "shirtNumber": "23",
+      "games": 12,
+      "minutes": 352,
+      "points": 114,
+      "avgPoints": 9.5,
+      "valuation": 60,
+      "avgValuation": 5,
+      "fouls": 22,
+      "avgFouls": 1.8333333333333333
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839:UUID:ad24e1e0-aa03-4389-a76d-fbb341f163a2:1",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839",
       "teamIdIntern": 453460,
@@ -67211,28 +67301,6 @@
       "avgValuation": -3,
       "fouls": 56,
       "avgFouls": 2.5454545454545454
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e:19",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "f07007f7-a07d-4c23-9ea8-cef809fd396e",
-      "playerActorId": 7456913,
-      "playerIdentityKey": "UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e",
-      "playerName": "M.C.M.",
-      "shirtNumber": "19",
-      "games": 15,
-      "minutes": 436,
-      "points": 112,
-      "avgPoints": 7.466666666666667,
-      "valuation": 63,
-      "avgValuation": 4.2,
-      "fouls": 35,
-      "avgFouls": 2.3333333333333335
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076:UUID:00adca71-98d1-11e9-a2a5-0216824770c2:9",
@@ -67585,28 +67653,6 @@
       "avgValuation": 6.333333333333333,
       "fouls": 9,
       "avgFouls": 0.6
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:897a3d05-abf9-420d-b56e-7ba7a9996831:12",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "897a3d05-abf9-420d-b56e-7ba7a9996831",
-      "playerActorId": 7544226,
-      "playerIdentityKey": "UUID:897a3d05-abf9-420d-b56e-7ba7a9996831",
-      "playerName": "ALBA G\u00C1MEZ GRAGERA",
-      "shirtNumber": "12",
-      "games": 15,
-      "minutes": 472,
-      "points": 109,
-      "avgPoints": 7.266666666666667,
-      "valuation": 54,
-      "avgValuation": 3.6,
-      "fouls": 14,
-      "avgFouls": 0.9333333333333333
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443:UUID:00c779a3-98d1-11e9-a2a5-0216824770c2:7",
@@ -68487,6 +68533,28 @@
       "avgValuation": 3,
       "fouls": 38,
       "avgFouls": 2.7142857142857144
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:fd098b5f-dc29-4107-adac-e6dd7cca2084:11",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "fd098b5f-dc29-4107-adac-e6dd7cca2084",
+      "playerActorId": 7544231,
+      "playerIdentityKey": "UUID:fd098b5f-dc29-4107-adac-e6dd7cca2084",
+      "playerName": "NORA CABALLERO ARIZA",
+      "shirtNumber": "11",
+      "games": 18,
+      "minutes": 550,
+      "points": 104,
+      "avgPoints": 5.777777777777778,
+      "valuation": 43,
+      "avgValuation": 2.388888888888889,
+      "fouls": 20,
+      "avgFouls": 1.1111111111111112
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80555:UUID:01549928-98d1-11e9-a2a5-0216824770c2:16",
@@ -69433,28 +69501,6 @@
       "avgValuation": 3.238095238095238,
       "fouls": 21,
       "avgFouls": 1
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc:23",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 464925,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "37982bdd-7972-4bb1-a7c5-f26a0cccf3cc",
-      "playerActorId": 7651127,
-      "playerIdentityKey": "UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc",
-      "playerName": "SOFIA MOYA KLOTZ",
-      "shirtNumber": "23",
-      "games": 11,
-      "minutes": 322,
-      "points": 100,
-      "avgPoints": 9.090909090909092,
-      "valuation": 48,
-      "avgValuation": 4.363636363636363,
-      "fouls": 20,
-      "avgFouls": 1.8181818181818181
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:1dd1b879-7e9c-467e-bbe4-8f24a680b6fc:5",
@@ -70445,28 +70491,6 @@
       "avgValuation": 7,
       "fouls": 10,
       "avgFouls": 0.8333333333333334
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:fd098b5f-dc29-4107-adac-e6dd7cca2084:11",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "fd098b5f-dc29-4107-adac-e6dd7cca2084",
-      "playerActorId": 7544231,
-      "playerIdentityKey": "UUID:fd098b5f-dc29-4107-adac-e6dd7cca2084",
-      "playerName": "NORA CABALLERO ARIZA",
-      "shirtNumber": "11",
-      "games": 17,
-      "minutes": 520,
-      "points": 96,
-      "avgPoints": 5.647058823529412,
-      "valuation": 38,
-      "avgValuation": 2.235294117647059,
-      "fouls": 17,
-      "avgFouls": 1
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:604a5e12-6328-4cdf-af68-bfd5c12e5d1d:5",
@@ -75903,6 +75927,28 @@
       "avgFouls": 0.8823529411764706
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5:10",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5",
+      "playerActorId": 7456911,
+      "playerIdentityKey": "UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5",
+      "playerName": "RANIA MOUSSAOUI SASTRES",
+      "shirtNumber": "10",
+      "games": 17,
+      "minutes": 415,
+      "points": 74,
+      "avgPoints": 4.352941176470588,
+      "valuation": 47,
+      "avgValuation": 2.764705882352941,
+      "fouls": 18,
+      "avgFouls": 1.0588235294117647
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82479:UUID:551f3ff3-16c3-4896-94c8-a209cbd0d1ac:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82479",
       "teamIdIntern": 454824,
@@ -77575,6 +77621,28 @@
       "avgFouls": 3.590909090909091
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:125b5bc7-bc8b-44f4-967d-f428a184736a:15",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "125b5bc7-bc8b-44f4-967d-f428a184736a",
+      "playerActorId": 7544230,
+      "playerIdentityKey": "UUID:125b5bc7-bc8b-44f4-967d-f428a184736a",
+      "playerName": "L\u00C9A AGUT ASIA",
+      "shirtNumber": "15",
+      "games": 15,
+      "minutes": 423,
+      "points": 67,
+      "avgPoints": 4.466666666666667,
+      "valuation": 22,
+      "avgValuation": 1.4666666666666666,
+      "fouls": 17,
+      "avgFouls": 1.1333333333333333
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876:UUID:2c19deac-7e9b-4f34-97a4-2395dd10ccf4:14",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876",
       "teamIdIntern": 454835,
@@ -78783,28 +78851,6 @@
       "avgValuation": -2.15,
       "fouls": 52,
       "avgFouls": 2.6
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5:10",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5",
-      "playerActorId": 7456911,
-      "playerIdentityKey": "UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5",
-      "playerName": "RANIA MOUSSAOUI SASTRES",
-      "shirtNumber": "10",
-      "games": 16,
-      "minutes": 391,
-      "points": 63,
-      "avgPoints": 3.9375,
-      "valuation": 39,
-      "avgValuation": 2.4375,
-      "fouls": 15,
-      "avgFouls": 0.9375
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79503:UUID:46dc203f-1461-4b51-bd18-15f734286093:17",
@@ -80601,14 +80647,14 @@
       "playerIdentityKey": "UUID:ba70b46f-b995-48c0-8149-dbe1b5175fc9",
       "playerName": "LAIA LLAMAS RUIZ",
       "shirtNumber": "6",
-      "games": 10,
-      "minutes": 248,
+      "games": 11,
+      "minutes": 266,
       "points": 57,
-      "avgPoints": 5.7,
+      "avgPoints": 5.181818181818182,
       "valuation": 37,
-      "avgValuation": 3.7,
+      "avgValuation": 3.3636363636363638,
       "fouls": 9,
-      "avgFouls": 0.9
+      "avgFouls": 0.8181818181818182
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78841:UUID:0096c91f-98d1-11e9-a2a5-0216824770c2:13",
@@ -80697,6 +80743,28 @@
       "avgValuation": 3.1875,
       "fouls": 1,
       "avgFouls": 0.0625
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d:2",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "312a4bd1-ffc6-42fe-81b9-1d03ecbe001d",
+      "playerActorId": 7456905,
+      "playerIdentityKey": "UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d",
+      "playerName": "ARLET BALAGUER\u00D3 PI\u00D1AS",
+      "shirtNumber": "2",
+      "games": 16,
+      "minutes": 435,
+      "points": 56,
+      "avgPoints": 3.5,
+      "valuation": 20,
+      "avgValuation": 1.25,
+      "fouls": 25,
+      "avgFouls": 1.5625
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824:UUID:b2e3f39a-d644-482e-9d09-39e4291bac70:2",
@@ -80851,28 +80919,6 @@
       "avgValuation": -1.3181818181818181,
       "fouls": 46,
       "avgFouls": 2.090909090909091
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:125b5bc7-bc8b-44f4-967d-f428a184736a:15",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "125b5bc7-bc8b-44f4-967d-f428a184736a",
-      "playerActorId": 7544230,
-      "playerIdentityKey": "UUID:125b5bc7-bc8b-44f4-967d-f428a184736a",
-      "playerName": "L\u00C9A AGUT ASIA",
-      "shirtNumber": "15",
-      "games": 14,
-      "minutes": 399,
-      "points": 56,
-      "avgPoints": 4,
-      "valuation": 14,
-      "avgValuation": 1,
-      "fouls": 16,
-      "avgFouls": 1.1428571428571428
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807:UUID:00b651e9-98d1-11e9-a2a5-0216824770c2:11",
@@ -81489,28 +81535,6 @@
       "avgValuation": 2.125,
       "fouls": 5,
       "avgFouls": 0.3125
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d:2",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "312a4bd1-ffc6-42fe-81b9-1d03ecbe001d",
-      "playerActorId": 7456905,
-      "playerIdentityKey": "UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d",
-      "playerName": "ARLET BALAGUER\u00D3 PI\u00D1AS",
-      "shirtNumber": "2",
-      "games": 15,
-      "minutes": 411,
-      "points": 53,
-      "avgPoints": 3.533333333333333,
-      "valuation": 20,
-      "avgValuation": 1.3333333333333333,
-      "fouls": 23,
-      "avgFouls": 1.5333333333333334
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79813:UUID:0032a6a6-98d1-11e9-a2a5-0216824770c2:17",
@@ -83757,6 +83781,28 @@
       "avgFouls": 0.5833333333333334
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:dc85977b-d277-4fa3-a4c4-2f0d7aec1fbb:4",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "dc85977b-d277-4fa3-a4c4-2f0d7aec1fbb",
+      "playerActorId": 7544234,
+      "playerIdentityKey": "UUID:dc85977b-d277-4fa3-a4c4-2f0d7aec1fbb",
+      "playerName": "DANIELA MART\u00CDN L\u00C1ZARO",
+      "shirtNumber": "4",
+      "games": 16,
+      "minutes": 343,
+      "points": 45,
+      "avgPoints": 2.8125,
+      "valuation": 38,
+      "avgValuation": 2.375,
+      "fouls": 0,
+      "avgFouls": 0
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:d04d97b7-59d6-4205-a66c-f371b2660512:1",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799",
       "teamIdIntern": 453804,
@@ -84109,6 +84155,28 @@
       "avgFouls": 0
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:d9c89a84-52a4-416a-b245-86400d284e49:12",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "d9c89a84-52a4-416a-b245-86400d284e49",
+      "playerActorId": 7456904,
+      "playerIdentityKey": "UUID:d9c89a84-52a4-416a-b245-86400d284e49",
+      "playerName": "MARIA ALONSO CLAPES",
+      "shirtNumber": "12",
+      "games": 16,
+      "minutes": 398,
+      "points": 44,
+      "avgPoints": 2.75,
+      "valuation": 32,
+      "avgValuation": 2,
+      "fouls": 10,
+      "avgFouls": 0.625
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80683:UUID:6e8d5699-c92c-4728-87b9-7f4bda651717:7",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80683",
       "teamIdIntern": 473024,
@@ -84305,28 +84373,6 @@
       "avgValuation": 1.5,
       "fouls": 14,
       "avgFouls": 1
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:dc85977b-d277-4fa3-a4c4-2f0d7aec1fbb:4",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "dc85977b-d277-4fa3-a4c4-2f0d7aec1fbb",
-      "playerActorId": 7544234,
-      "playerIdentityKey": "UUID:dc85977b-d277-4fa3-a4c4-2f0d7aec1fbb",
-      "playerName": "DANIELA MART\u00CDN L\u00C1ZARO",
-      "shirtNumber": "4",
-      "games": 15,
-      "minutes": 325,
-      "points": 43,
-      "avgPoints": 2.8666666666666667,
-      "valuation": 39,
-      "avgValuation": 2.6,
-      "fouls": 0,
-      "avgFouls": 0
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81761:UUID:28703d1d-d9d6-4a21-8bf3-df6be341fe0b:9",
@@ -84987,28 +85033,6 @@
       "avgValuation": 1.75,
       "fouls": 18,
       "avgFouls": 1.5
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:d9c89a84-52a4-416a-b245-86400d284e49:12",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "d9c89a84-52a4-416a-b245-86400d284e49",
-      "playerActorId": 7456904,
-      "playerIdentityKey": "UUID:d9c89a84-52a4-416a-b245-86400d284e49",
-      "playerName": "MARIA ALONSO CLAPES",
-      "shirtNumber": "12",
-      "games": 15,
-      "minutes": 374,
-      "points": 42,
-      "avgPoints": 2.8,
-      "valuation": 31,
-      "avgValuation": 2.066666666666667,
-      "fouls": 9,
-      "avgFouls": 0.6
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79031:UUID:2ced9c94-031e-440f-a8d9-125cb6b41cf3:23",
@@ -85911,6 +85935,28 @@
       "avgValuation": 7,
       "fouls": 1,
       "avgFouls": 0.2
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6:7",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "2aa8840a-51a9-4cf4-9097-4c9793ce46b6",
+      "playerActorId": 7456908,
+      "playerIdentityKey": "UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6",
+      "playerName": "ONA HARZEE TORRELL",
+      "shirtNumber": "7",
+      "games": 14,
+      "minutes": 321,
+      "points": 40,
+      "avgPoints": 2.857142857142857,
+      "valuation": 8,
+      "avgValuation": 0.5714285714285714,
+      "fouls": 26,
+      "avgFouls": 1.8571428571428572
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:UUID:1b9c093e-3818-4de6-a24e-3d1a2cb3b52c:10",
@@ -88991,28 +89037,6 @@
       "avgValuation": -0.2857142857142857,
       "fouls": 29,
       "avgFouls": 2.0714285714285716
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6:7",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "2aa8840a-51a9-4cf4-9097-4c9793ce46b6",
-      "playerActorId": 7456908,
-      "playerIdentityKey": "UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6",
-      "playerName": "ONA HARZEE TORRELL",
-      "shirtNumber": "7",
-      "games": 13,
-      "minutes": 297,
-      "points": 33,
-      "avgPoints": 2.5384615384615383,
-      "valuation": 6,
-      "avgValuation": 0.46153846153846156,
-      "fouls": 23,
-      "avgFouls": 1.7692307692307692
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306:UUID:a601471f-557f-4adc-b221-d2c682c5fdde:29",
@@ -93415,6 +93439,28 @@
       "avgFouls": 1.0625
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:11",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 519019,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "fb2eb3fe-c04a-4280-8d08-2a556e68f573",
+      "playerActorId": 69571769933989343,
+      "playerIdentityKey": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573",
+      "playerName": "M\u00C0LIA MONTSERRAT MATEO",
+      "shirtNumber": "11",
+      "games": 3,
+      "minutes": 74,
+      "points": 24,
+      "avgPoints": 8,
+      "valuation": 12,
+      "avgValuation": 4,
+      "fouls": 4,
+      "avgFouls": 1.3333333333333333
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226:UUID:bab09bd3-50cd-47ff-a3e5-1f778e41c0aa:42",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226",
       "teamIdIntern": 464550,
@@ -93479,6 +93525,28 @@
       "avgValuation": 1.4285714285714286,
       "fouls": 6,
       "avgFouls": 0.8571428571428571
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:30913798-ee7f-4281-9267-1d8dff84da2f:5",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+      "teamIdIntern": 454749,
+      "teamIdExtern": 81185,
+      "teamName": "C.B GRUP BARNA A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "30913798-ee7f-4281-9267-1d8dff84da2f",
+      "playerActorId": 7456907,
+      "playerIdentityKey": "UUID:30913798-ee7f-4281-9267-1d8dff84da2f",
+      "playerName": "SOFIA IRURETAGOYENA ALAMINOS",
+      "shirtNumber": "5",
+      "games": 15,
+      "minutes": 362,
+      "points": 24,
+      "avgPoints": 1.6,
+      "valuation": -18,
+      "avgValuation": -1.2,
+      "fouls": 30,
+      "avgFouls": 2
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79136:UUID:4af045d3-f8ae-45a4-99af-cc2f13e7973a:5",
@@ -94581,6 +94649,28 @@
       "avgFouls": 0.47368421052631576
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:e00af675-2e59-454a-b410-5d106156d62c:30",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 498671,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "e00af675-2e59-454a-b410-5d106156d62c",
+      "playerActorId": 8774348,
+      "playerIdentityKey": "UUID:e00af675-2e59-454a-b410-5d106156d62c",
+      "playerName": "MEGAN ANAHI PARRALES AZUERO",
+      "shirtNumber": "30",
+      "games": 11,
+      "minutes": 165,
+      "points": 22,
+      "avgPoints": 2,
+      "valuation": 7,
+      "avgValuation": 0.6363636363636364,
+      "fouls": 11,
+      "avgFouls": 1
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749:UUID:072317b0-84d6-41c2-906e-ecf100e9a6df:16",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749",
       "teamIdIntern": 450201,
@@ -94601,28 +94691,6 @@
       "avgValuation": 0.043478260869565216,
       "fouls": 9,
       "avgFouls": 0.391304347826087
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:11",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 519019,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "fb2eb3fe-c04a-4280-8d08-2a556e68f573",
-      "playerActorId": 69571769933989343,
-      "playerIdentityKey": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573",
-      "playerName": "M\u00C0LIA MONTSERRAT MATEO",
-      "shirtNumber": "11",
-      "games": 2,
-      "minutes": 50,
-      "points": 22,
-      "avgPoints": 11,
-      "valuation": 16,
-      "avgValuation": 8,
-      "fouls": 0,
-      "avgFouls": 0
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81714:UUID:3ddba0bc-a8f0-424d-bf2a-176433c1be5e:8",
@@ -96407,28 +96475,6 @@
       "avgFouls": 1.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:30913798-ee7f-4281-9267-1d8dff84da2f:5",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
-      "teamIdIntern": 454749,
-      "teamIdExtern": 81185,
-      "teamName": "C.B GRUP BARNA A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "30913798-ee7f-4281-9267-1d8dff84da2f",
-      "playerActorId": 7456907,
-      "playerIdentityKey": "UUID:30913798-ee7f-4281-9267-1d8dff84da2f",
-      "playerName": "SOFIA IRURETAGOYENA ALAMINOS",
-      "shirtNumber": "5",
-      "games": 14,
-      "minutes": 338,
-      "points": 19,
-      "avgPoints": 1.3571428571428572,
-      "valuation": -19,
-      "avgValuation": -1.3571428571428572,
-      "fouls": 27,
-      "avgFouls": 1.9285714285714286
-    },
-    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:1d49cd6a-6dd3-4419-bdde-ddb9fe4112ff:6",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
       "teamIdIntern": 455124,
@@ -97065,28 +97111,6 @@
       "avgValuation": 0.07142857142857142,
       "fouls": 8,
       "avgFouls": 0.5714285714285714
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:e00af675-2e59-454a-b410-5d106156d62c:30",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 498671,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "e00af675-2e59-454a-b410-5d106156d62c",
-      "playerActorId": 8774348,
-      "playerIdentityKey": "UUID:e00af675-2e59-454a-b410-5d106156d62c",
-      "playerName": "MEGAN ANAHI PARRALES AZUERO",
-      "shirtNumber": "30",
-      "games": 10,
-      "minutes": 153,
-      "points": 18,
-      "avgPoints": 1.8,
-      "valuation": 6,
-      "avgValuation": 0.6,
-      "fouls": 8,
-      "avgFouls": 0.8
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:083837c0-5e4e-4b3f-8edc-0d0cf2436cc6:97",
@@ -104305,6 +104329,28 @@
       "avgFouls": 0.05263157894736842
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:a35a4e76-4603-4109-90d6-28ce20416348:9",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+      "teamIdIntern": 459741,
+      "teamIdExtern": 79709,
+      "teamName": "BC TECLA SALA  A",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "a35a4e76-4603-4109-90d6-28ce20416348",
+      "playerActorId": 7544235,
+      "playerIdentityKey": "UUID:a35a4e76-4603-4109-90d6-28ce20416348",
+      "playerName": "CARLA DA SILVA SENTIES",
+      "shirtNumber": "9",
+      "games": 15,
+      "minutes": 255,
+      "points": 8,
+      "avgPoints": 0.5333333333333333,
+      "valuation": -2,
+      "avgValuation": -0.13333333333333333,
+      "fouls": 5,
+      "avgFouls": 0.3333333333333333
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80877:UUID:0169c87a-98d1-11e9-a2a5-0216824770c2:3",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80877",
       "teamIdIntern": 503763,
@@ -105901,14 +105947,14 @@
       "playerIdentityKey": "UUID:31871b27-9df8-4da3-906c-6b8aa1ce635e",
       "playerName": "NATALIA INES FELIPE MIELES",
       "shirtNumber": "20",
-      "games": 11,
-      "minutes": 206,
+      "games": 12,
+      "minutes": 218,
       "points": 7,
-      "avgPoints": 0.6363636363636364,
+      "avgPoints": 0.5833333333333334,
       "valuation": -4,
-      "avgValuation": -0.36363636363636365,
+      "avgValuation": -0.3333333333333333,
       "fouls": 2,
-      "avgFouls": 0.18181818181818182
+      "avgFouls": 0.16666666666666666
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:00d57a3f-98d1-11e9-a2a5-0216824770c2:2",
@@ -108373,28 +108419,6 @@
       "avgValuation": 0,
       "fouls": 0,
       "avgFouls": 0
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709:UUID:a35a4e76-4603-4109-90d6-28ce20416348:9",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
-      "teamIdIntern": 459741,
-      "teamIdExtern": 79709,
-      "teamName": "BC TECLA SALA  A",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "a35a4e76-4603-4109-90d6-28ce20416348",
-      "playerActorId": 7544235,
-      "playerIdentityKey": "UUID:a35a4e76-4603-4109-90d6-28ce20416348",
-      "playerName": "CARLA DA SILVA SENTIES",
-      "shirtNumber": "9",
-      "games": 14,
-      "minutes": 243,
-      "points": 4,
-      "avgPoints": 0.2857142857142857,
-      "valuation": -4,
-      "avgValuation": -0.2857142857142857,
-      "fouls": 3,
-      "avgFouls": 0.21428571428571427
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420:UUID:014ebb3e-98d1-11e9-a2a5-0216824770c2:23",

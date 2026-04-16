@@ -2070,5 +2070,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+    "teamIdIntern": 557248,
+    "teamIdExtern": 79709,
+    "teamName": "BC TECLA SALA  A",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+    "matchWebId": 65932,
+    "matchInternId": 277323,
+    "matchExternId": 1168369,
+    "matchDate": "2026-04-15T20:30:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21537,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Segona Fase",
+    "levelName": "Nivell B2",
+    "levelCode": "B2",
+    "groupCode": "01",
+    "phaseRound": 11,
+    "roundNumber": 19,
+    "homeTeam": "BC TECLA SALA  A",
+    "homeScore": 64,
+    "awayScore": 76,
+    "awayTeam": "C.B GRUP BARNA A",
+    "isHome": true,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
+    "rivalTeam": "C.B GRUP BARNA A",
+    "officialTeamScore": 64,
+    "officialRivalScore": 76,
+    "teamScore": 64,
+    "rivalScore": 76,
+    "result": "L",
+    "topScorer": "CARLA PULIDO GONZALEZ",
+    "topScorerTeam": "C.B GRUP BARNA A",
+    "topScorerPoints": 24,
+    "teamTopScorer": "JOHANNA ZARELY VALLADOLID CARRANZA",
+    "teamTopScorerPoints": 17,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 10,
+      "maxLead": 2,
+      "maxDeficit": 13,
+      "bestRun": 4,
+      "rivalBestRun": 13,
+      "closingRun": 0,
+      "rivalClosingRun": 5,
+      "firstScorer": "CARLA PULIDO GONZALEZ",
+      "firstScorerTeam": "C.B GRUP BARNA A",
+      "lastScorer": "CARLA PULIDO GONZALEZ",
+      "lastScorerTeam": "C.B GRUP BARNA A",
+      "teamFirstScorer": "ALBA G\u00C1MEZ GRAGERA",
+      "teamLastScorer": "L\u00C9A AGUT ASIA",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 6,
+      "worstPeriodLabel": "Parcial 4",
+      "worstPeriodDiff": -10,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 12,
+          "rivalPoints": 10,
+          "diff": 2
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 6,
+          "rivalPoints": 12,
+          "diff": -6
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 10,
+          "rivalPoints": 8,
+          "diff": 2
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 7,
+          "rivalPoints": 17,
+          "diff": -10
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 9,
+          "rivalPoints": 5,
+          "diff": 4
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 6,
+          "rivalPoints": 11,
+          "diff": -5
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 10,
+          "rivalPoints": 4,
+          "diff": 6
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 4,
+          "rivalPoints": 9,
+          "diff": -5
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

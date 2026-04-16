@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "generatedAtUtc": "2026-04-16T13:26:54.852364Z",
-  "totalMatches": 1961,
+  "generatedAtUtc": "2026-04-16T14:23:47.164651Z",
+  "totalMatches": 1962,
   "totalTeams": 213,
   "teams": [
     {
@@ -898,7 +898,7 @@
       "teamIdIntern": 459741,
       "teamIdExtern": 79709,
       "teamName": "BC TECLA SALA  A",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 11,
       "matchesFile": "seasons/2025-2026/teams/d292b90ae73b6681/matches.json",
       "playersFile": "seasons/2025-2026/teams/d292b90ae73b6681/players.json",
@@ -925,7 +925,7 @@
           "levelName": "Nivell B2",
           "levelCode": "B2",
           "groupCode": "01",
-          "matchesPlayed": 10
+          "matchesPlayed": 11
         }
       ]
     },
@@ -1378,7 +1378,7 @@
       "teamIdIntern": 454749,
       "teamIdExtern": 81185,
       "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 13,
       "matchesFile": "seasons/2025-2026/teams/46c1f0dc18d1aaf0/matches.json",
       "playersFile": "seasons/2025-2026/teams/46c1f0dc18d1aaf0/players.json",
@@ -1405,7 +1405,7 @@
           "levelName": "Nivell B2",
           "levelCode": "B2",
           "groupCode": "01",
-          "matchesPlayed": 10
+          "matchesPlayed": 11
         }
       ]
     },
