@@ -111,7 +111,7 @@ const appStyles = {
     page: {
         position: "relative",
         minHeight: "100vh",
-        overflow: "clip",
+        overflow: "hidden",
         padding: "clamp(18px, 3vw, 34px)"
     },
     glowPrimary: {
