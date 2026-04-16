@@ -447,9 +447,9 @@ function MatchListSection({
                                 }
                             }}
                         >
-                            <div style={styles.teamSide}>
+                            <div style={styles.teamSide} className="match-team-side">
                                 {renderTeamLogo(homeTeam)}
-                                <div style={styles.teamText}>
+                                <div style={styles.teamText} className="match-team-text">
                                     <div
                                         style={{
                                             ...styles.teamName,
@@ -462,7 +462,7 @@ function MatchListSection({
                                 </div>
                             </div>
 
-                            <div style={styles.matchCenter}>
+                            <div style={styles.matchCenter} className="match-center">
                                 <div style={styles.matchCenterMeta}>
                                     <span style={styles.metaPill}>{`Jornada ${match.phaseRound ?? "-"}`}</span>
                                     <span style={styles.metaPill}>{phaseLabel}</span>
@@ -474,8 +474,8 @@ function MatchListSection({
                                 </div>
                             </div>
 
-                            <div style={{...styles.teamSide, ...styles.teamSideAway}}>
-                                <div style={{...styles.teamText, ...styles.teamTextAway}}>
+                            <div style={{...styles.teamSide, ...styles.teamSideAway}} className="match-team-side match-team-side-away">
+                                <div style={{...styles.teamText, ...styles.teamTextAway}} className="match-team-text">
                                     <div
                                         style={{
                                             ...styles.teamName,
