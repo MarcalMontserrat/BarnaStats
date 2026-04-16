@@ -9,7 +9,8 @@
     "dev:all": "concurrently -k -n web,api \"vite\" \"dotnet run --project ../BarnaStats.Api/BarnaStats.Api.csproj\"",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync:club-logos": "node ./scripts/localize-club-logos.mjs"
   },
   "dependencies": {
     "react": "^19.2.4",

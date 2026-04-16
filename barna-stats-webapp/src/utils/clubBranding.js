@@ -1,4 +1,5 @@
 import {CLUB_BRANDING_CATALOG} from "../data/clubBrandingCatalog.generated.js";
+import {CLUB_LOGO_FILES} from "../data/clubLogoFiles.generated.js";
 import {TEAM_CLUB_MAP} from "../data/teamClubMap.generated.js";
 
 const FALLBACK_PALETTES = [
@@ -61,6 +62,7 @@ const STOP_WORDS = new Set([
 const CLUB_BRANDING_BY_KEY = Object.fromEntries(
     CLUB_BRANDING_CATALOG.map((entry) => [entry.clubKey, entry])
 );
+const CLUB_BRANDING_BY_ALIAS = buildClubBrandingByAlias();
 
 function normalizeText(value) {
     return String(value ?? "")
@@ -68,6 +70,34 @@ function normalizeText(value) {
         .replace(/[\u0300-\u036f]/g, "")
         .trim()
         .toUpperCase();
+}
+
+function normalizeLookupKey(value) {
+    return normalizeText(value)
+        .replace(/[^A-Z0-9]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function buildClubBrandingByAlias() {
+    const aliasMap = new Map();
+
+    for (const club of CLUB_BRANDING_CATALOG) {
+        const aliases = new Set([
+            club.clubName,
+            club.shortName,
+            ...(club.aliases ?? [])
+        ]);
+
+        for (const alias of aliases) {
+            const normalizedAlias = normalizeLookupKey(alias);
+            if (normalizedAlias && !aliasMap.has(normalizedAlias)) {
+                aliasMap.set(normalizedAlias, club);
+            }
+        }
+    }
+
+    return aliasMap;
 }
 
 function hashString(value) {
@@ -135,13 +165,76 @@ function getInitials(teamName, teamShortName = "", clubShortName = "") {
     return normalizedShortName.slice(0, 2) || normalizeText(teamName).replace(/[^A-Z0-9]/g, "").slice(0, 2) || "EQ";
 }
 
-export function getClubBrandingForTeam(teamIdExtern) {
-    const clubKey = TEAM_CLUB_MAP[String(teamIdExtern ?? "")];
-    if (!clubKey) {
-        return null;
+function buildLookupCandidates(teamName, teamShortName) {
+    const rawCandidates = new Set([teamShortName, teamName]);
+    const expandedCandidates = new Set();
+
+    for (const rawValue of rawCandidates) {
+        const value = String(rawValue ?? "").trim();
+        if (!value) {
+            continue;
+        }
+
+        expandedCandidates.add(value);
+
+        for (const part of value.split(/\s+-\s+|\/|\||,|\(|\)/)) {
+            if (part.trim()) {
+                expandedCandidates.add(part.trim());
+            }
+        }
     }
 
-    return CLUB_BRANDING_BY_KEY[clubKey] ?? null;
+    const candidates = new Set();
+
+    for (const candidate of expandedCandidates) {
+        const normalized = normalizeLookupKey(candidate);
+        if (!normalized) {
+            continue;
+        }
+
+        candidates.add(normalized);
+        candidates.add(normalized.replace(/\b[A-Z]$/, "").trim());
+        candidates.add(normalized.replace(/\b(U\d{1,2}|PR[0-9A-Z]*|J[0-9A-Z]*|C[0-9A-Z]*|I[0-9A-Z]*|MINI|PREMINI|SOTS ?\d+)\b.*$/, "").trim());
+    }
+
+    return [...candidates].filter(Boolean);
+}
+
+function getClubBrandingByName(teamName, teamShortName = "") {
+    const candidates = buildLookupCandidates(teamName, teamShortName);
+    let bestMatch = null;
+    let bestScore = -1;
+
+    for (const candidate of candidates) {
+        const exactMatch = CLUB_BRANDING_BY_ALIAS.get(candidate);
+        if (exactMatch) {
+            return exactMatch;
+        }
+
+        for (const [alias, club] of CLUB_BRANDING_BY_ALIAS.entries()) {
+            if (alias.length < 6) {
+                continue;
+            }
+
+            if (candidate === alias || candidate.startsWith(`${alias} `) || alias.startsWith(`${candidate} `)) {
+                if (alias.length > bestScore) {
+                    bestMatch = club;
+                    bestScore = alias.length;
+                }
+            }
+        }
+    }
+
+    return bestMatch;
+}
+
+export function getClubBrandingForTeam(teamIdExtern, teamName = "", teamShortName = "") {
+    const clubKey = TEAM_CLUB_MAP[String(teamIdExtern ?? "")];
+    if (clubKey) {
+        return CLUB_BRANDING_BY_KEY[clubKey] ?? null;
+    }
+
+    return getClubBrandingByName(teamName, teamShortName);
 }
 
 export function resolveClubBranding({
@@ -150,7 +243,7 @@ export function resolveClubBranding({
     teamShortName = "",
     teamColor = ""
 }) {
-    const clubBranding = getClubBrandingForTeam(teamIdExtern);
+    const clubBranding = getClubBrandingForTeam(teamIdExtern, teamName, teamShortName);
     const seed = `${clubBranding?.clubKey || teamIdExtern || ""}|${teamName || ""}|${teamShortName || ""}`;
     const palette = buildPalette(teamColor, seed);
 
@@ -161,7 +254,7 @@ export function resolveClubBranding({
         clubShortName: clubBranding?.shortName ?? "",
         hasClubBranding: Boolean(clubBranding),
         initials: getInitials(teamName, teamShortName, clubBranding?.shortName ?? ""),
-        logoSrc: clubBranding?.logoSrc ?? "",
+        logoSrc: (clubBranding && CLUB_LOGO_FILES[clubBranding.clubKey]) || clubBranding?.logoSrc || "",
         background: palette.background,
         borderColor: palette.borderColor,
         color: palette.color,
