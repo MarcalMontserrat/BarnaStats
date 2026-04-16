@@ -1,4 +1,5 @@
 import PrettySelect from "./PrettySelect.jsx";
+import TeamBadge from "./TeamBadge.jsx";
 import {
     buildCompetitionPhaseLabel,
     filterCompetitionMatchesByPhaseOption,
@@ -119,7 +120,9 @@ const styles = {
         minWidth: 0
     },
     teamButton: {
-        display: "block",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 10,
         width: "100%",
         minWidth: 0,
         padding: 0,
@@ -134,7 +137,14 @@ const styles = {
         textOverflow: "ellipsis",
         whiteSpace: "nowrap"
     },
+    teamButtonLabel: {
+        minWidth: 0,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
+    },
     awayButton: {
+        justifyContent: "flex-end",
         textAlign: "right"
     },
     scorePill: {
@@ -305,7 +315,12 @@ function CompetitionResultsSection({
                                         title={match.homeTeam}
                                         onClick={() => onTeamNavigate?.(match.homeTeamKey)}
                                     >
-                                        {match.homeTeam}
+                                        <TeamBadge
+                                            size="sm"
+                                            teamIdExtern={match.homeTeamIdExtern}
+                                            teamName={match.homeTeam}
+                                        />
+                                        <span style={styles.teamButtonLabel}>{match.homeTeam}</span>
                                     </button>
 
                                     <div style={styles.scorePill}>
@@ -318,7 +333,12 @@ function CompetitionResultsSection({
                                         title={match.awayTeam}
                                         onClick={() => onTeamNavigate?.(match.awayTeamKey)}
                                     >
-                                        {match.awayTeam}
+                                        <span style={styles.teamButtonLabel}>{match.awayTeam}</span>
+                                        <TeamBadge
+                                            size="sm"
+                                            teamIdExtern={match.awayTeamIdExtern}
+                                            teamName={match.awayTeam}
+                                        />
                                     </button>
                                 </div>
 

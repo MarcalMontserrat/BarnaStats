@@ -181,6 +181,7 @@ export function buildHistoricalTeamEntities(seasonDatasets) {
                 key: `${entityKey}:${team.seasonLabel}`,
                 seasonStartYear: team.seasonStartYear ?? null,
                 seasonLabel: team.seasonLabel ?? "",
+                teamIdExtern: Number(team.teamIdExtern ?? 0),
                 teamName: team.teamName ?? "",
                 categoryName,
                 levelName,
@@ -221,6 +222,7 @@ export function buildHistoricalTeamEntities(seasonDatasets) {
             return {
                 key: entity.key,
                 label: latestSeason?.teamName || entity.label,
+                latestTeamIdExtern: latestSeason?.teamIdExtern ?? 0,
                 meta: metaParts.join(" · "),
                 searchText: [...entity.searchTerms, ...entity.categories, ...entity.levels].join(" "),
                 seasonSummaries
@@ -294,6 +296,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
             const currentTeam = seasonSummary.teams.get(player.teamKey) ?? {
                 teamKey: player.teamKey ?? "",
                 teamName: player.teamName ?? "",
+                teamIdExtern: Number(player.teamIdExtern ?? 0),
                 games: 0
             };
             currentTeam.games += Number(player.games ?? 0);
@@ -326,7 +329,8 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                         avgMinutes: seasonSummary.games > 0 ? seasonSummary.minutes / seasonSummary.games : 0,
                         teamNames,
                         primaryTeamName: teamNames[0] ?? "",
-                        primaryTeamKey: teams[0]?.teamKey ?? ""
+                        primaryTeamKey: teams[0]?.teamKey ?? "",
+                        primaryTeamIdExtern: Number(teams[0]?.teamIdExtern ?? 0)
                     };
                 })
                 .sort(compareSeasonsDesc);

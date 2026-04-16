@@ -1,6 +1,7 @@
 import {lazy, Suspense, useEffect, useRef, useState} from "react";
 import AutocompleteField from "./components/AutocompleteField.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
+import TeamBadge from "./components/TeamBadge.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
 import {useSeasonDirectoryData} from "./hooks/useSeasonDirectoryData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
@@ -234,6 +235,17 @@ const appStyles = {
     heroHeader: {
         display: "grid",
         gap: 10
+    },
+    heroIdentity: {
+        display: "grid",
+        gridTemplateColumns: "auto minmax(0, 1fr)",
+        gap: 18,
+        alignItems: "center"
+    },
+    heroIdentityText: {
+        display: "grid",
+        gap: 10,
+        minWidth: 0
     },
     heroKicker: {
         display: "inline-flex",
@@ -487,6 +499,17 @@ const appStyles = {
     seasonCardHeader: {
         display: "grid",
         gap: 8
+    },
+    seasonCardIdentity: {
+        display: "grid",
+        gridTemplateColumns: "auto minmax(0, 1fr)",
+        gap: 14,
+        alignItems: "center"
+    },
+    seasonCardIdentityText: {
+        display: "grid",
+        gap: 8,
+        minWidth: 0
     },
     seasonCardEyebrow: {
         color: "var(--accent)",
@@ -884,6 +907,19 @@ function App() {
     }));
     const selectedHistoricalPlayer = historicalPlayerEntities.find((entity) => entity.key === selectedHistoricalPlayerKey) ?? null;
     const teams = analysisIndex?.teams ?? [];
+    const competitionTeams = competition?.teams ?? [];
+    const teamDirectoryByKey = [...teams, ...competitionTeams].reduce((map, team) => {
+        if (!team?.teamKey) {
+            return map;
+        }
+
+        const current = map.get(team.teamKey) ?? {};
+        map.set(team.teamKey, {
+            teamName: team.teamName ?? current.teamName ?? "",
+            teamIdExtern: Number(team.teamIdExtern ?? current.teamIdExtern ?? 0)
+        });
+        return map;
+    }, new Map());
     const latestTeamContexts = buildLatestTeamContextByKey(teams);
     const dashboardCategoryOptions = buildCategoryOptions(latestTeamContexts);
     const latestTeamContextRows = [...latestTeamContexts.values()];
@@ -968,6 +1004,11 @@ function App() {
     const selectedTeamSummary = teams.find((team) => team.teamKey === effectiveTeamKey) ?? globalDefaultTeam ?? null;
     const competitionPlayerLeaders = competition?.playerLeaders ?? [];
     const competitionMatches = competition?.matches ?? [];
+    const competitionMatchesWithBranding = competitionMatches.map((match) => ({
+        ...match,
+        homeTeamIdExtern: Number(teamDirectoryByKey.get(match.homeTeamKey)?.teamIdExtern ?? 0),
+        awayTeamIdExtern: Number(teamDirectoryByKey.get(match.awayTeamKey)?.teamIdExtern ?? 0)
+    }));
     const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
     const shouldLoadTeamMatches = isTeamRoute && !!selectedTeamSummary?.matchesFile;
     const shouldLoadTeamPlayers = isTeamRoute && !!selectedTeamSummary?.playersFile;
@@ -1083,11 +1124,13 @@ function App() {
     const competitionStandingsRows = buildStandings(competitionMatchesForStandings, null)
         .map((row) => {
             const latestContext = latestTeamContexts.get(row.teamKey);
+            const teamDirectoryEntry = teamDirectoryByKey.get(row.teamKey);
             const levelKey = String(latestContext?.levelCode ?? "").trim() || String(latestContext?.levelName ?? "").trim();
             const totalValuation = teamTotalValuationByKey.get(row.teamKey) ?? 0;
 
             return {
                 ...row,
+                teamIdExtern: Number(teamDirectoryEntry?.teamIdExtern ?? 0),
                 levelKey,
                 levelLabel: latestContext?.levelName ?? "",
                 avgValuation: row.played > 0 ? totalValuation / row.played : 0
@@ -1465,9 +1508,18 @@ function App() {
                     <div style={appStyles.heroPattern}/>
                     <div style={appStyles.heroContent}>
                         <div style={appStyles.heroHeader}>
-                            <div style={appStyles.heroKicker}>{isHistoryRoute ? "Archivo del equipo" : "Vista del equipo"}</div>
-                            <h2 style={appStyles.heroTitle}>{selectedTeamSummary.teamName}</h2>
-                            <p style={appStyles.heroSummary}>{teamHeroSummary}</p>
+                            <div style={appStyles.heroIdentity}>
+                                <TeamBadge
+                                    size="xl"
+                                    teamIdExtern={selectedTeamSummary.teamIdExtern}
+                                    teamName={selectedTeamSummary.teamName}
+                                />
+                                <div style={appStyles.heroIdentityText}>
+                                    <div style={appStyles.heroKicker}>{isHistoryRoute ? "Archivo del equipo" : "Vista del equipo"}</div>
+                                    <h2 style={appStyles.heroTitle}>{selectedTeamSummary.teamName}</h2>
+                                    <p style={appStyles.heroSummary}>{teamHeroSummary}</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div style={appStyles.heroMetaRow}>
@@ -1743,7 +1795,7 @@ function App() {
                     {activeCompetitionTab.id === "matches" ? (
                         <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
                             <CompetitionResultsSection
-                                matches={competitionMatches}
+                                matches={competitionMatchesWithBranding}
                                 phaseOptions={resultsPhaseOptions}
                                 selectedPhase={effectiveResultsPhase}
                                 onSelectedPhaseChange={setSelectedResultsPhase}
@@ -1850,12 +1902,21 @@ function App() {
                             <div style={appStyles.heroPattern}/>
                             <div style={appStyles.heroContent}>
                                 <div style={appStyles.heroHeader}>
-                                    <div style={appStyles.heroKicker}>Archivo del equipo</div>
-                                    <h2 style={appStyles.heroTitle}>{selectedHistoricalTeam.label}</h2>
-                                    <p style={appStyles.heroSummary}>
-                                        {selectedHistoricalTeam.seasonSummaries.length} temporada{selectedHistoricalTeam.seasonSummaries.length === 1 ? "" : "s"} registradas en el archivo.
-                                        Aquí solo miramos el rendimiento global de cada curso, sin entrar en fases.
-                                    </p>
+                                    <div style={appStyles.heroIdentity}>
+                                        <TeamBadge
+                                            size="xl"
+                                            teamIdExtern={selectedHistoricalTeam.latestTeamIdExtern}
+                                            teamName={selectedHistoricalTeam.label}
+                                        />
+                                        <div style={appStyles.heroIdentityText}>
+                                            <div style={appStyles.heroKicker}>Archivo del equipo</div>
+                                            <h2 style={appStyles.heroTitle}>{selectedHistoricalTeam.label}</h2>
+                                            <p style={appStyles.heroSummary}>
+                                                {selectedHistoricalTeam.seasonSummaries.length} temporada{selectedHistoricalTeam.seasonSummaries.length === 1 ? "" : "s"} registradas en el archivo.
+                                                Aquí solo miramos el rendimiento global de cada curso, sin entrar en fases.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div style={appStyles.heroMetaRow}>
@@ -1870,13 +1931,22 @@ function App() {
                             {selectedHistoricalTeam.seasonSummaries.map((seasonSummary) => (
                                 <article key={seasonSummary.key} style={appStyles.seasonCard}>
                                     <div style={appStyles.seasonCardHeader}>
-                                        <div style={appStyles.seasonCardEyebrow}>{seasonSummary.seasonLabel}</div>
-                                        <h3 style={appStyles.seasonCardTitle}>{seasonSummary.teamName}</h3>
-                                        <p style={appStyles.seasonCardMeta}>
-                                            {seasonSummary.categoryName || "Sin categoría visible"}
-                                            {seasonSummary.levelName ? ` · ${seasonSummary.levelName}` : ""}
-                                            {` · ${seasonSummary.matchesPlayed} partidos`}
-                                        </p>
+                                        <div style={appStyles.seasonCardIdentity}>
+                                            <TeamBadge
+                                                size="lg"
+                                                teamIdExtern={seasonSummary.teamIdExtern}
+                                                teamName={seasonSummary.teamName}
+                                            />
+                                            <div style={appStyles.seasonCardIdentityText}>
+                                                <div style={appStyles.seasonCardEyebrow}>{seasonSummary.seasonLabel}</div>
+                                                <h3 style={appStyles.seasonCardTitle}>{seasonSummary.teamName}</h3>
+                                                <p style={appStyles.seasonCardMeta}>
+                                                    {seasonSummary.categoryName || "Sin categoría visible"}
+                                                    {seasonSummary.levelName ? ` · ${seasonSummary.levelName}` : ""}
+                                                    {` · ${seasonSummary.matchesPlayed} partidos`}
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div style={appStyles.seasonMetricsGrid}>
@@ -2071,14 +2141,23 @@ function App() {
                             {selectedHistoricalPlayer.seasonSummaries.map((seasonSummary) => (
                                 <article key={seasonSummary.key} style={appStyles.seasonCard}>
                                     <div style={appStyles.seasonCardHeader}>
-                                        <div style={appStyles.seasonCardEyebrow}>
-                                            {seasonSummary.seasonLabel}
-                                            {seasonSummary.shirtNumber ? ` · #${seasonSummary.shirtNumber}` : ""}
+                                        <div style={appStyles.seasonCardIdentity}>
+                                            <TeamBadge
+                                                size="lg"
+                                                teamIdExtern={seasonSummary.primaryTeamIdExtern}
+                                                teamName={seasonSummary.primaryTeamName || seasonSummary.teamNames[0] || selectedHistoricalPlayer.label}
+                                            />
+                                            <div style={appStyles.seasonCardIdentityText}>
+                                                <div style={appStyles.seasonCardEyebrow}>
+                                                    {seasonSummary.seasonLabel}
+                                                    {seasonSummary.shirtNumber ? ` · #${seasonSummary.shirtNumber}` : ""}
+                                                </div>
+                                                <h3 style={appStyles.seasonCardTitle}>{seasonSummary.playerName}</h3>
+                                                <p style={appStyles.seasonCardMeta}>
+                                                    {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <h3 style={appStyles.seasonCardTitle}>{seasonSummary.playerName}</h3>
-                                        <p style={appStyles.seasonCardMeta}>
-                                            {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}
-                                        </p>
                                     </div>
 
                                     <div style={appStyles.seasonMetricsGrid}>

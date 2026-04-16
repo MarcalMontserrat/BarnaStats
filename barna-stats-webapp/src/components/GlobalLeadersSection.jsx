@@ -1,4 +1,5 @@
 import PrettySelect from "./PrettySelect.jsx";
+import TeamBadge from "./TeamBadge.jsx";
 
 const styles = {
     section: {
@@ -147,6 +148,7 @@ const styles = {
     teamBadge: {
         display: "inline-flex",
         alignItems: "center",
+        gap: 8,
         padding: "6px 10px",
         borderRadius: 999,
         background: "rgba(188, 63, 43, 0.08)",
@@ -229,6 +231,12 @@ function LeaderBoard({title, kicker, subtitle, rows, metric, accentColor, label,
                                         style={styles.teamBadge}
                                         onClick={() => onTeamNavigate?.(player.teamKey)}
                                     >
+                                        <TeamBadge
+                                            size="xs"
+                                            teamIdExtern={player.teamIdExtern}
+                                            teamName={player.teamName}
+                                            style={{boxShadow: "none"}}
+                                        />
                                         {player.teamName}
                                     </button>
                                     <span style={styles.gamesMeta}>{player.games} partidos</span>

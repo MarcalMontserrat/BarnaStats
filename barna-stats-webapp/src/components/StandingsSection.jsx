@@ -1,4 +1,5 @@
 import PrettySelect from "./PrettySelect.jsx";
+import TeamBadge from "./TeamBadge.jsx";
 
 const styles = {
     section: {
@@ -84,6 +85,10 @@ const styles = {
         borderBottom: "1px solid rgba(107, 86, 58, 0.08)"
     },
     teamButton: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 12,
+        minWidth: 0,
         padding: 0,
         border: "none",
         background: "transparent",
@@ -91,6 +96,12 @@ const styles = {
         fontWeight: 800,
         cursor: "pointer",
         textAlign: "left"
+    },
+    teamButtonLabel: {
+        minWidth: 0,
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap"
     },
     selectedRow: {
         background: "rgba(255, 239, 210, 0.72)"
@@ -216,8 +227,14 @@ function StandingsSection({
                                         type="button"
                                         style={styles.teamButton}
                                         onClick={() => onTeamNavigate(row.teamKey)}
+                                        title={row.teamName}
                                     >
-                                        {row.teamName}
+                                        <TeamBadge
+                                            size="sm"
+                                            teamIdExtern={row.teamIdExtern}
+                                            teamName={row.teamName}
+                                        />
+                                        <span style={styles.teamButtonLabel}>{row.teamName}</span>
                                     </button>
                                 </td>
                                 <td style={styles.bodyCell}>{row.played}</td>
