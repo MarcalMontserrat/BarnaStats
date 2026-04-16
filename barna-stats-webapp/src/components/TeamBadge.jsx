@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {resolveTeamBranding} from "../utils/teamBranding.js";
+import {resolveClubBranding} from "../utils/clubBranding.js";
 
 const SIZE_MAP = {
     xs: 24,
@@ -18,17 +18,18 @@ function TeamBadge({
     title = "",
     style = {}
 }) {
-    const branding = resolveTeamBranding({teamIdExtern, teamName, teamShortName, teamColor});
+    const branding = resolveClubBranding({teamIdExtern, teamName, teamShortName, teamColor});
     const [failedLogoSrc, setFailedLogoSrc] = useState("");
 
     const dimension = SIZE_MAP[size] ?? SIZE_MAP.md;
+    const logoPadding = Math.max(3, Math.round(dimension * 0.12));
     const imageSrc = branding.logoSrc && branding.logoSrc !== failedLogoSrc
         ? branding.logoSrc
         : "";
 
     return (
         <span
-            title={title || teamName || undefined}
+            title={title || teamName || branding.clubName || undefined}
             style={{
                 width: dimension,
                 height: dimension,
@@ -54,9 +55,10 @@ function TeamBadge({
                     style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover",
+                        objectFit: "contain",
                         display: "block",
-                        background: "#fff"
+                        padding: logoPadding,
+                        background: "linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(246, 242, 236, 0.98) 100%)"
                     }}
                 />
             ) : (

@@ -1,4 +1,5 @@
-import {TEAM_BRANDING_MANIFEST} from "../data/teamBrandingManifest.js";
+import {CLUB_BRANDING_CATALOG} from "../data/clubBrandingCatalog.generated.js";
+import {TEAM_CLUB_MAP} from "../data/teamClubMap.generated.js";
 
 const FALLBACK_PALETTES = [
     {
@@ -57,6 +58,10 @@ const STOP_WORDS = new Set([
     "SAE"
 ]);
 
+const CLUB_BRANDING_BY_KEY = Object.fromEntries(
+    CLUB_BRANDING_CATALOG.map((entry) => [entry.clubKey, entry])
+);
+
 function normalizeText(value) {
     return String(value ?? "")
         .normalize("NFD")
@@ -69,20 +74,6 @@ function hashString(value) {
     return [...String(value ?? "")].reduce((hash, char) => {
         return ((hash * 31) + char.charCodeAt(0)) >>> 0;
     }, 7);
-}
-
-function getManifestEntry(teamIdExtern, teamName) {
-    const normalizedName = normalizeText(teamName);
-
-    if (Number(teamIdExtern) > 0 && TEAM_BRANDING_MANIFEST[String(teamIdExtern)]) {
-        return TEAM_BRANDING_MANIFEST[String(teamIdExtern)];
-    }
-
-    if (normalizedName && TEAM_BRANDING_MANIFEST[normalizedName]) {
-        return TEAM_BRANDING_MANIFEST[normalizedName];
-    }
-
-    return null;
 }
 
 function parseColor(value) {
@@ -121,8 +112,8 @@ function buildPalette(teamColor, seed) {
     return FALLBACK_PALETTES[hashString(seed) % FALLBACK_PALETTES.length];
 }
 
-function getInitials(teamName, teamShortName) {
-    const normalizedShortName = normalizeText(teamShortName).replace(/[^A-Z0-9]/g, "");
+function getInitials(teamName, teamShortName = "", clubShortName = "") {
+    const normalizedShortName = normalizeText(clubShortName || teamShortName).replace(/[^A-Z0-9]/g, "");
     if (normalizedShortName.length >= 2 && normalizedShortName.length <= 4) {
         return normalizedShortName.slice(0, 3);
     }
@@ -141,22 +132,36 @@ function getInitials(teamName, teamShortName) {
         return tokens[0].slice(0, 2);
     }
 
-    return normalizeText(teamName).replace(/[^A-Z0-9]/g, "").slice(0, 2) || "EQ";
+    return normalizedShortName.slice(0, 2) || normalizeText(teamName).replace(/[^A-Z0-9]/g, "").slice(0, 2) || "EQ";
 }
 
-export function resolveTeamBranding({
+export function getClubBrandingForTeam(teamIdExtern) {
+    const clubKey = TEAM_CLUB_MAP[String(teamIdExtern ?? "")];
+    if (!clubKey) {
+        return null;
+    }
+
+    return CLUB_BRANDING_BY_KEY[clubKey] ?? null;
+}
+
+export function resolveClubBranding({
     teamIdExtern,
     teamName,
     teamShortName = "",
     teamColor = ""
 }) {
-    const manifestEntry = getManifestEntry(teamIdExtern, teamName);
-    const seed = `${teamIdExtern || ""}|${teamName || ""}|${teamShortName || ""}`;
-    const palette = buildPalette(manifestEntry?.accentColor ?? teamColor, seed);
+    const clubBranding = getClubBrandingForTeam(teamIdExtern);
+    const seed = `${clubBranding?.clubKey || teamIdExtern || ""}|${teamName || ""}|${teamShortName || ""}`;
+    const palette = buildPalette(teamColor, seed);
 
     return {
-        initials: getInitials(teamName, manifestEntry?.shortName ?? teamShortName),
-        logoSrc: manifestEntry?.logoSrc ?? "",
+        clubKey: clubBranding?.clubKey ?? "",
+        clubId: clubBranding?.clubId ?? 0,
+        clubName: clubBranding?.clubName ?? "",
+        clubShortName: clubBranding?.shortName ?? "",
+        hasClubBranding: Boolean(clubBranding),
+        initials: getInitials(teamName, teamShortName, clubBranding?.shortName ?? ""),
+        logoSrc: clubBranding?.logoSrc ?? "",
         background: palette.background,
         borderColor: palette.borderColor,
         color: palette.color,
