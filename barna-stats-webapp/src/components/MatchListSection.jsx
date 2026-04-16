@@ -36,7 +36,9 @@ const styles = {
     },
     matchCard: {
         display: "grid",
-        gap: 12
+        gap: 12,
+        minWidth: 0,
+        maxWidth: "100%"
     },
     matchHeader: {
         display: "grid",
@@ -194,7 +196,10 @@ const styles = {
         fontWeight: 900
     },
     detailShell: {
-        padding: "0 4px 4px"
+        padding: "0 4px 4px",
+        minWidth: 0,
+        maxWidth: "100%",
+        overflow: "hidden"
     },
     reportCard: {
         marginTop: 12,
