@@ -161,6 +161,11 @@ function buildSecondaryText(player, metric) {
     return `${formatMetric(player.avgPoints, 1)} pts/partido · ${player.games} pj`;
 }
 
+function formatPlayerName(playerName, shirtNumber) {
+    const normalizedShirtNumber = String(shirtNumber ?? "").trim();
+    return normalizedShirtNumber ? `${playerName} · #${normalizedShirtNumber}` : playerName;
+}
+
 function TeamBoard({title, subtitle, rows, metric, label}) {
     return (
         <article style={styles.board}>
@@ -177,7 +182,7 @@ function TeamBoard({title, subtitle, rows, metric, label}) {
                             <div style={styles.rank}>#{index + 1}</div>
 
                             <div style={styles.playerBlock}>
-                                <div style={styles.playerName}>{player.name}</div>
+                                <div style={styles.playerName}>{formatPlayerName(player.name, player.shirtNumber)}</div>
                                 <div style={styles.gamesMeta}>{player.games} partidos</div>
                             </div>
 

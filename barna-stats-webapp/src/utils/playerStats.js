@@ -14,6 +14,41 @@ function resolvePlayerIdentityKey(player) {
     return `NAME:${String(player?.playerName ?? "").trim().toLowerCase()}`;
 }
 
+function trackShirtNumber(counter, rawValue, weight = 1) {
+    const value = String(rawValue ?? "").trim();
+    if (!value) {
+        return;
+    }
+
+    const parsedWeight = Number(weight);
+    const normalizedWeight = Number.isFinite(parsedWeight) && parsedWeight > 0 ? parsedWeight : 1;
+    counter[value] = (counter[value] ?? 0) + normalizedWeight;
+}
+
+function getDominantShirtNumber(counter, fallback = "") {
+    const entries = Object.entries(counter ?? {});
+    if (entries.length === 0) {
+        return String(fallback ?? "").trim();
+    }
+
+    const normalizedFallback = String(fallback ?? "").trim();
+
+    return entries
+        .sort((left, right) => {
+            if (right[1] !== left[1]) {
+                return right[1] - left[1];
+            }
+
+            const rightIsFallback = right[0] === normalizedFallback ? 1 : 0;
+            const leftIsFallback = left[0] === normalizedFallback ? 1 : 0;
+            if (rightIsFallback !== leftIsFallback) {
+                return rightIsFallback - leftIsFallback;
+            }
+
+            return left[0].localeCompare(right[0], "es");
+        })[0]?.[0] ?? normalizedFallback;
+}
+
 export function getPlayersList(players) {
     const entriesByKey = new Map();
 
@@ -175,6 +210,7 @@ export function buildPlayersArray(players) {
             totalsByPlayer[playerKey] = {
                 key: playerKey,
                 name: player.playerName ?? "",
+                shirtNumbers: {},
                 points: 0,
                 valuation: 0,
                 fouls: 0,
@@ -182,19 +218,25 @@ export function buildPlayersArray(players) {
             };
         }
 
+        trackShirtNumber(totalsByPlayer[playerKey].shirtNumbers, player.dorsal ?? player.shirtNumber);
         totalsByPlayer[playerKey].points += Number(player.points);
         totalsByPlayer[playerKey].valuation += Number(player.valuation);
         totalsByPlayer[playerKey].fouls += Number(player.fouls ?? 0);
         totalsByPlayer[playerKey].games += 1;
     });
 
-    return Object.values(totalsByPlayer).map((stats) => ({
-        ...stats,
-        avgPoints: stats.games > 0 ? stats.points / stats.games : 0,
-        avgValuation: stats.games > 0 ? stats.valuation / stats.games : 0,
-        avgFouls: stats.games > 0 ? stats.fouls / stats.games : 0,
-        avgVal: stats.games > 0 ? stats.valuation / stats.games : 0
-    }));
+    return Object.values(totalsByPlayer).map((stats) => {
+        const {shirtNumbers, ...rest} = stats;
+
+        return {
+            ...rest,
+            shirtNumber: getDominantShirtNumber(shirtNumbers),
+            avgPoints: stats.games > 0 ? stats.points / stats.games : 0,
+            avgValuation: stats.games > 0 ? stats.valuation / stats.games : 0,
+            avgFouls: stats.games > 0 ? stats.fouls / stats.games : 0,
+            avgVal: stats.games > 0 ? stats.valuation / stats.games : 0
+        };
+    });
 }
 
 export function getTopScorer(playersArray) {
@@ -230,6 +272,7 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
     }
 
     const games = selectedRows.length;
+    const shirtNumbers = {};
     const points = selectedRows.reduce((sum, player) => sum + Number(player.points ?? 0), 0);
     const valuation = selectedRows.reduce((sum, player) => sum + Number(player.valuation ?? 0), 0);
     const minutes = selectedRows.reduce((sum, player) => sum + Number(player.minutes ?? 0), 0);
@@ -241,9 +284,14 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
     const threeMade = selectedRows.reduce((sum, player) => sum + Number(player.threeMade ?? 0), 0);
     const threeAttempted = selectedRows.reduce((sum, player) => sum + Number(player.threeAttempted ?? 0), 0);
 
+    selectedRows.forEach((player) => {
+        trackShirtNumber(shirtNumbers, player.dorsal ?? player.shirtNumber);
+    });
+
     return {
         key: selectedPlayer,
         name: selectedRows[0]?.playerName ?? selectedPlayer,
+        shirtNumber: getDominantShirtNumber(shirtNumbers),
         games,
         points,
         valuation,
@@ -283,12 +331,12 @@ export function buildGlobalPlayers(teams) {
                 teamKey: player.teamKey ?? team.teamKey,
                 teamName: player.teamName ?? team.teamName,
                 playerName: player.playerName,
-                shirtNumber: player.shirtNumber ?? "",
                 games,
                 points,
                 valuation,
                 fouls,
                 minutes: Number(player.minutes) || 0,
+                shirtNumber: String(player.shirtNumber ?? "").trim(),
                 avgPoints: games > 0 ? points / games : 0,
                 avgValuation: games > 0 ? valuation / games : 0,
                 avgFouls: games > 0 ? fouls / games : 0

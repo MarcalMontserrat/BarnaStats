@@ -233,6 +233,93 @@ public sealed class MatchAnalysisServiceTests
         }
     }
 
+    [Fact]
+    public async Task ProcessAsync_uses_the_most_frequent_shirt_number_for_the_season_total()
+    {
+        using var sandbox = new TemporaryDirectory();
+        var rawRoot = Path.Combine(sandbox.Path, "raw");
+        var phaseRoot = Path.Combine(rawRoot, "phases", "20856");
+        var statsDir = Path.Combine(phaseRoot, "stats");
+        var movesDir = Path.Combine(phaseRoot, "moves");
+
+        Directory.CreateDirectory(statsDir);
+        Directory.CreateDirectory(movesDir);
+
+        File.Copy(
+            Path.Combine(FixturePaths.SinglePhaseRoot, "phase_metadata.json"),
+            Path.Combine(phaseRoot, "phase_metadata.json"));
+
+        var fixtureStatsPath = Path.Combine(FixturePaths.SinglePhaseRoot, "stats", "34951_68fcb7c91497f200013e2648_stats.json");
+        var fixtureMovesPath = Path.Combine(FixturePaths.SinglePhaseRoot, "moves", "34951_68fcb7c91497f200013e2648_moves.json");
+
+        var firstMatch = JsonSerializer.Deserialize<StatsRoot>(File.ReadAllText(fixtureStatsPath), JsonOptions)!;
+        var secondMatch = JsonSerializer.Deserialize<StatsRoot>(File.ReadAllText(fixtureStatsPath), JsonOptions)!;
+        var thirdMatch = JsonSerializer.Deserialize<StatsRoot>(File.ReadAllText(fixtureStatsPath), JsonOptions)!;
+
+        secondMatch.IdMatchIntern = 44951;
+        secondMatch.IdMatchExtern = 144951;
+        secondMatch.Time = "2025-09-28T10:00:00+02:00";
+
+        thirdMatch.IdMatchIntern = 54951;
+        thirdMatch.IdMatchExtern = 154951;
+        thirdMatch.Time = "2025-10-05T10:00:00+02:00";
+
+        const string trackedPlayerName = "LAIA HOSPITAL AUGE";
+        var trackedPlayerFirst = firstMatch.Teams
+            .SelectMany(team => team.Players ?? [])
+            .First(player => player.Name == trackedPlayerName);
+        var trackedPlayerSecond = secondMatch.Teams
+            .SelectMany(team => team.Players ?? [])
+            .First(player => player.Name == trackedPlayerName);
+        var trackedPlayerThird = thirdMatch.Teams
+            .SelectMany(team => team.Players ?? [])
+            .First(player => player.Name == trackedPlayerName);
+
+        var dominantDorsal = trackedPlayerFirst.Dorsal ?? "7";
+        var alternateDorsal = dominantDorsal == "99" ? "9" : "99";
+
+        trackedPlayerFirst.Dorsal = dominantDorsal;
+        trackedPlayerSecond.Dorsal = dominantDorsal;
+        trackedPlayerThird.Dorsal = alternateDorsal;
+
+        await File.WriteAllTextAsync(
+            Path.Combine(statsDir, "34951_68fcb7c91497f200013e2648_stats.json"),
+            JsonSerializer.Serialize(firstMatch, JsonOptions));
+        await File.WriteAllTextAsync(
+            Path.Combine(statsDir, "44951_68fcb7c91497f200013e2648_stats.json"),
+            JsonSerializer.Serialize(secondMatch, JsonOptions));
+        await File.WriteAllTextAsync(
+            Path.Combine(statsDir, "54951_68fcb7c91497f200013e2648_stats.json"),
+            JsonSerializer.Serialize(thirdMatch, JsonOptions));
+
+        File.Copy(fixtureMovesPath, Path.Combine(movesDir, "34951_68fcb7c91497f200013e2648_moves.json"));
+        File.Copy(fixtureMovesPath, Path.Combine(movesDir, "44951_68fcb7c91497f200013e2648_moves.json"));
+        File.Copy(fixtureMovesPath, Path.Combine(movesDir, "54951_68fcb7c91497f200013e2648_moves.json"));
+
+        var previousFlag = Environment.GetEnvironmentVariable("BARNASTATS_ENABLE_AI_MATCH_REPORTS");
+        Environment.SetEnvironmentVariable("BARNASTATS_ENABLE_AI_MATCH_REPORTS", "false");
+
+        try
+        {
+            var service = new MatchAnalysisService(
+                new OpenAiMatchReportService(Path.Combine(sandbox.Path, "match-reports")));
+
+            var result = await service.ProcessAsync(rawRoot);
+
+            var homeTeam = Assert.Single(result.Teams, team => team.TeamName == "BASQUET ATENEU MONTSERRAT GROC");
+            var playerSeasonTotal = Assert.Single(homeTeam.SeasonTotals, player => player.PlayerName == trackedPlayerName);
+            Assert.Equal(dominantDorsal, playerSeasonTotal.ShirtNumber);
+
+            var playerLeader = Assert.Single(result.Competition.PlayerLeaders, player =>
+                player.TeamKey == homeTeam.TeamKey && player.PlayerName == trackedPlayerName);
+            Assert.Equal(dominantDorsal, playerLeader.ShirtNumber);
+        }
+        finally
+        {
+            Environment.SetEnvironmentVariable("BARNASTATS_ENABLE_AI_MATCH_REPORTS", previousFlag);
+        }
+    }
+
     private sealed class TemporaryDirectory : IDisposable
     {
         public TemporaryDirectory()

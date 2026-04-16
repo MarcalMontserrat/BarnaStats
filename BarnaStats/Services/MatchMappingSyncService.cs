@@ -12,6 +12,12 @@ public sealed class MatchMappingSyncService
     private const int AutomaticRetryAttempts = 5;
     private const int AutomaticRetryDelayMs = 2000;
     private const int DirectMappingProximityWindow = 700;
+    private static readonly MatchMappingSyncResult EmptySyncResult = new()
+    {
+        DiscoveredMappings = Array.Empty<MatchDiscovery>(),
+        TargetMatchWebIds = Array.Empty<int>(),
+        ResolvedUuids = new Dictionary<int, string?>()
+    };
     private static readonly CultureInfo[] SupportedDateCultures =
     [
         new("ca-ES"),
@@ -88,30 +94,81 @@ public sealed class MatchMappingSyncService
         string? sourceUrl = null,
         bool interactive = true)
     {
+        var initialTargetMatchWebIds = BuildTargetMatchWebIds(
+            existingMappings,
+            explicitMatchWebIds,
+            Array.Empty<int>(),
+            includeAll);
+
+        if (string.IsNullOrWhiteSpace(sourceUrl) && initialTargetMatchWebIds.Count == 0)
+            return EmptySyncResult;
+
+        Console.WriteLine("Intentando reutilizar la sesión guardada sin abrir navegador...");
+
+        var backgroundResult = await RunSyncSessionAsync(
+            existingMappings,
+            explicitMatchWebIds,
+            includeAll,
+            sourceUrl,
+            interactive: false,
+            headless: true);
+
+        if (!RequiresVisibleBrowser(backgroundResult, sourceUrl))
+            return backgroundResult;
+
+        var fallbackMappings = MergeSyncResult(existingMappings, backgroundResult);
+        var unresolvedTargets = CountUnresolvedTargets(backgroundResult);
+
+        Console.WriteLine();
+        Console.WriteLine(string.IsNullOrWhiteSpace(sourceUrl) || backgroundResult.DiscoveredMappings.Count > 0
+            ? $"La sesión en segundo plano no ha bastado. Quedan {unresolvedTargets} partido(s) por resolver."
+            : "La fuente no se ha podido leer en segundo plano. Puede haber captcha, login o challenge.");
+        Console.WriteLine("Abriendo navegador visible para que puedas intervenir solo si hace falta.");
+
+        return await RunSyncSessionAsync(
+            fallbackMappings,
+            explicitMatchWebIds,
+            includeAll,
+            sourceUrl,
+            interactive,
+            headless: false);
+    }
+
+    private async Task<MatchMappingSyncResult> RunSyncSessionAsync(
+        IReadOnlyList<MatchMapping> existingMappings,
+        IReadOnlyCollection<int> explicitMatchWebIds,
+        bool includeAll,
+        string? sourceUrl,
+        bool interactive,
+        bool headless)
+    {
         var resolved = new Dictionary<int, string?>();
 
         using var playwright = await Playwright.CreateAsync();
-        await using var browser = await LaunchContextAsync(playwright);
+        await using var browser = await LaunchContextAsync(playwright, headless);
 
         var page = browser.Pages.FirstOrDefault() ?? await browser.NewPageAsync();
         var startUrl = string.IsNullOrWhiteSpace(sourceUrl)
             ? "https://www.basquetcatala.cat/"
             : sourceUrl;
 
-        Console.WriteLine("Se abrirá un navegador real para reutilizar tu sesión.");
-        Console.WriteLine("Si aparece login o captcha, resuélvelo ahí y vuelve al terminal.");
-        Console.WriteLine(interactive
-            ? string.IsNullOrWhiteSpace(sourceUrl)
-                ? "Pulsa ENTER cuando la web de basquetcatala esté lista."
-                : "Pulsa ENTER cuando la página de basquetcatala esté visible."
-            : "El proceso seguirá reintentando automáticamente mientras resuelves captcha/login en el navegador.");
+        if (!headless)
+        {
+            Console.WriteLine("Se abrirá un navegador real para reutilizar tu sesión.");
+            Console.WriteLine("Si aparece login o captcha, resuélvelo ahí y vuelve al terminal.");
+            Console.WriteLine(interactive
+                ? string.IsNullOrWhiteSpace(sourceUrl)
+                    ? "Pulsa ENTER cuando la web de basquetcatala esté lista."
+                    : "Pulsa ENTER cuando la página de basquetcatala esté visible."
+                : "El proceso seguirá reintentando automáticamente mientras resuelves captcha/login en el navegador.");
+        }
 
         await page.GotoAsync(startUrl, new PageGotoOptions
         {
             WaitUntil = WaitUntilState.DOMContentLoaded
         });
 
-        if (interactive)
+        if (!headless && interactive)
         {
             Console.ReadLine();
         }
@@ -327,7 +384,7 @@ public sealed class MatchMappingSyncService
         return ExtractDirectMappingsFromText(html);
     }
 
-    private async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright)
+    private async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright, bool headless)
     {
         Directory.CreateDirectory(_browserProfileDir);
 
@@ -337,7 +394,7 @@ public sealed class MatchMappingSyncService
                 _browserProfileDir,
                 new BrowserTypeLaunchPersistentContextOptions
                 {
-                    Headless = false,
+                    Headless = headless,
                     Channel = "chrome"
                 });
         }
@@ -349,9 +406,77 @@ public sealed class MatchMappingSyncService
                 _browserProfileDir,
                 new BrowserTypeLaunchPersistentContextOptions
                 {
-                    Headless = false
+                    Headless = headless
                 });
         }
+    }
+
+    private static bool RequiresVisibleBrowser(MatchMappingSyncResult result, string? sourceUrl)
+    {
+        if (!string.IsNullOrWhiteSpace(sourceUrl) && result.DiscoveredMappings.Count == 0)
+            return true;
+
+        return CountUnresolvedTargets(result) > 0;
+    }
+
+    private static int CountUnresolvedTargets(MatchMappingSyncResult result)
+    {
+        return result.TargetMatchWebIds.Count(matchWebId =>
+            !result.ResolvedUuids.TryGetValue(matchWebId, out var uuid) ||
+            string.IsNullOrWhiteSpace(uuid));
+    }
+
+    private static List<MatchMapping> MergeSyncResult(
+        IReadOnlyList<MatchMapping> existingMappings,
+        MatchMappingSyncResult syncResult)
+    {
+        var merged = existingMappings
+            .Select(mapping => new MatchMapping
+            {
+                MatchWebId = mapping.MatchWebId,
+                UuidMatch = mapping.UuidMatch,
+                MatchDate = mapping.MatchDate
+            })
+            .ToDictionary(mapping => mapping.MatchWebId);
+
+        foreach (var discovery in syncResult.DiscoveredMappings)
+        {
+            if (!merged.TryGetValue(discovery.MatchWebId, out var mapping))
+            {
+                mapping = new MatchMapping
+                {
+                    MatchWebId = discovery.MatchWebId
+                };
+                merged[discovery.MatchWebId] = mapping;
+            }
+
+            if (!string.IsNullOrWhiteSpace(discovery.UuidMatch))
+                mapping.UuidMatch = discovery.UuidMatch;
+
+            if (discovery.MatchDate.HasValue)
+                mapping.MatchDate = discovery.MatchDate;
+        }
+
+        foreach (var resolvedEntry in syncResult.ResolvedUuids)
+        {
+            if (string.IsNullOrWhiteSpace(resolvedEntry.Value))
+                continue;
+
+            if (!merged.TryGetValue(resolvedEntry.Key, out var mapping))
+            {
+                mapping = new MatchMapping
+                {
+                    MatchWebId = resolvedEntry.Key
+                };
+                merged[resolvedEntry.Key] = mapping;
+            }
+
+            mapping.UuidMatch = resolvedEntry.Value;
+        }
+
+        return merged.Values
+            .OrderBy(mapping => mapping.MatchWebId)
+            .ToList();
     }
 
     private static bool CanFallbackToBundledChromium(PlaywrightException ex)

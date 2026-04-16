@@ -8,6 +8,41 @@ function normalizeSearchValue(value) {
         .toLowerCase();
 }
 
+function incrementWeightedCounter(counter, rawValue, weight = 1) {
+    const value = String(rawValue ?? "").trim();
+    if (!value) {
+        return;
+    }
+
+    const parsedWeight = Number(weight);
+    const normalizedWeight = Number.isFinite(parsedWeight) && parsedWeight > 0 ? parsedWeight : 1;
+    counter.set(value, (counter.get(value) ?? 0) + normalizedWeight);
+}
+
+function getDominantCounterValue(counter, fallback = "") {
+    const entries = [...(counter?.entries?.() ?? [])];
+    if (entries.length === 0) {
+        return String(fallback ?? "").trim();
+    }
+
+    const normalizedFallback = String(fallback ?? "").trim();
+
+    return entries
+        .sort((left, right) => {
+            if (right[1] !== left[1]) {
+                return right[1] - left[1];
+            }
+
+            const rightIsFallback = right[0] === normalizedFallback ? 1 : 0;
+            const leftIsFallback = left[0] === normalizedFallback ? 1 : 0;
+            if (rightIsFallback !== leftIsFallback) {
+                return rightIsFallback - leftIsFallback;
+            }
+
+            return left[0].localeCompare(right[0], "es");
+        })[0]?.[0] ?? normalizedFallback;
+}
+
 function buildPhaseScopeKey(row) {
     const sourcePhaseId = Number(row?.sourcePhaseId ?? 0);
     const seasonLabel = String(row?.seasonLabel ?? "").trim();
@@ -237,6 +272,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                     seasonStartYear: player.seasonStartYear ?? null,
                     seasonLabel: player.seasonLabel ?? "",
                     playerName: player.playerName ?? "",
+                    shirtNumbers: new Map(),
                     games: 0,
                     points: 0,
                     valuation: 0,
@@ -253,6 +289,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
             seasonSummary.fouls += Number(player.fouls ?? 0);
             seasonSummary.minutes += Number(player.minutes ?? 0);
             seasonSummary.playerName = player.playerName ?? seasonSummary.playerName;
+            incrementWeightedCounter(seasonSummary.shirtNumbers, player.shirtNumber, Number(player.games ?? 0));
 
             const currentTeam = seasonSummary.teams.get(player.teamKey) ?? {
                 teamKey: player.teamKey ?? "",
@@ -277,6 +314,7 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                         seasonStartYear: seasonSummary.seasonStartYear,
                         seasonLabel: seasonSummary.seasonLabel,
                         playerName: seasonSummary.playerName,
+                        shirtNumber: getDominantCounterValue(seasonSummary.shirtNumbers),
                         games: seasonSummary.games,
                         points: seasonSummary.points,
                         valuation: seasonSummary.valuation,
@@ -305,6 +343,10 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
                 metaParts.push(`${seasonSummaries.length} temporada${seasonSummaries.length === 1 ? "" : "s"}`);
             }
 
+            if (latestSeason?.shirtNumber) {
+                metaParts.push(`#${latestSeason.shirtNumber}`);
+            }
+
             if (latestSeason?.primaryTeamName) {
                 metaParts.push(latestSeason.primaryTeamName);
             }
@@ -312,8 +354,9 @@ export function buildHistoricalPlayerEntities(seasonDatasets) {
             return {
                 key: entity.key,
                 label: latestSeason?.playerName || entity.label,
+                latestShirtNumber: latestSeason?.shirtNumber ?? "",
                 meta: metaParts.join(" · "),
-                searchText: [...entity.searchTerms].join(" "),
+                searchText: [...entity.searchTerms, latestSeason?.shirtNumber ? `#${latestSeason.shirtNumber}` : ""].join(" "),
                 totals: {
                     seasons: seasonSummaries.length,
                     games: totalGames,

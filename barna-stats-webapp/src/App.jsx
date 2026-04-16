@@ -2006,6 +2006,9 @@ function App() {
                                 </div>
 
                                 <div style={appStyles.heroMetaRow}>
+                                    {selectedHistoricalPlayer.latestShirtNumber ? (
+                                        <span style={appStyles.metaChip}>Dorsal actual #{selectedHistoricalPlayer.latestShirtNumber}</span>
+                                    ) : null}
                                     <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgPoints, 1)} puntos por partido</span>
                                     <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgValuation, 1)} valoración media</span>
                                     <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgFouls, 1)} faltas por partido</span>
@@ -2068,7 +2071,10 @@ function App() {
                             {selectedHistoricalPlayer.seasonSummaries.map((seasonSummary) => (
                                 <article key={seasonSummary.key} style={appStyles.seasonCard}>
                                     <div style={appStyles.seasonCardHeader}>
-                                        <div style={appStyles.seasonCardEyebrow}>{seasonSummary.seasonLabel}</div>
+                                        <div style={appStyles.seasonCardEyebrow}>
+                                            {seasonSummary.seasonLabel}
+                                            {seasonSummary.shirtNumber ? ` · #${seasonSummary.shirtNumber}` : ""}
+                                        </div>
                                         <h3 style={appStyles.seasonCardTitle}>{seasonSummary.playerName}</h3>
                                         <p style={appStyles.seasonCardMeta}>
                                             {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}

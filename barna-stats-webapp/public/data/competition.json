@@ -54719,7 +54719,7 @@
       "avgFouls": 1.75
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:bb8b52ac-af60-42a5-9144-c2f53adcf95c:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:bb8b52ac-af60-42a5-9144-c2f53adcf95c:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
       "teamIdIntern": 453840,
       "teamIdExtern": 82708,
@@ -54730,7 +54730,7 @@
       "playerActorId": 7441906,
       "playerIdentityKey": "UUID:bb8b52ac-af60-42a5-9144-c2f53adcf95c",
       "playerName": "PAULA MART\u00CDNEZ MERCADAL",
-      "shirtNumber": "8",
+      "shirtNumber": "2",
       "games": 13,
       "minutes": 434,
       "points": 456,
@@ -54829,7 +54829,7 @@
       "avgFouls": 2.4545454545454546
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296:UUID:fd1e1758-98d0-11e9-a2a5-0216824770c2:00",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296:UUID:fd1e1758-98d0-11e9-a2a5-0216824770c2:23",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296",
       "teamIdIntern": 453221,
       "teamIdExtern": 81296,
@@ -54840,7 +54840,7 @@
       "playerActorId": 7431731,
       "playerIdentityKey": "UUID:fd1e1758-98d0-11e9-a2a5-0216824770c2",
       "playerName": "ANNA FUENTES MENDEZ",
-      "shirtNumber": "00",
+      "shirtNumber": "23",
       "games": 22,
       "minutes": 696,
       "points": 362,
@@ -55203,7 +55203,7 @@
       "avgFouls": 3.4545454545454546
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:c7fe84bf-142a-4bd0-a9d9-c4945810d343:30",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:c7fe84bf-142a-4bd0-a9d9-c4945810d343:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
@@ -55214,7 +55214,7 @@
       "playerActorId": 7435313,
       "playerIdentityKey": "UUID:c7fe84bf-142a-4bd0-a9d9-c4945810d343",
       "playerName": "ARIADNA MARTIN POLO",
-      "shirtNumber": "30",
+      "shirtNumber": "17",
       "games": 17,
       "minutes": 517,
       "points": 317,
@@ -56237,7 +56237,7 @@
       "avgFouls": 1.5217391304347827
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847:UUID:f48e2a71-965e-42e7-a64a-32b69add2106:78",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847:UUID:f48e2a71-965e-42e7-a64a-32b69add2106:14",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
       "teamIdIntern": 455000,
       "teamIdExtern": 83847,
@@ -56248,7 +56248,7 @@
       "playerActorId": 7461031,
       "playerIdentityKey": "UUID:f48e2a71-965e-42e7-a64a-32b69add2106",
       "playerName": "VERA MIGUEIZ MOYA",
-      "shirtNumber": "78",
+      "shirtNumber": "14",
       "games": 17,
       "minutes": 491,
       "points": 258,
@@ -56435,7 +56435,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:b614951b-3202-4d5b-b58b-e16aefc0a8c6:9",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:b614951b-3202-4d5b-b58b-e16aefc0a8c6:10",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
@@ -56446,7 +56446,7 @@
       "playerActorId": 7463067,
       "playerIdentityKey": "UUID:b614951b-3202-4d5b-b58b-e16aefc0a8c6",
       "playerName": "MAELIS CEA LEGRET",
-      "shirtNumber": "9",
+      "shirtNumber": "10",
       "games": 19,
       "minutes": 620,
       "points": 251,
@@ -57117,7 +57117,7 @@
       "avgFouls": 3.1818181818181817
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546:UUID:003160e3-98d1-11e9-a2a5-0216824770c2:6",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546:UUID:003160e3-98d1-11e9-a2a5-0216824770c2:26",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
       "teamIdIntern": 452782,
       "teamIdExtern": 80546,
@@ -57128,7 +57128,7 @@
       "playerActorId": 7423997,
       "playerIdentityKey": "UUID:003160e3-98d1-11e9-a2a5-0216824770c2",
       "playerName": "CLAIRE MARIE COLLS BATCHELOR",
-      "shirtNumber": "6",
+      "shirtNumber": "26",
       "games": 21,
       "minutes": 565,
       "points": 227,
@@ -57975,7 +57975,7 @@
       "avgFouls": 1.3181818181818181
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:d7dc1534-e37c-4168-a23b-776b1375a3a9:17",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:d7dc1534-e37c-4168-a23b-776b1375a3a9:14",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -57986,7 +57986,7 @@
       "playerActorId": 7456886,
       "playerIdentityKey": "UUID:d7dc1534-e37c-4168-a23b-776b1375a3a9",
       "playerName": "MARIA SERVITJE P\u00C9REZ",
-      "shirtNumber": "17",
+      "shirtNumber": "14",
       "games": 14,
       "minutes": 327,
       "points": 207,
@@ -58503,7 +58503,7 @@
       "avgFouls": 1.9130434782608696
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:011edec0-98d1-11e9-a2a5-0216824770c2:97",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:011edec0-98d1-11e9-a2a5-0216824770c2:9",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
       "teamIdIntern": 450360,
       "teamIdExtern": 80338,
@@ -58514,7 +58514,7 @@
       "playerActorId": 7382211,
       "playerIdentityKey": "UUID:011edec0-98d1-11e9-a2a5-0216824770c2",
       "playerName": "SARA GARGALLO NAVARRO",
-      "shirtNumber": "97",
+      "shirtNumber": "9",
       "games": 23,
       "minutes": 541,
       "points": 195,
@@ -58635,7 +58635,7 @@
       "avgFouls": 0.8947368421052632
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:24",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
@@ -58646,7 +58646,7 @@
       "playerActorId": 7451524,
       "playerIdentityKey": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573",
       "playerName": "M\u00C0LIA MONTSERRAT MATEO",
-      "shirtNumber": "24",
+      "shirtNumber": "11",
       "games": 18,
       "minutes": 410,
       "points": 193,
@@ -59515,7 +59515,7 @@
       "avgFouls": 1.8235294117647058
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384:UUID:dd42aecf-e948-412f-b0b2-2955111080d0:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384:UUID:dd42aecf-e948-412f-b0b2-2955111080d0:10",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384",
       "teamIdIntern": 454097,
       "teamIdExtern": 82384,
@@ -59526,7 +59526,7 @@
       "playerActorId": 7446305,
       "playerIdentityKey": "UUID:dd42aecf-e948-412f-b0b2-2955111080d0",
       "playerName": "MARTINA MONTOYA MARTINEZ",
-      "shirtNumber": "1",
+      "shirtNumber": "10",
       "games": 17,
       "minutes": 465,
       "points": 182,
@@ -59581,7 +59581,7 @@
       "avgFouls": 3.5217391304347827
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea:12",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 459557,
       "teamIdExtern": 82766,
@@ -59592,7 +59592,7 @@
       "playerActorId": 7541071,
       "playerIdentityKey": "UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea",
       "playerName": "PAULA NAUDIN COMA",
-      "shirtNumber": "12",
+      "shirtNumber": "9",
       "games": 10,
       "minutes": 257,
       "points": 182,
@@ -59713,7 +59713,7 @@
       "avgFouls": 2.6363636363636362
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839:UUID:194e9063-5f19-45e6-8e2d-5af77da4db4c:16",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839:UUID:194e9063-5f19-45e6-8e2d-5af77da4db4c:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839",
       "teamIdIntern": 453460,
       "teamIdExtern": 78839,
@@ -59724,7 +59724,7 @@
       "playerActorId": 7435761,
       "playerIdentityKey": "UUID:194e9063-5f19-45e6-8e2d-5af77da4db4c",
       "playerName": "MEL ROMEU CLAP\u00C9S",
-      "shirtNumber": "16",
+      "shirtNumber": "12",
       "games": 17,
       "minutes": 400,
       "points": 181,
@@ -59955,7 +59955,7 @@
       "avgFouls": 2.260869565217391
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80193:UUID:4b15a56e-104f-4eec-a77e-715dc293932b:5",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80193:UUID:4b15a56e-104f-4eec-a77e-715dc293932b:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80193",
       "teamIdIntern": 457306,
       "teamIdExtern": 80193,
@@ -59966,7 +59966,7 @@
       "playerActorId": 7502063,
       "playerIdentityKey": "UUID:4b15a56e-104f-4eec-a77e-715dc293932b",
       "playerName": "SURI AMAT SANGUINO",
-      "shirtNumber": "5",
+      "shirtNumber": "7",
       "games": 19,
       "minutes": 491,
       "points": 178,
@@ -59999,7 +59999,7 @@
       "avgFouls": 1.4
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628:UUID:01271fe9-98d1-11e9-a2a5-0216824770c2:23",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628:UUID:01271fe9-98d1-11e9-a2a5-0216824770c2:12",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628",
       "teamIdIntern": 450132,
       "teamIdExtern": 78628,
@@ -60010,7 +60010,7 @@
       "playerActorId": 67191757747809388,
       "playerIdentityKey": "UUID:01271fe9-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MARTINA CABARROCAS ORTEGA",
-      "shirtNumber": "23",
+      "shirtNumber": "12",
       "games": 21,
       "minutes": 486,
       "points": 177,
@@ -60549,7 +60549,7 @@
       "avgFouls": 3.6363636363636362
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420:UUID:01613037-98d1-11e9-a2a5-0216824770c2:4",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420:UUID:01613037-98d1-11e9-a2a5-0216824770c2:44",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
       "teamIdIntern": 451323,
       "teamIdExtern": 78420,
@@ -60560,7 +60560,7 @@
       "playerActorId": 7398619,
       "playerIdentityKey": "UUID:01613037-98d1-11e9-a2a5-0216824770c2",
       "playerName": "BRUNA MENDIA LIRIA",
-      "shirtNumber": "4",
+      "shirtNumber": "44",
       "games": 21,
       "minutes": 463,
       "points": 170,
@@ -60615,7 +60615,7 @@
       "avgFouls": 1.4
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:012c5288-98d1-11e9-a2a5-0216824770c2:19",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:012c5288-98d1-11e9-a2a5-0216824770c2:24",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
       "teamIdIntern": 450288,
       "teamIdExtern": 80600,
@@ -60626,7 +60626,7 @@
       "playerActorId": 7381048,
       "playerIdentityKey": "UUID:012c5288-98d1-11e9-a2a5-0216824770c2",
       "playerName": "GUIOMAR CARRE\u00D1O CAPDET",
-      "shirtNumber": "19",
+      "shirtNumber": "24",
       "games": 23,
       "minutes": 514,
       "points": 168,
@@ -60901,7 +60901,7 @@
       "avgFouls": 2.8
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883:UUID:7052ddb9-f6a3-432f-b166-a88b99a9c3ee:12",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883:UUID:7052ddb9-f6a3-432f-b166-a88b99a9c3ee:1",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883",
       "teamIdIntern": 450986,
       "teamIdExtern": 78883,
@@ -60912,7 +60912,7 @@
       "playerActorId": 7392617,
       "playerIdentityKey": "UUID:7052ddb9-f6a3-432f-b166-a88b99a9c3ee",
       "playerName": "JOMPOLO SUMBUNDU JALLOW",
-      "shirtNumber": "12",
+      "shirtNumber": "1",
       "games": 18,
       "minutes": 351,
       "points": 164,
@@ -61319,7 +61319,7 @@
       "avgFouls": 1.5
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483:UUID:0030aa30-98d1-11e9-a2a5-0216824770c2:3",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483:UUID:0030aa30-98d1-11e9-a2a5-0216824770c2:22",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483",
       "teamIdIntern": 452162,
       "teamIdExtern": 79483,
@@ -61330,7 +61330,7 @@
       "playerActorId": 7413144,
       "playerIdentityKey": "UUID:0030aa30-98d1-11e9-a2a5-0216824770c2",
       "playerName": "NASSIM ZETCHI LINARES",
-      "shirtNumber": "3",
+      "shirtNumber": "22",
       "games": 22,
       "minutes": 434,
       "points": 160,
@@ -61407,7 +61407,7 @@
       "avgFouls": 1.5217391304347827
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78454:UUID:fc28df7d-98d0-11e9-a2a5-0216824770c2:14",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78454:UUID:fc28df7d-98d0-11e9-a2a5-0216824770c2:10",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78454",
       "teamIdIntern": 452376,
       "teamIdExtern": 78454,
@@ -61418,7 +61418,7 @@
       "playerActorId": 7416946,
       "playerIdentityKey": "UUID:fc28df7d-98d0-11e9-a2a5-0216824770c2",
       "playerName": "MIQUEL TARDIO MARTI",
-      "shirtNumber": "14",
+      "shirtNumber": "10",
       "games": 21,
       "minutes": 445,
       "points": 159,
@@ -61583,7 +61583,7 @@
       "avgFouls": 1.8235294117647058
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235:UUID:e5760ebc-44e2-4eea-bf48-f227c250b88d:14",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235:UUID:e5760ebc-44e2-4eea-bf48-f227c250b88d:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235",
       "teamIdIntern": 454788,
       "teamIdExtern": 80235,
@@ -61594,7 +61594,7 @@
       "playerActorId": 74341759568710311,
       "playerIdentityKey": "UUID:e5760ebc-44e2-4eea-bf48-f227c250b88d",
       "playerName": "IN\u00C9S \u00C1LVAREZ NAVARRO",
-      "shirtNumber": "14",
+      "shirtNumber": "12",
       "games": 18,
       "minutes": 567,
       "points": 157,
@@ -61803,7 +61803,7 @@
       "avgFouls": 1.894736842105263
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:211d04b3-a795-49c5-a6dd-1943e869a0a1:09",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:211d04b3-a795-49c5-a6dd-1943e869a0a1:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -61814,7 +61814,7 @@
       "playerActorId": 7435307,
       "playerIdentityKey": "UUID:211d04b3-a795-49c5-a6dd-1943e869a0a1",
       "playerName": "CARLOTA MIRACLE PUJOL",
-      "shirtNumber": "09",
+      "shirtNumber": "9",
       "games": 16,
       "minutes": 403,
       "points": 153,
@@ -61913,7 +61913,7 @@
       "avgFouls": 2.4347826086956523
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:d98a3d6d-d6c7-4b1a-8d8c-e665be245b2e:12",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:d98a3d6d-d6c7-4b1a-8d8c-e665be245b2e:13",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
       "teamIdIntern": 450155,
       "teamIdExtern": 78605,
@@ -61924,7 +61924,7 @@
       "playerActorId": 7378895,
       "playerIdentityKey": "UUID:d98a3d6d-d6c7-4b1a-8d8c-e665be245b2e",
       "playerName": "PAULA MAKOLE MBA",
-      "shirtNumber": "12",
+      "shirtNumber": "13",
       "games": 22,
       "minutes": 447,
       "points": 153,
@@ -63145,7 +63145,7 @@
       "avgFouls": 2.217391304347826
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80817:UUID:03e111b2-c552-46af-a583-b3d29417b43e:29",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80817:UUID:03e111b2-c552-46af-a583-b3d29417b43e:11",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80817",
       "teamIdIntern": 453036,
       "teamIdExtern": 80817,
@@ -63156,7 +63156,7 @@
       "playerActorId": 7428476,
       "playerIdentityKey": "UUID:03e111b2-c552-46af-a583-b3d29417b43e",
       "playerName": "SANDRA ALIQUES BORONAT",
-      "shirtNumber": "29",
+      "shirtNumber": "11",
       "games": 22,
       "minutes": 548,
       "points": 143,
@@ -64575,7 +64575,7 @@
       "avgFouls": 2.347826086956522
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78572:UUID:00d5994e-98d1-11e9-a2a5-0216824770c2:25",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78572:UUID:00d5994e-98d1-11e9-a2a5-0216824770c2:27",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78572",
       "teamIdIntern": 450500,
       "teamIdExtern": 78572,
@@ -64586,7 +64586,7 @@
       "playerActorId": 7384545,
       "playerIdentityKey": "UUID:00d5994e-98d1-11e9-a2a5-0216824770c2",
       "playerName": "AINA RICART ANGUITA",
-      "shirtNumber": "25",
+      "shirtNumber": "27",
       "games": 23,
       "minutes": 484,
       "points": 130,
@@ -65301,7 +65301,7 @@
       "avgFouls": 1.8636363636363635
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000:UUID:010b2ca4-98d1-11e9-a2a5-0216824770c2:21",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000:UUID:010b2ca4-98d1-11e9-a2a5-0216824770c2:1",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000",
       "teamIdIntern": 450631,
       "teamIdExtern": 80000,
@@ -65312,7 +65312,7 @@
       "playerActorId": 7386652,
       "playerIdentityKey": "UUID:010b2ca4-98d1-11e9-a2a5-0216824770c2",
       "playerName": "SARA KHAIDAR HARBICHI",
-      "shirtNumber": "21",
+      "shirtNumber": "1",
       "games": 23,
       "minutes": 491,
       "points": 126,
@@ -65433,7 +65433,7 @@
       "avgFouls": 2.9130434782608696
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828:UUID:0a2564dc-510b-4f42-a426-642afe816a2c:99",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828:UUID:0a2564dc-510b-4f42-a426-642afe816a2c:5",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828",
       "teamIdIntern": 450133,
       "teamIdExtern": 79828,
@@ -65444,7 +65444,7 @@
       "playerActorId": 7378566,
       "playerIdentityKey": "UUID:0a2564dc-510b-4f42-a426-642afe816a2c",
       "playerName": "AGATHA FERRER MIRANDA",
-      "shirtNumber": "99",
+      "shirtNumber": "5",
       "games": 20,
       "minutes": 413,
       "points": 124,
@@ -65455,7 +65455,7 @@
       "avgFouls": 3.55
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:6422fd62-886b-48a8-8a9e-2d9f271afa7a:18",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:6422fd62-886b-48a8-8a9e-2d9f271afa7a:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 458775,
       "teamIdExtern": 82181,
@@ -65466,7 +65466,7 @@
       "playerActorId": 7527671,
       "playerIdentityKey": "UUID:6422fd62-886b-48a8-8a9e-2d9f271afa7a",
       "playerName": "CANDELA ARTEAGA ROMERO",
-      "shirtNumber": "18",
+      "shirtNumber": "12",
       "games": 15,
       "minutes": 346,
       "points": 124,
@@ -65587,7 +65587,7 @@
       "avgFouls": 2.2857142857142856
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076:UUID:8f8eb4c1-a721-41ae-95b6-7c7ad2b0a20c:29",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076:UUID:8f8eb4c1-a721-41ae-95b6-7c7ad2b0a20c:77",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076",
       "teamIdIntern": 452783,
       "teamIdExtern": 79076,
@@ -65598,7 +65598,7 @@
       "playerActorId": 7424026,
       "playerIdentityKey": "UUID:8f8eb4c1-a721-41ae-95b6-7c7ad2b0a20c",
       "playerName": "ANE ALBERDI EZKERRA",
-      "shirtNumber": "29",
+      "shirtNumber": "77",
       "games": 19,
       "minutes": 388,
       "points": 123,
@@ -65917,7 +65917,7 @@
       "avgFouls": 2.375
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384:UUID:f9dc98c4-bae8-45ad-9ca6-fa0a0e0a1f17:10",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384:UUID:f9dc98c4-bae8-45ad-9ca6-fa0a0e0a1f17:16",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384",
       "teamIdIntern": 454097,
       "teamIdExtern": 82384,
@@ -65928,7 +65928,7 @@
       "playerActorId": 7446310,
       "playerIdentityKey": "UUID:f9dc98c4-bae8-45ad-9ca6-fa0a0e0a1f17",
       "playerName": "MARINA PUENTES HERRERO",
-      "shirtNumber": "10",
+      "shirtNumber": "16",
       "games": 17,
       "minutes": 441,
       "points": 122,
@@ -66797,7 +66797,7 @@
       "avgFouls": 1.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:8a4385b4-69ef-413e-8eba-4f90f1639ffa:19",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:8a4385b4-69ef-413e-8eba-4f90f1639ffa:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
@@ -66808,7 +66808,7 @@
       "playerActorId": 7463694,
       "playerIdentityKey": "UUID:8a4385b4-69ef-413e-8eba-4f90f1639ffa",
       "playerName": "LAIA CEVALLOS",
-      "shirtNumber": "19",
+      "shirtNumber": "17",
       "games": 18,
       "minutes": 459,
       "points": 115,
@@ -67149,7 +67149,7 @@
       "avgFouls": 2.6363636363636362
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420:UUID:014b546e-98d1-11e9-a2a5-0216824770c2:10",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420:UUID:014b546e-98d1-11e9-a2a5-0216824770c2:15",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
       "teamIdIntern": 475962,
       "teamIdExtern": 78420,
@@ -67160,7 +67160,7 @@
       "playerActorId": 7989965,
       "playerIdentityKey": "UUID:014b546e-98d1-11e9-a2a5-0216824770c2",
       "playerName": "BERTA BOADA ROVIRA",
-      "shirtNumber": "10",
+      "shirtNumber": "15",
       "games": 17,
       "minutes": 390,
       "points": 112,
@@ -67391,7 +67391,7 @@
       "avgFouls": 0.23529411764705882
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:a9e6deb0-e45a-492c-b8c8-40bfedc76de4:75",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:a9e6deb0-e45a-492c-b8c8-40bfedc76de4:19",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
       "teamIdIntern": 450288,
       "teamIdExtern": 80600,
@@ -67402,7 +67402,7 @@
       "playerActorId": 7381046,
       "playerIdentityKey": "UUID:a9e6deb0-e45a-492c-b8c8-40bfedc76de4",
       "playerName": "JOANA TURT\u00D3S CIURANETA",
-      "shirtNumber": "75",
+      "shirtNumber": "19",
       "games": 23,
       "minutes": 346,
       "points": 111,
@@ -68205,7 +68205,7 @@
       "avgFouls": 1.5714285714285714
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:e04f83a3-91ea-49b3-af46-9feeb81cdafb:16",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:e04f83a3-91ea-49b3-af46-9feeb81cdafb:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
       "teamIdIntern": 455124,
       "teamIdExtern": 81625,
@@ -68216,7 +68216,7 @@
       "playerActorId": 7463043,
       "playerIdentityKey": "UUID:e04f83a3-91ea-49b3-af46-9feeb81cdafb",
       "playerName": "ABRIL ESCOBOSA PLANTADA",
-      "shirtNumber": "16",
+      "shirtNumber": "11",
       "games": 19,
       "minutes": 553,
       "points": 105,
@@ -68711,7 +68711,7 @@
       "avgFouls": 1.0434782608695652
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:20415a49-5655-4004-9b58-12ae610c6198:69",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:20415a49-5655-4004-9b58-12ae610c6198:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -68722,7 +68722,7 @@
       "playerActorId": 7462371,
       "playerIdentityKey": "UUID:20415a49-5655-4004-9b58-12ae610c6198",
       "playerName": "LILIANA PEK",
-      "shirtNumber": "69",
+      "shirtNumber": "22",
       "games": 13,
       "minutes": 326,
       "points": 103,
@@ -69239,7 +69239,7 @@
       "avgFouls": 0.7857142857142857
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847:UUID:f86a8ae2-bbd3-4a8a-9503-d2129ec38409:14",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847:UUID:f86a8ae2-bbd3-4a8a-9503-d2129ec38409:78",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
       "teamIdIntern": 455000,
       "teamIdExtern": 83847,
@@ -69250,7 +69250,7 @@
       "playerActorId": 7461029,
       "playerIdentityKey": "UUID:f86a8ae2-bbd3-4a8a-9503-d2129ec38409",
       "playerName": "VEGA NAVARRO FERRANDO",
-      "shirtNumber": "14",
+      "shirtNumber": "78",
       "games": 17,
       "minutes": 440,
       "points": 101,
@@ -69349,7 +69349,7 @@
       "avgFouls": 1.8636363636363635
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783:UUID:0b8660b8-3f58-40d6-b460-f652a822723a:12",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783:UUID:0b8660b8-3f58-40d6-b460-f652a822723a:26",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
       "teamIdIntern": 453926,
       "teamIdExtern": 81783,
@@ -69360,7 +69360,7 @@
       "playerActorId": 7443415,
       "playerIdentityKey": "UUID:0b8660b8-3f58-40d6-b460-f652a822723a",
       "playerName": "ELIA PAREJA \u00C1LVAREZ",
-      "shirtNumber": "12",
+      "shirtNumber": "26",
       "games": 14,
       "minutes": 477,
       "points": 100,
@@ -69393,7 +69393,7 @@
       "avgFouls": 1.9047619047619047
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:003a2974-98d1-11e9-a2a5-0216824770c2:8",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:003a2974-98d1-11e9-a2a5-0216824770c2:92",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
       "teamIdIntern": 457626,
       "teamIdExtern": 78605,
@@ -69404,7 +69404,7 @@
       "playerActorId": 7507802,
       "playerIdentityKey": "UUID:003a2974-98d1-11e9-a2a5-0216824770c2",
       "playerName": "LAIA RODRIGUEZ HARO",
-      "shirtNumber": "8",
+      "shirtNumber": "92",
       "games": 21,
       "minutes": 398,
       "points": 100,
@@ -69437,7 +69437,7 @@
       "avgFouls": 2.5
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483:UUID:0053cdf3-98d1-11e9-a2a5-0216824770c2:00",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483:UUID:0053cdf3-98d1-11e9-a2a5-0216824770c2:3",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79483",
       "teamIdIntern": 452162,
       "teamIdExtern": 79483,
@@ -69448,7 +69448,7 @@
       "playerActorId": 7413142,
       "playerIdentityKey": "UUID:0053cdf3-98d1-11e9-a2a5-0216824770c2",
       "playerName": "PABLO PEREZ PI",
-      "shirtNumber": "00",
+      "shirtNumber": "3",
       "games": 21,
       "minutes": 302,
       "points": 100,
@@ -69503,7 +69503,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:1dd1b879-7e9c-467e-bbe4-8f24a680b6fc:5",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:1dd1b879-7e9c-467e-bbe4-8f24a680b6fc:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
@@ -69514,7 +69514,7 @@
       "playerActorId": 7463069,
       "playerIdentityKey": "UUID:1dd1b879-7e9c-467e-bbe4-8f24a680b6fc",
       "playerName": "VALERIA GUERRA COTA",
-      "shirtNumber": "5",
+      "shirtNumber": "17",
       "games": 19,
       "minutes": 595,
       "points": 100,
@@ -69547,7 +69547,7 @@
       "avgFouls": 1.1666666666666667
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:012fab82-98d1-11e9-a2a5-0216824770c2:26",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:012fab82-98d1-11e9-a2a5-0216824770c2:7",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
       "teamIdIntern": 450288,
       "teamIdExtern": 80600,
@@ -69558,7 +69558,7 @@
       "playerActorId": 7381047,
       "playerIdentityKey": "UUID:012fab82-98d1-11e9-a2a5-0216824770c2",
       "playerName": "AINA CANTILLO BUR\u00C9S",
-      "shirtNumber": "26",
+      "shirtNumber": "7",
       "games": 23,
       "minutes": 603,
       "points": 99,
@@ -70053,7 +70053,7 @@
       "avgFouls": 2.4
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605:UUID:001b03e8-98d1-11e9-a2a5-0216824770c2:21",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605:UUID:001b03e8-98d1-11e9-a2a5-0216824770c2:14",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
       "teamIdIntern": 453067,
       "teamIdExtern": 80605,
@@ -70064,7 +70064,7 @@
       "playerActorId": 7429011,
       "playerIdentityKey": "UUID:001b03e8-98d1-11e9-a2a5-0216824770c2",
       "playerName": "AIKO VIDAL NOGUERA",
-      "shirtNumber": "21",
+      "shirtNumber": "14",
       "games": 18,
       "minutes": 270,
       "points": 97,
@@ -70119,7 +70119,7 @@
       "avgFouls": 2.217391304347826
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527:UUID:45b590a0-0586-4469-aeff-2edc3118ff63:2",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527:UUID:45b590a0-0586-4469-aeff-2edc3118ff63:1",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527",
       "teamIdIntern": 453805,
       "teamIdExtern": 79527,
@@ -70130,7 +70130,7 @@
       "playerActorId": 7441324,
       "playerIdentityKey": "UUID:45b590a0-0586-4469-aeff-2edc3118ff63",
       "playerName": "INGRID MONROIG FARR\u00C9",
-      "shirtNumber": "2",
+      "shirtNumber": "1",
       "games": 17,
       "minutes": 420,
       "points": 97,
@@ -70251,7 +70251,7 @@
       "avgFouls": 2.4285714285714284
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81529:UUID:9c2a6acb-0577-4d0c-a603-b8897de418c2:12",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81529:UUID:9c2a6acb-0577-4d0c-a603-b8897de418c2:20",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81529",
       "teamIdIntern": 456651,
       "teamIdExtern": 81529,
@@ -70262,7 +70262,7 @@
       "playerActorId": 7490304,
       "playerIdentityKey": "UUID:9c2a6acb-0577-4d0c-a603-b8897de418c2",
       "playerName": "\u00DARSULA FRAILE GARC\u00CDA",
-      "shirtNumber": "12",
+      "shirtNumber": "20",
       "games": 16,
       "minutes": 368,
       "points": 97,
@@ -70361,7 +70361,7 @@
       "avgFouls": 1.4
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:010e4312-98d1-11e9-a2a5-0216824770c2:10",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:010e4312-98d1-11e9-a2a5-0216824770c2:11",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
       "teamIdIntern": 450360,
       "teamIdExtern": 80338,
@@ -70372,7 +70372,7 @@
       "playerActorId": 7382209,
       "playerIdentityKey": "UUID:010e4312-98d1-11e9-a2a5-0216824770c2",
       "playerName": "EMMA BERTRAL CI\u00C9RCOLES",
-      "shirtNumber": "10",
+      "shirtNumber": "11",
       "games": 23,
       "minutes": 502,
       "points": 96,
@@ -70933,7 +70933,7 @@
       "avgFouls": 1.826086956521739
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763:UUID:0013757a-98d1-11e9-a2a5-0216824770c2:30",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763:UUID:0013757a-98d1-11e9-a2a5-0216824770c2:10",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763",
       "teamIdIntern": 457382,
       "teamIdExtern": 80763,
@@ -70944,7 +70944,7 @@
       "playerActorId": 7503450,
       "playerIdentityKey": "UUID:0013757a-98d1-11e9-a2a5-0216824770c2",
       "playerName": "CARLA GARRIGA PASCUAL",
-      "shirtNumber": "30",
+      "shirtNumber": "10",
       "games": 17,
       "minutes": 287,
       "points": 93,
@@ -71527,7 +71527,7 @@
       "avgFouls": 2.608695652173913
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735:28",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
@@ -71538,7 +71538,7 @@
       "playerActorId": 7451533,
       "playerIdentityKey": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
       "playerName": "MIA GOMEZ VALLS",
-      "shirtNumber": "28",
+      "shirtNumber": "8",
       "games": 18,
       "minutes": 392,
       "points": 91,
@@ -71725,7 +71725,7 @@
       "avgFouls": 3.1818181818181817
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:583439b1-2240-486e-a9c6-6372edae2c06:94",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:583439b1-2240-486e-a9c6-6372edae2c06:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
@@ -71736,7 +71736,7 @@
       "playerActorId": 9089218,
       "playerIdentityKey": "UUID:583439b1-2240-486e-a9c6-6372edae2c06",
       "playerName": "SARA MEDYOUNI EL HASSOUNI METMARI",
-      "shirtNumber": "94",
+      "shirtNumber": "5",
       "games": 10,
       "minutes": 309,
       "points": 90,
@@ -72121,7 +72121,7 @@
       "avgFouls": 1.608695652173913
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495:UUID:fbde0870-98d0-11e9-a2a5-0216824770c2:44",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495:UUID:fbde0870-98d0-11e9-a2a5-0216824770c2:4",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495",
       "teamIdIntern": 451749,
       "teamIdExtern": 80495,
@@ -72132,7 +72132,7 @@
       "playerActorId": 70801758980067526,
       "playerIdentityKey": "UUID:fbde0870-98d0-11e9-a2a5-0216824770c2",
       "playerName": "ADRIAN ESPINILLA VILLAS",
-      "shirtNumber": "44",
+      "shirtNumber": "4",
       "games": 22,
       "minutes": 370,
       "points": 87,
@@ -72143,7 +72143,7 @@
       "avgFouls": 1.9545454545454546
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674:UUID:00dda699-98d1-11e9-a2a5-0216824770c2:13",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674:UUID:00dda699-98d1-11e9-a2a5-0216824770c2:32",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674",
       "teamIdIntern": 466465,
       "teamIdExtern": 78674,
@@ -72154,7 +72154,7 @@
       "playerActorId": 7696211,
       "playerIdentityKey": "UUID:00dda699-98d1-11e9-a2a5-0216824770c2",
       "playerName": "CARLA ESCAMILLA CANALES",
-      "shirtNumber": "13",
+      "shirtNumber": "32",
       "games": 18,
       "minutes": 353,
       "points": 87,
@@ -72429,7 +72429,7 @@
       "avgFouls": 1.6111111111111112
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81486:UUID:83c304bf-3f31-448b-ad84-c7a48b29a526:08",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81486:UUID:83c304bf-3f31-448b-ad84-c7a48b29a526:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81486",
       "teamIdIntern": 458166,
       "teamIdExtern": 81486,
@@ -72440,7 +72440,7 @@
       "playerActorId": 7517307,
       "playerIdentityKey": "UUID:83c304bf-3f31-448b-ad84-c7a48b29a526",
       "playerName": "VERA COSTA GARRIGA",
-      "shirtNumber": "08",
+      "shirtNumber": "8",
       "games": 15,
       "minutes": 429,
       "points": 87,
@@ -72495,7 +72495,7 @@
       "avgFouls": 0.8125
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826:UUID:73e25116-0b32-4a92-9638-e063ea3d88e9:28",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826:UUID:73e25116-0b32-4a92-9638-e063ea3d88e9:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826",
       "teamIdIntern": 458853,
       "teamIdExtern": 83826,
@@ -72506,7 +72506,7 @@
       "playerActorId": 7529035,
       "playerIdentityKey": "UUID:73e25116-0b32-4a92-9638-e063ea3d88e9",
       "playerName": "JANA GRAN\u00C9 CALDERER",
-      "shirtNumber": "28",
+      "shirtNumber": "25",
       "games": 13,
       "minutes": 269,
       "points": 86,
@@ -72517,7 +72517,7 @@
       "avgFouls": 0.6153846153846154
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b:13",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b:10",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -72528,7 +72528,7 @@
       "playerActorId": 7456887,
       "playerIdentityKey": "UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b",
       "playerName": "LIA TORAL VICENTE",
-      "shirtNumber": "13",
+      "shirtNumber": "10",
       "games": 14,
       "minutes": 324,
       "points": 86,
@@ -73067,7 +73067,7 @@
       "avgFouls": 1.6875
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:800ea5e3-e36b-4911-85dc-ecc4e53f56fd:13",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:800ea5e3-e36b-4911-85dc-ecc4e53f56fd:16",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
@@ -73078,7 +73078,7 @@
       "playerActorId": 7659686,
       "playerIdentityKey": "UUID:800ea5e3-e36b-4911-85dc-ecc4e53f56fd",
       "playerName": "JANA TORRUELLA GONZALEZ",
-      "shirtNumber": "13",
+      "shirtNumber": "16",
       "games": 15,
       "minutes": 393,
       "points": 84,
@@ -74079,7 +74079,7 @@
       "avgFouls": 0.6666666666666666
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883:UUID:003f3b4e-98d1-11e9-a2a5-0216824770c2:19",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883:UUID:003f3b4e-98d1-11e9-a2a5-0216824770c2:14",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883",
       "teamIdIntern": 504157,
       "teamIdExtern": 78883,
@@ -74090,7 +74090,7 @@
       "playerActorId": 8974765,
       "playerIdentityKey": "UUID:003f3b4e-98d1-11e9-a2a5-0216824770c2",
       "playerName": "NAIA HERRERA GOMEZ",
-      "shirtNumber": "19",
+      "shirtNumber": "14",
       "games": 11,
       "minutes": 197,
       "points": 80,
@@ -74277,7 +74277,7 @@
       "avgFouls": 0.35714285714285715
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:d749e8aa-9107-4d47-98ab-4218bc970092:33",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:d749e8aa-9107-4d47-98ab-4218bc970092:3",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
       "teamIdIntern": 450360,
       "teamIdExtern": 80338,
@@ -74288,7 +74288,7 @@
       "playerActorId": 7382218,
       "playerIdentityKey": "UUID:d749e8aa-9107-4d47-98ab-4218bc970092",
       "playerName": "ARES PALAU MART\u00CD",
-      "shirtNumber": "33",
+      "shirtNumber": "3",
       "games": 20,
       "minutes": 271,
       "points": 79,
@@ -74673,7 +74673,7 @@
       "avgFouls": 1.375
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:00dcc1ac-98d1-11e9-a2a5-0216824770c2:13",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:00dcc1ac-98d1-11e9-a2a5-0216824770c2:5",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
       "teamIdIntern": 450155,
       "teamIdExtern": 78605,
@@ -74684,7 +74684,7 @@
       "playerActorId": 7378900,
       "playerIdentityKey": "UUID:00dcc1ac-98d1-11e9-a2a5-0216824770c2",
       "playerName": "LAIA HERNAIZ CUELLO",
-      "shirtNumber": "13",
+      "shirtNumber": "5",
       "games": 20,
       "minutes": 313,
       "points": 78,
@@ -75047,7 +75047,7 @@
       "avgFouls": 2.1363636363636362
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876:UUID:11183e65-ae96-495c-9d3f-5941126e1b3d:15",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876:UUID:11183e65-ae96-495c-9d3f-5941126e1b3d:24",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876",
       "teamIdIntern": 454835,
       "teamIdExtern": 80876,
@@ -75058,7 +75058,7 @@
       "playerActorId": 7458344,
       "playerIdentityKey": "UUID:11183e65-ae96-495c-9d3f-5941126e1b3d",
       "playerName": "JULIETA FERNANDEZ CUDA",
-      "shirtNumber": "15",
+      "shirtNumber": "24",
       "games": 17,
       "minutes": 418,
       "points": 77,
@@ -75113,7 +75113,7 @@
       "avgFouls": 2.066666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:67951015-911b-4c19-8329-7bbd89998117:70",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:67951015-911b-4c19-8329-7bbd89998117:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -75124,7 +75124,7 @@
       "playerActorId": 7462372,
       "playerIdentityKey": "UUID:67951015-911b-4c19-8329-7bbd89998117",
       "playerName": "MARTINA DONAIRE LAO",
-      "shirtNumber": "70",
+      "shirtNumber": "15",
       "games": 14,
       "minutes": 364,
       "points": 77,
@@ -75575,7 +75575,7 @@
       "avgFouls": 1.7727272727272727
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:f05b4e98-4be5-4e15-a958-0d8a2b5f59fa:74",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:f05b4e98-4be5-4e15-a958-0d8a2b5f59fa:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 458775,
       "teamIdExtern": 82181,
@@ -75586,7 +75586,7 @@
       "playerActorId": 7527656,
       "playerIdentityKey": "UUID:f05b4e98-4be5-4e15-a958-0d8a2b5f59fa",
       "playerName": "AITANA DONCEL ANDRES",
-      "shirtNumber": "74",
+      "shirtNumber": "2",
       "games": 15,
       "minutes": 367,
       "points": 75,
@@ -75663,7 +75663,7 @@
       "avgFouls": 2.8181818181818183
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827:UUID:00eeeed9-98d1-11e9-a2a5-0216824770c2:0",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827:UUID:00eeeed9-98d1-11e9-a2a5-0216824770c2:15",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827",
       "teamIdIntern": 451829,
       "teamIdExtern": 78827,
@@ -75674,7 +75674,7 @@
       "playerActorId": 7407362,
       "playerIdentityKey": "UUID:00eeeed9-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MARIA LOPEZ GULLON",
-      "shirtNumber": "0",
+      "shirtNumber": "15",
       "games": 22,
       "minutes": 491,
       "points": 75,
@@ -75773,7 +75773,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:c7fa333d-966a-4429-8e76-da204e1abb98:3",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:c7fa333d-966a-4429-8e76-da204e1abb98:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799",
       "teamIdIntern": 453804,
       "teamIdExtern": 83799,
@@ -75784,7 +75784,7 @@
       "playerActorId": 7441297,
       "playerIdentityKey": "UUID:c7fa333d-966a-4429-8e76-da204e1abb98",
       "playerName": "AINA AMELA RUIZ",
-      "shirtNumber": "3",
+      "shirtNumber": "12",
       "games": 17,
       "minutes": 453,
       "points": 74,
@@ -76037,7 +76037,7 @@
       "avgFouls": 1.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876:UUID:aabde981-c249-4403-8051-353565f38005:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876:UUID:aabde981-c249-4403-8051-353565f38005:47",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80876",
       "teamIdIntern": 454835,
       "teamIdExtern": 80876,
@@ -76048,7 +76048,7 @@
       "playerActorId": 7458347,
       "playerIdentityKey": "UUID:aabde981-c249-4403-8051-353565f38005",
       "playerName": "LIA PUJADES SOLER",
-      "shirtNumber": "7",
+      "shirtNumber": "47",
       "games": 17,
       "minutes": 375,
       "points": 73,
@@ -76389,7 +76389,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783:UUID:ae959e17-1f72-4575-8deb-49ee0c795be0:9",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783:UUID:ae959e17-1f72-4575-8deb-49ee0c795be0:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
       "teamIdIntern": 453926,
       "teamIdExtern": 81783,
@@ -76400,7 +76400,7 @@
       "playerActorId": 7443421,
       "playerIdentityKey": "UUID:ae959e17-1f72-4575-8deb-49ee0c795be0",
       "playerName": "LUC\u00CDA TOM\u00C1S ROJO",
-      "shirtNumber": "9",
+      "shirtNumber": "12",
       "games": 15,
       "minutes": 511,
       "points": 72,
@@ -76631,7 +76631,7 @@
       "avgFouls": 2.142857142857143
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80111:UUID:12f88f19-ea6d-48d9-b6cb-3eadfe5490ed:30",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80111:UUID:12f88f19-ea6d-48d9-b6cb-3eadfe5490ed:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80111",
       "teamIdIntern": 454372,
       "teamIdExtern": 80111,
@@ -76642,7 +76642,7 @@
       "playerActorId": 7450739,
       "playerIdentityKey": "UUID:12f88f19-ea6d-48d9-b6cb-3eadfe5490ed",
       "playerName": "MIA LARRAZ JUNC\u00C0",
-      "shirtNumber": "30",
+      "shirtNumber": "12",
       "games": 20,
       "minutes": 547,
       "points": 71,
@@ -76829,7 +76829,7 @@
       "avgFouls": 0.3333333333333333
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605:UUID:6f68d648-6a3e-4237-853f-e5ccd6a96ea6:13",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605:UUID:6f68d648-6a3e-4237-853f-e5ccd6a96ea6:21",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
       "teamIdIntern": 453067,
       "teamIdExtern": 80605,
@@ -76840,7 +76840,7 @@
       "playerActorId": 7429015,
       "playerIdentityKey": "UUID:6f68d648-6a3e-4237-853f-e5ccd6a96ea6",
       "playerName": "LAIA MARS CODINA",
-      "shirtNumber": "13",
+      "shirtNumber": "21",
       "games": 19,
       "minutes": 297,
       "points": 70,
@@ -77027,7 +77027,7 @@
       "avgFouls": 2.6666666666666665
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:afd2bd43-539b-4326-9039-8c7fad8ac9f5:98",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:afd2bd43-539b-4326-9039-8c7fad8ac9f5:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
@@ -77038,7 +77038,7 @@
       "playerActorId": 9089222,
       "playerIdentityKey": "UUID:afd2bd43-539b-4326-9039-8c7fad8ac9f5",
       "playerName": "NOA GOMEZ CABRERA",
-      "shirtNumber": "98",
+      "shirtNumber": "7",
       "games": 10,
       "minutes": 268,
       "points": 69,
@@ -77269,7 +77269,7 @@
       "avgFouls": 2.1904761904761907
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:6a791b01-c094-461d-a1ff-3832f948da3a:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:6a791b01-c094-461d-a1ff-3832f948da3a:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 457131,
       "teamIdExtern": 84386,
@@ -77280,7 +77280,7 @@
       "playerActorId": 7498864,
       "playerIdentityKey": "UUID:6a791b01-c094-461d-a1ff-3832f948da3a",
       "playerName": "SOF\u00CDA VIVAS GARC\u00CDA",
-      "shirtNumber": "11",
+      "shirtNumber": "7",
       "games": 17,
       "minutes": 455,
       "points": 68,
@@ -77335,7 +77335,7 @@
       "avgFouls": 1.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232:20",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
       "teamIdIntern": 454749,
       "teamIdExtern": 81185,
@@ -77346,7 +77346,7 @@
       "playerActorId": 7456912,
       "playerIdentityKey": "UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232",
       "playerName": "VERA RUIZ PEREZ",
-      "shirtNumber": "20",
+      "shirtNumber": "8",
       "games": 16,
       "minutes": 423,
       "points": 68,
@@ -77445,7 +77445,7 @@
       "avgFouls": 0.42105263157894735
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b:9",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -77456,7 +77456,7 @@
       "playerActorId": 7456883,
       "playerIdentityKey": "UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b",
       "playerName": "CHIARA MART\u00CDNEZ LAMPIS",
-      "shirtNumber": "9",
+      "shirtNumber": "8",
       "games": 14,
       "minutes": 311,
       "points": 67,
@@ -77599,7 +77599,7 @@
       "avgFouls": 1.3125
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79518:UUID:fe7f89ef-4df0-4778-8d4d-044816109e9f:77",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79518:UUID:fe7f89ef-4df0-4778-8d4d-044816109e9f:22",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79518",
       "teamIdIntern": 450233,
       "teamIdExtern": 79518,
@@ -77610,7 +77610,7 @@
       "playerActorId": 7380127,
       "playerIdentityKey": "UUID:fe7f89ef-4df0-4778-8d4d-044816109e9f",
       "playerName": "LOLA JIMENEZ VAL\u00C8NCIA",
-      "shirtNumber": "77",
+      "shirtNumber": "22",
       "games": 22,
       "minutes": 345,
       "points": 67,
@@ -77929,7 +77929,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659:UUID:4c25d29f-2a1b-4aa5-b97c-41bacbd4f7b0:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659:UUID:4c25d29f-2a1b-4aa5-b97c-41bacbd4f7b0:0",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
       "teamIdIntern": 454079,
       "teamIdExtern": 78659,
@@ -77940,7 +77940,7 @@
       "playerActorId": 7446017,
       "playerIdentityKey": "UUID:4c25d29f-2a1b-4aa5-b97c-41bacbd4f7b0",
       "playerName": "AL\u00C8XIA SABAT\u00C9 VIDAL",
-      "shirtNumber": "7",
+      "shirtNumber": "0",
       "games": 16,
       "minutes": 345,
       "points": 65,
@@ -78193,7 +78193,7 @@
       "avgFouls": 3.0476190476190474
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296:UUID:0039b37a-98d1-11e9-a2a5-0216824770c2:23",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296:UUID:0039b37a-98d1-11e9-a2a5-0216824770c2:16",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81296",
       "teamIdIntern": 453221,
       "teamIdExtern": 81296,
@@ -78204,7 +78204,7 @@
       "playerActorId": 7431734,
       "playerIdentityKey": "UUID:0039b37a-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MARTA SORS VENDRELL",
-      "shirtNumber": "23",
+      "shirtNumber": "16",
       "games": 19,
       "minutes": 315,
       "points": 65,
@@ -78215,7 +78215,7 @@
       "avgFouls": 1.7894736842105263
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79780:UUID:cbe10201-5df2-406d-8ff9-3f5f666e2f08:17",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79780:UUID:cbe10201-5df2-406d-8ff9-3f5f666e2f08:2",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79780",
       "teamIdIntern": 470629,
       "teamIdExtern": 79780,
@@ -78226,7 +78226,7 @@
       "playerActorId": 71981761413598206,
       "playerIdentityKey": "UUID:cbe10201-5df2-406d-8ff9-3f5f666e2f08",
       "playerName": "MARTINA PINNELLI RODRIGUEZ",
-      "shirtNumber": "17",
+      "shirtNumber": "2",
       "games": 13,
       "minutes": 176,
       "points": 65,
@@ -78259,7 +78259,7 @@
       "avgFouls": 1.6153846153846154
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:UUID:e47aea0c-faca-45de-901f-fc53ec84e3a2:9",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:UUID:e47aea0c-faca-45de-901f-fc53ec84e3a2:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
       "teamIdIntern": 476587,
       "teamIdExtern": 78800,
@@ -78270,7 +78270,7 @@
       "playerActorId": 8014596,
       "playerIdentityKey": "UUID:e47aea0c-faca-45de-901f-fc53ec84e3a2",
       "playerName": "AINET SERRA GONZALEZ",
-      "shirtNumber": "9",
+      "shirtNumber": "23",
       "games": 14,
       "minutes": 402,
       "points": 64,
@@ -78369,7 +78369,7 @@
       "avgFouls": 1.6666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235:UUID:103837ef-85a4-4831-9cff-04ec1b9a53c6:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235:UUID:103837ef-85a4-4831-9cff-04ec1b9a53c6:28",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235",
       "teamIdIntern": 454788,
       "teamIdExtern": 80235,
@@ -78380,7 +78380,7 @@
       "playerActorId": 74341759568668068,
       "playerIdentityKey": "UUID:103837ef-85a4-4831-9cff-04ec1b9a53c6",
       "playerName": "CARLA EXPOSITO CHUECO",
-      "shirtNumber": "8",
+      "shirtNumber": "28",
       "games": 18,
       "minutes": 527,
       "points": 64,
@@ -78523,7 +78523,7 @@
       "avgFouls": 2.3076923076923075
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:25f0d4a9-ffea-4702-8931-9d128fe6d709:93",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:25f0d4a9-ffea-4702-8931-9d128fe6d709:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
@@ -78534,7 +78534,7 @@
       "playerActorId": 9089217,
       "playerIdentityKey": "UUID:25f0d4a9-ffea-4702-8931-9d128fe6d709",
       "playerName": "LHENA AVELLANEDA KEUMANGA",
-      "shirtNumber": "93",
+      "shirtNumber": "15",
       "games": 9,
       "minutes": 248,
       "points": 64,
@@ -78677,7 +78677,7 @@
       "avgFouls": 0.8888888888888888
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80315:UUID:fe140006-98d0-11e9-a2a5-0216824770c2:97",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80315:UUID:fe140006-98d0-11e9-a2a5-0216824770c2:44",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80315",
       "teamIdIntern": 481104,
       "teamIdExtern": 80315,
@@ -78688,7 +78688,7 @@
       "playerActorId": 8161220,
       "playerIdentityKey": "UUID:fe140006-98d0-11e9-a2a5-0216824770c2",
       "playerName": "ALBERTO REYES JIMENEZ",
-      "shirtNumber": "97",
+      "shirtNumber": "44",
       "games": 14,
       "minutes": 254,
       "points": 63,
@@ -78941,7 +78941,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659:UUID:c50db25f-a229-489c-9759-7455d486354c:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659:UUID:c50db25f-a229-489c-9759-7455d486354c:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78659",
       "teamIdIntern": 454079,
       "teamIdExtern": 78659,
@@ -78952,7 +78952,7 @@
       "playerActorId": 7446016,
       "playerIdentityKey": "UUID:c50db25f-a229-489c-9759-7455d486354c",
       "playerName": "DANIELA LULL VARGAS",
-      "shirtNumber": "0",
+      "shirtNumber": "7",
       "games": 16,
       "minutes": 337,
       "points": 62,
@@ -79139,7 +79139,7 @@
       "avgFouls": 2.6470588235294117
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229:UUID:000c4978-98d1-11e9-a2a5-0216824770c2:52",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229:UUID:000c4978-98d1-11e9-a2a5-0216824770c2:22",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229",
       "teamIdIntern": 451083,
       "teamIdExtern": 79229,
@@ -79150,7 +79150,7 @@
       "playerActorId": 7394348,
       "playerIdentityKey": "UUID:000c4978-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MENCIA CARDENAL MU\u00D1OZ",
-      "shirtNumber": "52",
+      "shirtNumber": "22",
       "games": 21,
       "minutes": 311,
       "points": 62,
@@ -79315,7 +79315,7 @@
       "avgFouls": 2.2857142857142856
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384:UUID:4614e313-f078-48a8-8f5f-3dabbd4a6278:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384:UUID:4614e313-f078-48a8-8f5f-3dabbd4a6278:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82384",
       "teamIdIntern": 454097,
       "teamIdExtern": 82384,
@@ -79326,7 +79326,7 @@
       "playerActorId": 7446311,
       "playerIdentityKey": "UUID:4614e313-f078-48a8-8f5f-3dabbd4a6278",
       "playerName": "ALICIA CAMINAL HERNANDEZ",
-      "shirtNumber": "4",
+      "shirtNumber": "7",
       "games": 17,
       "minutes": 433,
       "points": 61,
@@ -79403,7 +79403,7 @@
       "avgFouls": 1.125
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:8fee0aca-641b-4617-8ef7-71d1375c37a7:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:8fee0aca-641b-4617-8ef7-71d1375c37a7:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
       "teamIdIntern": 466213,
       "teamIdExtern": 84290,
@@ -79414,7 +79414,7 @@
       "playerActorId": 7689303,
       "playerIdentityKey": "UUID:8fee0aca-641b-4617-8ef7-71d1375c37a7",
       "playerName": "CHLOE LUIS PAZ",
-      "shirtNumber": "7",
+      "shirtNumber": "15",
       "games": 15,
       "minutes": 368,
       "points": 61,
@@ -79491,7 +79491,7 @@
       "avgFouls": 2.1578947368421053
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172:UUID:3e77fdc0-8f25-49e4-a2fe-78480652227c:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172:UUID:3e77fdc0-8f25-49e4-a2fe-78480652227c:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83172",
       "teamIdIntern": 454101,
       "teamIdExtern": 83172,
@@ -79502,7 +79502,7 @@
       "playerActorId": 7446390,
       "playerIdentityKey": "UUID:3e77fdc0-8f25-49e4-a2fe-78480652227c",
       "playerName": "J\u00DALIA DOBLAS GRAU",
-      "shirtNumber": "7",
+      "shirtNumber": "13",
       "games": 19,
       "minutes": 666,
       "points": 61,
@@ -79535,7 +79535,7 @@
       "avgFouls": 1.5625
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:23723f0e-e50a-406d-b207-06dafde6966b:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:23723f0e-e50a-406d-b207-06dafde6966b:33",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
       "teamIdIntern": 463229,
       "teamIdExtern": 81569,
@@ -79546,7 +79546,7 @@
       "playerActorId": 7611518,
       "playerIdentityKey": "UUID:23723f0e-e50a-406d-b207-06dafde6966b",
       "playerName": "MARTINA MAYO ACOSTA",
-      "shirtNumber": "8",
+      "shirtNumber": "33",
       "games": 14,
       "minutes": 331,
       "points": 61,
@@ -79667,7 +79667,7 @@
       "avgFouls": 0.8333333333333334
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82057:UUID:a655721f-746d-4618-8a19-b3de0bea0ab0:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82057:UUID:a655721f-746d-4618-8a19-b3de0bea0ab0:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82057",
       "teamIdIntern": 471430,
       "teamIdExtern": 82057,
@@ -79678,7 +79678,7 @@
       "playerActorId": 7840826,
       "playerIdentityKey": "UUID:a655721f-746d-4618-8a19-b3de0bea0ab0",
       "playerName": "AMIRA ESSABBAR EL ALAOUI EL MHAMMEDI",
-      "shirtNumber": "4",
+      "shirtNumber": "15",
       "games": 9,
       "minutes": 265,
       "points": 60,
@@ -79711,7 +79711,7 @@
       "avgFouls": 2.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e:14",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
@@ -79722,7 +79722,7 @@
       "playerActorId": 7451522,
       "playerIdentityKey": "UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e",
       "playerName": "CLAUDIA JOU GARCIA",
-      "shirtNumber": "11",
+      "shirtNumber": "14",
       "games": 15,
       "minutes": 287,
       "points": 60,
@@ -79909,7 +79909,7 @@
       "avgFouls": 1.125
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78732:UUID:cc3e8e0f-22de-48bd-9094-cf24dd9a44f7:14",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78732:UUID:cc3e8e0f-22de-48bd-9094-cf24dd9a44f7:8",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78732",
       "teamIdIntern": 451293,
       "teamIdExtern": 78732,
@@ -79920,7 +79920,7 @@
       "playerActorId": 7398083,
       "playerIdentityKey": "UUID:cc3e8e0f-22de-48bd-9094-cf24dd9a44f7",
       "playerName": "JULIA SANCHEZ OCA\u00D1A",
-      "shirtNumber": "14",
+      "shirtNumber": "8",
       "games": 23,
       "minutes": 358,
       "points": 59,
@@ -80085,7 +80085,7 @@
       "avgFouls": 1.434782608695652
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81567:UUID:afee8bb1-4e44-40b1-b0bd-f04ed3dd4751:16",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81567:UUID:afee8bb1-4e44-40b1-b0bd-f04ed3dd4751:30",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81567",
       "teamIdIntern": 463981,
       "teamIdExtern": 81567,
@@ -80096,7 +80096,7 @@
       "playerActorId": 7628072,
       "playerIdentityKey": "UUID:afee8bb1-4e44-40b1-b0bd-f04ed3dd4751",
       "playerName": "APEKSHA KHANAL",
-      "shirtNumber": "16",
+      "shirtNumber": "30",
       "games": 17,
       "minutes": 467,
       "points": 58,
@@ -80591,7 +80591,7 @@
       "avgFouls": 1.7727272727272727
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83664:UUID:be657194-c970-40b3-b2cc-54fa590ccf00:18",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83664:UUID:be657194-c970-40b3-b2cc-54fa590ccf00:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83664",
       "teamIdIntern": 456643,
       "teamIdExtern": 83664,
@@ -80602,7 +80602,7 @@
       "playerActorId": 7490161,
       "playerIdentityKey": "UUID:be657194-c970-40b3-b2cc-54fa590ccf00",
       "playerName": "J\u00DALIA GRACIA ALVAREZ",
-      "shirtNumber": "18",
+      "shirtNumber": "9",
       "games": 14,
       "minutes": 383,
       "points": 57,
@@ -80723,7 +80723,7 @@
       "avgFouls": 1.125
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:6dcaf148-8e3e-4f61-a967-8f76520a4180:80",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:6dcaf148-8e3e-4f61-a967-8f76520a4180:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
       "teamIdIntern": 453840,
       "teamIdExtern": 82708,
@@ -80734,7 +80734,7 @@
       "playerActorId": 7441907,
       "playerIdentityKey": "UUID:6dcaf148-8e3e-4f61-a967-8f76520a4180",
       "playerName": "ARES GUIRADO GRAU",
-      "shirtNumber": "80",
+      "shirtNumber": "23",
       "games": 16,
       "minutes": 475,
       "points": 56,
@@ -80811,7 +80811,7 @@
       "avgFouls": 0.9166666666666666
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827:UUID:fe3f08ad-98d0-11e9-a2a5-0216824770c2:15",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827:UUID:fe3f08ad-98d0-11e9-a2a5-0216824770c2:1",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827",
       "teamIdIntern": 451829,
       "teamIdExtern": 78827,
@@ -80822,7 +80822,7 @@
       "playerActorId": 7407369,
       "playerIdentityKey": "UUID:fe3f08ad-98d0-11e9-a2a5-0216824770c2",
       "playerName": "IRENE SANCHEZ SANCHEZ",
-      "shirtNumber": "15",
+      "shirtNumber": "1",
       "games": 22,
       "minutes": 260,
       "points": 56,
@@ -81031,7 +81031,7 @@
       "avgFouls": 1.173913043478261
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306:UUID:23d8da34-07c6-493d-b021-a1043e8d33e4:14",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306:UUID:23d8da34-07c6-493d-b021-a1043e8d33e4:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306",
       "teamIdIntern": 507514,
       "teamIdExtern": 85306,
@@ -81042,7 +81042,7 @@
       "playerActorId": 9083820,
       "playerIdentityKey": "UUID:23d8da34-07c6-493d-b021-a1043e8d33e4",
       "playerName": "AWA KEITA",
-      "shirtNumber": "14",
+      "shirtNumber": "25",
       "games": 10,
       "minutes": 257,
       "points": 55,
@@ -82087,7 +82087,7 @@
       "avgFouls": 0.8
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235:UUID:3da1ab39-4fe5-4ada-83dd-c48541434704:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235:UUID:3da1ab39-4fe5-4ada-83dd-c48541434704:4",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235",
       "teamIdIntern": 454788,
       "teamIdExtern": 80235,
@@ -82098,7 +82098,7 @@
       "playerActorId": 74341759568604887,
       "playerIdentityKey": "UUID:3da1ab39-4fe5-4ada-83dd-c48541434704",
       "playerName": "AGN\u00C8S TAMARIT SORIANO",
-      "shirtNumber": "7",
+      "shirtNumber": "4",
       "games": 18,
       "minutes": 379,
       "points": 51,
@@ -82373,7 +82373,7 @@
       "avgFouls": 1.6428571428571428
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973:UUID:515efa88-8dc3-4199-9679-0ca3f3e797f6:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973:UUID:515efa88-8dc3-4199-9679-0ca3f3e797f6:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973",
       "teamIdIntern": 506606,
       "teamIdExtern": 85973,
@@ -82384,7 +82384,7 @@
       "playerActorId": 9054521,
       "playerIdentityKey": "UUID:515efa88-8dc3-4199-9679-0ca3f3e797f6",
       "playerName": "ALMA LARA PINEDA",
-      "shirtNumber": "0",
+      "shirtNumber": "15",
       "games": 7,
       "minutes": 232,
       "points": 50,
@@ -82571,7 +82571,7 @@
       "avgFouls": 0.4444444444444444
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:aa0f226d-d7c7-4124-8245-8de6d18be264:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:aa0f226d-d7c7-4124-8245-8de6d18be264:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
@@ -82582,7 +82582,7 @@
       "playerActorId": 7538392,
       "playerIdentityKey": "UUID:aa0f226d-d7c7-4124-8245-8de6d18be264",
       "playerName": "NOR EL HARRAK YARMAK",
-      "shirtNumber": "1",
+      "shirtNumber": "19",
       "games": 18,
       "minutes": 622,
       "points": 50,
@@ -82813,7 +82813,7 @@
       "avgFouls": 0.4666666666666667
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980:UUID:0154fcec-98d1-11e9-a2a5-0216824770c2:80",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980:UUID:0154fcec-98d1-11e9-a2a5-0216824770c2:2",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
       "teamIdIntern": 450173,
       "teamIdExtern": 79980,
@@ -82824,7 +82824,7 @@
       "playerActorId": 7379173,
       "playerIdentityKey": "UUID:0154fcec-98d1-11e9-a2a5-0216824770c2",
       "playerName": "LIA H\u00D6WING TORRES",
-      "shirtNumber": "80",
+      "shirtNumber": "2",
       "games": 20,
       "minutes": 201,
       "points": 49,
@@ -83319,7 +83319,7 @@
       "avgFouls": 0.46153846153846156
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:9aa7680c-86d9-48c4-8da8-a90d211153e6:04",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:9aa7680c-86d9-48c4-8da8-a90d211153e6:73",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
@@ -83330,7 +83330,7 @@
       "playerActorId": 7435320,
       "playerIdentityKey": "UUID:9aa7680c-86d9-48c4-8da8-a90d211153e6",
       "playerName": "ELBA VALLS ASENSIO",
-      "shirtNumber": "04",
+      "shirtNumber": "73",
       "games": 17,
       "minutes": 520,
       "points": 47,
@@ -83363,7 +83363,7 @@
       "avgFouls": 0.7777777777777778
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832:UUID:20415a49-5655-4004-9b58-12ae610c6198:69",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832:UUID:20415a49-5655-4004-9b58-12ae610c6198:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832",
       "teamIdIntern": 455642,
       "teamIdExtern": 83832,
@@ -83374,7 +83374,7 @@
       "playerActorId": 67711759585055905,
       "playerIdentityKey": "UUID:20415a49-5655-4004-9b58-12ae610c6198",
       "playerName": "LILIANA PEK",
-      "shirtNumber": "69",
+      "shirtNumber": "22",
       "games": 8,
       "minutes": 208,
       "points": 47,
@@ -83825,7 +83825,7 @@
       "avgFouls": 1.9375
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:b88e97e4-4a18-410e-8268-959aa1bb3a0a:6",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:b88e97e4-4a18-410e-8268-959aa1bb3a0a:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
@@ -83836,7 +83836,7 @@
       "playerActorId": 7463074,
       "playerIdentityKey": "UUID:b88e97e4-4a18-410e-8268-959aa1bb3a0a",
       "playerName": "GRETA PIZAN VALD\u00C9S",
-      "shirtNumber": "6",
+      "shirtNumber": "13",
       "games": 19,
       "minutes": 572,
       "points": 45,
@@ -83869,7 +83869,7 @@
       "avgFouls": 0.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569:UUID:4ff29bb2-0544-4a8d-af79-9415b59cbf0b:77",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569:UUID:4ff29bb2-0544-4a8d-af79-9415b59cbf0b:30",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569",
       "teamIdIntern": 453795,
       "teamIdExtern": 82569,
@@ -83880,7 +83880,7 @@
       "playerActorId": 7441146,
       "playerIdentityKey": "UUID:4ff29bb2-0544-4a8d-af79-9415b59cbf0b",
       "playerName": "JUDITH GARC\u00CDA L\u00D3PEZ",
-      "shirtNumber": "77",
+      "shirtNumber": "30",
       "games": 16,
       "minutes": 406,
       "points": 45,
@@ -83891,7 +83891,7 @@
       "avgFouls": 0.25
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:00258bd3-98d1-11e9-a2a5-0216824770c2:29",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:00258bd3-98d1-11e9-a2a5-0216824770c2:20",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
       "teamIdIntern": 450155,
       "teamIdExtern": 78605,
@@ -83902,7 +83902,7 @@
       "playerActorId": 7378892,
       "playerIdentityKey": "UUID:00258bd3-98d1-11e9-a2a5-0216824770c2",
       "playerName": "LAIA APARICIO GONZALEZ",
-      "shirtNumber": "29",
+      "shirtNumber": "20",
       "games": 22,
       "minutes": 456,
       "points": 45,
@@ -84353,7 +84353,7 @@
       "avgFouls": 1.1666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626:UUID:9ba812fb-6d8a-447b-94ed-e8457abdcf24:20",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626:UUID:9ba812fb-6d8a-447b-94ed-e8457abdcf24:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626",
       "teamIdIntern": 453836,
       "teamIdExtern": 82626,
@@ -84364,7 +84364,7 @@
       "playerActorId": 7441844,
       "playerIdentityKey": "UUID:9ba812fb-6d8a-447b-94ed-e8457abdcf24",
       "playerName": "BERTA DE JUAN GOMEZ",
-      "shirtNumber": "20",
+      "shirtNumber": "27",
       "games": 14,
       "minutes": 359,
       "points": 43,
@@ -84463,7 +84463,7 @@
       "avgFouls": 0.8666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:283787c0-b22d-439b-beea-31827ab12648:81",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:283787c0-b22d-439b-beea-31827ab12648:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
       "teamIdIntern": 453840,
       "teamIdExtern": 82708,
@@ -84474,7 +84474,7 @@
       "playerActorId": 7441909,
       "playerIdentityKey": "UUID:283787c0-b22d-439b-beea-31827ab12648",
       "playerName": "JUDIT SERRA OLIVERAS",
-      "shirtNumber": "81",
+      "shirtNumber": "18",
       "games": 16,
       "minutes": 354,
       "points": 43,
@@ -84485,7 +84485,7 @@
       "avgFouls": 0.0625
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb:18",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -84496,7 +84496,7 @@
       "playerActorId": 7456894,
       "playerIdentityKey": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb",
       "playerName": "L.M.V.",
-      "shirtNumber": "18",
+      "shirtNumber": "13",
       "games": 8,
       "minutes": 146,
       "points": 43,
@@ -84551,7 +84551,7 @@
       "avgFouls": 0.9230769230769231
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:2894af5c-669d-46ab-a5b1-5bcbbb237745:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:2894af5c-669d-46ab-a5b1-5bcbbb237745:21",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
       "teamIdIntern": 453840,
       "teamIdExtern": 82708,
@@ -84562,7 +84562,7 @@
       "playerActorId": 7441908,
       "playerIdentityKey": "UUID:2894af5c-669d-46ab-a5b1-5bcbbb237745",
       "playerName": "MARTA MARTINEZ MARTINEZ",
-      "shirtNumber": "0",
+      "shirtNumber": "21",
       "games": 12,
       "minutes": 350,
       "points": 43,
@@ -84705,7 +84705,7 @@
       "avgFouls": 1.5625
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:fa0effc7-c63d-45c6-843b-3951c41273db:68",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:fa0effc7-c63d-45c6-843b-3951c41273db:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -84716,7 +84716,7 @@
       "playerActorId": 7462362,
       "playerIdentityKey": "UUID:fa0effc7-c63d-45c6-843b-3951c41273db",
       "playerName": "ARIADNA CASTILLO CEBALLOS",
-      "shirtNumber": "68",
+      "shirtNumber": "7",
       "games": 12,
       "minutes": 290,
       "points": 42,
@@ -84947,7 +84947,7 @@
       "avgFouls": 1.1764705882352942
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269:UUID:0e638796-3680-4c2d-92b3-6424d3747ee4:15",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269:UUID:0e638796-3680-4c2d-92b3-6424d3747ee4:3",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269",
       "teamIdIntern": 450094,
       "teamIdExtern": 80269,
@@ -84958,7 +84958,7 @@
       "playerActorId": 7377888,
       "playerIdentityKey": "UUID:0e638796-3680-4c2d-92b3-6424d3747ee4",
       "playerName": "LAIA CASTILLO REBOLLEDA",
-      "shirtNumber": "15",
+      "shirtNumber": "3",
       "games": 22,
       "minutes": 272,
       "points": 42,
@@ -85145,7 +85145,7 @@
       "avgFouls": 0.6470588235294118
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:b0d889f0-5d19-4597-a5b3-12844708659d:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:b0d889f0-5d19-4597-a5b3-12844708659d:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -85156,7 +85156,7 @@
       "playerActorId": 7456891,
       "playerIdentityKey": "UUID:b0d889f0-5d19-4597-a5b3-12844708659d",
       "playerName": "ABRIL CAPELLA CASAS",
-      "shirtNumber": "7",
+      "shirtNumber": "23",
       "games": 14,
       "minutes": 300,
       "points": 41,
@@ -85409,7 +85409,7 @@
       "avgFouls": 1.6111111111111112
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203:UUID:1ed98d51-9540-4345-a97b-6284850a7863:3",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203:UUID:1ed98d51-9540-4345-a97b-6284850a7863:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203",
       "teamIdIntern": 453542,
       "teamIdExtern": 83203,
@@ -85420,7 +85420,7 @@
       "playerActorId": 7437044,
       "playerIdentityKey": "UUID:1ed98d51-9540-4345-a97b-6284850a7863",
       "playerName": "LAIA J\u00C9REZ PLAZA",
-      "shirtNumber": "3",
+      "shirtNumber": "5",
       "games": 16,
       "minutes": 519,
       "points": 41,
@@ -85607,7 +85607,7 @@
       "avgFouls": 1.8333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226:UUID:ccf906e9-9ce5-405d-bb33-ebea839bbb5e:62",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226:UUID:ccf906e9-9ce5-405d-bb33-ebea839bbb5e:42",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226",
       "teamIdIntern": 464550,
       "teamIdExtern": 79226,
@@ -85618,7 +85618,7 @@
       "playerActorId": 7641985,
       "playerIdentityKey": "UUID:ccf906e9-9ce5-405d-bb33-ebea839bbb5e",
       "playerName": "ANNA BARRERO BONCOMPTE",
-      "shirtNumber": "62",
+      "shirtNumber": "42",
       "games": 14,
       "minutes": 390,
       "points": 40,
@@ -85761,7 +85761,7 @@
       "avgFouls": 0.42857142857142855
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326:UUID:00fdb738-98d1-11e9-a2a5-0216824770c2:11",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326:UUID:00fdb738-98d1-11e9-a2a5-0216824770c2:19",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326",
       "teamIdIntern": 450680,
       "teamIdExtern": 80326,
@@ -85772,7 +85772,7 @@
       "playerActorId": 7387461,
       "playerIdentityKey": "UUID:00fdb738-98d1-11e9-a2a5-0216824770c2",
       "playerName": "LAURA CARRILLO ALSINA",
-      "shirtNumber": "11",
+      "shirtNumber": "19",
       "games": 23,
       "minutes": 219,
       "points": 40,
@@ -85981,7 +85981,7 @@
       "avgFouls": 0.5384615384615384
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:a8a4c76d-56ad-4798-9396-04d4e0342f16:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:a8a4c76d-56ad-4798-9396-04d4e0342f16:14",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
       "teamIdIntern": 454341,
       "teamIdExtern": 81569,
@@ -85992,7 +85992,7 @@
       "playerActorId": 7450208,
       "playerIdentityKey": "UUID:a8a4c76d-56ad-4798-9396-04d4e0342f16",
       "playerName": "OSASUME CLAIRE CLEMENT",
-      "shirtNumber": "8",
+      "shirtNumber": "14",
       "games": 18,
       "minutes": 451,
       "points": 40,
@@ -86069,7 +86069,7 @@
       "avgFouls": 1.1333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353:UUID:5f529c7c-44e0-4529-86d2-0099a07776b2:17",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353:UUID:5f529c7c-44e0-4529-86d2-0099a07776b2:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353",
       "teamIdIntern": 473694,
       "teamIdExtern": 82353,
@@ -86080,7 +86080,7 @@
       "playerActorId": 7919884,
       "playerIdentityKey": "UUID:5f529c7c-44e0-4529-86d2-0099a07776b2",
       "playerName": "ALMA KAMILA MONTERO FRANCO",
-      "shirtNumber": "17",
+      "shirtNumber": "5",
       "games": 12,
       "minutes": 207,
       "points": 39,
@@ -86245,7 +86245,7 @@
       "avgFouls": 0.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401:UUID:b0265ad2-4f33-4185-a86e-c1899d19a083:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401:UUID:b0265ad2-4f33-4185-a86e-c1899d19a083:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401",
       "teamIdIntern": 453461,
       "teamIdExtern": 79401,
@@ -86256,7 +86256,7 @@
       "playerActorId": 7435773,
       "playerIdentityKey": "UUID:b0265ad2-4f33-4185-a86e-c1899d19a083",
       "playerName": "CARLA MORILLO SOL\u00D3RZANO",
-      "shirtNumber": "0",
+      "shirtNumber": "25",
       "games": 17,
       "minutes": 349,
       "points": 39,
@@ -86421,7 +86421,7 @@
       "avgFouls": 1.3571428571428572
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:7f5cc37b-1e08-43b3-bd1e-0219539350ff:99",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:7f5cc37b-1e08-43b3-bd1e-0219539350ff:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
@@ -86432,7 +86432,7 @@
       "playerActorId": 7463704,
       "playerIdentityKey": "UUID:7f5cc37b-1e08-43b3-bd1e-0219539350ff",
       "playerName": "MIREIA ARIADNE CARRILLO AREQUIPA",
-      "shirtNumber": "99",
+      "shirtNumber": "8",
       "games": 12,
       "minutes": 258,
       "points": 39,
@@ -86443,7 +86443,7 @@
       "avgFouls": 0.75
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569:UUID:87d69ee5-f212-4f0f-b504-7b7cd9299c26:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569:UUID:87d69ee5-f212-4f0f-b504-7b7cd9299c26:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569",
       "teamIdIntern": 453795,
       "teamIdExtern": 82569,
@@ -86454,7 +86454,7 @@
       "playerActorId": 7441147,
       "playerIdentityKey": "UUID:87d69ee5-f212-4f0f-b504-7b7cd9299c26",
       "playerName": "NIA DAILY URETA GARCIA",
-      "shirtNumber": "0",
+      "shirtNumber": "2",
       "games": 18,
       "minutes": 477,
       "points": 39,
@@ -86597,7 +86597,7 @@
       "avgFouls": 1.1666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82054:UUID:f32f4332-f4e0-46f1-a25a-153938efa61f:13",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82054:UUID:f32f4332-f4e0-46f1-a25a-153938efa61f:99",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82054",
       "teamIdIntern": 454834,
       "teamIdExtern": 82054,
@@ -86608,7 +86608,7 @@
       "playerActorId": 7458322,
       "playerIdentityKey": "UUID:f32f4332-f4e0-46f1-a25a-153938efa61f",
       "playerName": "AURA LLACH BERNAL",
-      "shirtNumber": "13",
+      "shirtNumber": "99",
       "games": 17,
       "minutes": 379,
       "points": 38,
@@ -86685,7 +86685,7 @@
       "avgFouls": 2.3846153846153846
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443:UUID:015bee65-98d1-11e9-a2a5-0216824770c2:21",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443:UUID:015bee65-98d1-11e9-a2a5-0216824770c2:13",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443",
       "teamIdIntern": 450616,
       "teamIdExtern": 80443,
@@ -86696,7 +86696,7 @@
       "playerActorId": 7386384,
       "playerIdentityKey": "UUID:015bee65-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MARIA LUCIA RODRIGUEZ CARRASCO",
-      "shirtNumber": "21",
+      "shirtNumber": "13",
       "games": 23,
       "minutes": 352,
       "points": 38,
@@ -86751,7 +86751,7 @@
       "avgFouls": 1.1428571428571428
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628:UUID:01102560-98d1-11e9-a2a5-0216824770c2:18",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628:UUID:01102560-98d1-11e9-a2a5-0216824770c2:6",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628",
       "teamIdIntern": 450132,
       "teamIdExtern": 78628,
@@ -86762,7 +86762,7 @@
       "playerActorId": 7378549,
       "playerIdentityKey": "UUID:01102560-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MIA SAEZ BARBERA",
-      "shirtNumber": "18",
+      "shirtNumber": "6",
       "games": 23,
       "minutes": 262,
       "points": 38,
@@ -86905,7 +86905,7 @@
       "avgFouls": 1.368421052631579
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256:UUID:885a3c06-9912-4fe2-9de6-34d1c0bd5a2d:18",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256:UUID:885a3c06-9912-4fe2-9de6-34d1c0bd5a2d:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256",
       "teamIdIntern": 493498,
       "teamIdExtern": 83256,
@@ -86916,7 +86916,7 @@
       "playerActorId": 8585864,
       "playerIdentityKey": "UUID:885a3c06-9912-4fe2-9de6-34d1c0bd5a2d",
       "playerName": "VALERIA RODR\u00CDGUEZ JIM\u00C9NEZ",
-      "shirtNumber": "18",
+      "shirtNumber": "7",
       "games": 9,
       "minutes": 210,
       "points": 38,
@@ -87213,7 +87213,7 @@
       "avgFouls": 2.0714285714285716
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:b8ba507a-1bb9-4052-908e-aec7d34decda:9",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:b8ba507a-1bb9-4052-908e-aec7d34decda:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
       "teamIdIntern": 459627,
       "teamIdExtern": 81625,
@@ -87224,7 +87224,7 @@
       "playerActorId": 7542253,
       "playerIdentityKey": "UUID:b8ba507a-1bb9-4052-908e-aec7d34decda",
       "playerName": "LAIA ARCEDIANO KEHOE",
-      "shirtNumber": "9",
+      "shirtNumber": "12",
       "games": 14,
       "minutes": 338,
       "points": 37,
@@ -87235,7 +87235,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:4409f5aa-5482-49fb-adc3-647cf1c06157:09",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:4409f5aa-5482-49fb-adc3-647cf1c06157:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
@@ -87246,7 +87246,7 @@
       "playerActorId": 7435319,
       "playerIdentityKey": "UUID:4409f5aa-5482-49fb-adc3-647cf1c06157",
       "playerName": "LAIA FERRER RINC\u00D3N",
-      "shirtNumber": "09",
+      "shirtNumber": "25",
       "games": 15,
       "minutes": 371,
       "points": 37,
@@ -87433,7 +87433,7 @@
       "avgFouls": 1.5333333333333334
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506:UUID:f651acab-e73e-4ebf-8c14-a145beff0208:22",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506:UUID:f651acab-e73e-4ebf-8c14-a145beff0208:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506",
       "teamIdIntern": 458390,
       "teamIdExtern": 79506,
@@ -87444,7 +87444,7 @@
       "playerActorId": 7520978,
       "playerIdentityKey": "UUID:f651acab-e73e-4ebf-8c14-a145beff0208",
       "playerName": "AGN\u00C8S MASATS FERN\u00C1NDEZ",
-      "shirtNumber": "22",
+      "shirtNumber": "25",
       "games": 15,
       "minutes": 442,
       "points": 36,
@@ -87807,7 +87807,7 @@
       "avgFouls": 0.625
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:deb2a897-cc8a-4b6a-ba28-e36cffa843c4:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:deb2a897-cc8a-4b6a-ba28-e36cffa843c4:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
@@ -87818,7 +87818,7 @@
       "playerActorId": 7463072,
       "playerIdentityKey": "UUID:deb2a897-cc8a-4b6a-ba28-e36cffa843c4",
       "playerName": "ONA SERRANO ESTEVAN",
-      "shirtNumber": "8",
+      "shirtNumber": "27",
       "games": 15,
       "minutes": 466,
       "points": 36,
@@ -87983,7 +87983,7 @@
       "avgFouls": 0.4
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546:UUID:fc1bd2b1-98d0-11e9-a2a5-0216824770c2:21",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546:UUID:fc1bd2b1-98d0-11e9-a2a5-0216824770c2:6",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
       "teamIdIntern": 452782,
       "teamIdExtern": 80546,
@@ -87994,7 +87994,7 @@
       "playerActorId": 7423992,
       "playerIdentityKey": "UUID:fc1bd2b1-98d0-11e9-a2a5-0216824770c2",
       "playerName": "ALANA GARCIA CEJUDO",
-      "shirtNumber": "21",
+      "shirtNumber": "6",
       "games": 15,
       "minutes": 139,
       "points": 35,
@@ -88071,7 +88071,7 @@
       "avgFouls": 1.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057:UUID:050ed5ee-ad07-4452-98f8-1b24c939e6fd:25",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057:UUID:050ed5ee-ad07-4452-98f8-1b24c939e6fd:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057",
       "teamIdIntern": 506936,
       "teamIdExtern": 82057,
@@ -88082,7 +88082,7 @@
       "playerActorId": 9065079,
       "playerIdentityKey": "UUID:050ed5ee-ad07-4452-98f8-1b24c939e6fd",
       "playerName": "JUDITH DEDE QUARCO SALVATIERRA",
-      "shirtNumber": "25",
+      "shirtNumber": "19",
       "games": 9,
       "minutes": 210,
       "points": 35,
@@ -88401,7 +88401,7 @@
       "avgFouls": 0.5555555555555556
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522:UUID:317d9047-2ff5-4066-9e38-7260f7f21528:7",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522:UUID:317d9047-2ff5-4066-9e38-7260f7f21528:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
       "teamIdIntern": 531819,
       "teamIdExtern": 81522,
@@ -88412,7 +88412,7 @@
       "playerActorId": 9936965,
       "playerIdentityKey": "UUID:317d9047-2ff5-4066-9e38-7260f7f21528",
       "playerName": "BRUNA BALAGUER TORRES",
-      "shirtNumber": "7",
+      "shirtNumber": "27",
       "games": 3,
       "minutes": 66,
       "points": 34,
@@ -88599,7 +88599,7 @@
       "avgFouls": 0.47058823529411764
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839:UUID:28f6054d-f7da-4f91-9d12-347f25ee12c5:20",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839:UUID:28f6054d-f7da-4f91-9d12-347f25ee12c5:10",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839",
       "teamIdIntern": 453460,
       "teamIdExtern": 78839,
@@ -88610,7 +88610,7 @@
       "playerActorId": 7435762,
       "playerIdentityKey": "UUID:28f6054d-f7da-4f91-9d12-347f25ee12c5",
       "playerName": "MARIONA FERN\u00C1NDEZ \u00C1LVAREZ",
-      "shirtNumber": "20",
+      "shirtNumber": "10",
       "games": 17,
       "minutes": 364,
       "points": 34,
@@ -89479,7 +89479,7 @@
       "avgFouls": 0.2
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81421:UUID:c733f79e-174a-4325-b595-85a9baa7f33f:16",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81421:UUID:c733f79e-174a-4325-b595-85a9baa7f33f:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81421",
       "teamIdIntern": 453920,
       "teamIdExtern": 81421,
@@ -89490,7 +89490,7 @@
       "playerActorId": 7443320,
       "playerIdentityKey": "UUID:c733f79e-174a-4325-b595-85a9baa7f33f",
       "playerName": "RETAJ ZEMMOURI CHOULLI",
-      "shirtNumber": "16",
+      "shirtNumber": "11",
       "games": 13,
       "minutes": 365,
       "points": 32,
@@ -89699,7 +89699,7 @@
       "avgFouls": 0.3333333333333333
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904:UUID:00b91b9f-98d1-11e9-a2a5-0216824770c2:2",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904:UUID:00b91b9f-98d1-11e9-a2a5-0216824770c2:23",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904",
       "teamIdIntern": 457056,
       "teamIdExtern": 78904,
@@ -89710,7 +89710,7 @@
       "playerActorId": 68161759657861088,
       "playerIdentityKey": "UUID:00b91b9f-98d1-11e9-a2a5-0216824770c2",
       "playerName": "JORDAN JESUS CABRERA D\u00CDAZ",
-      "shirtNumber": "2",
+      "shirtNumber": "23",
       "games": 11,
       "minutes": 77,
       "points": 31,
@@ -89721,7 +89721,7 @@
       "avgFouls": 1.5454545454545454
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:76fb89d4-e754-41e9-ba4f-6bae54139569:26",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:76fb89d4-e754-41e9-ba4f-6bae54139569:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
       "teamIdIntern": 453921,
       "teamIdExtern": 84290,
@@ -89732,7 +89732,7 @@
       "playerActorId": 7443340,
       "playerIdentityKey": "UUID:76fb89d4-e754-41e9-ba4f-6bae54139569",
       "playerName": "LEAH FERREIRA VORBA",
-      "shirtNumber": "26",
+      "shirtNumber": "9",
       "games": 15,
       "minutes": 344,
       "points": 31,
@@ -89853,7 +89853,7 @@
       "avgFouls": 1.6666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38:3",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38:73",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -89864,7 +89864,7 @@
       "playerActorId": 7456882,
       "playerIdentityKey": "UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38",
       "playerName": "LUC\u00CDA VILLAR FLORES",
-      "shirtNumber": "3",
+      "shirtNumber": "73",
       "games": 11,
       "minutes": 237,
       "points": 31,
@@ -90073,7 +90073,7 @@
       "avgFouls": 0.8571428571428571
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824:UUID:c8af245e-b98a-4ceb-aa1b-f2b8fb81e3aa:26",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824:UUID:c8af245e-b98a-4ceb-aa1b-f2b8fb81e3aa:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824",
       "teamIdIntern": 453870,
       "teamIdExtern": 78824,
@@ -90084,7 +90084,7 @@
       "playerActorId": 7442431,
       "playerIdentityKey": "UUID:c8af245e-b98a-4ceb-aa1b-f2b8fb81e3aa",
       "playerName": "RENATA CLAVIJO FERN\u00C1NDEZ",
-      "shirtNumber": "26",
+      "shirtNumber": "11",
       "games": 14,
       "minutes": 318,
       "points": 31,
@@ -90403,7 +90403,7 @@
       "avgFouls": 0.9545454545454546
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:9419b931-2731-4b81-9a19-d3f763038b39:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:9419b931-2731-4b81-9a19-d3f763038b39:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
@@ -90414,7 +90414,7 @@
       "playerActorId": 7538394,
       "playerIdentityKey": "UUID:9419b931-2731-4b81-9a19-d3f763038b39",
       "playerName": "ISONA ORTEGA COMPTE",
-      "shirtNumber": "4",
+      "shirtNumber": "25",
       "games": 19,
       "minutes": 682,
       "points": 30,
@@ -90887,7 +90887,7 @@
       "avgFouls": 1.6521739130434783
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:6e47e9c1-dc7f-4ff4-8337-26e97785efaf:63",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:6e47e9c1-dc7f-4ff4-8337-26e97785efaf:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -90898,7 +90898,7 @@
       "playerActorId": 7462369,
       "playerIdentityKey": "UUID:6e47e9c1-dc7f-4ff4-8337-26e97785efaf",
       "playerName": "MAR\u00CDA COMPANY ARROYO",
-      "shirtNumber": "63",
+      "shirtNumber": "25",
       "games": 10,
       "minutes": 216,
       "points": 29,
@@ -90975,7 +90975,7 @@
       "avgFouls": 1.0714285714285714
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:dce055ba-4137-48c5-b9fb-986607957e00:65",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:dce055ba-4137-48c5-b9fb-986607957e00:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -90986,7 +90986,7 @@
       "playerActorId": 7462364,
       "playerIdentityKey": "UUID:dce055ba-4137-48c5-b9fb-986607957e00",
       "playerName": "REBECA PEREZ MARTIN",
-      "shirtNumber": "65",
+      "shirtNumber": "5",
       "games": 14,
       "minutes": 304,
       "points": 29,
@@ -91041,7 +91041,7 @@
       "avgFouls": 1.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973:UUID:1b90e669-a387-4ca8-8c0a-bc32541e5e6a:17",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973:UUID:1b90e669-a387-4ca8-8c0a-bc32541e5e6a:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973",
       "teamIdIntern": 506606,
       "teamIdExtern": 85973,
@@ -91052,7 +91052,7 @@
       "playerActorId": 9054522,
       "playerIdentityKey": "UUID:1b90e669-a387-4ca8-8c0a-bc32541e5e6a",
       "playerName": "BERTA BOVER BURGUE\u00D1O",
-      "shirtNumber": "17",
+      "shirtNumber": "22",
       "games": 7,
       "minutes": 182,
       "points": 28,
@@ -91283,7 +91283,7 @@
       "avgFouls": 0.8666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:bdbb6ae3-2f91-4ec4-b2ff-0751bbdc43d8:60",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:bdbb6ae3-2f91-4ec4-b2ff-0751bbdc43d8:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -91294,7 +91294,7 @@
       "playerActorId": 7462370,
       "playerIdentityKey": "UUID:bdbb6ae3-2f91-4ec4-b2ff-0751bbdc43d8",
       "playerName": "MARTINA HERN\u00C1NDEZ D\u00CDEZ",
-      "shirtNumber": "60",
+      "shirtNumber": "12",
       "games": 13,
       "minutes": 306,
       "points": 28,
@@ -91525,7 +91525,7 @@
       "avgFouls": 0.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315:UUID:c6929f3a-3034-4f8e-96ae-c86034aa3d9f:14",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315:UUID:c6929f3a-3034-4f8e-96ae-c86034aa3d9f:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315",
       "teamIdIntern": 453403,
       "teamIdExtern": 83315,
@@ -91536,7 +91536,7 @@
       "playerActorId": 7434875,
       "playerIdentityKey": "UUID:c6929f3a-3034-4f8e-96ae-c86034aa3d9f",
       "playerName": "AITANA MARTINEZ NANI",
-      "shirtNumber": "14",
+      "shirtNumber": "7",
       "games": 15,
       "minutes": 438,
       "points": 27,
@@ -91723,7 +91723,7 @@
       "avgFouls": 0.23076923076923078
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:01558904-98d1-11e9-a2a5-0216824770c2:3",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:01558904-98d1-11e9-a2a5-0216824770c2:1",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
       "teamIdIntern": 474469,
       "teamIdExtern": 78605,
@@ -91734,7 +91734,7 @@
       "playerActorId": 7941537,
       "playerIdentityKey": "UUID:01558904-98d1-11e9-a2a5-0216824770c2",
       "playerName": "JULIA AVILES BUENO",
-      "shirtNumber": "3",
+      "shirtNumber": "1",
       "games": 9,
       "minutes": 90,
       "points": 27,
@@ -91855,7 +91855,7 @@
       "avgFouls": 1.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c:2",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -91866,7 +91866,7 @@
       "playerActorId": 7456892,
       "playerIdentityKey": "UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c",
       "playerName": "N\u00C0DIA GRAS DEL ROSARIO",
-      "shirtNumber": "2",
+      "shirtNumber": "12",
       "games": 10,
       "minutes": 228,
       "points": 27,
@@ -91921,7 +91921,7 @@
       "avgFouls": 0.375
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81887:UUID:681fa6aa-8fe8-4828-ba16-0f750085492d:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81887:UUID:681fa6aa-8fe8-4828-ba16-0f750085492d:33",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81887",
       "teamIdIntern": 454292,
       "teamIdExtern": 81887,
@@ -91932,7 +91932,7 @@
       "playerActorId": 7449403,
       "playerIdentityKey": "UUID:681fa6aa-8fe8-4828-ba16-0f750085492d",
       "playerName": "PAULA ASCRE KOZMA",
-      "shirtNumber": "1",
+      "shirtNumber": "33",
       "games": 15,
       "minutes": 299,
       "points": 27,
@@ -91965,7 +91965,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:daa96e1a-05ab-4e7c-93bb-ff3d2003b528:04",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:daa96e1a-05ab-4e7c-93bb-ff3d2003b528:4",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -91976,7 +91976,7 @@
       "playerActorId": 7435302,
       "playerIdentityKey": "UUID:daa96e1a-05ab-4e7c-93bb-ff3d2003b528",
       "playerName": "SELVA BONVEHI LARRAZ",
-      "shirtNumber": "04",
+      "shirtNumber": "4",
       "games": 15,
       "minutes": 350,
       "points": 27,
@@ -92097,7 +92097,7 @@
       "avgFouls": 0.3076923076923077
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82820:UUID:a6b5cdf0-63bd-4bd7-b490-c15bad34db9d:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82820:UUID:a6b5cdf0-63bd-4bd7-b490-c15bad34db9d:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82820",
       "teamIdIntern": 461858,
       "teamIdExtern": 82820,
@@ -92108,7 +92108,7 @@
       "playerActorId": 7583380,
       "playerIdentityKey": "UUID:a6b5cdf0-63bd-4bd7-b490-c15bad34db9d",
       "playerName": "AINHOA MOLINA LUQUEZ",
-      "shirtNumber": "0",
+      "shirtNumber": "12",
       "games": 13,
       "minutes": 297,
       "points": 26,
@@ -92207,7 +92207,7 @@
       "avgFouls": 2.3333333333333335
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:882be3bd-fdd1-4a74-aa51-4dcdbe410b02:5",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:882be3bd-fdd1-4a74-aa51-4dcdbe410b02:20",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 457131,
       "teamIdExtern": 84386,
@@ -92218,7 +92218,7 @@
       "playerActorId": 7498865,
       "playerIdentityKey": "UUID:882be3bd-fdd1-4a74-aa51-4dcdbe410b02",
       "playerName": "ELIA BORREGO CUBERO",
-      "shirtNumber": "5",
+      "shirtNumber": "20",
       "games": 15,
       "minutes": 351,
       "points": 26,
@@ -92471,7 +92471,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315:UUID:c318da4f-48e2-4557-bc8b-d253c7c98e02:15",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315:UUID:c318da4f-48e2-4557-bc8b-d253c7c98e02:34",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315",
       "teamIdIntern": 453403,
       "teamIdExtern": 83315,
@@ -92482,7 +92482,7 @@
       "playerActorId": 7434872,
       "playerIdentityKey": "UUID:c318da4f-48e2-4557-bc8b-d253c7c98e02",
       "playerName": "NEFELI LORGER KAMMA",
-      "shirtNumber": "15",
+      "shirtNumber": "34",
       "games": 13,
       "minutes": 332,
       "points": 26,
@@ -92581,7 +92581,7 @@
       "avgFouls": 1.4666666666666666
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:c73851d9-d7a6-47b5-9dab-a9c626954262:51",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:c73851d9-d7a6-47b5-9dab-a9c626954262:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -92592,7 +92592,7 @@
       "playerActorId": 7435298,
       "playerIdentityKey": "UUID:c73851d9-d7a6-47b5-9dab-a9c626954262",
       "playerName": "VERA TAMAYO MARTIN",
-      "shirtNumber": "51",
+      "shirtNumber": "13",
       "games": 17,
       "minutes": 416,
       "points": 26,
@@ -92779,7 +92779,7 @@
       "avgFouls": 0.5454545454545454
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028:UUID:9099d4b4-7a2a-42ef-862a-981a11c72be2:14",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028:UUID:9099d4b4-7a2a-42ef-862a-981a11c72be2:26",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028",
       "teamIdIntern": 514787,
       "teamIdExtern": 79028,
@@ -92790,7 +92790,7 @@
       "playerActorId": 9349833,
       "playerIdentityKey": "UUID:9099d4b4-7a2a-42ef-862a-981a11c72be2",
       "playerName": "MERITXELL COPETE L\u00D3PEZ",
-      "shirtNumber": "14",
+      "shirtNumber": "26",
       "games": 6,
       "minutes": 149,
       "points": 25,
@@ -92867,7 +92867,7 @@
       "avgFouls": 1.1666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:533fe6a9-ede6-46a6-9f92-5209a92aa2be:23",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:533fe6a9-ede6-46a6-9f92-5209a92aa2be:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034",
       "teamIdIntern": 459283,
       "teamIdExtern": 79034,
@@ -92878,7 +92878,7 @@
       "playerActorId": 7536376,
       "playerIdentityKey": "UUID:533fe6a9-ede6-46a6-9f92-5209a92aa2be",
       "playerName": "ROXANA MARIA GUARDIOLA BONILLA",
-      "shirtNumber": "23",
+      "shirtNumber": "11",
       "games": 10,
       "minutes": 258,
       "points": 25,
@@ -93065,7 +93065,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832:UUID:c4d081e1-59a0-4834-b918-c2ba896b93b4:25",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832:UUID:c4d081e1-59a0-4834-b918-c2ba896b93b4:10",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832",
       "teamIdIntern": 455642,
       "teamIdExtern": 83832,
@@ -93076,7 +93076,7 @@
       "playerActorId": 7472098,
       "playerIdentityKey": "UUID:c4d081e1-59a0-4834-b918-c2ba896b93b4",
       "playerName": "ARLET ALCAZAR SANCHEZ",
-      "shirtNumber": "25",
+      "shirtNumber": "10",
       "games": 9,
       "minutes": 286,
       "points": 24,
@@ -93461,7 +93461,7 @@
       "avgFouls": 1.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226:UUID:bab09bd3-50cd-47ff-a3e5-1f778e41c0aa:42",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226:UUID:bab09bd3-50cd-47ff-a3e5-1f778e41c0aa:62",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79226",
       "teamIdIntern": 464550,
       "teamIdExtern": 79226,
@@ -93472,7 +93472,7 @@
       "playerActorId": 7641984,
       "playerIdentityKey": "UUID:bab09bd3-50cd-47ff-a3e5-1f778e41c0aa",
       "playerName": "NORA PAREDES SAIZ",
-      "shirtNumber": "42",
+      "shirtNumber": "62",
       "games": 13,
       "minutes": 397,
       "points": 24,
@@ -93505,7 +93505,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862:UUID:55cf29e3-beff-48af-bf65-a4ef194de46b:29",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862:UUID:55cf29e3-beff-48af-bf65-a4ef194de46b:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862",
       "teamIdIntern": 454767,
       "teamIdExtern": 79862,
@@ -93516,7 +93516,7 @@
       "playerActorId": 71781759568588942,
       "playerIdentityKey": "UUID:55cf29e3-beff-48af-bf65-a4ef194de46b",
       "playerName": "SIENA CASQUERO JOVELLANOS",
-      "shirtNumber": "29",
+      "shirtNumber": "22",
       "games": 7,
       "minutes": 135,
       "points": 24,
@@ -93967,7 +93967,7 @@
       "avgFouls": 2.1818181818181817
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:3172f3d8-078a-4ad2-85f9-ef8761ce3744:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:3172f3d8-078a-4ad2-85f9-ef8761ce3744:3",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -93978,7 +93978,7 @@
       "playerActorId": 7456884,
       "playerIdentityKey": "UUID:3172f3d8-078a-4ad2-85f9-ef8761ce3744",
       "playerName": "MARA BLANCO CARBALLEDA",
-      "shirtNumber": "4",
+      "shirtNumber": "3",
       "games": 13,
       "minutes": 293,
       "points": 23,
@@ -94253,7 +94253,7 @@
       "avgFouls": 1.1333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:621fc37b-ea46-4ffd-81ac-d6330a389d10:15",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:621fc37b-ea46-4ffd-81ac-d6330a389d10:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
       "teamIdIntern": 455124,
       "teamIdExtern": 81625,
@@ -94264,7 +94264,7 @@
       "playerActorId": 7463046,
       "playerIdentityKey": "UUID:621fc37b-ea46-4ffd-81ac-d6330a389d10",
       "playerName": "CARLA RODR\u00CDGUEZ AGUILERA",
-      "shirtNumber": "15",
+      "shirtNumber": "27",
       "games": 13,
       "minutes": 298,
       "points": 22,
@@ -94319,7 +94319,7 @@
       "avgFouls": 1.25
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:65e94c83-e699-448e-b5f0-a05937629c24:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:65e94c83-e699-448e-b5f0-a05937629c24:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
@@ -94330,7 +94330,7 @@
       "playerActorId": 7538396,
       "playerIdentityKey": "UUID:65e94c83-e699-448e-b5f0-a05937629c24",
       "playerName": "EMMA BRUGUERA TRIAD\u00D3",
-      "shirtNumber": "11",
+      "shirtNumber": "13",
       "games": 18,
       "minutes": 635,
       "points": 22,
@@ -94363,7 +94363,7 @@
       "avgFouls": 1.2
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506:UUID:95fa3ccb-5184-45b7-bf41-952b52c51af7:22",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506:UUID:95fa3ccb-5184-45b7-bf41-952b52c51af7:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79506",
       "teamIdIntern": 493752,
       "teamIdExtern": 79506,
@@ -94374,7 +94374,7 @@
       "playerActorId": 68111765617686473,
       "playerIdentityKey": "UUID:95fa3ccb-5184-45b7-bf41-952b52c51af7",
       "playerName": "JANA BERNABEU VALENT\u00CDN",
-      "shirtNumber": "22",
+      "shirtNumber": "17",
       "games": 8,
       "minutes": 207,
       "points": 22,
@@ -94451,7 +94451,7 @@
       "avgFouls": 1.0909090909090908
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:c76c7adc-e636-4822-bf5b-42d0d2ef5b87:95",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:c76c7adc-e636-4822-bf5b-42d0d2ef5b87:1",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
@@ -94462,7 +94462,7 @@
       "playerActorId": 9089219,
       "playerIdentityKey": "UUID:c76c7adc-e636-4822-bf5b-42d0d2ef5b87",
       "playerName": "JULIA AGUILERA ESCOBOSA",
-      "shirtNumber": "95",
+      "shirtNumber": "1",
       "games": 9,
       "minutes": 215,
       "points": 22,
@@ -94517,7 +94517,7 @@
       "avgFouls": 0.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:e73ce8b6-bf01-4e48-9a4e-5fdbafa18679:05",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:e73ce8b6-bf01-4e48-9a4e-5fdbafa18679:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
@@ -94528,7 +94528,7 @@
       "playerActorId": 7435312,
       "playerIdentityKey": "UUID:e73ce8b6-bf01-4e48-9a4e-5fdbafa18679",
       "playerName": "LAIA FLORES GARC\u00CDA",
-      "shirtNumber": "05",
+      "shirtNumber": "8",
       "games": 16,
       "minutes": 390,
       "points": 22,
@@ -94803,7 +94803,7 @@
       "avgFouls": 0.35714285714285715
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:7763771b-5f01-410a-9f8a-ef5de20b1c4c:70",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:7763771b-5f01-410a-9f8a-ef5de20b1c4c:31",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
@@ -94814,7 +94814,7 @@
       "playerActorId": 7463693,
       "playerIdentityKey": "UUID:7763771b-5f01-410a-9f8a-ef5de20b1c4c",
       "playerName": "SAMARA EVERLY GARCIA V\u00C1SQUEZ",
-      "shirtNumber": "70",
+      "shirtNumber": "31",
       "games": 14,
       "minutes": 273,
       "points": 22,
@@ -95045,7 +95045,7 @@
       "avgFouls": 1.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527:UUID:54c831fd-7044-4a7f-bffa-eafc736096a3:29",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527:UUID:54c831fd-7044-4a7f-bffa-eafc736096a3:3",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527",
       "teamIdIntern": 453805,
       "teamIdExtern": 79527,
@@ -95056,7 +95056,7 @@
       "playerActorId": 7441315,
       "playerIdentityKey": "UUID:54c831fd-7044-4a7f-bffa-eafc736096a3",
       "playerName": "M.C.C.",
-      "shirtNumber": "29",
+      "shirtNumber": "3",
       "games": 17,
       "minutes": 396,
       "points": 21,
@@ -95397,7 +95397,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151:UUID:cef006fd-17c5-4342-a2e6-a776c423800e:3",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151:UUID:cef006fd-17c5-4342-a2e6-a776c423800e:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151",
       "teamIdIntern": 453841,
       "teamIdExtern": 84151,
@@ -95408,7 +95408,7 @@
       "playerActorId": 7441921,
       "playerIdentityKey": "UUID:cef006fd-17c5-4342-a2e6-a776c423800e",
       "playerName": "AVA PUERTO CA\u00D1AS",
-      "shirtNumber": "3",
+      "shirtNumber": "13",
       "games": 16,
       "minutes": 430,
       "points": 20,
@@ -95991,7 +95991,7 @@
       "avgFouls": 2.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658:UUID:5ae02e97-30b3-4d3c-b1f3-a0cb1c759fd6:3",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658:UUID:5ae02e97-30b3-4d3c-b1f3-a0cb1c759fd6:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658",
       "teamIdIntern": 456883,
       "teamIdExtern": 79658,
@@ -96002,7 +96002,7 @@
       "playerActorId": 7494463,
       "playerIdentityKey": "UUID:5ae02e97-30b3-4d3c-b1f3-a0cb1c759fd6",
       "playerName": "ALEXANDRA FARR\u00C9 PASTRANA",
-      "shirtNumber": "3",
+      "shirtNumber": "8",
       "games": 15,
       "minutes": 437,
       "points": 19,
@@ -96563,7 +96563,7 @@
       "avgFouls": 0.7222222222222222
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:f6afe837-a19d-4b7c-a7a5-fd2722f74cc6:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:f6afe837-a19d-4b7c-a7a5-fd2722f74cc6:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
       "teamIdIntern": 453921,
       "teamIdExtern": 84290,
@@ -96574,7 +96574,7 @@
       "playerActorId": 7443339,
       "playerIdentityKey": "UUID:f6afe837-a19d-4b7c-a7a5-fd2722f74cc6",
       "playerName": "ALBA ORTEGA GONZALEZ",
-      "shirtNumber": "11",
+      "shirtNumber": "5",
       "games": 16,
       "minutes": 398,
       "points": 18,
@@ -96585,7 +96585,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386:UUID:397803de-c1af-4e1d-bd79-3b5e5ae9371f:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386:UUID:397803de-c1af-4e1d-bd79-3b5e5ae9371f:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386",
       "teamIdIntern": 458510,
       "teamIdExtern": 83386,
@@ -96596,7 +96596,7 @@
       "playerActorId": 7523101,
       "playerIdentityKey": "UUID:397803de-c1af-4e1d-bd79-3b5e5ae9371f",
       "playerName": "ALBA S\u00C1NCHEZ MOYANO",
-      "shirtNumber": "4",
+      "shirtNumber": "27",
       "games": 15,
       "minutes": 309,
       "points": 18,
@@ -96783,7 +96783,7 @@
       "avgFouls": 0.35714285714285715
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:UUID:ea99fe7b-f209-444b-89f8-dbb1ecab27bd:6",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:UUID:ea99fe7b-f209-444b-89f8-dbb1ecab27bd:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
       "teamIdIntern": 458792,
       "teamIdExtern": 80179,
@@ -96794,7 +96794,7 @@
       "playerActorId": 7528031,
       "playerIdentityKey": "UUID:ea99fe7b-f209-444b-89f8-dbb1ecab27bd",
       "playerName": "GINA CRUZ HERRERO",
-      "shirtNumber": "6",
+      "shirtNumber": "18",
       "games": 4,
       "minutes": 107,
       "points": 18,
@@ -96849,7 +96849,7 @@
       "avgFouls": 1.0833333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735:UUID:0cc0892c-efa1-42a0-b93f-1dd84d8b60a3:18",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735:UUID:0cc0892c-efa1-42a0-b93f-1dd84d8b60a3:30",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735",
       "teamIdIntern": 453854,
       "teamIdExtern": 82735,
@@ -96860,7 +96860,7 @@
       "playerActorId": 7442192,
       "playerIdentityKey": "UUID:0cc0892c-efa1-42a0-b93f-1dd84d8b60a3",
       "playerName": "JANA BARRI TORRADEFLOT",
-      "shirtNumber": "18",
+      "shirtNumber": "30",
       "games": 10,
       "minutes": 184,
       "points": 18,
@@ -96937,7 +96937,7 @@
       "avgFouls": 1.1666666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:1154fc0b-aca8-48df-a9ff-b3f59cea07a3:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:1154fc0b-aca8-48df-a9ff-b3f59cea07a3:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
@@ -96948,7 +96948,7 @@
       "playerActorId": 7435314,
       "playerIdentityKey": "UUID:1154fc0b-aca8-48df-a9ff-b3f59cea07a3",
       "playerName": "LEYRE MERINO MART\u00CDNEZ",
-      "shirtNumber": "11",
+      "shirtNumber": "9",
       "games": 18,
       "minutes": 458,
       "points": 18,
@@ -96959,7 +96959,7 @@
       "avgFouls": 1.2222222222222223
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157:UUID:0c81432c-080d-43d7-b690-84f3c2ae6735:10",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157:UUID:0c81432c-080d-43d7-b690-84f3c2ae6735:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157",
       "teamIdIntern": 455024,
       "teamIdExtern": 81157,
@@ -96970,7 +96970,7 @@
       "playerActorId": 7461472,
       "playerIdentityKey": "UUID:0c81432c-080d-43d7-b690-84f3c2ae6735",
       "playerName": "LUC\u00CDA GARC\u00CDA MART\u00CDNEZ",
-      "shirtNumber": "10",
+      "shirtNumber": "23",
       "games": 16,
       "minutes": 400,
       "points": 18,
@@ -96981,7 +96981,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81762:UUID:8a7b57e3-6a00-455e-8b08-fad2e437f856:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81762:UUID:8a7b57e3-6a00-455e-8b08-fad2e437f856:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81762",
       "teamIdIntern": 462949,
       "teamIdExtern": 81762,
@@ -96992,7 +96992,7 @@
       "playerActorId": 7604898,
       "playerIdentityKey": "UUID:8a7b57e3-6a00-455e-8b08-fad2e437f856",
       "playerName": "M.S.G.",
-      "shirtNumber": "8",
+      "shirtNumber": "2",
       "games": 13,
       "minutes": 422,
       "points": 18,
@@ -97091,7 +97091,7 @@
       "avgFouls": 0.75
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847:UUID:34d59f5c-4866-4fc6-af96-1bb9e5bbd543:41",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847:UUID:34d59f5c-4866-4fc6-af96-1bb9e5bbd543:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
       "teamIdIntern": 474763,
       "teamIdExtern": 83847,
@@ -97102,7 +97102,7 @@
       "playerActorId": 7950177,
       "playerIdentityKey": "UUID:34d59f5c-4866-4fc6-af96-1bb9e5bbd543",
       "playerName": "MARWA RHA KADA",
-      "shirtNumber": "41",
+      "shirtNumber": "19",
       "games": 14,
       "minutes": 342,
       "points": 18,
@@ -97113,7 +97113,7 @@
       "avgFouls": 0.5714285714285714
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:083837c0-5e4e-4b3f-8edc-0d0cf2436cc6:97",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:083837c0-5e4e-4b3f-8edc-0d0cf2436cc6:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
@@ -97124,7 +97124,7 @@
       "playerActorId": 9089221,
       "playerIdentityKey": "UUID:083837c0-5e4e-4b3f-8edc-0d0cf2436cc6",
       "playerName": "MIA LLORENS REMON",
-      "shirtNumber": "97",
+      "shirtNumber": "13",
       "games": 10,
       "minutes": 288,
       "points": 18,
@@ -97421,7 +97421,7 @@
       "avgFouls": 0.5384615384615384
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658:UUID:9d032641-65db-4ff3-82ab-bedf1766e6e6:22",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658:UUID:9d032641-65db-4ff3-82ab-bedf1766e6e6:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658",
       "teamIdIntern": 456883,
       "teamIdExtern": 79658,
@@ -97432,7 +97432,7 @@
       "playerActorId": 7494465,
       "playerIdentityKey": "UUID:9d032641-65db-4ff3-82ab-bedf1766e6e6",
       "playerName": "CARME REMEI FERN\u00C1NDEZ L\u00D3PEZ",
-      "shirtNumber": "22",
+      "shirtNumber": "15",
       "games": 14,
       "minutes": 350,
       "points": 17,
@@ -97641,7 +97641,7 @@
       "avgFouls": 0.875
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:506fd80c-8579-4036-bb89-e8c917985bb6:06",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:506fd80c-8579-4036-bb89-e8c917985bb6:6",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -97652,7 +97652,7 @@
       "playerActorId": 7435300,
       "playerIdentityKey": "UUID:506fd80c-8579-4036-bb89-e8c917985bb6",
       "playerName": "MARIA CASA\u00D1AS ARMAJACH",
-      "shirtNumber": "06",
+      "shirtNumber": "6",
       "games": 17,
       "minutes": 386,
       "points": 17,
@@ -97795,7 +97795,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:effe5ab1-747b-4d0b-ad55-4779f1fd9023:17",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:effe5ab1-747b-4d0b-ad55-4779f1fd9023:79",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -97806,7 +97806,7 @@
       "playerActorId": 7435301,
       "playerIdentityKey": "UUID:effe5ab1-747b-4d0b-ad55-4779f1fd9023",
       "playerName": "QUERALT SANS LUNA",
-      "shirtNumber": "17",
+      "shirtNumber": "79",
       "games": 17,
       "minutes": 384,
       "points": 17,
@@ -97927,7 +97927,7 @@
       "avgFouls": 1.4
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987:UUID:108ab698-04a9-4eb5-9777-99ba3b190b24:15",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987:UUID:108ab698-04a9-4eb5-9777-99ba3b190b24:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987",
       "teamIdIntern": 461308,
       "teamIdExtern": 83987,
@@ -97938,7 +97938,7 @@
       "playerActorId": 7572960,
       "playerIdentityKey": "UUID:108ab698-04a9-4eb5-9777-99ba3b190b24",
       "playerName": "CANDELA SALT\u00D3  CLOFENT",
-      "shirtNumber": "15",
+      "shirtNumber": "23",
       "games": 19,
       "minutes": 601,
       "points": 16,
@@ -98103,7 +98103,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401:UUID:4db84db3-a483-4e6f-92f3-a8e99145596b:66",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401:UUID:4db84db3-a483-4e6f-92f3-a8e99145596b:26",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401",
       "teamIdIntern": 453461,
       "teamIdExtern": 79401,
@@ -98114,7 +98114,7 @@
       "playerActorId": 7435777,
       "playerIdentityKey": "UUID:4db84db3-a483-4e6f-92f3-a8e99145596b",
       "playerName": "GEORGINA ROMERO MOURELO",
-      "shirtNumber": "66",
+      "shirtNumber": "26",
       "games": 14,
       "minutes": 275,
       "points": 16,
@@ -98191,7 +98191,7 @@
       "avgFouls": 4
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:0813e574-9bc9-4e44-a894-3020add5b8ae:00",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:0813e574-9bc9-4e44-a894-3020add5b8ae:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034",
       "teamIdIntern": 459283,
       "teamIdExtern": 79034,
@@ -98202,7 +98202,7 @@
       "playerActorId": 7536377,
       "playerIdentityKey": "UUID:0813e574-9bc9-4e44-a894-3020add5b8ae",
       "playerName": "LIA PELFORT LANZO",
-      "shirtNumber": "00",
+      "shirtNumber": "2",
       "games": 15,
       "minutes": 393,
       "points": 16,
@@ -98235,7 +98235,7 @@
       "avgFouls": 0.9375
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:ff41a634-c7d5-4a08-a131-5b5215392147:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:ff41a634-c7d5-4a08-a131-5b5215392147:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 457131,
       "teamIdExtern": 84386,
@@ -98246,7 +98246,7 @@
       "playerActorId": 7498863,
       "playerIdentityKey": "UUID:ff41a634-c7d5-4a08-a131-5b5215392147",
       "playerName": "L\u00CDA SANCHO DEL PINO",
-      "shirtNumber": "1",
+      "shirtNumber": "8",
       "games": 16,
       "minutes": 370,
       "points": 16,
@@ -98345,7 +98345,7 @@
       "avgFouls": 0.4
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:8dea46cd-1633-4db6-9408-dc58276045a3:62",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:8dea46cd-1633-4db6-9408-dc58276045a3:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -98356,7 +98356,7 @@
       "playerActorId": 7462366,
       "playerIdentityKey": "UUID:8dea46cd-1633-4db6-9408-dc58276045a3",
       "playerName": "NAROA GARC\u00CDA GARC\u00CDA",
-      "shirtNumber": "62",
+      "shirtNumber": "2",
       "games": 10,
       "minutes": 184,
       "points": 16,
@@ -98697,7 +98697,7 @@
       "avgFouls": 1.2307692307692308
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:d18eb978-ebfd-42fc-b3e8-abae44729fc2:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:d18eb978-ebfd-42fc-b3e8-abae44729fc2:6",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
@@ -98708,7 +98708,7 @@
       "playerActorId": 7538393,
       "playerIdentityKey": "UUID:d18eb978-ebfd-42fc-b3e8-abae44729fc2",
       "playerName": "MARTINA SALTO PIERRE",
-      "shirtNumber": "8",
+      "shirtNumber": "6",
       "games": 19,
       "minutes": 589,
       "points": 15,
@@ -98763,7 +98763,7 @@
       "avgFouls": 0.7142857142857143
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:94ad7976-6221-494b-b93b-c8df23bab826:17",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:94ad7976-6221-494b-b93b-c8df23bab826:28",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
@@ -98774,7 +98774,7 @@
       "playerActorId": 7659688,
       "playerIdentityKey": "UUID:94ad7976-6221-494b-b93b-c8df23bab826",
       "playerName": "TELMA GUARDIOLA MARTINEZ",
-      "shirtNumber": "17",
+      "shirtNumber": "28",
       "games": 18,
       "minutes": 463,
       "points": 15,
@@ -98917,7 +98917,7 @@
       "avgFouls": 0.4
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512:UUID:010322c1-98d1-11e9-a2a5-0216824770c2:2",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512:UUID:010322c1-98d1-11e9-a2a5-0216824770c2:3",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512",
       "teamIdIntern": 451062,
       "teamIdExtern": 80512,
@@ -98928,7 +98928,7 @@
       "playerActorId": 7393931,
       "playerIdentityKey": "UUID:010322c1-98d1-11e9-a2a5-0216824770c2",
       "playerName": "ARIADNA BIGAS VILA",
-      "shirtNumber": "2",
+      "shirtNumber": "3",
       "games": 23,
       "minutes": 318,
       "points": 14,
@@ -98961,7 +98961,7 @@
       "avgFouls": 1.8571428571428572
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980:UUID:de9defdd-d5cf-497b-93c8-3136c3269e5b:19",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980:UUID:de9defdd-d5cf-497b-93c8-3136c3269e5b:14",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
       "teamIdIntern": 450173,
       "teamIdExtern": 79980,
@@ -98972,7 +98972,7 @@
       "playerActorId": 7379172,
       "playerIdentityKey": "UUID:de9defdd-d5cf-497b-93c8-3136c3269e5b",
       "playerName": "AURORA HERAS ARIZA",
-      "shirtNumber": "19",
+      "shirtNumber": "14",
       "games": 22,
       "minutes": 134,
       "points": 14,
@@ -98983,7 +98983,7 @@
       "avgFouls": 0.5454545454545454
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:7814aaef-88ba-43e1-9a9b-d08875d71301:2",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:7814aaef-88ba-43e1-9a9b-d08875d71301:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
@@ -98994,7 +98994,7 @@
       "playerActorId": 7463073,
       "playerIdentityKey": "UUID:7814aaef-88ba-43e1-9a9b-d08875d71301",
       "playerName": "BLAU CAMARA RICO",
-      "shirtNumber": "2",
+      "shirtNumber": "22",
       "games": 18,
       "minutes": 544,
       "points": 14,
@@ -99137,7 +99137,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:UUID:c3696575-6859-4ae7-b9f4-0a0e165f78fc:25",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192:UUID:c3696575-6859-4ae7-b9f4-0a0e165f78fc:28",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
       "teamIdIntern": 506581,
       "teamIdExtern": 80192,
@@ -99148,7 +99148,7 @@
       "playerActorId": 71781776184224659,
       "playerIdentityKey": "UUID:c3696575-6859-4ae7-b9f4-0a0e165f78fc",
       "playerName": "HAWA TRAORE SANOGO",
-      "shirtNumber": "25",
+      "shirtNumber": "28",
       "games": 3,
       "minutes": 59,
       "points": 14,
@@ -99775,7 +99775,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:bc8b4b1e-8687-40ae-ab99-513aea08b640:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:bc8b4b1e-8687-40ae-ab99-513aea08b640:4",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -99786,7 +99786,7 @@
       "playerActorId": 7456896,
       "playerIdentityKey": "UUID:bc8b4b1e-8687-40ae-ab99-513aea08b640",
       "playerName": "BRIGITH FERN\u00C0NDEZ VIDAL",
-      "shirtNumber": "1",
+      "shirtNumber": "4",
       "games": 13,
       "minutes": 276,
       "points": 13,
@@ -100039,7 +100039,7 @@
       "avgFouls": 0.7857142857142857
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497:UUID:1fcb7891-4eda-4487-b7ec-cc0940830e38:74",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497:UUID:1fcb7891-4eda-4487-b7ec-cc0940830e38:4",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497",
       "teamIdIntern": 487878,
       "teamIdExtern": 81497,
@@ -100050,7 +100050,7 @@
       "playerActorId": 8394101,
       "playerIdentityKey": "UUID:1fcb7891-4eda-4487-b7ec-cc0940830e38",
       "playerName": "LAIA GARCIA JUNQUERA",
-      "shirtNumber": "74",
+      "shirtNumber": "4",
       "games": 11,
       "minutes": 293,
       "points": 13,
@@ -100347,7 +100347,7 @@
       "avgFouls": 1.7222222222222223
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:45051b0a-ec76-4aeb-a196-50dd7f2d11ec:19",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:45051b0a-ec76-4aeb-a196-50dd7f2d11ec:3",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
       "teamIdIntern": 463229,
       "teamIdExtern": 81569,
@@ -100358,7 +100358,7 @@
       "playerActorId": 7611509,
       "playerIdentityKey": "UUID:45051b0a-ec76-4aeb-a196-50dd7f2d11ec",
       "playerName": "\u00C8LIA VILAR ESTRUGA",
-      "shirtNumber": "19",
+      "shirtNumber": "3",
       "games": 16,
       "minutes": 392,
       "points": 13,
@@ -100567,7 +100567,7 @@
       "avgFouls": 0.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:b8185bed-309c-4ae8-8f8b-c227f41e1726:71",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:b8185bed-309c-4ae8-8f8b-c227f41e1726:3",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -100578,7 +100578,7 @@
       "playerActorId": 7462375,
       "playerIdentityKey": "UUID:b8185bed-309c-4ae8-8f8b-c227f41e1726",
       "playerName": "EMMA SOLIS LLUMA",
-      "shirtNumber": "71",
+      "shirtNumber": "3",
       "games": 12,
       "minutes": 257,
       "points": 12,
@@ -100743,7 +100743,7 @@
       "avgFouls": 0.4444444444444444
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:227020df-7ac5-4487-b9db-3bac370979a3:12",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625:UUID:227020df-7ac5-4487-b9db-3bac370979a3:28",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
       "teamIdIntern": 459627,
       "teamIdExtern": 81625,
@@ -100754,7 +100754,7 @@
       "playerActorId": 7542263,
       "playerIdentityKey": "UUID:227020df-7ac5-4487-b9db-3bac370979a3",
       "playerName": "LUA SURIS MARFIL",
-      "shirtNumber": "12",
+      "shirtNumber": "28",
       "games": 13,
       "minutes": 268,
       "points": 12,
@@ -100985,7 +100985,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:9a0d4f70-787a-4e5a-a19c-7698683dd684:01",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:9a0d4f70-787a-4e5a-a19c-7698683dd684:16",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661",
       "teamIdIntern": 453431,
       "teamIdExtern": 81661,
@@ -100996,7 +100996,7 @@
       "playerActorId": 7435321,
       "playerIdentityKey": "UUID:9a0d4f70-787a-4e5a-a19c-7698683dd684",
       "playerName": "RITA ALONSO MONFORT",
-      "shirtNumber": "01",
+      "shirtNumber": "16",
       "games": 13,
       "minutes": 324,
       "points": 12,
@@ -101007,7 +101007,7 @@
       "avgFouls": 0.6153846153846154
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80510:UUID:d1709fb8-4dc9-421a-b425-92b965066a83:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80510:UUID:d1709fb8-4dc9-421a-b425-92b965066a83:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80510",
       "teamIdIntern": 454418,
       "teamIdExtern": 80510,
@@ -101018,7 +101018,7 @@
       "playerActorId": 7451499,
       "playerIdentityKey": "UUID:d1709fb8-4dc9-421a-b425-92b965066a83",
       "playerName": "SOFIA BEN GHARBIA",
-      "shirtNumber": "4",
+      "shirtNumber": "5",
       "games": 13,
       "minutes": 225,
       "points": 12,
@@ -101139,7 +101139,7 @@
       "avgFouls": 1.75
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:d43b91fa-b078-4363-9680-2935e0b02831:07",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066:UUID:d43b91fa-b078-4363-9680-2935e0b02831:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -101150,7 +101150,7 @@
       "playerActorId": 7435297,
       "playerIdentityKey": "UUID:d43b91fa-b078-4363-9680-2935e0b02831",
       "playerName": "ALICIA ESCRIBANO MARTIN",
-      "shirtNumber": "07",
+      "shirtNumber": "7",
       "games": 17,
       "minutes": 404,
       "points": 11,
@@ -101205,7 +101205,7 @@
       "avgFouls": 0.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79461:UUID:a3c4f98b-fdf4-4d46-83ec-34be6e8be8a8:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79461:UUID:a3c4f98b-fdf4-4d46-83ec-34be6e8be8a8:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79461",
       "teamIdIntern": 453443,
       "teamIdExtern": 79461,
@@ -101216,7 +101216,7 @@
       "playerActorId": 7435499,
       "playerIdentityKey": "UUID:a3c4f98b-fdf4-4d46-83ec-34be6e8be8a8",
       "playerName": "AROA ANAIS GARCIA MONTESDEOCA",
-      "shirtNumber": "0",
+      "shirtNumber": "9",
       "games": 17,
       "minutes": 411,
       "points": 11,
@@ -101557,7 +101557,7 @@
       "avgFouls": 0.8571428571428571
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:a665276a-f1af-40c6-8ca1-0ca852ed82fb:20",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:a665276a-f1af-40c6-8ca1-0ca852ed82fb:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
       "teamIdIntern": 454341,
       "teamIdExtern": 81569,
@@ -101568,7 +101568,7 @@
       "playerActorId": 7450214,
       "playerIdentityKey": "UUID:a665276a-f1af-40c6-8ca1-0ca852ed82fb",
       "playerName": "NAREL DIAZ AMORES",
-      "shirtNumber": "20",
+      "shirtNumber": "27",
       "games": 17,
       "minutes": 408,
       "points": 11,
@@ -101645,7 +101645,7 @@
       "avgFouls": 1.8181818181818181
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:f1bfcfd5-57ad-4d65-82e4-c8237a3981ec:67",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:f1bfcfd5-57ad-4d65-82e4-c8237a3981ec:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -101656,7 +101656,7 @@
       "playerActorId": 7462374,
       "playerIdentityKey": "UUID:f1bfcfd5-57ad-4d65-82e4-c8237a3981ec",
       "playerName": "PAULA GREGORIO VI\u00D1ALS",
-      "shirtNumber": "67",
+      "shirtNumber": "18",
       "games": 14,
       "minutes": 298,
       "points": 11,
@@ -101843,7 +101843,7 @@
       "avgFouls": 1.6
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674:UUID:010b06f3-98d1-11e9-a2a5-0216824770c2:1",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674:UUID:010b06f3-98d1-11e9-a2a5-0216824770c2:27",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674",
       "teamIdIntern": 450617,
       "teamIdExtern": 78674,
@@ -101854,7 +101854,7 @@
       "playerActorId": 7386389,
       "playerIdentityKey": "UUID:010b06f3-98d1-11e9-a2a5-0216824770c2",
       "playerName": "AINA CARRERAS PARES",
-      "shirtNumber": "1",
+      "shirtNumber": "27",
       "games": 20,
       "minutes": 135,
       "points": 10,
@@ -101997,7 +101997,7 @@
       "avgFouls": 0.14285714285714285
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157:UUID:819441cd-a1e9-4741-a791-3fe425e1134a:12",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157:UUID:819441cd-a1e9-4741-a791-3fe425e1134a:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157",
       "teamIdIntern": 455024,
       "teamIdExtern": 81157,
@@ -102008,7 +102008,7 @@
       "playerActorId": 7461468,
       "playerIdentityKey": "UUID:819441cd-a1e9-4741-a791-3fe425e1134a",
       "playerName": "ALICIA FERN\u00C1NDEZ L\u00D3PEZ",
-      "shirtNumber": "12",
+      "shirtNumber": "18",
       "games": 16,
       "minutes": 354,
       "points": 10,
@@ -102261,7 +102261,7 @@
       "avgFouls": 0.18181818181818182
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:UUID:0ce7f4d5-7597-4dcc-a195-fe7ca553ad42:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:UUID:0ce7f4d5-7597-4dcc-a195-fe7ca553ad42:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
       "teamIdIntern": 476587,
       "teamIdExtern": 78800,
@@ -102272,7 +102272,7 @@
       "playerActorId": 8014593,
       "playerIdentityKey": "UUID:0ce7f4d5-7597-4dcc-a195-fe7ca553ad42",
       "playerName": "DIENABOU SEYDI",
-      "shirtNumber": "8",
+      "shirtNumber": "9",
       "games": 15,
       "minutes": 337,
       "points": 10,
@@ -102789,7 +102789,7 @@
       "avgFouls": 3
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269:UUID:ab57c587-8f52-4b11-b2d8-3d6afba7c40b:99",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269:UUID:ab57c587-8f52-4b11-b2d8-3d6afba7c40b:24",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269",
       "teamIdIntern": 450094,
       "teamIdExtern": 80269,
@@ -102800,7 +102800,7 @@
       "playerActorId": 68081757606405835,
       "playerIdentityKey": "UUID:ab57c587-8f52-4b11-b2d8-3d6afba7c40b",
       "playerName": "LARA BONO BERMUDEZ",
-      "shirtNumber": "99",
+      "shirtNumber": "24",
       "games": 15,
       "minutes": 60,
       "points": 10,
@@ -102899,7 +102899,7 @@
       "avgFouls": 0.6470588235294118
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:fcde36ad-2690-4b06-baef-23efa9f09632:77",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:fcde36ad-2690-4b06-baef-23efa9f09632:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
@@ -102910,7 +102910,7 @@
       "playerActorId": 7538400,
       "playerIdentityKey": "UUID:fcde36ad-2690-4b06-baef-23efa9f09632",
       "playerName": "MARIA BOKUM BOKUM",
-      "shirtNumber": "77",
+      "shirtNumber": "8",
       "games": 18,
       "minutes": 591,
       "points": 10,
@@ -103009,7 +103009,7 @@
       "avgFouls": 0.35294117647058826
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:c2cdc738-776a-4685-9844-eb2a5b4b67af:61",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:c2cdc738-776a-4685-9844-eb2a5b4b67af:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -103020,7 +103020,7 @@
       "playerActorId": 7462367,
       "playerIdentityKey": "UUID:c2cdc738-776a-4685-9844-eb2a5b4b67af",
       "playerName": "NORA C\u00C1NOVAS L\u00D3PEZ",
-      "shirtNumber": "61",
+      "shirtNumber": "11",
       "games": 14,
       "minutes": 318,
       "points": 10,
@@ -103141,7 +103141,7 @@
       "avgFouls": 0.2
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783:UUID:665d9a3a-e29f-40c5-92ff-51b254f894d1:15",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783:UUID:665d9a3a-e29f-40c5-92ff-51b254f894d1:16",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
       "teamIdIntern": 453926,
       "teamIdExtern": 81783,
@@ -103152,7 +103152,7 @@
       "playerActorId": 7443420,
       "playerIdentityKey": "UUID:665d9a3a-e29f-40c5-92ff-51b254f894d1",
       "playerName": "VALERY SOF\u00CDA RENGIFO OQUENDO",
-      "shirtNumber": "15",
+      "shirtNumber": "16",
       "games": 13,
       "minutes": 346,
       "points": 10,
@@ -103559,7 +103559,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455:UUID:e191f6a0-ebf5-4b8c-8b17-8c91de3eab1f:51",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455:UUID:e191f6a0-ebf5-4b8c-8b17-8c91de3eab1f:3",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455",
       "teamIdIntern": 474021,
       "teamIdExtern": 82455,
@@ -103570,7 +103570,7 @@
       "playerActorId": 7929996,
       "playerIdentityKey": "UUID:e191f6a0-ebf5-4b8c-8b17-8c91de3eab1f",
       "playerName": "GEORGINA AMELIE",
-      "shirtNumber": "51",
+      "shirtNumber": "3",
       "games": 9,
       "minutes": 222,
       "points": 9,
@@ -103625,7 +103625,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:9c14c855-15c6-4f52-bbd6-2d90ad9a9329:23",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:9c14c855-15c6-4f52-bbd6-2d90ad9a9329:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 459404,
       "teamIdExtern": 79663,
@@ -103636,7 +103636,7 @@
       "playerActorId": 7538398,
       "playerIdentityKey": "UUID:9c14c855-15c6-4f52-bbd6-2d90ad9a9329",
       "playerName": "JANNA KASMI EL ARDUDI",
-      "shirtNumber": "23",
+      "shirtNumber": "17",
       "games": 19,
       "minutes": 529,
       "points": 9,
@@ -103647,7 +103647,7 @@
       "avgFouls": 0.9473684210526315
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904:UUID:fbbdf182-98d0-11e9-a2a5-0216824770c2:4",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904:UUID:fbbdf182-98d0-11e9-a2a5-0216824770c2:9",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904",
       "teamIdIntern": 544768,
       "teamIdExtern": 78904,
@@ -103658,7 +103658,7 @@
       "playerActorId": 10393597,
       "playerIdentityKey": "UUID:fbbdf182-98d0-11e9-a2a5-0216824770c2",
       "playerName": "JOSE ANTONIO BERNUZ PUEYO",
-      "shirtNumber": "4",
+      "shirtNumber": "9",
       "games": 3,
       "minutes": 27,
       "points": 9,
@@ -103977,7 +103977,7 @@
       "avgFouls": 0.4166666666666667
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522:UUID:be4fb4b2-aa40-44c4-9e73-09c6de816fca:34",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522:UUID:be4fb4b2-aa40-44c4-9e73-09c6de816fca:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
       "teamIdIntern": 456495,
       "teamIdExtern": 81522,
@@ -103988,7 +103988,7 @@
       "playerActorId": 7487672,
       "playerIdentityKey": "UUID:be4fb4b2-aa40-44c4-9e73-09c6de816fca",
       "playerName": "PAULA QUEIRUGA CRIADO",
-      "shirtNumber": "34",
+      "shirtNumber": "17",
       "games": 17,
       "minutes": 413,
       "points": 9,
@@ -104285,7 +104285,7 @@
       "avgFouls": 1.1428571428571428
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353:UUID:86a0bfb8-73f0-41b6-a1d4-d11428527cc5:61",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353:UUID:86a0bfb8-73f0-41b6-a1d4-d11428527cc5:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82353",
       "teamIdIntern": 463429,
       "teamIdExtern": 82353,
@@ -104296,7 +104296,7 @@
       "playerActorId": 7615724,
       "playerIdentityKey": "UUID:86a0bfb8-73f0-41b6-a1d4-d11428527cc5",
       "playerName": "BERTA VERG\u00C9S GARC\u00CDA",
-      "shirtNumber": "61",
+      "shirtNumber": "15",
       "games": 9,
       "minutes": 155,
       "points": 8,
@@ -104593,7 +104593,7 @@
       "avgFouls": 1.8333333333333333
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80400:UUID:fbd2386b-98d0-11e9-a2a5-0216824770c2:5",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80400:UUID:fbd2386b-98d0-11e9-a2a5-0216824770c2:9",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80400",
       "teamIdIntern": 452365,
       "teamIdExtern": 80400,
@@ -104604,7 +104604,7 @@
       "playerActorId": 73881758995316655,
       "playerIdentityKey": "UUID:fbd2386b-98d0-11e9-a2a5-0216824770c2",
       "playerName": "IKER SILES NAVARRO",
-      "shirtNumber": "5",
+      "shirtNumber": "9",
       "games": 19,
       "minutes": 36,
       "points": 8,
@@ -104637,7 +104637,7 @@
       "avgFouls": 1.1111111111111112
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:b5fed504-bbf6-472c-b2b5-eeac33c89e88:74",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290:UUID:b5fed504-bbf6-472c-b2b5-eeac33c89e88:21",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
       "teamIdIntern": 453921,
       "teamIdExtern": 84290,
@@ -104648,7 +104648,7 @@
       "playerActorId": 7443337,
       "playerIdentityKey": "UUID:b5fed504-bbf6-472c-b2b5-eeac33c89e88",
       "playerName": "JULIA LLORENS COMBALIA",
-      "shirtNumber": "74",
+      "shirtNumber": "21",
       "games": 14,
       "minutes": 348,
       "points": 8,
@@ -104747,7 +104747,7 @@
       "avgFouls": 0.2857142857142857
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:c5850c3e-9c11-48a8-8de1-9fa5a779f38a:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:c5850c3e-9c11-48a8-8de1-9fa5a779f38a:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
       "teamIdIntern": 463449,
       "teamIdExtern": 83018,
@@ -104758,7 +104758,7 @@
       "playerActorId": 7616179,
       "playerIdentityKey": "UUID:c5850c3e-9c11-48a8-8de1-9fa5a779f38a",
       "playerName": "LAURA JOVELLS SOLER",
-      "shirtNumber": "8",
+      "shirtNumber": "23",
       "games": 10,
       "minutes": 209,
       "points": 8,
@@ -105055,7 +105055,7 @@
       "avgFouls": 0.45454545454545453
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:f22967cb-2b8c-423c-81c8-cd8fc9b7ff25:38",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:f22967cb-2b8c-423c-81c8-cd8fc9b7ff25:4",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 498096,
       "teamIdExtern": 84386,
@@ -105066,7 +105066,7 @@
       "playerActorId": 8751416,
       "playerIdentityKey": "UUID:f22967cb-2b8c-423c-81c8-cd8fc9b7ff25",
       "playerName": "ONA BLEY GARCIA",
-      "shirtNumber": "38",
+      "shirtNumber": "4",
       "games": 11,
       "minutes": 260,
       "points": 8,
@@ -105363,7 +105363,7 @@
       "avgFouls": 2
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546:UUID:fbc9f5ec-98d0-11e9-a2a5-0216824770c2:6",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546:UUID:fbc9f5ec-98d0-11e9-a2a5-0216824770c2:73",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
       "teamIdIntern": 461588,
       "teamIdExtern": 80546,
@@ -105374,7 +105374,7 @@
       "playerActorId": 7578268,
       "playerIdentityKey": "UUID:fbc9f5ec-98d0-11e9-a2a5-0216824770c2",
       "playerName": "CARLA CRESPI CASAS",
-      "shirtNumber": "6",
+      "shirtNumber": "73",
       "games": 7,
       "minutes": 59,
       "points": 7,
@@ -105583,7 +105583,7 @@
       "avgFouls": 0.9
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:20811c0d-9131-4eaa-821a-08aec5efaac0:19",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:20811c0d-9131-4eaa-821a-08aec5efaac0:10",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
       "teamIdIntern": 460483,
       "teamIdExtern": 80600,
@@ -105594,7 +105594,7 @@
       "playerActorId": 73001760190284695,
       "playerIdentityKey": "UUID:20811c0d-9131-4eaa-821a-08aec5efaac0",
       "playerName": "J\u00DALIA CATALAN ANDALUZ",
-      "shirtNumber": "19",
+      "shirtNumber": "10",
       "games": 6,
       "minutes": 33,
       "points": 7,
@@ -105759,7 +105759,7 @@
       "avgFouls": 3
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495:UUID:0080b985-98d1-11e9-a2a5-0216824770c2:6",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495:UUID:0080b985-98d1-11e9-a2a5-0216824770c2:44",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80495",
       "teamIdIntern": 482157,
       "teamIdExtern": 80495,
@@ -105770,7 +105770,7 @@
       "playerActorId": 8198213,
       "playerIdentityKey": "UUID:0080b985-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MARC MARTINEZ PEGALAJAR",
-      "shirtNumber": "6",
+      "shirtNumber": "44",
       "games": 8,
       "minutes": 42,
       "points": 7,
@@ -105781,7 +105781,7 @@
       "avgFouls": 1.125
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826:UUID:27f623dd-8bb8-46f1-a3db-bb6d9d6efa13:5",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826:UUID:27f623dd-8bb8-46f1-a3db-bb6d9d6efa13:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826",
       "teamIdIntern": 458853,
       "teamIdExtern": 83826,
@@ -105792,7 +105792,7 @@
       "playerActorId": 7529031,
       "playerIdentityKey": "UUID:27f623dd-8bb8-46f1-a3db-bb6d9d6efa13",
       "playerName": "MARGOT ALSINA SOLA",
-      "shirtNumber": "5",
+      "shirtNumber": "15",
       "games": 4,
       "minutes": 81,
       "points": 7,
@@ -105979,7 +105979,7 @@
       "avgFouls": 1.1666666666666667
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883:UUID:01463c57-98d1-11e9-a2a5-0216824770c2:9",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883:UUID:01463c57-98d1-11e9-a2a5-0216824770c2:19",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883",
       "teamIdIntern": 450986,
       "teamIdExtern": 78883,
@@ -105990,7 +105990,7 @@
       "playerActorId": 72251758382801703,
       "playerIdentityKey": "UUID:01463c57-98d1-11e9-a2a5-0216824770c2",
       "playerName": "NINA JOVER PARELLA",
-      "shirtNumber": "9",
+      "shirtNumber": "19",
       "games": 5,
       "minutes": 41,
       "points": 7,
@@ -106045,7 +106045,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:8469bf65-c404-4365-a00b-5fcf291f568c:14",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:8469bf65-c404-4365-a00b-5fcf291f568c:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -106056,7 +106056,7 @@
       "playerActorId": 7456893,
       "playerIdentityKey": "UUID:8469bf65-c404-4365-a00b-5fcf291f568c",
       "playerName": "ONA RIOS BADIA",
-      "shirtNumber": "14",
+      "shirtNumber": "18",
       "games": 11,
       "minutes": 254,
       "points": 7,
@@ -106089,7 +106089,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626:UUID:10e8cdcf-9695-40a0-8b8b-0798ca569d29:53",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626:UUID:10e8cdcf-9695-40a0-8b8b-0798ca569d29:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626",
       "teamIdIntern": 453836,
       "teamIdExtern": 82626,
@@ -106100,7 +106100,7 @@
       "playerActorId": 7441848,
       "playerIdentityKey": "UUID:10e8cdcf-9695-40a0-8b8b-0798ca569d29",
       "playerName": "SOFIA OCTAVIO GUINART",
-      "shirtNumber": "53",
+      "shirtNumber": "25",
       "games": 17,
       "minutes": 402,
       "points": 7,
@@ -106221,7 +106221,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:3e88879e-45a1-4378-82f5-a7e8bec727eb:64",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833:UUID:3e88879e-45a1-4378-82f5-a7e8bec727eb:21",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
       "teamIdIntern": 455079,
       "teamIdExtern": 83833,
@@ -106232,7 +106232,7 @@
       "playerActorId": 7462363,
       "playerIdentityKey": "UUID:3e88879e-45a1-4378-82f5-a7e8bec727eb",
       "playerName": "ALBA CASTILLO CEBALLOS",
-      "shirtNumber": "64",
+      "shirtNumber": "21",
       "games": 11,
       "minutes": 213,
       "points": 6,
@@ -106243,7 +106243,7 @@
       "avgFouls": 0.18181818181818182
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:c6f69268-fd45-4dcd-ab78-505ebaaa0695:96",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676:UUID:c6f69268-fd45-4dcd-ab78-505ebaaa0695:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
       "teamIdIntern": 507562,
       "teamIdExtern": 84676,
@@ -106254,7 +106254,7 @@
       "playerActorId": 9089220,
       "playerIdentityKey": "UUID:c6f69268-fd45-4dcd-ab78-505ebaaa0695",
       "playerName": "ALBA GONZALEZ AZNAR",
-      "shirtNumber": "96",
+      "shirtNumber": "19",
       "games": 9,
       "minutes": 221,
       "points": 6,
@@ -106353,7 +106353,7 @@
       "avgFouls": 0.625
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735:UUID:2171c0d5-beca-40fa-bbb6-dd752b510ebe:27",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735:UUID:2171c0d5-beca-40fa-bbb6-dd752b510ebe:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82735",
       "teamIdIntern": 453854,
       "teamIdExtern": 82735,
@@ -106364,7 +106364,7 @@
       "playerActorId": 7442189,
       "playerIdentityKey": "UUID:2171c0d5-beca-40fa-bbb6-dd752b510ebe",
       "playerName": "ANDREA PARIS GUTIERREZ RIOS",
-      "shirtNumber": "27",
+      "shirtNumber": "19",
       "games": 16,
       "minutes": 346,
       "points": 6,
@@ -106419,7 +106419,7 @@
       "avgFouls": 0.6666666666666666
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:47185162-18dc-4a26-a03e-660be4c0a757:19",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600:UUID:47185162-18dc-4a26-a03e-660be4c0a757:91",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
       "teamIdIntern": 466468,
       "teamIdExtern": 80600,
@@ -106430,7 +106430,7 @@
       "playerActorId": 70541760865116182,
       "playerIdentityKey": "UUID:47185162-18dc-4a26-a03e-660be4c0a757",
       "playerName": "BERTA JIMENEZ LOPEZ",
-      "shirtNumber": "19",
+      "shirtNumber": "91",
       "games": 10,
       "minutes": 34,
       "points": 6,
@@ -106639,7 +106639,7 @@
       "avgFouls": 0.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057:UUID:e7a36cf1-295a-45c3-83c4-b3b0e5bac19a:31",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057:UUID:e7a36cf1-295a-45c3-83c4-b3b0e5bac19a:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82057",
       "teamIdIntern": 506936,
       "teamIdExtern": 82057,
@@ -106650,7 +106650,7 @@
       "playerActorId": 9065080,
       "playerIdentityKey": "UUID:e7a36cf1-295a-45c3-83c4-b3b0e5bac19a",
       "playerName": "EUGENIA ROMAN",
-      "shirtNumber": "31",
+      "shirtNumber": "22",
       "games": 8,
       "minutes": 151,
       "points": 6,
@@ -106947,7 +106947,7 @@
       "avgFouls": 1.8571428571428572
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076:UUID:9eba6c44-ff32-42a4-91bb-6e5cf1f3050c:12",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076:UUID:9eba6c44-ff32-42a4-91bb-6e5cf1f3050c:2",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076",
       "teamIdIntern": 452783,
       "teamIdExtern": 79076,
@@ -106958,7 +106958,7 @@
       "playerActorId": 69071759055431369,
       "playerIdentityKey": "UUID:9eba6c44-ff32-42a4-91bb-6e5cf1f3050c",
       "playerName": "MAR MIRA TORQUEMADA",
-      "shirtNumber": "12",
+      "shirtNumber": "2",
       "games": 18,
       "minutes": 83,
       "points": 6,
@@ -106969,7 +106969,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828:UUID:904245b5-4f13-430a-8ae3-f669bbff4c3f:10",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828:UUID:904245b5-4f13-430a-8ae3-f669bbff4c3f:25",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828",
       "teamIdIntern": 451827,
       "teamIdExtern": 79828,
@@ -106980,7 +106980,7 @@
       "playerActorId": 7407330,
       "playerIdentityKey": "UUID:904245b5-4f13-430a-8ae3-f669bbff4c3f",
       "playerName": "MARINA DOSTA I MESTRE",
-      "shirtNumber": "10",
+      "shirtNumber": "25",
       "games": 11,
       "minutes": 168,
       "points": 6,
@@ -107101,7 +107101,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78578:UUID:c0f414a7-a185-4863-b849-5d66a41d421c:6",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78578:UUID:c0f414a7-a185-4863-b849-5d66a41d421c:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78578",
       "teamIdIntern": 459710,
       "teamIdExtern": 78578,
@@ -107112,7 +107112,7 @@
       "playerActorId": 7543651,
       "playerIdentityKey": "UUID:c0f414a7-a185-4863-b849-5d66a41d421c",
       "playerName": "NOA INSUA MARTIN",
-      "shirtNumber": "6",
+      "shirtNumber": "18",
       "games": 15,
       "minutes": 354,
       "points": 6,
@@ -107299,7 +107299,7 @@
       "avgFouls": 0.375
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455:UUID:b79826df-4046-4b6b-bd4f-60ab2dcf4351:23",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455:UUID:b79826df-4046-4b6b-bd4f-60ab2dcf4351:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455",
       "teamIdIntern": 464551,
       "teamIdExtern": 82455,
@@ -107310,7 +107310,7 @@
       "playerActorId": 7642398,
       "playerIdentityKey": "UUID:b79826df-4046-4b6b-bd4f-60ab2dcf4351",
       "playerName": "TAL\u00CDA LOUISE NAVARRETE KELLERMAN",
-      "shirtNumber": "23",
+      "shirtNumber": "7",
       "games": 10,
       "minutes": 252,
       "points": 6,
@@ -107475,7 +107475,7 @@
       "avgFouls": 1.1818181818181819
     },
     {
-      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79323:UUID:00338747-98d1-11e9-a2a5-0216824770c2:13",
+      "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79323:UUID:00338747-98d1-11e9-a2a5-0216824770c2:91",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79323",
       "teamIdIntern": 523207,
       "teamIdExtern": 79323,
@@ -107486,7 +107486,7 @@
       "playerActorId": 9642416,
       "playerIdentityKey": "UUID:00338747-98d1-11e9-a2a5-0216824770c2",
       "playerName": "ALBERT PUBILL GARCIA",
-      "shirtNumber": "13",
+      "shirtNumber": "91",
       "games": 7,
       "minutes": 36,
       "points": 5,
@@ -107497,7 +107497,7 @@
       "avgFouls": 1.1428571428571428
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:de5b9092-02b0-45e6-8073-33705ba89b74:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:de5b9092-02b0-45e6-8073-33705ba89b74:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034",
       "teamIdIntern": 464593,
       "teamIdExtern": 79034,
@@ -107508,7 +107508,7 @@
       "playerActorId": 7642791,
       "playerIdentityKey": "UUID:de5b9092-02b0-45e6-8073-33705ba89b74",
       "playerName": "AROA FERN\u00C1NDEZ MARTOS",
-      "shirtNumber": "1",
+      "shirtNumber": "17",
       "games": 15,
       "minutes": 364,
       "points": 5,
@@ -107563,7 +107563,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b:16",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 454748,
       "teamIdExtern": 82766,
@@ -107574,7 +107574,7 @@
       "playerActorId": 7456897,
       "playerIdentityKey": "UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b",
       "playerName": "EKAMJOT KAUR SANDHU",
-      "shirtNumber": "16",
+      "shirtNumber": "15",
       "games": 11,
       "minutes": 219,
       "points": 5,
@@ -107761,7 +107761,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:da021257-c095-4826-83d4-1f27a6842e44:55",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034:UUID:da021257-c095-4826-83d4-1f27a6842e44:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034",
       "teamIdIntern": 459283,
       "teamIdExtern": 79034,
@@ -107772,7 +107772,7 @@
       "playerActorId": 7536374,
       "playerIdentityKey": "UUID:da021257-c095-4826-83d4-1f27a6842e44",
       "playerName": "LAIA MART\u00CDNEZ DELGADO",
-      "shirtNumber": "55",
+      "shirtNumber": "7",
       "games": 16,
       "minutes": 401,
       "points": 5,
@@ -107827,7 +107827,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973:UUID:27f623dd-8bb8-46f1-a3db-bb6d9d6efa13:15",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973:UUID:27f623dd-8bb8-46f1-a3db-bb6d9d6efa13:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973",
       "teamIdIntern": 506606,
       "teamIdExtern": 85973,
@@ -107838,7 +107838,7 @@
       "playerActorId": 9054515,
       "playerIdentityKey": "UUID:27f623dd-8bb8-46f1-a3db-bb6d9d6efa13",
       "playerName": "MARGOT ALSINA SOLA",
-      "shirtNumber": "15",
+      "shirtNumber": "18",
       "games": 5,
       "minutes": 145,
       "points": 5,
@@ -107959,7 +107959,7 @@
       "avgFouls": 2.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:UUID:a28ccd35-9cff-4508-8b49-bd44d1bab3fb:85",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800:UUID:a28ccd35-9cff-4508-8b49-bd44d1bab3fb:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
       "teamIdIntern": 453738,
       "teamIdExtern": 78800,
@@ -107970,7 +107970,7 @@
       "playerActorId": 7440231,
       "playerIdentityKey": "UUID:a28ccd35-9cff-4508-8b49-bd44d1bab3fb",
       "playerName": "SAFIYATU KANDE BALDE",
-      "shirtNumber": "85",
+      "shirtNumber": "12",
       "games": 15,
       "minutes": 296,
       "points": 5,
@@ -108069,7 +108069,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626:UUID:f62050da-e90e-4599-a6ec-d7bdfcf39498:52",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626:UUID:f62050da-e90e-4599-a6ec-d7bdfcf39498:88",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82626",
       "teamIdIntern": 463008,
       "teamIdExtern": 82626,
@@ -108080,7 +108080,7 @@
       "playerActorId": 7606571,
       "playerIdentityKey": "UUID:f62050da-e90e-4599-a6ec-d7bdfcf39498",
       "playerName": "ABRIL PUIGDEFABREGAS SOTO",
-      "shirtNumber": "52",
+      "shirtNumber": "88",
       "games": 13,
       "minutes": 329,
       "points": 4,
@@ -108157,7 +108157,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:a7d162e3-cafa-4680-be81-c9bcb7d0f495:79",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:a7d162e3-cafa-4680-be81-c9bcb7d0f495:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
@@ -108168,7 +108168,7 @@
       "playerActorId": 7659687,
       "playerIdentityKey": "UUID:a7d162e3-cafa-4680-be81-c9bcb7d0f495",
       "playerName": "AINA MASIP ROIG",
-      "shirtNumber": "79",
+      "shirtNumber": "19",
       "games": 16,
       "minutes": 376,
       "points": 4,
@@ -108311,7 +108311,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:dc63a899-a71f-4d5d-866a-5732225b538a:3",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:dc63a899-a71f-4d5d-866a-5732225b538a:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
       "teamIdExtern": 82719,
@@ -108322,7 +108322,7 @@
       "playerActorId": 7463070,
       "playerIdentityKey": "UUID:dc63a899-a71f-4d5d-866a-5732225b538a",
       "playerName": "ARIADNA RAMIREZ DODE",
-      "shirtNumber": "3",
+      "shirtNumber": "23",
       "games": 19,
       "minutes": 561,
       "points": 4,
@@ -108333,7 +108333,7 @@
       "avgFouls": 0.21052631578947367
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870:UUID:75334f7b-d8c2-43ad-837e-0beaaddee4bf:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870:UUID:75334f7b-d8c2-43ad-837e-0beaaddee4bf:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
       "teamIdIntern": 458868,
       "teamIdExtern": 79870,
@@ -108344,7 +108344,7 @@
       "playerActorId": 7529286,
       "playerIdentityKey": "UUID:75334f7b-d8c2-43ad-837e-0beaaddee4bf",
       "playerName": "ARLET IRINA CORTEZ ANTEZANA",
-      "shirtNumber": "1",
+      "shirtNumber": "8",
       "games": 19,
       "minutes": 370,
       "points": 4,
@@ -108553,7 +108553,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:5e4f6353-6869-4165-ae8c-2a8a04988958:13",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:5e4f6353-6869-4165-ae8c-2a8a04988958:5",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799",
       "teamIdIntern": 459711,
       "teamIdExtern": 83799,
@@ -108564,7 +108564,7 @@
       "playerActorId": 7543668,
       "playerIdentityKey": "UUID:5e4f6353-6869-4165-ae8c-2a8a04988958",
       "playerName": "DAFNE DOMINGUEZ PEREZ",
-      "shirtNumber": "13",
+      "shirtNumber": "5",
       "games": 15,
       "minutes": 366,
       "points": 4,
@@ -108641,7 +108641,7 @@
       "avgFouls": 0.7272727272727273
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256:UUID:f07ef1b5-4808-4dd8-beca-1bc09b0165ab:81",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256:UUID:f07ef1b5-4808-4dd8-beca-1bc09b0165ab:27",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83256",
       "teamIdIntern": 493498,
       "teamIdExtern": 83256,
@@ -108652,7 +108652,7 @@
       "playerActorId": 8585872,
       "playerIdentityKey": "UUID:f07ef1b5-4808-4dd8-beca-1bc09b0165ab",
       "playerName": "EMMA MARTINEZ ROJAS",
-      "shirtNumber": "81",
+      "shirtNumber": "27",
       "games": 9,
       "minutes": 180,
       "points": 4,
@@ -108685,7 +108685,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:f595315a-bcc0-460a-9186-cf048155369e:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569:UUID:f595315a-bcc0-460a-9186-cf048155369e:32",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
       "teamIdIntern": 488074,
       "teamIdExtern": 81569,
@@ -108696,7 +108696,7 @@
       "playerActorId": 8399459,
       "playerIdentityKey": "UUID:f595315a-bcc0-460a-9186-cf048155369e",
       "playerName": "GISELA ESCUDERO JIMENEZ",
-      "shirtNumber": "0",
+      "shirtNumber": "32",
       "games": 10,
       "minutes": 251,
       "points": 4,
@@ -108751,7 +108751,7 @@
       "avgFouls": 2.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:UUID:716a26b6-4f9e-45a6-ad91-391978d65712:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:UUID:716a26b6-4f9e-45a6-ad91-391978d65712:17",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179",
       "teamIdIntern": 456901,
       "teamIdExtern": 80179,
@@ -108762,7 +108762,7 @@
       "playerActorId": 7494764,
       "playerIdentityKey": "UUID:716a26b6-4f9e-45a6-ad91-391978d65712",
       "playerName": "IRATI ASTIZ GARCIA",
-      "shirtNumber": "1",
+      "shirtNumber": "17",
       "games": 11,
       "minutes": 218,
       "points": 4,
@@ -109147,7 +109147,7 @@
       "avgFouls": 3
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 459557,
       "teamIdExtern": 82766,
@@ -109158,7 +109158,7 @@
       "playerActorId": 7541074,
       "playerIdentityKey": "UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca",
       "playerName": "MARTINA BECH RUEDA",
-      "shirtNumber": "8",
+      "shirtNumber": "7",
       "games": 11,
       "minutes": 235,
       "points": 4,
@@ -109169,7 +109169,7 @@
       "avgFouls": 0.6363636363636364
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612:UUID:ebbf4f5a-b960-48fc-892e-ce8abe3d7691:90",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612:UUID:ebbf4f5a-b960-48fc-892e-ce8abe3d7691:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612",
       "teamIdIntern": 458414,
       "teamIdExtern": 78612,
@@ -109180,7 +109180,7 @@
       "playerActorId": 7521460,
       "playerIdentityKey": "UUID:ebbf4f5a-b960-48fc-892e-ce8abe3d7691",
       "playerName": "MARTINA BERCERO OLIVA",
-      "shirtNumber": "90",
+      "shirtNumber": "13",
       "games": 15,
       "minutes": 410,
       "points": 4,
@@ -109609,7 +109609,7 @@
       "avgFouls": 0.8571428571428571
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:8b612f1a-a45b-4468-ae56-4f11908ed0f1:16",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338:UUID:8b612f1a-a45b-4468-ae56-4f11908ed0f1:14",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
       "teamIdIntern": 470539,
       "teamIdExtern": 80338,
@@ -109620,7 +109620,7 @@
       "playerActorId": 7811602,
       "playerIdentityKey": "UUID:8b612f1a-a45b-4468-ae56-4f11908ed0f1",
       "playerName": "RUTH G\u00C1LVEZ AMAYA",
-      "shirtNumber": "16",
+      "shirtNumber": "14",
       "games": 6,
       "minutes": 74,
       "points": 4,
@@ -109631,7 +109631,7 @@
       "avgFouls": 1.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612:UUID:3bd743a4-50d8-4419-89f3-d5fc594d1a2a:85",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612:UUID:3bd743a4-50d8-4419-89f3-d5fc594d1a2a:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612",
       "teamIdIntern": 458414,
       "teamIdExtern": 78612,
@@ -109642,7 +109642,7 @@
       "playerActorId": 7521459,
       "playerIdentityKey": "UUID:3bd743a4-50d8-4419-89f3-d5fc594d1a2a",
       "playerName": "S.J.",
-      "shirtNumber": "85",
+      "shirtNumber": "23",
       "games": 15,
       "minutes": 369,
       "points": 4,
@@ -109763,7 +109763,7 @@
       "avgFouls": 0.75
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594:UUID:d70b2f04-abbc-41cc-b70a-f83eaa9d04aa:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594:UUID:d70b2f04-abbc-41cc-b70a-f83eaa9d04aa:37",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594",
       "teamIdIntern": 454282,
       "teamIdExtern": 80594,
@@ -109774,7 +109774,7 @@
       "playerActorId": 7449233,
       "playerIdentityKey": "UUID:d70b2f04-abbc-41cc-b70a-f83eaa9d04aa",
       "playerName": "\u00C0.Z.S.",
-      "shirtNumber": "1",
+      "shirtNumber": "37",
       "games": 16,
       "minutes": 328,
       "points": 4,
@@ -110093,7 +110093,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79533:UUID:45b590a0-0586-4469-aeff-2edc3118ff63:23",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79533:UUID:45b590a0-0586-4469-aeff-2edc3118ff63:1",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79533",
       "teamIdIntern": 468697,
       "teamIdExtern": 79533,
@@ -110104,7 +110104,7 @@
       "playerActorId": 7758109,
       "playerIdentityKey": "UUID:45b590a0-0586-4469-aeff-2edc3118ff63",
       "playerName": "INGRID MONROIG FARR\u00C9",
-      "shirtNumber": "23",
+      "shirtNumber": "1",
       "games": 3,
       "minutes": 90,
       "points": 3,
@@ -110181,7 +110181,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79214:UUID:9d2b65d5-075f-43bf-8516-300c33cde99a:5",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79214:UUID:9d2b65d5-075f-43bf-8516-300c33cde99a:3",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79214",
       "teamIdIntern": 450785,
       "teamIdExtern": 79214,
@@ -110192,7 +110192,7 @@
       "playerActorId": 73421758360497430,
       "playerIdentityKey": "UUID:9d2b65d5-075f-43bf-8516-300c33cde99a",
       "playerName": "JULIA PLANA ROS",
-      "shirtNumber": "5",
+      "shirtNumber": "3",
       "games": 22,
       "minutes": 78,
       "points": 3,
@@ -110313,7 +110313,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83619:UUID:28ead3fc-f927-480c-8a6b-ff17fb525969:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83619:UUID:28ead3fc-f927-480c-8a6b-ff17fb525969:1",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83619",
       "teamIdIntern": 493450,
       "teamIdExtern": 83619,
@@ -110324,7 +110324,7 @@
       "playerActorId": 66701765614051406,
       "playerIdentityKey": "UUID:28ead3fc-f927-480c-8a6b-ff17fb525969",
       "playerName": "MAR VELAZQUEZ HIDALGO",
-      "shirtNumber": "8",
+      "shirtNumber": "1",
       "games": 4,
       "minutes": 114,
       "points": 3,
@@ -110445,7 +110445,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763:UUID:0073b644-98d1-11e9-a2a5-0216824770c2:1",
+      "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763:UUID:0073b644-98d1-11e9-a2a5-0216824770c2:84",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763",
       "teamIdIntern": 460837,
       "teamIdExtern": 80763,
@@ -110456,7 +110456,7 @@
       "playerActorId": 68461760197733518,
       "playerIdentityKey": "UUID:0073b644-98d1-11e9-a2a5-0216824770c2",
       "playerName": "NOA JIMENEZ SANCHEZ",
-      "shirtNumber": "1",
+      "shirtNumber": "84",
       "games": 3,
       "minutes": 36,
       "points": 3,
@@ -110863,7 +110863,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:093f04ec-1a7a-43da-a62a-2e624fd02662:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766:UUID:093f04ec-1a7a-43da-a62a-2e624fd02662:22",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
       "teamIdIntern": 459557,
       "teamIdExtern": 82766,
@@ -110874,7 +110874,7 @@
       "playerActorId": 7541081,
       "playerIdentityKey": "UUID:093f04ec-1a7a-43da-a62a-2e624fd02662",
       "playerName": "AINARA ELOSEGUI CORBER\u00D3",
-      "shirtNumber": "11",
+      "shirtNumber": "22",
       "games": 9,
       "minutes": 193,
       "points": 2,
@@ -111457,7 +111457,7 @@
       "avgFouls": 2
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:9db44619-05ac-49d3-ae55-0113c410fa21:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663:UUID:9db44619-05ac-49d3-ae55-0113c410fa21:48",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79663",
       "teamIdIntern": 544788,
       "teamIdExtern": 79663,
@@ -111468,7 +111468,7 @@
       "playerActorId": 10394141,
       "playerIdentityKey": "UUID:9db44619-05ac-49d3-ae55-0113c410fa21",
       "playerName": "ELISE OLIVARES PURI",
-      "shirtNumber": "1",
+      "shirtNumber": "48",
       "games": 3,
       "minutes": 56,
       "points": 2,
@@ -111611,7 +111611,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203:UUID:e52e826a-d692-4abb-ad3d-996106ca84c0:21",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203:UUID:e52e826a-d692-4abb-ad3d-996106ca84c0:00",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83203",
       "teamIdIntern": 453542,
       "teamIdExtern": 83203,
@@ -111622,7 +111622,7 @@
       "playerActorId": 7437053,
       "playerIdentityKey": "UUID:e52e826a-d692-4abb-ad3d-996106ca84c0",
       "playerName": "GISELA LALUEZA ORTIGOSA",
-      "shirtNumber": "21",
+      "shirtNumber": "00",
       "games": 15,
       "minutes": 402,
       "points": 2,
@@ -111897,7 +111897,7 @@
       "avgFouls": 0.14285714285714285
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:b10b3ac0-0906-4b1c-bf14-92a6f6935f23:11",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386:UUID:b10b3ac0-0906-4b1c-bf14-92a6f6935f23:77",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:84386",
       "teamIdIntern": 478166,
       "teamIdExtern": 84386,
@@ -111908,7 +111908,7 @@
       "playerActorId": 8069865,
       "playerIdentityKey": "UUID:b10b3ac0-0906-4b1c-bf14-92a6f6935f23",
       "playerName": "KHEREN KAMYLA TOTTIL ORTIZ",
-      "shirtNumber": "11",
+      "shirtNumber": "77",
       "games": 13,
       "minutes": 317,
       "points": 2,
@@ -112029,7 +112029,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79233:UUID:5a596d62-0d3d-4801-8400-399150047ff3:42",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79233:UUID:5a596d62-0d3d-4801-8400-399150047ff3:7",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79233",
       "teamIdIntern": 469414,
       "teamIdExtern": 79233,
@@ -112040,7 +112040,7 @@
       "playerActorId": 7776500,
       "playerIdentityKey": "UUID:5a596d62-0d3d-4801-8400-399150047ff3",
       "playerName": "LIA BELENGUER BAUTISTA",
-      "shirtNumber": "42",
+      "shirtNumber": "7",
       "games": 6,
       "minutes": 154,
       "points": 2,
@@ -112205,7 +112205,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82479:UUID:d5999eb1-adb6-4071-bf82-be8863a96e61:65",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82479:UUID:d5999eb1-adb6-4071-bf82-be8863a96e61:24",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82479",
       "teamIdIntern": 517000,
       "teamIdExtern": 82479,
@@ -112216,7 +112216,7 @@
       "playerActorId": 9424005,
       "playerIdentityKey": "UUID:d5999eb1-adb6-4071-bf82-be8863a96e61",
       "playerName": "LUCIA LOZANO SECO",
-      "shirtNumber": "65",
+      "shirtNumber": "24",
       "games": 5,
       "minutes": 97,
       "points": 2,
@@ -112513,7 +112513,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:d77aea11-61ec-433c-971f-a582efc255ff:71",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:d77aea11-61ec-433c-971f-a582efc255ff:19",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
@@ -112524,7 +112524,7 @@
       "playerActorId": 7463698,
       "playerIdentityKey": "UUID:d77aea11-61ec-433c-971f-a582efc255ff",
       "playerName": "MIA MATUTE TERREROS",
-      "shirtNumber": "71",
+      "shirtNumber": "19",
       "games": 11,
       "minutes": 219,
       "points": 2,
@@ -112799,7 +112799,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151:UUID:ebd9cfca-f296-4de3-89b2-b28f3e3a7bd4:1",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151:UUID:ebd9cfca-f296-4de3-89b2-b28f3e3a7bd4:9",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151",
       "teamIdIntern": 453841,
       "teamIdExtern": 84151,
@@ -112810,7 +112810,7 @@
       "playerActorId": 7441922,
       "playerIdentityKey": "UUID:ebd9cfca-f296-4de3-89b2-b28f3e3a7bd4",
       "playerName": "OLIVIA GILABERT GARCIA",
-      "shirtNumber": "1",
+      "shirtNumber": "9",
       "games": 11,
       "minutes": 252,
       "points": 2,
@@ -113129,7 +113129,7 @@
       "avgFouls": 2
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386:UUID:401ae223-e7e6-4dc6-9ed2-c3707d6e2695:10",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386:UUID:401ae223-e7e6-4dc6-9ed2-c3707d6e2695:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386",
       "teamIdIntern": 458510,
       "teamIdExtern": 83386,
@@ -113140,7 +113140,7 @@
       "playerActorId": 7523100,
       "playerIdentityKey": "UUID:401ae223-e7e6-4dc6-9ed2-c3707d6e2695",
       "playerName": "SARA MORENO ESPERANZA",
-      "shirtNumber": "10",
+      "shirtNumber": "18",
       "games": 14,
       "minutes": 259,
       "points": 2,
@@ -113195,7 +113195,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828:UUID:b758858b-b5ec-49b0-a936-b1e8c062dd7b:27",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828:UUID:b758858b-b5ec-49b0-a936-b1e8c062dd7b:11",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828",
       "teamIdIntern": 450133,
       "teamIdExtern": 79828,
@@ -113206,7 +113206,7 @@
       "playerActorId": 67191757748053246,
       "playerIdentityKey": "UUID:b758858b-b5ec-49b0-a936-b1e8c062dd7b",
       "playerName": "ZAIDA LUQUE ILLESCAS",
-      "shirtNumber": "27",
+      "shirtNumber": "11",
       "games": 7,
       "minutes": 70,
       "points": 2,
@@ -113591,7 +113591,7 @@
       "avgFouls": 2.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824:UUID:66855483-f16d-44b9-9306-299572c78470:16",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824:UUID:66855483-f16d-44b9-9306-299572c78470:15",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824",
       "teamIdIntern": 453870,
       "teamIdExtern": 78824,
@@ -113602,7 +113602,7 @@
       "playerActorId": 7442432,
       "playerIdentityKey": "UUID:66855483-f16d-44b9-9306-299572c78470",
       "playerName": "MIA GALARCE CRUZ",
-      "shirtNumber": "16",
+      "shirtNumber": "15",
       "games": 16,
       "minutes": 363,
       "points": 1,
@@ -113767,7 +113767,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81412:UUID:72feb155-1588-4ef6-bf94-07aeef179d8e:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81412:UUID:72feb155-1588-4ef6-bf94-07aeef179d8e:18",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81412",
       "teamIdIntern": 454340,
       "teamIdExtern": 81412,
@@ -113778,7 +113778,7 @@
       "playerActorId": 7450199,
       "playerIdentityKey": "UUID:72feb155-1588-4ef6-bf94-07aeef179d8e",
       "playerName": "ABRIL BAUTISTA COMELLA",
-      "shirtNumber": "8",
+      "shirtNumber": "18",
       "games": 14,
       "minutes": 255,
       "points": 0,
@@ -113855,7 +113855,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028:UUID:00c95fc1-98d1-11e9-a2a5-0216824770c2:35",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028:UUID:00c95fc1-98d1-11e9-a2a5-0216824770c2:11",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028",
       "teamIdIntern": 487690,
       "teamIdExtern": 79028,
@@ -113866,7 +113866,7 @@
       "playerActorId": 8388492,
       "playerIdentityKey": "UUID:00c95fc1-98d1-11e9-a2a5-0216824770c2",
       "playerName": "AINA CURRIUS JUNYENT",
-      "shirtNumber": "35",
+      "shirtNumber": "11",
       "games": 4,
       "minutes": 0,
       "points": 0,
@@ -113943,7 +113943,7 @@
       "avgFouls": 0.2857142857142857
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:61968a24-5779-4638-82b3-8cecd8d244b4:74",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181:UUID:61968a24-5779-4638-82b3-8cecd8d244b4:26",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
       "teamIdIntern": 455160,
       "teamIdExtern": 82181,
@@ -113954,7 +113954,7 @@
       "playerActorId": 7463699,
       "playerIdentityKey": "UUID:61968a24-5779-4638-82b3-8cecd8d244b4",
       "playerName": "AINHOA KIARA MEDRANO VAZQUEZ",
-      "shirtNumber": "74",
+      "shirtNumber": "26",
       "games": 10,
       "minutes": 160,
       "points": 0,
@@ -114207,7 +114207,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000:UUID:83815161-9b39-4adb-999c-5ada19b14015:16",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000:UUID:83815161-9b39-4adb-999c-5ada19b14015:26",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000",
       "teamIdIntern": 471767,
       "teamIdExtern": 80000,
@@ -114218,7 +114218,7 @@
       "playerActorId": 7853791,
       "playerIdentityKey": "UUID:83815161-9b39-4adb-999c-5ada19b14015",
       "playerName": "ANA MIRIAM DEL R\u00CDO ESTEVEZ",
-      "shirtNumber": "16",
+      "shirtNumber": "26",
       "games": 7,
       "minutes": 7,
       "points": 0,
@@ -114449,7 +114449,7 @@
       "avgFouls": 0.4444444444444444
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:5ef55cda-1bcb-4a7d-89aa-55e8ece0f238:4",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708:UUID:5ef55cda-1bcb-4a7d-89aa-55e8ece0f238:0",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
       "teamIdIntern": 493004,
       "teamIdExtern": 82708,
@@ -114460,7 +114460,7 @@
       "playerActorId": 68891765612031297,
       "playerIdentityKey": "UUID:5ef55cda-1bcb-4a7d-89aa-55e8ece0f238",
       "playerName": "ARIADNA CALLE CASTILLO",
-      "shirtNumber": "4",
+      "shirtNumber": "0",
       "games": 3,
       "minutes": 72,
       "points": 0,
@@ -114537,7 +114537,7 @@
       "avgFouls": 0.5
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:ec9b9f4f-fd1c-476c-ac41-45058af82e5f:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799:UUID:ec9b9f4f-fd1c-476c-ac41-45058af82e5f:16",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799",
       "teamIdIntern": 493005,
       "teamIdExtern": 83799,
@@ -114548,7 +114548,7 @@
       "playerActorId": 8570749,
       "playerIdentityKey": "UUID:ec9b9f4f-fd1c-476c-ac41-45058af82e5f",
       "playerName": "ARLET BADELL BARRIENTOS",
-      "shirtNumber": "8",
+      "shirtNumber": "16",
       "games": 11,
       "minutes": 259,
       "points": 0,
@@ -115021,7 +115021,7 @@
       "avgFouls": 0.75
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594:UUID:6bf21bc7-21ec-4dd5-9dee-200273507cfb:6",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594:UUID:6bf21bc7-21ec-4dd5-9dee-200273507cfb:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80594",
       "teamIdIntern": 454282,
       "teamIdExtern": 80594,
@@ -115032,7 +115032,7 @@
       "playerActorId": 7449236,
       "playerIdentityKey": "UUID:6bf21bc7-21ec-4dd5-9dee-200273507cfb",
       "playerName": "CHARLOTTE LOPEZ LAPLASSOTTE-PAULY",
-      "shirtNumber": "6",
+      "shirtNumber": "8",
       "games": 3,
       "minutes": 63,
       "points": 0,
@@ -115593,7 +115593,7 @@
       "avgFouls": 0.16666666666666666
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:4f8bd7db-0142-4349-aca3-b9f3bcc95b06:18",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:4f8bd7db-0142-4349-aca3-b9f3bcc95b06:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
@@ -115604,7 +115604,7 @@
       "playerActorId": 7659689,
       "playerIdentityKey": "UUID:4f8bd7db-0142-4349-aca3-b9f3bcc95b06",
       "playerName": "GAL\u00B7LA SORIA ORTEGA",
-      "shirtNumber": "18",
+      "shirtNumber": "8",
       "games": 16,
       "minutes": 313,
       "points": 0,
@@ -115813,7 +115813,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151:UUID:512cd136-ee53-4e07-9a1f-5623d13b3370:14",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151:UUID:512cd136-ee53-4e07-9a1f-5623d13b3370:25",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151",
       "teamIdIntern": 465948,
       "teamIdExtern": 84151,
@@ -115824,7 +115824,7 @@
       "playerActorId": 7681904,
       "playerIdentityKey": "UUID:512cd136-ee53-4e07-9a1f-5623d13b3370",
       "playerName": "INAS FATOUHI EZZAHRAOUI",
-      "shirtNumber": "14",
+      "shirtNumber": "25",
       "games": 6,
       "minutes": 144,
       "points": 0,
@@ -115945,7 +115945,7 @@
       "avgFouls": 4
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85394:UUID:11ee2dae-7d70-4a0a-8b0c-f36b291d0e1e:17",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85394:UUID:11ee2dae-7d70-4a0a-8b0c-f36b291d0e1e:23",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85394",
       "teamIdIntern": 506257,
       "teamIdExtern": 85394,
@@ -115956,7 +115956,7 @@
       "playerActorId": 10790159,
       "playerIdentityKey": "UUID:11ee2dae-7d70-4a0a-8b0c-f36b291d0e1e",
       "playerName": "ISATOU JABBIE TOURAY",
-      "shirtNumber": "17",
+      "shirtNumber": "23",
       "games": 5,
       "minutes": 106,
       "points": 0,
@@ -116231,7 +116231,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326:UUID:003f3bea-98d1-11e9-a2a5-0216824770c2:91",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326:UUID:003f3bea-98d1-11e9-a2a5-0216824770c2:11",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326",
       "teamIdIntern": 450680,
       "teamIdExtern": 80326,
@@ -116242,7 +116242,7 @@
       "playerActorId": 7387456,
       "playerIdentityKey": "UUID:003f3bea-98d1-11e9-a2a5-0216824770c2",
       "playerName": "J\u00DALIA CAMPILLO MARTINEZ",
-      "shirtNumber": "91",
+      "shirtNumber": "11",
       "games": 19,
       "minutes": 2,
       "points": 0,
@@ -116891,7 +116891,7 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:bfac81ac-03df-4a80-bf9e-79714f20d9dd:22",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684:UUID:bfac81ac-03df-4a80-bf9e-79714f20d9dd:12",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83684",
       "teamIdIntern": 465225,
       "teamIdExtern": 83684,
@@ -116902,7 +116902,7 @@
       "playerActorId": 7659693,
       "playerIdentityKey": "UUID:bfac81ac-03df-4a80-bf9e-79714f20d9dd",
       "playerName": "MARTINA BUENO CANALS",
-      "shirtNumber": "22",
+      "shirtNumber": "12",
       "games": 15,
       "minutes": 344,
       "points": 0,
@@ -116913,7 +116913,7 @@
       "avgFouls": 0.06666666666666667
     },
     {
-      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512:UUID:00d55928-98d1-11e9-a2a5-0216824770c2:22",
+      "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512:UUID:00d55928-98d1-11e9-a2a5-0216824770c2:2",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512",
       "teamIdIntern": 465177,
       "teamIdExtern": 80512,
@@ -116924,7 +116924,7 @@
       "playerActorId": 7658587,
       "playerIdentityKey": "UUID:00d55928-98d1-11e9-a2a5-0216824770c2",
       "playerName": "MARTINA JIMENEZ FERRER",
-      "shirtNumber": "22",
+      "shirtNumber": "2",
       "games": 10,
       "minutes": 47,
       "points": 0,
@@ -117661,7 +117661,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80619:UUID:9936e550-04ab-45cb-9e6c-cc96d21c403a:0",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80619:UUID:9936e550-04ab-45cb-9e6c-cc96d21c403a:2",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80619",
       "teamIdIntern": 474020,
       "teamIdExtern": 80619,
@@ -117672,7 +117672,7 @@
       "playerActorId": 7928493,
       "playerIdentityKey": "UUID:9936e550-04ab-45cb-9e6c-cc96d21c403a",
       "playerName": "SIENA MASSANET VIDIELLA",
-      "shirtNumber": "0",
+      "shirtNumber": "2",
       "games": 7,
       "minutes": 140,
       "points": 0,
@@ -117815,7 +117815,7 @@
       "avgFouls": 0
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455:UUID:977a555b-eb37-4711-9bb5-5da7d72a3048:8",
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455:UUID:977a555b-eb37-4711-9bb5-5da7d72a3048:32",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82455",
       "teamIdIntern": 464551,
       "teamIdExtern": 82455,
@@ -117826,7 +117826,7 @@
       "playerActorId": 7642397,
       "playerIdentityKey": "UUID:977a555b-eb37-4711-9bb5-5da7d72a3048",
       "playerName": "VALERIA GUTIERREZ LOPEZ",
-      "shirtNumber": "8",
+      "shirtNumber": "32",
       "games": 7,
       "minutes": 156,
       "points": 0,

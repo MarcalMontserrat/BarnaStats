@@ -147,6 +147,14 @@ function PlayerEvolutionSection({
                                 <div style={styles.summaryMeta}>Encuentros en el tramo visible.</div>
                             </div>
 
+                            {selectedPlayerSummary.shirtNumber ? (
+                                <div style={styles.summaryCard}>
+                                    <div style={styles.summaryLabel}>Dorsal</div>
+                                    <div style={styles.summaryValue}>#{selectedPlayerSummary.shirtNumber}</div>
+                                    <div style={styles.summaryMeta}>Más repetido en el tramo visible.</div>
+                                </div>
+                            ) : null}
+
                             <div style={styles.summaryCard}>
                                 <div style={styles.summaryLabel}>Puntos</div>
                                 <div style={styles.summaryValue}>{selectedPlayerSummary.points}</div>

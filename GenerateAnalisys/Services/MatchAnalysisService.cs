@@ -238,6 +238,7 @@ public sealed class MatchAnalysisService
                     seasonTotal.TwoAttempted += data.ShotsOfTwoAttempted;
                     seasonTotal.ThreeMade += data.ShotsOfThreeSuccessful;
                     seasonTotal.ThreeAttempted += data.ShotsOfThreeAttempted;
+                    accumulator.TrackShirtNumber(playerKey, dorsal);
                 }
             }
         }
@@ -260,7 +261,12 @@ public sealed class MatchAnalysisService
 
     private static TeamAnalysis BuildTeamAnalysis(TeamAccumulator accumulator)
     {
-        var seasonTotals = accumulator.SeasonTotals.Values
+        var seasonTotals = accumulator.SeasonTotals
+            .Select(entry =>
+            {
+                entry.Value.ShirtNumber = accumulator.ResolveDominantShirtNumber(entry.Key, entry.Value.ShirtNumber);
+                return entry.Value;
+            })
             .OrderByDescending(player => player.Points)
             .ThenBy(player => player.PlayerName, StringComparer.OrdinalIgnoreCase)
             .ToList();
@@ -1151,6 +1157,7 @@ public sealed class MatchAnalysisService
         public List<MatchSummary> MatchSummaries { get; } = [];
         public List<MatchPlayerRow> MatchPlayerRows { get; } = [];
         public Dictionary<string, PlayerSeasonTotal> SeasonTotals { get; } = new(StringComparer.Ordinal);
+        public Dictionary<string, Dictionary<string, int>> ShirtNumbersByPlayer { get; } = new(StringComparer.Ordinal);
 
         public void UpdateMetadata(TeamInfo team)
         {
@@ -1162,6 +1169,39 @@ public sealed class MatchAnalysisService
 
             if (ShouldUseTeamName(team.Name, TeamName))
                 TeamName = team.Name!;
+        }
+
+        public void TrackShirtNumber(string playerKey, string? shirtNumber)
+        {
+            if (string.IsNullOrWhiteSpace(playerKey) || string.IsNullOrWhiteSpace(shirtNumber))
+                return;
+
+            var normalizedShirtNumber = shirtNumber.Trim();
+            if (normalizedShirtNumber.Length == 0)
+                return;
+
+            if (!ShirtNumbersByPlayer.TryGetValue(playerKey, out var shirtNumbers))
+            {
+                shirtNumbers = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+                ShirtNumbersByPlayer[playerKey] = shirtNumbers;
+            }
+
+            shirtNumbers[normalizedShirtNumber] = shirtNumbers.GetValueOrDefault(normalizedShirtNumber) + 1;
+        }
+
+        public string ResolveDominantShirtNumber(string playerKey, string? fallback)
+        {
+            if (!ShirtNumbersByPlayer.TryGetValue(playerKey, out var shirtNumbers) || shirtNumbers.Count == 0)
+                return fallback?.Trim() ?? "";
+
+            var normalizedFallback = fallback?.Trim() ?? "";
+
+            return shirtNumbers
+                .OrderByDescending(entry => entry.Value)
+                .ThenByDescending(entry => string.Equals(entry.Key, normalizedFallback, StringComparison.OrdinalIgnoreCase))
+                .ThenBy(entry => entry.Key, StringComparer.OrdinalIgnoreCase)
+                .Select(entry => entry.Key)
+                .FirstOrDefault() ?? normalizedFallback;
         }
 
         private static bool ShouldUseTeamName(string? candidateName, string currentName)
