@@ -113,3 +113,22 @@ a {
     --radius-md: 14px;
   }
 }
+
+/* Portrait mobile: hide team names in match cards to avoid overlap */
+@media (orientation: portrait) and (max-width: 640px) {
+  .match-team-text {
+    display: none !important;
+  }
+
+  .match-team-side {
+    grid-template-columns: auto !important;
+  }
+
+  .match-team-side-away {
+    justify-items: end;
+  }
+
+  .match-center {
+    min-width: 100px !important;
+  }
+}
