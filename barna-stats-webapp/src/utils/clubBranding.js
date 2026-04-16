@@ -2,6 +2,8 @@ import {CLUB_BRANDING_CATALOG} from "../data/clubBrandingCatalog.generated.js";
 import {CLUB_LOGO_FILES} from "../data/clubLogoFiles.generated.js";
 import {TEAM_CLUB_MAP} from "../data/teamClubMap.generated.js";
 
+const APP_BASE_URL = String(import.meta.env.BASE_URL ?? "/");
+
 const FALLBACK_PALETTES = [
     {
         background: "linear-gradient(135deg, #163252 0%, #284f78 100%)",
@@ -70,6 +72,21 @@ function normalizeText(value) {
         .replace(/[\u0300-\u036f]/g, "")
         .trim()
         .toUpperCase();
+}
+
+function resolvePublicAssetUrl(value) {
+    const rawValue = String(value ?? "").trim();
+    if (!rawValue) {
+        return "";
+    }
+
+    if (/^(https?:)?\/\//i.test(rawValue) || rawValue.startsWith("data:")) {
+        return rawValue;
+    }
+
+    const normalizedBase = APP_BASE_URL.endsWith("/") ? APP_BASE_URL : `${APP_BASE_URL}/`;
+    const normalizedPath = rawValue.replace(/^\/+/, "");
+    return `${normalizedBase}${normalizedPath}`;
 }
 
 function normalizeLookupKey(value) {
@@ -254,7 +271,7 @@ export function resolveClubBranding({
         clubShortName: clubBranding?.shortName ?? "",
         hasClubBranding: Boolean(clubBranding),
         initials: getInitials(teamName, teamShortName, clubBranding?.shortName ?? ""),
-        logoSrc: (clubBranding && CLUB_LOGO_FILES[clubBranding.clubKey]) || clubBranding?.logoSrc || "",
+        logoSrc: resolvePublicAssetUrl((clubBranding && CLUB_LOGO_FILES[clubBranding.clubKey]) || clubBranding?.logoSrc || ""),
         background: palette.background,
         borderColor: palette.borderColor,
         color: palette.color,

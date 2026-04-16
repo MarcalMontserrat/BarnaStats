@@ -80,7 +80,7 @@ async function localizeLogo(club) {
 
     await fs.writeFile(outputPath, buffer);
 
-    return `/team-logos/fcbq-clubs/${fileName}`;
+    return `team-logos/fcbq-clubs/${fileName}`;
 }
 
 async function main() {
