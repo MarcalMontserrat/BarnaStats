@@ -1,6 +1,7 @@
 import MatchInsightsPanel from "./MatchInsightsPanel.jsx";
 import MatchTable from "./MatchTable.jsx";
 import PrettySelect from "./PrettySelect.jsx";
+import TeamBadge from "./TeamBadge.jsx";
 import {buildCompetitionPhaseLabel} from "../utils/analysisDerived.js";
 
 const styles = {
@@ -38,12 +39,12 @@ const styles = {
         gap: 12
     },
     matchHeader: {
-        display: "flex",
-        justifyContent: "space-between",
-        gap: 18,
-        flexWrap: "wrap",
+        display: "grid",
+        gridTemplateColumns: "minmax(0, 1fr) auto minmax(0, 1fr)",
+        gap: 16,
         alignItems: "center",
-        padding: "18px 20px",
+        padding: "18px 18px",
+        position: "relative",
         borderRadius: "var(--radius-lg)",
         background: "linear-gradient(135deg, rgba(255, 251, 245, 0.96) 0%, rgba(245, 235, 221, 0.92) 100%)",
         border: "1px solid rgba(107, 86, 58, 0.12)",
@@ -65,107 +66,132 @@ const styles = {
         border: "1px solid rgba(172, 132, 59, 0.2)",
         boxShadow: "inset 4px 0 0 rgba(172, 132, 59, 0.7), var(--shadow-md)"
     },
-    matchHeaderMain: {
+    teamSide: {
         display: "grid",
-        gap: 6,
-        flex: "1 1 320px",
+        gridTemplateColumns: "auto minmax(0, 1fr)",
+        gap: 12,
+        alignItems: "center",
         minWidth: 0
     },
-    matchTitle: {
+    teamSideAway: {
+        gridTemplateColumns: "minmax(0, 1fr) auto"
+    },
+    teamText: {
+        display: "grid",
+        gap: 2,
+        minWidth: 0
+    },
+    teamTextAway: {
+        textAlign: "right",
+        justifyItems: "end"
+    },
+    teamName: {
         fontFamily: "var(--font-display)",
-        fontSize: "clamp(1.25rem, 2vw, 1.65rem)",
-        lineHeight: 1,
-        display: "flex",
-        alignItems: "baseline",
-        gap: 4,
+        fontSize: "clamp(1.02rem, 1.7vw, 1.34rem)",
+        lineHeight: 1.08,
+        color: "var(--navy)",
         minWidth: 0,
-        whiteSpace: "nowrap"
+        overflow: "hidden",
+        display: "-webkit-box",
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: "vertical"
     },
-    matchTitlePrefix: {
-        flex: "0 0 auto",
-        whiteSpace: "nowrap"
+    teamNameCurrent: {
+        color: "var(--accent-strong)"
     },
-    matchTitleButton: {
+    teamLogoAction: {
         padding: 0,
         border: "none",
         background: "transparent",
-        font: "inherit",
-        color: "var(--accent-strong)",
         cursor: "pointer",
-        flex: "1 1 auto",
-        minWidth: 0,
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap",
-        textAlign: "left"
+        borderRadius: 18,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center"
     },
-    matchTitleText: {
-        flex: "1 1 auto",
-        minWidth: 0,
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        whiteSpace: "nowrap"
+    teamLogoStatic: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center"
     },
-    matchMeta: {
-        color: "var(--muted)",
-        fontSize: 14
+    matchCenter: {
+        display: "grid",
+        gap: 8,
+        justifyItems: "center",
+        alignContent: "center",
+        minWidth: 140,
+        textAlign: "center"
     },
-    headerAside: {
+    matchCenterMeta: {
         display: "flex",
-        gap: 10,
+        gap: 8,
         flexWrap: "wrap",
         alignItems: "center",
-        justifyContent: "flex-end"
-    },
-    resultPill: {
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: 40,
-        padding: "0 14px",
-        borderRadius: 999,
-        fontWeight: 800,
-        fontSize: 13,
-        letterSpacing: "0.04em"
-    },
-    resultPillWin: {
-        background: "rgba(84, 130, 92, 0.14)",
-        color: "#31583a",
-        border: "1px solid rgba(84, 130, 92, 0.22)"
-    },
-    resultPillLoss: {
-        background: "rgba(167, 90, 73, 0.12)",
-        color: "#8b4436",
-        border: "1px solid rgba(167, 90, 73, 0.18)"
-    },
-    resultPillTie: {
-        background: "rgba(172, 132, 59, 0.12)",
-        color: "#8a6520",
-        border: "1px solid rgba(172, 132, 59, 0.2)"
-    },
-    scorePill: {
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: 44,
-        padding: "0 16px",
-        borderRadius: 999,
-        background: "linear-gradient(135deg, #172c47 0%, #234569 100%)",
-        color: "#fff7ef",
-        fontWeight: 800,
-        letterSpacing: "0.04em"
+        justifyContent: "center"
     },
     metaPill: {
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: 40,
-        padding: "0 14px",
+        minHeight: 30,
+        padding: "0 10px",
         borderRadius: 999,
         background: "rgba(188, 63, 43, 0.1)",
         color: "var(--accent-strong)",
         fontWeight: 700,
-        fontSize: 13
+        fontSize: 12
+    },
+    scoreLine: {
+        display: "flex",
+        alignItems: "baseline",
+        justifyContent: "center",
+        gap: 8,
+        fontFamily: "var(--font-display)",
+        color: "var(--navy)"
+    },
+    scoreValue: {
+        fontSize: "clamp(1.8rem, 2.4vw, 2.3rem)",
+        lineHeight: 1,
+        letterSpacing: "-0.03em"
+    },
+    scoreDivider: {
+        fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
+        lineHeight: 1,
+        color: "rgba(26, 53, 87, 0.46)"
+    },
+    expandDock: {
+        position: "absolute",
+        left: 18,
+        right: 18,
+        bottom: 0,
+        height: 18,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        pointerEvents: "none"
+    },
+    expandIndicator: {
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: 32,
+        height: 32,
+        borderRadius: 999,
+        border: "1px solid rgba(26, 53, 87, 0.14)",
+        background: "rgba(255, 251, 245, 0.72)",
+        boxShadow: "0 8px 18px rgba(22, 18, 15, 0.08)",
+        color: "var(--navy)",
+        transition: "transform 180ms ease, background 180ms ease, border-color 180ms ease"
+    },
+    expandIndicatorOpen: {
+        transform: "rotate(180deg)",
+        background: "rgba(188, 63, 43, 0.12)",
+        borderColor: "rgba(188, 63, 43, 0.22)"
+    },
+    expandIndicatorGlyph: {
+        fontSize: 16,
+        lineHeight: 1,
+        fontWeight: 900
     },
     detailShell: {
         padding: "0 4px 4px"
@@ -215,29 +241,26 @@ function getResultPresentation(result) {
     switch (result) {
     case "W":
         return {
-            label: "Victoria",
-            headerStyle: styles.matchHeaderWin,
-            pillStyle: styles.resultPillWin
+            headerStyle: styles.matchHeaderWin
         };
     case "L":
         return {
-            label: "Derrota",
-            headerStyle: styles.matchHeaderLoss,
-            pillStyle: styles.resultPillLoss
+            headerStyle: styles.matchHeaderLoss
         };
     case "T":
         return {
-            label: "Empate",
-            headerStyle: styles.matchHeaderTie,
-            pillStyle: styles.resultPillTie
+            headerStyle: styles.matchHeaderTie
         };
     default:
         return {
-            label: "Pendiente",
-            headerStyle: null,
-            pillStyle: styles.metaPill
+            headerStyle: null
         };
     }
+}
+
+function getTeamIdExternFromTeamKey(teamKey) {
+    const match = String(teamKey ?? "").match(/TEAM:(\d+)$/);
+    return match ? Number(match[1]) : 0;
 }
 
 function MatchListSection({
@@ -319,7 +342,7 @@ function MatchListSection({
                 <div style={styles.eyebrow}>Partidos</div>
                 <h2 style={styles.title}>Jornadas y partidos</h2>
                 <p style={styles.subtitle}>
-                    Abre cada encuentro para ver la tabla individual y, si está disponible, su resumen.
+                    Haz clic en la tarjeta para desplegar el partido. El escudo te lleva a la ficha del otro equipo.
                 </p>
             </div>
 
@@ -341,15 +364,69 @@ function MatchListSection({
             </div>
 
             {visibleMatches.map((match) => {
-                const totalPoints = match.players.reduce(
-                    (sum, player) => sum + Number(player.points), 0
-                );
-                const scoreLine = match.teamScore === null || match.rivalScore === null
-                    ? `${totalPoints} pts`
-                    : `${match.teamScore} - ${match.rivalScore}`;
-                const location = match.isHome ? "Casa" : "Fuera";
                 const isOpen = openMatches[match.matchWebId];
                 const resultPresentation = getResultPresentation(match.result);
+                const detailId = `match-detail-${match.matchWebId}`;
+                const phaseLabel = selectedPhase
+                    ? (match.phaseName || buildCompetitionPhaseLabel(match))
+                    : buildCompetitionPhaseLabel(match);
+                const currentTeamKey = match.teamKey ?? "";
+                const rivalTeamKey = match.rivalTeamKey ?? "";
+                const homeTeam = {
+                    name: match.homeTeam,
+                    teamKey: match.homeTeamKey || (match.isHome ? currentTeamKey : rivalTeamKey),
+                    teamIdExtern: match.isHome
+                        ? Number(match.teamIdExtern ?? 0)
+                        : getTeamIdExternFromTeamKey(match.homeTeamKey || rivalTeamKey),
+                    isCurrentTeam: (match.homeTeamKey || (match.isHome ? currentTeamKey : rivalTeamKey)) === currentTeamKey
+                };
+                const awayTeam = {
+                    name: match.awayTeam,
+                    teamKey: match.awayTeamKey || (match.isHome ? rivalTeamKey : currentTeamKey),
+                    teamIdExtern: match.isHome
+                        ? getTeamIdExternFromTeamKey(match.awayTeamKey || rivalTeamKey)
+                        : Number(match.teamIdExtern ?? 0),
+                    isCurrentTeam: (match.awayTeamKey || (match.isHome ? rivalTeamKey : currentTeamKey)) === currentTeamKey
+                };
+
+                const renderTeamLogo = (team) => {
+                    const canNavigate = Boolean(team.teamKey);
+                    const badgeProps = {
+                        teamIdExtern: team.teamIdExtern,
+                        teamName: team.name,
+                        size: "md",
+                        title: team.name,
+                        style: {
+                            width: 56,
+                            height: 56,
+                            minWidth: 56
+                        }
+                    };
+
+                    if (!canNavigate) {
+                        return (
+                            <span style={styles.teamLogoStatic}>
+                                <TeamBadge {...badgeProps}/>
+                            </span>
+                        );
+                    }
+
+                    return (
+                        <button
+                            type="button"
+                            style={styles.teamLogoAction}
+                            title={`Abrir ficha de ${team.name}`}
+                            aria-label={`Abrir ficha de ${team.name}`}
+                            onClick={(event) => {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                onTeamNavigate?.(team.teamKey);
+                            }}
+                        >
+                            <TeamBadge {...badgeProps}/>
+                        </button>
+                    );
+                };
 
                 return (
                     <div key={match.matchWebId} style={styles.matchCard}>
@@ -358,54 +435,74 @@ function MatchListSection({
                                 ...styles.matchHeader,
                                 ...(resultPresentation.headerStyle ?? {})
                             }}
+                            role="button"
+                            tabIndex={0}
+                            aria-expanded={isOpen}
+                            aria-controls={detailId}
                             onClick={() => onToggleMatch(match.matchWebId)}
+                            onKeyDown={(event) => {
+                                if (event.key === "Enter" || event.key === " ") {
+                                    event.preventDefault();
+                                    onToggleMatch(match.matchWebId);
+                                }
+                            }}
                         >
-                            <div style={styles.matchHeaderMain}>
-                                <div style={styles.matchTitle}>
-                                    <span style={styles.matchTitlePrefix}>
-                                        {`Jornada ${match.phaseRound ?? "-"} · vs`}
-                                    </span>
-                                    {match.rivalTeamKey ? (
-                                        <button
-                                            type="button"
-                                            style={styles.matchTitleButton}
-                                            title={match.rival}
-                                            onClick={(event) => {
-                                                event.stopPropagation();
-                                                onTeamNavigate?.(match.rivalTeamKey);
-                                            }}
-                                        >
-                                            {match.rival}
-                                        </button>
-                                    ) : (
-                                        <span style={styles.matchTitleText} title={match.rival}>
-                                            {match.rival}
-                                        </span>
-                                    )}
-                                </div>
-                                <div style={styles.matchMeta}>
-                                    {selectedPhase
-                                        ? location
-                                        : `${buildCompetitionPhaseLabel(match)} · ${location}`}
+                            <div style={styles.teamSide}>
+                                {renderTeamLogo(homeTeam)}
+                                <div style={styles.teamText}>
+                                    <div
+                                        style={{
+                                            ...styles.teamName,
+                                            ...(homeTeam.isCurrentTeam ? styles.teamNameCurrent : {})
+                                        }}
+                                        title={homeTeam.name}
+                                    >
+                                        {homeTeam.name}
+                                    </div>
                                 </div>
                             </div>
 
-                            <div style={styles.headerAside}>
-                                <span style={{
-                                    ...styles.resultPill,
-                                    ...(resultPresentation.pillStyle ?? {})
-                                }}>
-                                    {resultPresentation.label}
-                                </span>
-                                <span style={styles.scorePill}>{scoreLine}</span>
-                                <span style={styles.metaPill}>
-                                    {isOpen ? "Ocultar detalle" : "Ver detalle"}
+                            <div style={styles.matchCenter}>
+                                <div style={styles.matchCenterMeta}>
+                                    <span style={styles.metaPill}>{`Jornada ${match.phaseRound ?? "-"}`}</span>
+                                    <span style={styles.metaPill}>{phaseLabel}</span>
+                                </div>
+                                <div style={styles.scoreLine}>
+                                    <span style={styles.scoreValue}>{match.homeScore ?? "-"}</span>
+                                    <span style={styles.scoreDivider}>·</span>
+                                    <span style={styles.scoreValue}>{match.awayScore ?? "-"}</span>
+                                </div>
+                            </div>
+
+                            <div style={{...styles.teamSide, ...styles.teamSideAway}}>
+                                <div style={{...styles.teamText, ...styles.teamTextAway}}>
+                                    <div
+                                        style={{
+                                            ...styles.teamName,
+                                            ...(awayTeam.isCurrentTeam ? styles.teamNameCurrent : {})
+                                        }}
+                                        title={awayTeam.name}
+                                    >
+                                        {awayTeam.name}
+                                    </div>
+                                </div>
+                                {renderTeamLogo(awayTeam)}
+                            </div>
+
+                            <div style={styles.expandDock} aria-hidden="true">
+                                <span
+                                    style={{
+                                        ...styles.expandIndicator,
+                                        ...(isOpen ? styles.expandIndicatorOpen : {})
+                                    }}
+                                >
+                                    <span style={styles.expandIndicatorGlyph}>⌄</span>
                                 </span>
                             </div>
                         </div>
 
                         {isOpen ? (
-                            <div style={styles.detailShell}>
+                            <div id={detailId} style={styles.detailShell}>
                                 <MatchTable players={match.players} onPlayerNavigate={onPlayerNavigate}/>
                                 <MatchInsightsPanel insights={match.insights}/>
                                 {renderMatchReport(match)}
