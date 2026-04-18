@@ -269,71 +269,92 @@ public sealed class MatchMappingSyncService
         {
             Console.WriteLine($"Resolviendo uuid para matchWebId={matchWebId}...");
 
-            var response = await page.GotoAsync(
-                $"https://www.basquetcatala.cat/partits/llistatpartits/{matchWebId}",
-                new PageGotoOptions
-                {
-                    WaitUntil = WaitUntilState.DOMContentLoaded
-                });
-
-            await page.WaitForTimeoutAsync(1000);
-
-            if (await IsSecurityChallengeActiveAsync(page, response))
+            try
             {
-                Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                var response = await page.GotoAsync(
+                    $"https://www.basquetcatala.cat/partits/llistatpartits/{matchWebId}",
+                    new PageGotoOptions
+                    {
+                        WaitUntil = WaitUntilState.DOMContentLoaded
+                    });
+
+                await page.WaitForTimeoutAsync(1000);
+
+                if (await IsSecurityChallengeActiveAsync(page, response))
+                {
+                    Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                    Console.WriteLine($"  URL actual: {page.Url}");
+                    Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page, response)}");
+
+                    if (headless)
+                    {
+                        Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                        return null;
+                    }
+
+                    var resolvedPage = await WaitForSecurityChallengeResolutionAsync(
+                        page,
+                        interactive,
+                        $"el partido {matchWebId}",
+                        $"https://www.basquetcatala.cat/partits/llistatpartits/{matchWebId}");
+
+                    if (resolvedPage is null)
+                        return null;
+
+                    page = resolvedPage;
+                    continue;
+                }
+
+                var uuid = await ExtractUuidAsync(page);
+                if (!string.IsNullOrWhiteSpace(uuid))
+                {
+                    Console.WriteLine($"  OK -> {uuid}");
+                    return uuid;
+                }
+
+                Console.WriteLine("  No se pudo extraer el uuid automáticamente.");
                 Console.WriteLine($"  URL actual: {page.Url}");
-                Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page, response)}");
 
-                if (headless)
+                if (!interactive)
                 {
-                    Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                    Console.WriteLine("  SKIP automático: la página respondió pero no expone uuid.");
                     return null;
                 }
 
-                var resolvedPage = await WaitForSecurityChallengeResolutionAsync(
-                    page,
-                    interactive,
-                    $"el partido {matchWebId}",
-                    $"https://www.basquetcatala.cat/partits/llistatpartits/{matchWebId}");
+                Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
+                Console.WriteLine("  Escribe 'skip' y pulsa ENTER para saltar este partido.");
 
-                if (resolvedPage is null)
-                    return null;
-
-                page = resolvedPage;
-                continue;
-            }
-
-            var uuid = await ExtractUuidAsync(page);
-            if (!string.IsNullOrWhiteSpace(uuid))
-            {
-                Console.WriteLine($"  OK -> {uuid}");
-                return uuid;
-            }
-
-            Console.WriteLine("  No se pudo extraer el uuid automáticamente.");
-            Console.WriteLine($"  URL actual: {page.Url}");
-
-            if (!interactive)
-            {
-                if (attempt >= AutomaticResolveRetryAttempts)
+                var input = Console.ReadLine()?.Trim().ToLowerInvariant();
+                if (input == "skip")
                 {
-                    Console.WriteLine("  SKIP automático tras agotar reintentos.");
+                    Console.WriteLine("  SKIP");
                     return null;
                 }
-
-                Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticResolveRetryAttempts})...");
-                await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
-                continue;
             }
-
-            Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
-            Console.WriteLine("  Escribe 'skip' y pulsa ENTER para saltar este partido.");
-
-            var input = Console.ReadLine()?.Trim().ToLowerInvariant();
-            if (input == "skip")
+            catch (Exception ex)
             {
-                Console.WriteLine("  SKIP");
-                return null;
+                Console.WriteLine($"  ERROR al cargar el partido: {ex.Message}");
+
+                if (!interactive)
+                {
+                    if (attempt >= AutomaticResolveRetryAttempts)
+                    {
+                        Console.WriteLine("  SKIP automático tras agotar reintentos por fallo.");
+                        return null;
+                    }
+
+                    Console.WriteLine($"  Reintentando automáticamente por fallo en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticResolveRetryAttempts})...");
+                    await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
+                    continue;
+                }
+
+                Console.WriteLine("  Pulsa ENTER para reintentar o escribe 'skip' para saltar este partido.");
+                var input = Console.ReadLine()?.Trim().ToLowerInvariant();
+                if (input == "skip")
+                {
+                    Console.WriteLine("  SKIP");
+                    return null;
+                }
             }
         }
     }
@@ -344,71 +365,92 @@ public sealed class MatchMappingSyncService
 
         for (var attempt = 1; ; attempt += 1)
         {
-            var inspection = await DiscoverMappingsFromResultsAsync(page, sourceUrl);
-            var discoveredMappings = inspection.DiscoveredMappings;
-
-            if (inspection.RequiresHumanVerification)
+            try
             {
-                Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                var inspection = await DiscoverMappingsFromResultsAsync(page, sourceUrl);
+                var discoveredMappings = inspection.DiscoveredMappings;
+
+                if (inspection.RequiresHumanVerification)
+                {
+                    Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                    Console.WriteLine($"  URL actual: {page.Url}");
+                    Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page)}");
+
+                    if (headless)
+                    {
+                        Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                        return ResultsSourceInspection.Empty;
+                    }
+
+                    var resolvedPage = await WaitForSecurityChallengeResolutionAsync(
+                        page,
+                        interactive,
+                        "la fase de resultados",
+                        sourceUrl);
+
+                    if (resolvedPage is null)
+                        return ResultsSourceInspection.Empty;
+
+                    page = resolvedPage;
+                    continue;
+                }
+
+                if (discoveredMappings.Count > 0)
+                {
+                    Console.WriteLine($"  OK -> {discoveredMappings.Count} partidos encontrados");
+                    if (inspection.PhaseMetadata is not null)
+                    {
+                        var metadata = inspection.PhaseMetadata;
+                        Console.WriteLine(
+                            $"  Metadata -> {metadata.CategoryName ?? "sin categoría"} · {metadata.LevelName ?? "sin nivel"} · grupo {metadata.GroupCode ?? "?"}");
+                    }
+
+                    return inspection;
+                }
+
+                Console.WriteLine("  No se pudo extraer ningún partido de la fuente.");
                 Console.WriteLine($"  URL actual: {page.Url}");
-                Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page)}");
 
-                if (headless)
+                if (!interactive)
                 {
-                    Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                    Console.WriteLine("  SKIP automático: la página respondió pero no expone partidos.");
                     return ResultsSourceInspection.Empty;
                 }
 
-                var resolvedPage = await WaitForSecurityChallengeResolutionAsync(
-                    page,
-                    interactive,
-                    "la fase de resultados",
-                    sourceUrl);
+                Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
+                Console.WriteLine("  Escribe 'skip' y pulsa ENTER para continuar sin usar la fuente.");
 
-                if (resolvedPage is null)
-                    return ResultsSourceInspection.Empty;
-
-                page = resolvedPage;
-                continue;
-            }
-
-            if (discoveredMappings.Count > 0)
-            {
-                Console.WriteLine($"  OK -> {discoveredMappings.Count} partidos encontrados");
-                if (inspection.PhaseMetadata is not null)
+                var input = Console.ReadLine()?.Trim().ToLowerInvariant();
+                if (input == "skip")
                 {
-                    var metadata = inspection.PhaseMetadata;
-                    Console.WriteLine(
-                        $"  Metadata -> {metadata.CategoryName ?? "sin categoría"} · {metadata.LevelName ?? "sin nivel"} · grupo {metadata.GroupCode ?? "?"}");
-                }
-
-                return inspection;
-            }
-
-            Console.WriteLine("  No se pudo extraer ningún partido de la fuente.");
-            Console.WriteLine($"  URL actual: {page.Url}");
-
-            if (!interactive)
-            {
-                if (attempt >= AutomaticRetryAttempts)
-                {
-                    Console.WriteLine("  SKIP automático de la fuente tras agotar reintentos.");
+                    Console.WriteLine("  SKIP");
                     return ResultsSourceInspection.Empty;
                 }
-
-                Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
-                await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
-                continue;
             }
-
-            Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
-            Console.WriteLine("  Escribe 'skip' y pulsa ENTER para continuar sin usar la fuente.");
-
-            var input = Console.ReadLine()?.Trim().ToLowerInvariant();
-            if (input == "skip")
+            catch (Exception ex)
             {
-                Console.WriteLine("  SKIP");
-                return ResultsSourceInspection.Empty;
+                Console.WriteLine($"  ERROR al leer la fuente: {ex.Message}");
+
+                if (!interactive)
+                {
+                    if (attempt >= AutomaticRetryAttempts)
+                    {
+                        Console.WriteLine("  SKIP automático de la fuente tras agotar reintentos por fallo.");
+                        return ResultsSourceInspection.Empty;
+                    }
+
+                    Console.WriteLine($"  Reintentando automáticamente por fallo en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
+                    await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
+                    continue;
+                }
+
+                Console.WriteLine("  Pulsa ENTER para reintentar o escribe 'skip' para continuar sin usar la fuente.");
+                var input = Console.ReadLine()?.Trim().ToLowerInvariant();
+                if (input == "skip")
+                {
+                    Console.WriteLine("  SKIP");
+                    return ResultsSourceInspection.Empty;
+                }
             }
         }
     }

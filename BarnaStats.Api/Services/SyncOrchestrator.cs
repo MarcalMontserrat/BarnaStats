@@ -353,10 +353,10 @@ public sealed class SyncOrchestrator
             StandardErrorEncoding = Encoding.UTF8
         };
 
-        startInfo.ArgumentList.Add("run");
-        startInfo.ArgumentList.Add("--project");
-        startInfo.ArgumentList.Add(_repoPaths.BarnaStatsProjectFile);
-        startInfo.ArgumentList.Add("--");
+        ConfigureDotnetInvocation(
+            startInfo,
+            _repoPaths.BarnaStatsDll,
+            _repoPaths.BarnaStatsProjectFile);
         startInfo.ArgumentList.Add("sync-all");
         startInfo.ArgumentList.Add("--non-interactive");
         if (forceRefresh)
@@ -405,9 +405,10 @@ public sealed class SyncOrchestrator
             StandardErrorEncoding = Encoding.UTF8
         };
 
-        startInfo.ArgumentList.Add("run");
-        startInfo.ArgumentList.Add("--project");
-        startInfo.ArgumentList.Add(_repoPaths.GenerateAnalysisProjectFile);
+        ConfigureDotnetInvocation(
+            startInfo,
+            _repoPaths.GenerateAnalysisDll,
+            _repoPaths.GenerateAnalysisProjectFile);
 
         using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
 
@@ -431,6 +432,20 @@ public sealed class SyncOrchestrator
 
         await process.WaitForExitAsync();
         return process.ExitCode;
+    }
+
+    private static void ConfigureDotnetInvocation(ProcessStartInfo startInfo, string compiledDllPath, string projectFilePath)
+    {
+        if (File.Exists(compiledDllPath))
+        {
+            startInfo.ArgumentList.Add(compiledDllPath);
+            return;
+        }
+
+        startInfo.ArgumentList.Add("run");
+        startInfo.ArgumentList.Add("--project");
+        startInfo.ArgumentList.Add(projectFilePath);
+        startInfo.ArgumentList.Add("--");
     }
 
     private async Task<DeleteSavedSourceResult> DeleteSavedSourceCoreAsync(int phaseId)

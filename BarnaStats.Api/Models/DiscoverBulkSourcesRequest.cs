@@ -14,6 +14,7 @@ public sealed class DiscoverBulkSourcesResponse
     public int CategoryScopesCount { get; set; }
     public int UniquePhasesCount { get; set; }
     public int DuplicatePhasesSkipped { get; set; }
+    public List<string> Warnings { get; set; } = [];
     public List<DiscoveredCategoryScope> CategoryScopes { get; set; } = [];
     public List<SyncSourceSelectionItem> Sources { get; set; } = [];
 }

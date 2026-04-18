@@ -8,6 +8,8 @@ public sealed class RepoPaths
         BarnaStatsProjectDir = Path.Combine(repoRoot, "BarnaStats");
         BarnaStatsProjectFile = Path.Combine(repoRoot, "BarnaStats", "BarnaStats.csproj");
         GenerateAnalysisProjectFile = Path.Combine(repoRoot, "GenerateAnalisys", "GenerateAnalisys.csproj");
+        BarnaStatsDll = ResolveBuiltDllPath(repoRoot, "BarnaStats");
+        GenerateAnalysisDll = ResolveBuiltDllPath(repoRoot, "GenerateAnalisys");
         BarnaStatsOutputDir = Path.Combine(BarnaStatsProjectDir, "out");
         BarnaStatsPhasesDir = Path.Combine(BarnaStatsOutputDir, "phases");
         AnalysisJson = Path.Combine(repoRoot, "barna-stats-webapp", "public", "data", "analysis.json");
@@ -19,6 +21,8 @@ public sealed class RepoPaths
     public string BarnaStatsProjectDir { get; }
     public string BarnaStatsProjectFile { get; }
     public string GenerateAnalysisProjectFile { get; }
+    public string BarnaStatsDll { get; }
+    public string GenerateAnalysisDll { get; }
     public string BarnaStatsOutputDir { get; }
     public string BarnaStatsPhasesDir { get; }
     public string AnalysisJson { get; }
@@ -57,5 +61,31 @@ public sealed class RepoPaths
                 current = parent.FullName;
             }
         }
+    }
+
+    private static string ResolveBuiltDllPath(string repoRoot, string projectName)
+    {
+        var projectDir = Path.Combine(repoRoot, projectName);
+        var binDir = Path.Combine(projectDir, "bin");
+        if (!Directory.Exists(binDir))
+            return Path.Combine(projectDir, "bin", "Debug", "net10.0", $"{projectName}.dll");
+
+        foreach (var configuration in new[] { "Release", "Debug" })
+        {
+            var configurationDir = Path.Combine(binDir, configuration);
+            if (!Directory.Exists(configurationDir))
+                continue;
+
+            var resolvedDll = Directory
+                .EnumerateFiles(configurationDir, $"{projectName}.dll", SearchOption.AllDirectories)
+                .OrderByDescending(path => path.Contains($"{Path.DirectorySeparatorChar}publish{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase))
+                .ThenByDescending(File.GetLastWriteTimeUtc)
+                .FirstOrDefault();
+
+            if (!string.IsNullOrWhiteSpace(resolvedDll))
+                return resolvedDll;
+        }
+
+        return Path.Combine(projectDir, "bin", "Debug", "net10.0", $"{projectName}.dll");
     }
 }

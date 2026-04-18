@@ -73,10 +73,7 @@ public sealed class BasquetCatalaLookupService
             .Select(NormalizeGender)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .ToList();
-        var normalizedTerritories = (territories ?? [])
-            .Select(NormalizeTerritory)
-            .Distinct()
-            .ToList();
+        var normalizedTerritories = NormalizeBulkTerritories(territories);
 
         if (normalizedGenders.Count == 0 || normalizedTerritories.Count == 0)
         {
@@ -87,8 +84,9 @@ public sealed class BasquetCatalaLookupService
             };
         }
 
+        var warnings = new List<string>();
         var categorySemaphore = new SemaphoreSlim(CategoryLookupConcurrency);
-        CategoryLookupScope[] categoryScopeResults;
+        CategoryLookupScopeResult[] categoryScopeResults;
 
         try
         {
@@ -100,15 +98,16 @@ public sealed class BasquetCatalaLookupService
                         try
                         {
                             var categories = await GetCategoriesAsync(gender, territory, cancellationToken);
-                            return new CategoryLookupScope(gender, territory, categories);
+                            return new CategoryLookupScopeResult(gender, territory, categories, null);
                         }
                         catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
                         {
-                            throw BuildScopeLookupException(
+                            var scopeException = BuildScopeLookupException(
                                 $"No se pudieron cargar las categorías para {GetGenderLabel(gender)} · {GetTerritoryLabel(territory)}.",
                                 ex,
                                 cancellationToken
                             );
+                            return new CategoryLookupScopeResult(gender, territory, [], scopeException.Message);
                         }
                         finally
                         {
@@ -123,6 +122,7 @@ public sealed class BasquetCatalaLookupService
         }
 
         var categoryScopes = categoryScopeResults
+            .Where(scope => string.IsNullOrWhiteSpace(scope.Error))
             .SelectMany(scope => scope.Categories.Select(category => new DiscoveredCategoryScopeState(
                 scope.Gender,
                 GetGenderLabel(scope.Gender),
@@ -136,6 +136,10 @@ public sealed class BasquetCatalaLookupService
             .ThenBy(scope => scope.TerritoryLabel, StringComparer.OrdinalIgnoreCase)
             .ThenBy(scope => scope.CategoryName, StringComparer.OrdinalIgnoreCase)
             .ToList();
+
+        warnings.AddRange(categoryScopeResults
+            .Where(scope => !string.IsNullOrWhiteSpace(scope.Error))
+            .Select(scope => scope.Error!));
 
         var seenUrls = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var discoveredSources = new List<SyncSourceSelectionItem>();
@@ -151,15 +155,16 @@ public sealed class BasquetCatalaLookupService
                 try
                 {
                     var phases = await GetPhasesAsync(scope.CategoryId, scope.Gender, scope.Territory, cancellationToken);
-                    return new PhaseLookupScope(scope, phases);
+                    return new PhaseLookupScopeResult(scope, phases, null);
                 }
                 catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
                 {
-                    throw BuildScopeLookupException(
+                    var scopeException = BuildScopeLookupException(
                         $"No se pudieron cargar las fases para {scope.GenderLabel} · {scope.TerritoryLabel} · {scope.CategoryName}.",
                         ex,
                         cancellationToken
                     );
+                    return new PhaseLookupScopeResult(scope, [], scopeException.Message);
                 }
                 finally
                 {
@@ -169,6 +174,12 @@ public sealed class BasquetCatalaLookupService
 
             foreach (var scope in phaseLookupResults)
             {
+                if (!string.IsNullOrWhiteSpace(scope.Error))
+                {
+                    warnings.Add(scope.Error);
+                    continue;
+                }
+
                 discoveredCategoryScopes.Add(new DiscoveredCategoryScope
                 {
                     Gender = scope.Scope.Gender,
@@ -218,6 +229,7 @@ public sealed class BasquetCatalaLookupService
             CategoryScopesCount = discoveredCategoryScopes.Count,
             UniquePhasesCount = discoveredSources.Count,
             DuplicatePhasesSkipped = duplicatePhasesSkipped,
+            Warnings = warnings,
             CategoryScopes = discoveredCategoryScopes,
             Sources = discoveredSources
         };
@@ -231,6 +243,19 @@ public sealed class BasquetCatalaLookupService
     public static int NormalizeTerritory(int territory)
     {
         return territory < 0 ? 0 : territory;
+    }
+
+    public static List<int> NormalizeBulkTerritories(IEnumerable<int>? territories)
+    {
+        var normalizedTerritories = (territories ?? [])
+            .Select(NormalizeTerritory)
+            .Distinct()
+            .OrderBy(territory => territory)
+            .ToList();
+
+        return normalizedTerritories.Contains(0)
+            ? [0]
+            : normalizedTerritories;
     }
 
     public static string GetGenderLabel(string? gender)
@@ -356,7 +381,12 @@ public sealed class BasquetCatalaLookupService
         return $"https://www.basquetcatala.cat/competicions/resultats/{phaseId}/0";
     }
 
-    private sealed record CategoryLookupScope(string Gender, int Territory, IReadOnlyList<LookupOption> Categories);
+    private sealed record CategoryLookupScopeResult(
+        string Gender,
+        int Territory,
+        IReadOnlyList<LookupOption> Categories,
+        string? Error
+    );
 
     private sealed record DiscoveredCategoryScopeState(
         string Gender,
@@ -367,8 +397,9 @@ public sealed class BasquetCatalaLookupService
         string CategoryName
     );
 
-    private sealed record PhaseLookupScope(
+    private sealed record PhaseLookupScopeResult(
         DiscoveredCategoryScopeState Scope,
-        IReadOnlyList<LookupOption> Phases
+        IReadOnlyList<LookupOption> Phases,
+        string? Error
     );
 }

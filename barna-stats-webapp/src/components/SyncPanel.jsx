@@ -484,8 +484,9 @@ const STATUS_STYLES = {
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 const ALL_PHASES_VALUE = "__all__";
 const BULK_DISCOVERY_ENDPOINT = `${API_BASE_URL}/api/basquetcatala/discover-batch`;
+const ALL_TERRITORIES_BULK_VALUE = "0";
 const DEFAULT_BULK_GENDERS = GENDER_OPTIONS.map((option) => option.value);
-const DEFAULT_BULK_TERRITORIES = TERRITORY_OPTIONS.map((option) => option.value);
+const DEFAULT_BULK_TERRITORIES = [ALL_TERRITORIES_BULK_VALUE];
 const SAVED_SOURCES_PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
 
 function readStoredArray(key, fallback) {
@@ -513,8 +514,22 @@ function readStoredArray(key, fallback) {
 function buildBulkScopeKey(genders, territories) {
     return JSON.stringify({
         genders: [...(genders ?? [])].map((value) => String(value)).sort(),
-        territories: [...(territories ?? [])].map((value) => String(value)).sort((left, right) => Number(left) - Number(right))
+        territories: normalizeBulkTerritoryValues(territories)
     });
+}
+
+function normalizeBulkTerritoryValues(values) {
+    const normalizedValues = [...new Set(
+        [...(values ?? [])]
+            .map((value) => String(value ?? "").trim())
+            .filter(Boolean)
+    )];
+
+    if (normalizedValues.includes(ALL_TERRITORIES_BULK_VALUE)) {
+        return [ALL_TERRITORIES_BULK_VALUE];
+    }
+
+    return normalizedValues.sort((left, right) => Number(left) - Number(right));
 }
 
 function pluralize(value, singular, plural) {
@@ -572,7 +587,9 @@ function SyncPanel({
     const [selectedCategory, setSelectedCategory] = useState(() => window.localStorage.getItem("barna-sync-category") ?? "");
     const [selectedPhase, setSelectedPhase] = useState(() => window.localStorage.getItem("barna-sync-phase") ?? "");
     const [selectedBulkGenders, setSelectedBulkGenders] = useState(() => readStoredArray("barna-sync-bulk-genders", DEFAULT_BULK_GENDERS));
-    const [selectedBulkTerritories, setSelectedBulkTerritories] = useState(() => readStoredArray("barna-sync-bulk-territories", DEFAULT_BULK_TERRITORIES));
+    const [selectedBulkTerritories, setSelectedBulkTerritories] = useState(() =>
+        normalizeBulkTerritoryValues(readStoredArray("barna-sync-bulk-territories", DEFAULT_BULK_TERRITORIES))
+    );
     const [bulkPreview, setBulkPreview] = useState(null);
     const [bulkPreviewLoading, setBulkPreviewLoading] = useState(false);
     const [bulkPreviewError, setBulkPreviewError] = useState("");
@@ -747,9 +764,21 @@ function SyncPanel({
     };
 
     const toggleBulkTerritory = (territoryValue) => {
-        setSelectedBulkTerritories((current) => current.includes(territoryValue)
-            ? current.filter((value) => value !== territoryValue)
-            : [...current, territoryValue]);
+        setSelectedBulkTerritories((current) => {
+            const normalizedValue = String(territoryValue);
+
+            if (normalizedValue === ALL_TERRITORIES_BULK_VALUE) {
+                return current.includes(ALL_TERRITORIES_BULK_VALUE)
+                    ? []
+                    : [ALL_TERRITORIES_BULK_VALUE];
+            }
+
+            const nextValues = current.includes(normalizedValue)
+                ? current.filter((value) => value !== normalizedValue)
+                : [...current.filter((value) => value !== ALL_TERRITORIES_BULK_VALUE), normalizedValue];
+
+            return normalizeBulkTerritoryValues(nextValues);
+        });
     };
 
     const handleSelectAllBulkGenders = () => {
@@ -789,7 +818,7 @@ function SyncPanel({
                 signal: controller.signal,
                 body: JSON.stringify({
                     genders: selectedBulkGenders,
-                    territories: selectedBulkTerritories.map((value) => Number(value))
+                    territories: normalizeBulkTerritoryValues(selectedBulkTerritories).map((value) => Number(value))
                 })
             });
 
@@ -1173,6 +1202,7 @@ function SyncPanel({
                 <div style={styles.builderHint}>
                     Esta primera versión carga siempre todas las categorías y todas las fases del alcance elegido. Si un
                     territorio o categoría solapa con otro, la fase repetida se detecta y se importa una sola vez.
+                    “Todos los territorios” absorbe cualquier territorio específico que también esté marcado.
                 </div>
 
                 <div style={styles.controls}>
@@ -1217,6 +1247,13 @@ function SyncPanel({
                     <div style={styles.warningBox}>
                         La previsualización ya no coincide con la selección actual. Revísala de nuevo antes de lanzar la
                         importación.
+                    </div>
+                ) : null}
+
+                {currentBulkPreview?.warnings?.length ? (
+                    <div style={styles.warningBox}>
+                        La previsualización se ha completado con avisos: {currentBulkPreview.warnings.length} ámbito(s)
+                        no se han podido leer y se han omitido.
                     </div>
                 ) : null}
 
@@ -1270,6 +1307,15 @@ function SyncPanel({
                         {(currentBulkPreview.categoryScopes?.length ?? 0) > 14 ? (
                             <div style={styles.builderHint}>
                                 Se muestran 14 ámbitos como muestra de un total de {currentBulkPreview.categoryScopes.length}.
+                            </div>
+                        ) : null}
+
+                        {currentBulkPreview.warnings?.length ? (
+                            <div style={styles.builderHint}>
+                                {currentBulkPreview.warnings.slice(0, 3).join(" ")}
+                                {currentBulkPreview.warnings.length > 3
+                                    ? ` Se han ocultado ${currentBulkPreview.warnings.length - 3} aviso(s) más.`
+                                    : ""}
                             </div>
                         ) : null}
                     </div>

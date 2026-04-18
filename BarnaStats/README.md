@@ -96,6 +96,8 @@ dotnet run --project BarnaStats/BarnaStats.csproj
 
 El output se guarda en `out/stats` y `out/moves` si trabajas sobre el mapping raíz, o en la carpeta de la fase correspondiente si has usado una fuente con scope.
 
+Si quieres apretar la descarga, puedes subir la concurrencia con `BARNASTATS_MAX_PARALLEL_MATCH_DOWNLOADS=8` antes de ejecutar `sync-all` o la descarga directa.
+
 ### 3. Generar análisis
 
 Después hay que ejecutar `GenerateAnalisys` para producir el `analysis.json` consumido por la web.

@@ -15,7 +15,8 @@ var jsonOptions = new JsonSerializerOptions
     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
     WriteIndented = true
 };
-const int MaxParallelMatchDownloads = 3;
+const int DefaultMaxParallelMatchDownloads = 6;
+const int DownloadErrorCooldownMs = 750;
 
 if (args.Length > 0)
 {
@@ -348,7 +349,8 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
 
     using var http = MsStatsHttpClientFactory.Create();
     var client = new MsStatsClient(http);
-    var concurrency = Math.Min(MaxParallelMatchDownloads, pendingMappings.Count);
+    var requestedConcurrency = GetConfiguredMaxParallelMatchDownloads();
+    var concurrency = Math.Min(requestedConcurrency, pendingMappings.Count);
     var consoleLock = new object();
 
     Console.WriteLine($"Partidos a descargar: {pendingMappings.Count}");
@@ -390,7 +392,6 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
                         : "  OK -> sin cambios en stats ni moves");
                 }
 
-                await Task.Delay(300);
                 return (Downloaded: true, FilesChanged: anyChanged);
             }
             catch (Exception ex)
@@ -400,7 +401,7 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
                     Console.WriteLine($"  ERROR -> {ex.Message}");
                 }
 
-                await Task.Delay(300);
+                await Task.Delay(DownloadErrorCooldownMs);
                 return (Downloaded: false, FilesChanged: false);
             }
         }
@@ -420,6 +421,14 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
     Console.WriteLine($"Stats guardados en: {Path.GetFullPath(storage.StatsDir)}");
     Console.WriteLine($"Moves guardados en: {Path.GetFullPath(storage.MovesDir)}");
     return (true, filesChanged);
+}
+
+int GetConfiguredMaxParallelMatchDownloads()
+{
+    var rawValue = Environment.GetEnvironmentVariable("BARNASTATS_MAX_PARALLEL_MATCH_DOWNLOADS");
+    return int.TryParse(rawValue, out var parsedValue) && parsedValue > 0
+        ? parsedValue
+        : DefaultMaxParallelMatchDownloads;
 }
 
 async Task<bool> RunGenerateAnalysisAsync()
