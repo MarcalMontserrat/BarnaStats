@@ -1875,14 +1875,14 @@
     "phaseRound": 9,
     "roundNumber": 18,
     "homeTeam": "SESE C",
-    "homeScore": 52,
-    "awayScore": 27,
+    "homeScore": 2,
+    "awayScore": 0,
     "awayTeam": "CB SANT JUST U09",
     "isHome": false,
     "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
     "rivalTeam": "SESE C",
-    "officialTeamScore": 27,
-    "officialRivalScore": 52,
+    "officialTeamScore": 0,
+    "officialRivalScore": 2,
     "teamScore": 27,
     "rivalScore": 52,
     "result": "L",
@@ -1893,79 +1893,30 @@
     "teamTopScorerPoints": 11,
     "insights": {
       "leadChanges": 0,
-      "ties": 2,
-      "maxLead": 2,
-      "maxDeficit": 27,
-      "bestRun": 4,
-      "rivalBestRun": 15,
-      "closingRun": 2,
-      "rivalClosingRun": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 2,
+      "bestRun": 0,
+      "rivalBestRun": 2,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
       "firstScorer": "SIENA CASQUERO JOVELLANOS",
       "firstScorerTeam": "SESE C",
       "lastScorer": "J\u00DALIA DOBLAS GRAU",
       "lastScorerTeam": "CB SANT JUST U09",
       "teamFirstScorer": "AINA SANTACREU CARRILLO",
       "teamLastScorer": "J\u00DALIA DOBLAS GRAU",
-      "bestPeriodLabel": "Parcial 6",
-      "bestPeriodDiff": 2,
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": -2,
       "worstPeriodLabel": "Parcial 1",
-      "worstPeriodDiff": -11,
+      "worstPeriodDiff": -2,
       "periodScores": [
         {
           "periodNumber": 1,
           "label": "Parcial 1",
-          "teamPoints": 4,
-          "rivalPoints": 15,
-          "diff": -11
-        },
-        {
-          "periodNumber": 2,
-          "label": "Parcial 2",
-          "teamPoints": 2,
-          "rivalPoints": 4,
+          "teamPoints": 0,
+          "rivalPoints": 2,
           "diff": -2
-        },
-        {
-          "periodNumber": 3,
-          "label": "Parcial 3",
-          "teamPoints": 7,
-          "rivalPoints": 8,
-          "diff": -1
-        },
-        {
-          "periodNumber": 4,
-          "label": "Parcial 4",
-          "teamPoints": 1,
-          "rivalPoints": 4,
-          "diff": -3
-        },
-        {
-          "periodNumber": 5,
-          "label": "Parcial 5",
-          "teamPoints": 4,
-          "rivalPoints": 4,
-          "diff": 0
-        },
-        {
-          "periodNumber": 6,
-          "label": "Parcial 6",
-          "teamPoints": 2,
-          "rivalPoints": 0,
-          "diff": 2
-        },
-        {
-          "periodNumber": 7,
-          "label": "Parcial 7",
-          "teamPoints": 3,
-          "rivalPoints": 13,
-          "diff": -10
-        },
-        {
-          "periodNumber": 8,
-          "label": "Parcial 8",
-          "teamPoints": 4,
-          "rivalPoints": 4,
-          "diff": 0
         }
       ]
     },

@@ -117,6 +117,46 @@ app.MapGet("/api/basquetcatala/phases", async (
     }
 });
 
+app.MapPost("/api/basquetcatala/discover-batch", async (
+    DiscoverBulkSourcesRequest request,
+    BasquetCatalaLookupService lookupService,
+    CancellationToken cancellationToken) =>
+{
+    if (request.Genders is null || request.Genders.Count == 0)
+    {
+        return Results.BadRequest(new
+        {
+            error = "Tienes que indicar al menos un género."
+        });
+    }
+
+    if (request.Territories is null || request.Territories.Count == 0)
+    {
+        return Results.BadRequest(new
+        {
+            error = "Tienes que indicar al menos un territorio."
+        });
+    }
+
+    try
+    {
+        var response = await lookupService.DiscoverBulkSourcesAsync(
+            request.Genders,
+            request.Territories,
+            cancellationToken
+        );
+        return Results.Ok(response);
+    }
+    catch (HttpRequestException ex)
+    {
+        return Results.Problem(
+            title: "No se pudo descubrir el alcance masivo.",
+            detail: ex.Message,
+            statusCode: StatusCodes.Status502BadGateway
+        );
+    }
+});
+
 app.MapDelete("/api/results-sources/{phaseId:int}", async (int phaseId, SyncOrchestrator orchestrator) =>
 {
     if (phaseId <= 0)

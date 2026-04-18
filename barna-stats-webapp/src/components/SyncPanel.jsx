@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useDeferredValue, useEffect, useRef, useState} from "react";
 import PrettySelect from "./PrettySelect.jsx";
 import {
     buildResultsUrl,
@@ -67,6 +67,128 @@ const styles = {
     },
     builderHint: {
         color: "var(--muted)",
+        fontSize: 13,
+        lineHeight: 1.6
+    },
+    bulkSection: {
+        display: "grid",
+        gap: 16,
+        padding: 18,
+        borderRadius: "var(--radius-lg)",
+        background: "rgba(255, 249, 242, 0.88)",
+        border: "1px solid rgba(107, 86, 58, 0.14)"
+    },
+    bulkSectionHeader: {
+        display: "grid",
+        gap: 8
+    },
+    bulkSectionTitle: {
+        margin: 0,
+        fontSize: "1.2rem"
+    },
+    bulkSectionBody: {
+        color: "var(--muted)",
+        fontSize: 14,
+        lineHeight: 1.6
+    },
+    bulkChoiceGrid: {
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+        gap: 14
+    },
+    bulkChoiceCard: {
+        display: "grid",
+        gap: 12,
+        padding: 16,
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 251, 245, 0.94)",
+        border: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    bulkChoiceHeader: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    bulkChoiceTitle: {
+        color: "var(--text)",
+        fontSize: 14,
+        fontWeight: 800
+    },
+    compactActions: {
+        display: "flex",
+        gap: 8,
+        flexWrap: "wrap"
+    },
+    compactButton: {
+        minHeight: 34,
+        padding: "0 12px",
+        borderRadius: 12,
+        border: "1px solid rgba(26, 53, 87, 0.12)",
+        background: "rgba(255, 251, 245, 0.96)",
+        color: "var(--navy)",
+        fontWeight: 800,
+        cursor: "pointer"
+    },
+    compactButtonMuted: {
+        opacity: 0.7
+    },
+    toggleWrap: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    toggleChip: {
+        minHeight: 40,
+        padding: "0 14px",
+        borderRadius: 999,
+        border: "1px solid rgba(26, 53, 87, 0.12)",
+        background: "rgba(255, 251, 245, 0.96)",
+        color: "var(--navy)",
+        fontWeight: 800,
+        cursor: "pointer",
+        boxShadow: "var(--shadow-sm)"
+    },
+    toggleChipActive: {
+        background: "linear-gradient(135deg, #1a3557 0%, #bc3f2b 100%)",
+        borderColor: "transparent",
+        color: "#fff8ef"
+    },
+    previewSection: {
+        display: "grid",
+        gap: 14
+    },
+    previewList: {
+        display: "grid",
+        gap: 8,
+        maxHeight: 260,
+        overflowY: "auto"
+    },
+    previewItem: {
+        display: "grid",
+        gap: 4,
+        padding: "12px 14px",
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 251, 245, 0.94)",
+        border: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    previewItemTitle: {
+        color: "var(--text)",
+        fontSize: 14,
+        fontWeight: 800
+    },
+    previewItemMeta: {
+        color: "var(--muted)",
+        fontSize: 12,
+        lineHeight: 1.5
+    },
+    warningBox: {
+        padding: "12px 14px",
+        borderRadius: "var(--radius-md)",
+        background: "rgba(254, 240, 203, 0.55)",
+        border: "1px solid rgba(210, 160, 52, 0.24)",
+        color: "#7a5700",
         fontSize: 13,
         lineHeight: 1.6
     },
@@ -196,6 +318,10 @@ const styles = {
         display: "grid",
         gap: 10
     },
+    savedSourcesToolbar: {
+        display: "grid",
+        gap: 12
+    },
     savedSourcesHeaderRow: {
         display: "flex",
         alignItems: "center",
@@ -211,6 +337,75 @@ const styles = {
         color: "var(--muted)",
         fontSize: 14,
         lineHeight: 1.6
+    },
+    savedSourcesControls: {
+        display: "flex",
+        gap: 12,
+        flexWrap: "wrap",
+        alignItems: "flex-end"
+    },
+    savedSourcesSearchField: {
+        display: "grid",
+        gap: 6,
+        flex: "1 1 360px",
+        minWidth: "min(100%, 320px)"
+    },
+    savedSourcesSearchLabel: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase"
+    },
+    savedSourcesSearchInput: {
+        minHeight: 48,
+        padding: "0 16px",
+        borderRadius: 16,
+        border: "1px solid rgba(107, 86, 58, 0.18)",
+        background: "rgba(255, 252, 247, 0.94)",
+        color: "var(--text)",
+        fontSize: 14
+    },
+    savedSourcesSummaryRow: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: 12,
+        flexWrap: "wrap"
+    },
+    savedSourcesSummary: {
+        color: "var(--muted)",
+        fontSize: 13,
+        lineHeight: 1.5
+    },
+    savedSourcesPagination: {
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        flexWrap: "wrap",
+        justifyContent: "flex-end"
+    },
+    savedSourcesPaginationMeta: {
+        color: "var(--muted)",
+        fontSize: 12,
+        fontWeight: 800,
+        letterSpacing: "0.06em",
+        textTransform: "uppercase"
+    },
+    savedSourcesPaginationButton: {
+        minHeight: 36,
+        padding: "0 14px",
+        borderRadius: 12,
+        border: "1px solid rgba(26, 53, 87, 0.12)",
+        background: "rgba(255, 251, 245, 0.96)",
+        color: "var(--navy)",
+        fontSize: 13,
+        fontWeight: 800,
+        cursor: "pointer"
+    },
+    savedSourcesPaginationButtonMuted: {
+        opacity: 0.5,
+        cursor: "not-allowed"
     },
     savedSourcesTableShell: {
         overflowX: "auto",
@@ -286,7 +481,53 @@ const STATUS_STYLES = {
     failed: {background: "#f8dcd6", color: "#9d2618"}
 };
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 const ALL_PHASES_VALUE = "__all__";
+const BULK_DISCOVERY_ENDPOINT = `${API_BASE_URL}/api/basquetcatala/discover-batch`;
+const DEFAULT_BULK_GENDERS = GENDER_OPTIONS.map((option) => option.value);
+const DEFAULT_BULK_TERRITORIES = TERRITORY_OPTIONS.map((option) => option.value);
+const SAVED_SOURCES_PAGE_SIZE_OPTIONS = [10, 25, 50, 100];
+
+function readStoredArray(key, fallback) {
+    try {
+        const rawValue = window.localStorage.getItem(key);
+        if (!rawValue) {
+            return fallback;
+        }
+
+        const parsedValue = JSON.parse(rawValue);
+        if (!Array.isArray(parsedValue)) {
+            return fallback;
+        }
+
+        const normalizedValues = parsedValue
+            .map((value) => String(value ?? "").trim())
+            .filter(Boolean);
+
+        return normalizedValues.length > 0 ? normalizedValues : fallback;
+    } catch {
+        return fallback;
+    }
+}
+
+function buildBulkScopeKey(genders, territories) {
+    return JSON.stringify({
+        genders: [...(genders ?? [])].map((value) => String(value)).sort(),
+        territories: [...(territories ?? [])].map((value) => String(value)).sort((left, right) => Number(left) - Number(right))
+    });
+}
+
+function pluralize(value, singular, plural) {
+    return `${value} ${value === 1 ? singular : plural}`;
+}
+
+function normalizeSearchText(value) {
+    return String(value ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+}
 
 function SyncActionIcon() {
     return (
@@ -330,6 +571,19 @@ function SyncPanel({
     const [selectedTerritory, setSelectedTerritory] = useState(() => window.localStorage.getItem("barna-sync-territory") ?? "0");
     const [selectedCategory, setSelectedCategory] = useState(() => window.localStorage.getItem("barna-sync-category") ?? "");
     const [selectedPhase, setSelectedPhase] = useState(() => window.localStorage.getItem("barna-sync-phase") ?? "");
+    const [selectedBulkGenders, setSelectedBulkGenders] = useState(() => readStoredArray("barna-sync-bulk-genders", DEFAULT_BULK_GENDERS));
+    const [selectedBulkTerritories, setSelectedBulkTerritories] = useState(() => readStoredArray("barna-sync-bulk-territories", DEFAULT_BULK_TERRITORIES));
+    const [bulkPreview, setBulkPreview] = useState(null);
+    const [bulkPreviewLoading, setBulkPreviewLoading] = useState(false);
+    const [bulkPreviewError, setBulkPreviewError] = useState("");
+    const [savedSourcesQuery, setSavedSourcesQuery] = useState("");
+    const [savedSourcesPage, setSavedSourcesPage] = useState(1);
+    const [savedSourcesPageSize, setSavedSourcesPageSize] = useState(() => {
+        const storedValue = Number(window.localStorage.getItem("barna-sync-saved-sources-page-size"));
+        return SAVED_SOURCES_PAGE_SIZE_OPTIONS.includes(storedValue) ? storedValue : 25;
+    });
+    const bulkPreviewControllerRef = useRef(null);
+    const deferredSavedSourcesQuery = useDeferredValue(savedSourcesQuery);
     const {
         categories,
         categoriesLoading,
@@ -360,6 +614,11 @@ function SyncPanel({
         ? `${batchSources.length} fases seleccionadas`
         : generatedSourceUrl;
     const effectiveSourceUrl = generatedSourceUrl || manualSourceUrl.trim();
+    const bulkScopeKey = buildBulkScopeKey(selectedBulkGenders, selectedBulkTerritories);
+    const hasBulkSelection = selectedBulkGenders.length > 0 && selectedBulkTerritories.length > 0;
+    const isBulkPreviewCurrent = bulkPreview?.scopeKey === bulkScopeKey;
+    const currentBulkPreview = isBulkPreviewCurrent ? bulkPreview?.payload ?? null : null;
+    const isBulkPreviewStale = bulkPreview != null && !isBulkPreviewCurrent;
     const scopeLabel = job?.sourceKind === "phase"
         ? `Fase ${job.sourceId ?? "-"}`
         : job?.sourceKind === "registry"
@@ -390,9 +649,26 @@ function SyncPanel({
         window.localStorage.setItem("barna-sync-phase", selectedPhase);
     }, [selectedPhase]);
 
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-bulk-genders", JSON.stringify(selectedBulkGenders));
+    }, [selectedBulkGenders]);
+
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-bulk-territories", JSON.stringify(selectedBulkTerritories));
+    }, [selectedBulkTerritories]);
+
+    useEffect(() => {
+        window.localStorage.setItem("barna-sync-saved-sources-page-size", String(savedSourcesPageSize));
+    }, [savedSourcesPageSize]);
+
+    useEffect(() => () => {
+        bulkPreviewControllerRef.current?.abort();
+    }, []);
+
     const status = job?.status ?? (apiAvailable ? "idle" : "offline");
     const isDeleting = deletingPhaseId != null;
     const isBusy = starting || status === "pending" || status === "running" || isDeleting;
+    const canUseApi = apiAvailable && !isBusy;
     const statusLabel = status === "idle"
         ? "Lista"
         : status === "offline"
@@ -464,6 +740,105 @@ function SyncPanel({
         setSelectedPhase(event.target.value);
     };
 
+    const toggleBulkGender = (genderValue) => {
+        setSelectedBulkGenders((current) => current.includes(genderValue)
+            ? current.filter((value) => value !== genderValue)
+            : [...current, genderValue]);
+    };
+
+    const toggleBulkTerritory = (territoryValue) => {
+        setSelectedBulkTerritories((current) => current.includes(territoryValue)
+            ? current.filter((value) => value !== territoryValue)
+            : [...current, territoryValue]);
+    };
+
+    const handleSelectAllBulkGenders = () => {
+        setSelectedBulkGenders(DEFAULT_BULK_GENDERS);
+    };
+
+    const handleClearBulkGenders = () => {
+        setSelectedBulkGenders([]);
+    };
+
+    const handleSelectAllBulkTerritories = () => {
+        setSelectedBulkTerritories(DEFAULT_BULK_TERRITORIES);
+    };
+
+    const handleClearBulkTerritories = () => {
+        setSelectedBulkTerritories([]);
+    };
+
+    const handlePreviewBulkScope = async () => {
+        if (!hasBulkSelection || isBusy) {
+            return;
+        }
+
+        bulkPreviewControllerRef.current?.abort();
+
+        const controller = new AbortController();
+        bulkPreviewControllerRef.current = controller;
+        setBulkPreviewLoading(true);
+        setBulkPreviewError("");
+
+        try {
+            const response = await fetch(BULK_DISCOVERY_ENDPOINT, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                signal: controller.signal,
+                body: JSON.stringify({
+                    genders: selectedBulkGenders,
+                    territories: selectedBulkTerritories.map((value) => Number(value))
+                })
+            });
+
+            const hasJson = response.headers
+                .get("content-type")
+                ?.includes("application/json");
+            const payload = hasJson ? await response.json() : null;
+
+            if (!response.ok) {
+                throw new Error(payload?.detail ?? payload?.error ?? "No se pudo previsualizar la carga masiva.");
+            }
+
+            setBulkPreview({
+                scopeKey: bulkScopeKey,
+                payload
+            });
+        } catch (err) {
+            if (controller.signal.aborted) {
+                return;
+            }
+
+            setBulkPreviewError(String(err));
+        } finally {
+            if (bulkPreviewControllerRef.current === controller) {
+                bulkPreviewControllerRef.current = null;
+            }
+
+            if (!controller.signal.aborted) {
+                setBulkPreviewLoading(false);
+            }
+        }
+    };
+
+    const handleStartBulkImport = async () => {
+        if (!currentBulkPreview?.sources?.length || isBusy || bulkPreviewLoading) {
+            return;
+        }
+
+        const description = [
+            "Carga masiva",
+            pluralize(currentBulkPreview.genders?.length ?? selectedBulkGenders.length, "género", "géneros"),
+            pluralize(currentBulkPreview.territories?.length ?? selectedBulkTerritories.length, "territorio", "territorios"),
+            pluralize(currentBulkPreview.uniqueCategoryNamesCount ?? 0, "categoría", "categorías"),
+            pluralize(currentBulkPreview.uniquePhasesCount ?? currentBulkPreview.sources.length, "fase", "fases")
+        ].join(" · ");
+
+        await onStartSyncBatch(currentBulkPreview.sources, description);
+    };
+
     const handleStartAllSavedSources = async () => {
         if (!savedSources?.length || isBusy) {
             return;
@@ -488,7 +863,17 @@ function SyncPanel({
         await onDeleteSavedSource?.(Number(source.phaseId));
     };
 
-    const formatSourceReference = (source) => {
+    const handleSavedSourcesQueryChange = (event) => {
+        setSavedSourcesQuery(event.target.value);
+        setSavedSourcesPage(1);
+    };
+
+    const handleSavedSourcesPageSizeChange = (event) => {
+        setSavedSourcesPageSize(Number(event.target.value));
+        setSavedSourcesPage(1);
+    };
+
+    function formatSourceReference(source) {
         const parts = [
             source.levelName,
             source.groupCode ? `Grupo ${source.groupCode}` : "",
@@ -504,15 +889,49 @@ function SyncPanel({
         }
 
         return "Fuente sin referencia";
-    };
+    }
 
-    const formatLastSync = (value) => {
+    function formatLastSync(value) {
         if (!value) {
             return "Nunca";
         }
 
         return new Date(value).toLocaleString("es-ES");
-    };
+    }
+
+    const normalizedSavedSourcesQuery = normalizeSearchText(deferredSavedSourcesQuery);
+    const filteredSavedSources = (savedSources ?? []).filter((source) => {
+        if (!normalizedSavedSourcesQuery) {
+            return true;
+        }
+
+        const searchText = normalizeSearchText([
+            source.categoryName,
+            formatSourceReference(source),
+            source.phaseId ? `Fase ${source.phaseId}` : "",
+            source.sourceUrl
+        ].filter(Boolean).join(" "));
+
+        return searchText.includes(normalizedSavedSourcesQuery);
+    });
+    const savedSourcesPageCount = Math.max(1, Math.ceil(filteredSavedSources.length / savedSourcesPageSize));
+    const currentSavedSourcesPage = Math.min(savedSourcesPage, savedSourcesPageCount);
+    const paginatedSavedSources = filteredSavedSources.slice(
+        (currentSavedSourcesPage - 1) * savedSourcesPageSize,
+        currentSavedSourcesPage * savedSourcesPageSize
+    );
+    const savedSourcesRangeStart = filteredSavedSources.length === 0
+        ? 0
+        : ((currentSavedSourcesPage - 1) * savedSourcesPageSize) + 1;
+    const savedSourcesRangeEnd = filteredSavedSources.length === 0
+        ? 0
+        : savedSourcesRangeStart + paginatedSavedSources.length - 1;
+
+    useEffect(() => {
+        if (savedSourcesPage > savedSourcesPageCount) {
+            setSavedSourcesPage(savedSourcesPageCount);
+        }
+    }, [savedSourcesPage, savedSourcesPageCount]);
 
     return (
         <form style={styles.panel} onSubmit={handleSubmit}>
@@ -526,7 +945,8 @@ function SyncPanel({
                 <div style={styles.helper}>
                     Selecciona género, territorio, categoría y fase para construir la URL oficial por detrás. La app
                     obtendrá los partidos de la fase, descargará `stats` y `moves` y actualizará el análisis de la web.
-                    Si aparece un captcha, se abrirá el navegador auxiliar.
+                    Si aparece un captcha o verificación de seguridad, se abrirá el navegador auxiliar y el proceso
+                    esperará sin recargar la página.
                 </div>
             </div>
 
@@ -636,10 +1056,10 @@ function SyncPanel({
                     />
                     <button
                         type="submit"
-                        style={(!effectiveSourceUrl && !isAllPhasesSelection) || isBusy
+                        style={(!effectiveSourceUrl && !isAllPhasesSelection) || !apiAvailable || isBusy
                             ? {...styles.button, ...styles.mutedButton}
                             : styles.button}
-                        disabled={(!effectiveSourceUrl && !isAllPhasesSelection) || isBusy}
+                        disabled={(!effectiveSourceUrl && !isAllPhasesSelection) || !apiAvailable || isBusy}
                     >
                         {isBusy
                             ? "Importando..."
@@ -680,16 +1100,192 @@ function SyncPanel({
                 />
             </div>
 
+            <div style={styles.bulkSection}>
+                <div style={styles.bulkSectionHeader}>
+                    <h3 style={styles.bulkSectionTitle}>Carga masiva</h3>
+                    <div style={styles.bulkSectionBody}>
+                        Descubre de una vez todas las fases visibles para varios géneros y territorios. El backend
+                        expande categorías y fases, deduplica coincidencias y te deja revisar el alcance antes de
+                        importar.
+                    </div>
+                </div>
+
+                <div style={styles.bulkChoiceGrid}>
+                    <div style={styles.bulkChoiceCard}>
+                        <div style={styles.bulkChoiceHeader}>
+                            <div style={styles.bulkChoiceTitle}>Géneros</div>
+                            <div style={styles.compactActions}>
+                                <button type="button" style={styles.compactButton} onClick={handleSelectAllBulkGenders}>
+                                    Todo
+                                </button>
+                                <button type="button" style={{...styles.compactButton, ...styles.compactButtonMuted}} onClick={handleClearBulkGenders}>
+                                    Ninguno
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style={styles.toggleWrap}>
+                            {GENDER_OPTIONS.map((option) => (
+                                <button
+                                    key={option.value}
+                                    type="button"
+                                    style={selectedBulkGenders.includes(option.value)
+                                        ? {...styles.toggleChip, ...styles.toggleChipActive}
+                                        : styles.toggleChip}
+                                    onClick={() => toggleBulkGender(option.value)}
+                                >
+                                    {option.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div style={styles.bulkChoiceCard}>
+                        <div style={styles.bulkChoiceHeader}>
+                            <div style={styles.bulkChoiceTitle}>Territorios</div>
+                            <div style={styles.compactActions}>
+                                <button type="button" style={styles.compactButton} onClick={handleSelectAllBulkTerritories}>
+                                    Todo
+                                </button>
+                                <button type="button" style={{...styles.compactButton, ...styles.compactButtonMuted}} onClick={handleClearBulkTerritories}>
+                                    Ninguno
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style={styles.toggleWrap}>
+                            {TERRITORY_OPTIONS.map((option) => (
+                                <button
+                                    key={option.value}
+                                    type="button"
+                                    style={selectedBulkTerritories.includes(option.value)
+                                        ? {...styles.toggleChip, ...styles.toggleChipActive}
+                                        : styles.toggleChip}
+                                    onClick={() => toggleBulkTerritory(option.value)}
+                                >
+                                    {option.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                <div style={styles.builderHint}>
+                    Esta primera versión carga siempre todas las categorías y todas las fases del alcance elegido. Si un
+                    territorio o categoría solapa con otro, la fase repetida se detecta y se importa una sola vez.
+                </div>
+
+                <div style={styles.controls}>
+                    <button
+                        type="button"
+                        style={!hasBulkSelection || !apiAvailable || isBusy || bulkPreviewLoading
+                            ? {...styles.button, ...styles.mutedButton}
+                            : styles.button}
+                        disabled={!hasBulkSelection || !apiAvailable || isBusy || bulkPreviewLoading}
+                        onClick={() => void handlePreviewBulkScope()}
+                    >
+                        {bulkPreviewLoading ? "Previsualizando..." : "Previsualizar alcance"}
+                    </button>
+
+                    <button
+                        type="button"
+                        style={!currentBulkPreview?.sources?.length || !apiAvailable || isBusy || bulkPreviewLoading || isBulkPreviewStale
+                            ? {...styles.button, ...styles.mutedButton}
+                            : styles.button}
+                        disabled={!currentBulkPreview?.sources?.length || !apiAvailable || isBusy || bulkPreviewLoading || isBulkPreviewStale}
+                        onClick={() => void handleStartBulkImport()}
+                    >
+                        {isBusy
+                            ? "Importando..."
+                            : currentBulkPreview?.sources?.length
+                                ? `Importar ${currentBulkPreview.sources.length} fases`
+                                : "Importar alcance"}
+                    </button>
+                </div>
+
+                {!hasBulkSelection ? (
+                    <div style={styles.subtleError}>
+                        Marca al menos un género y un territorio para construir el alcance.
+                    </div>
+                ) : null}
+
+                {bulkPreviewError ? (
+                    <div style={styles.subtleError}>{bulkPreviewError}</div>
+                ) : null}
+
+                {isBulkPreviewStale ? (
+                    <div style={styles.warningBox}>
+                        La previsualización ya no coincide con la selección actual. Revísala de nuevo antes de lanzar la
+                        importación.
+                    </div>
+                ) : null}
+
+                {currentBulkPreview ? (
+                    <div style={styles.previewSection}>
+                        <div style={styles.metaGrid}>
+                            <div style={styles.metaCard}>
+                                <div style={styles.metaLabel}>Géneros</div>
+                                <div style={styles.metaValue}>{pluralize(currentBulkPreview.genders?.length ?? 0, "género", "géneros")}</div>
+                            </div>
+                            <div style={styles.metaCard}>
+                                <div style={styles.metaLabel}>Territorios</div>
+                                <div style={styles.metaValue}>{pluralize(currentBulkPreview.territories?.length ?? 0, "territorio", "territorios")}</div>
+                            </div>
+                            <div style={styles.metaCard}>
+                                <div style={styles.metaLabel}>Categorías</div>
+                                <div style={styles.metaValue}>
+                                    {pluralize(currentBulkPreview.uniqueCategoryNamesCount ?? 0, "categoría", "categorías")}
+                                    {currentBulkPreview.categoryScopesCount > 0
+                                        ? ` · ${pluralize(currentBulkPreview.categoryScopesCount, "ámbito", "ámbitos")}`
+                                        : ""}
+                                </div>
+                            </div>
+                            <div style={styles.metaCard}>
+                                <div style={styles.metaLabel}>Fases únicas</div>
+                                <div style={styles.metaValue}>
+                                    {pluralize(currentBulkPreview.uniquePhasesCount ?? currentBulkPreview.sources.length, "fase", "fases")}
+                                    {currentBulkPreview.duplicatePhasesSkipped > 0
+                                        ? ` · ${currentBulkPreview.duplicatePhasesSkipped} duplicadas omitidas`
+                                        : ""}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style={styles.previewList}>
+                            {(currentBulkPreview.categoryScopes ?? []).slice(0, 14).map((scope) => (
+                                <div
+                                    key={`${scope.gender}:${scope.territory}:${scope.categoryId}`}
+                                    style={styles.previewItem}
+                                >
+                                    <div style={styles.previewItemTitle}>
+                                        {scope.genderLabel} · {scope.territoryLabel}
+                                    </div>
+                                    <div style={styles.previewItemMeta}>
+                                        {scope.categoryName} · {pluralize(scope.phasesCount ?? 0, "fase", "fases")}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {(currentBulkPreview.categoryScopes?.length ?? 0) > 14 ? (
+                            <div style={styles.builderHint}>
+                                Se muestran 14 ámbitos como muestra de un total de {currentBulkPreview.categoryScopes.length}.
+                            </div>
+                        ) : null}
+                    </div>
+                ) : null}
+            </div>
+
             <div style={styles.savedSourcesSection}>
                 <div style={styles.savedSourcesHeader}>
                     <div style={styles.savedSourcesHeaderRow}>
                         <h3 style={styles.savedSourcesTitle}>Fases guardadas</h3>
                         <button
                             type="button"
-                            style={!savedSources?.length || isBusy
+                            style={!savedSources?.length || !apiAvailable || isBusy
                                 ? {...styles.inlineTextButton, ...styles.mutedButton}
                                 : styles.inlineTextButton}
-                            disabled={!savedSources?.length || isBusy}
+                            disabled={!savedSources?.length || !apiAvailable || isBusy}
                             onClick={() => void handleStartAllSavedSources()}
                         >
                             {isBusy ? "Sincronizando..." : "Sincronizar todo"}
@@ -705,59 +1301,131 @@ function SyncPanel({
                 ) : savedSourcesError ? (
                     <div style={styles.error}>{savedSourcesError}</div>
                 ) : savedSources?.length ? (
-                    <div style={styles.savedSourcesTableShell}>
-                        <table style={styles.savedSourcesTable}>
-                            <thead>
-                            <tr>
-                                <th style={styles.savedSourcesHeaderCell}>Categoría</th>
-                                <th style={styles.savedSourcesHeaderCell}>Referencia</th>
-                                <th style={styles.savedSourcesHeaderCell}>Última sincronización</th>
-                                <th style={styles.savedSourcesHeaderCell}>Acción</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {savedSources.map((source) => (
-                                <tr key={source.sourceUrl}>
-                                    <td style={styles.savedSourcesBodyCell}>
-                                        {source.categoryName || "Sin categoría"}
-                                    </td>
-                                    <td style={styles.savedSourcesBodyCell}>
-                                        <div style={styles.savedSourcePrimary}>{formatSourceReference(source)}</div>
-                                        <div style={styles.savedSourceSecondary}>{source.sourceUrl}</div>
-                                    </td>
-                                    <td style={styles.savedSourcesBodyCell}>
-                                        {formatLastSync(source.lastSyncedAtUtc)}
-                                    </td>
-                                    <td style={styles.savedSourcesBodyCell}>
-                                        <div style={styles.inlineActions}>
-                                            <button
-                                                type="button"
-                                                style={isBusy ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
-                                                disabled={isBusy}
-                                                onClick={() => void handleStartSavedSource(source.sourceUrl)}
-                                                aria-label={`Sincronizar ${formatSourceReference(source)}`}
-                                                title="Sincronizar"
-                                            >
-                                                <SyncActionIcon/>
-                                            </button>
-                                            <button
-                                                type="button"
-                                                style={isBusy || !source.phaseId
-                                                    ? {...styles.inlineButton, ...styles.inlineDangerButton, ...styles.mutedButton}
-                                                    : {...styles.inlineButton, ...styles.inlineDangerButton}}
-                                                disabled={isBusy || !source.phaseId}
-                                                onClick={() => void handleDeleteSavedSource(source)}
-                                                aria-label={`Borrar ${formatSourceReference(source)}`}
-                                                title={deletingPhaseId === source.phaseId ? "Borrando..." : "Borrar"}
-                                            >
-                                                <TrashActionIcon/>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        </table>
+                    <div style={styles.savedSourcesToolbar}>
+                        <div style={styles.savedSourcesControls}>
+                            <label style={styles.savedSourcesSearchField}>
+                                <span style={styles.savedSourcesSearchLabel}>Buscar fase</span>
+                                <input
+                                    type="search"
+                                    value={savedSourcesQuery}
+                                    onChange={handleSavedSourcesQueryChange}
+                                    placeholder="Categoría, nivel, grupo, fase, URL o id"
+                                    style={styles.savedSourcesSearchInput}
+                                />
+                            </label>
+
+                            <PrettySelect
+                                label="Por página"
+                                value={String(savedSourcesPageSize)}
+                                onChange={handleSavedSourcesPageSizeChange}
+                                ariaLabel="Selecciona cuántas fases mostrar por página"
+                                minWidth="160px"
+                            >
+                                {SAVED_SOURCES_PAGE_SIZE_OPTIONS.map((option) => (
+                                    <option key={option} value={option}>
+                                        {option}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        </div>
+
+                        <div style={styles.savedSourcesSummaryRow}>
+                            <div style={styles.savedSourcesSummary}>
+                                {normalizedSavedSourcesQuery
+                                    ? `${pluralize(filteredSavedSources.length, "coincidencia", "coincidencias")} de ${savedSources.length} fases guardadas`
+                                    : `${savedSources.length} fases guardadas`}
+                                {paginatedSavedSources.length > 0
+                                    ? ` · Mostrando ${savedSourcesRangeStart}-${savedSourcesRangeEnd}`
+                                    : ""}
+                            </div>
+
+                            <div style={styles.savedSourcesPagination}>
+                                <span style={styles.savedSourcesPaginationMeta}>
+                                    Página {currentSavedSourcesPage} de {savedSourcesPageCount}
+                                </span>
+                                <button
+                                    type="button"
+                                    style={currentSavedSourcesPage <= 1
+                                        ? {...styles.savedSourcesPaginationButton, ...styles.savedSourcesPaginationButtonMuted}
+                                        : styles.savedSourcesPaginationButton}
+                                    disabled={currentSavedSourcesPage <= 1}
+                                    onClick={() => setSavedSourcesPage((current) => Math.max(1, current - 1))}
+                                >
+                                    Anterior
+                                </button>
+                                <button
+                                    type="button"
+                                    style={currentSavedSourcesPage >= savedSourcesPageCount
+                                        ? {...styles.savedSourcesPaginationButton, ...styles.savedSourcesPaginationButtonMuted}
+                                        : styles.savedSourcesPaginationButton}
+                                    disabled={currentSavedSourcesPage >= savedSourcesPageCount}
+                                    onClick={() => setSavedSourcesPage((current) => Math.min(savedSourcesPageCount, current + 1))}
+                                >
+                                    Siguiente
+                                </button>
+                            </div>
+                        </div>
+
+                        {paginatedSavedSources.length ? (
+                            <div style={styles.savedSourcesTableShell}>
+                                <table style={styles.savedSourcesTable}>
+                                    <thead>
+                                    <tr>
+                                        <th style={styles.savedSourcesHeaderCell}>Categoría</th>
+                                        <th style={styles.savedSourcesHeaderCell}>Referencia</th>
+                                        <th style={styles.savedSourcesHeaderCell}>Última sincronización</th>
+                                        <th style={styles.savedSourcesHeaderCell}>Acción</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {paginatedSavedSources.map((source) => (
+                                        <tr key={source.sourceUrl}>
+                                            <td style={styles.savedSourcesBodyCell}>
+                                                {source.categoryName || "Sin categoría"}
+                                            </td>
+                                            <td style={styles.savedSourcesBodyCell}>
+                                                <div style={styles.savedSourcePrimary}>{formatSourceReference(source)}</div>
+                                                <div style={styles.savedSourceSecondary}>{source.sourceUrl}</div>
+                                            </td>
+                                            <td style={styles.savedSourcesBodyCell}>
+                                                {formatLastSync(source.lastSyncedAtUtc)}
+                                            </td>
+                                            <td style={styles.savedSourcesBodyCell}>
+                                                <div style={styles.inlineActions}>
+                                                    <button
+                                                        type="button"
+                                                        style={!canUseApi ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
+                                                        disabled={!canUseApi}
+                                                        onClick={() => void handleStartSavedSource(source.sourceUrl)}
+                                                        aria-label={`Sincronizar ${formatSourceReference(source)}`}
+                                                        title="Sincronizar"
+                                                    >
+                                                        <SyncActionIcon/>
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        style={!canUseApi || !source.phaseId
+                                                            ? {...styles.inlineButton, ...styles.inlineDangerButton, ...styles.mutedButton}
+                                                            : {...styles.inlineButton, ...styles.inlineDangerButton}}
+                                                        disabled={!canUseApi || !source.phaseId}
+                                                        onClick={() => void handleDeleteSavedSource(source)}
+                                                        aria-label={`Borrar ${formatSourceReference(source)}`}
+                                                        title={deletingPhaseId === source.phaseId ? "Borrando..." : "Borrar"}
+                                                    >
+                                                        <TrashActionIcon/>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        ) : (
+                            <div style={styles.savedSourcesEmpty}>
+                                No hay fases guardadas que coincidan con la búsqueda actual.
+                            </div>
+                        )}
                     </div>
                 ) : (
                     <div style={styles.savedSourcesEmpty}>

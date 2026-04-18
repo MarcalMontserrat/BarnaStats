@@ -10,14 +10,24 @@ namespace BarnaStats.Services;
 public sealed class MatchMappingSyncService
 {
     private const int AutomaticRetryAttempts = 5;
+    private const int AutomaticResolveRetryAttempts = 3;
     private const int AutomaticRetryDelayMs = 2000;
     private const int DirectMappingProximityWindow = 700;
+    private const int SecurityChallengePollDelayMs = 1000;
+    private const int SecurityChallengeWaitTimeoutMs = 5 * 60 * 1000;
+    private const int SecurityChallengePostResolutionDelayMs = 1200;
+    private const int SecurityChallengeRetryNavigationDelayMs = 1500;
     private static readonly MatchMappingSyncResult EmptySyncResult = new()
     {
         DiscoveredMappings = Array.Empty<MatchDiscovery>(),
         TargetMatchWebIds = Array.Empty<int>(),
         ResolvedUuids = new Dictionary<int, string?>()
     };
+    private static readonly string[] PreferredBrowserChannels =
+    [
+        "msedge",
+        "chrome"
+    ];
     private static readonly CultureInfo[] SupportedDateCultures =
     [
         new("ca-ES"),
@@ -62,6 +72,24 @@ public sealed class MatchMappingSyncService
     private static readonly Regex HtmlTagRegex = new(
         "<[^>]+>",
         RegexOptions.Compiled);
+    private static readonly string[] SecurityChallengeTitleMarkers =
+    [
+        "verificació de seguretat",
+        "verificacion de seguridad",
+        "verificación de seguridad",
+        "security verification"
+    ];
+    private static readonly string[] SecurityChallengeCopyMarkers =
+    [
+        "confirma que ets una persona",
+        "confirma que eres una persona",
+        "completa la verificació",
+        "completa la verificacion",
+        "completa la verificación",
+        "activitat inusual",
+        "actividad inusual",
+        "unusual activity"
+    ];
     private static readonly Regex TitleCategoryRegex = new(
         @"id\s*=\s*[""']titleCategory[""'][^>]*>(.*?)</",
         RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Compiled);
@@ -179,7 +207,7 @@ public sealed class MatchMappingSyncService
 
         var sourceInspection = string.IsNullOrWhiteSpace(sourceUrl)
             ? null
-            : await DiscoverMappingsAsync(page, sourceUrl, interactive);
+            : await DiscoverMappingsAsync(page, sourceUrl, interactive, headless);
         var discoveredMappings = sourceInspection?.DiscoveredMappings ?? Array.Empty<MatchDiscovery>();
 
         var discoveredMatchWebIds = discoveredMappings
@@ -221,7 +249,7 @@ public sealed class MatchMappingSyncService
             if (resolved.TryGetValue(matchWebId, out var directUuid) && !string.IsNullOrWhiteSpace(directUuid))
                 continue;
 
-            resolved[matchWebId] = await ResolveSingleAsync(page, matchWebId, interactive);
+            resolved[matchWebId] = await ResolveSingleAsync(page, matchWebId, interactive, headless);
         }
 
         return new MatchMappingSyncResult
@@ -233,13 +261,15 @@ public sealed class MatchMappingSyncService
         };
     }
 
-    private async Task<string?> ResolveSingleAsync(IPage page, int matchWebId, bool interactive)
+    private async Task<string?> ResolveSingleAsync(IPage page, int matchWebId, bool interactive, bool headless)
     {
+        var sessionLabel = headless ? "segundo plano" : "navegador visible";
+
         for (var attempt = 1; ; attempt += 1)
         {
             Console.WriteLine($"Resolviendo uuid para matchWebId={matchWebId}...");
 
-            await page.GotoAsync(
+            var response = await page.GotoAsync(
                 $"https://www.basquetcatala.cat/partits/llistatpartits/{matchWebId}",
                 new PageGotoOptions
                 {
@@ -247,6 +277,31 @@ public sealed class MatchMappingSyncService
                 });
 
             await page.WaitForTimeoutAsync(1000);
+
+            if (await IsSecurityChallengeActiveAsync(page, response))
+            {
+                Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                Console.WriteLine($"  URL actual: {page.Url}");
+                Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page, response)}");
+
+                if (headless)
+                {
+                    Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                    return null;
+                }
+
+                var resolvedPage = await WaitForSecurityChallengeResolutionAsync(
+                    page,
+                    interactive,
+                    $"el partido {matchWebId}",
+                    $"https://www.basquetcatala.cat/partits/llistatpartits/{matchWebId}");
+
+                if (resolvedPage is null)
+                    return null;
+
+                page = resolvedPage;
+                continue;
+            }
 
             var uuid = await ExtractUuidAsync(page);
             if (!string.IsNullOrWhiteSpace(uuid))
@@ -260,13 +315,13 @@ public sealed class MatchMappingSyncService
 
             if (!interactive)
             {
-                if (attempt >= AutomaticRetryAttempts)
+                if (attempt >= AutomaticResolveRetryAttempts)
                 {
                     Console.WriteLine("  SKIP automático tras agotar reintentos.");
                     return null;
                 }
 
-                Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
+                Console.WriteLine($"  Reintentando automáticamente en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticResolveRetryAttempts})...");
                 await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
                 continue;
             }
@@ -283,12 +338,39 @@ public sealed class MatchMappingSyncService
         }
     }
 
-    private async Task<ResultsSourceInspection> DiscoverMappingsAsync(IPage page, string sourceUrl, bool interactive)
+    private async Task<ResultsSourceInspection> DiscoverMappingsAsync(IPage page, string sourceUrl, bool interactive, bool headless)
     {
+        var sessionLabel = headless ? "segundo plano" : "navegador visible";
+
         for (var attempt = 1; ; attempt += 1)
         {
             var inspection = await DiscoverMappingsFromResultsAsync(page, sourceUrl);
             var discoveredMappings = inspection.DiscoveredMappings;
+
+            if (inspection.RequiresHumanVerification)
+            {
+                Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                Console.WriteLine($"  URL actual: {page.Url}");
+                Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page)}");
+
+                if (headless)
+                {
+                    Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                    return ResultsSourceInspection.Empty;
+                }
+
+                var resolvedPage = await WaitForSecurityChallengeResolutionAsync(
+                    page,
+                    interactive,
+                    "la fase de resultados",
+                    sourceUrl);
+
+                if (resolvedPage is null)
+                    return ResultsSourceInspection.Empty;
+
+                page = resolvedPage;
+                continue;
+            }
 
             if (discoveredMappings.Count > 0)
             {
@@ -342,34 +424,45 @@ public sealed class MatchMappingSyncService
 
         try
         {
-            await page.GotoAsync(sourceUrl, new PageGotoOptions
+            var navigationResponse = await page.GotoAsync(sourceUrl, new PageGotoOptions
             {
                 WaitUntil = WaitUntilState.DOMContentLoaded
             });
 
             await page.WaitForTimeoutAsync(1500);
 
+            var html = await page.ContentAsync();
+            var relevantResponseTexts = await ReadRelevantResponseTextsAsync(capturedResponses);
+            await WriteDebugArtifactsIfEnabledAsync(sourceUrl, page.Url, html, relevantResponseTexts);
+
+            var requiresHumanVerification = await IsSecurityChallengeActiveAsync(page, navigationResponse);
+
+            if (requiresHumanVerification)
+            {
+                return new ResultsSourceInspection
+                {
+                    DiscoveredMappings = Array.Empty<MatchDiscovery>(),
+                    RequiresHumanVerification = true
+                };
+            }
+
             var discovered = new Dictionary<int, MatchDiscovery>();
             var phaseMetadata = await ExtractPhaseMetadataAsync(page, sourceUrl);
-            var html = await page.ContentAsync();
 
             MergeDiscoveries(discovered, ExtractDirectMappingsFromText(html));
-
-            var relevantResponseTexts = await ReadRelevantResponseTextsAsync(capturedResponses);
 
             foreach (var responseText in relevantResponseTexts)
             {
                 MergeDiscoveries(discovered, ExtractDirectMappingsFromText(responseText));
             }
 
-            await WriteDebugArtifactsIfEnabledAsync(sourceUrl, page.Url, html, relevantResponseTexts);
-
             return new ResultsSourceInspection
             {
                 DiscoveredMappings = discovered.Values
                     .OrderBy(x => x.MatchWebId)
                     .ToList(),
-                PhaseMetadata = phaseMetadata
+                PhaseMetadata = phaseMetadata,
+                RequiresHumanVerification = false
             };
         }
         finally
@@ -386,29 +479,57 @@ public sealed class MatchMappingSyncService
 
     private async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright, bool headless)
     {
-        Directory.CreateDirectory(_browserProfileDir);
-
-        try
+        foreach (var channel in PreferredBrowserChannels)
         {
-            return await playwright.Chromium.LaunchPersistentContextAsync(
-                _browserProfileDir,
-                new BrowserTypeLaunchPersistentContextOptions
-                {
-                    Headless = headless,
-                    Channel = "chrome"
-                });
-        }
-        catch (PlaywrightException ex) when (CanFallbackToBundledChromium(ex))
-        {
-            Console.WriteLine("No se pudo abrir Chrome del sistema. Intentando Chromium de Playwright...");
+            try
+            {
+                var profileDir = GetBrowserProfileDir(channel);
+                Directory.CreateDirectory(profileDir);
 
-            return await playwright.Chromium.LaunchPersistentContextAsync(
-                _browserProfileDir,
-                new BrowserTypeLaunchPersistentContextOptions
-                {
-                    Headless = headless
-                });
+                Console.WriteLine($"Intentando navegador del sistema: {FormatBrowserChannelLabel(channel)}...");
+
+                return await playwright.Chromium.LaunchPersistentContextAsync(
+                    profileDir,
+                    new BrowserTypeLaunchPersistentContextOptions
+                    {
+                        Headless = headless,
+                        Channel = channel,
+                        ViewportSize = ViewportSize.NoViewport
+                    });
+            }
+            catch (PlaywrightException ex) when (CanFallbackToBundledChromium(ex))
+            {
+                Console.WriteLine($"No se pudo abrir {FormatBrowserChannelLabel(channel)}. Se probará otra opción.");
+            }
         }
+
+        var chromiumProfileDir = GetBrowserProfileDir("chromium");
+        Directory.CreateDirectory(chromiumProfileDir);
+        Console.WriteLine("No se pudo abrir Edge/Chrome del sistema. Intentando Chromium de Playwright...");
+
+        return await playwright.Chromium.LaunchPersistentContextAsync(
+            chromiumProfileDir,
+            new BrowserTypeLaunchPersistentContextOptions
+            {
+                Headless = headless,
+                ViewportSize = ViewportSize.NoViewport
+            });
+    }
+
+    private string GetBrowserProfileDir(string channel)
+    {
+        var sanitizedChannel = Regex.Replace(channel, "[^a-z0-9_-]+", "-", RegexOptions.IgnoreCase);
+        return Path.Combine(_browserProfileDir, sanitizedChannel);
+    }
+
+    private static string FormatBrowserChannelLabel(string channel)
+    {
+        return channel switch
+        {
+            "msedge" => "Microsoft Edge",
+            "chrome" => "Google Chrome",
+            _ => channel
+        };
     }
 
     private static bool RequiresVisibleBrowser(MatchMappingSyncResult result, string? sourceUrl)
@@ -874,6 +995,305 @@ public sealed class MatchMappingSyncService
         return int.TryParse(value, out var matchWebId) ? matchWebId : 0;
     }
 
+    private static bool IsSecurityChallengeDetected(string? pageUrl, SecurityChallengeDomSnapshot domSnapshot, int? statusCode = null)
+    {
+        if (!string.IsNullOrWhiteSpace(pageUrl) &&
+            pageUrl.Contains("/recaptcha/", StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
+        var normalizedTitle = NormalizeSecurityText(domSnapshot.Title);
+        var normalizedVisibleText = NormalizeSecurityText(domSnapshot.VisibleText);
+        var hasSecurityTitle = ContainsAny(normalizedTitle, SecurityChallengeTitleMarkers);
+        var hasSecurityCopy = ContainsAny(normalizedVisibleText, SecurityChallengeTitleMarkers);
+        var hasChallengeCopy = ContainsAny(normalizedVisibleText, SecurityChallengeCopyMarkers);
+        var hasStrongDomMarker = domSnapshot.HasChallengeForm ||
+                                 (domSnapshot.HasRecaptchaWidget && domSnapshot.HasSecurityHeading);
+
+        if (hasStrongDomMarker && (hasSecurityTitle || hasSecurityCopy || hasChallengeCopy))
+            return true;
+
+        return statusCode == (int)HttpStatusCode.Forbidden &&
+               hasChallengeCopy &&
+               (domSnapshot.HasChallengeForm || domSnapshot.HasRecaptchaWidget);
+    }
+
+    private static async Task<bool> IsSecurityChallengeActiveAsync(IPage page, IResponse? navigationResponse = null)
+    {
+        try
+        {
+            var currentUrl = page.Url;
+            if (!string.IsNullOrWhiteSpace(currentUrl) &&
+                currentUrl.Contains("/recaptcha/", StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            var domSnapshot = await ReadSecurityChallengeDomSnapshotAsync(page);
+            return IsSecurityChallengeDetected(currentUrl, domSnapshot, navigationResponse?.Status);
+        }
+        catch
+        {
+            return true;
+        }
+    }
+
+    private static async Task<string> DescribeSecurityChallengeReasonAsync(IPage page, IResponse? navigationResponse = null)
+    {
+        try
+        {
+            var currentUrl = page.Url;
+            if (!string.IsNullOrWhiteSpace(currentUrl) &&
+                currentUrl.Contains("/recaptcha/", StringComparison.OrdinalIgnoreCase))
+            {
+                return $"URL de challenge: {currentUrl}";
+            }
+
+            var domSnapshot = await ReadSecurityChallengeDomSnapshotAsync(page);
+            var reasons = new List<string>();
+            var normalizedTitle = NormalizeSecurityText(domSnapshot.Title);
+            var normalizedVisibleText = NormalizeSecurityText(domSnapshot.VisibleText);
+
+            if (navigationResponse?.Status is not null)
+                reasons.Add($"HTTP {(int)navigationResponse.Status}");
+
+            if (ContainsAny(normalizedTitle, SecurityChallengeTitleMarkers))
+                reasons.Add("title");
+
+            if (domSnapshot.HasSecurityHeading)
+                reasons.Add("heading");
+
+            if (ContainsAny(normalizedVisibleText, SecurityChallengeCopyMarkers))
+                reasons.Add("challenge-copy");
+
+            if (domSnapshot.HasChallengeForm)
+                reasons.Add("challenge-form");
+
+            if (domSnapshot.HasRecaptchaWidget)
+                reasons.Add("recaptcha-widget");
+
+            var visibleTextPreview = normalizedVisibleText.Length <= 140
+                ? normalizedVisibleText
+                : normalizedVisibleText[..140] + "...";
+
+            return reasons.Count == 0
+                ? $"sin marcadores claros; title='{domSnapshot.Title}' text='{visibleTextPreview}'"
+                : $"{string.Join(", ", reasons)}; title='{domSnapshot.Title}' text='{visibleTextPreview}'";
+        }
+        catch (Exception ex)
+        {
+            return $"inspección fallida: {ex.GetType().Name}";
+        }
+    }
+
+    private static async Task<SecurityChallengeDomSnapshot> ReadSecurityChallengeDomSnapshotAsync(IPage page)
+    {
+        return await page.EvaluateAsync<SecurityChallengeDomSnapshot>(
+            """
+            () => {
+                const normalize = (value) => (value || '').replace(/\s+/g, ' ').trim();
+                const hasSecurityHeading = [...document.querySelectorAll('h1, h2')].some((element) =>
+                    /verificació de seguretat|verificacion de seguridad|verificación de seguridad|security verification/i.test(element.textContent || '')
+                );
+
+                return {
+                    title: document.title || '',
+                    visibleText: normalize(document.body?.innerText || '').slice(0, 4000),
+                    hasRecaptchaWidget: Boolean(document.querySelector('.g-recaptcha, iframe[src*="recaptcha"]')),
+                    hasChallengeForm: Boolean(document.querySelector("form[action*='/recaptcha/verifica-v2'], form[action*='/recaptcha/'], form#form-v2")),
+                    hasSecurityHeading
+                };
+            }
+            """)
+            ?? new SecurityChallengeDomSnapshot();
+    }
+
+    private static string NormalizeSecurityText(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return string.Empty;
+
+        return Regex.Replace(value.ToLowerInvariant(), "\\s+", " ").Trim();
+    }
+
+    private static bool ContainsAny(string text, IEnumerable<string> markers)
+    {
+        return markers.Any(marker => text.Contains(marker, StringComparison.Ordinal));
+    }
+
+    private static async Task<IPage?> WaitForSecurityChallengeResolutionAsync(
+        IPage page,
+        bool interactive,
+        string scopeLabel,
+        string retryUrl)
+    {
+        Console.WriteLine($"  El navegador queda abierto sin recargar la página para resolver la verificación de {scopeLabel}.");
+        var lastKnownUrl = page.Url;
+        var lastCookieSnapshot = await ReadCookieSnapshotAsync(page, retryUrl);
+
+        if (interactive)
+        {
+            while (true)
+            {
+                Console.WriteLine("  Completa el reCAPTCHA en el navegador y pulsa ENTER para comprobar de nuevo.");
+                Console.WriteLine("  Escribe 'skip' y pulsa ENTER para saltar este paso.");
+
+                var input = Console.ReadLine()?.Trim().ToLowerInvariant();
+                if (input == "skip")
+                {
+                    Console.WriteLine("  SKIP");
+                    return null;
+                }
+
+                var accessiblePage = await TryFindAccessibleProtectedPageAsync(page, retryUrl);
+                if (accessiblePage is not null)
+                {
+                    Console.WriteLine("  Verificación resuelta usando la pestaña actual.");
+                    return accessiblePage;
+                }
+
+                var reopenedPage = await TryReopenProtectedUrlAsync(page, retryUrl);
+                if (reopenedPage is not null)
+                {
+                    Console.WriteLine("  Verificación resuelta. Reanudando...");
+                    return reopenedPage;
+                }
+
+                Console.WriteLine("  La verificación sigue pendiente o el acceso aún no ha quedado liberado.");
+            }
+        }
+
+        Console.WriteLine("  Resuelve el reCAPTCHA ahí; el proceso reanudará automáticamente cuando desaparezca la pantalla de seguridad.");
+
+        var remainingSeconds = SecurityChallengeWaitTimeoutMs / 1000;
+        while (remainingSeconds > 0)
+        {
+            await page.WaitForTimeoutAsync(SecurityChallengePollDelayMs);
+
+            var currentUrl = page.Url;
+            var currentCookieSnapshot = await ReadCookieSnapshotAsync(page, retryUrl);
+            var hasSessionChange = !string.Equals(currentUrl, lastKnownUrl, StringComparison.Ordinal) ||
+                                   !string.Equals(currentCookieSnapshot, lastCookieSnapshot, StringComparison.Ordinal);
+
+            var accessiblePage = await TryFindAccessibleProtectedPageAsync(page, retryUrl);
+            if (accessiblePage is not null)
+            {
+                Console.WriteLine("  Verificación resuelta usando la pestaña actual.");
+                return accessiblePage;
+            }
+
+            if (hasSessionChange)
+            {
+                Console.WriteLine("  Se ha detectado un cambio en la sesión. Reintentando acceso a la URL protegida...");
+                var reopenedPage = await TryReopenProtectedUrlAsync(page, retryUrl);
+                if (reopenedPage is not null)
+                {
+                    Console.WriteLine("  Verificación resuelta. Reanudando...");
+                    return reopenedPage;
+                }
+            }
+
+            lastKnownUrl = currentUrl;
+            lastCookieSnapshot = currentCookieSnapshot;
+            remainingSeconds -= SecurityChallengePollDelayMs / 1000;
+        }
+
+        Console.WriteLine("  Tiempo de espera agotado sin resolver la verificación.");
+        return null;
+    }
+
+    private static async Task<IPage?> TryReopenProtectedUrlAsync(IPage page, string retryUrl)
+    {
+        try
+        {
+            await page.WaitForTimeoutAsync(SecurityChallengeRetryNavigationDelayMs);
+
+            var response = await page.GotoAsync(retryUrl, new PageGotoOptions
+            {
+                WaitUntil = WaitUntilState.DOMContentLoaded
+            });
+
+            await page.WaitForTimeoutAsync(SecurityChallengePostResolutionDelayMs);
+            return !await IsSecurityChallengeActiveAsync(page, response) &&
+                   IsRetryTargetUrl(page.Url, retryUrl)
+                ? page
+                : null;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    private static async Task<IPage?> TryFindAccessibleProtectedPageAsync(IPage currentPage, string retryUrl)
+    {
+        if (await IsAccessibleProtectedPageAsync(currentPage, retryUrl))
+            return currentPage;
+
+        foreach (var candidatePage in currentPage.Context.Pages.Where(page => page != currentPage))
+        {
+            if (!await IsAccessibleProtectedPageAsync(candidatePage, retryUrl))
+                continue;
+
+            try
+            {
+                await candidatePage.BringToFrontAsync();
+            }
+            catch
+            {
+                // Si no se puede enfocar, al menos reutilizamos la pestaña encontrada.
+            }
+
+            return candidatePage;
+        }
+
+        return null;
+    }
+
+    private static async Task<bool> IsAccessibleProtectedPageAsync(IPage page, string retryUrl)
+    {
+        if (await IsSecurityChallengeActiveAsync(page))
+            return false;
+
+        return IsRetryTargetUrl(page.Url, retryUrl);
+    }
+
+    private static bool IsRetryTargetUrl(string? currentUrl, string retryUrl)
+    {
+        if (!Uri.TryCreate(currentUrl, UriKind.Absolute, out var currentUri) ||
+            !Uri.TryCreate(retryUrl, UriKind.Absolute, out var retryUri))
+        {
+            return string.Equals(
+                (currentUrl ?? string.Empty).TrimEnd('/'),
+                retryUrl.TrimEnd('/'),
+                StringComparison.OrdinalIgnoreCase);
+        }
+
+        return string.Equals(currentUri.Host, retryUri.Host, StringComparison.OrdinalIgnoreCase) &&
+               string.Equals(currentUri.AbsolutePath.TrimEnd('/'), retryUri.AbsolutePath.TrimEnd('/'), StringComparison.OrdinalIgnoreCase) &&
+               string.Equals(currentUri.Query, retryUri.Query, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static async Task<string> ReadCookieSnapshotAsync(IPage page, string targetUrl)
+    {
+        try
+        {
+            var cookies = await page.Context.CookiesAsync(new[] { targetUrl });
+            return string.Join(
+                ";",
+                cookies
+                    .OrderBy(cookie => cookie.Name, StringComparer.Ordinal)
+                    .ThenBy(cookie => cookie.Domain, StringComparer.Ordinal)
+                    .ThenBy(cookie => cookie.Path, StringComparer.Ordinal)
+                    .Select(cookie => $"{cookie.Name}={cookie.Value}|{cookie.Domain}|{cookie.Path}|{cookie.Expires}"));
+        }
+        catch
+        {
+            return string.Empty;
+        }
+    }
+
     private static DateTime? TryExtractMatchDateFromText(string text)
     {
         var normalizedText = NormalizeChunkText(text);
@@ -1174,10 +1594,21 @@ public sealed class MatchMappingSyncService
     {
         public static ResultsSourceInspection Empty { get; } = new()
         {
-            DiscoveredMappings = Array.Empty<MatchDiscovery>()
+            DiscoveredMappings = Array.Empty<MatchDiscovery>(),
+            RequiresHumanVerification = false
         };
 
         public required IReadOnlyList<MatchDiscovery> DiscoveredMappings { get; init; }
         public PhaseMetadata? PhaseMetadata { get; init; }
+        public required bool RequiresHumanVerification { get; init; }
+    }
+
+    private sealed class SecurityChallengeDomSnapshot
+    {
+        public string Title { get; set; } = string.Empty;
+        public string VisibleText { get; set; } = string.Empty;
+        public bool HasRecaptchaWidget { get; set; }
+        public bool HasChallengeForm { get; set; }
+        public bool HasSecurityHeading { get; set; }
     }
 }

@@ -15,6 +15,7 @@ var jsonOptions = new JsonSerializerOptions
     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
     WriteIndented = true
 };
+const int MaxParallelMatchDownloads = 3;
 
 if (args.Length > 0)
 {
@@ -67,11 +68,24 @@ async Task<bool> RunSyncAllAsync(string[] syncArgs)
     if (!syncResult.Succeeded)
         return false;
 
-    Console.WriteLine();
-    Console.WriteLine("Paso 2/3 · Descargando stats y moves");
-    var downloadResult = await RunDownloadAsync(storage, forceRefresh);
-    if (!downloadResult.Succeeded)
-        return false;
+    (bool Succeeded, bool FilesChanged) downloadResult;
+    if (!forceRefresh && syncResult.DownloadCandidateMatchWebIds.Count == 0)
+    {
+        Console.WriteLine();
+        Console.WriteLine("Paso 2/3 · Sin partidos nuevos ni UUIDs modificados. Se omite la comprobación de stats y moves.");
+        downloadResult = (true, false);
+    }
+    else
+    {
+        Console.WriteLine();
+        Console.WriteLine("Paso 2/3 · Descargando stats y moves");
+        downloadResult = await RunDownloadAsync(
+            storage,
+            forceRefresh,
+            forceRefresh ? null : syncResult.DownloadCandidateMatchWebIds);
+        if (!downloadResult.Succeeded)
+            return false;
+    }
 
     var analysisNeedsRefresh = syncResult.PhaseMetadataChanged || downloadResult.FilesChanged;
 
@@ -95,7 +109,7 @@ async Task<bool> RunSyncAllAsync(string[] syncArgs)
     return await RunGenerateAnalysisAsync();
 }
 
-async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync(
+async Task<(bool Succeeded, bool PhaseMetadataChanged, IReadOnlyList<int> DownloadCandidateMatchWebIds)> ExecuteSyncMappingsAsync(
     TeamStoragePaths storage,
     string? sourceUrl,
     bool includeAll,
@@ -108,12 +122,13 @@ async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync
     {
         Console.WriteLine($"No existe el mapping en: {storage.MappingFile}");
         Console.WriteLine("Pasa una URL de resultados o matchWebIds explícitos para crearlo.");
-        return (false, false);
+        return (false, false, Array.Empty<int>());
     }
 
     var mappings = await LoadMappingsAsync(storage.MappingFile, jsonOptions);
     var mappingsById = mappings.ToDictionary(x => x.MatchWebId);
     var phaseMetadataChanged = false;
+    var updatedIds = new HashSet<int>();
 
     foreach (var matchWebId in explicitMatchIds)
     {
@@ -143,7 +158,7 @@ async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync
             Console.WriteLine("No se pudo extraer ningún partido desde la URL de resultados.");
             Console.WriteLine("La web de basquetcatala puede estar mostrando un captcha/verificación de seguridad o una estructura no compatible.");
             Console.WriteLine("Abre la URL en el navegador auxiliar, resuelve la verificación si aparece y vuelve a intentarlo.");
-            return (false, false);
+            return (false, false, Array.Empty<int>());
         }
 
         if (!string.IsNullOrWhiteSpace(sourceUrl) && syncResult.DiscoveredMappings.Count > 0)
@@ -159,8 +174,6 @@ async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync
 
             mappingsById = mappings.ToDictionary(x => x.MatchWebId);
         }
-
-        var updatedIds = new HashSet<int>();
 
         foreach (var discovery in syncResult.DiscoveredMappings)
         {
@@ -261,13 +274,16 @@ async Task<(bool Succeeded, bool PhaseMetadataChanged)> ExecuteSyncMappingsAsync
         Console.WriteLine("No se pudo completar la sincronización de mappings.");
         Console.WriteLine(ex.Message);
         Console.WriteLine("Si falla al abrir el navegador de Playwright, prueba a instalar Chromium o usa Chrome local.");
-        return (false, false);
+        return (false, false, Array.Empty<int>());
     }
 
-    return (true, phaseMetadataChanged);
+    return (true, phaseMetadataChanged, updatedIds.OrderBy(id => id).ToList());
 }
 
-async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(TeamStoragePaths storage, bool forceRefresh)
+async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
+    TeamStoragePaths storage,
+    bool forceRefresh,
+    IReadOnlyCollection<int>? candidateMatchWebIds = null)
 {
     if (!File.Exists(storage.MappingFile))
     {
@@ -276,9 +292,14 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(TeamStoragePath
     }
 
     var mappings = await LoadMappingsAsync(storage.MappingFile, jsonOptions);
+    var candidateMatchIds = candidateMatchWebIds?
+        .Where(matchWebId => matchWebId > 0)
+        .Distinct()
+        .ToHashSet();
 
     var validMappings = mappings
         .Where(x => !string.IsNullOrWhiteSpace(x.UuidMatch))
+        .Where(x => candidateMatchIds is null || candidateMatchIds.Contains(x.MatchWebId))
         .ToList();
     var futureMappings = validMappings
         .Where(x => IsFutureMatch(x.MatchDate))
@@ -286,67 +307,111 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(TeamStoragePath
     var downloadableMappings = validMappings
         .Except(futureMappings)
         .ToList();
+    var cachedMappings = forceRefresh
+        ? []
+        : downloadableMappings
+            .Where(mapping =>
+            {
+                var statsPath = storage.GetStatsPath(mapping.MatchWebId, mapping.UuidMatch!);
+                var movesPath = storage.GetMovesPath(mapping.MatchWebId, mapping.UuidMatch!);
+                return File.Exists(statsPath) && File.Exists(movesPath);
+            })
+            .ToList();
+    var pendingMappings = forceRefresh
+        ? downloadableMappings
+        : downloadableMappings.Except(cachedMappings).ToList();
     var downloadedCount = 0;
-    var skippedCount = 0;
+    var skippedCount = cachedMappings.Count;
     var filesChanged = false;
 
     Console.WriteLine($"Mappings totales: {mappings.Count}");
     Console.WriteLine($"Mappings válidos : {validMappings.Count}");
     if (futureMappings.Count > 0)
         Console.WriteLine($"Partidos futuros omitidos: {futureMappings.Count}");
+    if (candidateMatchIds is not null)
+        Console.WriteLine($"Partidos candidatos: {candidateMatchIds.Count}");
     Console.WriteLine(forceRefresh
         ? "Modo forzado: se consultará de nuevo cada partido descargable."
         : "Modo caché: se reutilizan stats y moves si ya existen.");
 
+    if (pendingMappings.Count == 0)
+    {
+        Console.WriteLine("No hay partidos pendientes de descarga.");
+        Console.WriteLine();
+        Console.WriteLine("Terminado.");
+        Console.WriteLine($"Descargas realizadas: {downloadedCount}");
+        Console.WriteLine($"Partidos reutilizados: {skippedCount}");
+        Console.WriteLine($"Stats guardados en: {Path.GetFullPath(storage.StatsDir)}");
+        Console.WriteLine($"Moves guardados en: {Path.GetFullPath(storage.MovesDir)}");
+        return (true, false);
+    }
+
     using var http = MsStatsHttpClientFactory.Create();
     var client = new MsStatsClient(http);
+    var concurrency = Math.Min(MaxParallelMatchDownloads, pendingMappings.Count);
+    var consoleLock = new object();
 
-    foreach (var mapping in downloadableMappings)
+    Console.WriteLine($"Partidos a descargar: {pendingMappings.Count}");
+    Console.WriteLine($"Concurrencia máxima : {concurrency}");
+
+    using var semaphore = new SemaphoreSlim(concurrency);
+    var results = await Task.WhenAll(pendingMappings.Select(async mapping =>
     {
-        var statsPath = storage.GetStatsPath(mapping.MatchWebId, mapping.UuidMatch!);
-        var movesPath = storage.GetMovesPath(mapping.MatchWebId, mapping.UuidMatch!);
-        var hasCachedFiles = File.Exists(statsPath) && File.Exists(movesPath);
-
-        if (!forceRefresh && hasCachedFiles)
-        {
-            Console.WriteLine($"Procesando matchWebId={mapping.MatchWebId}, uuid={mapping.UuidMatch}");
-            Console.WriteLine("  SKIP -> stats y moves ya existen");
-            skippedCount += 1;
-            continue;
-        }
-
-        Console.WriteLine($"Procesando matchWebId={mapping.MatchWebId}, uuid={mapping.UuidMatch}");
+        await semaphore.WaitAsync();
 
         try
         {
-            var statsRaw = await client.GetMatchStatsRawAsync(mapping.UuidMatch!);
-            var movesRaw = await client.GetMatchMovesRawAsync(mapping.UuidMatch!);
-            var prettyStats = JsonFormatting.PrettyPrint(statsRaw);
-            var prettyMoves = JsonFormatting.PrettyPrint(movesRaw);
-
-            var statsChanged = await WriteFileIfChangedAsync(statsPath, prettyStats);
-            var movesChanged = await WriteFileIfChangedAsync(movesPath, prettyMoves);
-            var staleFilesDeleted = DeleteStaleMatchFiles(storage, mapping.MatchWebId, mapping.UuidMatch!);
-
-            if (statsChanged || movesChanged || staleFilesDeleted)
+            lock (consoleLock)
             {
-                Console.WriteLine("  OK -> stats y moves actualizados");
-                filesChanged = true;
-            }
-            else
-            {
-                Console.WriteLine("  OK -> sin cambios en stats ni moves");
+                Console.WriteLine($"Procesando matchWebId={mapping.MatchWebId}, uuid={mapping.UuidMatch}");
             }
 
-            downloadedCount += 1;
+            var statsPath = storage.GetStatsPath(mapping.MatchWebId, mapping.UuidMatch!);
+            var movesPath = storage.GetMovesPath(mapping.MatchWebId, mapping.UuidMatch!);
+
+            try
+            {
+                var statsTask = client.GetMatchStatsRawAsync(mapping.UuidMatch!);
+                var movesTask = client.GetMatchMovesRawAsync(mapping.UuidMatch!);
+                await Task.WhenAll(statsTask, movesTask);
+
+                var prettyStats = JsonFormatting.PrettyPrint(await statsTask);
+                var prettyMoves = JsonFormatting.PrettyPrint(await movesTask);
+
+                var statsChanged = await WriteFileIfChangedAsync(statsPath, prettyStats);
+                var movesChanged = await WriteFileIfChangedAsync(movesPath, prettyMoves);
+                var staleFilesDeleted = DeleteStaleMatchFiles(storage, mapping.MatchWebId, mapping.UuidMatch!);
+                var anyChanged = statsChanged || movesChanged || staleFilesDeleted;
+
+                lock (consoleLock)
+                {
+                    Console.WriteLine(anyChanged
+                        ? "  OK -> stats y moves actualizados"
+                        : "  OK -> sin cambios en stats ni moves");
+                }
+
+                await Task.Delay(300);
+                return (Downloaded: true, FilesChanged: anyChanged);
+            }
+            catch (Exception ex)
+            {
+                lock (consoleLock)
+                {
+                    Console.WriteLine($"  ERROR -> {ex.Message}");
+                }
+
+                await Task.Delay(300);
+                return (Downloaded: false, FilesChanged: false);
+            }
         }
-        catch (Exception ex)
+        finally
         {
-            Console.WriteLine($"  ERROR -> {ex.Message}");
+            semaphore.Release();
         }
+    }));
 
-        await Task.Delay(300);
-    }
+    downloadedCount = results.Count(result => result.Downloaded);
+    filesChanged = results.Any(result => result.FilesChanged);
 
     Console.WriteLine();
     Console.WriteLine("Terminado.");
