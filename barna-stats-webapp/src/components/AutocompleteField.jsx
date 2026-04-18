@@ -117,7 +117,13 @@ function AutocompleteField({
     };
 
     return (
-        <div style={{...styles.shell, minWidth}}>
+        <div
+            style={{
+                ...styles.shell,
+                minWidth,
+                zIndex: isOpen ? 12 : "auto"
+            }}
+        >
             <label style={styles.label}>
                 {label}
                 <input
@@ -171,7 +177,7 @@ function AutocompleteField({
             </label>
 
             {isOpen ? (
-                <div style={styles.list}>
+                <div style={{...styles.list, zIndex: 24}}>
                     {filteredOptions.length > 0 ? filteredOptions.map((option, index) => (
                         <button
                             key={option.value}

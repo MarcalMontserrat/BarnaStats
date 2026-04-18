@@ -44,6 +44,8 @@ import {
     buildHistoricalPlayerEntities,
     buildHistoricalTeamEntities
 } from "./utils/historicalDirectory.js";
+import {buildCurrentClubEntities} from "./utils/clubDirectory.js";
+import {getClubBrandingForTeam} from "./utils/clubBranding.js";
 
 const GlobalLeadersSection = lazy(() => import("./components/GlobalLeadersSection.jsx"));
 const PhaseComparisonSection = lazy(() => import("./components/PhaseComparisonSection.jsx"));
@@ -54,13 +56,16 @@ const TeamSnapshotSection = lazy(() => import("./components/TeamSnapshotSection.
 const PlayerEvolutionSection = lazy(() => import("./components/PlayerEvolutionSection.jsx"));
 const MatchListSection = lazy(() => import("./components/MatchListSection.jsx"));
 const SyncPanel = lazy(() => import("./components/SyncPanel.jsx"));
+const ClubOverviewSection = lazy(() => import("./components/ClubOverviewSection.jsx"));
 
 const DASHBOARD_ROUTE = "#/";
 const SYNC_ROUTE = "#/sync";
 const COMPETITION_ROUTE = "#/competition";
+const CLUB_ROUTE = "#/club";
 const HISTORY_ROUTE = "#/history";
 const PLAYERS_ROUTE = "#/players";
 const TEAM_ROUTE_PREFIX = "#/team/";
+const CLUB_ROUTE_PREFIX = "#/club/";
 const HISTORY_TEAM_ROUTE_PREFIX = "#/history/";
 const COMPETITION_TABS = [
     {
@@ -293,6 +298,8 @@ const appStyles = {
         flexWrap: "wrap"
     },
     teamSelectorSection: {
+        position: "relative",
+        zIndex: 6,
         display: "grid",
         gap: 18,
         padding: "clamp(20px, 4vw, 30px)",
@@ -333,7 +340,7 @@ const appStyles = {
     },
     heroActions: {
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         alignItems: "flex-end",
         gap: 16,
         flexWrap: "wrap"
@@ -441,8 +448,7 @@ const appStyles = {
         color: "#fff8f0",
         background: "rgba(255, 248, 238, 0.12)",
         border: "1px solid rgba(255, 255, 255, 0.16)",
-        backdropFilter: "blur(10px)",
-        marginLeft: "auto"
+        backdropFilter: "blur(10px)"
     },
     pageShell: {
         display: "grid",
@@ -628,8 +634,26 @@ function buildDashboardRoute() {
     return DASHBOARD_ROUTE;
 }
 
-function buildCompetitionRoute() {
-    return COMPETITION_ROUTE;
+function buildCompetitionRoute({
+    teamKey = "",
+    tab = "",
+    category = "",
+    level = "",
+    phase = ""
+} = {}) {
+    return buildHash(COMPETITION_ROUTE, {
+        team: teamKey,
+        tab,
+        category,
+        level,
+        phase
+    });
+}
+
+function buildClubRoute(clubKey = "") {
+    return clubKey
+        ? `${CLUB_ROUTE}/${encodeURIComponent(clubKey)}`
+        : CLUB_ROUTE;
 }
 
 function buildHistoryRoute(teamKey = "", seasonLabel = "") {
@@ -652,21 +676,81 @@ function parseHash(hash) {
     const params = new URLSearchParams(queryString);
     const seasonLabel = params.get("season") ?? "";
     const playerKey = params.get("player") ?? "";
+    const teamKey = params.get("team") ?? "";
+    const clubKey = params.get("club") ?? "";
+    const competitionTab = params.get("tab") ?? "";
+    const competitionCategory = params.get("category") ?? "";
+    const competitionLevel = params.get("level") ?? "";
+    const competitionPhase = params.get("phase") ?? "";
 
     if (path === SYNC_ROUTE) {
-        return {route: "sync", teamKey: null, seasonLabel, playerKey: ""};
+        return {
+            route: "sync",
+            teamKey: null,
+            clubKey: "",
+            seasonLabel,
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
+        };
     }
 
     if (path === COMPETITION_ROUTE || path === "#/rankings" || path === "#/global") {
-        return {route: "competition", teamKey: null, seasonLabel: "", playerKey: ""};
+        return {
+            route: "competition",
+            teamKey: teamKey || null,
+            clubKey: "",
+            seasonLabel: "",
+            playerKey: "",
+            competitionTab,
+            competitionCategory,
+            competitionLevel,
+            competitionPhase
+        };
+    }
+
+    if (path === CLUB_ROUTE) {
+        return {
+            route: "club",
+            teamKey: teamKey || null,
+            clubKey: clubKey || null,
+            seasonLabel: "",
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
+        };
     }
 
     if (path === PLAYERS_ROUTE) {
-        return {route: "players", teamKey: null, seasonLabel, playerKey};
+        return {
+            route: "players",
+            teamKey: null,
+            clubKey: "",
+            seasonLabel,
+            playerKey,
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
+        };
     }
 
     if (path === HISTORY_ROUTE) {
-        return {route: "history", teamKey: null, seasonLabel, playerKey: ""};
+        return {
+            route: "history",
+            teamKey: null,
+            clubKey: "",
+            seasonLabel,
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
+        };
     }
 
     if (path.startsWith(HISTORY_TEAM_ROUTE_PREFIX)) {
@@ -675,8 +759,29 @@ function parseHash(hash) {
         return {
             route: "history",
             teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null,
+            clubKey: "",
             seasonLabel,
-            playerKey: ""
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
+        };
+    }
+
+    if (path.startsWith(CLUB_ROUTE_PREFIX)) {
+        const encodedClubKey = path.slice(CLUB_ROUTE_PREFIX.length);
+
+        return {
+            route: "club",
+            teamKey: teamKey || null,
+            clubKey: encodedClubKey ? decodeURIComponent(encodedClubKey) : null,
+            seasonLabel: "",
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
         };
     }
 
@@ -686,12 +791,27 @@ function parseHash(hash) {
         return {
             route: "dashboard",
             teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null,
+            clubKey: "",
             seasonLabel: "",
-            playerKey: ""
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
         };
     }
 
-    return {route: "dashboard", teamKey: null, seasonLabel: "", playerKey: ""};
+    return {
+        route: "dashboard",
+        teamKey: null,
+        clubKey: "",
+        seasonLabel: "",
+        playerKey: "",
+        competitionTab: "",
+        competitionCategory: "",
+        competitionLevel: "",
+        competitionPhase: ""
+    };
 }
 
 function navigateToHash(hash) {
@@ -744,10 +864,15 @@ function App() {
     const selectedSeasonEntry = seasonOptions.find((season) => season.seasonLabel === effectiveExplorerSeasonLabel)
         ?? seasonOptions[0]
         ?? null;
+    const initialCompetitionTab = initialHashState.competitionTab || "standings";
+    const initialCompetitionCategory = initialHashState.competitionCategory || "all";
+    const initialCompetitionLevel = initialHashState.competitionLevel || "all";
+    const initialCompetitionPhase = initialHashState.competitionPhase || "all";
     const isHistoryRoute = route === "history";
     const isPlayersRoute = route === "players";
+    const isClubRoute = route === "club";
     const isTeamRoute = route === "dashboard";
-    const isCurrentSeasonRoute = route === "dashboard" || route === "competition";
+    const isCurrentSeasonRoute = route === "dashboard" || route === "competition" || route === "club";
     const {
         analysis: currentAnalysisIndex,
         loading: currentAnalysisIndexLoading,
@@ -812,27 +937,29 @@ function App() {
     } = useSeasonDirectoryData(isHistoryRoute || isPlayersRoute, analysisVersion);
 
     const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
+    const [selectedClubKey, setSelectedClubKey] = useState(() => initialHashState.clubKey ?? "");
     const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
     const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
     const [selectedPhase, setSelectedPhase] = useState("");
     const [selectedPlayer, setSelectedPlayer] = useState("");
     const [selectedMatch, setSelectedMatch] = useState("");
     const [openMatches, setOpenMatches] = useState({});
-    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState("all");
-    const [selectedStandingsLevel, setSelectedStandingsLevel] = useState("all");
-    const [selectedStandingsCategory, setSelectedStandingsCategory] = useState("all");
-    const [selectedResultsPhase, setSelectedResultsPhase] = useState("all");
-    const [selectedResultsLevel, setSelectedResultsLevel] = useState("all");
-    const [selectedResultsCategory, setSelectedResultsCategory] = useState("all");
-    const [selectedLeadersLevel, setSelectedLeadersLevel] = useState("all");
-    const [selectedLeadersCategory, setSelectedLeadersCategory] = useState("all");
+    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState(initialCompetitionPhase);
+    const [selectedStandingsLevel, setSelectedStandingsLevel] = useState(initialCompetitionLevel);
+    const [selectedStandingsCategory, setSelectedStandingsCategory] = useState(initialCompetitionCategory);
+    const [selectedResultsPhase, setSelectedResultsPhase] = useState(initialCompetitionPhase);
+    const [selectedResultsLevel, setSelectedResultsLevel] = useState(initialCompetitionLevel);
+    const [selectedResultsCategory, setSelectedResultsCategory] = useState(initialCompetitionCategory);
+    const [selectedLeadersLevel, setSelectedLeadersLevel] = useState(initialCompetitionLevel);
+    const [selectedLeadersCategory, setSelectedLeadersCategory] = useState(initialCompetitionCategory);
     const [rankingMinGames, setRankingMinGames] = useState("3");
-    const [selectedCompetitionTab, setSelectedCompetitionTab] = useState("standings");
+    const [selectedCompetitionTab, setSelectedCompetitionTab] = useState(initialCompetitionTab);
     const [selectedTeamTab, setSelectedTeamTab] = useState("snapshot");
     const [historyTeamQuery, setHistoryTeamQuery] = useState("");
     const [selectedHistoryTeamKey, setSelectedHistoryTeamKey] = useState("");
     const [playerDirectoryQuery, setPlayerDirectoryQuery] = useState("");
     const [selectedHistoricalPlayerKey, setSelectedHistoricalPlayerKey] = useState("");
+    const [clubQuery, setClubQuery] = useState("");
     const pendingScrollRestoreFrame = useRef(0);
     const teamTabsRef = useRef(null);
 
@@ -846,10 +973,20 @@ function App() {
             setRoute(nextState.route);
             setSelectedSeasonLabel(nextState.seasonLabel ?? "");
             setSelectedTeamKey(nextState.teamKey ?? "");
+            setSelectedClubKey(nextState.clubKey ?? "");
             setSelectedPhase("");
             setSelectedPlayer("");
             setSelectedMatch("");
             setOpenMatches({});
+            setSelectedCompetitionTab(nextState.competitionTab || "standings");
+            setSelectedStandingsCategory(nextState.competitionCategory || "all");
+            setSelectedStandingsLevel(nextState.competitionLevel || "all");
+            setSelectedStandingsPhase(nextState.competitionPhase || "all");
+            setSelectedResultsCategory(nextState.competitionCategory || "all");
+            setSelectedResultsLevel(nextState.competitionLevel || "all");
+            setSelectedResultsPhase(nextState.competitionPhase || "all");
+            setSelectedLeadersCategory(nextState.competitionCategory || "all");
+            setSelectedLeadersLevel(nextState.competitionLevel || "all");
         };
 
         window.addEventListener("hashchange", handleHashChange);
@@ -1009,6 +1146,27 @@ function App() {
         homeTeamIdExtern: Number(teamDirectoryByKey.get(match.homeTeamKey)?.teamIdExtern ?? 0),
         awayTeamIdExtern: Number(teamDirectoryByKey.get(match.awayTeamKey)?.teamIdExtern ?? 0)
     }));
+    const currentClubEntities = buildCurrentClubEntities(teams, {
+        matches: competitionMatches,
+        playerLeaders: competitionPlayerLeaders
+    });
+    const clubOptions = currentClubEntities.map((club) => ({
+        value: club.key,
+        label: club.label,
+        meta: club.meta,
+        searchText: `${club.searchText} ${club.meta}`
+    }));
+    const selectedTeamBranding = selectedTeamSummary
+        ? getClubBrandingForTeam(selectedTeamSummary.teamIdExtern, selectedTeamSummary.teamName)
+        : null;
+    const selectedTeamClubKey = selectedTeamBranding?.clubKey ?? "";
+    const fallbackClubKey = currentClubEntities.some((club) => club.key === selectedTeamClubKey)
+        ? selectedTeamClubKey
+        : (currentClubEntities[0]?.key ?? "");
+    const effectiveClubKey = currentClubEntities.some((club) => club.key === selectedClubKey)
+        ? selectedClubKey
+        : fallbackClubKey;
+    const selectedClub = currentClubEntities.find((club) => club.key === effectiveClubKey) ?? null;
     const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
     const shouldLoadTeamMatches = isTeamRoute && !!selectedTeamSummary?.matchesFile;
     const shouldLoadTeamPlayers = isTeamRoute && !!selectedTeamSummary?.playersFile;
@@ -1219,6 +1377,39 @@ function App() {
         );
     };
 
+    const handleClubNavigate = (clubKey) => {
+        if (!clubKey) {
+            return;
+        }
+
+        setSelectedClubKey(clubKey);
+        navigateToHash(buildClubRoute(clubKey));
+    };
+
+    const handleCompetitionScopeNavigate = (team) => {
+        if (!team?.teamKey) {
+            return;
+        }
+
+        setSelectedTeamKey(team.teamKey);
+        setSelectedCompetitionTab("standings");
+        setSelectedStandingsCategory(team.categoryName || "all");
+        setSelectedStandingsLevel(team.levelKey || "all");
+        setSelectedStandingsPhase(team.latestPhaseOptionValue || "all");
+        setSelectedResultsCategory(team.categoryName || "all");
+        setSelectedResultsLevel(team.levelKey || "all");
+        setSelectedResultsPhase(team.latestPhaseOptionValue || "all");
+        setSelectedLeadersCategory(team.categoryName || "all");
+        setSelectedLeadersLevel(team.levelKey || "all");
+        navigateToHash(buildCompetitionRoute({
+            teamKey: team.teamKey,
+            tab: "standings",
+            category: team.categoryName || "",
+            level: team.levelKey || "",
+            phase: team.latestPhaseOptionValue || ""
+        }));
+    };
+
     const handleTeamChange = (event) => {
         handleTeamNavigate(event.target.value);
     };
@@ -1323,6 +1514,15 @@ function App() {
         setPlayerDirectoryQuery(option.label);
     };
 
+    const handleClubQueryChange = (value) => {
+        setClubQuery(value);
+    };
+
+    const handleClubSelect = (option) => {
+        setClubQuery(option.label);
+        handleClubNavigate(option.value);
+    };
+
     const handlePlayerNavigate = (playerIdentityKey) => {
         if (!playerIdentityKey) {
             return;
@@ -1392,6 +1592,14 @@ function App() {
                 : buildTeamRoute(effectiveTeamKey)
         );
     }, [currentSeasonLabel, effectiveExplorerSeasonLabel, effectiveTeamKey, isHistoryRoute, isTeamRoute, selectedTeamKey]);
+
+    useEffect(() => {
+        if (!isClubRoute || !effectiveClubKey || effectiveClubKey === selectedClubKey) {
+            return;
+        }
+
+        navigateToHash(buildClubRoute(effectiveClubKey));
+    }, [effectiveClubKey, isClubRoute, selectedClubKey]);
 
     useEffect(() => () => {
         if (pendingScrollRestoreFrame.current) {
@@ -1537,6 +1745,11 @@ function App() {
 
                         {!isHistoryRoute ? (
                             <div style={appStyles.heroActions}>
+                                {selectedTeamClubKey ? (
+                                    <a href={buildClubRoute(selectedTeamClubKey)} style={appStyles.secondaryLink}>
+                                        Ver club
+                                    </a>
+                                ) : null}
                                 <a href={buildCompetitionRoute()} style={appStyles.secondaryLink}>
                                     Ver competición
                                 </a>
@@ -1834,6 +2047,132 @@ function App() {
             ) : null}
         </div>
     );
+
+    const renderClubPage = () => {
+        if (analysisIndexLoading || competitionLoading) {
+            return <div style={appStyles.emptyState}>Cargando clubes...</div>;
+        }
+
+        if (analysisIndexError || competitionError) {
+            return <div style={appStyles.emptyState}>{analysisIndexError || competitionError}</div>;
+        }
+
+        if (currentClubEntities.length === 0) {
+            return <div style={appStyles.emptyState}>No hay clubes resueltos en la temporada actual.</div>;
+        }
+
+        return (
+            <div style={appStyles.pageShell}>
+                <a
+                    href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : buildDashboardRoute()}
+                    style={appStyles.pageBackLink}
+                >
+                    Volver al panel
+                </a>
+
+                <section style={appStyles.syncIntro}>
+                    <div style={appStyles.syncEyebrow}>Clubes</div>
+                    <h2 style={appStyles.syncTitle}>Mapa del club por categoria y nivel</h2>
+                    <p style={appStyles.syncBody}>
+                        Esta pantalla junta todos los equipos del mismo club para que puedas leer su presencia completa
+                        en la temporada y saltar rapido a la ficha del equipo o a su clasificacion actual.
+                    </p>
+                </section>
+
+                <section style={appStyles.teamSelectorSection}>
+                    <div style={appStyles.teamSelectorHeader}>
+                        <div style={appStyles.syncEyebrow}>Buscador</div>
+                        <h2 style={appStyles.teamSelectorTitle}>Encuentra un club</h2>
+                        <p style={appStyles.teamSelectorBody}>
+                            El buscador usa nombre de club, equipos, categorias y niveles. Al abrir un club veras todos
+                            sus equipos agrupados y podras navegar desde ahi.
+                        </p>
+                    </div>
+
+                    <div style={appStyles.filterDeck}>
+                        <AutocompleteField
+                            label="Club"
+                            value={clubQuery}
+                            onValueChange={handleClubQueryChange}
+                            onSelectOption={handleClubSelect}
+                            options={clubOptions}
+                            placeholder="Escribe el nombre del club"
+                            ariaLabel="Busca un club por nombre"
+                            noResultsText="No se han encontrado clubes con ese nombre"
+                            minWidth="min(100%, 520px)"
+                        />
+                    </div>
+
+                    <div style={appStyles.teamSelectorMetaRow}>
+                        <span style={appStyles.teamSelectorChip}>{currentClubEntities.length} clubes detectados</span>
+                        <span style={appStyles.teamSelectorChip}>{teams.length} equipos analizados</span>
+                        {selectedClub ? (
+                            <span style={appStyles.teamSelectorChip}>{selectedClub.meta}</span>
+                        ) : null}
+                    </div>
+                </section>
+
+                {!selectedClub ? (
+                    <div style={appStyles.emptyState}>
+                        Selecciona un club para ver todos sus equipos y entrar en su clasificacion actual.
+                    </div>
+                ) : (
+                    <>
+                        <section style={appStyles.hero}>
+                            <div style={appStyles.heroPattern}/>
+                            <div style={appStyles.heroContent}>
+                                <div style={appStyles.heroHeader}>
+                                    <div style={appStyles.heroIdentity}>
+                                        <TeamBadge
+                                            size="xl"
+                                            teamIdExtern={selectedClub.primaryTeamIdExtern}
+                                            teamName={selectedClub.label}
+                                        />
+                                        <div style={appStyles.heroIdentityText}>
+                                            <div style={appStyles.heroKicker}>Vista del club</div>
+                                            <h2 style={appStyles.heroTitle}>{selectedClub.label}</h2>
+                                            <p style={appStyles.heroSummary}>
+                                                {selectedClub.totalTeams} equipos activos, {selectedClub.categoriesCount} categorias
+                                                y {selectedClub.totalMatches} partidos acumulados en la temporada actual.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style={appStyles.heroMetaRow}>
+                                    {currentSeasonLabel ? (
+                                        <span style={appStyles.metaChip}>{currentSeasonLabel}</span>
+                                    ) : null}
+                                    <span style={appStyles.metaChip}>{selectedClub.totalTeams} equipos</span>
+                                    <span style={appStyles.metaChip}>{selectedClub.categoriesCount} categorias</span>
+                                    <span style={appStyles.metaChip}>{selectedClub.totalPlayers} jugadoras registradas</span>
+                                </div>
+
+                                <div style={appStyles.heroActions}>
+                                    <a href={buildCompetitionRoute()} style={appStyles.secondaryLink}>
+                                        Ver competicion
+                                    </a>
+                                    {selectedTeamClubKey === selectedClub.key && selectedTeamSummary ? (
+                                        <a href={buildTeamRoute(selectedTeamSummary.teamKey)} style={appStyles.secondaryLink}>
+                                            Ver equipo seleccionado
+                                        </a>
+                                    ) : null}
+                                </div>
+                            </div>
+                        </section>
+
+                        <Suspense fallback={<SectionFallback message="Cargando vista de club..." />}>
+                            <ClubOverviewSection
+                                club={selectedClub}
+                                onTeamNavigate={(teamKey) => handleTeamNavigate(teamKey, "dashboard")}
+                                onCompetitionNavigate={handleCompetitionScopeNavigate}
+                            />
+                        </Suspense>
+                    </>
+                )}
+            </div>
+        );
+    };
 
     const renderHistoryPage = () => {
         if (historicalDirectoryLoading) {
@@ -2204,6 +2543,8 @@ function App() {
         ? "Importar datos"
         : route === "competition"
             ? "Competición"
+            : route === "club"
+                ? "Clubes"
             : route === "history"
                 ? "Archivo de equipos"
                 : route === "players"
@@ -2213,12 +2554,14 @@ function App() {
         ? "Carga nuevas fases desde la fuente oficial sin pasar por la terminal."
         : route === "competition"
             ? "Clasificación, resultados y líderes individuales, separados del panel de cada equipo."
+            : route === "club"
+                ? "Vista transversal del club para reunir todos sus equipos por categoria y nivel actual."
             : route === "history"
                 ? "Buscador histórico de equipos con el rendimiento separado por temporada."
                 : route === "players"
                     ? "Buscador histórico de jugadoras con acumulado global y detalle temporada a temporada."
                     : "Sigue la temporada actual por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.";
-    const pageSeasonNote = route === "dashboard" || route === "competition"
+    const pageSeasonNote = route === "dashboard" || route === "competition" || route === "club"
         ? currentSeasonLabel
         : "";
     const shouldShowSeasonSelector = false;
@@ -2280,6 +2623,15 @@ function App() {
                             </a>
 
                             <a
+                                href={buildClubRoute(selectedTeamClubKey)}
+                                style={route === "club"
+                                    ? {...appStyles.navLink, ...appStyles.navLinkActive}
+                                    : appStyles.navLink}
+                            >
+                                Club
+                            </a>
+
+                            <a
                                 href={buildHistoryRoute()}
                                 style={route === "history"
                                     ? {...appStyles.navLink, ...appStyles.navLinkActive}
@@ -2315,6 +2667,8 @@ function App() {
                     ? renderSyncPage()
                     : route === "competition"
                         ? renderCompetitionPage()
+                        : route === "club"
+                            ? renderClubPage()
                         : route === "history"
                             ? renderHistoryPage()
                         : route === "players"
