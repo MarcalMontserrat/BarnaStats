@@ -7,7 +7,7 @@ using System.Net;
 
 namespace BarnaStats.Services;
 
-public sealed class MatchMappingSyncService
+public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 {
     private const int AutomaticRetryAttempts = 5;
     private const int AutomaticResolveRetryAttempts = 3;
@@ -170,10 +170,56 @@ public sealed class MatchMappingSyncService
         bool interactive,
         bool headless)
     {
-        var resolved = new Dictionary<int, string?>();
-
         using var playwright = await Playwright.CreateAsync();
         await using var browser = await LaunchContextAsync(playwright, headless);
+
+        return await RunSyncSessionOnContextAsync(
+            browser,
+            existingMappings,
+            explicitMatchWebIds,
+            includeAll,
+            sourceUrl,
+            interactive,
+            headless);
+    }
+
+    internal async Task<MatchMappingSyncResult> SyncWithBrowserContextAsync(
+        IBrowserContext browser,
+        IReadOnlyList<MatchMapping> existingMappings,
+        IReadOnlyCollection<int> explicitMatchWebIds,
+        bool includeAll,
+        string? sourceUrl = null,
+        bool interactive = true)
+    {
+        var initialTargetMatchWebIds = BuildTargetMatchWebIds(
+            existingMappings,
+            explicitMatchWebIds,
+            Array.Empty<int>(),
+            includeAll);
+
+        if (string.IsNullOrWhiteSpace(sourceUrl) && initialTargetMatchWebIds.Count == 0)
+            return EmptySyncResult;
+
+        return await RunSyncSessionOnContextAsync(
+            browser,
+            existingMappings,
+            explicitMatchWebIds,
+            includeAll,
+            sourceUrl,
+            interactive,
+            headless: false);
+    }
+
+    private async Task<MatchMappingSyncResult> RunSyncSessionOnContextAsync(
+        IBrowserContext browser,
+        IReadOnlyList<MatchMapping> existingMappings,
+        IReadOnlyCollection<int> explicitMatchWebIds,
+        bool includeAll,
+        string? sourceUrl,
+        bool interactive,
+        bool headless)
+    {
+        var resolved = new Dictionary<int, string?>();
 
         var page = browser.Pages.FirstOrDefault() ?? await browser.NewPageAsync();
         var startUrl = string.IsNullOrWhiteSpace(sourceUrl)
@@ -519,7 +565,7 @@ public sealed class MatchMappingSyncService
         return ExtractDirectMappingsFromText(html);
     }
 
-    private async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright, bool headless)
+    internal async Task<IBrowserContext> LaunchContextAsync(IPlaywright playwright, bool headless)
     {
         foreach (var channel in PreferredBrowserChannels)
         {

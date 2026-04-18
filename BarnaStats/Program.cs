@@ -46,8 +46,14 @@ return;
 
 async Task<bool> RunSyncMappingsAsync(string[] syncArgs)
 {
-    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out _, out var explicitMatchIds))
+    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out _, out var skipMappings, out var explicitMatchIds))
         return false;
+
+    if (skipMappings)
+    {
+        Console.WriteLine("`--skip-mappings` solo tiene sentido con `sync-all`.");
+        return false;
+    }
 
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
@@ -58,16 +64,28 @@ async Task<bool> RunSyncMappingsAsync(string[] syncArgs)
 
 async Task<bool> RunSyncAllAsync(string[] syncArgs)
 {
-    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out var analysisDirtyMarkerFile, out var explicitMatchIds))
+    if (!TryParseSyncArgs(syncArgs, out var sourceUrl, out var scope, out var includeAll, out var nonInteractive, out var forceRefresh, out var analysisDirtyMarkerFile, out var skipMappings, out var explicitMatchIds))
         return false;
 
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
 
-    Console.WriteLine("Paso 1/3 · Sincronizando mappings");
-    var syncResult = await ExecuteSyncMappingsAsync(storage, sourceUrl, includeAll, nonInteractive, explicitMatchIds);
-    if (!syncResult.Succeeded)
-        return false;
+    MappingSynchronizationResult syncResult;
+    if (skipMappings)
+    {
+        Console.WriteLine("Paso 1/3 · Se reutiliza el mapping actual. Se omite sync-mappings.");
+        syncResult = new MappingSynchronizationResult(
+            true,
+            false,
+            explicitMatchIds.OrderBy(id => id).ToList());
+    }
+    else
+    {
+        Console.WriteLine("Paso 1/3 · Sincronizando mappings");
+        syncResult = await ExecuteSyncMappingsAsync(storage, sourceUrl, includeAll, nonInteractive, explicitMatchIds);
+        if (!syncResult.Succeeded)
+            return false;
+    }
 
     (bool Succeeded, bool FilesChanged) downloadResult;
     if (!forceRefresh && syncResult.DownloadCandidateMatchWebIds.Count == 0)
@@ -110,175 +128,26 @@ async Task<bool> RunSyncAllAsync(string[] syncArgs)
     return await RunGenerateAnalysisAsync();
 }
 
-async Task<(bool Succeeded, bool PhaseMetadataChanged, IReadOnlyList<int> DownloadCandidateMatchWebIds)> ExecuteSyncMappingsAsync(
+async Task<MappingSynchronizationResult> ExecuteSyncMappingsAsync(
     TeamStoragePaths storage,
     string? sourceUrl,
     bool includeAll,
     bool nonInteractive,
     IReadOnlyCollection<int> explicitMatchIds)
 {
-    if (!File.Exists(storage.MappingFile) &&
-        string.IsNullOrWhiteSpace(sourceUrl) &&
-        explicitMatchIds.Count == 0)
-    {
-        Console.WriteLine($"No existe el mapping en: {storage.MappingFile}");
-        Console.WriteLine("Pasa una URL de resultados o matchWebIds explícitos para crearlo.");
-        return (false, false, Array.Empty<int>());
-    }
+    var coordinator = new MappingSynchronizationCoordinator(
+        paths,
+        new MatchMappingSyncService(paths.BrowserProfileDir),
+        jsonOptions);
+    var result = await coordinator.ExecuteAsync(
+        storage,
+        sourceUrl,
+        includeAll,
+        interactive: !nonInteractive,
+        explicitMatchIds,
+        Console.WriteLine);
 
-    var mappings = await LoadMappingsAsync(storage.MappingFile, jsonOptions);
-    var mappingsById = mappings.ToDictionary(x => x.MatchWebId);
-    var phaseMetadataChanged = false;
-    var updatedIds = new HashSet<int>();
-
-    foreach (var matchWebId in explicitMatchIds)
-    {
-        if (mappingsById.ContainsKey(matchWebId))
-            continue;
-
-        var mapping = new MatchMapping { MatchWebId = matchWebId };
-        mappings.Add(mapping);
-        mappingsById[matchWebId] = mapping;
-    }
-
-    try
-    {
-        var syncService = new MatchMappingSyncService(paths.BrowserProfileDir);
-        var syncResult = await syncService.SyncAsync(
-            mappings,
-            explicitMatchIds,
-            includeAll,
-            sourceUrl,
-            interactive: !nonInteractive);
-
-        if (!string.IsNullOrWhiteSpace(sourceUrl) &&
-            syncResult.DiscoveredMappings.Count == 0 &&
-            mappings.Count == 0)
-        {
-            Console.WriteLine();
-            Console.WriteLine("No se pudo extraer ningún partido desde la URL de resultados.");
-            Console.WriteLine("La web de basquetcatala puede estar mostrando un captcha/verificación de seguridad o una estructura no compatible.");
-            Console.WriteLine("Abre la URL en el navegador auxiliar, resuelve la verificación si aparece y vuelve a intentarlo.");
-            return (false, false, Array.Empty<int>());
-        }
-
-        if (!string.IsNullOrWhiteSpace(sourceUrl) && syncResult.DiscoveredMappings.Count > 0)
-        {
-            var allowedMatchIds = syncResult.DiscoveredMappings
-                .Select(discovery => discovery.MatchWebId)
-                .Concat(explicitMatchIds)
-                .ToHashSet();
-
-            mappings = mappings
-                .Where(mapping => allowedMatchIds.Contains(mapping.MatchWebId))
-                .ToList();
-
-            mappingsById = mappings.ToDictionary(x => x.MatchWebId);
-        }
-
-        foreach (var discovery in syncResult.DiscoveredMappings)
-        {
-            if (!mappingsById.TryGetValue(discovery.MatchWebId, out var mapping))
-            {
-                mapping = new MatchMapping { MatchWebId = discovery.MatchWebId };
-                mappings.Add(mapping);
-                mappingsById[discovery.MatchWebId] = mapping;
-            }
-
-            if (string.IsNullOrWhiteSpace(discovery.UuidMatch))
-            {
-                if (discovery.MatchDate.HasValue)
-                    mapping.MatchDate = discovery.MatchDate;
-
-                continue;
-            }
-
-            if (!string.Equals(mapping.UuidMatch, discovery.UuidMatch, StringComparison.OrdinalIgnoreCase))
-            {
-                mapping.UuidMatch = discovery.UuidMatch;
-                updatedIds.Add(discovery.MatchWebId);
-            }
-
-            if (discovery.MatchDate.HasValue)
-                mapping.MatchDate = discovery.MatchDate;
-        }
-
-        foreach (var matchWebId in syncResult.TargetMatchWebIds)
-        {
-            if (!syncResult.ResolvedUuids.TryGetValue(matchWebId, out var uuidMatch) || string.IsNullOrWhiteSpace(uuidMatch))
-                continue;
-
-            var mapping = mappingsById[matchWebId];
-            if (string.Equals(mapping.UuidMatch, uuidMatch, StringComparison.OrdinalIgnoreCase))
-                continue;
-
-            mapping.UuidMatch = uuidMatch;
-            updatedIds.Add(matchWebId);
-        }
-
-        var orderedMappings = mappings
-            .OrderBy(x => x.MatchWebId)
-            .ToList();
-
-        if (syncResult.PhaseMetadata is not null)
-            PopulatePhaseSeasonMetadata(syncResult.PhaseMetadata, orderedMappings);
-
-        await SaveMappingsAsync(storage.MappingFile, orderedMappings, jsonOptions);
-
-        if (syncResult.PhaseMetadata is not null)
-        {
-            if (storage.Scope.Kind == StorageScopeKind.Phase && storage.Scope.Id is > 0)
-            {
-                syncResult.PhaseMetadata.PhaseId = storage.Scope.Id;
-            }
-
-            phaseMetadataChanged = await SavePhaseMetadataAsync(storage.PhaseMetadataFile, syncResult.PhaseMetadata, jsonOptions);
-        }
-
-        if (!string.IsNullOrWhiteSpace(sourceUrl))
-        {
-            await SaveResultsSourceRegistryEntryAsync(
-                paths.ResultsSourcesRegistryFile,
-                sourceUrl,
-                storage,
-                syncResult.PhaseMetadata,
-                jsonOptions);
-        }
-
-        Console.WriteLine();
-
-        if (syncResult.TargetMatchWebIds.Count == 0)
-        {
-            if (updatedIds.Count == 0)
-            {
-                Console.WriteLine("No hay partidos pendientes para sincronizar.");
-                Console.WriteLine("Usa `sync-mappings --all` para reintentar todos o pasa una URL/IDs distintos.");
-            }
-            else
-            {
-                Console.WriteLine($"Sincronización terminada. UUIDs actualizados automáticamente: {updatedIds.Count}");
-            }
-        }
-        else
-        {
-            Console.WriteLine($"Sincronización terminada. UUIDs actualizados: {updatedIds.Count}");
-        }
-
-        Console.WriteLine($"Mapping guardado en: {Path.GetFullPath(storage.MappingFile)}");
-        if (syncResult.PhaseMetadata is not null)
-        {
-            Console.WriteLine($"Metadata de fase guardada en: {Path.GetFullPath(storage.PhaseMetadataFile)}");
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine("No se pudo completar la sincronización de mappings.");
-        Console.WriteLine(ex.Message);
-        Console.WriteLine("Si falla al abrir el navegador de Playwright, prueba a instalar Chromium o usa Chrome local.");
-        return (false, false, Array.Empty<int>());
-    }
-
-    return (true, phaseMetadataChanged, updatedIds.OrderBy(id => id).ToList());
+    return result;
 }
 
 async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
@@ -476,18 +345,6 @@ async Task<List<MatchMapping>> LoadMappingsAsync(string mappingFile, JsonSeriali
     return JsonSerializer.Deserialize<List<MatchMapping>>(mappingJson, options) ?? [];
 }
 
-async Task SaveMappingsAsync(string mappingFile, List<MatchMapping> mappings, JsonSerializerOptions options)
-{
-    var json = JsonSerializer.Serialize(mappings, options);
-    await File.WriteAllTextAsync(mappingFile, json);
-}
-
-async Task<bool> SavePhaseMetadataAsync(string phaseMetadataFile, PhaseMetadata metadata, JsonSerializerOptions options)
-{
-    var json = JsonSerializer.Serialize(metadata, options);
-    return await WriteFileIfChangedAsync(phaseMetadataFile, json);
-}
-
 async Task<bool> WriteFileIfChangedAsync(string path, string content)
 {
     if (File.Exists(path))
@@ -540,108 +397,6 @@ bool DeleteStaleMatchFiles(TeamStoragePaths storage, int matchWebId, string curr
     return deletedAny;
 }
 
-async Task SaveResultsSourceRegistryEntryAsync(
-    string registryFile,
-    string sourceUrl,
-    TeamStoragePaths storage,
-    PhaseMetadata? phaseMetadata,
-    JsonSerializerOptions options)
-{
-    var entries = await LoadResultsSourceRegistryAsync(registryFile, options);
-    var now = DateTimeOffset.UtcNow;
-    var normalizedSourceUrl = sourceUrl.Trim();
-    var phaseId = phaseMetadata?.PhaseId
-                  ?? (storage.Scope.Kind == StorageScopeKind.Phase ? storage.Scope.Id : null);
-
-    var existingEntry = entries.FirstOrDefault(entry =>
-        string.Equals(entry.SourceUrl, normalizedSourceUrl, StringComparison.OrdinalIgnoreCase) ||
-        (phaseId.HasValue && entry.PhaseId == phaseId));
-
-    if (existingEntry is null)
-    {
-        existingEntry = new ResultsSourceRegistryEntry
-        {
-            SourceUrl = normalizedSourceUrl,
-            PhaseId = phaseId,
-            CreatedAtUtc = now
-        };
-        entries.Add(existingEntry);
-    }
-
-    existingEntry.SourceUrl = normalizedSourceUrl;
-    existingEntry.PhaseId = phaseId;
-    existingEntry.SeasonStartYear = phaseMetadata?.SeasonStartYear ?? existingEntry.SeasonStartYear;
-    existingEntry.SeasonLabel = phaseMetadata?.SeasonLabel ?? existingEntry.SeasonLabel;
-    existingEntry.CategoryName = phaseMetadata?.CategoryName ?? existingEntry.CategoryName;
-    existingEntry.PhaseName = phaseMetadata?.PhaseName ?? existingEntry.PhaseName;
-    existingEntry.LevelName = phaseMetadata?.LevelName ?? existingEntry.LevelName;
-    existingEntry.LevelCode = phaseMetadata?.LevelCode ?? existingEntry.LevelCode;
-    existingEntry.GroupCode = phaseMetadata?.GroupCode ?? existingEntry.GroupCode;
-    existingEntry.LastSyncedAtUtc = now;
-
-    var orderedEntries = entries
-        .OrderBy(entry => entry.CategoryName, StringComparer.OrdinalIgnoreCase)
-        .ThenBy(entry => entry.LevelName, StringComparer.OrdinalIgnoreCase)
-        .ThenBy(entry => entry.GroupCode, StringComparer.OrdinalIgnoreCase)
-        .ThenBy(entry => entry.PhaseName, StringComparer.OrdinalIgnoreCase)
-        .ThenBy(entry => entry.PhaseId ?? int.MaxValue)
-        .ToList();
-
-    var json = JsonSerializer.Serialize(orderedEntries, options);
-    await File.WriteAllTextAsync(registryFile, json);
-}
-
-async Task<List<ResultsSourceRegistryEntry>> LoadResultsSourceRegistryAsync(string registryFile, JsonSerializerOptions options)
-{
-    if (!File.Exists(registryFile))
-        return [];
-
-    var json = await File.ReadAllTextAsync(registryFile);
-    return JsonSerializer.Deserialize<List<ResultsSourceRegistryEntry>>(json, options) ?? [];
-}
-
-void PopulatePhaseSeasonMetadata(PhaseMetadata metadata, IReadOnlyCollection<MatchMapping> orderedMappings)
-{
-    if (metadata.SeasonStartYear.HasValue)
-    {
-        metadata.SeasonLabel = NormalizeSeasonLabel(metadata.SeasonStartYear.Value, metadata.SeasonLabel);
-        return;
-    }
-
-    var inferredSeasonStartYear = orderedMappings
-        .Select(mapping => mapping.MatchDate)
-        .Where(matchDate => matchDate.HasValue)
-        .Select(matchDate => InferSeasonStartYear(matchDate!.Value))
-        .GroupBy(year => year)
-        .OrderByDescending(group => group.Count())
-        .ThenByDescending(group => group.Key)
-        .Select(group => (int?)group.Key)
-        .FirstOrDefault();
-
-    if (!inferredSeasonStartYear.HasValue)
-        return;
-
-    metadata.SeasonStartYear = inferredSeasonStartYear.Value;
-    metadata.SeasonLabel = BuildSeasonLabel(inferredSeasonStartYear.Value);
-}
-
-int InferSeasonStartYear(DateTime matchDate)
-{
-    return matchDate.Month >= 7 ? matchDate.Year : matchDate.Year - 1;
-}
-
-string NormalizeSeasonLabel(int seasonStartYear, string? seasonLabel)
-{
-    return string.IsNullOrWhiteSpace(seasonLabel)
-        ? BuildSeasonLabel(seasonStartYear)
-        : seasonLabel.Trim();
-}
-
-string BuildSeasonLabel(int seasonStartYear)
-{
-    return $"{seasonStartYear}-{seasonStartYear + 1}";
-}
-
 void PrintHelp()
 {
     Console.WriteLine("Uso:");
@@ -671,6 +426,9 @@ void PrintHelp()
     Console.WriteLine();
     Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --non-interactive https://www.basquetcatala.cat/competicions/resultats/20855/0");
     Console.WriteLine("    Igual que sync-all, pero sin pedir ENTER en consola mientras resuelves captcha.");
+    Console.WriteLine();
+    Console.WriteLine("  dotnet run --project BarnaStats/BarnaStats.csproj -- sync-all --skip-mappings --phase 20855 70001 70002");
+    Console.WriteLine("    Reutiliza el mapping actual y descarga solo esos matchWebId candidatos, sin abrir Playwright.");
     Console.WriteLine();
     Console.WriteLine("  Estructura por scope:");
     Console.WriteLine("    BarnaStats/out/results_sources.json");
@@ -708,6 +466,7 @@ bool TryParseSyncArgs(
     out bool nonInteractive,
     out bool forceRefresh,
     out string? analysisDirtyMarkerFile,
+    out bool skipMappings,
     out HashSet<int> explicitMatchIds)
 {
     sourceUrl = null;
@@ -716,6 +475,7 @@ bool TryParseSyncArgs(
     nonInteractive = false;
     forceRefresh = false;
     analysisDirtyMarkerFile = null;
+    skipMappings = false;
     explicitMatchIds = [];
 
     for (var i = 0; i < syncArgs.Length; i += 1)
@@ -737,6 +497,12 @@ bool TryParseSyncArgs(
         if (arg.Equals("--force", StringComparison.OrdinalIgnoreCase))
         {
             forceRefresh = true;
+            continue;
+        }
+
+        if (arg.Equals("--skip-mappings", StringComparison.OrdinalIgnoreCase))
+        {
+            skipMappings = true;
             continue;
         }
 

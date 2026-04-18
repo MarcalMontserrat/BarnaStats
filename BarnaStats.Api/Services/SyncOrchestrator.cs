@@ -4,6 +4,8 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using BarnaStats.Api.Infrastructure;
 using BarnaStats.Api.Models;
+using BarnaStats.Services;
+using BarnaStats.Utilities;
 
 namespace BarnaStats.Api.Services;
 
@@ -14,6 +16,8 @@ public sealed class SyncOrchestrator
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
     private readonly Lock _lock = new();
+    private readonly BarnaStatsPaths _barnaStatsPaths;
+    private readonly MappingSynchronizationCoordinator _mappingSynchronizationCoordinator;
     private readonly RepoPaths _repoPaths;
     private readonly ResultsSourceCatalogService _resultsSourceCatalogService;
     private readonly JsonSerializerOptions _jsonOptions = new()
@@ -26,10 +30,16 @@ public sealed class SyncOrchestrator
     private SyncJob? _currentJob;
     private bool _maintenanceInProgress;
 
-    public SyncOrchestrator(RepoPaths repoPaths, ResultsSourceCatalogService resultsSourceCatalogService)
+    public SyncOrchestrator(
+        RepoPaths repoPaths,
+        ResultsSourceCatalogService resultsSourceCatalogService,
+        BarnaStatsPaths barnaStatsPaths,
+        MappingSynchronizationCoordinator mappingSynchronizationCoordinator)
     {
         _repoPaths = repoPaths;
         _resultsSourceCatalogService = resultsSourceCatalogService;
+        _barnaStatsPaths = barnaStatsPaths;
+        _mappingSynchronizationCoordinator = mappingSynchronizationCoordinator;
     }
 
     public SyncJobSnapshot? GetCurrentJob()
@@ -110,7 +120,10 @@ public sealed class SyncOrchestrator
             _currentJob = job;
 
             var batchSources = normalizedSources
-                .Select(source => new BatchSourceEntry(source.SourceUrl.Trim(), FormatSourceReference(source)))
+                .Select(source => new BatchSourceEntry(
+                    source.SourceUrl.Trim(),
+                    FormatSourceReference(source),
+                    source.PhaseId ?? TryGetPhaseIdFromSourceUrl(source.SourceUrl)))
                 .ToList();
 
             _ = Task.Run(() => RunBatchJobAsync(
@@ -224,7 +237,29 @@ public sealed class SyncOrchestrator
 
         try
         {
-            var exitCode = await RunSyncAllProcessAsync(job.SourceUrl, job.ForceRefresh, analysisDirtyMarker: null, appendLog: job.AppendLog);
+            var source = new BatchSourceEntry(
+                job.SourceUrl,
+                job.SourceUrl,
+                job.SourceId ?? TryGetPhaseIdFromSourceUrl(job.SourceUrl));
+            var mappingResult = await RunBrokeredMappingSyncAsync(source, job.AppendLog);
+
+            if (!mappingResult.Succeeded)
+            {
+                job.Status = SyncJobStatus.Failed;
+                job.CompletedAtUtc = DateTimeOffset.UtcNow;
+                job.ExitCode = 1;
+                job.Error = "No se pudo sincronizar el mapping con el navegador persistente.";
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] ERROR: {job.Error}");
+                return;
+            }
+
+            var exitCode = await RunSyncAllProcessAsync(
+                source,
+                job.ForceRefresh,
+                analysisDirtyMarker: null,
+                skipMappings: true,
+                candidateMatchWebIds: mappingResult.DownloadCandidateMatchWebIds,
+                appendLog: job.AppendLog);
             job.ExitCode = exitCode;
             job.CompletedAtUtc = DateTimeOffset.UtcNow;
             job.AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
@@ -280,10 +315,22 @@ public sealed class SyncOrchestrator
 
                 job.AppendLog($"{prefix} {reference}");
 
+                var mappingResult = await RunBrokeredMappingSyncAsync(
+                    source,
+                    line => job.AppendLog($"{prefix} {line}"));
+
+                if (!mappingResult.Succeeded)
+                {
+                    failures.Add($"{reference} (mapping)");
+                    continue;
+                }
+
                 var exitCode = await RunSyncAllProcessAsync(
-                    source.SourceUrl,
+                    source,
                     forceRefresh,
                     analysisDirtyMarker,
+                    skipMappings: true,
+                    candidateMatchWebIds: mappingResult.DownloadCandidateMatchWebIds,
                     appendLog: line => job.AppendLog($"{prefix} {line}")
                 );
 
@@ -337,9 +384,11 @@ public sealed class SyncOrchestrator
     }
 
     private async Task<int> RunSyncAllProcessAsync(
-        string sourceUrl,
+        BatchSourceEntry source,
         bool forceRefresh,
         string? analysisDirtyMarker,
+        bool skipMappings,
+        IReadOnlyCollection<int>? candidateMatchWebIds,
         Action<string> appendLog)
     {
         var startInfo = new ProcessStartInfo
@@ -361,12 +410,34 @@ public sealed class SyncOrchestrator
         startInfo.ArgumentList.Add("--non-interactive");
         if (forceRefresh)
             startInfo.ArgumentList.Add("--force");
+        if (skipMappings)
+            startInfo.ArgumentList.Add("--skip-mappings");
         if (!string.IsNullOrWhiteSpace(analysisDirtyMarker))
         {
             startInfo.ArgumentList.Add("--analysis-dirty-marker");
             startInfo.ArgumentList.Add(analysisDirtyMarker);
         }
-        startInfo.ArgumentList.Add(sourceUrl);
+
+        if (source.PhaseId is > 0)
+        {
+            startInfo.ArgumentList.Add("--phase");
+            startInfo.ArgumentList.Add(source.PhaseId.Value.ToString());
+        }
+        else
+        {
+            startInfo.ArgumentList.Add(source.SourceUrl);
+        }
+
+        if (candidateMatchWebIds is not null)
+        {
+            foreach (var matchWebId in candidateMatchWebIds
+                         .Where(matchWebId => matchWebId > 0)
+                         .Distinct()
+                         .OrderBy(matchWebId => matchWebId))
+            {
+                startInfo.ArgumentList.Add(matchWebId.ToString());
+            }
+        }
 
         using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
 
@@ -390,6 +461,24 @@ public sealed class SyncOrchestrator
 
         await process.WaitForExitAsync();
         return process.ExitCode;
+    }
+
+    private async Task<MappingSynchronizationResult> RunBrokeredMappingSyncAsync(
+        BatchSourceEntry source,
+        Action<string> appendLog)
+    {
+        var storage = CreateStorageForSource(source);
+        storage.EnsureDirectories();
+
+        appendLog("Paso broker · Sincronizando mappings con navegador persistente");
+
+        return await _mappingSynchronizationCoordinator.ExecuteAsync(
+            storage,
+            source.SourceUrl,
+            includeAll: false,
+            interactive: false,
+            explicitMatchIds: Array.Empty<int>(),
+            appendLog);
     }
 
     private async Task<int> RunGenerateAnalysisProcessAsync(Action<string> appendLog)
@@ -446,6 +535,14 @@ public sealed class SyncOrchestrator
         startInfo.ArgumentList.Add("--project");
         startInfo.ArgumentList.Add(projectFilePath);
         startInfo.ArgumentList.Add("--");
+    }
+
+    private TeamStoragePaths CreateStorageForSource(BatchSourceEntry source)
+    {
+        if (source.PhaseId is > 0)
+            return _barnaStatsPaths.CreateStorage(StorageScope.Phase(source.PhaseId.Value));
+
+        return _barnaStatsPaths.CreateStorage();
     }
 
     private async Task<DeleteSavedSourceResult> DeleteSavedSourceCoreAsync(int phaseId)
@@ -617,7 +714,7 @@ public sealed class SyncOrchestrator
                 ? (TryGetPhaseIdFromSourceUrl(normalizedUrl) is { } phaseId ? $"Fase {phaseId}" : normalizedUrl)
                 : source.Label.Trim();
 
-            results.Add(new BatchSourceEntry(normalizedUrl, reference));
+            results.Add(new BatchSourceEntry(normalizedUrl, reference, TryGetPhaseIdFromSourceUrl(normalizedUrl)));
         }
 
         return results;
@@ -725,7 +822,7 @@ public sealed class SyncOrchestrator
     }
 
     public sealed record SyncStartResult(bool Started, SyncJobSnapshot? JobSnapshot, string? Error);
-    private sealed record BatchSourceEntry(string SourceUrl, string Reference);
+    private sealed record BatchSourceEntry(string SourceUrl, string Reference, int? PhaseId);
     private sealed record SyncSourceInfo(string? Kind, int? SourceId);
 
     private enum SyncJobStatus

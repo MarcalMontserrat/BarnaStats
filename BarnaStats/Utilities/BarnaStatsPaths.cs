@@ -35,6 +35,11 @@ public sealed class BarnaStatsPaths
         return new BarnaStatsPaths(projectDir);
     }
 
+    public static BarnaStatsPaths CreateFromProjectDir(string projectDir)
+    {
+        return new BarnaStatsPaths(Path.GetFullPath(projectDir));
+    }
+
     public void EnsureDirectories()
     {
         Directory.CreateDirectory(OutputDir);

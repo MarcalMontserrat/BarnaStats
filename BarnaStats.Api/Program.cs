@@ -1,6 +1,8 @@
 using BarnaStats.Api.Infrastructure;
 using BarnaStats.Api.Models;
 using BarnaStats.Api.Services;
+using BarnaStats.Services;
+using BarnaStats.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,23 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddSingleton(repoPaths);
+builder.Services.AddSingleton(_ =>
+{
+    var paths = BarnaStatsPaths.CreateFromProjectDir(repoPaths.BarnaStatsProjectDir);
+    paths.EnsureDirectories();
+    return paths;
+});
+builder.Services.AddSingleton<PersistentBrowserMappingSyncRunner>(provider =>
+{
+    var paths = provider.GetRequiredService<BarnaStatsPaths>();
+    return new PersistentBrowserMappingSyncRunner(paths.BrowserProfileDir);
+});
+builder.Services.AddSingleton<MappingSynchronizationCoordinator>(provider =>
+{
+    var paths = provider.GetRequiredService<BarnaStatsPaths>();
+    var runner = provider.GetRequiredService<PersistentBrowserMappingSyncRunner>();
+    return new MappingSynchronizationCoordinator(paths, runner);
+});
 builder.Services.AddSingleton<SyncOrchestrator>();
 builder.Services.AddSingleton<ResultsSourceCatalogService>();
 builder.Services.AddHttpClient<BasquetCatalaLookupService>(client =>
