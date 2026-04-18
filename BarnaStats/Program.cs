@@ -15,6 +15,7 @@ var jsonOptions = new JsonSerializerOptions
     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
     WriteIndented = true
 };
+var phaseCacheInspector = new PhaseCacheInspector(jsonOptions);
 const int DefaultMaxParallelMatchDownloads = 6;
 const int DownloadErrorCooldownMs = 750;
 
@@ -69,6 +70,21 @@ async Task<bool> RunSyncAllAsync(string[] syncArgs)
 
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
+
+    if (!forceRefresh && !includeAll && explicitMatchIds.Count == 0)
+    {
+        var cacheInspection = await phaseCacheInspector.InspectAsync(storage);
+        if (cacheInspection.CanReuseWithoutRefresh)
+        {
+            Console.WriteLine("Paso 1/3 · La fase ya está completa en caché. Se omite la sincronización.");
+            Console.WriteLine(cacheInspection.Reason);
+            Console.WriteLine($"Mappings totales: {cacheInspection.TotalMappings}");
+            Console.WriteLine($"Partidos descargables reutilizados: {cacheInspection.CachedMappings}");
+            if (cacheInspection.FutureMappings > 0)
+                Console.WriteLine($"Partidos futuros omitidos: {cacheInspection.FutureMappings}");
+            return true;
+        }
+    }
 
     MappingSynchronizationResult syncResult;
     if (skipMappings)

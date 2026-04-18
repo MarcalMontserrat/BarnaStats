@@ -18,6 +18,7 @@ public sealed class SyncOrchestrator
     private readonly Lock _lock = new();
     private readonly BarnaStatsPaths _barnaStatsPaths;
     private readonly MappingSynchronizationCoordinator _mappingSynchronizationCoordinator;
+    private readonly PhaseCacheInspector _phaseCacheInspector;
     private readonly RepoPaths _repoPaths;
     private readonly ResultsSourceCatalogService _resultsSourceCatalogService;
     private readonly JsonSerializerOptions _jsonOptions = new()
@@ -40,6 +41,7 @@ public sealed class SyncOrchestrator
         _resultsSourceCatalogService = resultsSourceCatalogService;
         _barnaStatsPaths = barnaStatsPaths;
         _mappingSynchronizationCoordinator = mappingSynchronizationCoordinator;
+        _phaseCacheInspector = new PhaseCacheInspector(_jsonOptions);
     }
 
     public SyncJobSnapshot? GetCurrentJob()
@@ -241,6 +243,17 @@ public sealed class SyncOrchestrator
                 job.SourceUrl,
                 job.SourceUrl,
                 job.SourceId ?? TryGetPhaseIdFromSourceUrl(job.SourceUrl));
+
+            if (await TrySkipCompletedPhaseAsync(source, job.ForceRefresh, job.AppendLog))
+            {
+                job.ExitCode = 0;
+                job.CompletedAtUtc = DateTimeOffset.UtcNow;
+                job.AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
+                job.Status = SyncJobStatus.Succeeded;
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sincronización completada reutilizando la fase ya descargada.");
+                return;
+            }
+
             var mappingResult = await RunBrokeredMappingSyncAsync(source, job.AppendLog);
 
             if (!mappingResult.Succeeded)
@@ -314,6 +327,14 @@ public sealed class SyncOrchestrator
                 var reference = source.Reference;
 
                 job.AppendLog($"{prefix} {reference}");
+
+                if (await TrySkipCompletedPhaseAsync(
+                        source,
+                        forceRefresh,
+                        line => job.AppendLog($"{prefix} {line}")))
+                {
+                    continue;
+                }
 
                 var mappingResult = await RunBrokeredMappingSyncAsync(
                     source,
@@ -479,6 +500,24 @@ public sealed class SyncOrchestrator
             interactive: false,
             explicitMatchIds: Array.Empty<int>(),
             appendLog);
+    }
+
+    private async Task<bool> TrySkipCompletedPhaseAsync(
+        BatchSourceEntry source,
+        bool forceRefresh,
+        Action<string> appendLog)
+    {
+        if (forceRefresh || source.PhaseId is not > 0)
+            return false;
+
+        var storage = CreateStorageForSource(source);
+        var cacheInspection = await _phaseCacheInspector.InspectAsync(storage);
+        if (!cacheInspection.CanReuseWithoutRefresh)
+            return false;
+
+        appendLog($"Fase completa en caché. {DescribeCacheInspection(cacheInspection)}");
+        appendLog("Se omiten navegador, sync-all y regeneración de analysis para esta fase.");
+        return true;
     }
 
     private async Task<int> RunGenerateAnalysisProcessAsync(Action<string> appendLog)
@@ -744,6 +783,14 @@ public sealed class SyncOrchestrator
         return string.IsNullOrWhiteSpace(lastLog)
             ? $"La fase se borró, pero GenerateAnalisys terminó con código {exitCode}."
             : $"La fase se borró, pero GenerateAnalisys terminó con código {exitCode}: {lastLog}";
+    }
+
+    private static string DescribeCacheInspection(PhaseCacheInspectionResult cacheInspection)
+    {
+        var summary = $"{cacheInspection.CachedMappings}/{cacheInspection.DownloadableMappings} partidos descargables ya están listos";
+        return cacheInspection.FutureMappings > 0
+            ? $"{summary}; partidos futuros omitidos: {cacheInspection.FutureMappings}."
+            : $"{summary}.";
     }
 
     private sealed class SyncJob
