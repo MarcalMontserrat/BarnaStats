@@ -16,6 +16,7 @@ function TeamBadge({
     teamColor = "",
     size = "md",
     title = "",
+    className = "",
     style = {}
 }) {
     const branding = resolveClubBranding({teamIdExtern, teamName, teamShortName, teamColor});
@@ -30,6 +31,7 @@ function TeamBadge({
     return (
         <span
             title={title || teamName || branding.clubName || undefined}
+            className={className || undefined}
             style={{
                 width: dimension,
                 height: dimension,

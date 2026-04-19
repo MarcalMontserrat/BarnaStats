@@ -85,23 +85,6 @@ const styles = {
     categoryTitle: {
         fontSize: "clamp(1.2rem, 2vw, 1.6rem)"
     },
-    categoryMeta: {
-        display: "flex",
-        gap: 10,
-        flexWrap: "wrap"
-    },
-    metaChip: {
-        display: "inline-flex",
-        alignItems: "center",
-        minHeight: 34,
-        padding: "0 12px",
-        borderRadius: 999,
-        background: "rgba(255, 249, 242, 0.92)",
-        border: "1px solid rgba(107, 86, 58, 0.14)",
-        color: "var(--navy)",
-        fontSize: 12,
-        fontWeight: 800
-    },
     levelShell: {
         display: "grid",
         gap: 12
@@ -258,33 +241,28 @@ function ClubOverviewSection({club, onTeamNavigate, onCompetitionNavigate}) {
                     <article key={category.categoryName} style={styles.categoryCard}>
                         <div style={styles.categoryHeader}>
                             <h3 style={styles.categoryTitle}>{category.categoryName}</h3>
-                            <div style={styles.categoryMeta}>
-                                <span style={styles.metaChip}>
-                                    {category.levels.reduce((sum, level) => sum + level.teams.length, 0)} equipo{category.levels.reduce((sum, level) => sum + level.teams.length, 0) === 1 ? "" : "s"}
-                                </span>
-                            </div>
                         </div>
 
                         {category.levels.map((level) => (
-                            <div key={`${category.categoryName}:${level.levelKey}`} style={styles.levelShell}>
-                                <div style={styles.levelHeader}>
-                                    <div style={styles.levelTitle}>{level.levelName || "Sin nivel visible"}</div>
-                                    <span style={styles.metaChip}>{level.teams.length} equipo{level.teams.length === 1 ? "" : "s"}</span>
-                                </div>
+                                <div key={`${category.categoryName}:${level.levelKey}`} style={styles.levelShell}>
+                                    <div style={styles.levelHeader}>
+                                        <div style={styles.levelTitle}>{level.levelName || "Sin nivel visible"}</div>
+                                    </div>
 
                                 <div style={styles.teamList}>
                                     {level.teams.map((team) => (
                                         <article key={team.teamKey} style={styles.teamRow}>
-                                            <div style={styles.teamHeader}>
-                                                <div style={styles.teamIdentity}>
+                                            <div className="club-team-header" style={styles.teamHeader}>
+                                                <div className="club-team-identity" style={styles.teamIdentity}>
                                                     <TeamBadge
+                                                        className="club-team-badge"
                                                         size="md"
                                                         teamIdExtern={team.teamIdExtern}
                                                         teamName={team.teamName}
                                                     />
                                                     <div style={styles.teamText}>
-                                                        <div style={styles.teamName}>{team.teamName}</div>
-                                                        <div style={styles.teamMeta}>
+                                                        <div className="club-team-name" style={styles.teamName}>{team.teamName}</div>
+                                                        <div className="club-team-meta" style={styles.teamMeta}>
                                                             {team.standingPosition ? (
                                                                 <span style={styles.teamMetaChip}>#{team.standingPosition}</span>
                                                             ) : null}
@@ -297,9 +275,10 @@ function ClubOverviewSection({club, onTeamNavigate, onCompetitionNavigate}) {
                                                     </div>
                                                 </div>
 
-                                                <div style={styles.actions}>
+                                                <div className="club-team-actions" style={styles.actions}>
                                                     <button
                                                         type="button"
+                                                        className="club-team-button"
                                                         style={styles.button}
                                                         onClick={() => onTeamNavigate(team.teamKey)}
                                                     >
@@ -307,6 +286,7 @@ function ClubOverviewSection({club, onTeamNavigate, onCompetitionNavigate}) {
                                                     </button>
                                                     <button
                                                         type="button"
+                                                        className="club-team-button"
                                                         style={{...styles.button, ...styles.primaryButton}}
                                                         onClick={() => onCompetitionNavigate(team)}
                                                     >

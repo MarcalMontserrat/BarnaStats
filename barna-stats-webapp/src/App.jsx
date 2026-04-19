@@ -58,13 +58,14 @@ const MatchListSection = lazy(() => import("./components/MatchListSection.jsx"))
 const SyncPanel = lazy(() => import("./components/SyncPanel.jsx"));
 const ClubOverviewSection = lazy(() => import("./components/ClubOverviewSection.jsx"));
 
-const DASHBOARD_ROUTE = "#/";
+const ROOT_ROUTE = "#/";
+const DASHBOARD_ROUTE = "#/team";
 const SYNC_ROUTE = "#/sync";
 const COMPETITION_ROUTE = "#/competition";
 const CLUB_ROUTE = "#/club";
 const HISTORY_ROUTE = "#/history";
 const PLAYERS_ROUTE = "#/players";
-const TEAM_ROUTE_PREFIX = "#/team/";
+const TEAM_ROUTE_PREFIX = `${DASHBOARD_ROUTE}/`;
 const CLUB_ROUTE_PREFIX = "#/club/";
 const HISTORY_TEAM_ROUTE_PREFIX = "#/history/";
 const COMPETITION_TABS = [
@@ -630,6 +631,10 @@ function buildHash(path, params = {}) {
     return queryString ? `${path}?${queryString}` : path;
 }
 
+function buildDefaultRoute() {
+    return ROOT_ROUTE;
+}
+
 function buildDashboardRoute() {
     return DASHBOARD_ROUTE;
 }
@@ -711,11 +716,25 @@ function parseHash(hash) {
         };
     }
 
-    if (path === CLUB_ROUTE) {
+    if (path === ROOT_ROUTE || path === CLUB_ROUTE || path === "") {
         return {
             route: "club",
             teamKey: teamKey || null,
             clubKey: clubKey || null,
+            seasonLabel: "",
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: ""
+        };
+    }
+
+    if (path === DASHBOARD_ROUTE) {
+        return {
+            route: "dashboard",
+            teamKey: teamKey || null,
+            clubKey: "",
             seasonLabel: "",
             playerKey: "",
             competitionTab: "",
@@ -802,7 +821,7 @@ function parseHash(hash) {
     }
 
     return {
-        route: "dashboard",
+        route: "club",
         teamKey: null,
         clubKey: "",
         seasonLabel: "",
@@ -965,7 +984,7 @@ function App() {
 
     useEffect(() => {
         if (!window.location.hash) {
-            navigateToHash(buildDashboardRoute());
+            navigateToHash(buildDefaultRoute());
         }
 
         const handleHashChange = () => {
@@ -1000,7 +1019,7 @@ function App() {
             return;
         }
 
-        navigateToHash(buildDashboardRoute());
+        navigateToHash(buildDefaultRoute());
     }, [route, syncUiEnabled]);
 
     const analysisIndex = (isHistoryRoute || isPlayersRoute)

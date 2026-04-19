@@ -131,4 +131,38 @@ a {
   .match-center {
     min-width: 100px !important;
   }
+
+  .club-team-header {
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: stretch !important;
+  }
+
+  .club-team-identity {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .club-team-badge {
+    display: none !important;
+  }
+
+  .club-team-name {
+    white-space: normal !important;
+    line-height: 1.2 !important;
+  }
+
+  .club-team-meta {
+    gap: 6px !important;
+  }
+
+  .club-team-actions {
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .club-team-button {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    padding: 0 12px !important;
+  }
 }
