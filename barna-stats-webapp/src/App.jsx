@@ -1508,11 +1508,12 @@ function App() {
     };
 
     const handleHistoryTeamQueryChange = (value) => {
-        setHistoryTeamQuery(value);
-
-        if (!String(value ?? "").trim()) {
-            setSelectedHistoryTeamKey("");
+        if (String(value ?? "").trim()) {
+            return;
         }
+
+        setHistoryTeamQuery("");
+        setSelectedHistoryTeamKey("");
     };
 
     const handleHistoryTeamSelect = (option) => {
@@ -1521,11 +1522,12 @@ function App() {
     };
 
     const handleHistoricalPlayerQueryChange = (value) => {
-        setPlayerDirectoryQuery(value);
-
-        if (!String(value ?? "").trim()) {
-            setSelectedHistoricalPlayerKey("");
+        if (String(value ?? "").trim()) {
+            return;
         }
+
+        setPlayerDirectoryQuery("");
+        setSelectedHistoricalPlayerKey("");
     };
 
     const handleHistoricalPlayerSelect = (option) => {
@@ -1534,7 +1536,11 @@ function App() {
     };
 
     const handleClubQueryChange = (value) => {
-        setClubQuery(value);
+        if (String(value ?? "").trim()) {
+            return;
+        }
+
+        setClubQuery("");
     };
 
     const handleClubSelect = (option) => {

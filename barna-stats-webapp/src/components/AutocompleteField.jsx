@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useDeferredValue, useEffect, useMemo, useState} from "react";
 
 const styles = {
     shell: {
@@ -83,6 +83,10 @@ function normalizeSearchText(value) {
         .toLowerCase();
 }
 
+function buildOptionSearchIndex(option) {
+    return normalizeSearchText(option.searchText || `${option.label} ${option.meta ?? ""}`);
+}
+
 function AutocompleteField({
     label,
     value,
@@ -97,20 +101,48 @@ function AutocompleteField({
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const [highlightedIndex, setHighlightedIndex] = useState(0);
-    const query = normalizeSearchText(value);
-    const filteredOptions = (options ?? [])
-        .filter((option) => {
-            if (!query) {
-                return true;
+    const [draftValue, setDraftValue] = useState(value ?? "");
+    const deferredQuery = useDeferredValue(normalizeSearchText(draftValue));
+    const indexedOptions = useMemo(() => (options ?? []).map((option) => ({
+        ...option,
+        searchIndex: buildOptionSearchIndex(option)
+    })), [options]);
+    const filteredOptions = useMemo(() => {
+        if (!deferredQuery) {
+            return indexedOptions.slice(0, maxResults);
+        }
+
+        const matches = [];
+        for (const option of indexedOptions) {
+            if (!option.searchIndex.includes(deferredQuery)) {
+                continue;
             }
 
-            const haystack = normalizeSearchText(option.searchText || `${option.label} ${option.meta ?? ""}`);
-            return haystack.includes(query);
-        })
-        .slice(0, maxResults);
+            matches.push(option);
+            if (matches.length >= maxResults) {
+                break;
+            }
+        }
+
+        return matches;
+    }, [deferredQuery, indexedOptions, maxResults]);
+
+    useEffect(() => {
+        setDraftValue(value ?? "");
+    }, [value]);
+
+    useEffect(() => {
+        if (filteredOptions.length === 0) {
+            setHighlightedIndex(0);
+            return;
+        }
+
+        setHighlightedIndex((currentIndex) => Math.min(currentIndex, filteredOptions.length - 1));
+    }, [filteredOptions]);
 
     const selectOption = (option) => {
-        onValueChange(option.label);
+        setDraftValue(option.label);
+        onValueChange?.(option.label);
         onSelectOption(option);
         setIsOpen(false);
         setHighlightedIndex(0);
@@ -128,7 +160,7 @@ function AutocompleteField({
                 {label}
                 <input
                     type="text"
-                    value={value}
+                    value={draftValue}
                     placeholder={placeholder}
                     aria-label={ariaLabel}
                     autoComplete="off"
@@ -142,9 +174,14 @@ function AutocompleteField({
                         }, 120);
                     }}
                     onChange={(event) => {
-                        onValueChange(event.target.value);
+                        const nextValue = event.target.value;
+                        setDraftValue(nextValue);
                         setIsOpen(true);
                         setHighlightedIndex(0);
+
+                        if (!String(nextValue ?? "").trim()) {
+                            onValueChange?.("");
+                        }
                     }}
                     onKeyDown={(event) => {
                         if (!isOpen || filteredOptions.length === 0) {
