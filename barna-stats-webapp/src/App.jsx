@@ -1,4 +1,4 @@
-import {lazy, Suspense, useEffect, useRef, useState} from "react";
+import {lazy, Suspense, useEffect, useMemo, useRef, useState} from "react";
 import AutocompleteField from "./components/AutocompleteField.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
 import TeamBadge from "./components/TeamBadge.jsx";
@@ -57,6 +57,7 @@ const PlayerEvolutionSection = lazy(() => import("./components/PlayerEvolutionSe
 const MatchListSection = lazy(() => import("./components/MatchListSection.jsx"));
 const SyncPanel = lazy(() => import("./components/SyncPanel.jsx"));
 const ClubOverviewSection = lazy(() => import("./components/ClubOverviewSection.jsx"));
+const EMPTY_LIST = [];
 
 const ROOT_ROUTE = "#/";
 const DASHBOARD_ROUTE = "#/team";
@@ -1046,25 +1047,37 @@ function App() {
     const activeBrowseSeasonLabel = (isHistoryRoute || isPlayersRoute)
         ? effectiveExplorerSeasonLabel
         : currentSeasonLabel;
-    const historicalTeamEntities = buildHistoricalTeamEntities(historicalSeasonDatasets);
-    const historicalTeamOptions = historicalTeamEntities.map((entity) => ({
+    const historicalTeamEntities = useMemo(
+        () => buildHistoricalTeamEntities(historicalSeasonDatasets),
+        [historicalSeasonDatasets]
+    );
+    const historicalTeamOptions = useMemo(() => historicalTeamEntities.map((entity) => ({
         value: entity.key,
         label: entity.label,
         meta: entity.meta,
         searchText: entity.searchText
-    }));
-    const selectedHistoricalTeam = historicalTeamEntities.find((entity) => entity.key === selectedHistoryTeamKey) ?? null;
-    const historicalPlayerEntities = buildHistoricalPlayerEntities(historicalSeasonDatasets);
-    const historicalPlayerOptions = historicalPlayerEntities.map((entity) => ({
+    })), [historicalTeamEntities]);
+    const selectedHistoricalTeam = useMemo(
+        () => historicalTeamEntities.find((entity) => entity.key === selectedHistoryTeamKey) ?? null,
+        [historicalTeamEntities, selectedHistoryTeamKey]
+    );
+    const historicalPlayerEntities = useMemo(
+        () => buildHistoricalPlayerEntities(historicalSeasonDatasets),
+        [historicalSeasonDatasets]
+    );
+    const historicalPlayerOptions = useMemo(() => historicalPlayerEntities.map((entity) => ({
         value: entity.key,
         label: entity.label,
         meta: entity.meta,
         searchText: entity.searchText
-    }));
-    const selectedHistoricalPlayer = historicalPlayerEntities.find((entity) => entity.key === selectedHistoricalPlayerKey) ?? null;
-    const teams = analysisIndex?.teams ?? [];
-    const competitionTeams = competition?.teams ?? [];
-    const teamDirectoryByKey = [...teams, ...competitionTeams].reduce((map, team) => {
+    })), [historicalPlayerEntities]);
+    const selectedHistoricalPlayer = useMemo(
+        () => historicalPlayerEntities.find((entity) => entity.key === selectedHistoricalPlayerKey) ?? null,
+        [historicalPlayerEntities, selectedHistoricalPlayerKey]
+    );
+    const teams = analysisIndex?.teams ?? EMPTY_LIST;
+    const competitionTeams = competition?.teams ?? EMPTY_LIST;
+    const teamDirectoryByKey = useMemo(() => [...teams, ...competitionTeams].reduce((map, team) => {
         if (!team?.teamKey) {
             return map;
         }
@@ -1075,12 +1088,15 @@ function App() {
             teamIdExtern: Number(team.teamIdExtern ?? current.teamIdExtern ?? 0)
         });
         return map;
-    }, new Map());
-    const latestTeamContexts = buildLatestTeamContextByKey(teams);
+    }, new Map()), [teams, competitionTeams]);
+    const latestTeamContexts = useMemo(() => buildLatestTeamContextByKey(teams), [teams]);
     const dashboardCategoryOptions = buildCategoryOptions(latestTeamContexts);
-    const latestTeamContextRows = [...latestTeamContexts.values()];
-    const sortedTeams = [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es"));
-    const globalDefaultTeam = teams.reduce((best, team) => {
+    const latestTeamContextRows = useMemo(() => [...latestTeamContexts.values()], [latestTeamContexts]);
+    const sortedTeams = useMemo(
+        () => [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es")),
+        [teams]
+    );
+    const globalDefaultTeam = useMemo(() => teams.reduce((best, team) => {
         if (!best) {
             return team;
         }
@@ -1095,7 +1111,7 @@ function App() {
         }
 
         return best;
-    }, null);
+    }, null), [teams]);
     const selectedTeamContext = latestTeamContexts.get(selectedTeamKey)
         ?? latestTeamContexts.get(globalDefaultTeam?.teamKey ?? "")
         ?? null;
@@ -1158,23 +1174,23 @@ function App() {
             : (dashboardDefaultTeam?.teamKey ?? selectedTeamKeyFromAll))
         : selectedTeamKeyFromAll;
     const selectedTeamSummary = teams.find((team) => team.teamKey === effectiveTeamKey) ?? globalDefaultTeam ?? null;
-    const competitionPlayerLeaders = competition?.playerLeaders ?? [];
-    const competitionMatches = competition?.matches ?? [];
-    const competitionMatchesWithBranding = competitionMatches.map((match) => ({
+    const competitionPlayerLeaders = competition?.playerLeaders ?? EMPTY_LIST;
+    const competitionMatches = competition?.matches ?? EMPTY_LIST;
+    const competitionMatchesWithBranding = useMemo(() => competitionMatches.map((match) => ({
         ...match,
         homeTeamIdExtern: Number(teamDirectoryByKey.get(match.homeTeamKey)?.teamIdExtern ?? 0),
         awayTeamIdExtern: Number(teamDirectoryByKey.get(match.awayTeamKey)?.teamIdExtern ?? 0)
-    }));
-    const currentClubEntities = buildCurrentClubEntities(teams, {
+    })), [competitionMatches, teamDirectoryByKey]);
+    const currentClubEntities = useMemo(() => buildCurrentClubEntities(teams, {
         matches: competitionMatches,
         playerLeaders: competitionPlayerLeaders
-    });
-    const clubOptions = currentClubEntities.map((club) => ({
+    }), [teams, competitionMatches, competitionPlayerLeaders]);
+    const clubOptions = useMemo(() => currentClubEntities.map((club) => ({
         value: club.key,
         label: club.label,
         meta: club.meta,
         searchText: `${club.searchText} ${club.meta}`
-    }));
+    })), [currentClubEntities]);
     const selectedTeamBranding = selectedTeamSummary
         ? getClubBrandingForTeam(selectedTeamSummary.teamIdExtern, selectedTeamSummary.teamName)
         : null;
@@ -1508,12 +1524,11 @@ function App() {
     };
 
     const handleHistoryTeamQueryChange = (value) => {
-        if (String(value ?? "").trim()) {
-            return;
-        }
+        setHistoryTeamQuery(value);
 
-        setHistoryTeamQuery("");
-        setSelectedHistoryTeamKey("");
+        if (!String(value ?? "").trim()) {
+            setSelectedHistoryTeamKey("");
+        }
     };
 
     const handleHistoryTeamSelect = (option) => {
@@ -1522,12 +1537,11 @@ function App() {
     };
 
     const handleHistoricalPlayerQueryChange = (value) => {
-        if (String(value ?? "").trim()) {
-            return;
-        }
+        setPlayerDirectoryQuery(value);
 
-        setPlayerDirectoryQuery("");
-        setSelectedHistoricalPlayerKey("");
+        if (!String(value ?? "").trim()) {
+            setSelectedHistoricalPlayerKey("");
+        }
     };
 
     const handleHistoricalPlayerSelect = (option) => {
@@ -1536,11 +1550,7 @@ function App() {
     };
 
     const handleClubQueryChange = (value) => {
-        if (String(value ?? "").trim()) {
-            return;
-        }
-
-        setClubQuery("");
+        setClubQuery(value);
     };
 
     const handleClubSelect = (option) => {

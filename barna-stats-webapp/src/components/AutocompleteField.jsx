@@ -1,4 +1,4 @@
-import {useDeferredValue, useEffect, useMemo, useState} from "react";
+import {useDeferredValue, useMemo, useState} from "react";
 
 const styles = {
     shell: {
@@ -101,8 +101,7 @@ function AutocompleteField({
 }) {
     const [isOpen, setIsOpen] = useState(false);
     const [highlightedIndex, setHighlightedIndex] = useState(0);
-    const [draftValue, setDraftValue] = useState(value ?? "");
-    const deferredQuery = useDeferredValue(normalizeSearchText(draftValue));
+    const deferredQuery = useDeferredValue(normalizeSearchText(value));
     const indexedOptions = useMemo(() => (options ?? []).map((option) => ({
         ...option,
         searchIndex: buildOptionSearchIndex(option)
@@ -126,22 +125,11 @@ function AutocompleteField({
 
         return matches;
     }, [deferredQuery, indexedOptions, maxResults]);
-
-    useEffect(() => {
-        setDraftValue(value ?? "");
-    }, [value]);
-
-    useEffect(() => {
-        if (filteredOptions.length === 0) {
-            setHighlightedIndex(0);
-            return;
-        }
-
-        setHighlightedIndex((currentIndex) => Math.min(currentIndex, filteredOptions.length - 1));
-    }, [filteredOptions]);
+    const safeHighlightedIndex = filteredOptions.length === 0
+        ? 0
+        : Math.min(highlightedIndex, filteredOptions.length - 1);
 
     const selectOption = (option) => {
-        setDraftValue(option.label);
         onValueChange?.(option.label);
         onSelectOption(option);
         setIsOpen(false);
@@ -160,7 +148,7 @@ function AutocompleteField({
                 {label}
                 <input
                     type="text"
-                    value={draftValue}
+                    value={value}
                     placeholder={placeholder}
                     aria-label={ariaLabel}
                     autoComplete="off"
@@ -175,13 +163,9 @@ function AutocompleteField({
                     }}
                     onChange={(event) => {
                         const nextValue = event.target.value;
-                        setDraftValue(nextValue);
+                        onValueChange?.(nextValue);
                         setIsOpen(true);
                         setHighlightedIndex(0);
-
-                        if (!String(nextValue ?? "").trim()) {
-                            onValueChange?.("");
-                        }
                     }}
                     onKeyDown={(event) => {
                         if (!isOpen || filteredOptions.length === 0) {
@@ -202,7 +186,7 @@ function AutocompleteField({
 
                         if (event.key === "Enter") {
                             event.preventDefault();
-                            selectOption(filteredOptions[highlightedIndex]);
+                            selectOption(filteredOptions[safeHighlightedIndex]);
                             return;
                         }
 
@@ -219,7 +203,7 @@ function AutocompleteField({
                         <button
                             key={option.value}
                             type="button"
-                            style={index === highlightedIndex
+                            style={index === safeHighlightedIndex
                                 ? {...styles.option, ...styles.optionActive}
                                 : styles.option}
                             onMouseEnter={() => {
