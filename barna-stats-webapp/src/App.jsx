@@ -1,5 +1,6 @@
 import {lazy, Suspense, useEffect, useMemo, useRef, useState} from "react";
 import AutocompleteField from "./components/AutocompleteField.jsx";
+import DeferredArchivePrompt from "./components/DeferredArchivePrompt.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
 import TeamBadge from "./components/TeamBadge.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
@@ -40,6 +41,17 @@ import {
     sortMatches,
     sortPlayers
 } from "./utils/playerStats.js";
+import {
+    buildClubRoute,
+    buildCompetitionRoute,
+    buildDashboardRoute,
+    buildDefaultRoute,
+    buildHistoryRoute,
+    buildPlayersRoute,
+    getPageMetadata,
+    parseHash,
+    SYNC_ROUTE
+} from "./utils/appRoutes.js";
 import {getClubBrandingForTeam} from "./utils/clubBranding.js";
 
 const GlobalLeadersSection = lazy(() => import("./components/GlobalLeadersSection.jsx"));
@@ -54,16 +66,6 @@ const SyncPanel = lazy(() => import("./components/SyncPanel.jsx"));
 const ClubOverviewSection = lazy(() => import("./components/ClubOverviewSection.jsx"));
 const EMPTY_LIST = [];
 
-const ROOT_ROUTE = "#/";
-const DASHBOARD_ROUTE = "#/team";
-const SYNC_ROUTE = "#/sync";
-const COMPETITION_ROUTE = "#/competition";
-const CLUB_ROUTE = "#/club";
-const HISTORY_ROUTE = "#/history";
-const PLAYERS_ROUTE = "#/players";
-const TEAM_ROUTE_PREFIX = `${DASHBOARD_ROUTE}/`;
-const CLUB_ROUTE_PREFIX = "#/club/";
-const HISTORY_TEAM_ROUTE_PREFIX = "#/history/";
 const COMPETITION_TABS = [
     {
         id: "standings",
@@ -612,223 +614,6 @@ function formatRecordLine(record) {
     return `${record?.wins ?? 0}-${record?.losses ?? 0}`;
 }
 
-function buildHash(path, params = {}) {
-    const query = new URLSearchParams();
-
-    Object.entries(params).forEach(([key, value]) => {
-        if (!value) {
-            return;
-        }
-
-        query.set(key, String(value));
-    });
-
-    const queryString = query.toString();
-    return queryString ? `${path}?${queryString}` : path;
-}
-
-function buildDefaultRoute() {
-    return ROOT_ROUTE;
-}
-
-function buildDashboardRoute() {
-    return DASHBOARD_ROUTE;
-}
-
-function buildCompetitionRoute({
-    teamKey = "",
-    tab = "",
-    category = "",
-    level = "",
-    phase = ""
-} = {}) {
-    return buildHash(COMPETITION_ROUTE, {
-        team: teamKey,
-        tab,
-        category,
-        level,
-        phase
-    });
-}
-
-function buildClubRoute(clubKey = "") {
-    return clubKey
-        ? `${CLUB_ROUTE}/${encodeURIComponent(clubKey)}`
-        : CLUB_ROUTE;
-}
-
-function buildHistoryRoute(teamKey = "", seasonLabel = "") {
-    const path = teamKey
-        ? `${HISTORY_ROUTE}/${encodeURIComponent(teamKey)}`
-        : HISTORY_ROUTE;
-
-    return buildHash(path, {season: seasonLabel});
-}
-
-function buildPlayersRoute(seasonLabel = "", playerKey = "") {
-    return buildHash(PLAYERS_ROUTE, {
-        season: seasonLabel,
-        player: playerKey
-    });
-}
-
-function parseHash(hash) {
-    const [path, queryString = ""] = String(hash ?? "").split("?");
-    const params = new URLSearchParams(queryString);
-    const seasonLabel = params.get("season") ?? "";
-    const playerKey = params.get("player") ?? "";
-    const teamKey = params.get("team") ?? "";
-    const clubKey = params.get("club") ?? "";
-    const competitionTab = params.get("tab") ?? "";
-    const competitionCategory = params.get("category") ?? "";
-    const competitionLevel = params.get("level") ?? "";
-    const competitionPhase = params.get("phase") ?? "";
-
-    if (path === SYNC_ROUTE) {
-        return {
-            route: "sync",
-            teamKey: null,
-            clubKey: "",
-            seasonLabel,
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path === COMPETITION_ROUTE || path === "#/rankings" || path === "#/global") {
-        return {
-            route: "competition",
-            teamKey: teamKey || null,
-            clubKey: "",
-            seasonLabel: "",
-            playerKey: "",
-            competitionTab,
-            competitionCategory,
-            competitionLevel,
-            competitionPhase
-        };
-    }
-
-    if (path === ROOT_ROUTE || path === CLUB_ROUTE || path === "") {
-        return {
-            route: "club",
-            teamKey: teamKey || null,
-            clubKey: clubKey || null,
-            seasonLabel: "",
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path === DASHBOARD_ROUTE) {
-        return {
-            route: "dashboard",
-            teamKey: teamKey || null,
-            clubKey: "",
-            seasonLabel: "",
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path === PLAYERS_ROUTE) {
-        return {
-            route: "players",
-            teamKey: null,
-            clubKey: "",
-            seasonLabel,
-            playerKey,
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path === HISTORY_ROUTE) {
-        return {
-            route: "history",
-            teamKey: null,
-            clubKey: "",
-            seasonLabel,
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path.startsWith(HISTORY_TEAM_ROUTE_PREFIX)) {
-        const encodedTeamKey = path.slice(HISTORY_TEAM_ROUTE_PREFIX.length);
-
-        return {
-            route: "history",
-            teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null,
-            clubKey: "",
-            seasonLabel,
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path.startsWith(CLUB_ROUTE_PREFIX)) {
-        const encodedClubKey = path.slice(CLUB_ROUTE_PREFIX.length);
-
-        return {
-            route: "club",
-            teamKey: teamKey || null,
-            clubKey: encodedClubKey ? decodeURIComponent(encodedClubKey) : null,
-            seasonLabel: "",
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    if (path.startsWith(TEAM_ROUTE_PREFIX)) {
-        const encodedTeamKey = path.slice(TEAM_ROUTE_PREFIX.length);
-
-        return {
-            route: "dashboard",
-            teamKey: encodedTeamKey ? decodeURIComponent(encodedTeamKey) : null,
-            clubKey: "",
-            seasonLabel: "",
-            playerKey: "",
-            competitionTab: "",
-            competitionCategory: "",
-            competitionLevel: "",
-            competitionPhase: ""
-        };
-    }
-
-    return {
-        route: "club",
-        teamKey: null,
-        clubKey: "",
-        seasonLabel: "",
-        playerKey: "",
-        competitionTab: "",
-        competitionCategory: "",
-        competitionLevel: "",
-        competitionPhase: ""
-    };
-}
-
 function navigateToHash(hash) {
     window.location.assign(hash);
 }
@@ -838,22 +623,11 @@ function App() {
     const initialHashState = parseHash(window.location.hash);
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
     const [route, setRoute] = useState(() => initialHashState.route);
-    const [selectedSeasonLabel, setSelectedSeasonLabel] = useState(() => initialHashState.seasonLabel ?? "");
     const {
         analysis: seasonsIndex,
-        loading: seasonsIndexLoading,
-        error: seasonsIndexError
     } = useAnalysisData(`data/seasons/index.json?v=${analysisVersion}`);
-    const seasonOptions = seasonsIndex?.seasons ?? [];
-    const defaultSeasonLabel = seasonsIndex?.defaultSeasonLabel
-        || seasonOptions[0]?.seasonLabel
-        || "";
-    const effectiveExplorerSeasonLabel = seasonOptions.some((season) => season.seasonLabel === selectedSeasonLabel)
-        ? selectedSeasonLabel
-        : defaultSeasonLabel;
-    const selectedSeasonEntry = seasonOptions.find((season) => season.seasonLabel === effectiveExplorerSeasonLabel)
-        ?? seasonOptions[0]
-        ?? null;
+    const seasonOptions = seasonsIndex?.seasons ?? EMPTY_LIST;
+    const defaultSeasonLabel = seasonsIndex?.defaultSeasonLabel || seasonOptions[0]?.seasonLabel || "";
     const initialCompetitionTab = initialHashState.competitionTab || "standings";
     const initialCompetitionCategory = initialHashState.competitionCategory || "all";
     const initialCompetitionLevel = initialHashState.competitionLevel || "all";
@@ -999,7 +773,6 @@ function App() {
         const handleHashChange = () => {
             const nextState = parseHash(window.location.hash);
             setRoute(nextState.route);
-            setSelectedSeasonLabel(nextState.seasonLabel ?? "");
             setSelectedTeamKey(nextState.teamKey ?? "");
             setSelectedClubKey(nextState.clubKey ?? "");
             setSelectedPhase("");
@@ -1034,7 +807,7 @@ function App() {
     }, [route, syncUiEnabled]);
 
     const currentSeasonLabel = analysisIndex?.seasonLabel || defaultSeasonLabel;
-    const activeBrowseSeasonLabel = currentSeasonLabel;
+    const totalPublishedSeasons = seasonOptions.length;
     const historicalTeamEntities = historicalTeamsDirectory?.teams ?? EMPTY_LIST;
     const historicalTeamOptions = useMemo(
         () => historicalTeamEntities.map((entity) => ({
@@ -1439,7 +1212,7 @@ function App() {
         }));
     };
 
-    const handleTeamNavigate = (teamKey, targetRoute = (isHistoryRoute || isPlayersRoute ? "history" : "dashboard")) => {
+    const handleTeamNavigate = (teamKey, targetRoute = "dashboard") => {
         if (!teamKey) {
             return;
         }
@@ -1456,7 +1229,7 @@ function App() {
         setOpenMatches({});
         navigateToHash(
             targetRoute === "history"
-                ? buildHistoryRoute(teamKey, effectiveExplorerSeasonLabel || currentSeasonLabel)
+                ? buildHistoryRoute(teamKey)
                 : buildTeamRoute(teamKey)
         );
     };
@@ -1539,35 +1312,6 @@ function App() {
         setSelectedLeadersLevel("all");
     };
 
-    const handleSeasonChange = (event) => {
-        const nextSeasonLabel = event.target.value;
-        if (!nextSeasonLabel || nextSeasonLabel === effectiveExplorerSeasonLabel) {
-            return;
-        }
-
-        setSelectedSeasonLabel(nextSeasonLabel);
-        setSelectedTeamKey("");
-        setSelectedPhase("");
-        setSelectedPlayer("");
-        setSelectedMatch("");
-        setOpenMatches({});
-        setSelectedStandingsPhase("all");
-        setSelectedStandingsLevel("all");
-        setSelectedStandingsCategory("all");
-        setSelectedResultsPhase("all");
-        setSelectedResultsLevel("all");
-        setSelectedResultsCategory("all");
-        setSelectedLeadersLevel("all");
-        setSelectedLeadersCategory("all");
-
-        if (route === "players") {
-            navigateToHash(buildPlayersRoute(nextSeasonLabel));
-            return;
-        }
-
-        navigateToHash(buildHistoryRoute("", nextSeasonLabel));
-    };
-
     const handlePlayerChange = (value) => {
         setSelectedPlayer(value);
     };
@@ -1577,12 +1321,14 @@ function App() {
 
         if (!String(value ?? "").trim()) {
             setSelectedHistoryTeamKey("");
+            navigateToHash(buildHistoryRoute());
         }
     };
 
     const handleHistoryTeamSelect = (option) => {
         setSelectedHistoryTeamKey(option.value);
         setHistoryTeamQuery(option.label);
+        navigateToHash(buildHistoryRoute(option.value));
     };
 
     const handleHistoricalPlayerQueryChange = (value) => {
@@ -1590,12 +1336,14 @@ function App() {
 
         if (!String(value ?? "").trim()) {
             setSelectedHistoricalPlayerKey("");
+            navigateToHash(buildPlayersRoute());
         }
     };
 
     const handleHistoricalPlayerSelect = (option) => {
         setSelectedHistoricalPlayerKey(option.value);
         setPlayerDirectoryQuery(option.label);
+        navigateToHash(buildPlayersRoute(option.value));
     };
 
     const handleClubQueryChange = (value) => {
@@ -1678,12 +1426,8 @@ function App() {
             return;
         }
 
-        navigateToHash(
-            isHistoryRoute
-                ? buildHistoryRoute(effectiveTeamKey, effectiveExplorerSeasonLabel || currentSeasonLabel)
-                : buildTeamRoute(effectiveTeamKey)
-        );
-    }, [currentSeasonLabel, effectiveExplorerSeasonLabel, effectiveTeamKey, isHistoryRoute, isTeamRoute, selectedTeamKey]);
+        navigateToHash(buildTeamRoute(effectiveTeamKey));
+    }, [effectiveTeamKey, isTeamRoute, selectedTeamKey]);
 
     useEffect(() => {
         if (!isClubRoute || !effectiveClubKey || effectiveClubKey === selectedClubKey) {
@@ -1700,16 +1444,12 @@ function App() {
     }, []);
 
     const renderTeamPage = () => {
-        if (isHistoryRoute && seasonsIndexLoading && !selectedSeasonEntry) {
-            return <div style={appStyles.emptyState}>Cargando temporadas...</div>;
-        }
-
         if (analysisIndexLoading) {
             return <div style={appStyles.emptyState}>Cargando análisis...</div>;
         }
 
-        if (analysisIndexError || (isHistoryRoute && seasonsIndexError && !selectedSeasonEntry)) {
-            return <div style={appStyles.emptyState}>{analysisIndexError || seasonsIndexError}</div>;
+        if (analysisIndexError) {
+            return <div style={appStyles.emptyState}>{analysisIndexError}</div>;
         }
 
         if (!selectedTeamSummary) {
@@ -1718,29 +1458,13 @@ function App() {
 
         return (
             <>
-                {isHistoryRoute ? (
-                    <section style={appStyles.syncIntro}>
-                        <div style={appStyles.syncEyebrow}>Archivo</div>
-                        <h2 style={appStyles.syncTitle}>Histórico de equipos por temporada</h2>
-                        <p style={appStyles.syncBody}>
-                            Esta vista sirve para entrar en cualquier temporada publicada y leer el recorrido completo
-                            de un equipo sin contaminar el panel actual.
-                        </p>
-                    </section>
-                ) : null}
-
                 <section style={appStyles.teamSelectorSection}>
                     <div style={appStyles.teamSelectorHeader}>
-                        <div style={appStyles.syncEyebrow}>{isHistoryRoute ? "Búsqueda" : "Selector global"}</div>
-                        <h2 style={appStyles.teamSelectorTitle}>
-                            {isHistoryRoute
-                                ? "Busca un equipo dentro del archivo"
-                                : "Elige el equipo que quieres analizar"}
-                        </h2>
+                        <div style={appStyles.syncEyebrow}>Selector global</div>
+                        <h2 style={appStyles.teamSelectorTitle}>Elige el equipo que quieres analizar</h2>
                         <p style={appStyles.teamSelectorBody}>
-                            {isHistoryRoute
-                                ? "La temporada se elige arriba. Categoría y nivel acotan el archivo y, una vez dentro del equipo, la fase te deja leer cada tramo con claridad."
-                                : "Categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra cómo lees su temporada."}
+                            Categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra
+                            cómo lees su temporada.
                         </p>
                     </div>
 
@@ -1815,7 +1539,7 @@ function App() {
                                     teamName={selectedTeamSummary.teamName}
                                 />
                                 <div style={appStyles.heroIdentityText}>
-                                    <div style={appStyles.heroKicker}>{isHistoryRoute ? "Archivo del equipo" : "Vista del equipo"}</div>
+                                    <div style={appStyles.heroKicker}>Vista del equipo</div>
                                     <h2 style={appStyles.heroTitle}>{selectedTeamSummary.teamName}</h2>
                                     <p style={appStyles.heroSummary}>{teamHeroSummary}</p>
                                 </div>
@@ -1823,8 +1547,8 @@ function App() {
                         </div>
 
                         <div style={appStyles.heroMetaRow}>
-                            {activeBrowseSeasonLabel ? (
-                                <span style={appStyles.metaChip}>{activeBrowseSeasonLabel}</span>
+                            {currentSeasonLabel ? (
+                                <span style={appStyles.metaChip}>{currentSeasonLabel}</span>
                             ) : null}
                             {selectedTeamLatestContext?.categoryName ? (
                                 <span style={appStyles.metaChip}>{selectedTeamLatestContext.categoryName}</span>
@@ -1835,18 +1559,16 @@ function App() {
                             <span style={appStyles.metaChip}>{selectedTeamSummary.matchesPlayed ?? 0} partidos totales</span>
                         </div>
 
-                        {!isHistoryRoute ? (
-                            <div style={appStyles.heroActions}>
-                                {selectedTeamClubKey ? (
-                                    <a href={buildClubRoute(selectedTeamClubKey)} style={appStyles.secondaryLink}>
-                                        Ver club
-                                    </a>
-                                ) : null}
-                                <a href={buildCompetitionRoute()} style={appStyles.secondaryLink}>
-                                    Ver competición
+                        <div style={appStyles.heroActions}>
+                            {selectedTeamClubKey ? (
+                                <a href={buildClubRoute(selectedTeamClubKey)} style={appStyles.secondaryLink}>
+                                    Ver club
                                 </a>
-                            </div>
-                        ) : null}
+                            ) : null}
+                            <a href={buildCompetitionRoute()} style={appStyles.secondaryLink}>
+                                Ver competición
+                            </a>
+                        </div>
                     </div>
                 </section>
 
@@ -2295,35 +2017,16 @@ function App() {
     };
 
     const renderHistoryPage = () => {
-        const totalPublishedSeasons = seasonsIndex?.historicalTeamsFile
-            ? (seasonsIndex?.seasons?.length ?? 0)
-            : (seasonOptions.length ?? 0);
-
         if (!shouldLoadHistoricalArchive) {
             return (
-                <div style={appStyles.pageShell}>
-                    <section style={appStyles.syncIntro}>
-                        <div style={appStyles.syncEyebrow}>Histórico</div>
-                        <h2 style={appStyles.syncTitle}>Busca un equipo y compáralo temporada a temporada</h2>
-                        <p style={appStyles.syncBody}>
-                            El índice histórico ya está precomputado, pero no se descarga hasta que lo pides. Así evitamos
-                            reservar memoria y parsear todo el archivo en cada visita.
-                        </p>
-                        <div style={appStyles.competitionTabRow}>
-                            <button
-                                type="button"
-                                style={appStyles.competitionTab}
-                                onClick={handleHistoricalArchiveRequest}
-                            >
-                                Cargar archivo completo
-                            </button>
-                        </div>
-                    </section>
-
-                    <div style={appStyles.emptyState}>
-                        {totalPublishedSeasons} temporadas publicadas. Pulsa el botón para cargar el buscador histórico completo.
-                    </div>
-                </div>
+                <DeferredArchivePrompt
+                    styles={appStyles}
+                    eyebrow="Histórico"
+                    title="Busca un equipo y compáralo temporada a temporada"
+                    body="El índice histórico ya está precomputado, pero no se descarga hasta que lo pides. Así evitamos reservar memoria y parsear todo el archivo en cada visita."
+                    summary={`${totalPublishedSeasons} temporadas publicadas. Pulsa el botón para cargar el buscador histórico completo.`}
+                    onRequest={handleHistoricalArchiveRequest}
+                />
             );
         }
 
@@ -2489,34 +2192,16 @@ function App() {
     };
 
     const renderPlayersPage = () => {
-        const totalPublishedSeasons = seasonsIndex?.historicalPlayersFile
-            ? (seasonsIndex?.seasons?.length ?? 0)
-            : (seasonOptions.length ?? 0);
-
         if (!shouldLoadHistoricalArchive) {
             return (
-                <div style={appStyles.pageShell}>
-                    <section style={appStyles.syncIntro}>
-                        <div style={appStyles.syncEyebrow}>Jugadoras</div>
-                        <h2 style={appStyles.syncTitle}>Busca una jugadora y abre su histórico</h2>
-                        <p style={appStyles.syncBody}>
-                            Igual que el histórico de equipos, este índice completo se descarga solo cuando lo necesitas.
-                        </p>
-                        <div style={appStyles.competitionTabRow}>
-                            <button
-                                type="button"
-                                style={appStyles.competitionTab}
-                                onClick={handleHistoricalArchiveRequest}
-                            >
-                                Cargar archivo completo
-                            </button>
-                        </div>
-                    </section>
-
-                    <div style={appStyles.emptyState}>
-                        {totalPublishedSeasons} temporadas publicadas. Pulsa el botón para cargar el buscador histórico de jugadoras.
-                    </div>
-                </div>
+                <DeferredArchivePrompt
+                    styles={appStyles}
+                    eyebrow="Jugadoras"
+                    title="Busca una jugadora y abre su histórico"
+                    body="Igual que el histórico de equipos, este índice completo se descarga solo cuando lo necesitas."
+                    summary={`${totalPublishedSeasons} temporadas publicadas. Pulsa el botón para cargar el buscador histórico de jugadoras.`}
+                    onRequest={handleHistoricalArchiveRequest}
+                />
             );
         }
 
@@ -2719,32 +2404,7 @@ function App() {
         );
     };
 
-    const pageTitle = route === "sync"
-        ? "Importar datos"
-        : route === "competition"
-            ? "Competición"
-            : route === "club"
-                ? "Clubes"
-            : route === "history"
-                ? "Archivo de equipos"
-                : route === "players"
-                    ? "Jugadoras"
-                    : "Cuaderno de juego";
-    const pageNote = route === "sync"
-        ? "Carga nuevas fases desde la fuente oficial sin pasar por la terminal."
-        : route === "competition"
-            ? "Clasificación, resultados y líderes individuales, separados del panel de cada equipo."
-            : route === "club"
-                ? "Vista transversal del club para reunir todos sus equipos por categoria y nivel actual."
-            : route === "history"
-                ? "Buscador histórico de equipos con el rendimiento separado por temporada."
-                : route === "players"
-                    ? "Buscador histórico de jugadoras con acumulado global y detalle temporada a temporada."
-                    : "Sigue la temporada actual por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.";
-    const pageSeasonNote = route === "dashboard" || route === "competition" || route === "club"
-        ? currentSeasonLabel
-        : "";
-    const shouldShowSeasonSelector = false;
+    const pageMeta = getPageMetadata(route, currentSeasonLabel);
 
     return (
         <div style={appStyles.page}>
@@ -2755,34 +2415,16 @@ function App() {
                 <div style={appStyles.topBar}>
                     <div style={appStyles.brand}>
                         <p style={appStyles.eyebrow}>BarnaStats</p>
-                        <h1 style={appStyles.brandTitle}>{pageTitle}</h1>
+                        <h1 style={appStyles.brandTitle}>{pageMeta.title}</h1>
                         <p style={appStyles.brandNote}>
-                            {pageNote}
-                            {pageSeasonNote
-                                ? `${route === "history" || route === "players"
-                                    ? " Temporada consultada"
-                                    : " Temporada actual"}: ${pageSeasonNote}.`
+                            {pageMeta.note}
+                            {pageMeta.seasonLabel
+                                ? ` Temporada actual: ${pageMeta.seasonLabel}.`
                                 : ""}
                         </p>
                     </div>
 
                     <div style={appStyles.topBarActions}>
-                        {shouldShowSeasonSelector ? (
-                            <PrettySelect
-                                label="Temporada"
-                                value={effectiveExplorerSeasonLabel}
-                                onChange={handleSeasonChange}
-                                ariaLabel="Selecciona temporada"
-                                minWidth="190px"
-                            >
-                                {seasonOptions.map((season) => (
-                                    <option key={season.seasonLabel} value={season.seasonLabel}>
-                                        {season.seasonLabel}
-                                    </option>
-                                ))}
-                            </PrettySelect>
-                        ) : null}
-
                         <div style={appStyles.nav}>
                             <a
                                 href={buildDashboardRoute()}
