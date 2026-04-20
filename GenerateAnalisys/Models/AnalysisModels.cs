@@ -209,6 +209,7 @@ public sealed class CompetitionTeamOverview
     public string TeamName { get; init; } = "";
     public int MatchesPlayed { get; init; }
     public int PlayersCount { get; init; }
+    public int TotalValuation { get; init; }
 }
 
 public sealed class CompetitionMatch
@@ -310,6 +311,188 @@ public sealed class CompetitionAnalysis
     public List<CompetitionPlayerLeader> PlayerLeaders { get; init; } = [];
 }
 
+public sealed class CompetitionOverview
+{
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public int TotalTeams { get; init; }
+    public int TotalMatches { get; init; }
+    public List<CompetitionPhase> Phases { get; init; } = [];
+    public List<CompetitionTeamOverview> Teams { get; init; } = [];
+}
+
+public sealed class CompetitionStandingScope
+{
+    public string Key { get; init; } = "";
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public int? SourcePhaseId { get; init; }
+    public int PhaseNumber { get; init; }
+    public string CategoryName { get; init; } = "";
+    public string PhaseName { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public string LevelCode { get; init; } = "";
+    public string GroupCode { get; init; } = "";
+    public int MatchesCount { get; init; }
+    public List<CompetitionStandingRow> Rows { get; init; } = [];
+}
+
+public sealed class CompetitionStandingsDataset
+{
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public List<CompetitionStandingScope> Scopes { get; init; } = [];
+}
+
+public sealed class ClubTeamEntryRecord
+{
+    public int Wins { get; init; }
+    public int Losses { get; init; }
+    public int Ties { get; init; }
+    public int PointsFor { get; init; }
+    public int PointsAgainst { get; init; }
+}
+
+public sealed class ClubTeamEntry
+{
+    public string Key { get; init; } = "";
+    public string TeamKey { get; init; } = "";
+    public int TeamIdExtern { get; init; }
+    public string TeamName { get; init; } = "";
+    public int MatchesPlayed { get; init; }
+    public int PlayersCount { get; init; }
+    public string CategoryName { get; init; } = "";
+    public string LevelKey { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public string PhaseLabel { get; init; } = "";
+    public string LatestPhaseOptionValue { get; init; } = "";
+    public string GroupCode { get; init; } = "";
+    public int? StandingPosition { get; init; }
+    public ClubTeamEntryRecord Record { get; init; } = new();
+    public int PointDiff { get; init; }
+    public double AvgValuation { get; init; }
+}
+
+public sealed class ClubLevelGroup
+{
+    public string LevelKey { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public List<ClubTeamEntry> Teams { get; init; } = [];
+}
+
+public sealed class ClubCategoryGroup
+{
+    public string CategoryName { get; init; } = "";
+    public List<ClubLevelGroup> Levels { get; init; } = [];
+}
+
+public sealed class ClubDirectoryEntry
+{
+    public string Key { get; init; } = "";
+    public string Label { get; init; } = "";
+    public string ShortName { get; init; } = "";
+    public int ClubId { get; init; }
+    public int PrimaryTeamIdExtern { get; init; }
+    public int TotalTeams { get; init; }
+    public int TotalMatches { get; init; }
+    public int TotalPlayers { get; init; }
+    public int CategoriesCount { get; init; }
+    public int LevelsCount { get; init; }
+    public string Meta { get; init; } = "";
+    public string SearchText { get; init; } = "";
+    public List<ClubCategoryGroup> Categories { get; init; } = [];
+}
+
+public sealed class HistoricalTeamSeasonSummary
+{
+    public string Key { get; init; } = "";
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public int TeamIdExtern { get; init; }
+    public string TeamName { get; init; } = "";
+    public string CategoryName { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public int MatchesPlayed { get; init; }
+    public int PlayersCount { get; init; }
+    public int PointsFor { get; init; }
+    public int PointsAgainst { get; init; }
+    public int PointDiff { get; init; }
+    public int Wins { get; init; }
+    public int Losses { get; init; }
+    public int Ties { get; init; }
+    public int? StandingPosition { get; init; }
+    public double AvgValuation { get; init; }
+}
+
+public sealed class HistoricalTeamDirectoryEntry
+{
+    public string Key { get; init; } = "";
+    public string Label { get; init; } = "";
+    public int LatestTeamIdExtern { get; init; }
+    public string Meta { get; init; } = "";
+    public string SearchText { get; init; } = "";
+    public List<HistoricalTeamSeasonSummary> SeasonSummaries { get; init; } = [];
+}
+
+public sealed class HistoricalPlayerTotals
+{
+    public int Seasons { get; init; }
+    public int Games { get; init; }
+    public int Points { get; init; }
+    public int Valuation { get; init; }
+    public int Fouls { get; init; }
+    public int Minutes { get; init; }
+    public double AvgPoints { get; init; }
+    public double AvgValuation { get; init; }
+    public double AvgFouls { get; init; }
+    public double AvgMinutes { get; init; }
+}
+
+public sealed class HistoricalPlayerSeasonSummary
+{
+    public string Key { get; init; } = "";
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public string PlayerName { get; init; } = "";
+    public string ShirtNumber { get; init; } = "";
+    public int Games { get; init; }
+    public int Points { get; init; }
+    public int Valuation { get; init; }
+    public int Fouls { get; init; }
+    public int Minutes { get; init; }
+    public double AvgPoints { get; init; }
+    public double AvgValuation { get; init; }
+    public double AvgFouls { get; init; }
+    public double AvgMinutes { get; init; }
+    public List<string> TeamNames { get; init; } = [];
+    public string PrimaryTeamName { get; init; } = "";
+    public string PrimaryTeamKey { get; init; } = "";
+    public int PrimaryTeamIdExtern { get; init; }
+}
+
+public sealed class HistoricalPlayerDirectoryEntry
+{
+    public string Key { get; init; } = "";
+    public string Label { get; init; } = "";
+    public string LatestShirtNumber { get; init; } = "";
+    public string Meta { get; init; } = "";
+    public string SearchText { get; init; } = "";
+    public HistoricalPlayerTotals Totals { get; init; } = new();
+    public List<HistoricalPlayerSeasonSummary> SeasonSummaries { get; init; } = [];
+}
+
+public sealed class HistoricalTeamDirectoryDataset
+{
+    public DateTime GeneratedAtUtc { get; init; }
+    public List<HistoricalTeamDirectoryEntry> Teams { get; init; } = [];
+}
+
+public sealed class HistoricalPlayerDirectoryDataset
+{
+    public DateTime GeneratedAtUtc { get; init; }
+    public List<HistoricalPlayerDirectoryEntry> Players { get; init; } = [];
+}
+
 public sealed class TeamAnalysis
 {
     public int? SeasonStartYear { get; init; }
@@ -378,5 +561,7 @@ public sealed class SeasonDatasetIndex
 {
     public DateTime GeneratedAtUtc { get; init; }
     public string DefaultSeasonLabel { get; init; } = "";
+    public string HistoricalTeamsFile { get; init; } = "";
+    public string HistoricalPlayersFile { get; init; } = "";
     public List<SeasonDatasetSummary> Seasons { get; init; } = [];
 }

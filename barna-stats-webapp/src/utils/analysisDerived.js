@@ -133,6 +133,99 @@ export function buildStandings(matches, phaseNumber) {
         }));
 }
 
+export function buildPhaseScopeKey(row) {
+    const sourcePhaseId = Number(row?.sourcePhaseId ?? 0);
+    const seasonLabel = String(row?.seasonLabel ?? "").trim();
+    if (sourcePhaseId > 0) {
+        return `source:${seasonLabel}:${sourcePhaseId}`;
+    }
+
+    const phaseNumber = Number(row?.phaseNumber ?? 0);
+    const categoryName = String(row?.categoryName ?? "").trim();
+    const levelKey = String(row?.levelCode ?? "").trim() || String(row?.levelName ?? "").trim();
+    const groupCode = String(row?.groupCode ?? "").trim();
+    const phaseName = String(row?.phaseName ?? "").trim();
+
+    return `phase:${seasonLabel}|${phaseNumber}|${categoryName}|${levelKey}|${groupCode}|${phaseName}`;
+}
+
+export function aggregateStandingRows(rows) {
+    const rowsByTeam = new Map();
+
+    (rows ?? []).forEach((row) => {
+        const teamKey = row?.teamKey || normalizeTeamName(row?.teamName ?? "");
+        if (!teamKey) {
+            return;
+        }
+
+        if (!rowsByTeam.has(teamKey)) {
+            rowsByTeam.set(teamKey, {
+                teamKey,
+                teamName: row?.teamName ?? "",
+                played: 0,
+                wins: 0,
+                losses: 0,
+                ties: 0,
+                pointsFor: 0,
+                pointsAgainst: 0
+            });
+        }
+
+        const aggregate = rowsByTeam.get(teamKey);
+        aggregate.played += Number(row?.played ?? 0);
+        aggregate.wins += Number(row?.wins ?? 0);
+        aggregate.losses += Number(row?.losses ?? 0);
+        aggregate.ties += Number(row?.ties ?? 0);
+        aggregate.pointsFor += Number(row?.pointsFor ?? 0);
+        aggregate.pointsAgainst += Number(row?.pointsAgainst ?? 0);
+    });
+
+    return [...rowsByTeam.values()]
+        .map((row) => ({
+            ...row,
+            standingsPoints: (row.wins * 2) + row.losses + row.ties,
+            pointDiff: row.pointsFor - row.pointsAgainst,
+            winRate: row.played > 0 ? row.wins / row.played : 0
+        }))
+        .sort((a, b) => {
+            if (b.wins !== a.wins) {
+                return b.wins - a.wins;
+            }
+
+            if (a.losses !== b.losses) {
+                return a.losses - b.losses;
+            }
+
+            if (b.pointDiff !== a.pointDiff) {
+                return b.pointDiff - a.pointDiff;
+            }
+
+            if (b.pointsFor !== a.pointsFor) {
+                return b.pointsFor - a.pointsFor;
+            }
+
+            return a.teamName.localeCompare(b.teamName, "es");
+        })
+        .map((row, index) => ({
+            ...row,
+            position: index + 1
+        }));
+}
+
+export function buildStandingsFromScopes(scopes, phaseOptionValue, levelValue, categoryValue) {
+    const filteredScopes = filterRowsByCategory(
+        filterRowsByLevel(
+            filterRowsByPhaseOption(scopes ?? [], phaseOptionValue),
+            levelValue
+        ),
+        categoryValue
+    );
+
+    return aggregateStandingRows(
+        filteredScopes.flatMap((scope) => scope?.rows ?? [])
+    );
+}
+
 export function buildPhaseSummaries(matchSummaries, matchPlayers) {
     const valuationByMatch = (matchPlayers ?? []).reduce((accumulator, player) => {
         accumulator[player.matchWebId] = (accumulator[player.matchWebId] ?? 0) + Number(player.valuation ?? 0);

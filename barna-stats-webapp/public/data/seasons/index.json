@@ -1,6 +1,8 @@
 {
-  "generatedAtUtc": "2026-04-18T23:43:07.958392Z",
+  "generatedAtUtc": "2026-04-19T21:29:31.09723Z",
   "defaultSeasonLabel": "2025-2026",
+  "historicalTeamsFile": "archive/teams.json",
+  "historicalPlayersFile": "archive/players.json",
   "seasons": [
     {
       "seasonStartYear": 2025,

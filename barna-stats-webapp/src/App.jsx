@@ -3,23 +3,23 @@ import AutocompleteField from "./components/AutocompleteField.jsx";
 import PrettySelect from "./components/PrettySelect.jsx";
 import TeamBadge from "./components/TeamBadge.jsx";
 import {useAnalysisData} from "./hooks/useAnalysisData.js";
-import {useSeasonDirectoryData} from "./hooks/useSeasonDirectoryData.js";
 import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
+    aggregateStandingRows,
     buildCategoryOptions,
     buildCategoryOptionsFromRows,
     buildCompetitionPhaseLabel,
     buildCompetitionPhaseOptions,
+    buildPhaseScopeKey,
+    buildStandingsFromScopes,
     buildTeamRecord,
     buildTeamPhaseOptions,
     buildPhaseComparison,
     buildPhaseSummaries,
-    buildStandings,
     buildTeamRoute,
     buildLatestTeamContextByKey,
     buildLevelOptionsFromRows,
-    filterCompetitionMatchesByPhaseOption,
     filterRowsByCategory,
     filterRowsByLevel,
     filterRowsByPhaseOption,
@@ -40,11 +40,6 @@ import {
     sortMatches,
     sortPlayers
 } from "./utils/playerStats.js";
-import {
-    buildHistoricalPlayerEntities,
-    buildHistoricalTeamEntities
-} from "./utils/historicalDirectory.js";
-import {buildCurrentClubEntities} from "./utils/clubDirectory.js";
 import {getClubBrandingForTeam} from "./utils/clubBranding.js";
 
 const GlobalLeadersSection = lazy(() => import("./components/GlobalLeadersSection.jsx"));
@@ -838,31 +833,6 @@ function navigateToHash(hash) {
     window.location.assign(hash);
 }
 
-function buildPhaseScopeKey(row) {
-    const sourcePhaseId = Number(row?.sourcePhaseId ?? 0);
-    const seasonLabel = String(row?.seasonLabel ?? "").trim();
-    if (sourcePhaseId > 0) {
-        return `source:${seasonLabel}:${sourcePhaseId}`;
-    }
-
-    const phaseNumber = Number(row?.phaseNumber ?? 0);
-    const categoryName = String(row?.categoryName ?? "").trim();
-    const levelKey = String(row?.levelCode ?? "").trim() || String(row?.levelName ?? "").trim();
-    const groupCode = String(row?.groupCode ?? "").trim();
-    const phaseName = String(row?.phaseName ?? "").trim();
-
-    return `phase:${seasonLabel}|${phaseNumber}|${categoryName}|${levelKey}|${groupCode}|${phaseName}`;
-}
-
-function filterMatchesByPhaseScopes(matches, phases, fallbackCategoryName = "") {
-    const scopeKeys = new Set((phases ?? []).map((phase) => buildPhaseScopeKey(phase)));
-    if (scopeKeys.size > 0) {
-        return (matches ?? []).filter((match) => scopeKeys.has(buildPhaseScopeKey(match)));
-    }
-
-    return filterRowsByCategory(matches ?? [], fallbackCategoryName);
-}
-
 function App() {
     const syncUiEnabled = import.meta.env.VITE_ENABLE_SYNC_UI !== "false";
     const initialHashState = parseHash(window.location.hash);
@@ -893,22 +863,57 @@ function App() {
     const isClubRoute = route === "club";
     const isTeamRoute = route === "dashboard";
     const isCurrentSeasonRoute = route === "dashboard" || route === "competition" || route === "club";
+    const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
+    const [selectedClubKey, setSelectedClubKey] = useState(() => initialHashState.clubKey ?? "");
+    const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
+    const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
+    const [selectedPhase, setSelectedPhase] = useState("");
+    const [selectedPlayer, setSelectedPlayer] = useState("");
+    const [selectedMatch, setSelectedMatch] = useState("");
+    const [openMatches, setOpenMatches] = useState({});
+    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState(initialCompetitionPhase);
+    const [selectedStandingsLevel, setSelectedStandingsLevel] = useState(initialCompetitionLevel);
+    const [selectedStandingsCategory, setSelectedStandingsCategory] = useState(initialCompetitionCategory);
+    const [selectedResultsPhase, setSelectedResultsPhase] = useState(initialCompetitionPhase);
+    const [selectedResultsLevel, setSelectedResultsLevel] = useState(initialCompetitionLevel);
+    const [selectedResultsCategory, setSelectedResultsCategory] = useState(initialCompetitionCategory);
+    const [selectedLeadersLevel, setSelectedLeadersLevel] = useState(initialCompetitionLevel);
+    const [selectedLeadersCategory, setSelectedLeadersCategory] = useState(initialCompetitionCategory);
+    const [rankingMinGames, setRankingMinGames] = useState("3");
+    const [selectedCompetitionTab, setSelectedCompetitionTab] = useState(initialCompetitionTab);
+    const [selectedTeamTab, setSelectedTeamTab] = useState("snapshot");
+    const [historyTeamQuery, setHistoryTeamQuery] = useState("");
+    const [selectedHistoryTeamKey, setSelectedHistoryTeamKey] = useState(
+        () => initialHashState.route === "history" ? (initialHashState.teamKey ?? "") : ""
+    );
+    const [playerDirectoryQuery, setPlayerDirectoryQuery] = useState("");
+    const [selectedHistoricalPlayerKey, setSelectedHistoricalPlayerKey] = useState(
+        () => initialHashState.route === "players" ? (initialHashState.playerKey ?? "") : ""
+    );
+    const [clubQuery, setClubQuery] = useState("");
+    const [prefetchCompetitionData, setPrefetchCompetitionData] = useState(false);
+    const [historicalArchiveRequested, setHistoricalArchiveRequested] = useState(false);
+    const pendingScrollRestoreFrame = useRef(0);
+    const teamTabsRef = useRef(null);
+    const shouldLoadHistoricalArchive = historicalArchiveRequested
+        || (isHistoryRoute && !!selectedHistoryTeamKey)
+        || (isPlayersRoute && !!selectedHistoricalPlayerKey);
     const {
-        analysis: currentAnalysisIndex,
-        loading: currentAnalysisIndexLoading,
-        error: currentAnalysisIndexError
+        analysis: analysisIndex,
+        loading: analysisIndexLoading,
+        error: analysisIndexError
     } = useAnalysisData(
         isCurrentSeasonRoute
             ? `data/analysis.json?v=${analysisVersion}`
             : null
     );
     const {
-        analysis: explorerAnalysisIndex,
-        loading: explorerAnalysisIndexLoading,
-        error: explorerAnalysisIndexError
+        analysis: competitionOverview,
+        loading: competitionOverviewLoading,
+        error: competitionOverviewError
     } = useAnalysisData(
-        (isHistoryRoute || isPlayersRoute) && selectedSeasonEntry
-            ? `data/${selectedSeasonEntry.analysisFile}?v=${analysisVersion}`
+        route === "competition"
+            ? `data/competition-overview.json?v=${analysisVersion}`
             : null
     );
     const {
@@ -932,56 +937,59 @@ function App() {
         void refreshSavedResultsSources();
     });
     const {
-        analysis: currentCompetition,
-        loading: currentCompetitionLoading,
-        error: currentCompetitionError
+        analysis: competitionStandingsDataset,
+        loading: competitionStandingsLoading,
+        error: competitionStandingsError
     } = useAnalysisData(
-        isCurrentSeasonRoute
-            ? `data/competition.json?v=${analysisVersion}`
+        route === "competition" || isTeamRoute
+            ? `data/competition-standings.json?v=${analysisVersion}`
             : null
     );
     const {
-        analysis: explorerCompetition,
-        loading: explorerCompetitionLoading,
-        error: explorerCompetitionError
+        analysis: competitionMatchesData,
+        loading: competitionMatchesLoading,
+        error: competitionMatchesError
     } = useAnalysisData(
-        (isHistoryRoute || isPlayersRoute) && selectedSeasonEntry
-            ? `data/${selectedSeasonEntry.competitionFile}?v=${analysisVersion}`
+        route === "competition" && (prefetchCompetitionData || selectedCompetitionTab === "matches")
+            ? `data/competition-matches.json?v=${analysisVersion}`
             : null
     );
     const {
-        index: historicalDirectoryIndex,
-        seasons: historicalSeasonDatasets,
-        loading: historicalDirectoryLoading,
-        error: historicalDirectoryError
-    } = useSeasonDirectoryData(isHistoryRoute || isPlayersRoute, analysisVersion);
-
-    const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
-    const [selectedClubKey, setSelectedClubKey] = useState(() => initialHashState.clubKey ?? "");
-    const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
-    const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
-    const [selectedPhase, setSelectedPhase] = useState("");
-    const [selectedPlayer, setSelectedPlayer] = useState("");
-    const [selectedMatch, setSelectedMatch] = useState("");
-    const [openMatches, setOpenMatches] = useState({});
-    const [selectedStandingsPhase, setSelectedStandingsPhase] = useState(initialCompetitionPhase);
-    const [selectedStandingsLevel, setSelectedStandingsLevel] = useState(initialCompetitionLevel);
-    const [selectedStandingsCategory, setSelectedStandingsCategory] = useState(initialCompetitionCategory);
-    const [selectedResultsPhase, setSelectedResultsPhase] = useState(initialCompetitionPhase);
-    const [selectedResultsLevel, setSelectedResultsLevel] = useState(initialCompetitionLevel);
-    const [selectedResultsCategory, setSelectedResultsCategory] = useState(initialCompetitionCategory);
-    const [selectedLeadersLevel, setSelectedLeadersLevel] = useState(initialCompetitionLevel);
-    const [selectedLeadersCategory, setSelectedLeadersCategory] = useState(initialCompetitionCategory);
-    const [rankingMinGames, setRankingMinGames] = useState("3");
-    const [selectedCompetitionTab, setSelectedCompetitionTab] = useState(initialCompetitionTab);
-    const [selectedTeamTab, setSelectedTeamTab] = useState("snapshot");
-    const [historyTeamQuery, setHistoryTeamQuery] = useState("");
-    const [selectedHistoryTeamKey, setSelectedHistoryTeamKey] = useState("");
-    const [playerDirectoryQuery, setPlayerDirectoryQuery] = useState("");
-    const [selectedHistoricalPlayerKey, setSelectedHistoricalPlayerKey] = useState("");
-    const [clubQuery, setClubQuery] = useState("");
-    const pendingScrollRestoreFrame = useRef(0);
-    const teamTabsRef = useRef(null);
+        analysis: competitionPlayerLeadersData,
+        loading: competitionPlayerLeadersLoading,
+        error: competitionPlayerLeadersError
+    } = useAnalysisData(
+        route === "competition" && (prefetchCompetitionData || selectedCompetitionTab === "leaders")
+            ? `data/competition-player-leaders.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: currentClubDirectory,
+        loading: currentClubDirectoryLoading,
+        error: currentClubDirectoryError
+    } = useAnalysisData(
+        isClubRoute
+            ? `data/clubs.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: historicalTeamsDirectory,
+        loading: historicalTeamsLoading,
+        error: historicalTeamsError
+    } = useAnalysisData(
+        isHistoryRoute && shouldLoadHistoricalArchive
+            ? `data/archive/teams.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: historicalPlayersDirectory,
+        loading: historicalPlayersLoading,
+        error: historicalPlayersError
+    } = useAnalysisData(
+        isPlayersRoute && shouldLoadHistoricalArchive
+            ? `data/archive/players.json?v=${analysisVersion}`
+            : null
+    );
 
     useEffect(() => {
         if (!window.location.hash) {
@@ -998,6 +1006,8 @@ function App() {
             setSelectedPlayer("");
             setSelectedMatch("");
             setOpenMatches({});
+            setSelectedHistoryTeamKey(nextState.route === "history" ? (nextState.teamKey ?? "") : "");
+            setSelectedHistoricalPlayerKey(nextState.route === "players" ? (nextState.playerKey ?? "") : "");
             setSelectedCompetitionTab(nextState.competitionTab || "standings");
             setSelectedStandingsCategory(nextState.competitionCategory || "all");
             setSelectedStandingsLevel(nextState.competitionLevel || "all");
@@ -1023,48 +1033,23 @@ function App() {
         navigateToHash(buildDefaultRoute());
     }, [route, syncUiEnabled]);
 
-    const analysisIndex = (isHistoryRoute || isPlayersRoute)
-        ? explorerAnalysisIndex
-        : currentAnalysisIndex;
-    const analysisIndexLoading = (isHistoryRoute || isPlayersRoute)
-        ? explorerAnalysisIndexLoading
-        : currentAnalysisIndexLoading;
-    const analysisIndexError = (isHistoryRoute || isPlayersRoute)
-        ? explorerAnalysisIndexError
-        : currentAnalysisIndexError;
-    const competition = (isHistoryRoute || isPlayersRoute)
-        ? explorerCompetition
-        : currentCompetition;
-    const competitionLoading = (isHistoryRoute || isPlayersRoute)
-        ? explorerCompetitionLoading
-        : currentCompetitionLoading;
-    const competitionError = (isHistoryRoute || isPlayersRoute)
-        ? explorerCompetitionError
-        : currentCompetitionError;
-    const currentSeasonLabel = currentAnalysisIndex?.seasonLabel
-        || currentCompetition?.seasonLabel
-        || defaultSeasonLabel;
-    const activeBrowseSeasonLabel = (isHistoryRoute || isPlayersRoute)
-        ? effectiveExplorerSeasonLabel
-        : currentSeasonLabel;
-    const historicalTeamEntities = useMemo(
-        () => buildHistoricalTeamEntities(historicalSeasonDatasets),
-        [historicalSeasonDatasets]
+    const currentSeasonLabel = analysisIndex?.seasonLabel || defaultSeasonLabel;
+    const activeBrowseSeasonLabel = currentSeasonLabel;
+    const historicalTeamEntities = historicalTeamsDirectory?.teams ?? EMPTY_LIST;
+    const historicalTeamOptions = useMemo(
+        () => historicalTeamEntities.map((entity) => ({
+            value: entity.key,
+            label: entity.label,
+            meta: entity.meta,
+            searchText: entity.searchText
+        })),
+        [historicalTeamEntities]
     );
-    const historicalTeamOptions = useMemo(() => historicalTeamEntities.map((entity) => ({
-        value: entity.key,
-        label: entity.label,
-        meta: entity.meta,
-        searchText: entity.searchText
-    })), [historicalTeamEntities]);
     const selectedHistoricalTeam = useMemo(
         () => historicalTeamEntities.find((entity) => entity.key === selectedHistoryTeamKey) ?? null,
         [historicalTeamEntities, selectedHistoryTeamKey]
     );
-    const historicalPlayerEntities = useMemo(
-        () => buildHistoricalPlayerEntities(historicalSeasonDatasets),
-        [historicalSeasonDatasets]
-    );
+    const historicalPlayerEntities = historicalPlayersDirectory?.players ?? EMPTY_LIST;
     const historicalPlayerOptions = useMemo(() => historicalPlayerEntities.map((entity) => ({
         value: entity.key,
         label: entity.label,
@@ -1076,7 +1061,7 @@ function App() {
         [historicalPlayerEntities, selectedHistoricalPlayerKey]
     );
     const teams = analysisIndex?.teams ?? EMPTY_LIST;
-    const competitionTeams = competition?.teams ?? EMPTY_LIST;
+    const competitionTeams = competitionOverview?.teams ?? EMPTY_LIST;
     const teamDirectoryByKey = useMemo(() => [...teams, ...competitionTeams].reduce((map, team) => {
         if (!team?.teamKey) {
             return map;
@@ -1090,7 +1075,10 @@ function App() {
         return map;
     }, new Map()), [teams, competitionTeams]);
     const latestTeamContexts = useMemo(() => buildLatestTeamContextByKey(teams), [teams]);
-    const dashboardCategoryOptions = buildCategoryOptions(latestTeamContexts);
+    const dashboardCategoryOptions = useMemo(
+        () => buildCategoryOptions(latestTeamContexts),
+        [latestTeamContexts]
+    );
     const latestTeamContextRows = useMemo(() => [...latestTeamContexts.values()], [latestTeamContexts]);
     const sortedTeams = useMemo(
         () => [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es")),
@@ -1121,8 +1109,11 @@ function App() {
         : (dashboardCategoryOptions.some((option) => option.value === fallbackTeamCategory)
             ? fallbackTeamCategory
             : (dashboardCategoryOptions[0]?.value ?? "all"));
-    const dashboardLevelOptions = buildLevelOptionsFromRows(
-        filterRowsByCategory(latestTeamContextRows, effectiveTeamCategory)
+    const dashboardLevelOptions = useMemo(
+        () => buildLevelOptionsFromRows(
+            filterRowsByCategory(latestTeamContextRows, effectiveTeamCategory)
+        ),
+        [effectiveTeamCategory, latestTeamContextRows]
     );
     const effectiveTeamLevel = dashboardLevelOptions.some((option) => option.value === selectedTeamLevel)
         ? selectedTeamLevel
@@ -1130,7 +1121,7 @@ function App() {
     const effectiveTeamLevelLabel = effectiveTeamLevel === "all"
         ? ""
         : (dashboardLevelOptions.find((option) => option.value === effectiveTeamLevel)?.label ?? effectiveTeamLevel);
-    const dashboardTeams = sortedTeams.filter((team) => {
+    const dashboardTeams = useMemo(() => sortedTeams.filter((team) => {
         const teamContext = latestTeamContexts.get(team.teamKey);
 
         if (effectiveTeamLevel !== "all") {
@@ -1148,8 +1139,8 @@ function App() {
         }
 
         return true;
-    });
-    const dashboardDefaultTeam = dashboardTeams.reduce((best, team) => {
+    }), [effectiveTeamCategory, effectiveTeamLevel, latestTeamContexts, sortedTeams]);
+    const dashboardDefaultTeam = useMemo(() => dashboardTeams.reduce((best, team) => {
         if (!best) {
             return team;
         }
@@ -1164,7 +1155,7 @@ function App() {
         }
 
         return best;
-    }, null);
+    }, null), [dashboardTeams]);
     const selectedTeamKeyFromAll = teams.some((team) => team.teamKey === selectedTeamKey)
         ? selectedTeamKey
         : (globalDefaultTeam?.teamKey ?? "");
@@ -1174,17 +1165,23 @@ function App() {
             : (dashboardDefaultTeam?.teamKey ?? selectedTeamKeyFromAll))
         : selectedTeamKeyFromAll;
     const selectedTeamSummary = teams.find((team) => team.teamKey === effectiveTeamKey) ?? globalDefaultTeam ?? null;
-    const competitionPlayerLeaders = competition?.playerLeaders ?? EMPTY_LIST;
-    const competitionMatches = competition?.matches ?? EMPTY_LIST;
+    const selectedTeamPhases = selectedTeamSummary?.phases ?? EMPTY_LIST;
+    const competitionStandingScopes = competitionStandingsDataset?.scopes ?? EMPTY_LIST;
+    const competitionPlayerLeaders = Array.isArray(competitionPlayerLeadersData) ? competitionPlayerLeadersData : EMPTY_LIST;
+    const competitionMatches = Array.isArray(competitionMatchesData) ? competitionMatchesData : EMPTY_LIST;
+    const competitionOverviewTeamsByKey = useMemo(() => competitionTeams.reduce((map, team) => {
+        if (team?.teamKey) {
+            map.set(team.teamKey, team);
+        }
+
+        return map;
+    }, new Map()), [competitionTeams]);
     const competitionMatchesWithBranding = useMemo(() => competitionMatches.map((match) => ({
         ...match,
         homeTeamIdExtern: Number(teamDirectoryByKey.get(match.homeTeamKey)?.teamIdExtern ?? 0),
         awayTeamIdExtern: Number(teamDirectoryByKey.get(match.awayTeamKey)?.teamIdExtern ?? 0)
     })), [competitionMatches, teamDirectoryByKey]);
-    const currentClubEntities = useMemo(() => buildCurrentClubEntities(teams, {
-        matches: competitionMatches,
-        playerLeaders: competitionPlayerLeaders
-    }), [teams, competitionMatches, competitionPlayerLeaders]);
+    const currentClubEntities = Array.isArray(currentClubDirectory) ? currentClubDirectory : EMPTY_LIST;
     const clubOptions = useMemo(() => currentClubEntities.map((club) => ({
         value: club.key,
         label: club.label,
@@ -1202,7 +1199,10 @@ function App() {
         ? selectedClubKey
         : fallbackClubKey;
     const selectedClub = currentClubEntities.find((club) => club.key === effectiveClubKey) ?? null;
-    const competitionCategoryOptions = buildCategoryOptionsFromRows(competition?.phases ?? []);
+    const competitionCategoryOptions = useMemo(
+        () => buildCategoryOptionsFromRows(competitionOverview?.phases ?? []),
+        [competitionOverview]
+    );
     const shouldLoadTeamMatches = isTeamRoute && !!selectedTeamSummary?.matchesFile;
     const shouldLoadTeamPlayers = isTeamRoute && !!selectedTeamSummary?.playersFile;
     const {
@@ -1223,46 +1223,73 @@ function App() {
             ? `data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
             : null
     );
-    const teamPlayers = Array.isArray(selectedTeamPlayers) ? selectedTeamPlayers : [];
-    const teamMatchSummaries = Array.isArray(selectedTeamMatchSummaries) ? selectedTeamMatchSummaries : [];
-    const teamPhaseOptions = buildTeamPhaseOptions(selectedTeamSummary?.phases ?? []);
+    const teamPlayers = useMemo(
+        () => Array.isArray(selectedTeamPlayers) ? selectedTeamPlayers : EMPTY_LIST,
+        [selectedTeamPlayers]
+    );
+    const teamMatchSummaries = useMemo(
+        () => Array.isArray(selectedTeamMatchSummaries) ? selectedTeamMatchSummaries : EMPTY_LIST,
+        [selectedTeamMatchSummaries]
+    );
+    const teamPhaseOptions = buildTeamPhaseOptions(selectedTeamPhases);
     const effectiveSelectedPhase = !selectedPhase || teamPhaseOptions.some((phase) => phase.value === selectedPhase)
         ? (selectedPhase || "all")
         : "all";
     const selectedPhaseContext = effectiveSelectedPhase === "all"
         ? null
-        : (filterRowsByPhaseOption(selectedTeamSummary?.phases ?? [], effectiveSelectedPhase)[0] ?? null);
+        : (filterRowsByPhaseOption(selectedTeamPhases, effectiveSelectedPhase)[0] ?? null);
     const selectedPhaseValue = selectedPhaseContext?.phaseNumber ?? null;
-    const matchSummaries = filterRowsByPhaseOption(teamMatchSummaries, effectiveSelectedPhase);
-    const players = filterRowsByPhaseOption(teamPlayers, effectiveSelectedPhase);
-    const playersList = getPlayersList(players);
+    const matchSummaries = useMemo(
+        () => filterRowsByPhaseOption(teamMatchSummaries, effectiveSelectedPhase),
+        [effectiveSelectedPhase, teamMatchSummaries]
+    );
+    const players = useMemo(
+        () => filterRowsByPhaseOption(teamPlayers, effectiveSelectedPhase),
+        [effectiveSelectedPhase, teamPlayers]
+    );
+    const playersList = useMemo(() => getPlayersList(players), [players]);
     const effectiveSelectedPlayer = selectedPlayer &&
     playersList.some((player) => player.value === selectedPlayer)
         ? selectedPlayer
         : "";
     const chartData = getChartData(players, effectiveSelectedPlayer, selectedPhaseValue);
-    const selectedPlayerSummary = getSelectedPlayerSummary(players, effectiveSelectedPlayer);
-    const sortedPlayers = sortPlayers(players);
-    const sortedMatches = sortMatches(
-        groupPlayersByMatch(sortedPlayers, matchSummaries)
+    const selectedPlayerSummary = useMemo(
+        () => getSelectedPlayerSummary(players, effectiveSelectedPlayer),
+        [effectiveSelectedPlayer, players]
     );
-    const visibleMatches = getVisibleMatches(sortedMatches, selectedMatch);
-    const playersArray = buildPlayersArray(players);
-    const phaseSummaries = buildPhaseSummaries(teamMatchSummaries, teamPlayers);
-    const phaseComparison = buildPhaseComparison(phaseSummaries);
-    const teamLeadersByAvgValuation = getTopTeamPlayers(playersArray, "avgValuation", 8);
-    const teamLeadersByPoints = getTopTeamPlayers(playersArray, "points", 8);
+    const sortedPlayers = useMemo(() => sortPlayers(players), [players]);
+    const sortedMatches = useMemo(() => sortMatches(
+        groupPlayersByMatch(sortedPlayers, matchSummaries)
+    ), [matchSummaries, sortedPlayers]);
+    const visibleMatches = useMemo(
+        () => getVisibleMatches(sortedMatches, selectedMatch),
+        [selectedMatch, sortedMatches]
+    );
+    const playersArray = useMemo(() => buildPlayersArray(players), [players]);
+    const phaseSummaries = useMemo(
+        () => buildPhaseSummaries(teamMatchSummaries, teamPlayers),
+        [teamMatchSummaries, teamPlayers]
+    );
+    const phaseComparison = useMemo(() => buildPhaseComparison(phaseSummaries), [phaseSummaries]);
+    const teamLeadersByAvgValuation = useMemo(
+        () => getTopTeamPlayers(playersArray, "avgValuation", 8),
+        [playersArray]
+    );
+    const teamLeadersByPoints = useMemo(
+        () => getTopTeamPlayers(playersArray, "points", 8),
+        [playersArray]
+    );
     const rankingMinGamesValue = Number(rankingMinGames || 1);
     const effectiveLeadersCategory = competitionCategoryOptions.some((option) => option.value === selectedLeadersCategory)
         ? selectedLeadersCategory
         : (competitionCategoryOptions[0]?.value ?? "all");
-    const leadersLevelOptions = buildLevelOptionsFromRows(
-        filterRowsByCategory(competition?.phases ?? [], effectiveLeadersCategory)
-    );
+    const leadersLevelOptions = useMemo(() => buildLevelOptionsFromRows(
+        filterRowsByCategory(competitionOverview?.phases ?? [], effectiveLeadersCategory)
+    ), [competitionOverview, effectiveLeadersCategory]);
     const effectiveLeadersLevel = leadersLevelOptions.some((option) => option.value === selectedLeadersLevel)
         ? selectedLeadersLevel
         : "all";
-    const filteredCompetitionPlayers = competitionPlayerLeaders
+    const filteredCompetitionPlayers = useMemo(() => competitionPlayerLeaders
         .filter((player) => player.games >= rankingMinGamesValue)
         .filter((player) => {
             if (effectiveLeadersLevel === "all") {
@@ -1280,46 +1307,52 @@ function App() {
 
             const teamContext = latestTeamContexts.get(player.teamKey);
             return String(teamContext?.categoryName ?? "").trim() === effectiveLeadersCategory;
-        });
-    const globalLeadersByAvgValuation = getTopGlobalPlayers(filteredCompetitionPlayers, "avgValuation", 8);
-    const globalLeadersByPoints = getTopGlobalPlayers(filteredCompetitionPlayers, "points", 8);
+        }), [
+        competitionPlayerLeaders,
+        effectiveLeadersCategory,
+        effectiveLeadersLevel,
+        latestTeamContexts,
+        rankingMinGamesValue
+    ]);
+    const globalLeadersByAvgValuation = useMemo(
+        () => getTopGlobalPlayers(filteredCompetitionPlayers, "avgValuation", 8),
+        [filteredCompetitionPlayers]
+    );
+    const globalLeadersByPoints = useMemo(
+        () => getTopGlobalPlayers(filteredCompetitionPlayers, "points", 8),
+        [filteredCompetitionPlayers]
+    );
     const effectiveStandingsCategory = competitionCategoryOptions.some((option) => option.value === selectedStandingsCategory)
         ? selectedStandingsCategory
         : (competitionCategoryOptions[0]?.value ?? "all");
-    const standingsLevelOptions = buildLevelOptionsFromRows(
-        filterRowsByCategory(competition?.phases ?? [], effectiveStandingsCategory)
-    );
+    const standingsLevelOptions = useMemo(() => buildLevelOptionsFromRows(
+        filterRowsByCategory(competitionOverview?.phases ?? [], effectiveStandingsCategory)
+    ), [competitionOverview, effectiveStandingsCategory]);
     const effectiveStandingsLevel = standingsLevelOptions.some((option) => option.value === selectedStandingsLevel)
         ? selectedStandingsLevel
         : "all";
-    const standingsPhaseOptions = buildCompetitionPhaseOptions(
+    const standingsPhaseOptions = useMemo(() => buildCompetitionPhaseOptions(
         filterRowsByCategory(
-            filterRowsByLevel(competition?.phases ?? [], effectiveStandingsLevel),
+            filterRowsByLevel(competitionOverview?.phases ?? [], effectiveStandingsLevel),
             effectiveStandingsCategory
         )
-    );
+    ), [competitionOverview, effectiveStandingsCategory, effectiveStandingsLevel]);
     const effectiveCompetitionPhase = selectedStandingsPhase === "all" ||
     standingsPhaseOptions.some((phase) => phase.value === selectedStandingsPhase)
         ? selectedStandingsPhase
         : "all";
-    const competitionMatchesForStandings = filterRowsByCategory(
-        filterRowsByLevel(
-            filterCompetitionMatchesByPhaseOption(competitionMatches, effectiveCompetitionPhase),
-            effectiveStandingsLevel
-        ),
+    const competitionStandingsRows = useMemo(() => buildStandingsFromScopes(
+        competitionStandingScopes,
+        effectiveCompetitionPhase,
+        effectiveStandingsLevel,
         effectiveStandingsCategory
-    );
-    const teamTotalValuationByKey = competitionPlayerLeaders.reduce((map, player) => {
-        const key = player.teamKey;
-        map.set(key, (map.get(key) ?? 0) + Number(player.valuation ?? 0));
-        return map;
-    }, new Map());
-    const competitionStandingsRows = buildStandings(competitionMatchesForStandings, null)
+    )
         .map((row) => {
             const latestContext = latestTeamContexts.get(row.teamKey);
             const teamDirectoryEntry = teamDirectoryByKey.get(row.teamKey);
+            const teamOverview = competitionOverviewTeamsByKey.get(row.teamKey);
             const levelKey = String(latestContext?.levelCode ?? "").trim() || String(latestContext?.levelName ?? "").trim();
-            const totalValuation = teamTotalValuationByKey.get(row.teamKey) ?? 0;
+            const totalValuation = Number(teamOverview?.totalValuation ?? 0);
 
             return {
                 ...row,
@@ -1332,22 +1365,30 @@ function App() {
         .map((row, index) => ({
             ...row,
             position: index + 1
-        }));
+        })), [
+        competitionOverviewTeamsByKey,
+        competitionStandingScopes,
+        effectiveCompetitionPhase,
+        effectiveStandingsCategory,
+        effectiveStandingsLevel,
+        latestTeamContexts,
+        teamDirectoryByKey
+    ]);
     const effectiveResultsCategory = competitionCategoryOptions.some((option) => option.value === selectedResultsCategory)
         ? selectedResultsCategory
         : (competitionCategoryOptions[0]?.value ?? "all");
-    const resultsLevelOptions = buildLevelOptionsFromRows(
-        filterRowsByCategory(competition?.phases ?? [], effectiveResultsCategory)
-    );
+    const resultsLevelOptions = useMemo(() => buildLevelOptionsFromRows(
+        filterRowsByCategory(competitionOverview?.phases ?? [], effectiveResultsCategory)
+    ), [competitionOverview, effectiveResultsCategory]);
     const effectiveResultsLevel = resultsLevelOptions.some((option) => option.value === selectedResultsLevel)
         ? selectedResultsLevel
         : "all";
-    const resultsPhaseOptions = buildCompetitionPhaseOptions(
+    const resultsPhaseOptions = useMemo(() => buildCompetitionPhaseOptions(
         filterRowsByCategory(
-            filterRowsByLevel(competition?.phases ?? [], effectiveResultsLevel),
+            filterRowsByLevel(competitionOverview?.phases ?? [], effectiveResultsLevel),
             effectiveResultsCategory
         )
-    );
+    ), [competitionOverview, effectiveResultsCategory, effectiveResultsLevel]);
     const effectiveResultsPhase = selectedResultsPhase === "all" ||
     resultsPhaseOptions.some((phase) => phase.value === selectedResultsPhase)
         ? selectedResultsPhase
@@ -1355,26 +1396,28 @@ function App() {
     const activeCompetitionTab = COMPETITION_TABS.find((tab) => tab.id === selectedCompetitionTab) ?? COMPETITION_TABS[0];
     const activeTeamTab = TEAM_TABS.find((tab) => tab.id === selectedTeamTab) ?? TEAM_TABS[0];
     const selectedTeamLatestContext = latestTeamContexts.get(effectiveTeamKey) ?? null;
-    const selectedTeamScopePhases = selectedPhaseContext
-        ? filterRowsByPhaseOption(selectedTeamSummary?.phases ?? [], effectiveSelectedPhase)
-        : (selectedTeamSummary?.phases ?? []);
+    const selectedTeamScopePhases = effectiveSelectedPhase === "all"
+        ? selectedTeamPhases
+        : filterRowsByPhaseOption(selectedTeamPhases, effectiveSelectedPhase);
     const selectedTeamCategoryName = String(
         selectedPhaseContext?.categoryName
         ?? selectedTeamLatestContext?.categoryName
         ?? ""
     ).trim();
-    const teamStandingMatches = filterMatchesByPhaseScopes(
-        competitionMatches,
-        selectedTeamScopePhases,
-        selectedTeamCategoryName
-    );
-    const teamStandingsRows = buildStandings(teamStandingMatches, null);
+    const teamStandingsRows = (() => {
+        const scopeKeys = new Set((selectedTeamScopePhases ?? []).map((phase) => buildPhaseScopeKey(phase)));
+        const relevantScopes = scopeKeys.size > 0
+            ? competitionStandingScopes.filter((scope) => scopeKeys.has(scope.key))
+            : competitionStandingScopes.filter((scope) => String(scope?.categoryName ?? "").trim() === selectedTeamCategoryName);
+
+        return aggregateStandingRows(relevantScopes.flatMap((scope) => scope?.rows ?? []));
+    })();
     const selectedTeamStanding = teamStandingsRows.find((row) => row.teamKey === effectiveTeamKey) ?? null;
-    const teamRecord = buildTeamRecord(matchSummaries);
-    const bestWinStreak = getLongestWinStreak(matchSummaries);
-    const topScorer = getTopScorer(playersArray);
-    const mvp = getMvp(playersArray);
-    const teamAvg = getTeamAverage(players);
+    const teamRecord = useMemo(() => buildTeamRecord(matchSummaries), [matchSummaries]);
+    const bestWinStreak = useMemo(() => getLongestWinStreak(matchSummaries), [matchSummaries]);
+    const topScorer = useMemo(() => getTopScorer(playersArray), [playersArray]);
+    const mvp = useMemo(() => getMvp(playersArray), [playersArray]);
+    const teamAvg = useMemo(() => getTeamAverage(players), [players]);
     const seasonLabel = selectedPhaseContext === null
         ? "Temporada completa"
         : buildCompetitionPhaseLabel(selectedPhaseContext);
@@ -1382,6 +1425,12 @@ function App() {
         ? "Clasificación acumulada"
         : `Clasificación de ${buildCompetitionPhaseLabel(selectedPhaseContext)}`;
     const teamHeroSummary = `${selectedTeamSummary?.matchesPlayed ?? 0} partidos en total · ${selectedTeamSummary?.playersCount ?? 0} jugadoras registradas`;
+    const competitionBaseLoading = competitionOverviewLoading || competitionStandingsLoading;
+    const competitionBaseError = competitionOverviewError || competitionStandingsError;
+    const historyArchiveLoading = shouldLoadHistoricalArchive && historicalTeamsLoading;
+    const historyArchiveError = shouldLoadHistoricalArchive ? historicalTeamsError : "";
+    const playersArchiveLoading = shouldLoadHistoricalArchive && historicalPlayersLoading;
+    const playersArchiveError = shouldLoadHistoricalArchive ? historicalPlayersError : "";
 
     const handleToggleMatch = (matchWebId) => {
         setOpenMatches((prev) => ({
@@ -1616,6 +1665,14 @@ function App() {
         setSelectedCompetitionTab(tabId);
     };
 
+    const handlePrefetchCompetitionData = () => {
+        setPrefetchCompetitionData(true);
+    };
+
+    const handleHistoricalArchiveRequest = () => {
+        setHistoricalArchiveRequested(true);
+    };
+
     useEffect(() => {
         if (!isTeamRoute || !effectiveTeamKey || effectiveTeamKey === selectedTeamKey) {
             return;
@@ -1801,9 +1858,9 @@ function App() {
                     <div style={appStyles.emptyState}>{selectedTeamMatchesError || selectedTeamPlayersError}</div>
                 ) : null}
 
-                {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && !selectedTeamMatchesError && !selectedTeamPlayersError && competitionError ? (
+                {!selectedTeamMatchesLoading && !selectedTeamPlayersLoading && !selectedTeamMatchesError && !selectedTeamPlayersError && competitionStandingsError ? (
                     <div style={appStyles.emptyState}>
-                        {competitionError}
+                        {competitionStandingsError}
                     </div>
                 ) : null}
 
@@ -1988,17 +2045,33 @@ function App() {
                 <p style={appStyles.syncBody}>
                     Vista global de la competición para seguir la clasificación, revisar los partidos y localizar a las jugadoras más destacadas.
                 </p>
+                <div style={appStyles.competitionTabRow}>
+                    <button
+                        type="button"
+                        style={prefetchCompetitionData
+                            ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
+                            : appStyles.competitionTab}
+                        onClick={handlePrefetchCompetitionData}
+                        disabled={prefetchCompetitionData}
+                    >
+                        {prefetchCompetitionData
+                            ? (competitionMatchesLoading || competitionPlayerLeadersLoading
+                                ? "Cargando paquete completo..."
+                                : "Paquete completo listo")
+                            : "Cargar todo"}
+                    </button>
+                </div>
             </section>
 
-            {competitionLoading ? (
+            {competitionBaseLoading ? (
                 <SectionFallback message="Cargando datos de competición..." />
             ) : null}
 
-            {!competitionLoading && competitionError ? (
-                <div style={appStyles.emptyState}>{competitionError}</div>
+            {!competitionBaseLoading && competitionBaseError ? (
+                <div style={appStyles.emptyState}>{competitionBaseError}</div>
             ) : null}
 
-            {!competitionLoading && !competitionError ? (
+            {!competitionBaseLoading && !competitionBaseError ? (
                 <>
                     <section style={appStyles.competitionTabs}>
                         <div style={appStyles.competitionTabRow}>
@@ -2041,42 +2114,54 @@ function App() {
                     ) : null}
 
                     {activeCompetitionTab.id === "matches" ? (
-                        <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
-                            <CompetitionResultsSection
-                                matches={competitionMatchesWithBranding}
-                                phaseOptions={resultsPhaseOptions}
-                                selectedPhase={effectiveResultsPhase}
-                                onSelectedPhaseChange={setSelectedResultsPhase}
-                                levelOptions={resultsLevelOptions}
-                                selectedLevel={effectiveResultsLevel}
-                                onSelectedLevelChange={setSelectedResultsLevel}
-                                categoryOptions={competitionCategoryOptions}
-                                selectedCategory={effectiveResultsCategory}
-                                onSelectedCategoryChange={handleResultsCategoryChange}
-                                selectedTeamKey={effectiveTeamKey}
-                                onTeamNavigate={handleTeamNavigate}
-                            />
-                        </Suspense>
+                        competitionMatchesLoading ? (
+                            <SectionFallback message="Cargando resultados de la competición..." />
+                        ) : competitionMatchesError ? (
+                            <div style={appStyles.emptyState}>{competitionMatchesError}</div>
+                        ) : (
+                            <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
+                                <CompetitionResultsSection
+                                    matches={competitionMatchesWithBranding}
+                                    phaseOptions={resultsPhaseOptions}
+                                    selectedPhase={effectiveResultsPhase}
+                                    onSelectedPhaseChange={setSelectedResultsPhase}
+                                    levelOptions={resultsLevelOptions}
+                                    selectedLevel={effectiveResultsLevel}
+                                    onSelectedLevelChange={setSelectedResultsLevel}
+                                    categoryOptions={competitionCategoryOptions}
+                                    selectedCategory={effectiveResultsCategory}
+                                    onSelectedCategoryChange={handleResultsCategoryChange}
+                                    selectedTeamKey={effectiveTeamKey}
+                                    onTeamNavigate={handleTeamNavigate}
+                                />
+                            </Suspense>
+                        )
                     ) : null}
 
                     {activeCompetitionTab.id === "leaders" ? (
-                        <Suspense fallback={<SectionFallback message="Cargando líderes globales..." />}>
-                            <GlobalLeadersSection
-                                totalPlayers={competitionPlayerLeaders.length}
-                                totalTeams={competition?.totalTeams ?? teams.length}
-                                leadersByAvgValuation={globalLeadersByAvgValuation}
-                                leadersByPoints={globalLeadersByPoints}
-                                levelOptions={leadersLevelOptions}
-                                selectedLevel={effectiveLeadersLevel}
-                                onSelectedLevelChange={setSelectedLeadersLevel}
-                                categoryOptions={competitionCategoryOptions}
-                                selectedCategory={effectiveLeadersCategory}
-                                onSelectedCategoryChange={handleLeadersCategoryChange}
-                                rankingMinGames={rankingMinGames}
-                                onRankingMinGamesChange={setRankingMinGames}
-                                onTeamNavigate={handleTeamNavigate}
-                            />
-                        </Suspense>
+                        competitionPlayerLeadersLoading ? (
+                            <SectionFallback message="Cargando líderes globales..." />
+                        ) : competitionPlayerLeadersError ? (
+                            <div style={appStyles.emptyState}>{competitionPlayerLeadersError}</div>
+                        ) : (
+                            <Suspense fallback={<SectionFallback message="Cargando líderes globales..." />}>
+                                <GlobalLeadersSection
+                                    totalPlayers={competitionPlayerLeaders.length}
+                                    totalTeams={competitionOverview?.totalTeams ?? teams.length}
+                                    leadersByAvgValuation={globalLeadersByAvgValuation}
+                                    leadersByPoints={globalLeadersByPoints}
+                                    levelOptions={leadersLevelOptions}
+                                    selectedLevel={effectiveLeadersLevel}
+                                    onSelectedLevelChange={setSelectedLeadersLevel}
+                                    categoryOptions={competitionCategoryOptions}
+                                    selectedCategory={effectiveLeadersCategory}
+                                    onSelectedCategoryChange={handleLeadersCategoryChange}
+                                    rankingMinGames={rankingMinGames}
+                                    onRankingMinGamesChange={setRankingMinGames}
+                                    onTeamNavigate={handleTeamNavigate}
+                                />
+                            </Suspense>
+                        )
                     ) : null}
                 </>
             ) : null}
@@ -2084,12 +2169,12 @@ function App() {
     );
 
     const renderClubPage = () => {
-        if (analysisIndexLoading || competitionLoading) {
+        if (analysisIndexLoading || currentClubDirectoryLoading) {
             return <div style={appStyles.emptyState}>Cargando clubes...</div>;
         }
 
-        if (analysisIndexError || competitionError) {
-            return <div style={appStyles.emptyState}>{analysisIndexError || competitionError}</div>;
+        if (analysisIndexError || currentClubDirectoryError) {
+            return <div style={appStyles.emptyState}>{analysisIndexError || currentClubDirectoryError}</div>;
         }
 
         if (currentClubEntities.length === 0) {
@@ -2210,15 +2295,45 @@ function App() {
     };
 
     const renderHistoryPage = () => {
-        if (historicalDirectoryLoading) {
+        const totalPublishedSeasons = seasonsIndex?.historicalTeamsFile
+            ? (seasonsIndex?.seasons?.length ?? 0)
+            : (seasonOptions.length ?? 0);
+
+        if (!shouldLoadHistoricalArchive) {
+            return (
+                <div style={appStyles.pageShell}>
+                    <section style={appStyles.syncIntro}>
+                        <div style={appStyles.syncEyebrow}>Histórico</div>
+                        <h2 style={appStyles.syncTitle}>Busca un equipo y compáralo temporada a temporada</h2>
+                        <p style={appStyles.syncBody}>
+                            El índice histórico ya está precomputado, pero no se descarga hasta que lo pides. Así evitamos
+                            reservar memoria y parsear todo el archivo en cada visita.
+                        </p>
+                        <div style={appStyles.competitionTabRow}>
+                            <button
+                                type="button"
+                                style={appStyles.competitionTab}
+                                onClick={handleHistoricalArchiveRequest}
+                            >
+                                Cargar archivo completo
+                            </button>
+                        </div>
+                    </section>
+
+                    <div style={appStyles.emptyState}>
+                        {totalPublishedSeasons} temporadas publicadas. Pulsa el botón para cargar el buscador histórico completo.
+                    </div>
+                </div>
+            );
+        }
+
+        if (historyArchiveLoading) {
             return <div style={appStyles.emptyState}>Cargando archivo histórico...</div>;
         }
 
-        if (historicalDirectoryError) {
-            return <div style={appStyles.emptyState}>{historicalDirectoryError}</div>;
+        if (historyArchiveError) {
+            return <div style={appStyles.emptyState}>{historyArchiveError}</div>;
         }
-
-        const totalPublishedSeasons = historicalDirectoryIndex?.seasons?.length ?? historicalSeasonDatasets.length;
 
         return (
             <div style={appStyles.pageShell}>
@@ -2374,15 +2489,45 @@ function App() {
     };
 
     const renderPlayersPage = () => {
-        if (historicalDirectoryLoading) {
+        const totalPublishedSeasons = seasonsIndex?.historicalPlayersFile
+            ? (seasonsIndex?.seasons?.length ?? 0)
+            : (seasonOptions.length ?? 0);
+
+        if (!shouldLoadHistoricalArchive) {
+            return (
+                <div style={appStyles.pageShell}>
+                    <section style={appStyles.syncIntro}>
+                        <div style={appStyles.syncEyebrow}>Jugadoras</div>
+                        <h2 style={appStyles.syncTitle}>Busca una jugadora y abre su histórico</h2>
+                        <p style={appStyles.syncBody}>
+                            Igual que el histórico de equipos, este índice completo se descarga solo cuando lo necesitas.
+                        </p>
+                        <div style={appStyles.competitionTabRow}>
+                            <button
+                                type="button"
+                                style={appStyles.competitionTab}
+                                onClick={handleHistoricalArchiveRequest}
+                            >
+                                Cargar archivo completo
+                            </button>
+                        </div>
+                    </section>
+
+                    <div style={appStyles.emptyState}>
+                        {totalPublishedSeasons} temporadas publicadas. Pulsa el botón para cargar el buscador histórico de jugadoras.
+                    </div>
+                </div>
+            );
+        }
+
+        if (playersArchiveLoading) {
             return <div style={appStyles.emptyState}>Cargando archivo de jugadoras...</div>;
         }
 
-        if (historicalDirectoryError) {
-            return <div style={appStyles.emptyState}>{historicalDirectoryError}</div>;
+        if (playersArchiveError) {
+            return <div style={appStyles.emptyState}>{playersArchiveError}</div>;
         }
 
-        const totalPublishedSeasons = historicalDirectoryIndex?.seasons?.length ?? historicalSeasonDatasets.length;
         const playerTotals = selectedHistoricalPlayer?.totals ?? null;
 
         return (

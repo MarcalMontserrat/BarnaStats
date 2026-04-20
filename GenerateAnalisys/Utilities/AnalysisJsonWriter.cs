@@ -32,6 +32,18 @@ public static class AnalysisJsonWriter
             paths.WebTeamDetailsDir,
             teamFilesRelativeRoot: "teams");
 
+        await WriteDerivedDatasetsAsync(
+            paths.AnalysisDomainDir,
+            latestDataset,
+            seasonDatasets.Select(dataset => dataset.Analysis).ToList(),
+            paths.RepoRoot);
+
+        await WriteDerivedDatasetsAsync(
+            paths.WebDataDir,
+            latestDataset,
+            seasonDatasets.Select(dataset => dataset.Analysis).ToList(),
+            paths.RepoRoot);
+
         await WriteSeasonDatasetsAsync(
             paths.AnalysisSeasonsDir,
             paths.AnalysisSeasonIndexJson,
@@ -89,6 +101,8 @@ public static class AnalysisJsonWriter
         {
             GeneratedAtUtc = generatedAtUtc,
             DefaultSeasonLabel = seasonDatasets.FirstOrDefault()?.Analysis.SeasonLabel ?? "",
+            HistoricalTeamsFile = "archive/teams.json",
+            HistoricalPlayersFile = "archive/players.json",
             Seasons = seasonSummaries
         };
 
@@ -155,6 +169,42 @@ public static class AnalysisJsonWriter
                 .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
                 .ToList()
         };
+    }
+
+    private static async Task WriteDerivedDatasetsAsync(
+        string dataRootDir,
+        AnalysisResult latestDataset,
+        IReadOnlyCollection<AnalysisResult> seasonAnalyses,
+        string repoRoot)
+    {
+        Directory.CreateDirectory(dataRootDir);
+
+        var competitionOverviewPath = Path.Combine(dataRootDir, "competition-overview.json");
+        var competitionStandingsPath = Path.Combine(dataRootDir, "competition-standings.json");
+        var competitionMatchesPath = Path.Combine(dataRootDir, "competition-matches.json");
+        var competitionPlayerLeadersPath = Path.Combine(dataRootDir, "competition-player-leaders.json");
+        var clubsPath = Path.Combine(dataRootDir, "clubs.json");
+        var archiveDir = Path.Combine(dataRootDir, "archive");
+        var historicalTeamsPath = Path.Combine(archiveDir, "teams.json");
+        var historicalPlayersPath = Path.Combine(archiveDir, "players.json");
+
+        await WriteJsonAsync(
+            competitionOverviewPath,
+            PrecomputedDatasetsBuilder.BuildCompetitionOverview(latestDataset.Competition));
+        await WriteJsonAsync(
+            competitionStandingsPath,
+            PrecomputedDatasetsBuilder.BuildCompetitionStandings(latestDataset.Competition));
+        await WriteJsonAsync(competitionMatchesPath, latestDataset.Competition.Matches);
+        await WriteJsonAsync(competitionPlayerLeadersPath, latestDataset.Competition.PlayerLeaders);
+        await WriteJsonAsync(
+            clubsPath,
+            PrecomputedDatasetsBuilder.BuildClubDirectory(latestDataset, repoRoot));
+        await WriteJsonAsync(
+            historicalTeamsPath,
+            PrecomputedDatasetsBuilder.BuildHistoricalTeamDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses));
+        await WriteJsonAsync(
+            historicalPlayersPath,
+            PrecomputedDatasetsBuilder.BuildHistoricalPlayerDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses));
     }
 
     private static IReadOnlyList<SeasonDataset> BuildSeasonDatasets(AnalysisResult analysis)

@@ -372,6 +372,12 @@ public sealed class MatchAnalysisService
 
     private static CompetitionAnalysis BuildCompetitionAnalysis(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
     {
+        var totalValuationByTeam = teamAnalyses
+            .ToDictionary(
+                team => team.TeamKey,
+                team => team.SeasonTotals.Sum(player => player.Valuation),
+                StringComparer.Ordinal);
+
         var competitionTeams = teamAnalyses
             .Select(team => new CompetitionTeamOverview
             {
@@ -380,7 +386,8 @@ public sealed class MatchAnalysisService
                 TeamIdExtern = team.TeamIdExtern,
                 TeamName = team.TeamName,
                 MatchesPlayed = team.MatchesPlayed,
-                PlayersCount = team.PlayersCount
+                PlayersCount = team.PlayersCount,
+                TotalValuation = totalValuationByTeam.GetValueOrDefault(team.TeamKey)
             })
             .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
             .ToList();
