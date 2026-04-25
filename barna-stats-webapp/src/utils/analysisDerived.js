@@ -592,11 +592,11 @@ export function getCategoryGender(categoryName) {
         .replace(/[\u0300-\u036f]/g, "")
         .toUpperCase();
 
-    if (/FEMENI|FEMENIN|FEM\./.test(normalized)) {
+    if (/\b(?:FEMENI|FEM\.)/.test(normalized)) {
         return "F";
     }
 
-    if (/MASCULI|MASCULIN|MASC\./.test(normalized)) {
+    if (/\bMASCULI/.test(normalized)) {
         return "M";
     }
 
