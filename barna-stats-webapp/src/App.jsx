@@ -8,10 +8,10 @@ import {useResultsSources} from "./hooks/useResultsSources.js";
 import {useSyncJob} from "./hooks/useSyncJob.js";
 import {
     aggregateStandingRows,
-    buildCategoryOptions,
     buildCategoryOptionsFromRows,
     buildCompetitionPhaseLabel,
     buildCompetitionPhaseOptions,
+    buildGenderOptions,
     buildPhaseScopeKey,
     buildStandingsFromScopes,
     buildTeamRecord,
@@ -22,8 +22,10 @@ import {
     buildLatestTeamContextByKey,
     buildLevelOptionsFromRows,
     filterRowsByCategory,
+    filterRowsByGender,
     filterRowsByLevel,
     filterRowsByPhaseOption,
+    getCategoryGender,
     getLongestWinStreak
 } from "./utils/analysisDerived.js";
 import {
@@ -639,6 +641,7 @@ function App() {
     const isCurrentSeasonRoute = route === "dashboard" || route === "competition" || route === "club";
     const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
     const [selectedClubKey, setSelectedClubKey] = useState(() => initialHashState.clubKey ?? "");
+    const [selectedTeamGender, setSelectedTeamGender] = useState("all");
     const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
     const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
     const [selectedPhase, setSelectedPhase] = useState("");
@@ -848,11 +851,19 @@ function App() {
         return map;
     }, new Map()), [teams, competitionTeams]);
     const latestTeamContexts = useMemo(() => buildLatestTeamContextByKey(teams), [teams]);
-    const dashboardCategoryOptions = useMemo(
-        () => buildCategoryOptions(latestTeamContexts),
-        [latestTeamContexts]
-    );
     const latestTeamContextRows = useMemo(() => [...latestTeamContexts.values()], [latestTeamContexts]);
+    const dashboardGenderOptions = useMemo(
+        () => buildGenderOptions(latestTeamContextRows),
+        [latestTeamContextRows]
+    );
+    const genderFilteredTeamContextRows = useMemo(
+        () => filterRowsByGender(latestTeamContextRows, selectedTeamGender),
+        [latestTeamContextRows, selectedTeamGender]
+    );
+    const dashboardCategoryOptions = useMemo(
+        () => buildCategoryOptionsFromRows(genderFilteredTeamContextRows),
+        [genderFilteredTeamContextRows]
+    );
     const sortedTeams = useMemo(
         () => [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es")),
         [teams]
@@ -884,9 +895,9 @@ function App() {
             : (dashboardCategoryOptions[0]?.value ?? "all"));
     const dashboardLevelOptions = useMemo(
         () => buildLevelOptionsFromRows(
-            filterRowsByCategory(latestTeamContextRows, effectiveTeamCategory)
+            filterRowsByCategory(genderFilteredTeamContextRows, effectiveTeamCategory)
         ),
-        [effectiveTeamCategory, latestTeamContextRows]
+        [effectiveTeamCategory, genderFilteredTeamContextRows]
     );
     const effectiveTeamLevel = dashboardLevelOptions.some((option) => option.value === selectedTeamLevel)
         ? selectedTeamLevel
@@ -896,6 +907,13 @@ function App() {
         : (dashboardLevelOptions.find((option) => option.value === effectiveTeamLevel)?.label ?? effectiveTeamLevel);
     const dashboardTeams = useMemo(() => sortedTeams.filter((team) => {
         const teamContext = latestTeamContexts.get(team.teamKey);
+
+        if (selectedTeamGender !== "all") {
+            const gender = getCategoryGender(teamContext?.categoryName);
+            if (gender !== selectedTeamGender) {
+                return false;
+            }
+        }
 
         if (effectiveTeamLevel !== "all") {
             const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
@@ -912,7 +930,7 @@ function App() {
         }
 
         return true;
-    }), [effectiveTeamCategory, effectiveTeamLevel, latestTeamContexts, sortedTeams]);
+    }), [effectiveTeamCategory, effectiveTeamLevel, latestTeamContexts, selectedTeamGender, sortedTeams]);
     const dashboardDefaultTeam = useMemo(() => dashboardTeams.reduce((best, team) => {
         if (!best) {
             return team;
@@ -1220,7 +1238,9 @@ function App() {
         const teamContext = latestTeamContexts.get(teamKey);
         const categoryName = String(teamContext?.categoryName ?? "").trim();
         const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
+        const gender = getCategoryGender(categoryName) || "all";
         setSelectedTeamKey(teamKey);
+        setSelectedTeamGender(gender);
         setSelectedTeamCategory(categoryName || selectedTeamCategory);
         setSelectedTeamLevel(levelKey || "all");
         setSelectedPhase("");
@@ -1288,6 +1308,16 @@ function App() {
 
     const handleTeamCategoryChange = (event) => {
         setSelectedTeamCategory(event.target.value);
+        setSelectedTeamLevel("all");
+        setSelectedPhase("");
+        setSelectedPlayer("");
+        setSelectedMatch("");
+        setOpenMatches({});
+    };
+
+    const handleTeamGenderChange = (event) => {
+        setSelectedTeamGender(event.target.value);
+        setSelectedTeamCategory("all");
         setSelectedTeamLevel("all");
         setSelectedPhase("");
         setSelectedPlayer("");
@@ -1463,12 +1493,29 @@ function App() {
                         <div style={appStyles.syncEyebrow}>Selector global</div>
                         <h2 style={appStyles.teamSelectorTitle}>Elige el equipo que quieres analizar</h2>
                         <p style={appStyles.teamSelectorBody}>
-                            Categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra
+                            Sexo, categoría y nivel acotan el listado de equipos. Una vez elegido el equipo, la fase filtra
                             cómo lees su temporada.
                         </p>
                     </div>
 
                     <div style={appStyles.filterDeck}>
+                        {dashboardGenderOptions.length > 1 ? (
+                            <PrettySelect
+                                label="Sexo"
+                                value={selectedTeamGender}
+                                onChange={handleTeamGenderChange}
+                                ariaLabel="Filtra equipos por sexo"
+                                minWidth="180px"
+                            >
+                                <option value="all">Todos</option>
+                                {dashboardGenderOptions.map((g) => (
+                                    <option key={g.value} value={g.value}>
+                                        {g.label}
+                                    </option>
+                                ))}
+                            </PrettySelect>
+                        ) : null}
+
                         {dashboardCategoryOptions.length > 0 ? (
                             <PrettySelect
                                 label="Categoría"
@@ -1519,6 +1566,11 @@ function App() {
 
                     <div style={appStyles.teamSelectorMetaRow}>
                         <span style={appStyles.teamSelectorChip}>{dashboardTeams.length} equipos visibles</span>
+                        {selectedTeamGender !== "all" ? (
+                            <span style={appStyles.teamSelectorChip}>
+                                {dashboardGenderOptions.find((g) => g.value === selectedTeamGender)?.label ?? selectedTeamGender}
+                            </span>
+                        ) : null}
                         {effectiveTeamCategory !== "all" ? (
                             <span style={appStyles.teamSelectorChip}>{effectiveTeamCategory}</span>
                         ) : null}
