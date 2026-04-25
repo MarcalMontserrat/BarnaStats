@@ -586,6 +586,53 @@ export function filterRowsByLevel(rows, levelValue) {
     return (rows ?? []).filter((row) => getLevelValue(row) === String(levelValue));
 }
 
+export function getCategoryGender(categoryName) {
+    const normalized = String(categoryName ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toUpperCase();
+
+    if (/\b(?:FEMENI|FEM\.)/.test(normalized)) {
+        return "F";
+    }
+
+    if (/\bMASCULI/.test(normalized)) {
+        return "M";
+    }
+
+    return "";
+}
+
+export function buildGenderOptions(rows) {
+    const genders = new Set();
+
+    (rows ?? []).forEach((row) => {
+        const gender = getCategoryGender(row?.categoryName);
+        if (gender) {
+            genders.add(gender);
+        }
+    });
+
+    const options = [];
+    if (genders.has("F")) {
+        options.push({value: "F", label: "Femenino"});
+    }
+
+    if (genders.has("M")) {
+        options.push({value: "M", label: "Masculino"});
+    }
+
+    return options;
+}
+
+export function filterRowsByGender(rows, gender) {
+    if (!gender || gender === "all") {
+        return rows ?? [];
+    }
+
+    return (rows ?? []).filter((row) => getCategoryGender(row?.categoryName) === gender);
+}
+
 function getLevelValue(row) {
     return String(row?.levelCode ?? "").trim() || String(row?.levelName ?? "").trim();
 }
