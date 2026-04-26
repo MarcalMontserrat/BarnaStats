@@ -7,13 +7,13 @@ namespace GenerateAnalisys.Services;
 
 public sealed class MatchAnalysisService
 {
-    private readonly OpenAiMatchReportService _matchReportService;
+    private readonly IMatchReportService _matchReportService;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true
     };
 
-    public MatchAnalysisService(OpenAiMatchReportService matchReportService)
+    public MatchAnalysisService(IMatchReportService matchReportService)
     {
         _matchReportService = matchReportService;
     }

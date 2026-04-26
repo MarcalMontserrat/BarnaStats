@@ -1,4 +1,3 @@
-using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -6,7 +5,7 @@ using GenerateAnalisys.Models;
 
 namespace GenerateAnalisys.Services;
 
-public sealed class OpenAiMatchReportService : IMatchReportService
+public sealed class GeminiMatchReportService : IMatchReportService
 {
     private const string PromptVersion = "match-report-v1";
 
@@ -24,19 +23,19 @@ public sealed class OpenAiMatchReportService : IMatchReportService
     private bool _missingApiKeyLogged;
     private bool _disabledLogged;
 
-    public OpenAiMatchReportService(string cacheDir)
+    public GeminiMatchReportService(string cacheDir)
     {
         _cacheDir = cacheDir;
         Directory.CreateDirectory(_cacheDir);
 
         _enabled = ParseBooleanFlag(
             Environment.GetEnvironmentVariable("BARNASTATS_ENABLE_AI_MATCH_REPORTS"));
-        _apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
-        _model = Environment.GetEnvironmentVariable("BARNASTATS_OPENAI_MODEL")
-                 ?? "gpt-4.1-mini";
+        _apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
+        _model = Environment.GetEnvironmentVariable("BARNASTATS_GEMINI_MODEL")
+                 ?? "gemini-2.0-flash";
         _baseUri = new Uri(
-            Environment.GetEnvironmentVariable("OPENAI_BASE_URL")
-            ?? "https://api.openai.com/v1/");
+            Environment.GetEnvironmentVariable("GEMINI_BASE_URL")
+            ?? "https://generativelanguage.googleapis.com/v1beta/");
     }
 
     public async Task<MatchReportResult?> GetOrGenerateAsync(
@@ -77,14 +76,14 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         {
             if (!_missingApiKeyLogged)
             {
-                Console.WriteLine("Sin OPENAI_API_KEY. Se omiten los resúmenes AI y solo se reutilizará la caché existente.");
+                Console.WriteLine("Sin GEMINI_API_KEY. Se omiten los resúmenes AI y solo se reutilizará la caché existente.");
                 _missingApiKeyLogged = true;
             }
 
             return null;
         }
 
-        var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw);
+        var summary = await GenerateSummaryAsync(match, movesRaw);
         if (string.IsNullOrWhiteSpace(summary))
             return null;
 
@@ -109,7 +108,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         return result;
     }
 
-    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw)
+    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string? movesRaw)
     {
         try
         {
@@ -121,26 +120,46 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                 Timeout = TimeSpan.FromSeconds(90)
             };
 
-            using var request = new HttpRequestMessage(HttpMethod.Post, "responses");
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+            var endpoint = $"models/{_model}:generateContent?key={_apiKey}";
 
             var requestBody = new
             {
-                model = _model,
-                instructions = """
-                               Eres una analista de baloncesto base. 
-                               Escribe en espanol, con tono claro y natural, sin exagerar ni inventar nada.
-                               Quiero un resumen corto para incrustar en una app:
-                               - 1 titular corto
-                               - 2 parrafos breves
-                               - 3 bullets finales con claves del partido
-                               Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
-                               Basa el analisis solo en los datos recibidos.
-                               """,
-                input = prompt,
-                max_output_tokens = 700
+                system_instruction = new
+                {
+                    parts = new[]
+                    {
+                        new
+                        {
+                            text = """
+                                   Eres una analista de baloncesto base. 
+                                   Escribe en espanol, con tono claro y natural, sin exagerar ni inventar nada.
+                                   Quiero un resumen corto para incrustar en una app:
+                                   - 1 titular corto
+                                   - 2 parrafos breves
+                                   - 3 bullets finales con claves del partido
+                                   Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
+                                   Basa el analisis solo en los datos recibidos.
+                                   """
+                        }
+                    }
+                },
+                contents = new[]
+                {
+                    new
+                    {
+                        parts = new[]
+                        {
+                            new { text = prompt }
+                        }
+                    }
+                },
+                generationConfig = new
+                {
+                    maxOutputTokens = 700
+                }
             };
 
+            using var request = new HttpRequestMessage(HttpMethod.Post, endpoint);
             request.Content = new StringContent(
                 JsonSerializer.Serialize(requestBody),
                 Encoding.UTF8,
@@ -154,7 +173,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"No se pudo generar el resumen AI del partido: {ex.Message}");
+            Console.WriteLine($"No se pudo generar el resumen AI del partido (Gemini): {ex.Message}");
             return null;
         }
     }
@@ -164,29 +183,26 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         using var document = JsonDocument.Parse(responseText);
         var root = document.RootElement;
 
-        if (root.TryGetProperty("output_text", out var outputTextElement) &&
-            outputTextElement.ValueKind == JsonValueKind.String)
-        {
-            return outputTextElement.GetString();
-        }
-
-        if (!root.TryGetProperty("output", out var outputArray) ||
-            outputArray.ValueKind != JsonValueKind.Array)
+        if (!root.TryGetProperty("candidates", out var candidates) ||
+            candidates.ValueKind != JsonValueKind.Array)
         {
             return null;
         }
 
-        foreach (var outputItem in outputArray.EnumerateArray())
+        foreach (var candidate in candidates.EnumerateArray())
         {
-            if (!outputItem.TryGetProperty("content", out var contentArray) ||
-                contentArray.ValueKind != JsonValueKind.Array)
+            if (!candidate.TryGetProperty("content", out var content))
+                continue;
+
+            if (!content.TryGetProperty("parts", out var parts) ||
+                parts.ValueKind != JsonValueKind.Array)
             {
                 continue;
             }
 
-            foreach (var contentItem in contentArray.EnumerateArray())
+            foreach (var part in parts.EnumerateArray())
             {
-                if (contentItem.TryGetProperty("text", out var textElement) &&
+                if (part.TryGetProperty("text", out var textElement) &&
                     textElement.ValueKind == JsonValueKind.String)
                 {
                     return textElement.GetString();
