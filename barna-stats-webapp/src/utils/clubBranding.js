@@ -1,6 +1,7 @@
 import {CLUB_BRANDING_CATALOG} from "../data/clubBrandingCatalog.generated.js";
 import {CLUB_LOGO_FILES} from "../data/clubLogoFiles.generated.js";
 import {TEAM_CLUB_MAP} from "../data/teamClubMap.generated.js";
+import supplementalClubBrandingData from "../data/clubBrandingSupplemental.json";
 
 const APP_BASE_URL = String(import.meta.env.BASE_URL ?? "/");
 
@@ -37,34 +38,92 @@ const FALLBACK_PALETTES = [
     }
 ];
 
+const TEAM_SPLIT_REGEX = /\s+-\s+|\/|\||,|\(|\)/;
+const TEAM_SUFFIX_REGEX = /\b(U\d{1,2}|PR[0-9A-Z]*|J[0-9A-Z]*|C[0-9A-Z]*|I[0-9A-Z]*|MINI|PREMINI|SOTS ?\d+)\b.*$/;
+const DERIVED_SUFFIX_REGEX = /\b(U\d{1,2}|PR[0-9A-Z]*|J[0-9A-Z]*|C[0-9A-Z]*|I[0-9A-Z]*|SF|JF|CF|IF|1ER ANY|2N ANY|3ER ANY|MINI|PREMINI|SOTS ?\d+)\b.*$/i;
+const DERIVED_TRAILING_VARIANT_REGEX = /(?:\s+|^)(A|B|C|D|VERMELL|VERMELLA|NEGRE|NEGRA|VERD|VERDA|GROC|GROGA|BLAU|BLAUA|LILA|TARONJA|ROSA|BLANC|BLANCA)\s*$/i;
+const CLUB_MARKER_REGEX = /\b(AE|AB|BC|BF|CB|CE|UE|BASQUET|BASKET|JET|SESE|AESE|LLUISOS|MANYANET)\b/;
+
 const STOP_WORDS = new Set([
     "A",
+    "AB",
+    "ADB",
     "AE",
+    "AESE",
+    "ANY",
     "ASSOCIACIO",
     "ATENEU",
+    "B",
     "BASQUET",
+    "BASQUETB",
     "BASQUETBOL",
     "BASKET",
     "BC",
     "B.C",
+    "BF",
     "C",
+    "CADET",
     "CB",
     "C.B",
     "CE",
     "C.E",
     "CLUB",
+    "CLUBS",
+    "D",
+    "DE",
+    "DEL",
+    "EL",
     "ESCOLA",
+    "ESPORTIVA",
     "FC",
     "FEMENI",
+    "GROC",
+    "GROGA",
+    "I",
+    "INFANTIL",
+    "JET",
+    "JUNIOR",
+    "L",
+    "LA",
+    "LES",
+    "LILA",
     "MASCULI",
+    "MINI",
+    "NEGRE",
+    "NEGRA",
+    "NIVELL",
+    "PREMINI",
+    "PROMOCIO",
+    "QUARTA",
+    "ROSA",
     "S.A.E",
-    "SAE"
+    "SAE",
+    "SEGONA",
+    "SENIOR",
+    "SESE",
+    "TARONJA",
+    "TERCERA",
+    "U",
+    "UE",
+    "VERD",
+    "VERDA",
+    "VERMELL",
+    "VERMELLA",
+    "Y"
 ]);
 
+const SUPPLEMENTAL_CLUB_BRANDING = supplementalClubBrandingData ?? {clubs: [], teamClubMap: {}};
+const CLUB_BRANDING_ENTRIES = buildClubBrandingCatalog();
+const EFFECTIVE_TEAM_CLUB_MAP = {
+    ...TEAM_CLUB_MAP,
+    ...(SUPPLEMENTAL_CLUB_BRANDING.teamClubMap ?? {})
+};
 const CLUB_BRANDING_BY_KEY = Object.fromEntries(
-    CLUB_BRANDING_CATALOG.map((entry) => [entry.clubKey, entry])
+    CLUB_BRANDING_ENTRIES.map((entry) => [entry.clubKey, entry])
 );
 const CLUB_BRANDING_BY_ALIAS = buildClubBrandingByAlias();
+const CLUB_SEARCH_ENTRIES = buildClubSearchEntries();
+const UNIQUE_SINGLE_TOKEN_CLUB_KEYS = buildUniqueSingleTokenClubKeys();
 
 function normalizeText(value) {
     return String(value ?? "")
@@ -96,10 +155,42 @@ function normalizeLookupKey(value) {
         .trim();
 }
 
+function buildClubBrandingCatalog() {
+    const entriesByKey = new Map();
+
+    for (const entry of [
+        ...(Array.isArray(CLUB_BRANDING_CATALOG) ? CLUB_BRANDING_CATALOG : []),
+        ...(Array.isArray(SUPPLEMENTAL_CLUB_BRANDING.clubs) ? SUPPLEMENTAL_CLUB_BRANDING.clubs : [])
+    ]) {
+        if (!entry?.clubKey) {
+            continue;
+        }
+
+        if (!entriesByKey.has(entry.clubKey)) {
+            entriesByKey.set(entry.clubKey, {
+                ...entry,
+                aliases: [...new Set((entry.aliases ?? []).filter(Boolean))]
+            });
+            continue;
+        }
+
+        const current = entriesByKey.get(entry.clubKey);
+        entriesByKey.set(entry.clubKey, {
+            ...current,
+            clubId: current.clubId || entry.clubId || 0,
+            clubName: current.clubName || entry.clubName || "",
+            shortName: current.shortName || entry.shortName || "",
+            aliases: [...new Set([...(current.aliases ?? []), ...(entry.aliases ?? [])].filter(Boolean))]
+        });
+    }
+
+    return [...entriesByKey.values()];
+}
+
 function buildClubBrandingByAlias() {
     const aliasMap = new Map();
 
-    for (const club of CLUB_BRANDING_CATALOG) {
+    for (const club of CLUB_BRANDING_ENTRIES) {
         const aliases = new Set([
             club.clubName,
             club.shortName,
@@ -115,6 +206,55 @@ function buildClubBrandingByAlias() {
     }
 
     return aliasMap;
+}
+
+function buildSignificantTokens(value) {
+    return normalizeLookupKey(value)
+        .split(/\s+/)
+        .filter(Boolean)
+        .filter((token) => token.length > 1)
+        .filter((token) => !/^\d+$/.test(token))
+        .filter((token) => !STOP_WORDS.has(token));
+}
+
+function buildClubSearchEntries() {
+    const entries = [];
+
+    for (const club of CLUB_BRANDING_ENTRIES) {
+        for (const alias of new Set([club.clubName, club.shortName, ...(club.aliases ?? [])])) {
+            const normalizedAlias = normalizeLookupKey(alias);
+            if (!normalizedAlias) {
+                continue;
+            }
+
+            entries.push({
+                club,
+                alias: normalizedAlias,
+                tokens: [...new Set(buildSignificantTokens(alias))]
+            });
+        }
+    }
+
+    return entries;
+}
+
+function buildUniqueSingleTokenClubKeys() {
+    const tokensToClubKeys = new Map();
+
+    for (const entry of CLUB_SEARCH_ENTRIES) {
+        if (entry.tokens.length !== 1) {
+            continue;
+        }
+
+        const token = entry.tokens[0];
+        if (!tokensToClubKeys.has(token)) {
+            tokensToClubKeys.set(token, new Set());
+        }
+
+        tokensToClubKeys.get(token).add(entry.club.clubKey);
+    }
+
+    return tokensToClubKeys;
 }
 
 function hashString(value) {
@@ -211,13 +351,13 @@ function buildLookupCandidates(teamName, teamShortName) {
 
         candidates.add(normalized);
         candidates.add(normalized.replace(/\b[A-Z]$/, "").trim());
-        candidates.add(normalized.replace(/\b(U\d{1,2}|PR[0-9A-Z]*|J[0-9A-Z]*|C[0-9A-Z]*|I[0-9A-Z]*|MINI|PREMINI|SOTS ?\d+)\b.*$/, "").trim());
+        candidates.add(normalized.replace(TEAM_SUFFIX_REGEX, "").trim());
     }
 
     return [...candidates].filter(Boolean);
 }
 
-function getClubBrandingByName(teamName, teamShortName = "") {
+function getClubBrandingByAlias(teamName, teamShortName = "") {
     const candidates = buildLookupCandidates(teamName, teamShortName);
     let bestMatch = null;
     let bestScore = -1;
@@ -245,8 +385,134 @@ function getClubBrandingByName(teamName, teamShortName = "") {
     return bestMatch;
 }
 
+function getClubBrandingByTokens(teamName, teamShortName = "") {
+    const teamTokens = [...new Set(buildLookupCandidates(teamName, teamShortName).flatMap(buildSignificantTokens))];
+    if (!teamTokens.length) {
+        return null;
+    }
+
+    let bestMatch = null;
+    let bestScore = Number.NEGATIVE_INFINITY;
+    let bestOverlapCount = -1;
+    let bestAliasTokenCount = -1;
+
+    for (const entry of CLUB_SEARCH_ENTRIES) {
+        if (!entry.tokens.length) {
+            continue;
+        }
+
+        const overlapTokens = [...new Set(entry.tokens.filter((token) => teamTokens.includes(token)))];
+        if (!overlapTokens.length) {
+            continue;
+        }
+
+        const allAliasTokensInTeam = entry.tokens.every((token) => teamTokens.includes(token));
+        const coverageAlias = overlapTokens.length / entry.tokens.length;
+        const coverageTeam = overlapTokens.length / teamTokens.length;
+        const hasUniqueSingleTokenMatch = overlapTokens.length === 1
+            && entry.tokens.length === 1
+            && overlapTokens[0].length >= 7
+            && UNIQUE_SINGLE_TOKEN_CLUB_KEYS.get(overlapTokens[0])?.size === 1
+            && !teamTokens.some((token) => token.length >= 4 && !entry.tokens.includes(token));
+        const strongMatch = (overlapTokens.length >= 2 && allAliasTokensInTeam)
+            || (overlapTokens.length >= 2 && coverageAlias >= 0.75 && coverageTeam >= 0.4)
+            || hasUniqueSingleTokenMatch;
+        if (!strongMatch) {
+            continue;
+        }
+
+        const overlapLength = overlapTokens.reduce((total, token) => total + token.length, 0);
+        const score = (allAliasTokensInTeam ? 100 : 0)
+            + (overlapTokens.length * 20)
+            + overlapLength
+            + Math.round(coverageAlias * 10)
+            + Math.round(coverageTeam * 5)
+            - entry.tokens.length;
+
+        if (score > bestScore
+            || (score === bestScore && overlapTokens.length > bestOverlapCount)
+            || (score === bestScore && overlapTokens.length === bestOverlapCount && entry.tokens.length > bestAliasTokenCount)) {
+            bestMatch = entry.club;
+            bestScore = score;
+            bestOverlapCount = overlapTokens.length;
+            bestAliasTokenCount = entry.tokens.length;
+        }
+    }
+
+    return bestMatch;
+}
+
+function scoreDerivedClubPart(value) {
+    const normalized = normalizeLookupKey(value);
+    if (!normalized) {
+        return 0;
+    }
+
+    const tokens = buildSignificantTokens(normalized);
+    return (CLUB_MARKER_REGEX.test(normalized) ? 25 : 0)
+        + (tokens.length * 8)
+        + tokens.reduce((total, token) => total + Math.min(token.length, 10), 0)
+        + Math.min(normalized.length, 20);
+}
+
+function buildDerivedClubLabel(teamName) {
+    const rawParts = String(teamName ?? "")
+        .split(TEAM_SPLIT_REGEX)
+        .map((part) => String(part ?? "").trim())
+        .filter(Boolean);
+    if (!rawParts.length) {
+        return String(teamName ?? "").trim();
+    }
+
+    const bestPart = [...rawParts].sort((left, right) => {
+        const scoreDiff = scoreDerivedClubPart(right) - scoreDerivedClubPart(left);
+        if (scoreDiff !== 0) {
+            return scoreDiff;
+        }
+
+        return right.length - left.length;
+    })[0];
+
+    let cleaned = bestPart;
+    while (cleaned) {
+        const next = cleaned
+            .replace(DERIVED_SUFFIX_REGEX, "")
+            .replace(DERIVED_TRAILING_VARIANT_REGEX, "")
+            .trim()
+            .replace(/[-/|]+$/g, "")
+            .trim();
+        if (next === cleaned) {
+            break;
+        }
+
+        cleaned = next;
+    }
+
+    return cleaned || bestPart;
+}
+
+function buildDerivedClubBranding(teamName) {
+    const clubName = buildDerivedClubLabel(teamName);
+    const normalizedKey = normalizeLookupKey(clubName) || "EQUIPO";
+
+    return {
+        clubKey: `derived-club:${normalizedKey.toLowerCase().replace(/\s+/g, "-")}`,
+        clubId: 0,
+        clubName: clubName || String(teamName ?? "").trim(),
+        shortName: clubName || String(teamName ?? "").trim(),
+        aliases: [clubName || String(teamName ?? "").trim()],
+        isSynthetic: true
+    };
+}
+
+function getClubBrandingByName(teamName, teamShortName = "") {
+    return getClubBrandingByAlias(teamName, teamShortName)
+        ?? getClubBrandingByTokens(teamName, teamShortName)
+        ?? buildDerivedClubBranding(teamName);
+}
+
 export function getClubBrandingForTeam(teamIdExtern, teamName = "", teamShortName = "") {
-    const clubKey = TEAM_CLUB_MAP[String(teamIdExtern ?? "")];
+    const clubKey = EFFECTIVE_TEAM_CLUB_MAP[String(teamIdExtern ?? "")];
     if (clubKey) {
         return CLUB_BRANDING_BY_KEY[clubKey] ?? null;
     }
