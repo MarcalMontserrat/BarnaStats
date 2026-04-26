@@ -55,6 +55,7 @@ import {
     SYNC_ROUTE
 } from "./utils/appRoutes.js";
 import {getClubBrandingForTeam} from "./utils/clubBranding.js";
+import {sortFilterOptions} from "./utils/filterOptions.js";
 
 const GlobalLeadersSection = lazy(() => import("./components/GlobalLeadersSection.jsx"));
 const PhaseComparisonSection = lazy(() => import("./components/PhaseComparisonSection.jsx"));
@@ -668,7 +669,6 @@ function App() {
         () => initialHashState.route === "players" ? (initialHashState.playerKey ?? "") : ""
     );
     const [clubQuery, setClubQuery] = useState("");
-    const [prefetchCompetitionData, setPrefetchCompetitionData] = useState(false);
     const [historicalArchiveRequested, setHistoricalArchiveRequested] = useState(false);
     const pendingScrollRestoreFrame = useRef(0);
     const teamTabsRef = useRef(null);
@@ -728,7 +728,7 @@ function App() {
         loading: competitionMatchesLoading,
         error: competitionMatchesError
     } = useAnalysisData(
-        route === "competition" && (prefetchCompetitionData || selectedCompetitionTab === "matches")
+        route === "competition" && selectedCompetitionTab === "matches"
             ? `data/competition-matches.json?v=${analysisVersion}`
             : null
     );
@@ -737,7 +737,7 @@ function App() {
         loading: competitionPlayerLeadersLoading,
         error: competitionPlayerLeadersError
     } = useAnalysisData(
-        route === "competition" && (prefetchCompetitionData || selectedCompetitionTab === "leaders")
+        route === "competition" && selectedCompetitionTab === "leaders"
             ? `data/competition-player-leaders.json?v=${analysisVersion}`
             : null
     );
@@ -814,12 +814,12 @@ function App() {
     const totalPublishedSeasons = seasonOptions.length;
     const historicalTeamEntities = historicalTeamsDirectory?.teams ?? EMPTY_LIST;
     const historicalTeamOptions = useMemo(
-        () => historicalTeamEntities.map((entity) => ({
+        () => sortFilterOptions(historicalTeamEntities.map((entity) => ({
             value: entity.key,
             label: entity.label,
             meta: entity.meta,
             searchText: entity.searchText
-        })),
+        }))),
         [historicalTeamEntities]
     );
     const selectedHistoricalTeam = useMemo(
@@ -827,12 +827,12 @@ function App() {
         [historicalTeamEntities, selectedHistoryTeamKey]
     );
     const historicalPlayerEntities = historicalPlayersDirectory?.players ?? EMPTY_LIST;
-    const historicalPlayerOptions = useMemo(() => historicalPlayerEntities.map((entity) => ({
+    const historicalPlayerOptions = useMemo(() => sortFilterOptions(historicalPlayerEntities.map((entity) => ({
         value: entity.key,
         label: entity.label,
         meta: entity.meta,
         searchText: entity.searchText
-    })), [historicalPlayerEntities]);
+    }))), [historicalPlayerEntities]);
     const selectedHistoricalPlayer = useMemo(
         () => historicalPlayerEntities.find((entity) => entity.key === selectedHistoricalPlayerKey) ?? null,
         [historicalPlayerEntities, selectedHistoricalPlayerKey]
@@ -974,12 +974,12 @@ function App() {
         awayTeamIdExtern: Number(teamDirectoryByKey.get(match.awayTeamKey)?.teamIdExtern ?? 0)
     })), [competitionMatches, teamDirectoryByKey]);
     const currentClubEntities = Array.isArray(currentClubDirectory) ? currentClubDirectory : EMPTY_LIST;
-    const clubOptions = useMemo(() => currentClubEntities.map((club) => ({
+    const clubOptions = useMemo(() => sortFilterOptions(currentClubEntities.map((club) => ({
         value: club.key,
         label: club.label,
         meta: club.meta,
         searchText: `${club.searchText} ${club.meta}`
-    })), [currentClubEntities]);
+    }))), [currentClubEntities]);
     const selectedTeamBranding = selectedTeamSummary
         ? getClubBrandingForTeam(selectedTeamSummary.teamIdExtern, selectedTeamSummary.teamName)
         : null;
@@ -1444,10 +1444,6 @@ function App() {
         setSelectedCompetitionTab(tabId);
     };
 
-    const handlePrefetchCompetitionData = () => {
-        setPrefetchCompetitionData(true);
-    };
-
     const handleHistoricalArchiveRequest = () => {
         setHistoricalArchiveRequested(true);
     };
@@ -1828,22 +1824,6 @@ function App() {
                 <p style={appStyles.syncBody}>
                     Vista global de la competición para seguir la clasificación, revisar los partidos y localizar a las jugadoras más destacadas.
                 </p>
-                <div style={appStyles.competitionTabRow}>
-                    <button
-                        type="button"
-                        style={prefetchCompetitionData
-                            ? {...appStyles.competitionTab, ...appStyles.competitionTabActive}
-                            : appStyles.competitionTab}
-                        onClick={handlePrefetchCompetitionData}
-                        disabled={prefetchCompetitionData}
-                    >
-                        {prefetchCompetitionData
-                            ? (competitionMatchesLoading || competitionPlayerLeadersLoading
-                                ? "Cargando paquete completo..."
-                                : "Paquete completo listo")
-                            : "Cargar todo"}
-                    </button>
-                </div>
             </section>
 
             {competitionBaseLoading ? (

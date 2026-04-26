@@ -1,13 +1,14 @@
 import {useEffect, useState} from "react";
+import {sortFilterOptions, sortFilterOptionsKeepingGlobalFirst} from "../utils/filterOptions.js";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071";
 
-export const GENDER_OPTIONS = [
+export const GENDER_OPTIONS = sortFilterOptions([
     {value: "F", label: "Femenino"},
     {value: "M", label: "Masculino"}
-];
+]);
 
-export const TERRITORY_OPTIONS = [
+export const TERRITORY_OPTIONS = sortFilterOptionsKeepingGlobalFirst([
     {value: "0", label: "Todos los territorios"},
     {value: "1", label: "Catalunya"},
     {value: "2", label: "Barcelona"},
@@ -15,7 +16,7 @@ export const TERRITORY_OPTIONS = [
     {value: "4", label: "Lleida"},
     {value: "5", label: "Tarragona"},
     {value: "6", label: "Tot basquet"}
-];
+], (option) => String(option?.value ?? "") === "0");
 
 export function buildResultsUrl(phaseId) {
     const normalizedPhaseId = String(phaseId ?? "").trim();
@@ -64,7 +65,7 @@ export function useBasquetCatalaSourceBuilder(enabled, gender, territory, catego
                     throw new Error(payload?.detail ?? payload?.error ?? "No se pudieron cargar las categorías.");
                 }
 
-                setCategories(Array.isArray(payload) ? payload : []);
+                setCategories(sortFilterOptions(Array.isArray(payload) ? payload : []));
             } catch (err) {
                 if (controller.signal.aborted) {
                     return;
@@ -115,7 +116,7 @@ export function useBasquetCatalaSourceBuilder(enabled, gender, territory, catego
                     throw new Error(payload?.detail ?? payload?.error ?? "No se pudieron cargar las fases.");
                 }
 
-                setPhases(Array.isArray(payload) ? payload : []);
+                setPhases(sortFilterOptions(Array.isArray(payload) ? payload : []));
             } catch (err) {
                 if (controller.signal.aborted) {
                     return;
