@@ -335,7 +335,7 @@ function CompetitionResultsSection({
                     <div style={styles.eyebrow}>Resultados</div>
                     <h2 style={styles.title}>Partidos de la competición</h2>
                     <p style={styles.subtitle}>
-                        Consulta los partidos cargados, ordenados del más reciente al más antiguo. Haz clic en un partido para ver su detalle.
+                        Consulta los partidos cargados, ordenados del más reciente al más antiguo. Haz clic o presiona Enter en un partido para ver su detalle.
                     </p>
                 </div>
 
@@ -422,7 +422,7 @@ function CompetitionResultsSection({
 
                         return (
                             <div key={match.matchWebId} style={styles.matchCard}>
-                                <article
+                                <div
                                     style={{
                                         ...styles.row,
                                         ...(isSelectedTeamMatch ? styles.rowHighlighted : {}),
@@ -495,7 +495,7 @@ function CompetitionResultsSection({
                                             <span style={styles.expandIndicatorGlyph}>⌄</span>
                                         </span>
                                     </div>
-                                </article>
+                                </div>
 
                                 {isOpen ? (
                                     <div id={detailId} style={styles.detailShell}>
