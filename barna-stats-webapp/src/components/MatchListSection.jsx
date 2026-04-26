@@ -1,5 +1,4 @@
-import MatchInsightsPanel from "./MatchInsightsPanel.jsx";
-import MatchTable from "./MatchTable.jsx";
+import MatchDetailContent from "./MatchDetailContent.jsx";
 import PrettySelect from "./PrettySelect.jsx";
 import TeamBadge from "./TeamBadge.jsx";
 import {buildCompetitionPhaseLabel} from "../utils/analysisDerived.js";
@@ -279,52 +278,6 @@ function MatchListSection({
     onTeamNavigate,
     onPlayerNavigate
 }) {
-    const renderMatchReport = (match) => {
-        if (!match.matchReport) {
-            return null;
-        }
-
-        const blocks = match.matchReport
-            .split(/\n\s*\n/)
-            .map((block) => block.trim())
-            .filter(Boolean);
-
-        return (
-            <div style={styles.reportCard}>
-                <div style={styles.reportTitle}>Análisis del partido</div>
-                {blocks.map((block, index) => {
-                    const lines = block
-                        .split("\n")
-                        .map((line) => line.trim())
-                        .filter(Boolean);
-                    const isBulletBlock = lines.every((line) => line.startsWith("- "));
-
-                    if (isBulletBlock) {
-                        return (
-                            <ul key={index} style={styles.reportList}>
-                                {lines.map((line) => (
-                                    <li key={line}>{line.slice(2)}</li>
-                                ))}
-                            </ul>
-                        );
-                    }
-
-                    return (
-                        <p key={index} style={styles.reportParagraph}>
-                            {block}
-                        </p>
-                    );
-                })}
-                {match.matchReportGeneratedAtUtc ? (
-                    <div style={styles.reportMeta}>
-                        Generado: {new Date(match.matchReportGeneratedAtUtc).toLocaleString("es-ES")}
-                        {match.matchReportModel ? ` · ${match.matchReportModel}` : ""}
-                    </div>
-                ) : null}
-            </div>
-        );
-    };
-
     const formatMatchTitle = (match) => `Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
 
     if (sortedMatches.length === 0) {
@@ -508,9 +461,15 @@ function MatchListSection({
 
                         {isOpen ? (
                             <div id={detailId} style={styles.detailShell}>
-                                <MatchTable players={match.players} onPlayerNavigate={onPlayerNavigate}/>
-                                <MatchInsightsPanel insights={match.insights}/>
-                                {renderMatchReport(match)}
+                                <MatchDetailContent
+                                    players={match.players}
+                                    insights={match.insights}
+                                    matchReport={match.matchReport}
+                                    matchReportGeneratedAtUtc={match.matchReportGeneratedAtUtc}
+                                    matchReportModel={match.matchReportModel}
+                                    onPlayerNavigate={onPlayerNavigate}
+                                    emptyMessage="No hay detalle disponible para este partido."
+                                />
                             </div>
                         ) : null}
                     </div>

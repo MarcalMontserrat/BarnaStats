@@ -1,4 +1,5 @@
 import {useState} from "react";
+import CompetitionMatchDetail from "./CompetitionMatchDetail.jsx";
 import PrettySelect from "./PrettySelect.jsx";
 import TeamBadge from "./TeamBadge.jsx";
 import {
@@ -289,6 +290,8 @@ function formatMatchLabel(match) {
 
 function CompetitionResultsSection({
     matches,
+    teamDetailsByKey,
+    analysisVersion,
     phaseOptions,
     selectedPhase,
     onSelectedPhaseChange,
@@ -300,6 +303,7 @@ function CompetitionResultsSection({
     onSelectedCategoryChange,
     selectedTeamKey,
     onTeamNavigate,
+    onPlayerNavigate,
     openMatches,
     onToggleMatch
 }) {
@@ -499,31 +503,13 @@ function CompetitionResultsSection({
 
                                 {isOpen ? (
                                     <div id={detailId} style={styles.detailShell}>
-                                        <div style={styles.detailCard}>
-                                            <div style={styles.detailTitle}>Detalle del partido</div>
-                                            <div style={styles.detailChips}>
-                                                {match.topScorer ? (
-                                                    <>
-                                                        <div style={styles.detailChip}>
-                                                            <span style={styles.detailChipLabel}>Máxima anotadora</span>
-                                                            <span>{match.topScorer}</span>
-                                                        </div>
-                                                        <div style={styles.detailChip}>
-                                                            <span style={styles.detailChipLabel}>Equipo</span>
-                                                            <span>{match.topScorerTeam}</span>
-                                                        </div>
-                                                        <div style={styles.detailChip}>
-                                                            <span style={styles.detailChipLabel}>Puntos</span>
-                                                            <span>{match.topScorerPoints}</span>
-                                                        </div>
-                                                    </>
-                                                ) : (
-                                                    <span style={styles.detailEmpty}>
-                                                        No hay detalle de anotación individual para este partido.
-                                                    </span>
-                                                )}
-                                            </div>
-                                        </div>
+                                        <CompetitionMatchDetail
+                                            match={match}
+                                            teamDetailsByKey={teamDetailsByKey}
+                                            analysisVersion={analysisVersion}
+                                            onTeamNavigate={onTeamNavigate}
+                                            onPlayerNavigate={onPlayerNavigate}
+                                        />
                                     </div>
                                 ) : null}
                             </div>
