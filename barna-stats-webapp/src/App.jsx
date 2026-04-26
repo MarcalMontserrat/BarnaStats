@@ -154,19 +154,13 @@ const appStyles = {
         gap: 24
     },
     topBar: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
+        display: "grid",
         gap: 18,
-        flexWrap: "wrap",
         animation: "fade-up 650ms ease both"
     },
     topBarActions: {
-        display: "flex",
-        alignItems: "flex-end",
-        justifyContent: "flex-end",
-        gap: 14,
-        flexWrap: "wrap"
+        display: "grid",
+        justifyItems: "start"
     },
     brand: {
         display: "grid",
