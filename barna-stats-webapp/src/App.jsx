@@ -1890,6 +1890,8 @@ function App() {
                                     onSelectedCategoryChange={handleResultsCategoryChange}
                                     selectedTeamKey={effectiveTeamKey}
                                     onTeamNavigate={handleTeamNavigate}
+                                    openMatches={openMatches}
+                                    onToggleMatch={handleToggleMatch}
                                 />
                             </Suspense>
                         )
