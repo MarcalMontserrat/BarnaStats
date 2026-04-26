@@ -2134,5 +2134,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "teamIdIntern": 562899,
+    "teamIdExtern": 81178,
+    "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "matchWebId": 73887,
+    "matchInternId": 280148,
+    "matchExternId": 1170915,
+    "matchDate": "2026-04-25T12:30:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 11,
+    "roundNumber": 19,
+    "homeTeam": "JAC SANTS BARCELONA U10",
+    "homeScore": 38,
+    "awayScore": 69,
+    "awayTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+    "rivalTeam": "JAC SANTS BARCELONA U10",
+    "officialTeamScore": 69,
+    "officialRivalScore": 38,
+    "teamScore": 69,
+    "rivalScore": 38,
+    "result": "W",
+    "topScorer": "NOA C\u00D3RDOBA PINTO",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 29,
+    "teamTopScorer": "NOA C\u00D3RDOBA PINTO",
+    "teamTopScorerPoints": 29,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 1,
+      "maxLead": 33,
+      "maxDeficit": 2,
+      "bestRun": 14,
+      "rivalBestRun": 7,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "MIA GOBERNA JUVE",
+      "firstScorerTeam": "JAC SANTS BARCELONA U10",
+      "lastScorer": "MIA GOBERNA JUVE",
+      "lastScorerTeam": "JAC SANTS BARCELONA U10",
+      "teamFirstScorer": "ABRIL ARIZA BERNAL",
+      "teamLastScorer": "ABRIL ARIZA BERNAL",
+      "bestPeriodLabel": "Parcial 3",
+      "bestPeriodDiff": 12,
+      "worstPeriodLabel": "Parcial 2",
+      "worstPeriodDiff": -1,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 9,
+          "rivalPoints": 2,
+          "diff": 7
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 5,
+          "rivalPoints": 6,
+          "diff": -1
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 16,
+          "rivalPoints": 4,
+          "diff": 12
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 8,
+          "rivalPoints": 6,
+          "diff": 2
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 10,
+          "rivalPoints": 6,
+          "diff": 4
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 2,
+          "rivalPoints": 2,
+          "diff": 0
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 14,
+          "rivalPoints": 8,
+          "diff": 6
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 5,
+          "rivalPoints": 4,
+          "diff": 1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

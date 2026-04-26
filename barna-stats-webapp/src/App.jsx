@@ -697,8 +697,9 @@ function App() {
         sources: savedResultsSources,
         loading: savedResultsSourcesLoading,
         error: savedResultsSourcesError,
-        deletingPhaseId: deletingSavedPhaseId,
+        deletingPhaseIds: deletingSavedPhaseIds,
         deleteSource: deleteSavedResultsSource,
+        deleteSources: deleteSavedResultsSources,
         refreshSources: refreshSavedResultsSources
     } = useResultsSources(syncUiEnabled);
     const {
@@ -1787,13 +1788,21 @@ function App() {
                     savedSources={savedResultsSources}
                     savedSourcesLoading={savedResultsSourcesLoading}
                     savedSourcesError={savedResultsSourcesError}
-                    deletingPhaseId={deletingSavedPhaseId}
+                    deletingPhaseIds={deletingSavedPhaseIds}
                     onStartSync={startSync}
                     onStartSyncBatch={startSyncBatch}
                     onStartSyncAllSavedSources={startSyncAllSavedSources}
                     onDeleteSavedSource={async (phaseId) => {
                         const result = await deleteSavedResultsSource(phaseId);
                         if (result) {
+                            setAnalysisVersion(Date.now());
+                        }
+
+                        return result;
+                    }}
+                    onDeleteSavedSources={async (phaseIds) => {
+                        const result = await deleteSavedResultsSources(phaseIds);
+                        if ((result?.deletedPhaseIds?.length ?? 0) > 0) {
                             setAnalysisVersion(Date.now());
                         }
 

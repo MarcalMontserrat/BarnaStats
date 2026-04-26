@@ -378,6 +378,12 @@ const styles = {
         fontSize: 13,
         lineHeight: 1.5
     },
+    savedSourcesBulkActions: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        flexWrap: "wrap"
+    },
     savedSourcesPagination: {
         display: "flex",
         alignItems: "center",
@@ -428,12 +434,27 @@ const styles = {
         color: "var(--muted)",
         borderBottom: "1px solid rgba(107, 86, 58, 0.12)"
     },
+    savedSourcesCheckboxCell: {
+        width: 56,
+        textAlign: "center"
+    },
     savedSourcesBodyCell: {
         padding: "16px",
         fontSize: 14,
         lineHeight: 1.55,
         borderBottom: "1px solid rgba(107, 86, 58, 0.08)",
         verticalAlign: "middle"
+    },
+    savedSourcesCheckboxWrap: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    savedSourcesCheckbox: {
+        width: 16,
+        height: 16,
+        cursor: "pointer",
+        accentColor: "#1a3557"
     },
     savedSourcePrimary: {
         fontWeight: 800,
@@ -575,11 +596,12 @@ function SyncPanel({
     savedSources,
     savedSourcesLoading,
     savedSourcesError,
-    deletingPhaseId,
+    deletingPhaseIds,
     onStartSync,
     onStartSyncBatch,
     onStartSyncAllSavedSources,
-    onDeleteSavedSource
+    onDeleteSavedSource,
+    onDeleteSavedSources
 }) {
     const [manualSourceUrl, setManualSourceUrl] = useState(() => window.localStorage.getItem("barna-sync-source-url") ?? "");
     const [selectedGender, setSelectedGender] = useState(() => window.localStorage.getItem("barna-sync-gender") ?? "F");
@@ -599,7 +621,9 @@ function SyncPanel({
         const storedValue = Number(window.localStorage.getItem("barna-sync-saved-sources-page-size"));
         return SAVED_SOURCES_PAGE_SIZE_OPTIONS.includes(storedValue) ? storedValue : 25;
     });
+    const [selectedSavedPhaseIds, setSelectedSavedPhaseIds] = useState([]);
     const bulkPreviewControllerRef = useRef(null);
+    const savedSourcesPageCheckboxRef = useRef(null);
     const deferredSavedSourcesQuery = useDeferredValue(savedSourcesQuery);
     const {
         categories,
@@ -678,12 +702,23 @@ function SyncPanel({
         window.localStorage.setItem("barna-sync-saved-sources-page-size", String(savedSourcesPageSize));
     }, [savedSourcesPageSize]);
 
+    useEffect(() => {
+        const availablePhaseIds = new Set(
+            (savedSources ?? [])
+                .map((source) => Number(source.phaseId))
+                .filter((phaseId) => Number.isInteger(phaseId) && phaseId > 0)
+        );
+
+        setSelectedSavedPhaseIds((current) => current.filter((phaseId) => availablePhaseIds.has(phaseId)));
+    }, [savedSources]);
+
     useEffect(() => () => {
         bulkPreviewControllerRef.current?.abort();
     }, []);
 
     const status = job?.status ?? (apiAvailable ? "idle" : "offline");
-    const isDeleting = deletingPhaseId != null;
+    const activeDeletingPhaseIds = deletingPhaseIds ?? [];
+    const isDeleting = activeDeletingPhaseIds.length > 0;
     const isBusy = starting || status === "pending" || status === "running" || isDeleting;
     const canUseApi = apiAvailable && !isBusy;
     const statusLabel = status === "idle"
@@ -892,6 +927,17 @@ function SyncPanel({
         await onDeleteSavedSource?.(Number(source.phaseId));
     };
 
+    const toggleSavedSourceSelection = (phaseId) => {
+        const normalizedPhaseId = Number(phaseId);
+        if (!Number.isInteger(normalizedPhaseId) || normalizedPhaseId <= 0 || isBusy) {
+            return;
+        }
+
+        setSelectedSavedPhaseIds((current) => current.includes(normalizedPhaseId)
+            ? current.filter((value) => value !== normalizedPhaseId)
+            : [...current, normalizedPhaseId]);
+    };
+
     const handleSavedSourcesQueryChange = (event) => {
         setSavedSourcesQuery(event.target.value);
         setSavedSourcesPage(1);
@@ -949,6 +995,23 @@ function SyncPanel({
         (currentSavedSourcesPage - 1) * savedSourcesPageSize,
         currentSavedSourcesPage * savedSourcesPageSize
     );
+    const selectableFilteredPhaseIds = filteredSavedSources
+        .map((source) => Number(source.phaseId))
+        .filter((phaseId) => Number.isInteger(phaseId) && phaseId > 0);
+    const selectablePaginatedPhaseIds = paginatedSavedSources
+        .map((source) => Number(source.phaseId))
+        .filter((phaseId) => Number.isInteger(phaseId) && phaseId > 0);
+    const selectedVisiblePhaseCount = selectablePaginatedPhaseIds
+        .filter((phaseId) => selectedSavedPhaseIds.includes(phaseId))
+        .length;
+    const allVisibleSavedSourcesSelected = selectablePaginatedPhaseIds.length > 0
+        && selectedVisiblePhaseCount === selectablePaginatedPhaseIds.length;
+    const canToggleVisibleSavedSources = canUseApi && selectablePaginatedPhaseIds.length > 0;
+    const canSelectFilteredSavedSources = canUseApi && selectableFilteredPhaseIds.length > 0;
+    const canClearSavedSourcesSelection = !isBusy && selectedSavedPhaseIds.length > 0;
+    const canDeleteSelectedSavedSources = canUseApi
+        && selectedSavedPhaseIds.length > 0
+        && typeof onDeleteSavedSources === "function";
     const savedSourcesRangeStart = filteredSavedSources.length === 0
         ? 0
         : ((currentSavedSourcesPage - 1) * savedSourcesPageSize) + 1;
@@ -956,11 +1019,77 @@ function SyncPanel({
         ? 0
         : savedSourcesRangeStart + paginatedSavedSources.length - 1;
 
+    const handleToggleVisibleSavedSources = () => {
+        if (!canToggleVisibleSavedSources) {
+            return;
+        }
+
+        setSelectedSavedPhaseIds((current) => {
+            if (allVisibleSavedSourcesSelected) {
+                return current.filter((phaseId) => !selectablePaginatedPhaseIds.includes(phaseId));
+            }
+
+            return [...new Set([...current, ...selectablePaginatedPhaseIds])];
+        });
+    };
+
+    const handleSelectFilteredSavedSources = () => {
+        if (!canSelectFilteredSavedSources) {
+            return;
+        }
+
+        setSelectedSavedPhaseIds((current) => [...new Set([...current, ...selectableFilteredPhaseIds])]);
+    };
+
+    const handleClearSavedSourcesSelection = () => {
+        if (!canClearSavedSourcesSelection) {
+            return;
+        }
+
+        setSelectedSavedPhaseIds([]);
+    };
+
+    const handleDeleteSelectedSavedSources = async () => {
+        if (!canDeleteSelectedSavedSources) {
+            return;
+        }
+
+        const selectedSources = (savedSources ?? [])
+            .filter((source) => selectedSavedPhaseIds.includes(Number(source.phaseId)));
+        const previewLines = selectedSources
+            .slice(0, 3)
+            .map((source) => `- ${formatSourceReference(source)}`);
+        const remainingCount = Math.max(0, selectedSources.length - previewLines.length);
+        const confirmed = window.confirm([
+            `Se borrarán ${pluralize(selectedSavedPhaseIds.length, "fase guardada", "fases guardadas")} y sus datos descargados.`,
+            previewLines.length > 0 ? previewLines.join("\n") : "",
+            remainingCount > 0 ? `...y ${remainingCount} más.` : ""
+        ].filter(Boolean).join("\n\n"));
+
+        if (!confirmed) {
+            return;
+        }
+
+        const result = await onDeleteSavedSources(selectedSavedPhaseIds);
+        if ((result?.deletedPhaseIds?.length ?? 0) > 0) {
+            setSelectedSavedPhaseIds((current) => current.filter((phaseId) => !result.deletedPhaseIds.includes(phaseId)));
+        }
+    };
+
     useEffect(() => {
         if (savedSourcesPage > savedSourcesPageCount) {
             setSavedSourcesPage(savedSourcesPageCount);
         }
     }, [savedSourcesPage, savedSourcesPageCount]);
+
+    useEffect(() => {
+        if (!savedSourcesPageCheckboxRef.current) {
+            return;
+        }
+
+        savedSourcesPageCheckboxRef.current.indeterminate = selectedVisiblePhaseCount > 0
+            && selectedVisiblePhaseCount < selectablePaginatedPhaseIds.length;
+    }, [selectedVisiblePhaseCount, selectablePaginatedPhaseIds.length]);
 
     return (
         <form style={styles.panel} onSubmit={handleSubmit}>
@@ -1383,6 +1512,54 @@ function SyncPanel({
                                 {paginatedSavedSources.length > 0
                                     ? ` · Mostrando ${savedSourcesRangeStart}-${savedSourcesRangeEnd}`
                                     : ""}
+                                {selectedSavedPhaseIds.length > 0
+                                    ? ` · ${pluralize(selectedSavedPhaseIds.length, "fase seleccionada", "fases seleccionadas")}`
+                                    : ""}
+                            </div>
+
+                            <div style={styles.savedSourcesBulkActions}>
+                                <button
+                                    type="button"
+                                    style={!canToggleVisibleSavedSources
+                                        ? {...styles.compactButton, ...styles.compactButtonMuted}
+                                        : styles.compactButton}
+                                    disabled={!canToggleVisibleSavedSources}
+                                    onClick={handleToggleVisibleSavedSources}
+                                >
+                                    {allVisibleSavedSourcesSelected ? "Deseleccionar página" : "Seleccionar página"}
+                                </button>
+                                <button
+                                    type="button"
+                                    style={!canSelectFilteredSavedSources
+                                        ? {...styles.compactButton, ...styles.compactButtonMuted}
+                                        : styles.compactButton}
+                                    disabled={!canSelectFilteredSavedSources}
+                                    onClick={handleSelectFilteredSavedSources}
+                                >
+                                    Seleccionar filtradas
+                                </button>
+                                <button
+                                    type="button"
+                                    style={!canClearSavedSourcesSelection
+                                        ? {...styles.compactButton, ...styles.compactButtonMuted}
+                                        : styles.compactButton}
+                                    disabled={!canClearSavedSourcesSelection}
+                                    onClick={handleClearSavedSourcesSelection}
+                                >
+                                    Limpiar
+                                </button>
+                                <button
+                                    type="button"
+                                    style={!canDeleteSelectedSavedSources
+                                        ? {...styles.compactButton, ...styles.inlineDangerButton, ...styles.compactButtonMuted}
+                                        : {...styles.compactButton, ...styles.inlineDangerButton, color: "#fff8ef"}}
+                                    disabled={!canDeleteSelectedSavedSources}
+                                    onClick={() => void handleDeleteSelectedSavedSources()}
+                                >
+                                    {selectedSavedPhaseIds.length > 0
+                                        ? `Borrar seleccionadas (${selectedSavedPhaseIds.length})`
+                                        : "Borrar seleccionadas"}
+                                </button>
                             </div>
 
                             <div style={styles.savedSourcesPagination}>
@@ -1417,6 +1594,24 @@ function SyncPanel({
                                 <table style={styles.savedSourcesTable}>
                                     <thead>
                                     <tr>
+                                        <th style={{...styles.savedSourcesHeaderCell, ...styles.savedSourcesCheckboxCell}}>
+                                            <div style={styles.savedSourcesCheckboxWrap}>
+                                                <input
+                                                    ref={savedSourcesPageCheckboxRef}
+                                                    type="checkbox"
+                                                    style={styles.savedSourcesCheckbox}
+                                                    checked={allVisibleSavedSourcesSelected}
+                                                    disabled={!canToggleVisibleSavedSources}
+                                                    onChange={handleToggleVisibleSavedSources}
+                                                    aria-label={allVisibleSavedSourcesSelected
+                                                        ? "Deseleccionar fases visibles"
+                                                        : "Seleccionar fases visibles"}
+                                                    title={allVisibleSavedSourcesSelected
+                                                        ? "Deseleccionar fases visibles"
+                                                        : "Seleccionar fases visibles"}
+                                                />
+                                            </div>
+                                        </th>
                                         <th style={styles.savedSourcesHeaderCell}>Categoría</th>
                                         <th style={styles.savedSourcesHeaderCell}>Referencia</th>
                                         <th style={styles.savedSourcesHeaderCell}>Última sincronización</th>
@@ -1426,6 +1621,18 @@ function SyncPanel({
                                     <tbody>
                                     {paginatedSavedSources.map((source) => (
                                         <tr key={source.sourceUrl}>
+                                            <td style={{...styles.savedSourcesBodyCell, ...styles.savedSourcesCheckboxCell}}>
+                                                <div style={styles.savedSourcesCheckboxWrap}>
+                                                    <input
+                                                        type="checkbox"
+                                                        style={styles.savedSourcesCheckbox}
+                                                        checked={selectedSavedPhaseIds.includes(Number(source.phaseId))}
+                                                        disabled={!canUseApi || !source.phaseId}
+                                                        onChange={() => toggleSavedSourceSelection(source.phaseId)}
+                                                        aria-label={`Seleccionar ${formatSourceReference(source)}`}
+                                                    />
+                                                </div>
+                                            </td>
                                             <td style={styles.savedSourcesBodyCell}>
                                                 {source.categoryName || "Sin categoría"}
                                             </td>
@@ -1456,7 +1663,7 @@ function SyncPanel({
                                                         disabled={!canUseApi || !source.phaseId}
                                                         onClick={() => void handleDeleteSavedSource(source)}
                                                         aria-label={`Borrar ${formatSourceReference(source)}`}
-                                                        title={deletingPhaseId === source.phaseId ? "Borrando..." : "Borrar"}
+                                                        title={activeDeletingPhaseIds.includes(Number(source.phaseId)) ? "Borrando..." : "Borrar"}
                                                     >
                                                         <TrashActionIcon/>
                                                     </button>

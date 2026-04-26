@@ -1,34 +1,6 @@
 {
-  "generatedAtUtc": "2026-04-19T21:29:31.09723Z",
+  "generatedAtUtc": "2026-04-26T08:09:03.852121Z",
   "teams": [
-    {
-      "key": "TEAM:85872",
-      "label": "#2 C. C. 3x3 1a Jornada  - Grup A",
-      "latestTeamIdExtern": 85872,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED \u00B7 Eliminat\u00F2ria IF",
-      "searchText": "#2 C. C. 3x3 1a Jornada  - Grup A C.c. 3x3 Infantil Femen\u00ED Eliminat\u00F2ria IF",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85872:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85872,
-          "teamName": "#2 C. C. 3x3 1a Jornada  - Grup A",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "levelName": "Eliminat\u00F2ria IF",
-          "matchesPlayed": 1,
-          "playersCount": 4,
-          "pointsFor": 11,
-          "pointsAgainst": 8,
-          "pointDiff": 3,
-          "wins": 1,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 10
-        }
-      ]
-    },
     {
       "key": "TEAM:82353",
       "label": "30\u00BA HOTELS - AECAM MALGRAT",
@@ -54,34 +26,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 16.11764705882353
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85751",
-      "label": "3X3 CBS MINI",
-      "latestTeamIdExtern": 85751,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup B",
-      "searchText": "3X3 CBS MINI C.c. 3x3 Mini Femen\u00ED Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85751:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85751,
-          "teamName": "3X3 CBS MINI",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup B",
-          "matchesPlayed": 5,
-          "playersCount": 4,
-          "pointsFor": 83,
-          "pointsAgainst": 16,
-          "pointDiff": 67,
-          "wins": 5,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 16
         }
       ]
     },
@@ -786,34 +730,6 @@
       ]
     },
     {
-      "key": "TEAM:83119",
-      "label": "AEC COLLBLANC",
-      "latestTeamIdExtern": 83119,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "AEC COLLBLANC C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83119:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83119,
-          "teamName": "AEC COLLBLANC",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 14,
-          "pointsFor": 1292,
-          "pointsAgainst": 904,
-          "pointDiff": 388,
-          "wins": 18,
-          "losses": 4,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 26.863636363636363
-        }
-      ]
-    },
-    {
       "key": "TEAM:85940",
       "label": "AEC COLLBLANC",
       "latestTeamIdExtern": 85940,
@@ -1094,34 +1010,6 @@
       ]
     },
     {
-      "key": "TEAM:85864",
-      "label": "ALMEDA",
-      "latestTeamIdExtern": 85864,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries C 1r any F",
-      "searchText": "ALMEDA C.c. 3x3 Cadet Femen\u00ED 1r Any Eliminat\u00F2ries C 1r any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85864:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85864,
-          "teamName": "ALMEDA",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "matchesPlayed": 1,
-          "playersCount": 4,
-          "pointsFor": 5,
-          "pointsAgainst": 10,
-          "pointDiff": -5,
-          "wins": 0,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 3
-        }
-      ]
-    },
-    {
       "key": "TEAM:79433",
       "label": "ANA OPTICS - BASQUET SANT PERE",
       "latestTeamIdExtern": 79433,
@@ -1230,34 +1118,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 35.04347826086956
-        }
-      ]
-    },
-    {
-      "key": "TEAM:83677",
-      "label": "ARESA SHIPYARD - ARENYS B\u00C0SQUET",
-      "latestTeamIdExtern": 83677,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "ARESA SHIPYARD - ARENYS B\u00C0SQUET C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83677:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83677,
-          "teamName": "ARESA SHIPYARD - ARENYS B\u00C0SQUET",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 15,
-          "pointsFor": 1513,
-          "pointsAgainst": 688,
-          "pointDiff": 825,
-          "wins": 20,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 52.45
         }
       ]
     },
@@ -1654,62 +1514,6 @@
       ]
     },
     {
-      "key": "TEAM:85294",
-      "label": "BASKET ALMEDA 1",
-      "latestTeamIdExtern": 85294,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries I 1r Any F",
-      "searchText": "BASKET ALMEDA 1 C.c. 3x3 Infantil Femen\u00ED 1r Any Eliminat\u00F2ries I 1r Any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85294:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85294,
-          "teamName": "BASKET ALMEDA 1",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "matchesPlayed": 5,
-          "playersCount": 4,
-          "pointsFor": 68,
-          "pointsAgainst": 31,
-          "pointDiff": 37,
-          "wins": 5,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 13.2
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85298",
-      "label": "BASKET ALMEDA 2",
-      "latestTeamIdExtern": 85298,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries I 1r Any F",
-      "searchText": "BASKET ALMEDA 2 C.c. 3x3 Infantil Femen\u00ED 1r Any Eliminat\u00F2ries I 1r Any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85298:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85298,
-          "teamName": "BASKET ALMEDA 2",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "matchesPlayed": 4,
-          "playersCount": 3,
-          "pointsFor": 36,
-          "pointsAgainst": 34,
-          "pointDiff": 2,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 8.25
-        }
-      ]
-    },
-    {
       "key": "TEAM:79633",
       "label": "BASKET ALMEDA GROC",
       "latestTeamIdExtern": 79633,
@@ -1822,62 +1626,6 @@
       ]
     },
     {
-      "key": "TEAM:85296",
-      "label": "BASKET ALMEDA U14",
-      "latestTeamIdExtern": 85296,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED \u00B7 Grup A",
-      "searchText": "BASKET ALMEDA U14 C.c. 3x3 Infantil Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85296:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85296,
-          "teamName": "BASKET ALMEDA U14",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 23,
-          "pointsAgainst": 25,
-          "pointDiff": -2,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 5.333333333333333
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85292",
-      "label": "BASKET ALMEDA U15",
-      "latestTeamIdExtern": 85292,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Grup A",
-      "searchText": "BASKET ALMEDA U15 C.c. 3x3 Cadet Femen\u00ED 1r Any Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85292:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85292,
-          "teamName": "BASKET ALMEDA U15",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 8,
-          "pointsFor": 27,
-          "pointsAgainst": 25,
-          "pointDiff": 2,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 9
-        }
-      ]
-    },
-    {
       "key": "TEAM:80957",
       "label": "BASKET ESPLUGUES A",
       "latestTeamIdExtern": 80957,
@@ -1902,34 +1650,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 29.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80955",
-      "label": "BASKET ESPLUGUES B",
-      "latestTeamIdExtern": 80955,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "BASKET ESPLUGUES B C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80955:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80955,
-          "teamName": "BASKET ESPLUGUES B",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 13,
-          "pointsFor": 1150,
-          "pointsAgainst": 936,
-          "pointDiff": 214,
-          "wins": 15,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 29.714285714285715
         }
       ]
     },
@@ -2042,34 +1762,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 11.875
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81283",
-      "label": "BASQUET ATENEU MONTSERRAT SOTS 25 FEMENI",
-      "latestTeamIdExtern": 81283,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "BASQUET ATENEU MONTSERRAT SOTS 25 FEMENI C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81283:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81283,
-          "teamName": "BASQUET ATENEU MONTSERRAT SOTS 25 FEMENI",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 14,
-          "pointsFor": 978,
-          "pointsAgainst": 964,
-          "pointDiff": 14,
-          "wins": 10,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 7,
-          "avgValuation": 19.363636363636363
         }
       ]
     },
@@ -2546,34 +2238,6 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 25.954545454545453
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79554",
-      "label": "BASQUET NEUS",
-      "latestTeamIdExtern": 79554,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "BASQUET NEUS C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79554:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79554,
-          "teamName": "BASQUET NEUS",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 15,
-          "pointsFor": 1120,
-          "pointsAgainst": 947,
-          "pointDiff": 173,
-          "wins": 17,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 21.8
         }
       ]
     },
@@ -3166,34 +2830,6 @@
       ]
     },
     {
-      "key": "TEAM:82040",
-      "label": "B\u00C0SQUET SANT SADURN\u00CD",
-      "latestTeamIdExtern": 82040,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "B\u00C0SQUET SANT SADURN\u00CD C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:82040:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 82040,
-          "teamName": "B\u00C0SQUET SANT SADURN\u00CD",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 13,
-          "pointsFor": 1554,
-          "pointsAgainst": 804,
-          "pointDiff": 750,
-          "wins": 20,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 47.86363636363637
-        }
-      ]
-    },
-    {
       "key": "TEAM:81997",
       "label": "B\u00C0SQUET SANT SADURN\u00CD",
       "latestTeamIdExtern": 81997,
@@ -3726,34 +3362,6 @@
       ]
     },
     {
-      "key": "TEAM:81591",
-      "label": "BC SANT JOAN DESPI B",
-      "latestTeamIdExtern": 81591,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "BC SANT JOAN DESPI B C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81591:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81591,
-          "teamName": "BC SANT JOAN DESPI B",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 18,
-          "pointsFor": 1022,
-          "pointsAgainst": 1105,
-          "pointDiff": -83,
-          "wins": 8,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": 22.2
-        }
-      ]
-    },
-    {
       "key": "TEAM:81584",
       "label": "BC SANT JOAN DESPI B",
       "latestTeamIdExtern": 81584,
@@ -4090,90 +3698,6 @@
       ]
     },
     {
-      "key": "TEAM:85177",
-      "label": "BF CORNELLA LILA",
-      "latestTeamIdExtern": 85177,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup A",
-      "searchText": "BF CORNELLA LILA C.c. 3x3 Mini Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85177:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85177,
-          "teamName": "BF CORNELLA LILA",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 4,
-          "playersCount": 5,
-          "pointsFor": 21,
-          "pointsAgainst": 34,
-          "pointDiff": -13,
-          "wins": 1,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 4.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85176",
-      "label": "BF CORNELLA VERMELL",
-      "latestTeamIdExtern": 85176,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup B",
-      "searchText": "BF CORNELLA VERMELL C.c. 3x3 Mini Femen\u00ED Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85176:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85176,
-          "teamName": "BF CORNELLA VERMELL",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup B",
-          "matchesPlayed": 4,
-          "playersCount": 4,
-          "pointsFor": 33,
-          "pointsAgainst": 34,
-          "pointDiff": -1,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 7.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81327",
-      "label": "BOSCO HORTA",
-      "latestTeamIdExtern": 81327,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "BOSCO HORTA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81327:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81327,
-          "teamName": "BOSCO HORTA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 11,
-          "pointsFor": 1086,
-          "pointsAgainst": 947,
-          "pointDiff": 139,
-          "wins": 14,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 32.523809523809526
-        }
-      ]
-    },
-    {
       "key": "TEAM:83664",
       "label": "BQ MANYANET MOLINS",
       "latestTeamIdExtern": 83664,
@@ -4198,34 +3722,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 14.058823529411764
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81972",
-      "label": "C.B GASS\u00D3 FERRETERIA VILALTA",
-      "latestTeamIdExtern": 81972,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "C.B GASS\u00D3 FERRETERIA VILALTA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81972:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81972,
-          "teamName": "C.B GASS\u00D3 FERRETERIA VILALTA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 18,
-          "playersCount": 12,
-          "pointsFor": 966,
-          "pointsAgainst": 940,
-          "pointDiff": 26,
-          "wins": 11,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 29.88888888888889
         }
       ]
     },
@@ -4384,16 +3880,16 @@
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 18,
+          "matchesPlayed": 19,
           "playersCount": 12,
-          "pointsFor": 1005,
-          "pointsAgainst": 328,
-          "pointDiff": 677,
-          "wins": 16,
+          "pointsFor": 1074,
+          "pointsAgainst": 366,
+          "pointDiff": 708,
+          "wins": 17,
           "losses": 2,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 37
+          "avgValuation": 37.78947368421053
         }
       ]
     },
@@ -4622,34 +4118,6 @@
       ]
     },
     {
-      "key": "TEAM:79166",
-      "label": "C.B. ESPARREGUERA",
-      "latestTeamIdExtern": 79166,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "C.B. ESPARREGUERA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79166:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79166,
-          "teamName": "C.B. ESPARREGUERA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 13,
-          "pointsFor": 998,
-          "pointsAgainst": 1247,
-          "pointDiff": -249,
-          "wins": 7,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": 23.61904761904762
-        }
-      ]
-    },
-    {
       "key": "TEAM:82074",
       "label": "C.B. ESPARREGUERA",
       "latestTeamIdExtern": 82074,
@@ -4762,34 +4230,6 @@
       ]
     },
     {
-      "key": "TEAM:85747",
-      "label": "C.B. PRAT",
-      "latestTeamIdExtern": 85747,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup A",
-      "searchText": "C.B. PRAT C.c. 3x3 Mini Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85747:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85747,
-          "teamName": "C.B. PRAT",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 4,
-          "playersCount": 5,
-          "pointsFor": 31,
-          "pointsAgainst": 18,
-          "pointDiff": 13,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 6.25
-        }
-      ]
-    },
-    {
       "key": "TEAM:80938",
       "label": "C.B. PRAT - MONTIBELLO",
       "latestTeamIdExtern": 80938,
@@ -4814,34 +4254,6 @@
           "ties": 0,
           "standingPosition": 10,
           "avgValuation": 22.476190476190474
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85745",
-      "label": "C.B. PRAT - MONTIBELLO",
-      "latestTeamIdExtern": 85745,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED \u00B7 Grup A",
-      "searchText": "C.B. PRAT - MONTIBELLO C.c. 3x3 Cadet Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85745:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85745,
-          "teamName": "C.B. PRAT - MONTIBELLO",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 7,
-          "playersCount": 4,
-          "pointsFor": 104,
-          "pointsAgainst": 44,
-          "pointDiff": 60,
-          "wins": 4,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 14
         }
       ]
     },
@@ -4982,34 +4394,6 @@
           "ties": 0,
           "standingPosition": 9,
           "avgValuation": 13.45
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85746",
-      "label": "C.B. PRAT ASSEGURANCES BALTASAR U17",
-      "latestTeamIdExtern": 85746,
-      "meta": "1 temporada \u00B7 C.c 3x3 Junior 1r Any Femen\u00ED \u00B7 Eliminat\u00F2ries J F 1r any",
-      "searchText": "C.B. PRAT ASSEGURANCES BALTASAR U17 C.c 3x3 Junior 1r Any Femen\u00ED Eliminat\u00F2ries J F 1r any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85746:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85746,
-          "teamName": "C.B. PRAT ASSEGURANCES BALTASAR U17",
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "matchesPlayed": 4,
-          "playersCount": 4,
-          "pointsFor": 49,
-          "pointsAgainst": 52,
-          "pointDiff": -3,
-          "wins": 1,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 10.75
         }
       ]
     },
@@ -5322,34 +4706,6 @@
       ]
     },
     {
-      "key": "TEAM:85303",
-      "label": "C.B. VILASSAR DE MAR MF BLANC",
-      "latestTeamIdExtern": 85303,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Eliminat\u00F2ries M F",
-      "searchText": "C.B. VILASSAR DE MAR MF BLANC C.c. 3x3 Mini Femen\u00ED Eliminat\u00F2ries M F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85303:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85303,
-          "teamName": "C.B. VILASSAR DE MAR MF BLANC",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Eliminat\u00F2ries M F",
-          "matchesPlayed": 6,
-          "playersCount": 4,
-          "pointsFor": 50,
-          "pointsAgainst": 35,
-          "pointDiff": 15,
-          "wins": 5,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 7
-        }
-      ]
-    },
-    {
       "key": "TEAM:83132",
       "label": "C.B. VILATORRADA",
       "latestTeamIdExtern": 83132,
@@ -5462,34 +4818,6 @@
       ]
     },
     {
-      "key": "TEAM:85301",
-      "label": "C.B.VILASSA DE MAR CF",
-      "latestTeamIdExtern": 85301,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Grup B",
-      "searchText": "C.B.VILASSA DE MAR CF C.c. 3x3 Cadet Femen\u00ED 1r Any Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85301:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85301,
-          "teamName": "C.B.VILASSA DE MAR CF",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Grup B",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 13,
-          "pointsAgainst": 52,
-          "pointDiff": -39,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 2.3333333333333335
-        }
-      ]
-    },
-    {
       "key": "TEAM:84290",
       "label": "C.B.VILASSAR DE MAR 1984",
       "latestTeamIdExtern": 84290,
@@ -5514,34 +4842,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 43.05882352941177
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85305",
-      "label": "C.B.VILASSAR DE MAR IF",
-      "latestTeamIdExtern": 85305,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Grup B",
-      "searchText": "C.B.VILASSAR DE MAR IF C.c. 3x3 Infantil Femen\u00ED 1r Any Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85305:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85305,
-          "teamName": "C.B.VILASSAR DE MAR IF",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Grup B",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 22,
-          "pointsAgainst": 27,
-          "pointDiff": -5,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 5.333333333333333
         }
       ]
     },
@@ -5938,34 +5238,6 @@
       ]
     },
     {
-      "key": "TEAM:79606",
-      "label": "C.E.B. PALLEJ\u00C0",
-      "latestTeamIdExtern": 79606,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "C.E.B. PALLEJ\u00C0 C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79606:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79606,
-          "teamName": "C.E.B. PALLEJ\u00C0",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 18,
-          "pointsFor": 973,
-          "pointsAgainst": 1039,
-          "pointDiff": -66,
-          "wins": 10,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 7,
-          "avgValuation": 10.095238095238095
-        }
-      ]
-    },
-    {
       "key": "TEAM:81783",
       "label": "C.E.B. SANT JORDI",
       "latestTeamIdExtern": 81783,
@@ -5990,34 +5262,6 @@
           "ties": 0,
           "standingPosition": 5,
           "avgValuation": 30
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80080",
-      "label": "C.E.B. SANT JORDI U 25 FEM",
-      "latestTeamIdExtern": 80080,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "C.E.B. SANT JORDI U 25 FEM C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80080:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80080,
-          "teamName": "C.E.B. SANT JORDI U 25 FEM",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 18,
-          "playersCount": 14,
-          "pointsFor": 979,
-          "pointsAgainst": 780,
-          "pointDiff": 199,
-          "wins": 13,
-          "losses": 5,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 29.27777777777778
         }
       ]
     },
@@ -6074,34 +5318,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 33.4
-        }
-      ]
-    },
-    {
-      "key": "TEAM:82036",
-      "label": "C.E.THAU",
-      "latestTeamIdExtern": 82036,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "C.E.THAU C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:82036:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 82036,
-          "teamName": "C.E.THAU",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 18,
-          "pointsFor": 847,
-          "pointsAgainst": 1077,
-          "pointDiff": -230,
-          "wins": 5,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 11,
-          "avgValuation": 17.7
         }
       ]
     },
@@ -6386,34 +5602,6 @@
       ]
     },
     {
-      "key": "TEAM:85624",
-      "label": "CASADEMONT ZARAGOZA",
-      "latestTeamIdExtern": 85624,
-      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent",
-      "searchText": "CASADEMONT ZARAGOZA C. C. J\u00FAnior Femen\u00ED Preferent",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85624:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85624,
-          "teamName": "CASADEMONT ZARAGOZA",
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "levelName": "",
-          "matchesPlayed": 3,
-          "playersCount": 11,
-          "pointsFor": 156,
-          "pointsAgainst": 194,
-          "pointDiff": -38,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 34
-        }
-      ]
-    },
-    {
       "key": "TEAM:83491",
       "label": "CASFINCAS - BASQUET CUNIT",
       "latestTeamIdExtern": 83491,
@@ -6494,34 +5682,6 @@
           "ties": 0,
           "standingPosition": 10,
           "avgValuation": 9.526315789473685
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85620",
-      "label": "CB ALCOBENDAS",
-      "latestTeamIdExtern": 85620,
-      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent",
-      "searchText": "CB ALCOBENDAS C. C. J\u00FAnior Femen\u00ED Preferent",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85620:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85620,
-          "teamName": "CB ALCOBENDAS",
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "levelName": "",
-          "matchesPlayed": 3,
-          "playersCount": 13,
-          "pointsFor": 158,
-          "pointsAgainst": 188,
-          "pointDiff": -30,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 42
         }
       ]
     },
@@ -6890,34 +6050,6 @@
       ]
     },
     {
-      "key": "TEAM:83038",
-      "label": "CB CARDEDEU TECNIDA - BLANC",
-      "latestTeamIdExtern": 83038,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB CARDEDEU TECNIDA - BLANC C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83038:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83038,
-          "teamName": "CB CARDEDEU TECNIDA - BLANC",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 17,
-          "playersCount": 18,
-          "pointsFor": 613,
-          "pointsAgainst": 1159,
-          "pointDiff": -546,
-          "wins": 3,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": 17.823529411764707
-        }
-      ]
-    },
-    {
       "key": "TEAM:83039",
       "label": "CB CARDEDEU TECNIDA - NEGRE",
       "latestTeamIdExtern": 83039,
@@ -7170,34 +6302,6 @@
       ]
     },
     {
-      "key": "TEAM:86621",
-      "label": "CB CORNELL\u00C0 BLAU",
-      "latestTeamIdExtern": 86621,
-      "meta": "1 temporada \u00B7 C.c 3x3 Junior 1r Any Femen\u00ED \u00B7 Eliminat\u00F2ries J F 1r any",
-      "searchText": "CB CORNELL\u00C0 BLAU C.c 3x3 Junior 1r Any Femen\u00ED Eliminat\u00F2ries J F 1r any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:86621:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 86621,
-          "teamName": "CB CORNELL\u00C0 BLAU",
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "matchesPlayed": 5,
-          "playersCount": 4,
-          "pointsFor": 70,
-          "pointsAgainst": 75,
-          "pointDiff": -5,
-          "wins": 2,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 12.6
-        }
-      ]
-    },
-    {
       "key": "TEAM:81793",
       "label": "CB GAV\u00C0 VERMELL",
       "latestTeamIdExtern": 81793,
@@ -7250,90 +6354,6 @@
           "ties": 0,
           "standingPosition": 7,
           "avgValuation": 14.428571428571429
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85406",
-      "label": "CB GRANOLLERS",
-      "latestTeamIdExtern": 85406,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED \u00B7 Grup A",
-      "searchText": "CB GRANOLLERS C.c. 3x3 Infantil Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85406:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85406,
-          "teamName": "CB GRANOLLERS",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 5,
-          "pointsFor": 29,
-          "pointsAgainst": 25,
-          "pointDiff": 4,
-          "wins": 3,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 7.666666666666667
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85400",
-      "label": "CB GRANOLLERS",
-      "latestTeamIdExtern": 85400,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup C",
-      "searchText": "CB GRANOLLERS C.c. 3x3 Mini Femen\u00ED Grup C",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85400:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85400,
-          "teamName": "CB GRANOLLERS",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup C",
-          "matchesPlayed": 4,
-          "playersCount": 5,
-          "pointsFor": 46,
-          "pointsAgainst": 22,
-          "pointDiff": 24,
-          "wins": 3,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 9.25
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85402",
-      "label": "CB GRANOLLERS",
-      "latestTeamIdExtern": 85402,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Grup A",
-      "searchText": "CB GRANOLLERS C.c. 3x3 Infantil Femen\u00ED 1r Any Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85402:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85402,
-          "teamName": "CB GRANOLLERS",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 26,
-          "pointsAgainst": 25,
-          "pointDiff": 1,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 7.333333333333333
         }
       ]
     },
@@ -7674,62 +6694,6 @@
       ]
     },
     {
-      "key": "TEAM:85405",
-      "label": "CB GRANOLLERS BLANC",
-      "latestTeamIdExtern": 85405,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries C 1r any F",
-      "searchText": "CB GRANOLLERS BLANC C.c. 3x3 Cadet Femen\u00ED 1r Any Eliminat\u00F2ries C 1r any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85405:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85405,
-          "teamName": "CB GRANOLLERS BLANC",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "matchesPlayed": 5,
-          "playersCount": 4,
-          "pointsFor": 44,
-          "pointsAgainst": 36,
-          "pointDiff": 8,
-          "wins": 4,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 6.4
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85403",
-      "label": "CB GRANOLLERS BLAU",
-      "latestTeamIdExtern": 85403,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Grup B",
-      "searchText": "CB GRANOLLERS BLAU C.c. 3x3 Cadet Femen\u00ED 1r Any Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85403:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85403,
-          "teamName": "CB GRANOLLERS BLAU",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Grup B",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 26,
-          "pointsAgainst": 25,
-          "pointDiff": 1,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 7.666666666666667
-        }
-      ]
-    },
-    {
       "key": "TEAM:78451",
       "label": "CB GU\u00CDXOLS HELENA JORNET FINQUES",
       "latestTeamIdExtern": 78451,
@@ -7782,34 +6746,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 79.375
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85839",
-      "label": "CB IGUALADA 3X3 CF U15",
-      "latestTeamIdExtern": 85839,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries C 1r any F",
-      "searchText": "CB IGUALADA 3X3 CF U15 C.c. 3x3 Cadet Femen\u00ED 1r Any Eliminat\u00F2ries C 1r any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85839:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85839,
-          "teamName": "CB IGUALADA 3X3 CF U15",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "matchesPlayed": 4,
-          "playersCount": 3,
-          "pointsFor": 50,
-          "pointsAgainst": 19,
-          "pointDiff": 31,
-          "wins": 4,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 12.5
         }
       ]
     },
@@ -7922,34 +6858,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 21.75
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78709",
-      "label": "CB IMMA",
-      "latestTeamIdExtern": 78709,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB IMMA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78709:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78709,
-          "teamName": "CB IMMA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 13,
-          "pointsFor": 945,
-          "pointsAgainst": 1204,
-          "pointDiff": -259,
-          "wins": 5,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 13,
-          "avgValuation": 18.19047619047619
         }
       ]
     },
@@ -8150,34 +7058,6 @@
       ]
     },
     {
-      "key": "TEAM:81752",
-      "label": "CB LA MERC\u00C8",
-      "latestTeamIdExtern": 81752,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB LA MERC\u00C8 C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81752:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81752,
-          "teamName": "CB LA MERC\u00C8",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 16,
-          "pointsFor": 1042,
-          "pointsAgainst": 1071,
-          "pointDiff": -29,
-          "wins": 10,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 6,
-          "avgValuation": 22.80952380952381
-        }
-      ]
-    },
-    {
       "key": "TEAM:80821",
       "label": "CB LA SELVA TRANSPAIS",
       "latestTeamIdExtern": 80821,
@@ -8346,34 +7226,6 @@
       ]
     },
     {
-      "key": "TEAM:79941",
-      "label": "CB LES FRANQUESES S25 F-INGRUP",
-      "latestTeamIdExtern": 79941,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB LES FRANQUESES S25 F-INGRUP C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79941:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79941,
-          "teamName": "CB LES FRANQUESES S25 F-INGRUP",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 18,
-          "playersCount": 17,
-          "pointsFor": 1038,
-          "pointsAgainst": 841,
-          "pointDiff": 197,
-          "wins": 10,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 6,
-          "avgValuation": 33.111111111111114
-        }
-      ]
-    },
-    {
       "key": "TEAM:79942",
       "label": "CB LES FRANQUESES SF-INGRUP",
       "latestTeamIdExtern": 79942,
@@ -8430,34 +7282,6 @@
       ]
     },
     {
-      "key": "TEAM:83270",
-      "label": "CB LLI\u00C7\u00C0 DE VALL",
-      "latestTeamIdExtern": 83270,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB LLI\u00C7\u00C0 DE VALL C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83270:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83270,
-          "teamName": "CB LLI\u00C7\u00C0 DE VALL",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 17,
-          "playersCount": 17,
-          "pointsFor": 677,
-          "pointsAgainst": 956,
-          "pointDiff": -279,
-          "wins": 2,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 11,
-          "avgValuation": 17.235294117647058
-        }
-      ]
-    },
-    {
       "key": "TEAM:81463",
       "label": "CB MANLLEU (SF)",
       "latestTeamIdExtern": 81463,
@@ -8510,34 +7334,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 66.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81464",
-      "label": "CB MANLLEU (U25F)",
-      "latestTeamIdExtern": 81464,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB MANLLEU (U25F) C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81464:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81464,
-          "teamName": "CB MANLLEU (U25F)",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 17,
-          "playersCount": 13,
-          "pointsFor": 1201,
-          "pointsAgainst": 677,
-          "pointDiff": 524,
-          "wins": 16,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 46.588235294117645
         }
       ]
     },
@@ -9578,62 +8374,6 @@
       ]
     },
     {
-      "key": "TEAM:85726",
-      "label": "CB SANT GABRIEL CF",
-      "latestTeamIdExtern": 85726,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Grup A",
-      "searchText": "CB SANT GABRIEL CF C.c. 3x3 Cadet Femen\u00ED 1r Any Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85726:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85726,
-          "teamName": "CB SANT GABRIEL CF",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 15,
-          "pointsAgainst": 26,
-          "pointDiff": -11,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 3.3333333333333335
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85422",
-      "label": "CB SANT GABRIEL MF",
-      "latestTeamIdExtern": 85422,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup C",
-      "searchText": "CB SANT GABRIEL MF C.c. 3x3 Mini Femen\u00ED Grup C",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85422:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85422,
-          "teamName": "CB SANT GABRIEL MF",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup C",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 22,
-          "pointsAgainst": 25,
-          "pointDiff": -3,
-          "wins": 2,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 7
-        }
-      ]
-    },
-    {
       "key": "TEAM:80105",
       "label": "CB SANT GREGORI VALL DE LL\u00C9MENA",
       "latestTeamIdExtern": 80105,
@@ -9826,34 +8566,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 75.25
-        }
-      ]
-    },
-    {
-      "key": "TEAM:82542",
-      "label": "CB SENTMENAT",
-      "latestTeamIdExtern": 82542,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CB SENTMENAT C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:82542:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 82542,
-          "teamName": "CB SENTMENAT",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 12,
-          "pointsFor": 841,
-          "pointsAgainst": 1312,
-          "pointDiff": -471,
-          "wins": 4,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 13,
-          "avgValuation": 14.045454545454545
         }
       ]
     },
@@ -10433,62 +9145,6 @@
           "ties": 0,
           "standingPosition": 9,
           "avgValuation": 25.772727272727273
-        }
-      ]
-    },
-    {
-      "key": "TEAM:84377",
-      "label": "CB UNIO BADIA",
-      "latestTeamIdExtern": 84377,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED \u00B7 Grup A",
-      "searchText": "CB UNIO BADIA C.c. 3x3 Cadet Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:84377:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 84377,
-          "teamName": "CB UNIO BADIA",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 7,
-          "playersCount": 5,
-          "pointsFor": 6,
-          "pointsAgainst": 150,
-          "pointDiff": -144,
-          "wins": 0,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 0.42857142857142855
-        }
-      ]
-    },
-    {
-      "key": "TEAM:84376",
-      "label": "CB UNIO BADIA",
-      "latestTeamIdExtern": 84376,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Grup A",
-      "searchText": "CB UNIO BADIA C.c. 3x3 Infantil Femen\u00ED 1r Any Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:84376:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 84376,
-          "teamName": "CB UNIO BADIA",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 3,
-          "pointsFor": 5,
-          "pointsAgainst": 46,
-          "pointDiff": -41,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 1.3333333333333333
         }
       ]
     },
@@ -11081,34 +9737,6 @@
       ]
     },
     {
-      "key": "TEAM:86622",
-      "label": "CB. CORNELL\u00C0 LILA",
-      "latestTeamIdExtern": 86622,
-      "meta": "1 temporada \u00B7 C.c 3x3 Junior 1r Any Femen\u00ED \u00B7 Eliminat\u00F2ries J F 1r any",
-      "searchText": "CB. CORNELL\u00C0 LILA C.c 3x3 Junior 1r Any Femen\u00ED Eliminat\u00F2ries J F 1r any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:86622:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 86622,
-          "teamName": "CB. CORNELL\u00C0 LILA",
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "matchesPlayed": 5,
-          "playersCount": 3,
-          "pointsFor": 67,
-          "pointsAgainst": 61,
-          "pointDiff": 6,
-          "wins": 4,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 11.4
-        }
-      ]
-    },
-    {
       "key": "TEAM:78411",
       "label": "CB. VALLS DIC",
       "latestTeamIdExtern": 78411,
@@ -11161,34 +9789,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": -12.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85191",
-      "label": "CB.VILASSAR DE MAR MF ROSA",
-      "latestTeamIdExtern": 85191,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup B",
-      "searchText": "CB.VILASSAR DE MAR MF ROSA C.c. 3x3 Mini Femen\u00ED Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85191:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85191,
-          "teamName": "CB.VILASSAR DE MAR MF ROSA",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup B",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 10,
-          "pointsAgainst": 42,
-          "pointDiff": -32,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 3.3333333333333335
         }
       ]
     },
@@ -11501,34 +10101,6 @@
       ]
     },
     {
-      "key": "TEAM:83839",
-      "label": "CBSFC1946",
-      "latestTeamIdExtern": 83839,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CBSFC1946 C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83839:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83839,
-          "teamName": "CBSFC1946",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 19,
-          "playersCount": 8,
-          "pointsFor": 570,
-          "pointsAgainst": 1321,
-          "pointDiff": -751,
-          "wins": 0,
-          "losses": 19,
-          "ties": 0,
-          "standingPosition": 12,
-          "avgValuation": 12.263157894736842
-        }
-      ]
-    },
-    {
       "key": "TEAM:80729",
       "label": "CBU LLORET RECREATIVOS LLORET",
       "latestTeamIdExtern": 80729,
@@ -11665,34 +10237,6 @@
           "ties": 0,
           "standingPosition": 12,
           "avgValuation": 14.166666666666666
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79013",
-      "label": "CE MARISTES RUB\u00CD",
-      "latestTeamIdExtern": 79013,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CE MARISTES RUB\u00CD C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79013:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79013,
-          "teamName": "CE MARISTES RUB\u00CD",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 15,
-          "pointsFor": 967,
-          "pointsAgainst": 830,
-          "pointDiff": 137,
-          "wins": 13,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 32.45
         }
       ]
     },
@@ -12537,34 +11081,6 @@
       ]
     },
     {
-      "key": "TEAM:79009",
-      "label": "CL\u00CDNICA OFTALMOL\u00D3GICA RUBI CE MARISTES RUB\u00CD",
-      "latestTeamIdExtern": 79009,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CL\u00CDNICA OFTALMOL\u00D3GICA RUBI CE MARISTES RUB\u00CD C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79009:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79009,
-          "teamName": "CL\u00CDNICA OFTALMOL\u00D3GICA RUBI CE MARISTES RUB\u00CD",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 14,
-          "pointsFor": 893,
-          "pointsAgainst": 1014,
-          "pointDiff": -121,
-          "wins": 6,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 9,
-          "avgValuation": 15.15
-        }
-      ]
-    },
-    {
       "key": "TEAM:81844",
       "label": "CLUB BASKET BAL\u00C0FIA",
       "latestTeamIdExtern": 81844,
@@ -12733,34 +11249,6 @@
       ]
     },
     {
-      "key": "TEAM:83126",
-      "label": "CLUB B\u00C0SQUET MASQUEFA",
-      "latestTeamIdExtern": 83126,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CLUB B\u00C0SQUET MASQUEFA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83126:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83126,
-          "teamName": "CLUB B\u00C0SQUET MASQUEFA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 16,
-          "pointsFor": 1003,
-          "pointsAgainst": 1294,
-          "pointDiff": -291,
-          "wins": 4,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 12,
-          "avgValuation": 19.59090909090909
-        }
-      ]
-    },
-    {
       "key": "TEAM:81810",
       "label": "CLUB BASQUET MONTBLANC",
       "latestTeamIdExtern": 81810,
@@ -12817,34 +11305,6 @@
       ]
     },
     {
-      "key": "TEAM:83558",
-      "label": "CLUB B\u00C0SQUET PUIG-REIG DENTAL CLARET",
-      "latestTeamIdExtern": 83558,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CLUB B\u00C0SQUET PUIG-REIG DENTAL CLARET C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83558:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83558,
-          "teamName": "CLUB B\u00C0SQUET PUIG-REIG DENTAL CLARET",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 18,
-          "playersCount": 12,
-          "pointsFor": 724,
-          "pointsAgainst": 1167,
-          "pointDiff": -443,
-          "wins": 4,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 9,
-          "avgValuation": 18.055555555555557
-        }
-      ]
-    },
-    {
       "key": "TEAM:82633",
       "label": "CLUB B\u00C0SQUET SANT CELONI",
       "latestTeamIdExtern": 82633,
@@ -12869,146 +11329,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 34.45454545454545
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85719",
-      "label": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U11F",
-      "latestTeamIdExtern": 85719,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup B",
-      "searchText": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U11F C.c. 3x3 Mini Femen\u00ED Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85719:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85719,
-          "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U11F",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup B",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 13,
-          "pointsAgainst": 35,
-          "pointDiff": -22,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 4
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85711",
-      "label": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U12F",
-      "latestTeamIdExtern": 85711,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup C",
-      "searchText": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U12F C.c. 3x3 Mini Femen\u00ED Grup C",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85711:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85711,
-          "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U12F",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup C",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 16,
-          "pointsAgainst": 33,
-          "pointDiff": -17,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 3.6666666666666665
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85713",
-      "label": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U13F",
-      "latestTeamIdExtern": 85713,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries I 1r Any F",
-      "searchText": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U13F C.c. 3x3 Infantil Femen\u00ED 1r Any Eliminat\u00F2ries I 1r Any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85713:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85713,
-          "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U13F",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "matchesPlayed": 4,
-          "playersCount": 5,
-          "pointsFor": 41,
-          "pointsAgainst": 35,
-          "pointDiff": 6,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 7
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85710",
-      "label": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U14F",
-      "latestTeamIdExtern": 85710,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED \u00B7 Grup A",
-      "searchText": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U14F C.c. 3x3 Infantil Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85710:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85710,
-          "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U14F",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 18,
-          "pointsAgainst": 24,
-          "pointDiff": -6,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 2.6666666666666665
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85715",
-      "label": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U15F",
-      "latestTeamIdExtern": 85715,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Grup A",
-      "searchText": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U15F C.c. 3x3 Cadet Femen\u00ED 1r Any Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85715:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85715,
-          "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U15F",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 24,
-          "pointsAgainst": 29,
-          "pointDiff": -5,
-          "wins": 1,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 7.333333333333333
         }
       ]
     },
@@ -13321,34 +11641,6 @@
       ]
     },
     {
-      "key": "TEAM:83185",
-      "label": "CLUB ESPORTIU GELIDA",
-      "latestTeamIdExtern": 83185,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CLUB ESPORTIU GELIDA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:83185:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 83185,
-          "teamName": "CLUB ESPORTIU GELIDA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 11,
-          "pointsFor": 929,
-          "pointsAgainst": 1312,
-          "pointDiff": -383,
-          "wins": 3,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 14,
-          "avgValuation": 15.761904761904763
-        }
-      ]
-    },
-    {
       "key": "TEAM:79015",
       "label": "CLUB ESPORTIU MARISTES RUB\u00CD",
       "latestTeamIdExtern": 79015,
@@ -13380,8 +11672,8 @@
       "key": "TEAM:85623",
       "label": "CLUB ESTUDIANTES",
       "latestTeamIdExtern": 85623,
-      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent \u00B7 CIUTAT DE BADALONA",
-      "searchText": "CLUB ESTUDIANTES C. C. J\u00FAnior Femen\u00ED Preferent CIUTAT DE BADALONA",
+      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent",
+      "searchText": "CLUB ESTUDIANTES C. C. J\u00FAnior Femen\u00ED Preferent",
       "seasonSummaries": [
         {
           "key": "TEAM:85623:2025-2026",
@@ -13390,17 +11682,17 @@
           "teamIdExtern": 85623,
           "teamName": "CLUB ESTUDIANTES",
           "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "levelName": "CIUTAT DE BADALONA",
-          "matchesPlayed": 4,
+          "levelName": "",
+          "matchesPlayed": 3,
           "playersCount": 10,
-          "pointsFor": 354,
-          "pointsAgainst": 193,
-          "pointDiff": 161,
+          "pointsFor": 292,
+          "pointsAgainst": 129,
+          "pointDiff": 163,
           "wins": 3,
-          "losses": 1,
+          "losses": 0,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 108.75
+          "avgValuation": 131
         }
       ]
     },
@@ -13436,8 +11728,8 @@
       "key": "TEAM:85626",
       "label": "CLUB JOVENTUT BADALONA",
       "latestTeamIdExtern": 85626,
-      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent \u00B7 CIUTAT DE BADALONA",
-      "searchText": "CLUB JOVENTUT BADALONA C. C. J\u00FAnior Femen\u00ED Preferent CIUTAT DE BADALONA",
+      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent",
+      "searchText": "CLUB JOVENTUT BADALONA C. C. J\u00FAnior Femen\u00ED Preferent",
       "seasonSummaries": [
         {
           "key": "TEAM:85626:2025-2026",
@@ -13446,17 +11738,17 @@
           "teamIdExtern": 85626,
           "teamName": "CLUB JOVENTUT BADALONA",
           "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "levelName": "CIUTAT DE BADALONA",
-          "matchesPlayed": 4,
-          "playersCount": 13,
-          "pointsFor": 306,
-          "pointsAgainst": 220,
-          "pointDiff": 86,
-          "wins": 3,
+          "levelName": "",
+          "matchesPlayed": 3,
+          "playersCount": 12,
+          "pointsFor": 232,
+          "pointsAgainst": 153,
+          "pointDiff": 79,
+          "wins": 2,
           "losses": 1,
           "ties": 0,
           "standingPosition": 2,
-          "avgValuation": 87
+          "avgValuation": 89
         }
       ]
     },
@@ -13877,34 +12169,6 @@
           "ties": 0,
           "standingPosition": 4,
           "avgValuation": -24.75
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78569",
-      "label": "CORAS - SD ESPANYOL",
-      "latestTeamIdExtern": 78569,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "CORAS - SD ESPANYOL C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78569:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78569,
-          "teamName": "CORAS - SD ESPANYOL",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 14,
-          "pointsFor": 1102,
-          "pointsAgainst": 966,
-          "pointDiff": 136,
-          "wins": 12,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 6,
-          "avgValuation": 23.9
         }
       ]
     },
@@ -14577,34 +12841,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 28.59090909090909
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81313",
-      "label": "EMOZIONAT - CB. GAV\u00C0",
-      "latestTeamIdExtern": 81313,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "EMOZIONAT - CB. GAV\u00C0 C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81313:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81313,
-          "teamName": "EMOZIONAT - CB. GAV\u00C0",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 28,
-          "pointsFor": 877,
-          "pointsAgainst": 1194,
-          "pointDiff": -317,
-          "wins": 8,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 9,
-          "avgValuation": 13.047619047619047
         }
       ]
     },
@@ -15449,34 +13685,6 @@
       ]
     },
     {
-      "key": "TEAM:79522",
-      "label": "FEMEN\u00CD OSONA SOTS-25-  OVA PROJECTS",
-      "latestTeamIdExtern": 79522,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "FEMEN\u00CD OSONA SOTS-25-  OVA PROJECTS C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79522:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79522,
-          "teamName": "FEMEN\u00CD OSONA SOTS-25-  OVA PROJECTS",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 18,
-          "playersCount": 19,
-          "pointsFor": 961,
-          "pointsAgainst": 962,
-          "pointDiff": -1,
-          "wins": 7,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": 35.94444444444444
-        }
-      ]
-    },
-    {
       "key": "TEAM:79532",
       "label": "FEMEN\u00CD OSONA SPARKS- OVA PROJECTS",
       "latestTeamIdExtern": 79532,
@@ -16233,34 +14441,6 @@
       ]
     },
     {
-      "key": "TEAM:85871",
-      "label": "GRANOLLERS",
-      "latestTeamIdExtern": 85871,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED \u00B7 Eliminat\u00F2ria IF",
-      "searchText": "GRANOLLERS C.c. 3x3 Infantil Femen\u00ED Eliminat\u00F2ria IF",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85871:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85871,
-          "teamName": "GRANOLLERS",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "levelName": "Eliminat\u00F2ria IF",
-          "matchesPlayed": 1,
-          "playersCount": 4,
-          "pointsFor": 8,
-          "pointsAgainst": 11,
-          "pointDiff": -3,
-          "wins": 0,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 8
-        }
-      ]
-    },
-    {
       "key": "TEAM:83498",
       "label": "GREENPOWERMONITOR-CB LA SALLE HORTA",
       "latestTeamIdExtern": 83498,
@@ -16341,34 +14521,6 @@
           "ties": 0,
           "standingPosition": 7,
           "avgValuation": 8.909090909090908
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85863",
-      "label": "IGUALADA",
-      "latestTeamIdExtern": 85863,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries C 1r any F",
-      "searchText": "IGUALADA C.c. 3x3 Cadet Femen\u00ED 1r Any Eliminat\u00F2ries C 1r any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85863:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85863,
-          "teamName": "IGUALADA",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "matchesPlayed": 1,
-          "playersCount": 3,
-          "pointsFor": 10,
-          "pointsAgainst": 5,
-          "pointDiff": 5,
-          "wins": 1,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 8
         }
       ]
     },
@@ -16639,16 +14791,16 @@
           "teamName": "JAC SANTS BARCELONA U10",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 19,
+          "matchesPlayed": 20,
           "playersCount": 12,
-          "pointsFor": 1270,
-          "pointsAgainst": 411,
-          "pointDiff": 859,
+          "pointsFor": 1308,
+          "pointsAgainst": 480,
+          "pointDiff": 828,
           "wins": 17,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 48.68421052631579
+          "avgValuation": 47.1
         }
       ]
     },
@@ -16705,34 +14857,6 @@
           "ties": 0,
           "standingPosition": 8,
           "avgValuation": 25.272727272727273
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81297",
-      "label": "JESU\u00CFTES CASP",
-      "latestTeamIdExtern": 81297,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "JESU\u00CFTES CASP C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81297:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81297,
-          "teamName": "JESU\u00CFTES CASP",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 14,
-          "pointsFor": 824,
-          "pointsAgainst": 1121,
-          "pointDiff": -297,
-          "wins": 6,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 11,
-          "avgValuation": 14.714285714285714
         }
       ]
     },
@@ -17517,34 +15641,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 37.80952380952381
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79644",
-      "label": "LA CASA AGENCY - C.B. SANT JOSEP OBRER B",
-      "latestTeamIdExtern": 79644,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "LA CASA AGENCY - C.B. SANT JOSEP OBRER B C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79644:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79644,
-          "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER B",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 14,
-          "pointsFor": 1484,
-          "pointsAgainst": 836,
-          "pointDiff": 648,
-          "wins": 22,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 41.77272727272727
         }
       ]
     },
@@ -18529,34 +16625,6 @@
       ]
     },
     {
-      "key": "TEAM:85722",
-      "label": "MATARO 3X3 U13F JUNIOR REPORT",
-      "latestTeamIdExtern": 85722,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Grup B",
-      "searchText": "MATARO 3X3 U13F JUNIOR REPORT C.c. 3x3 Infantil Femen\u00ED 1r Any Grup B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85722:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85722,
-          "teamName": "MATARO 3X3 U13F JUNIOR REPORT",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Grup B",
-          "matchesPlayed": 3,
-          "playersCount": 5,
-          "pointsFor": 14,
-          "pointsAgainst": 31,
-          "pointDiff": -17,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 3.3333333333333335
-        }
-      ]
-    },
-    {
       "key": "TEAM:81394",
       "label": "MCR LIMA-HORTA BARCELONA",
       "latestTeamIdExtern": 81394,
@@ -19192,34 +17260,6 @@
       ]
     },
     {
-      "key": "TEAM:81149",
-      "label": "ONE BAR GROUP - CB SANTA PERP\u00C8TUA",
-      "latestTeamIdExtern": 81149,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "ONE BAR GROUP - CB SANTA PERP\u00C8TUA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81149:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81149,
-          "teamName": "ONE BAR GROUP - CB SANTA PERP\u00C8TUA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 18,
-          "pointsFor": 950,
-          "pointsAgainst": 1154,
-          "pointDiff": -204,
-          "wins": 5,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 12,
-          "avgValuation": 11.19047619047619
-        }
-      ]
-    },
-    {
       "key": "TEAM:79742",
       "label": "OPENLLAR VIL\u00C0BASQUET VILADECANS SFB",
       "latestTeamIdExtern": 79742,
@@ -19244,34 +17284,6 @@
           "ties": 0,
           "standingPosition": 7,
           "avgValuation": -9.181818181818182
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81175",
-      "label": "ORLANDAI",
-      "latestTeamIdExtern": 81175,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "ORLANDAI C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81175:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81175,
-          "teamName": "ORLANDAI",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 12,
-          "pointsFor": 1045,
-          "pointsAgainst": 816,
-          "pointDiff": 229,
-          "wins": 14,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 27.65
         }
       ]
     },
@@ -19384,34 +17396,6 @@
           "ties": 0,
           "standingPosition": 4,
           "avgValuation": 27.4375
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85725",
-      "label": "PANDO MATARO 3X3 U17F",
-      "latestTeamIdExtern": 85725,
-      "meta": "1 temporada \u00B7 C.c 3x3 Junior 1r Any Femen\u00ED \u00B7 Eliminat\u00F2ries J F 1r any",
-      "searchText": "PANDO MATARO 3X3 U17F C.c 3x3 Junior 1r Any Femen\u00ED Eliminat\u00F2ries J F 1r any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85725:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85725,
-          "teamName": "PANDO MATARO 3X3 U17F",
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "matchesPlayed": 4,
-          "playersCount": 3,
-          "pointsFor": 53,
-          "pointsAgainst": 51,
-          "pointDiff": 2,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 12.5
         }
       ]
     },
@@ -20032,34 +18016,6 @@
       ]
     },
     {
-      "key": "TEAM:81169",
-      "label": "QBASKET SANT CUGAT 2",
-      "latestTeamIdExtern": 81169,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "QBASKET SANT CUGAT 2 C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81169:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81169,
-          "teamName": "QBASKET SANT CUGAT 2",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 20,
-          "pointsFor": 1146,
-          "pointsAgainst": 1048,
-          "pointDiff": 98,
-          "wins": 13,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 27.15
-        }
-      ]
-    },
-    {
       "key": "TEAM:85230",
       "label": "QBASKET SANT CUGAT NEGRE",
       "latestTeamIdExtern": 85230,
@@ -20308,146 +18264,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 20.708333333333332
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85852",
-      "label": "REUS PLOMS SALLE 3X3 U12F",
-      "latestTeamIdExtern": 85852,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup A",
-      "searchText": "REUS PLOMS SALLE 3X3 U12F C.c. 3x3 Mini Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85852:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85852,
-          "teamName": "REUS PLOMS SALLE 3X3 U12F",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 4,
-          "playersCount": 4,
-          "pointsFor": 35,
-          "pointsAgainst": 25,
-          "pointDiff": 10,
-          "wins": 3,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 8
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85851",
-      "label": "REUS PLOMS SALLE 3X3 U13F",
-      "latestTeamIdExtern": 85851,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries I 1r Any F",
-      "searchText": "REUS PLOMS SALLE 3X3 U13F C.c. 3x3 Infantil Femen\u00ED 1r Any Eliminat\u00F2ries I 1r Any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85851:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85851,
-          "teamName": "REUS PLOMS SALLE 3X3 U13F",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "matchesPlayed": 5,
-          "playersCount": 5,
-          "pointsFor": 59,
-          "pointsAgainst": 42,
-          "pointDiff": 17,
-          "wins": 4,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 10
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85843",
-      "label": "REUS PLOMS SALLE 3X3 U14F",
-      "latestTeamIdExtern": 85843,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Infantil Femen\u00ED \u00B7 Grup A",
-      "searchText": "REUS PLOMS SALLE 3X3 U14F C.c. 3x3 Infantil Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85843:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85843,
-          "teamName": "REUS PLOMS SALLE 3X3 U14F",
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 24,
-          "pointsAgainst": 20,
-          "pointDiff": 4,
-          "wins": 2,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 4.666666666666667
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85847",
-      "label": "REUS PLOMS SALLE 3X3 U15F",
-      "latestTeamIdExtern": 85847,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED 1r Any \u00B7 Eliminat\u00F2ries C 1r any F",
-      "searchText": "REUS PLOMS SALLE 3X3 U15F C.c. 3x3 Cadet Femen\u00ED 1r Any Eliminat\u00F2ries C 1r any F",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85847:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85847,
-          "teamName": "REUS PLOMS SALLE 3X3 U15F",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "matchesPlayed": 4,
-          "playersCount": 5,
-          "pointsFor": 36,
-          "pointsAgainst": 23,
-          "pointDiff": 13,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 7.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85846",
-      "label": "REUS PLOMS SALLE 3X3 U16F",
-      "latestTeamIdExtern": 85846,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Cadet Femen\u00ED \u00B7 Grup A",
-      "searchText": "REUS PLOMS SALLE 3X3 U16F C.c. 3x3 Cadet Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85846:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85846,
-          "teamName": "REUS PLOMS SALLE 3X3 U16F",
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 8,
-          "playersCount": 5,
-          "pointsFor": 125,
-          "pointsAgainst": 41,
-          "pointDiff": 84,
-          "wins": 7,
-          "losses": 1,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 14.375
         }
       ]
     },
@@ -20788,34 +18604,6 @@
       ]
     },
     {
-      "key": "TEAM:81683",
-      "label": "S.E. SANT MEDIR",
-      "latestTeamIdExtern": 81683,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "S.E. SANT MEDIR C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81683:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81683,
-          "teamName": "S.E. SANT MEDIR",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 13,
-          "pointsFor": 969,
-          "pointsAgainst": 1100,
-          "pointDiff": -131,
-          "wins": 10,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": 18.40909090909091
-        }
-      ]
-    },
-    {
       "key": "TEAM:80075",
       "label": "S\u0026C LEISURE C.E.B. SANT JORDI BLAU",
       "latestTeamIdExtern": 80075,
@@ -20952,34 +18740,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": -10.6
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79853",
-      "label": "SALESIANS BADALONA",
-      "latestTeamIdExtern": 79853,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "SALESIANS BADALONA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79853:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79853,
-          "teamName": "SALESIANS BADALONA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 13,
-          "pointsFor": 868,
-          "pointsAgainst": 1081,
-          "pointDiff": -213,
-          "wins": 5,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": 15.2
         }
       ]
     },
@@ -21260,34 +19020,6 @@
           "ties": 0,
           "standingPosition": 12,
           "avgValuation": 20.782608695652176
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80538",
-      "label": "SANT IGNASI B",
-      "latestTeamIdExtern": 80538,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "SANT IGNASI B C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80538:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80538,
-          "teamName": "SANT IGNASI B",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 12,
-          "pointsFor": 949,
-          "pointsAgainst": 831,
-          "pointDiff": 118,
-          "wins": 13,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 23.2
         }
       ]
     },
@@ -24120,34 +21852,6 @@
       ]
     },
     {
-      "key": "TEAM:79943",
-      "label": "U25 JOVENTUT LES CORTS",
-      "latestTeamIdExtern": 79943,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "U25 JOVENTUT LES CORTS C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79943:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79943,
-          "teamName": "U25 JOVENTUT LES CORTS",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 14,
-          "pointsFor": 1286,
-          "pointsAgainst": 849,
-          "pointDiff": 437,
-          "wins": 18,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 26.1
-        }
-      ]
-    },
-    {
       "key": "TEAM:79323",
       "label": "UB MIR",
       "latestTeamIdExtern": 79323,
@@ -24424,34 +22128,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 27.772727272727273
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79307",
-      "label": "UE BARBERA",
-      "latestTeamIdExtern": 79307,
-      "meta": "1 temporada \u00B7 C.c. Sots-25 Femen\u00ED",
-      "searchText": "UE BARBERA C.c. Sots-25 Femen\u00ED",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79307:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79307,
-          "teamName": "UE BARBERA",
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "levelName": "",
-          "matchesPlayed": 18,
-          "playersCount": 15,
-          "pointsFor": 929,
-          "pointsAgainst": 817,
-          "pointDiff": 112,
-          "wins": 10,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 7,
-          "avgValuation": 29.38888888888889
         }
       ]
     },
@@ -24876,34 +22552,6 @@
       ]
     },
     {
-      "key": "TEAM:85903",
-      "label": "UE. MONTGAT 2",
-      "latestTeamIdExtern": 85903,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup C",
-      "searchText": "UE. MONTGAT 2 C.c. 3x3 Mini Femen\u00ED Grup C",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85903:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85903,
-          "teamName": "UE. MONTGAT 2",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup C",
-          "matchesPlayed": 3,
-          "playersCount": 4,
-          "pointsFor": 17,
-          "pointsAgainst": 25,
-          "pointDiff": -8,
-          "wins": 0,
-          "losses": 3,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 4
-        }
-      ]
-    },
-    {
       "key": "TEAM:80575",
       "label": "UE.MONTGAT - NEGRE",
       "latestTeamIdExtern": 80575,
@@ -24984,34 +22632,6 @@
           "ties": 0,
           "standingPosition": 10,
           "avgValuation": 2.8823529411764706
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85901",
-      "label": "UE.MONTGAT 1",
-      "latestTeamIdExtern": 85901,
-      "meta": "1 temporada \u00B7 C.c. 3x3 Mini Femen\u00ED \u00B7 Grup A",
-      "searchText": "UE.MONTGAT 1 C.c. 3x3 Mini Femen\u00ED Grup A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85901:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85901,
-          "teamName": "UE.MONTGAT 1",
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "levelName": "Grup A",
-          "matchesPlayed": 4,
-          "playersCount": 4,
-          "pointsFor": 13,
-          "pointsAgainst": 46,
-          "pointDiff": -33,
-          "wins": 0,
-          "losses": 4,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 3
         }
       ]
     },
@@ -25100,34 +22720,6 @@
       ]
     },
     {
-      "key": "TEAM:85621",
-      "label": "UNICAJA DE M\u00C1LAGA",
-      "latestTeamIdExtern": 85621,
-      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent \u00B7 CIUTAT DE BADALONA",
-      "searchText": "UNICAJA DE M\u00C1LAGA C. C. J\u00FAnior Femen\u00ED Preferent CIUTAT DE BADALONA",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85621:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85621,
-          "teamName": "UNICAJA DE M\u00C1LAGA",
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "levelName": "CIUTAT DE BADALONA",
-          "matchesPlayed": 4,
-          "playersCount": 10,
-          "pointsFor": 234,
-          "pointsAgainst": 228,
-          "pointDiff": 6,
-          "wins": 2,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 54.75
-        }
-      ]
-    },
-    {
       "key": "TEAM:79023",
       "label": "UNIHABIT - MANRESA CBF U18",
       "latestTeamIdExtern": 79023,
@@ -25208,34 +22800,6 @@
           "ties": 0,
           "standingPosition": 9,
           "avgValuation": 20.681818181818183
-        }
-      ]
-    },
-    {
-      "key": "TEAM:85625",
-      "label": "VALENCIA BASKET",
-      "latestTeamIdExtern": 85625,
-      "meta": "1 temporada \u00B7 C. C. J\u00FAnior Femen\u00ED Preferent \u00B7 CIUTAT DE BADALONA",
-      "searchText": "VALENCIA BASKET C. C. J\u00FAnior Femen\u00ED Preferent CIUTAT DE BADALONA",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:85625:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 85625,
-          "teamName": "VALENCIA BASKET",
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "levelName": "CIUTAT DE BADALONA",
-          "matchesPlayed": 4,
-          "playersCount": 11,
-          "pointsFor": 269,
-          "pointsAgainst": 212,
-          "pointDiff": 57,
-          "wins": 4,
-          "losses": 0,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 64.25
         }
       ]
     },

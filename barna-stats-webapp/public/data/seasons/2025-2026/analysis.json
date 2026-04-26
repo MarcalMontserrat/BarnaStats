@@ -1,36 +1,10 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "generatedAtUtc": "2026-04-19T21:29:31.09723Z",
-  "totalMatches": 9153,
-  "totalTeams": 923,
+  "generatedAtUtc": "2026-04-26T08:09:03.852121Z",
+  "totalMatches": 8673,
+  "totalTeams": 836,
   "teams": [
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85872",
-      "teamIdIntern": 505075,
-      "teamIdExtern": 85872,
-      "teamName": "#2 C. C. 3x3 1a Jornada  - Grup A",
-      "matchesPlayed": 1,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/134866123a9048bd/matches.json",
-      "playersFile": "seasons/2025-2026/teams/134866123a9048bd/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21271,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ria IF",
-          "levelCode": "Eliminat\u00F2ria IF",
-          "groupCode": "",
-          "matchesPlayed": 1
-        }
-      ]
-    },
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
@@ -66,44 +40,6 @@
           "levelCode": "C1",
           "groupCode": "03",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85751",
-      "teamIdIntern": 505066,
-      "teamIdExtern": 85751,
-      "teamName": "3X3 CBS MINI",
-      "matchesPlayed": 5,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/e87934f6d7d03612/matches.json",
-      "playersFile": "seasons/2025-2026/teams/e87934f6d7d03612/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20580,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries M F",
-          "levelCode": "Eliminat\u00F2ries M F",
-          "groupCode": "",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21279,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -1084,44 +1020,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83119",
-      "teamIdIntern": 451795,
-      "teamIdExtern": 83119,
-      "teamName": "AEC COLLBLANC",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/754578cf0a24ae18/matches.json",
-      "playersFile": "seasons/2025-2026/teams/754578cf0a24ae18/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85940",
       "teamIdIntern": 506256,
       "teamIdExtern": 85940,
@@ -1490,32 +1388,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85864",
-      "teamIdIntern": 505635,
-      "teamIdExtern": 85864,
-      "teamName": "ALMEDA",
-      "matchesPlayed": 1,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/8e40b435169ecaa6/matches.json",
-      "playersFile": "seasons/2025-2026/teams/8e40b435169ecaa6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20639,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "levelCode": "Eliminat\u00F2ries C 1r any F",
-          "groupCode": "",
-          "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79433",
       "teamIdIntern": 452747,
       "teamIdExtern": 79433,
@@ -1674,44 +1546,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83677",
-      "teamIdIntern": 453293,
-      "teamIdExtern": 83677,
-      "teamName": "ARESA SHIPYARD - ARENYS B\u00C0SQUET",
-      "matchesPlayed": 20,
-      "playersCount": 15,
-      "matchesFile": "seasons/2025-2026/teams/f164ef2761f1c9f0/matches.json",
-      "playersFile": "seasons/2025-2026/teams/f164ef2761f1c9f0/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -2238,82 +2072,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85294",
-      "teamIdIntern": 504555,
-      "teamIdExtern": 85294,
-      "teamName": "BASKET ALMEDA 1",
-      "matchesPlayed": 5,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/955a249c1e522b93/matches.json",
-      "playersFile": "seasons/2025-2026/teams/955a249c1e522b93/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20666,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20668,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "levelCode": "Eliminat\u00F2ries I 1r Any F",
-          "groupCode": "",
-          "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85298",
-      "teamIdIntern": 504623,
-      "teamIdExtern": 85298,
-      "teamName": "BASKET ALMEDA 2",
-      "matchesPlayed": 4,
-      "playersCount": 3,
-      "matchesFile": "seasons/2025-2026/teams/08c1c3dc789acd86/matches.json",
-      "playersFile": "seasons/2025-2026/teams/08c1c3dc789acd86/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20667,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20668,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "levelCode": "Eliminat\u00F2ries I 1r Any F",
-          "groupCode": "",
-          "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79633",
       "teamIdIntern": 450165,
       "teamIdExtern": 79633,
@@ -2490,58 +2248,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85296",
-      "teamIdIntern": 504380,
-      "teamIdExtern": 85296,
-      "teamName": "BASKET ALMEDA U14",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/a6e701d93c6abe4c/matches.json",
-      "playersFile": "seasons/2025-2026/teams/a6e701d93c6abe4c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21270,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85292",
-      "teamIdIntern": 505304,
-      "teamIdExtern": 85292,
-      "teamName": "BASKET ALMEDA U15",
-      "matchesPlayed": 3,
-      "playersCount": 8,
-      "matchesFile": "seasons/2025-2026/teams/6c7a9c243bf9392f/matches.json",
-      "playersFile": "seasons/2025-2026/teams/6c7a9c243bf9392f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20637,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80957",
       "teamIdIntern": 473093,
       "teamIdExtern": 80957,
@@ -2574,44 +2280,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80955",
-      "teamIdIntern": 451735,
-      "teamIdExtern": 80955,
-      "teamName": "BASKET ESPLUGUES B",
-      "matchesPlayed": 21,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/e353ffeca660167d/matches.json",
-      "playersFile": "seasons/2025-2026/teams/e353ffeca660167d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -2788,44 +2456,6 @@
           "levelCode": "B",
           "groupCode": "02",
           "matchesPlayed": 7
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81283",
-      "teamIdIntern": 452752,
-      "teamIdExtern": 81283,
-      "teamName": "BASQUET ATENEU MONTSERRAT SOTS 25 FEMENI",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/4840305be186b5a9/matches.json",
-      "playersFile": "seasons/2025-2026/teams/4840305be186b5a9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -3092,44 +2722,6 @@
           "levelCode": "",
           "groupCode": "04",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79554",
-      "teamIdIntern": 457776,
-      "teamIdExtern": 79554,
-      "teamName": "BASQUET NEUS",
-      "matchesPlayed": 20,
-      "playersCount": 15,
-      "matchesFile": "seasons/2025-2026/teams/c06277d7304b634c/matches.json",
-      "playersFile": "seasons/2025-2026/teams/c06277d7304b634c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -3946,44 +3538,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81591",
-      "teamIdIntern": 457917,
-      "teamIdExtern": 81591,
-      "teamName": "BC SANT JOAN DESPI B",
-      "matchesPlayed": 20,
-      "playersCount": 18,
-      "matchesFile": "seasons/2025-2026/teams/f669561ddb2b44e4/matches.json",
-      "playersFile": "seasons/2025-2026/teams/f669561ddb2b44e4/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81584",
       "teamIdIntern": 458156,
       "teamIdExtern": 81584,
@@ -4470,108 +4024,6 @@
           "levelCode": "",
           "groupCode": "19",
           "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85177",
-      "teamIdIntern": 504319,
-      "teamIdExtern": 85177,
-      "teamName": "BF CORNELLA LILA",
-      "matchesPlayed": 4,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/72334b74afacc7d9/matches.json",
-      "playersFile": "seasons/2025-2026/teams/72334b74afacc7d9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20579,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85176",
-      "teamIdIntern": 505065,
-      "teamIdExtern": 85176,
-      "teamName": "BF CORNELLA VERMELL",
-      "matchesPlayed": 4,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/c8d5107f5e31fd4e/matches.json",
-      "playersFile": "seasons/2025-2026/teams/c8d5107f5e31fd4e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20580,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries M F",
-          "levelCode": "Eliminat\u00F2ries M F",
-          "groupCode": "",
-          "matchesPlayed": 1
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21279,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81327",
-      "teamIdIntern": 451794,
-      "teamIdExtern": 81327,
-      "teamName": "BOSCO HORTA",
-      "matchesPlayed": 21,
-      "playersCount": 11,
-      "matchesFile": "seasons/2025-2026/teams/1a2801cd4bba0e58/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1a2801cd4bba0e58/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -5616,44 +5068,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:82040",
-      "teamIdIntern": 453247,
-      "teamIdExtern": 82040,
-      "teamName": "B\u00C0SQUET SANT SADURN\u00CD",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/72bcfac609267521/matches.json",
-      "playersFile": "seasons/2025-2026/teams/72bcfac609267521/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81997",
       "teamIdIntern": 454433,
       "teamIdExtern": 81997,
@@ -5774,44 +5188,6 @@
           "levelCode": "Primera Fase",
           "groupCode": "06",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81972",
-      "teamIdIntern": 452147,
-      "teamIdExtern": 81972,
-      "teamName": "C.B GASS\u00D3 FERRETERIA VILALTA",
-      "matchesPlayed": 18,
-      "playersCount": 12,
-      "matchesFile": "seasons/2025-2026/teams/8e1fe04c614d20ec/matches.json",
-      "playersFile": "seasons/2025-2026/teams/8e1fe04c614d20ec/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
         }
       ]
     },
@@ -6012,7 +5388,7 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 12,
       "matchesFile": "seasons/2025-2026/teams/9d5846387df09ab0/matches.json",
       "playersFile": "seasons/2025-2026/teams/9d5846387df09ab0/players.json",
@@ -6040,6 +5416,18 @@
           "levelCode": "B",
           "groupCode": "01",
           "matchesPlayed": 10
+        },
+        {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
+          "phaseNumber": 2,
+          "sourcePhaseId": 21974,
+          "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+          "phaseName": "Tercera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "01",
+          "matchesPlayed": 1
         }
       ]
     },
@@ -6374,44 +5762,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79166",
-      "teamIdIntern": 452860,
-      "teamIdExtern": 79166,
-      "teamName": "C.B. ESPARREGUERA",
-      "matchesPlayed": 21,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/1fb3a9dc5d1771c9/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1fb3a9dc5d1771c9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82074",
       "teamIdIntern": 459379,
       "teamIdExtern": 82074,
@@ -6564,32 +5914,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85747",
-      "teamIdIntern": 504325,
-      "teamIdExtern": 85747,
-      "teamName": "C.B. PRAT",
-      "matchesPlayed": 4,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/5b13a5c7bb222728/matches.json",
-      "playersFile": "seasons/2025-2026/teams/5b13a5c7bb222728/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20579,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:80938",
       "teamIdIntern": 453175,
       "teamIdExtern": 80938,
@@ -6622,44 +5946,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI::TEAM:85745",
-      "teamIdIntern": 505317,
-      "teamIdExtern": 85745,
-      "teamName": "C.B. PRAT - MONTIBELLO",
-      "matchesPlayed": 7,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/5f2e4f3f202548f3/matches.json",
-      "playersFile": "seasons/2025-2026/teams/5f2e4f3f202548f3/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20528,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "phaseName": "C, C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21877,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
         }
       ]
     },
@@ -6838,44 +6124,6 @@
           "levelCode": "A2",
           "groupCode": "01",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C 3X3 JUNIOR 1R ANY FEMENI::TEAM:85746",
-      "teamIdIntern": 552015,
-      "teamIdExtern": 85746,
-      "teamName": "C.B. PRAT ASSEGURANCES BALTASAR U17",
-      "matchesPlayed": 4,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/5acc4bd43c4faa59/matches.json",
-      "playersFile": "seasons/2025-2026/teams/5acc4bd43c4faa59/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20600,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20601,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "levelCode": "Eliminat\u00F2ries J F 1r any",
-          "groupCode": "",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -7312,44 +6560,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85303",
-      "teamIdIntern": 504318,
-      "teamIdExtern": 85303,
-      "teamName": "C.B. VILASSAR DE MAR MF BLANC",
-      "matchesPlayed": 6,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/a5f6e2d6a0c614ea/matches.json",
-      "playersFile": "seasons/2025-2026/teams/a5f6e2d6a0c614ea/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20579,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20580,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries M F",
-          "levelCode": "Eliminat\u00F2ries M F",
-          "groupCode": "",
-          "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:83132",
       "teamIdIntern": 451703,
       "teamIdExtern": 83132,
@@ -7502,32 +6712,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85301",
-      "teamIdIntern": 505282,
-      "teamIdExtern": 85301,
-      "teamName": "C.B.VILASSA DE MAR CF",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/18d9a5f5050ba2a9/matches.json",
-      "playersFile": "seasons/2025-2026/teams/18d9a5f5050ba2a9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20638,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
       "teamIdIntern": 453921,
       "teamIdExtern": 84290,
@@ -7560,32 +6744,6 @@
           "levelCode": "D2",
           "groupCode": "03",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85305",
-      "teamIdIntern": 504622,
-      "teamIdExtern": 85305,
-      "teamName": "C.B.VILASSAR DE MAR IF",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/22ae09599facfe29/matches.json",
-      "playersFile": "seasons/2025-2026/teams/22ae09599facfe29/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20667,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -8148,44 +7306,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79606",
-      "teamIdIntern": 457940,
-      "teamIdExtern": 79606,
-      "teamName": "C.E.B. PALLEJ\u00C0",
-      "matchesPlayed": 21,
-      "playersCount": 18,
-      "matchesFile": "seasons/2025-2026/teams/dfd083a7f5491836/matches.json",
-      "playersFile": "seasons/2025-2026/teams/dfd083a7f5491836/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
       "teamIdIntern": 453926,
       "teamIdExtern": 81783,
@@ -8218,44 +7338,6 @@
           "levelCode": "C1",
           "groupCode": "03",
           "matchesPlayed": 7
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80080",
-      "teamIdIntern": 452974,
-      "teamIdExtern": 80080,
-      "teamName": "C.E.B. SANT JORDI U 25 FEM",
-      "matchesPlayed": 18,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/88c561f348a8f749/matches.json",
-      "playersFile": "seasons/2025-2026/teams/88c561f348a8f749/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
         }
       ]
     },
@@ -8332,44 +7414,6 @@
           "levelCode": "C1",
           "groupCode": "03",
           "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:82036",
-      "teamIdIntern": 451734,
-      "teamIdExtern": 82036,
-      "teamName": "C.E.THAU",
-      "matchesPlayed": 20,
-      "playersCount": 18,
-      "matchesFile": "seasons/2025-2026/teams/d91e9d30ee331113/matches.json",
-      "playersFile": "seasons/2025-2026/teams/d91e9d30ee331113/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -8554,32 +7598,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85624",
-      "teamIdIntern": 502154,
-      "teamIdExtern": 85624,
-      "teamName": "CASADEMONT ZARAGOZA",
-      "matchesPlayed": 3,
-      "playersCount": 11,
-      "matchesFile": "seasons/2025-2026/teams/bef372aff5dd49f6/matches.json",
-      "playersFile": "seasons/2025-2026/teams/bef372aff5dd49f6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21254,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83491",
       "teamIdIntern": 452079,
       "teamIdExtern": 83491,
@@ -8650,32 +7668,6 @@
           "levelCode": "",
           "groupCode": "06",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85620",
-      "teamIdIntern": 502156,
-      "teamIdExtern": 85620,
-      "teamName": "CB ALCOBENDAS",
-      "matchesPlayed": 3,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/a573ada596eddfdc/matches.json",
-      "playersFile": "seasons/2025-2026/teams/a573ada596eddfdc/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21254,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -9176,44 +8168,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83038",
-      "teamIdIntern": 452177,
-      "teamIdExtern": 83038,
-      "teamName": "CB CARDEDEU TECNIDA - BLANC",
-      "matchesPlayed": 17,
-      "playersCount": 18,
-      "matchesFile": "seasons/2025-2026/teams/7caa1d51b7a83f3b/matches.json",
-      "playersFile": "seasons/2025-2026/teams/7caa1d51b7a83f3b/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83039",
       "teamIdIntern": 452351,
       "teamIdExtern": 83039,
@@ -9568,44 +8522,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C 3X3 JUNIOR 1R ANY FEMENI::TEAM:86621",
-      "teamIdIntern": 552012,
-      "teamIdExtern": 86621,
-      "teamName": "CB CORNELL\u00C0 BLAU",
-      "matchesPlayed": 5,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/3cee3cc721cc783a/matches.json",
-      "playersFile": "seasons/2025-2026/teams/3cee3cc721cc783a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20600,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20601,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "levelCode": "Eliminat\u00F2ries J F 1r any",
-          "groupCode": "",
-          "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:81793",
       "teamIdIntern": 454964,
       "teamIdExtern": 81793,
@@ -9664,96 +8580,6 @@
           "levelCode": "C",
           "groupCode": "01",
           "matchesPlayed": 7
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85406",
-      "teamIdIntern": 504381,
-      "teamIdExtern": 85406,
-      "teamName": "CB GRANOLLERS",
-      "matchesPlayed": 3,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/b54163455b4cf72f/matches.json",
-      "playersFile": "seasons/2025-2026/teams/b54163455b4cf72f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21270,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85400",
-      "teamIdIntern": 505067,
-      "teamIdExtern": 85400,
-      "teamName": "CB GRANOLLERS",
-      "matchesPlayed": 4,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/1716a37b1456aa4e/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1716a37b1456aa4e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20580,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries M F",
-          "levelCode": "Eliminat\u00F2ries M F",
-          "groupCode": "",
-          "matchesPlayed": 1
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21280,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup C",
-          "levelCode": "Grup C",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85402",
-      "teamIdIntern": 504552,
-      "teamIdExtern": 85402,
-      "teamName": "CB GRANOLLERS",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/56edac3d1e34f643/matches.json",
-      "playersFile": "seasons/2025-2026/teams/56edac3d1e34f643/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20666,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -10240,70 +9066,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85405",
-      "teamIdIntern": 505305,
-      "teamIdExtern": 85405,
-      "teamName": "CB GRANOLLERS BLANC",
-      "matchesPlayed": 5,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/6ab59e24a71e8a91/matches.json",
-      "playersFile": "seasons/2025-2026/teams/6ab59e24a71e8a91/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20637,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20639,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "levelCode": "Eliminat\u00F2ries C 1r any F",
-          "groupCode": "",
-          "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85403",
-      "teamIdIntern": 505284,
-      "teamIdExtern": 85403,
-      "teamName": "CB GRANOLLERS BLAU",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/9c6078564049bfed/matches.json",
-      "playersFile": "seasons/2025-2026/teams/9c6078564049bfed/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20638,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78451",
       "teamIdIntern": 451924,
       "teamIdExtern": 78451,
@@ -10386,44 +9148,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85839",
-      "teamIdIntern": 505285,
-      "teamIdExtern": 85839,
-      "teamName": "CB IGUALADA 3X3 CF U15",
-      "matchesPlayed": 4,
-      "playersCount": 3,
-      "matchesFile": "seasons/2025-2026/teams/dcb4d394bd67fb88/matches.json",
-      "playersFile": "seasons/2025-2026/teams/dcb4d394bd67fb88/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20638,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20639,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "levelCode": "Eliminat\u00F2ries C 1r any F",
-          "groupCode": "",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -10600,44 +9324,6 @@
           "levelCode": "B",
           "groupCode": "01",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:78709",
-      "teamIdIntern": 452821,
-      "teamIdExtern": 78709,
-      "teamName": "CB IMMA",
-      "matchesPlayed": 21,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/d3944e9b64dc2ce8/matches.json",
-      "playersFile": "seasons/2025-2026/teams/d3944e9b64dc2ce8/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -10922,44 +9608,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81752",
-      "teamIdIntern": 453246,
-      "teamIdExtern": 81752,
-      "teamName": "CB LA MERC\u00C8",
-      "matchesPlayed": 21,
-      "playersCount": 16,
-      "matchesFile": "seasons/2025-2026/teams/3c323c60ab7acc05/matches.json",
-      "playersFile": "seasons/2025-2026/teams/3c323c60ab7acc05/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80821",
       "teamIdIntern": 453000,
       "teamIdExtern": 80821,
@@ -11200,44 +9848,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79941",
-      "teamIdIntern": 456995,
-      "teamIdExtern": 79941,
-      "teamName": "CB LES FRANQUESES S25 F-INGRUP",
-      "matchesPlayed": 18,
-      "playersCount": 17,
-      "matchesFile": "seasons/2025-2026/teams/68dea982b1424db5/matches.json",
-      "playersFile": "seasons/2025-2026/teams/68dea982b1424db5/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79942",
       "teamIdIntern": 452188,
       "teamIdExtern": 79942,
@@ -11314,44 +9924,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83270",
-      "teamIdIntern": 452146,
-      "teamIdExtern": 83270,
-      "teamName": "CB LLI\u00C7\u00C0 DE VALL",
-      "matchesPlayed": 17,
-      "playersCount": 17,
-      "matchesFile": "seasons/2025-2026/teams/63279963e0ae7abe/matches.json",
-      "playersFile": "seasons/2025-2026/teams/63279963e0ae7abe/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81463",
       "teamIdIntern": 452981,
       "teamIdExtern": 81463,
@@ -11410,44 +9982,6 @@
           "levelCode": "D2",
           "groupCode": "01",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81464",
-      "teamIdIntern": 452387,
-      "teamIdExtern": 81464,
-      "teamName": "CB MANLLEU (U25F)",
-      "matchesPlayed": 17,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/0e173da6be42ec98/matches.json",
-      "playersFile": "seasons/2025-2026/teams/0e173da6be42ec98/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 7
         }
       ]
     },
@@ -12920,58 +11454,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85726",
-      "teamIdIntern": 505281,
-      "teamIdExtern": 85726,
-      "teamName": "CB SANT GABRIEL CF",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/ff35bb290b3ca458/matches.json",
-      "playersFile": "seasons/2025-2026/teams/ff35bb290b3ca458/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20637,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85422",
-      "teamIdIntern": 504536,
-      "teamIdExtern": 85422,
-      "teamName": "CB SANT GABRIEL MF",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/ef91a61512eb46af/matches.json",
-      "playersFile": "seasons/2025-2026/teams/ef91a61512eb46af/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21280,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup C",
-          "levelCode": "Grup C",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80105",
       "teamIdIntern": 452109,
       "teamIdExtern": 80105,
@@ -13244,44 +11726,6 @@
           "levelCode": "C2",
           "groupCode": "01",
           "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:82542",
-      "teamIdIntern": 482798,
-      "teamIdExtern": 82542,
-      "teamName": "CB SENTMENAT",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "matchesFile": "seasons/2025-2026/teams/cf1e1d4bf4dd91be/matches.json",
-      "playersFile": "seasons/2025-2026/teams/cf1e1d4bf4dd91be/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -14080,70 +12524,6 @@
           "levelCode": "",
           "groupCode": "04",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI::TEAM:84377",
-      "teamIdIntern": 505252,
-      "teamIdExtern": 84377,
-      "teamName": "CB UNIO BADIA",
-      "matchesPlayed": 7,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/8ad3cdc0c4108150/matches.json",
-      "playersFile": "seasons/2025-2026/teams/8ad3cdc0c4108150/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20528,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "phaseName": "C, C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21877,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:84376",
-      "teamIdIntern": 504554,
-      "teamIdExtern": 84376,
-      "teamName": "CB UNIO BADIA",
-      "matchesPlayed": 3,
-      "playersCount": 3,
-      "matchesFile": "seasons/2025-2026/teams/25237c7de9af7654/matches.json",
-      "playersFile": "seasons/2025-2026/teams/25237c7de9af7654/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20666,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -15046,44 +13426,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C 3X3 JUNIOR 1R ANY FEMENI::TEAM:86622",
-      "teamIdIntern": 552013,
-      "teamIdExtern": 86622,
-      "teamName": "CB. CORNELL\u00C0 LILA",
-      "matchesPlayed": 5,
-      "playersCount": 3,
-      "matchesFile": "seasons/2025-2026/teams/000748290c4dc39e/matches.json",
-      "playersFile": "seasons/2025-2026/teams/000748290c4dc39e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20600,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20601,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "levelCode": "Eliminat\u00F2ries J F 1r any",
-          "groupCode": "",
-          "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:78411",
       "teamIdIntern": 452158,
       "teamIdExtern": 78411,
@@ -15154,32 +13496,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85191",
-      "teamIdIntern": 504296,
-      "teamIdExtern": 85191,
-      "teamName": "CB.VILASSAR DE MAR MF ROSA",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/a4a2f217d62826a6/matches.json",
-      "playersFile": "seasons/2025-2026/teams/a4a2f217d62826a6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21279,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -15628,44 +13944,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83839",
-      "teamIdIntern": 452386,
-      "teamIdExtern": 83839,
-      "teamName": "CBSFC1946",
-      "matchesPlayed": 19,
-      "playersCount": 8,
-      "matchesFile": "seasons/2025-2026/teams/b8c20a8a1fb963ad/matches.json",
-      "playersFile": "seasons/2025-2026/teams/b8c20a8a1fb963ad/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80729",
       "teamIdIntern": 451936,
       "teamIdExtern": 80729,
@@ -15850,44 +14128,6 @@
           "levelCode": "",
           "groupCode": "03",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79013",
-      "teamIdIntern": 453292,
-      "teamIdExtern": 79013,
-      "teamName": "CE MARISTES RUB\u00CD",
-      "matchesPlayed": 20,
-      "playersCount": 15,
-      "matchesFile": "seasons/2025-2026/teams/00c0f5dcef950d2d/matches.json",
-      "playersFile": "seasons/2025-2026/teams/00c0f5dcef950d2d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
         }
       ]
     },
@@ -17260,44 +15500,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83126",
-      "teamIdIntern": 482799,
-      "teamIdExtern": 83126,
-      "teamName": "CLUB B\u00C0SQUET MASQUEFA",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "matchesFile": "seasons/2025-2026/teams/f981585afbf937f0/matches.json",
-      "playersFile": "seasons/2025-2026/teams/f981585afbf937f0/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83588",
       "teamIdIntern": 455411,
       "teamIdExtern": 83588,
@@ -17336,44 +15538,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83558",
-      "teamIdIntern": 452176,
-      "teamIdExtern": 83558,
-      "teamName": "CLUB B\u00C0SQUET PUIG-REIG DENTAL CLARET",
-      "matchesPlayed": 18,
-      "playersCount": 12,
-      "matchesFile": "seasons/2025-2026/teams/b4e036a99cf5c88d/matches.json",
-      "playersFile": "seasons/2025-2026/teams/b4e036a99cf5c88d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:82633",
       "teamIdIntern": 452271,
       "teamIdExtern": 82633,
@@ -17406,148 +15570,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85719",
-      "teamIdIntern": 504300,
-      "teamIdExtern": 85719,
-      "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U11F",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/77c63e31d0455aea/matches.json",
-      "playersFile": "seasons/2025-2026/teams/77c63e31d0455aea/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21279,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85711",
-      "teamIdIntern": 504763,
-      "teamIdExtern": 85711,
-      "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U12F",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/cc7237d7dea5064f/matches.json",
-      "playersFile": "seasons/2025-2026/teams/cc7237d7dea5064f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21280,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup C",
-          "levelCode": "Grup C",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85713",
-      "teamIdIntern": 504553,
-      "teamIdExtern": 85713,
-      "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U13F",
-      "matchesPlayed": 4,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/67744d510f787da6/matches.json",
-      "playersFile": "seasons/2025-2026/teams/67744d510f787da6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20666,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20668,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "levelCode": "Eliminat\u00F2ries I 1r Any F",
-          "groupCode": "",
-          "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85710",
-      "teamIdIntern": 504361,
-      "teamIdExtern": 85710,
-      "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U14F",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/aaec481bdb456398/matches.json",
-      "playersFile": "seasons/2025-2026/teams/aaec481bdb456398/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21270,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85715",
-      "teamIdIntern": 505280,
-      "teamIdExtern": 85715,
-      "teamName": "CLUB B\u00C0SQUET SANT CELONI - 3X3 - U15F",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/1373dc654a3c16ab/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1373dc654a3c16ab/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20637,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
         }
       ]
     },
@@ -17908,44 +15930,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83185",
-      "teamIdIntern": 451790,
-      "teamIdExtern": 83185,
-      "teamName": "CLUB ESPORTIU GELIDA",
-      "matchesPlayed": 21,
-      "playersCount": 11,
-      "matchesFile": "seasons/2025-2026/teams/78c06898a70cf9da/matches.json",
-      "playersFile": "seasons/2025-2026/teams/78c06898a70cf9da/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79015",
       "teamIdIntern": 456679,
       "teamIdExtern": 79015,
@@ -17988,7 +15972,7 @@
       "teamIdIntern": 502159,
       "teamIdExtern": 85623,
       "teamName": "CLUB ESTUDIANTES",
-      "matchesPlayed": 4,
+      "matchesPlayed": 3,
       "playersCount": 10,
       "matchesFile": "seasons/2025-2026/teams/e3432327764d50f1/matches.json",
       "playersFile": "seasons/2025-2026/teams/e3432327764d50f1/players.json",
@@ -18004,18 +15988,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21255,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "CIUTAT DE BADALONA",
-          "levelCode": "CIUTAT DE BADALONA",
-          "groupCode": "FASE FINAL",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -18052,8 +16024,8 @@
       "teamIdIntern": 502160,
       "teamIdExtern": 85626,
       "teamName": "CLUB JOVENTUT BADALONA",
-      "matchesPlayed": 4,
-      "playersCount": 13,
+      "matchesPlayed": 3,
+      "playersCount": 12,
       "matchesFile": "seasons/2025-2026/teams/29b84c5572cd3a3b/matches.json",
       "playersFile": "seasons/2025-2026/teams/29b84c5572cd3a3b/players.json",
       "phases": [
@@ -18068,18 +16040,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21255,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "CIUTAT DE BADALONA",
-          "levelCode": "CIUTAT DE BADALONA",
-          "groupCode": "FASE FINAL",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -18616,44 +16576,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79009",
-      "teamIdIntern": 451919,
-      "teamIdExtern": 79009,
-      "teamName": "CL\u00CDNICA OFTALMOL\u00D3GICA RUBI CE MARISTES RUB\u00CD",
-      "matchesPlayed": 20,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/98c2975e3d6ec956/matches.json",
-      "playersFile": "seasons/2025-2026/teams/98c2975e3d6ec956/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78486",
       "teamIdIntern": 472721,
       "teamIdExtern": 78486,
@@ -18888,44 +16810,6 @@
           "levelCode": "Preferent B",
           "groupCode": "01",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:78569",
-      "teamIdIntern": 451918,
-      "teamIdExtern": 78569,
-      "teamName": "CORAS - SD ESPANYOL",
-      "matchesPlayed": 20,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/a77d011c0dc6e673/matches.json",
-      "playersFile": "seasons/2025-2026/teams/a77d011c0dc6e673/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -20052,44 +17936,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81313",
-      "teamIdIntern": 451791,
-      "teamIdExtern": 81313,
-      "teamName": "EMOZIONAT - CB. GAV\u00C0",
-      "matchesPlayed": 21,
-      "playersCount": 28,
-      "matchesFile": "seasons/2025-2026/teams/7f832d37106732bd/matches.json",
-      "playersFile": "seasons/2025-2026/teams/7f832d37106732bd/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -21224,44 +19070,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79522",
-      "teamIdIntern": 461678,
-      "teamIdExtern": 79522,
-      "teamName": "FEMEN\u00CD OSONA SOTS-25-  OVA PROJECTS",
-      "matchesPlayed": 18,
-      "playersCount": 19,
-      "matchesFile": "seasons/2025-2026/teams/bc61b164e714f717/matches.json",
-      "playersFile": "seasons/2025-2026/teams/bc61b164e714f717/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79532",
       "teamIdIntern": 454115,
       "teamIdExtern": 79532,
@@ -22312,32 +20120,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85871",
-      "teamIdIntern": 505074,
-      "teamIdExtern": 85871,
-      "teamName": "GRANOLLERS",
-      "matchesPlayed": 1,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/ddc36abac22d2b8f/matches.json",
-      "playersFile": "seasons/2025-2026/teams/ddc36abac22d2b8f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21271,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ria IF",
-          "levelCode": "Eliminat\u00F2ria IF",
-          "groupCode": "",
-          "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83498",
       "teamIdIntern": 452594,
       "teamIdExtern": 83498,
@@ -22446,32 +20228,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85863",
-      "teamIdIntern": 505634,
-      "teamIdExtern": 85863,
-      "teamName": "IGUALADA",
-      "matchesPlayed": 1,
-      "playersCount": 3,
-      "matchesFile": "seasons/2025-2026/teams/1d74b8232a34cd7b/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1d74b8232a34cd7b/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20639,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "levelCode": "Eliminat\u00F2ries C 1r any F",
-          "groupCode": "",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -22824,7 +20580,7 @@
       "teamIdIntern": 454013,
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
-      "matchesPlayed": 19,
+      "matchesPlayed": 20,
       "playersCount": 12,
       "matchesFile": "seasons/2025-2026/teams/e7f569b34084c7b6/matches.json",
       "playersFile": "seasons/2025-2026/teams/e7f569b34084c7b6/players.json",
@@ -22852,6 +20608,18 @@
           "levelCode": "B",
           "groupCode": "01",
           "matchesPlayed": 10
+        },
+        {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
+          "phaseNumber": 2,
+          "sourcePhaseId": 21974,
+          "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+          "phaseName": "Tercera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "01",
+          "matchesPlayed": 1
         }
       ]
     },
@@ -22924,44 +20692,6 @@
           "sourcePhaseId": 19817,
           "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
           "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81297",
-      "teamIdIntern": 452861,
-      "teamIdExtern": 81297,
-      "teamName": "JESU\u00CFTES CASP",
-      "matchesPlayed": 21,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/60535be0477985cf/matches.json",
-      "playersFile": "seasons/2025-2026/teams/60535be0477985cf/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
           "levelName": "",
           "levelCode": "",
           "groupCode": "02",
@@ -24066,44 +21796,6 @@
           "levelCode": "",
           "groupCode": "03",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79644",
-      "teamIdIntern": 452753,
-      "teamIdExtern": 79644,
-      "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER B",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/a648cebd2e675d05/matches.json",
-      "playersFile": "seasons/2025-2026/teams/a648cebd2e675d05/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -25248,32 +22940,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85722",
-      "teamIdIntern": 504613,
-      "teamIdExtern": 85722,
-      "teamName": "MATARO 3X3 U13F JUNIOR REPORT",
-      "matchesPlayed": 3,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/e1326504d012f125/matches.json",
-      "playersFile": "seasons/2025-2026/teams/e1326504d012f125/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20667,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::LIGA FEMENINA CHALLENGE::TEAM:81394",
       "teamIdIntern": 450568,
       "teamIdExtern": 81394,
@@ -26364,44 +24030,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81149",
-      "teamIdIntern": 451705,
-      "teamIdExtern": 81149,
-      "teamName": "ONE BAR GROUP - CB SANTA PERP\u00C8TUA",
-      "matchesPlayed": 21,
-      "playersCount": 18,
-      "matchesFile": "seasons/2025-2026/teams/3a28012aa9258406/matches.json",
-      "playersFile": "seasons/2025-2026/teams/3a28012aa9258406/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79742",
       "teamIdIntern": 457242,
       "teamIdExtern": 79742,
@@ -26434,44 +24062,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81175",
-      "teamIdIntern": 452219,
-      "teamIdExtern": 81175,
-      "teamName": "ORLANDAI",
-      "matchesPlayed": 20,
-      "playersCount": 12,
-      "matchesFile": "seasons/2025-2026/teams/322c9ab1bd7f504e/matches.json",
-      "playersFile": "seasons/2025-2026/teams/322c9ab1bd7f504e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -26624,44 +24214,6 @@
           "levelCode": "D1",
           "groupCode": "02",
           "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C 3X3 JUNIOR 1R ANY FEMENI::TEAM:85725",
-      "teamIdIntern": 552014,
-      "teamIdExtern": 85725,
-      "teamName": "PANDO MATARO 3X3 U17F",
-      "matchesPlayed": 4,
-      "playersCount": 3,
-      "matchesFile": "seasons/2025-2026/teams/57ee6f54c48110ac/matches.json",
-      "playersFile": "seasons/2025-2026/teams/57ee6f54c48110ac/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20600,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20601,
-          "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Eliminat\u00F2ries J F 1r any",
-          "levelCode": "Eliminat\u00F2ries J F 1r any",
-          "groupCode": "",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -27540,44 +25092,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81169",
-      "teamIdIntern": 451704,
-      "teamIdExtern": 81169,
-      "teamName": "QBASKET SANT CUGAT 2",
-      "matchesPlayed": 20,
-      "playersCount": 20,
-      "matchesFile": "seasons/2025-2026/teams/1da6c46eb5e5e05a/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1da6c46eb5e5e05a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85230",
       "teamIdIntern": 515568,
       "teamIdExtern": 85230,
@@ -27914,172 +25428,6 @@
           "levelCode": "",
           "groupCode": "17",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85852",
-      "teamIdIntern": 504324,
-      "teamIdExtern": 85852,
-      "teamName": "REUS PLOMS SALLE 3X3 U12F",
-      "matchesPlayed": 4,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/345728151344e625/matches.json",
-      "playersFile": "seasons/2025-2026/teams/345728151344e625/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20579,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI 1R ANY::TEAM:85851",
-      "teamIdIntern": 504612,
-      "teamIdExtern": 85851,
-      "teamName": "REUS PLOMS SALLE 3X3 U13F",
-      "matchesPlayed": 5,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/ae6148311ff4235d/matches.json",
-      "playersFile": "seasons/2025-2026/teams/ae6148311ff4235d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20667,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20668,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries I 1r Any F",
-          "levelCode": "Eliminat\u00F2ries I 1r Any F",
-          "groupCode": "",
-          "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85843",
-      "teamIdIntern": 504360,
-      "teamIdExtern": 85843,
-      "teamName": "REUS PLOMS SALLE 3X3 U14F",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/2e8256aa59e8dde0/matches.json",
-      "playersFile": "seasons/2025-2026/teams/2e8256aa59e8dde0/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21270,
-          "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85847",
-      "teamIdIntern": 505283,
-      "teamIdExtern": 85847,
-      "teamName": "REUS PLOMS SALLE 3X3 U15F",
-      "matchesPlayed": 4,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/7bcb76e787d80e63/matches.json",
-      "playersFile": "seasons/2025-2026/teams/7bcb76e787d80e63/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20638,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup B",
-          "levelCode": "Grup B",
-          "groupCode": "",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20639,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Eliminat\u00F2ries C 1r any F",
-          "levelCode": "Eliminat\u00F2ries C 1r any F",
-          "groupCode": "",
-          "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI::TEAM:85846",
-      "teamIdIntern": 505253,
-      "teamIdExtern": 85846,
-      "teamName": "REUS PLOMS SALLE 3X3 U16F",
-      "matchesPlayed": 8,
-      "playersCount": 5,
-      "matchesFile": "seasons/2025-2026/teams/1b96602199d49d5c/matches.json",
-      "playersFile": "seasons/2025-2026/teams/1b96602199d49d5c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20528,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "phaseName": "C, C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21877,
-          "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-          "phaseName": "C. C. 3x3 3a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
         }
       ]
     },
@@ -28592,44 +25940,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:81683",
-      "teamIdIntern": 452218,
-      "teamIdExtern": 81683,
-      "teamName": "S.E. SANT MEDIR",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/0b3c22fa7d874091/matches.json",
-      "playersFile": "seasons/2025-2026/teams/0b3c22fa7d874091/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20001,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79197",
       "teamIdIntern": 450057,
       "teamIdExtern": 79197,
@@ -28824,44 +26134,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79853",
-      "teamIdIntern": 453308,
-      "teamIdExtern": 79853,
-      "teamName": "SALESIANS BADALONA",
-      "matchesPlayed": 20,
-      "playersCount": 13,
-      "matchesFile": "seasons/2025-2026/teams/5d7a278167b4a517/matches.json",
-      "playersFile": "seasons/2025-2026/teams/5d7a278167b4a517/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -29254,44 +26526,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80538",
-      "teamIdIntern": 453309,
-      "teamIdExtern": 80538,
-      "teamName": "SANT IGNASI B",
-      "matchesPlayed": 20,
-      "playersCount": 12,
-      "matchesFile": "seasons/2025-2026/teams/114d928cbdf05f9c/matches.json",
-      "playersFile": "seasons/2025-2026/teams/114d928cbdf05f9c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
         }
       ]
     },
@@ -33280,44 +30514,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79943",
-      "teamIdIntern": 452820,
-      "teamIdExtern": 79943,
-      "teamName": "U25 JOVENTUT LES CORTS",
-      "matchesPlayed": 20,
-      "playersCount": 14,
-      "matchesFile": "seasons/2025-2026/teams/f7ecb844024f6cf3/matches.json",
-      "playersFile": "seasons/2025-2026/teams/f7ecb844024f6cf3/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20000,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79323",
       "teamIdIntern": 453202,
       "teamIdExtern": 79323,
@@ -33692,44 +30888,6 @@
           "levelCode": "",
           "groupCode": "06",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79307",
-      "teamIdIntern": 452975,
-      "teamIdExtern": 79307,
-      "teamName": "UE BARBERA",
-      "matchesPlayed": 18,
-      "playersCount": 15,
-      "matchesFile": "seasons/2025-2026/teams/b7497db9bf598d02/matches.json",
-      "playersFile": "seasons/2025-2026/teams/b7497db9bf598d02/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20002,
-          "categoryName": "C.c. Sots-25 Femen\u00ED",
-          "phaseName": "Fase Regular",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 9
         }
       ]
     },
@@ -34318,32 +31476,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85903",
-      "teamIdIntern": 504543,
-      "teamIdExtern": 85903,
-      "teamName": "UE. MONTGAT 2",
-      "matchesPlayed": 3,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/2fa639cb97944170/matches.json",
-      "playersFile": "seasons/2025-2026/teams/2fa639cb97944170/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21280,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup C",
-          "levelCode": "Grup C",
-          "groupCode": "",
-          "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80575",
       "teamIdIntern": 453242,
       "teamIdExtern": 80575,
@@ -34458,32 +31590,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85901",
-      "teamIdIntern": 504426,
-      "teamIdExtern": 85901,
-      "teamName": "UE.MONTGAT 1",
-      "matchesPlayed": 4,
-      "playersCount": 4,
-      "matchesFile": "seasons/2025-2026/teams/6c2c54284f78eb5a/matches.json",
-      "playersFile": "seasons/2025-2026/teams/6c2c54284f78eb5a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 20579,
-          "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-          "phaseName": "C. C. 3x3 1a Jornada",
-          "levelName": "Grup A",
-          "levelCode": "Grup A",
-          "groupCode": "",
-          "matchesPlayed": 4
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81421",
       "teamIdIntern": 453920,
       "teamIdExtern": 81421,
@@ -34592,44 +31698,6 @@
           "levelCode": "",
           "groupCode": "19",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85621",
-      "teamIdIntern": 502155,
-      "teamIdExtern": 85621,
-      "teamName": "UNICAJA DE M\u00C1LAGA",
-      "matchesPlayed": 4,
-      "playersCount": 10,
-      "matchesFile": "seasons/2025-2026/teams/7b07b6ae6394f341/matches.json",
-      "playersFile": "seasons/2025-2026/teams/7b07b6ae6394f341/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21254,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21255,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "CIUTAT DE BADALONA",
-          "levelCode": "CIUTAT DE BADALONA",
-          "groupCode": "FASE FINAL",
-          "matchesPlayed": 1
         }
       ]
     },
@@ -34756,44 +31824,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85625",
-      "teamIdIntern": 502157,
-      "teamIdExtern": 85625,
-      "teamName": "VALENCIA BASKET",
-      "matchesPlayed": 4,
-      "playersCount": 11,
-      "matchesFile": "seasons/2025-2026/teams/b8cb15b2ab11211e/matches.json",
-      "playersFile": "seasons/2025-2026/teams/b8cb15b2ab11211e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21254,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 3
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21255,
-          "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-          "phaseName": "Torneig Internacional Ciutat De Badalona",
-          "levelName": "CIUTAT DE BADALONA",
-          "levelCode": "CIUTAT DE BADALONA",
-          "groupCode": "FASE FINAL",
-          "matchesPlayed": 1
         }
       ]
     },
