@@ -841,7 +841,9 @@ function App() {
         const current = map.get(team.teamKey) ?? {};
         map.set(team.teamKey, {
             teamName: team.teamName ?? current.teamName ?? "",
-            teamIdExtern: Number(team.teamIdExtern ?? current.teamIdExtern ?? 0)
+            teamIdExtern: Number(team.teamIdExtern ?? current.teamIdExtern ?? 0),
+            matchesFile: team.matchesFile ?? current.matchesFile ?? "",
+            playersFile: team.playersFile ?? current.playersFile ?? ""
         });
         return map;
     }, new Map()), [teams, competitionTeams]);
@@ -1422,6 +1424,28 @@ function App() {
         });
     };
 
+    const handleCompetitionPlayerNavigate = (teamKey, playerIdentityKey) => {
+        if (!teamKey || !playerIdentityKey) {
+            return;
+        }
+
+        const teamContext = latestTeamContexts.get(teamKey);
+        const categoryName = String(teamContext?.categoryName ?? "").trim();
+        const levelKey = String(teamContext?.levelCode ?? "").trim() || String(teamContext?.levelName ?? "").trim();
+        const gender = getCategoryGender(categoryName) || "all";
+
+        setSelectedTeamKey(teamKey);
+        setSelectedTeamGender(gender);
+        setSelectedTeamCategory(categoryName || selectedTeamCategory);
+        setSelectedTeamLevel(levelKey || "all");
+        setSelectedPhase("");
+        setSelectedMatch("");
+        setSelectedPlayer(playerIdentityKey);
+        setSelectedTeamTab("evolution");
+        setOpenMatches({});
+        navigateToHash(buildTeamRoute(teamKey));
+    };
+
     const handleStandingsPhaseChange = (phase) => {
         setSelectedStandingsPhase(String(phase || "all"));
     };
@@ -1905,6 +1929,8 @@ function App() {
                             <Suspense fallback={<SectionFallback message="Cargando resultados de la competición..." />}>
                                 <CompetitionResultsSection
                                     matches={competitionMatchesWithBranding}
+                                    teamDetailsByKey={teamDirectoryByKey}
+                                    analysisVersion={analysisVersion}
                                     phaseOptions={resultsPhaseOptions}
                                     selectedPhase={effectiveResultsPhase}
                                     onSelectedPhaseChange={setSelectedResultsPhase}
@@ -1916,6 +1942,9 @@ function App() {
                                     onSelectedCategoryChange={handleResultsCategoryChange}
                                     selectedTeamKey={effectiveTeamKey}
                                     onTeamNavigate={handleTeamNavigate}
+                                    onPlayerNavigate={handleCompetitionPlayerNavigate}
+                                    openMatches={openMatches}
+                                    onToggleMatch={handleToggleMatch}
                                 />
                             </Suspense>
                         )
