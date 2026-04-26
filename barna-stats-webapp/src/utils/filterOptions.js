@@ -47,3 +47,15 @@ export function sortFilterOptionsKeepingGlobalFirst(options, isGlobalOption) {
         ...sortFilterOptions(regularOptions)
     ];
 }
+
+export function dedupFilterOptions(options) {
+    const seen = new Set();
+    return (options ?? []).filter((option) => {
+        const key = option?.value;
+        if (seen.has(key)) {
+            return false;
+        }
+        seen.add(key);
+        return true;
+    });
+}
