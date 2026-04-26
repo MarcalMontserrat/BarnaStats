@@ -8,14 +8,17 @@ namespace GenerateAnalisys.Services;
 
 public sealed class OpenAiMatchReportService : IMatchReportService
 {
-    private const string PromptVersion = "match-report-v1";
+    private const string PromptVersion = "match-report-v2";
 
     private readonly string _cacheDir;
+    private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
         WriteIndented = true
     };
+    private readonly AiRequestRetrySettings _retrySettings;
+    private readonly Func<TimeSpan, Task> _delayAsync;
 
     private readonly string? _apiKey;
     private readonly string _model;
@@ -24,7 +27,10 @@ public sealed class OpenAiMatchReportService : IMatchReportService
     private bool _missingApiKeyLogged;
     private bool _disabledLogged;
 
-    public OpenAiMatchReportService(string cacheDir)
+    public OpenAiMatchReportService(
+        string cacheDir,
+        HttpMessageHandler? httpMessageHandler = null,
+        Func<TimeSpan, Task>? delayAsync = null)
     {
         _cacheDir = cacheDir;
         Directory.CreateDirectory(_cacheDir);
@@ -37,6 +43,13 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         _baseUri = new Uri(
             Environment.GetEnvironmentVariable("OPENAI_BASE_URL")
             ?? "https://api.openai.com/v1/");
+        _retrySettings = AiRequestRetrySettings.FromEnvironment();
+        _delayAsync = delayAsync ?? Task.Delay;
+        _httpClient = httpMessageHandler is null
+            ? new HttpClient()
+            : new HttpClient(httpMessageHandler, disposeHandler: false);
+        _httpClient.BaseAddress = _baseUri;
+        _httpClient.Timeout = TimeSpan.FromSeconds(90);
     }
 
     public async Task<MatchReportResult?> GetOrGenerateAsync(
@@ -114,16 +127,6 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         try
         {
             var prompt = MatchReportPromptBuilder.Build(match, movesRaw);
-
-            using var http = new HttpClient
-            {
-                BaseAddress = _baseUri,
-                Timeout = TimeSpan.FromSeconds(90)
-            };
-
-            using var request = new HttpRequestMessage(HttpMethod.Post, "responses");
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
-
             var requestBody = new
             {
                 model = _model,
@@ -134,6 +137,11 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                                - 1 titular corto
                                - 2 parrafos breves
                                - 3 bullets finales con claves del partido
+                               No te limites a narrar el marcador: incluye inferencias del partido basadas en señales concretas de los datos.
+                               Prioriza inferencias sobre: parciales, rachas, cambios de liderato, reparto anotador, perfil de tiro y cierre del partido.
+                               Si una inferencia depende de un dato concreto, mencionalo de forma natural.
+                               Si la evidencia es debil, usa lenguaje prudente: "apunta a", "sugiere", "parece".
+                               No inventes rebotes, asistencias, perdidas, defensa o ritmo si esos datos no aparecen.
                                Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
                                Basa el analisis solo en los datos recibidos.
                                """,
@@ -141,15 +149,19 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                 max_output_tokens = 700
             };
 
-            request.Content = new StringContent(
-                JsonSerializer.Serialize(requestBody),
-                Encoding.UTF8,
-                "application/json");
-
-            using var response = await http.SendAsync(request);
-            var responseText = await response.Content.ReadAsStringAsync();
-            response.EnsureSuccessStatusCode();
-
+            var payload = JsonSerializer.Serialize(requestBody);
+            var responseText = await AiRequestRetryHelper.SendWithRetriesAsync(
+                _httpClient,
+                () =>
+                {
+                    var request = new HttpRequestMessage(HttpMethod.Post, "responses");
+                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+                    request.Content = new StringContent(payload, Encoding.UTF8, "application/json");
+                    return request;
+                },
+                "OpenAI",
+                _retrySettings,
+                _delayAsync);
             return ExtractOutputText(responseText);
         }
         catch (Exception ex)
@@ -163,6 +175,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
     {
         using var document = JsonDocument.Parse(responseText);
         var root = document.RootElement;
+        var textBuilder = new StringBuilder();
 
         if (root.TryGetProperty("output_text", out var outputTextElement) &&
             outputTextElement.ValueKind == JsonValueKind.String)
@@ -189,12 +202,14 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                 if (contentItem.TryGetProperty("text", out var textElement) &&
                     textElement.ValueKind == JsonValueKind.String)
                 {
-                    return textElement.GetString();
+                    textBuilder.Append(textElement.GetString());
                 }
             }
         }
 
-        return null;
+        return textBuilder.Length > 0
+            ? textBuilder.ToString()
+            : null;
     }
 
     private async Task<MatchReportCacheEntry?> TryReadCacheAsync(string cachePath)

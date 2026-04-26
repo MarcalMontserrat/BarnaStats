@@ -462,6 +462,7 @@ function MatchListSection({
                         {isOpen ? (
                             <div id={detailId} style={styles.detailShell}>
                                 <MatchDetailContent
+                                    matchWebId={match.matchWebId}
                                     players={match.players}
                                     insights={match.insights}
                                     matchReport={match.matchReport}

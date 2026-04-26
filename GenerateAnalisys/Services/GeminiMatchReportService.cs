@@ -7,14 +7,21 @@ namespace GenerateAnalisys.Services;
 
 public sealed class GeminiMatchReportService : IMatchReportService
 {
-    private const string PromptVersion = "match-report-v1";
+    private const string PromptVersion = "match-report-v3";
 
     private readonly string _cacheDir;
+    private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
         WriteIndented = true
     };
+    private readonly GeminiRequestQuotaLimiter _quotaLimiter;
+    private readonly AiRequestRetrySettings _retrySettings;
+    private readonly Func<TimeSpan, Task> _delayAsync;
+    private readonly Func<DateTimeOffset> _nowProvider;
+    private readonly int _maxOutputTokens;
+    private readonly int? _thinkingBudget;
 
     private readonly string? _apiKey;
     private readonly string _model;
@@ -22,13 +29,20 @@ public sealed class GeminiMatchReportService : IMatchReportService
     private readonly bool _enabled;
     private bool _missingApiKeyLogged;
     private bool _disabledLogged;
+    private bool _dailyQuotaReached;
+    public MatchReportFailure? LastFailure { get; private set; }
 
-    public GeminiMatchReportService(string cacheDir)
+    public GeminiMatchReportService(
+        string cacheDir,
+        HttpMessageHandler? httpMessageHandler = null,
+        Func<TimeSpan, Task>? delayAsync = null,
+        Func<DateTimeOffset>? nowProvider = null,
+        bool? enabledOverride = null)
     {
         _cacheDir = cacheDir;
         Directory.CreateDirectory(_cacheDir);
 
-        _enabled = ParseBooleanFlag(
+        _enabled = enabledOverride ?? ParseBooleanFlag(
             Environment.GetEnvironmentVariable("BARNASTATS_ENABLE_AI_MATCH_REPORTS"));
         _apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
         _model = Environment.GetEnvironmentVariable("BARNASTATS_GEMINI_MODEL")
@@ -36,6 +50,19 @@ public sealed class GeminiMatchReportService : IMatchReportService
         _baseUri = new Uri(
             Environment.GetEnvironmentVariable("GEMINI_BASE_URL")
             ?? "https://generativelanguage.googleapis.com/v1beta/");
+        _retrySettings = AiRequestRetrySettings.FromEnvironment();
+        _delayAsync = delayAsync ?? Task.Delay;
+        _nowProvider = nowProvider ?? (() => DateTimeOffset.Now);
+        _maxOutputTokens = ParseInt("BARNASTATS_GEMINI_MAX_OUTPUT_TOKENS", 700, minValue: 1);
+        _thinkingBudget = SupportsThinkingBudget(_model)
+            ? ParseInt("BARNASTATS_GEMINI_THINKING_BUDGET", 0, minValue: -1)
+            : null;
+        _quotaLimiter = new GeminiRequestQuotaLimiter(_cacheDir, _delayAsync, _nowProvider);
+        _httpClient = httpMessageHandler is null
+            ? new HttpClient()
+            : new HttpClient(httpMessageHandler, disposeHandler: false);
+        _httpClient.BaseAddress = _baseUri;
+        _httpClient.Timeout = TimeSpan.FromSeconds(90);
     }
 
     public async Task<MatchReportResult?> GetOrGenerateAsync(
@@ -44,6 +71,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
         string statsRaw,
         string? movesRaw)
     {
+        LastFailure = null;
         var contentHash = ComputeContentHash(statsRaw, movesRaw);
         var cachePath = Path.Combine(_cacheDir, $"{matchWebId}.json");
         var cached = await TryReadCacheAsync(cachePath);
@@ -69,6 +97,11 @@ public sealed class GeminiMatchReportService : IMatchReportService
                 _disabledLogged = true;
             }
 
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.Disabled,
+                Message = "La generación AI está desactivada por configuración."
+            };
             return null;
         }
 
@@ -80,6 +113,11 @@ public sealed class GeminiMatchReportService : IMatchReportService
                 _missingApiKeyLogged = true;
             }
 
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.MissingApiKey,
+                Message = "Falta GEMINI_API_KEY."
+            };
             return null;
         }
 
@@ -94,6 +132,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
             Model = _model,
             GeneratedAtUtc = DateTime.UtcNow
         };
+        LastFailure = null;
 
         var cacheEntry = new MatchReportCacheEntry
         {
@@ -110,21 +149,37 @@ public sealed class GeminiMatchReportService : IMatchReportService
 
     private async Task<string?> GenerateSummaryAsync(StatsRoot match, string? movesRaw)
     {
+        if (_dailyQuotaReached)
+        {
+            LastFailure ??= new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.DailyQuotaReached,
+                Message = "Gemini ya alcanzó el límite diario local en este proceso."
+            };
+            return null;
+        }
+
         try
         {
             var prompt = MatchReportPromptBuilder.Build(match, movesRaw);
-
-            using var http = new HttpClient
+            var endpoint = $"models/{_model}:generateContent?key={_apiKey}";
+            var generationConfig = new Dictionary<string, object?>
             {
-                BaseAddress = _baseUri,
-                Timeout = TimeSpan.FromSeconds(90)
+                ["maxOutputTokens"] = _maxOutputTokens,
+                ["responseMimeType"] = "text/plain"
             };
 
-            var endpoint = $"models/{_model}:generateContent?key={_apiKey}";
-
-            var requestBody = new
+            if (_thinkingBudget.HasValue)
             {
-                system_instruction = new
+                generationConfig["thinkingConfig"] = new Dictionary<string, object?>
+                {
+                    ["thinkingBudget"] = _thinkingBudget.Value
+                };
+            }
+
+            var requestBody = new Dictionary<string, object?>
+            {
+                ["system_instruction"] = new
                 {
                     parts = new[]
                     {
@@ -137,13 +192,18 @@ public sealed class GeminiMatchReportService : IMatchReportService
                                    - 1 titular corto
                                    - 2 parrafos breves
                                    - 3 bullets finales con claves del partido
+                                   No te limites a narrar el marcador: incluye inferencias del partido basadas en señales concretas de los datos.
+                                   Prioriza inferencias sobre: parciales, rachas, cambios de liderato, reparto anotador, perfil de tiro y cierre del partido.
+                                   Si una inferencia depende de un dato concreto, mencionalo de forma natural.
+                                   Si la evidencia es debil, usa lenguaje prudente: "apunta a", "sugiere", "parece".
+                                   No inventes rebotes, asistencias, perdidas, defensa o ritmo si esos datos no aparecen.
                                    Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
                                    Basa el análisis solo en los datos recibidos.
                                    """
                         }
                     }
                 },
-                contents = new[]
+                ["contents"] = new[]
                 {
                     new
                     {
@@ -153,26 +213,64 @@ public sealed class GeminiMatchReportService : IMatchReportService
                         }
                     }
                 },
-                generationConfig = new
-                {
-                    maxOutputTokens = 700
-                }
+                ["generationConfig"] = generationConfig
             };
 
-            using var request = new HttpRequestMessage(HttpMethod.Post, endpoint);
-            request.Content = new StringContent(
-                JsonSerializer.Serialize(requestBody),
-                Encoding.UTF8,
-                "application/json");
+            var payload = JsonSerializer.Serialize(requestBody);
+            var responseText = await AiRequestRetryHelper.SendWithRetriesAsync(
+                _httpClient,
+                () =>
+                {
+                    var request = new HttpRequestMessage(HttpMethod.Post, endpoint);
+                    request.Content = new StringContent(payload, Encoding.UTF8, "application/json");
+                    return request;
+                },
+                "Gemini",
+                _retrySettings,
+                _delayAsync,
+                () => _quotaLimiter.WaitForAvailabilityAsync());
+            if (string.IsNullOrWhiteSpace(responseText))
+            {
+                LastFailure = new MatchReportFailure
+                {
+                    Kind = MatchReportFailureKind.EmptyResponse,
+                    Message = "Gemini devolvió una respuesta vacía."
+                };
+                return null;
+            }
 
-            using var response = await http.SendAsync(request);
-            var responseText = await response.Content.ReadAsStringAsync();
-            response.EnsureSuccessStatusCode();
+            var extractedText = ExtractOutputText(responseText);
+            if (string.IsNullOrWhiteSpace(extractedText))
+            {
+                LastFailure = new MatchReportFailure
+                {
+                    Kind = MatchReportFailureKind.EmptyResponse,
+                    Message = "Gemini respondió, pero sin texto utilizable."
+                };
+                return null;
+            }
 
-            return ExtractOutputText(responseText);
+            LastFailure = null;
+            return extractedText;
+        }
+        catch (GeminiDailyLimitExceededException ex)
+        {
+            _dailyQuotaReached = true;
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.DailyQuotaReached,
+                Message = ex.Message
+            };
+            Console.WriteLine(ex.Message);
+            return null;
         }
         catch (Exception ex)
         {
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.RequestFailed,
+                Message = ex.Message
+            };
             Console.WriteLine($"No se pudo generar el resumen AI del partido (Gemini): {ex.Message}");
             return null;
         }
@@ -182,6 +280,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
     {
         using var document = JsonDocument.Parse(responseText);
         var root = document.RootElement;
+        var textBuilder = new StringBuilder();
 
         if (!root.TryGetProperty("candidates", out var candidates) ||
             candidates.ValueKind != JsonValueKind.Array)
@@ -205,12 +304,14 @@ public sealed class GeminiMatchReportService : IMatchReportService
                 if (part.TryGetProperty("text", out var textElement) &&
                     textElement.ValueKind == JsonValueKind.String)
                 {
-                    return textElement.GetString();
+                    textBuilder.Append(textElement.GetString());
                 }
             }
         }
 
-        return null;
+        return textBuilder.Length > 0
+            ? textBuilder.ToString()
+            : null;
     }
 
     private async Task<MatchReportCacheEntry?> TryReadCacheAsync(string cachePath)
@@ -251,5 +352,19 @@ public sealed class GeminiMatchReportService : IMatchReportService
                rawValue.Equals("true", StringComparison.OrdinalIgnoreCase) ||
                rawValue.Equals("yes", StringComparison.OrdinalIgnoreCase) ||
                rawValue.Equals("on", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static int ParseInt(string variableName, int defaultValue, int minValue)
+    {
+        var rawValue = Environment.GetEnvironmentVariable(variableName);
+        if (!int.TryParse(rawValue, out var value))
+            return defaultValue;
+
+        return Math.Max(value, minValue);
+    }
+
+    private static bool SupportsThinkingBudget(string model)
+    {
+        return model.Contains("2.5", StringComparison.OrdinalIgnoreCase);
     }
 }
