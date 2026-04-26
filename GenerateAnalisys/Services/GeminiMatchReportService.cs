@@ -65,7 +65,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
         {
             if (!_disabledLogged)
             {
-                Console.WriteLine("Feature flag `BARNASTATS_ENABLE_AI_MATCH_REPORTS` desactivada. No se generaran nuevos resúmenes AI.");
+                Console.WriteLine("Feature flag `BARNASTATS_ENABLE_AI_MATCH_REPORTS` desactivada. No se generarán nuevos resúmenes AI.");
                 _disabledLogged = true;
             }
 
@@ -132,13 +132,13 @@ public sealed class GeminiMatchReportService : IMatchReportService
                         {
                             text = """
                                    Eres una analista de baloncesto base. 
-                                   Escribe en espanol, con tono claro y natural, sin exagerar ni inventar nada.
+                                   Escribe en español, con tono claro y natural, sin exagerar ni inventar nada.
                                    Quiero un resumen corto para incrustar en una app:
                                    - 1 titular corto
                                    - 2 parrafos breves
                                    - 3 bullets finales con claves del partido
                                    Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
-                                   Basa el analisis solo en los datos recibidos.
+                                   Basa el análisis solo en los datos recibidos.
                                    """
                         }
                     }

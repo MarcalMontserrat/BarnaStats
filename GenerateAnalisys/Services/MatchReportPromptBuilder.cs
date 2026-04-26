@@ -14,7 +14,7 @@ internal static class MatchReportPromptBuilder
                         ?? match.Teams.Skip(1).FirstOrDefault();
 
         if (localTeam is null || visitTeam is null)
-            return "Partido sin equipos validos.";
+            return "Partido sin equipos válidos.";
 
         var moves = TryDeserializeMoves(movesRaw);
         var prompt = new StringBuilder();
