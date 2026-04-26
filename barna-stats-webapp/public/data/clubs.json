@@ -3129,14 +3129,14 @@
     "label": "CLUB BASQUET ESPARREGUERA",
     "shortName": "C.B. ESPARREGUERA",
     "clubId": 85,
-    "primaryTeamIdExtern": 79166,
-    "totalTeams": 3,
-    "totalMatches": 58,
-    "totalPlayers": 39,
-    "categoriesCount": 3,
+    "primaryTeamIdExtern": 82074,
+    "totalTeams": 2,
+    "totalMatches": 37,
+    "totalPlayers": 26,
+    "categoriesCount": 2,
     "levelsCount": 1,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 58 partidos",
-    "searchText": "CLUB BASQUET ESPARREGUERA C.B. ESPARREGUERA C.c. Sots-25 Femen\u00ED C.t. Pre-mini Femen\u00ED Nivell C1 TIR BAGES - C.B. ESPARREGUERA 1a. Territorial S\u00E8nior Femen\u00ED",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 37 partidos",
+    "searchText": "CLUB BASQUET ESPARREGUERA C.B. ESPARREGUERA C.t. Pre-mini Femen\u00ED Nivell C1 TIR BAGES - C.B. ESPARREGUERA 1a. Territorial S\u00E8nior Femen\u00ED",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -3168,41 +3168,6 @@
                 },
                 "pointDiff": 234,
                 "avgValuation": 32.19047619047619
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Sots-25 Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79166",
-                "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:79166",
-                "teamIdExtern": 79166,
-                "teamName": "C.B. ESPARREGUERA",
-                "matchesPlayed": 21,
-                "playersCount": 13,
-                "categoryName": "C.c. Sots-25 Femen\u00ED",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Fase Regular \u00B7 Grupo 02",
-                "latestPhaseOptionValue": "source:20001",
-                "groupCode": "02",
-                "standingPosition": 10,
-                "record": {
-                  "wins": 7,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 998,
-                  "pointsAgainst": 1247
-                },
-                "pointDiff": -249,
-                "avgValuation": 23.61904761904762
               }
             ]
           }
@@ -3453,49 +3418,14 @@
     "shortName": "C.B. GRANOLLERS",
     "clubId": 1,
     "primaryTeamIdExtern": 78807,
-    "totalTeams": 5,
-    "totalMatches": 79,
-    "totalPlayers": 64,
-    "categoriesCount": 5,
-    "levelsCount": 3,
-    "meta": "5 equipos \u00B7 5 categorias \u00B7 79 partidos",
-    "searchText": "CLUB BASQUET GRANOLLERS C.B. GRANOLLERS CB GRANOLLERS 1 C.c. J\u00FAnior Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell C1 CB GRANOLLERS 2 Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED 1r. Any Nivell A GRANOLLERS C.c. 3x3 Infantil Femen\u00ED Eliminat\u00F2ria IF",
+    "totalTeams": 4,
+    "totalMatches": 78,
+    "totalPlayers": 60,
+    "categoriesCount": 4,
+    "levelsCount": 2,
+    "meta": "4 equipos \u00B7 4 categorias \u00B7 78 partidos",
+    "searchText": "CLUB BASQUET GRANOLLERS C.B. GRANOLLERS CB GRANOLLERS 1 C.c. J\u00FAnior Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell C1 CB GRANOLLERS 2 Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED 1r. Any Nivell A",
     "categories": [
-      {
-        "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "Eliminat\u00F2ria IF",
-            "levelName": "Eliminat\u00F2ria IF",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85871",
-                "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85871",
-                "teamIdExtern": 85871,
-                "teamName": "GRANOLLERS",
-                "matchesPlayed": 1,
-                "playersCount": 4,
-                "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-                "levelKey": "Eliminat\u00F2ria IF",
-                "levelName": "Eliminat\u00F2ria IF",
-                "phaseLabel": "C. C. 3x3 1a Jornada \u00B7 Eliminat\u00F2ria IF",
-                "latestPhaseOptionValue": "source:21271",
-                "groupCode": "",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 0,
-                  "losses": 1,
-                  "ties": 0,
-                  "pointsFor": 8,
-                  "pointsAgainst": 11
-                },
-                "pointDiff": -3,
-                "avgValuation": 8
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
         "levels": [
@@ -3643,14 +3573,14 @@
     "label": "CLUB BASQUET GRUP BARNA",
     "shortName": "C.B. GRUP BARNA",
     "clubId": 24,
-    "primaryTeamIdExtern": 85872,
-    "totalTeams": 10,
+    "primaryTeamIdExtern": 80323,
+    "totalTeams": 9,
     "totalMatches": 201,
-    "totalPlayers": 146,
-    "categoriesCount": 10,
-    "levelsCount": 5,
-    "meta": "10 equipos \u00B7 10 categorias \u00B7 201 partidos",
-    "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA #2 C. C. 3x3 1a Jornada  - Grup A C.c. 3x3 Infantil Femen\u00ED Eliminat\u00F2ria IF C.B GRUP BARNA A C.c. Cadet Femen\u00ED Preferent Preferent B C.c Infantil Femen\u00ED Preferent Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED Nivell B2 C.B GRUP BARNA B Copa Catalunya Femenina C.B GRUP BARNA VERMELL  1ER ANY C.t. Pre-mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A C.c. J\u00FAnior Femen\u00ED Interterritorial",
+    "totalPlayers": 142,
+    "categoriesCount": 9,
+    "levelsCount": 4,
+    "meta": "9 equipos \u00B7 9 categorias \u00B7 201 partidos",
+    "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.c. Cadet Femen\u00ED Preferent Preferent B C.c Infantil Femen\u00ED Preferent Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED Nivell B2 C.B GRUP BARNA B Copa Catalunya Femenina C.B GRUP BARNA VERMELL  1ER ANY C.t. Pre-mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A C.c. J\u00FAnior Femen\u00ED Interterritorial",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -3682,41 +3612,6 @@
                 },
                 "pointDiff": -770,
                 "avgValuation": -31.04
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "Eliminat\u00F2ria IF",
-            "levelName": "Eliminat\u00F2ria IF",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85872",
-                "teamKey": "2025-2026::C.C. 3X3 INFANTIL FEMENI::TEAM:85872",
-                "teamIdExtern": 85872,
-                "teamName": "#2 C. C. 3x3 1a Jornada  - Grup A",
-                "matchesPlayed": 1,
-                "playersCount": 4,
-                "categoryName": "C.c. 3x3 Infantil Femen\u00ED",
-                "levelKey": "Eliminat\u00F2ria IF",
-                "levelName": "Eliminat\u00F2ria IF",
-                "phaseLabel": "C. C. 3x3 1a Jornada \u00B7 Eliminat\u00F2ria IF",
-                "latestPhaseOptionValue": "source:21271",
-                "groupCode": "",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 1,
-                  "losses": 0,
-                  "ties": 0,
-                  "pointsFor": 11,
-                  "pointsAgainst": 8
-                },
-                "pointDiff": 3,
-                "avgValuation": 10
               }
             ]
           }
@@ -3909,24 +3804,24 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
                 "teamIdExtern": 81178,
                 "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-                "matchesPlayed": 18,
+                "matchesPlayed": 19,
                 "playersCount": 12,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
-                "phaseLabel": "Segona Fase \u00B7 Nivell B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21630",
+                "phaseLabel": "Tercera Fase \u00B7 Nivell B \u00B7 Grupo 01",
+                "latestPhaseOptionValue": "source:21974",
                 "groupCode": "01",
                 "standingPosition": 1,
                 "record": {
-                  "wins": 16,
+                  "wins": 17,
                   "losses": 2,
                   "ties": 0,
-                  "pointsFor": 1005,
-                  "pointsAgainst": 328
+                  "pointsFor": 1074,
+                  "pointsAgainst": 366
                 },
-                "pointDiff": 677,
-                "avgValuation": 37
+                "pointDiff": 708,
+                "avgValuation": 37.78947368421053
               }
             ]
           }
@@ -4010,49 +3905,14 @@
     "shortName": "C.B. IGUALADA",
     "clubId": 65,
     "primaryTeamIdExtern": 79229,
-    "totalTeams": 4,
-    "totalMatches": 54,
-    "totalPlayers": 38,
-    "categoriesCount": 4,
-    "levelsCount": 3,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 54 partidos",
-    "searchText": "CLUB BASQUET IGUALADA C.B. IGUALADA CAMPUS UDL - CB IGUALADA JF U18 C.c. J\u00FAnior Femen\u00ED Interterritorial CB IGUALADA PMF U09 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B CL\u00CDNICA DENTAL BAUSILI \u0026 JANER - CL\u00CDNICA DENTAL - CB IGUALADA PMF U10 C.t. Pre-mini Femen\u00ED Nivell B2 IGUALADA C.c. 3x3 Cadet Femen\u00ED 1r Any Eliminat\u00F2ries C 1r any F",
+    "totalTeams": 3,
+    "totalMatches": 53,
+    "totalPlayers": 35,
+    "categoriesCount": 3,
+    "levelsCount": 2,
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 53 partidos",
+    "searchText": "CLUB BASQUET IGUALADA C.B. IGUALADA CAMPUS UDL - CB IGUALADA JF U18 C.c. J\u00FAnior Femen\u00ED Interterritorial CB IGUALADA PMF U09 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B CL\u00CDNICA DENTAL BAUSILI \u0026 JANER - CL\u00CDNICA DENTAL - CB IGUALADA PMF U10 C.t. Pre-mini Femen\u00ED Nivell B2",
     "categories": [
-      {
-        "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-        "levels": [
-          {
-            "levelKey": "Eliminat\u00F2ries C 1r any F",
-            "levelName": "Eliminat\u00F2ries C 1r any F",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85863",
-                "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI 1R ANY::TEAM:85863",
-                "teamIdExtern": 85863,
-                "teamName": "IGUALADA",
-                "matchesPlayed": 1,
-                "playersCount": 3,
-                "categoryName": "C.c. 3x3 Cadet Femen\u00ED 1r Any",
-                "levelKey": "Eliminat\u00F2ries C 1r any F",
-                "levelName": "Eliminat\u00F2ries C 1r any F",
-                "phaseLabel": "C. C. 3x3 1a Jornada \u00B7 Eliminat\u00F2ries C 1r any F",
-                "latestPhaseOptionValue": "source:20639",
-                "groupCode": "",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 1,
-                  "losses": 0,
-                  "ties": 0,
-                  "pointsFor": 10,
-                  "pointsAgainst": 5
-                },
-                "pointDiff": 5,
-                "avgValuation": 8
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
         "levels": [
@@ -5149,120 +5009,15 @@
     "label": "CLUB BASQUET PRAT",
     "shortName": "C.B. PRAT",
     "clubId": 91,
-    "primaryTeamIdExtern": 85747,
-    "totalTeams": 9,
-    "totalMatches": 139,
-    "totalPlayers": 122,
-    "categoriesCount": 9,
-    "levelsCount": 5,
-    "meta": "9 equipos \u00B7 9 categorias \u00B7 139 partidos",
-    "searchText": "CLUB BASQUET PRAT C.B. PRAT C.c. 3x3 Mini Femen\u00ED Grup A C.B. PRAT - MONTIBELLO C.c. J\u00FAnior Fem. Nivell A C.c. 3x3 Cadet Femen\u00ED C.t. Pre-mini Femen\u00ED Nivell D2 C.B. PRAT - MONTIBELLO A C.c. Cadet Femen\u00ED Preferent Preferent B C.c. Primera Categoria Femenina C.B. PRAT - MONTIBELLO B C.c. Segona Categoria Femenina C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 C.B. PRAT ASSEGURANCES BALTASAR U17 C.c 3x3 Junior 1r Any Femen\u00ED Eliminat\u00F2ries J F 1r any",
+    "primaryTeamIdExtern": 80938,
+    "totalTeams": 6,
+    "totalMatches": 124,
+    "totalPlayers": 109,
+    "categoriesCount": 6,
+    "levelsCount": 3,
+    "meta": "6 equipos \u00B7 6 categorias \u00B7 124 partidos",
+    "searchText": "CLUB BASQUET PRAT C.B. PRAT C.B. PRAT - MONTIBELLO C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED Nivell D2 C.B. PRAT - MONTIBELLO A C.c. Cadet Femen\u00ED Preferent Preferent B C.c. Primera Categoria Femenina C.B. PRAT - MONTIBELLO B C.c. Segona Categoria Femenina C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2",
     "categories": [
-      {
-        "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "Eliminat\u00F2ries J F 1r any",
-            "levelName": "Eliminat\u00F2ries J F 1r any",
-            "teams": [
-              {
-                "key": "2025-2026::C.C 3X3 JUNIOR 1R ANY FEMENI::TEAM:85746",
-                "teamKey": "2025-2026::C.C 3X3 JUNIOR 1R ANY FEMENI::TEAM:85746",
-                "teamIdExtern": 85746,
-                "teamName": "C.B. PRAT ASSEGURANCES BALTASAR U17",
-                "matchesPlayed": 4,
-                "playersCount": 4,
-                "categoryName": "C.c 3x3 Junior 1r Any Femen\u00ED",
-                "levelKey": "Eliminat\u00F2ries J F 1r any",
-                "levelName": "Eliminat\u00F2ries J F 1r any",
-                "phaseLabel": "C. C. 3x3 3a Jornada \u00B7 Eliminat\u00F2ries J F 1r any",
-                "latestPhaseOptionValue": "source:20601",
-                "groupCode": "",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 1,
-                  "losses": 3,
-                  "ties": 0,
-                  "pointsFor": 49,
-                  "pointsAgainst": 52
-                },
-                "pointDiff": -3,
-                "avgValuation": 10.75
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "Grup A",
-            "levelName": "Grup A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. 3X3 CADET FEMENI::TEAM:85745",
-                "teamKey": "2025-2026::C.C. 3X3 CADET FEMENI::TEAM:85745",
-                "teamIdExtern": 85745,
-                "teamName": "C.B. PRAT - MONTIBELLO",
-                "matchesPlayed": 7,
-                "playersCount": 4,
-                "categoryName": "C.c. 3x3 Cadet Femen\u00ED",
-                "levelKey": "Grup A",
-                "levelName": "Grup A",
-                "phaseLabel": "C. C. 3x3 3a Jornada \u00B7 Grup A",
-                "latestPhaseOptionValue": "source:21877",
-                "groupCode": "",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 4,
-                  "losses": 3,
-                  "ties": 0,
-                  "pointsFor": 104,
-                  "pointsAgainst": 44
-                },
-                "pointDiff": 60,
-                "avgValuation": 14
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "Grup A",
-            "levelName": "Grup A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85747",
-                "teamKey": "2025-2026::C.C. 3X3 MINI FEMENI::TEAM:85747",
-                "teamIdExtern": 85747,
-                "teamName": "C.B. PRAT",
-                "matchesPlayed": 4,
-                "playersCount": 5,
-                "categoryName": "C.c. 3x3 Mini Femen\u00ED",
-                "levelKey": "Grup A",
-                "levelName": "Grup A",
-                "phaseLabel": "C. C. 3x3 1a Jornada \u00B7 Grup A",
-                "latestPhaseOptionValue": "source:20579",
-                "groupCode": "",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 2,
-                  "losses": 2,
-                  "ties": 0,
-                  "pointsFor": 31,
-                  "pointsAgainst": 18
-                },
-                "pointDiff": 13,
-                "avgValuation": 6.25
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.c. Cadet Femen\u00ED Preferent",
         "levels": [
@@ -5481,49 +5236,14 @@
     "shortName": "C.B. PUIG-REIG",
     "clubId": 2387,
     "primaryTeamIdExtern": 83588,
-    "totalTeams": 2,
-    "totalMatches": 36,
-    "totalPlayers": 23,
-    "categoriesCount": 2,
+    "totalTeams": 1,
+    "totalMatches": 18,
+    "totalPlayers": 11,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 36 partidos",
-    "searchText": "CLUB BASQUET PUIG-REIG C.B. PUIG-REIG CLUB B\u00C0SQUET PUIG-REIG C.t. Pre-mini Femen\u00ED Nivell D2 CLUB B\u00C0SQUET PUIG-REIG DENTAL CLARET C.c. Sots-25 Femen\u00ED",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 18 partidos",
+    "searchText": "CLUB BASQUET PUIG-REIG C.B. PUIG-REIG CLUB B\u00C0SQUET PUIG-REIG C.t. Pre-mini Femen\u00ED Nivell D2",
     "categories": [
-      {
-        "categoryName": "C.c. Sots-25 Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83558",
-                "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:83558",
-                "teamIdExtern": 83558,
-                "teamName": "CLUB B\u00C0SQUET PUIG-REIG DENTAL CLARET",
-                "matchesPlayed": 18,
-                "playersCount": 12,
-                "categoryName": "C.c. Sots-25 Femen\u00ED",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Fase Regular \u00B7 Grupo 03",
-                "latestPhaseOptionValue": "source:20002",
-                "groupCode": "03",
-                "standingPosition": 9,
-                "record": {
-                  "wins": 4,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 724,
-                  "pointsAgainst": 1167
-                },
-                "pointDiff": -443,
-                "avgValuation": 18.055555555555557
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.t. Pre-mini Femen\u00ED",
         "levels": [
@@ -7083,49 +6803,14 @@
     "shortName": "C.E.B. SANT JORDI",
     "clubId": 35,
     "primaryTeamIdExtern": 81783,
-    "totalTeams": 2,
-    "totalMatches": 33,
-    "totalPlayers": 22,
-    "categoriesCount": 2,
+    "totalTeams": 1,
+    "totalMatches": 15,
+    "totalPlayers": 8,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 33 partidos",
-    "searchText": "CLUB ESPORTIU BASQUET SANT JORDI C.E.B. SANT JORDI C.t. Pre-mini Femen\u00ED Nivell C1 C.E.B. SANT JORDI U 25 FEM C.c. Sots-25 Femen\u00ED",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 15 partidos",
+    "searchText": "CLUB ESPORTIU BASQUET SANT JORDI C.E.B. SANT JORDI C.t. Pre-mini Femen\u00ED Nivell C1",
     "categories": [
-      {
-        "categoryName": "C.c. Sots-25 Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80080",
-                "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80080",
-                "teamIdExtern": 80080,
-                "teamName": "C.E.B. SANT JORDI U 25 FEM",
-                "matchesPlayed": 18,
-                "playersCount": 14,
-                "categoryName": "C.c. Sots-25 Femen\u00ED",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Fase Regular \u00B7 Grupo 03",
-                "latestPhaseOptionValue": "source:20002",
-                "groupCode": "03",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 13,
-                  "losses": 5,
-                  "ties": 0,
-                  "pointsFor": 979,
-                  "pointsAgainst": 780
-                },
-                "pointDiff": 199,
-                "avgValuation": 29.27777777777778
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.t. Pre-mini Femen\u00ED",
         "levels": [
@@ -8574,50 +8259,44 @@
     "clubId": 3,
     "primaryTeamIdExtern": 80181,
     "totalTeams": 11,
-    "totalMatches": 206,
-    "totalPlayers": 286,
+    "totalMatches": 205,
+    "totalPlayers": 285,
     "categoriesCount": 8,
-    "levelsCount": 5,
-    "meta": "11 equipos \u00B7 8 categorias \u00B7 206 partidos",
-    "searchText": "CLUB JOVENTUT BADALONA CLUB JOVENTUT BADAL BBC - JOVENTUT BADALONA B C.c. Infantil Femen\u00ED Preferent 1r. Any Liga Femenina De Baloncesto C. C. J\u00FAnior Femen\u00ED Preferent CIUTAT DE BADALONA JOVENTUT BADALONA 1 C.t. Pre-mini Femen\u00ED Nivell B1 JOVENTUT BADALONA A C.c. Cadet Femen\u00ED Preferent Preferent A C.c Infantil Femen\u00ED Preferent Nivell A JOVENTUT BADALONA B C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any C.t. Pre-mini Femen\u00ED 1r. Any JOVENTUT BADALONA VERD Nivell D",
+    "levelsCount": 4,
+    "meta": "11 equipos \u00B7 8 categorias \u00B7 205 partidos",
+    "searchText": "CLUB JOVENTUT BADALONA CLUB JOVENTUT BADAL BBC - JOVENTUT BADALONA B C.c. Infantil Femen\u00ED Preferent 1r. Any Liga Femenina De Baloncesto C. C. J\u00FAnior Femen\u00ED Preferent JOVENTUT BADALONA 1 C.t. Pre-mini Femen\u00ED Nivell B1 JOVENTUT BADALONA A C.c. Cadet Femen\u00ED Preferent Preferent A C.c Infantil Femen\u00ED Preferent Nivell A JOVENTUT BADALONA B C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any C.t. Pre-mini Femen\u00ED 1r. Any JOVENTUT BADALONA VERD Nivell D",
     "categories": [
       {
         "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
         "levels": [
           {
-            "levelKey": "CIUTAT DE BADALONA",
-            "levelName": "CIUTAT DE BADALONA",
+            "levelKey": "__no-level__",
+            "levelName": "Sin nivel visible",
             "teams": [
               {
                 "key": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85626",
                 "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85626",
                 "teamIdExtern": 85626,
                 "teamName": "CLUB JOVENTUT BADALONA",
-                "matchesPlayed": 4,
-                "playersCount": 13,
+                "matchesPlayed": 3,
+                "playersCount": 12,
                 "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-                "levelKey": "CIUTAT DE BADALONA",
-                "levelName": "CIUTAT DE BADALONA",
-                "phaseLabel": "Torneig Internacional Ciutat De Badalona \u00B7 CIUTAT DE BADALONA \u00B7 Grupo FASE FINAL",
-                "latestPhaseOptionValue": "source:21255",
-                "groupCode": "FASE FINAL",
+                "levelKey": "",
+                "levelName": "",
+                "phaseLabel": "Torneig Internacional Ciutat De Badalona \u00B7 Grupo 01",
+                "latestPhaseOptionValue": "source:21253",
+                "groupCode": "01",
                 "standingPosition": 2,
                 "record": {
-                  "wins": 3,
+                  "wins": 2,
                   "losses": 1,
                   "ties": 0,
-                  "pointsFor": 306,
-                  "pointsAgainst": 220
+                  "pointsFor": 232,
+                  "pointsAgainst": 153
                 },
-                "pointDiff": 86,
-                "avgValuation": 87
-              }
-            ]
-          },
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
+                "pointDiff": 79,
+                "avgValuation": 89
+              },
               {
                 "key": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80175",
                 "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80175",
@@ -10616,11 +10295,11 @@
     "clubId": 26,
     "primaryTeamIdExtern": 83018,
     "totalTeams": 2,
-    "totalMatches": 34,
+    "totalMatches": 35,
     "totalPlayers": 28,
     "categoriesCount": 2,
     "levelsCount": 2,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 34 partidos",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 35 partidos",
     "searchText": "JAC CLUB SANTS JAC SANTS BARCELONA U10 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B JAC SANTS BARCELONA U10 1 C.t. Pre-mini Femen\u00ED Nivell D1",
     "categories": [
       {
@@ -10670,24 +10349,24 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
                 "teamIdExtern": 83018,
                 "teamName": "JAC SANTS BARCELONA U10",
-                "matchesPlayed": 19,
+                "matchesPlayed": 20,
                 "playersCount": 12,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
-                "phaseLabel": "Segona Fase \u00B7 Nivell B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21630",
+                "phaseLabel": "Tercera Fase \u00B7 Nivell B \u00B7 Grupo 01",
+                "latestPhaseOptionValue": "source:21974",
                 "groupCode": "01",
                 "standingPosition": 1,
                 "record": {
                   "wins": 17,
-                  "losses": 2,
+                  "losses": 3,
                   "ties": 0,
-                  "pointsFor": 1270,
-                  "pointsAgainst": 411
+                  "pointsFor": 1308,
+                  "pointsAgainst": 480
                 },
-                "pointDiff": 859,
-                "avgValuation": 48.68421052631579
+                "pointDiff": 828,
+                "avgValuation": 47.1
               }
             ]
           }
@@ -11471,13 +11150,13 @@
     "shortName": "S.E. SANT JOAN MATA",
     "clubId": 92,
     "primaryTeamIdExtern": 82822,
-    "totalTeams": 4,
-    "totalMatches": 81,
-    "totalPlayers": 55,
-    "categoriesCount": 4,
+    "totalTeams": 3,
+    "totalMatches": 61,
+    "totalPlayers": 43,
+    "categoriesCount": 3,
     "levelsCount": 1,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 81 partidos",
-    "searchText": "SECCIO ESPORTIVA SANT JOAN MATA S.E. SANT JOAN MATA S. E. SANT JOAN DE MATA 2a. Territorial S\u00E8nior Femen\u00ED C.t. Pre-mini Femen\u00ED Nivell D2 SANT IGNASI C.c. Segona Categoria Femenina SANT IGNASI B C.c. Sots-25 Femen\u00ED",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 61 partidos",
+    "searchText": "SECCIO ESPORTIVA SANT JOAN MATA S.E. SANT JOAN MATA S. E. SANT JOAN DE MATA 2a. Territorial S\u00E8nior Femen\u00ED C.t. Pre-mini Femen\u00ED Nivell D2 SANT IGNASI C.c. Segona Categoria Femenina",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -11544,41 +11223,6 @@
                 },
                 "pointDiff": -141,
                 "avgValuation": 20.782608695652176
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Sots-25 Femen\u00ED",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80538",
-                "teamKey": "2025-2026::C.C. SOTS-25 FEMENI::TEAM:80538",
-                "teamIdExtern": 80538,
-                "teamName": "SANT IGNASI B",
-                "matchesPlayed": 20,
-                "playersCount": 12,
-                "categoryName": "C.c. Sots-25 Femen\u00ED",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Fase Regular \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:20000",
-                "groupCode": "01",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 13,
-                  "losses": 7,
-                  "ties": 0,
-                  "pointsFor": 949,
-                  "pointsAgainst": 831
-                },
-                "pointDiff": 118,
-                "avgValuation": 23.2
               }
             ]
           }

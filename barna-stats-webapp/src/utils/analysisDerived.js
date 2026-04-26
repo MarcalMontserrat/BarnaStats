@@ -1,3 +1,5 @@
+import {sortFilterOptions} from "./filterOptions.js";
+
 export function normalizeTeamName(value) {
     return String(value ?? "")
         .normalize("NFD")
@@ -453,7 +455,7 @@ export function buildCompetitionPhaseOptions(phases) {
         });
     });
 
-    return [...options.values()].sort(comparePhaseDisplayOrder);
+    return sortFilterOptions([...options.values()], comparePhaseDisplayOrder);
 }
 
 export function buildTeamPhaseOptions(phases, levelValue = "all") {
@@ -530,7 +532,7 @@ export function buildLevelOptions(teamContexts) {
         options.set(value, {value, label});
     });
 
-    return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
+    return sortFilterOptions([...options.values()]);
 }
 
 export function buildLevelOptionsFromRows(rows) {
@@ -547,7 +549,7 @@ export function buildLevelOptionsFromRows(rows) {
         options.set(value, {value, label});
     });
 
-    return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
+    return sortFilterOptions([...options.values()]);
 }
 
 export function buildCategoryOptionsFromRows(rows) {
@@ -563,7 +565,7 @@ export function buildCategoryOptionsFromRows(rows) {
         options.set(value, {value, label: value});
     });
 
-    return [...options.values()].sort((a, b) => a.label.localeCompare(b.label, "es"));
+    return sortFilterOptions([...options.values()]);
 }
 
 export function buildCategoryOptions(teamContexts) {
@@ -584,6 +586,53 @@ export function filterRowsByLevel(rows, levelValue) {
     }
 
     return (rows ?? []).filter((row) => getLevelValue(row) === String(levelValue));
+}
+
+export function getCategoryGender(categoryName) {
+    const normalized = String(categoryName ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toUpperCase();
+
+    if (/\b(?:FEMENI|FEM\.)/.test(normalized)) {
+        return "F";
+    }
+
+    if (/\bMASCULI/.test(normalized)) {
+        return "M";
+    }
+
+    return "";
+}
+
+export function buildGenderOptions(rows) {
+    const genders = new Set();
+
+    (rows ?? []).forEach((row) => {
+        const gender = getCategoryGender(row?.categoryName);
+        if (gender) {
+            genders.add(gender);
+        }
+    });
+
+    const options = [];
+    if (genders.has("F")) {
+        options.push({value: "F", label: "Femenino"});
+    }
+
+    if (genders.has("M")) {
+        options.push({value: "M", label: "Masculino"});
+    }
+
+    return options;
+}
+
+export function filterRowsByGender(rows, gender) {
+    if (!gender || gender === "all") {
+        return rows ?? [];
+    }
+
+    return (rows ?? []).filter((row) => getCategoryGender(row?.categoryName) === gender);
 }
 
 function getLevelValue(row) {
