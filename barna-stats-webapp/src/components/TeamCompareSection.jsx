@@ -202,11 +202,11 @@ function StatRow({label, value1, value2, higherIsBetter = true, lowerIsBetter = 
 
     return (
         <>
-            <div style={{...styles.metricCard, ...(team1Wins ? {} : {})}}>
+            <div style={styles.metricCard}>
                 <div style={styles.metricLabel}>{label}</div>
                 <div style={{...styles.metricValue, ...(team1Wins ? styles.metricWinner : {})}}>{value1 ?? "—"}</div>
             </div>
-            <div style={{...styles.metricCard, ...(team2Wins ? {} : {})}}>
+            <div style={styles.metricCard}>
                 <div style={styles.metricLabel}>{label}</div>
                 <div style={{...styles.metricValue, ...(team2Wins ? styles.metricWinner : {})}}>{value2 ?? "—"}</div>
             </div>
