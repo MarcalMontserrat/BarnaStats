@@ -1036,62 +1036,195 @@ public static class PrecomputedDatasetsBuilder
     private sealed class ClubBrandingResolver
     {
         private static readonly Regex SplitCandidateRegex = new(@"\s+-\s+|/|\||,|\(|\)", RegexOptions.Compiled);
+        private static readonly Regex ClubMarkerRegex = new(@"\b(AE|AB|BC|BF|CB|CE|UE|BASQUET|BASKET|JET|SESE|AESE|LLUISOS|MANYANET)\b", RegexOptions.Compiled);
+        private static readonly Regex DerivedClubSuffixRegex = new(
+            @"\b(U\d{1,2}|PR[0-9A-Z]*|J[0-9A-Z]*|C[0-9A-Z]*|I[0-9A-Z]*|SF|JF|CF|IF|1ER ANY|2N ANY|3ER ANY|MINI|PREMINI|SOTS ?\d+)\b.*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex DerivedTrailingVariantRegex = new(
+            @"(?:\s+|^)(A|B|C|D|VERMELL|VERMELLA|NEGRE|NEGRA|VERD|VERDA|GROC|GROGA|BLAU|BLAUA|LILA|TARONJA|ROSA|BLANC|BLANCA)\s*$",
+            RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly HashSet<string> ClubTokenStopWords = new(StringComparer.Ordinal)
+        {
+            "A",
+            "AB",
+            "ADB",
+            "AE",
+            "AESE",
+            "ANY",
+            "ASSOCIACIO",
+            "ATENEU",
+            "B",
+            "BASQUET",
+            "BASQUETB",
+            "BASQUETBOL",
+            "BASKET",
+            "BC",
+            "BF",
+            "BLAU",
+            "BLAUA",
+            "BLANC",
+            "BLANCA",
+            "C",
+            "CADET",
+            "CB",
+            "CE",
+            "CLUB",
+            "CLUBS",
+            "D",
+            "DE",
+            "DEL",
+            "EL",
+            "ESCOLA",
+            "ESPORTIVA",
+            "FEMENI",
+            "GROC",
+            "GROGA",
+            "I",
+            "INFANTIL",
+            "JET",
+            "JUNIOR",
+            "L",
+            "LA",
+            "LES",
+            "LILA",
+            "MASCULI",
+            "MINI",
+            "NEGRE",
+            "NEGRA",
+            "NIVELL",
+            "PREMINI",
+            "PROMOCIO",
+            "QUARTA",
+            "ROSA",
+            "SENIOR",
+            "SEGONA",
+            "SESE",
+            "TERCERA",
+            "TARONJA",
+            "U",
+            "UE",
+            "VERD",
+            "VERDA",
+            "VERMELL",
+            "VERMELLA",
+            "Y"
+        };
+
         private readonly IReadOnlyDictionary<string, string> _teamClubMap;
         private readonly IReadOnlyDictionary<string, ClubBrandingCatalogEntry> _clubsByKey;
         private readonly IReadOnlyDictionary<string, ClubBrandingCatalogEntry> _clubsByAlias;
+        private readonly IReadOnlyList<ClubSearchEntry> _searchEntries;
+        private readonly IReadOnlyDictionary<string, HashSet<string>> _singleTokenClubKeys;
 
         private ClubBrandingResolver(
             IReadOnlyDictionary<string, string> teamClubMap,
             IReadOnlyDictionary<string, ClubBrandingCatalogEntry> clubsByKey,
-            IReadOnlyDictionary<string, ClubBrandingCatalogEntry> clubsByAlias)
+            IReadOnlyDictionary<string, ClubBrandingCatalogEntry> clubsByAlias,
+            IReadOnlyList<ClubSearchEntry> searchEntries,
+            IReadOnlyDictionary<string, HashSet<string>> singleTokenClubKeys)
         {
             _teamClubMap = teamClubMap;
             _clubsByKey = clubsByKey;
             _clubsByAlias = clubsByAlias;
+            _searchEntries = searchEntries;
+            _singleTokenClubKeys = singleTokenClubKeys;
         }
 
         public static ClubBrandingResolver Load(string repoRoot)
         {
             var dataDir = Path.Combine(repoRoot, "barna-stats-webapp", "src", "data");
-            var teamClubMap = ParseGeneratedJs<Dictionary<string, string>>(
-                                  Path.Combine(dataDir, "teamClubMap.generated.js"),
-                                  "TEAM_CLUB_MAP")
-                              ?? new Dictionary<string, string>(StringComparer.Ordinal);
-            var clubCatalog = ParseGeneratedJs<List<ClubBrandingCatalogEntry>>(
-                                  Path.Combine(dataDir, "clubBrandingCatalog.generated.js"),
-                                  "CLUB_BRANDING_CATALOG")
-                              ?? [];
-            var clubsByKey = clubCatalog
+            var generatedTeamClubMap = ParseGeneratedJs<Dictionary<string, string>>(
+                                           Path.Combine(dataDir, "teamClubMap.generated.js"),
+                                           "TEAM_CLUB_MAP")
+                                       ?? new Dictionary<string, string>(StringComparer.Ordinal);
+            var generatedClubCatalog = ParseGeneratedJs<List<ClubBrandingCatalogEntry>>(
+                                           Path.Combine(dataDir, "clubBrandingCatalog.generated.js"),
+                                           "CLUB_BRANDING_CATALOG")
+                                       ?? [];
+            var supplemental = LoadJson<ClubBrandingSupplementalData>(
+                Path.Combine(dataDir, "clubBrandingSupplemental.json"))
+                               ?? new ClubBrandingSupplementalData();
+
+            var teamClubMap = new Dictionary<string, string>(generatedTeamClubMap, StringComparer.Ordinal);
+            foreach (var entry in supplemental.TeamClubMap)
+            {
+                teamClubMap[entry.Key] = entry.Value;
+            }
+
+            var clubCatalog = generatedClubCatalog
+                .Concat(supplemental.Clubs ?? [])
                 .Where(entry => !string.IsNullOrWhiteSpace(entry.ClubKey))
+                .GroupBy(entry => entry.ClubKey, StringComparer.Ordinal)
+                .Select(MergeClubEntries)
+                .ToList();
+
+            var clubsByKey = clubCatalog
                 .ToDictionary(entry => entry.ClubKey, entry => entry, StringComparer.Ordinal);
             var clubsByAlias = new Dictionary<string, ClubBrandingCatalogEntry>(StringComparer.Ordinal);
+            var searchEntries = new List<ClubSearchEntry>();
+            var singleTokenClubKeys = new Dictionary<string, HashSet<string>>(StringComparer.Ordinal);
 
             foreach (var club in clubCatalog)
             {
                 foreach (var alias in new[] { club.ClubName, club.ShortName }.Concat(club.Aliases ?? []))
                 {
                     var normalizedAlias = NormalizeLookupValue(alias);
-                    if (!string.IsNullOrWhiteSpace(normalizedAlias) && !clubsByAlias.ContainsKey(normalizedAlias))
+                    if (string.IsNullOrWhiteSpace(normalizedAlias))
+                    {
+                        continue;
+                    }
+
+                    if (!clubsByAlias.ContainsKey(normalizedAlias))
                     {
                         clubsByAlias[normalizedAlias] = club;
+                    }
+
+                    var tokens = BuildSignificantTokens(normalizedAlias);
+                    searchEntries.Add(new ClubSearchEntry(club, normalizedAlias, tokens));
+
+                    if (tokens.Count == 1)
+                    {
+                        var token = tokens[0];
+                        if (!singleTokenClubKeys.TryGetValue(token, out var clubKeys))
+                        {
+                            clubKeys = new HashSet<string>(StringComparer.Ordinal);
+                            singleTokenClubKeys[token] = clubKeys;
+                        }
+
+                        clubKeys.Add(club.ClubKey);
                     }
                 }
             }
 
-            return new ClubBrandingResolver(teamClubMap, clubsByKey, clubsByAlias);
+            return new ClubBrandingResolver(teamClubMap, clubsByKey, clubsByAlias, searchEntries, singleTokenClubKeys);
         }
 
-        public ClubBrandingCatalogEntry? Resolve(int teamIdExtern, string teamName)
+        public ClubBrandingCatalogEntry Resolve(int teamIdExtern, string teamName)
         {
             if (teamIdExtern > 0 && _teamClubMap.TryGetValue(teamIdExtern.ToString(CultureInfo.InvariantCulture), out var clubKey))
             {
-                return _clubsByKey.GetValueOrDefault(clubKey);
+                var mappedClub = _clubsByKey.GetValueOrDefault(clubKey);
+                if (mappedClub is not null)
+                {
+                    return mappedClub;
+                }
             }
 
-            return ResolveByName(teamName);
+            return ResolveOfficialByName(teamName) ?? BuildDerivedClub(teamName);
         }
 
-        private ClubBrandingCatalogEntry? ResolveByName(string teamName)
+        private ClubBrandingCatalogEntry? ResolveOfficialByName(string teamName)
+        {
+            var exactMatch = ResolveByAlias(teamName);
+            if (exactMatch is not null)
+            {
+                return exactMatch;
+            }
+
+            return ResolveByTokens(teamName);
+        }
+
+        private ClubBrandingCatalogEntry? ResolveByAlias(string teamName)
         {
             ClubBrandingCatalogEntry? bestMatch = null;
             var bestScore = -1;
@@ -1126,7 +1259,147 @@ public static class PrecomputedDatasetsBuilder
             return bestMatch;
         }
 
-        private static IEnumerable<string> BuildLookupCandidates(string rawValue)
+        private ClubBrandingCatalogEntry? ResolveByTokens(string teamName)
+        {
+            var teamTokens = BuildLookupCandidates(teamName)
+                .SelectMany(BuildSignificantTokens)
+                .Distinct(StringComparer.Ordinal)
+                .ToArray();
+            if (teamTokens.Length == 0)
+            {
+                return null;
+            }
+
+            ClubBrandingCatalogEntry? bestMatch = null;
+            var bestScore = int.MinValue;
+            var bestOverlapCount = -1;
+            var bestAliasTokenCount = -1;
+
+            foreach (var searchEntry in _searchEntries)
+            {
+                if (searchEntry.Tokens.Count == 0)
+                {
+                    continue;
+                }
+
+                var overlapTokens = searchEntry.Tokens
+                    .Where(token => teamTokens.Contains(token, StringComparer.Ordinal))
+                    .Distinct(StringComparer.Ordinal)
+                    .ToArray();
+                if (overlapTokens.Length == 0)
+                {
+                    continue;
+                }
+
+                var allAliasTokensInTeam = searchEntry.Tokens.All(token => teamTokens.Contains(token, StringComparer.Ordinal));
+                var coverageAlias = (double)overlapTokens.Length / searchEntry.Tokens.Count;
+                var coverageTeam = (double)overlapTokens.Length / teamTokens.Length;
+                var hasUniqueSingleTokenMatch = overlapTokens.Length == 1
+                                                && searchEntry.Tokens.Count == 1
+                                                && overlapTokens[0].Length >= 7
+                                                && _singleTokenClubKeys.TryGetValue(overlapTokens[0], out var clubKeys)
+                                                && clubKeys.Count == 1
+                                                && !teamTokens.Any(token => token.Length >= 4
+                                                                            && !searchEntry.Tokens.Contains(token, StringComparer.Ordinal));
+                var strongMatch = (overlapTokens.Length >= 2 && allAliasTokensInTeam)
+                                  || (overlapTokens.Length >= 2 && coverageAlias >= 0.75 && coverageTeam >= 0.4)
+                                  || hasUniqueSingleTokenMatch;
+                if (!strongMatch)
+                {
+                    continue;
+                }
+
+                var overlapLength = overlapTokens.Sum(token => token.Length);
+                var score = (allAliasTokensInTeam ? 100 : 0)
+                            + overlapTokens.Length * 20
+                            + overlapLength
+                            + (int)Math.Round(coverageAlias * 10)
+                            + (int)Math.Round(coverageTeam * 5)
+                            - searchEntry.Tokens.Count;
+
+                if (score > bestScore
+                    || (score == bestScore && overlapTokens.Length > bestOverlapCount)
+                    || (score == bestScore && overlapTokens.Length == bestOverlapCount && searchEntry.Tokens.Count > bestAliasTokenCount))
+                {
+                    bestMatch = searchEntry.Club;
+                    bestScore = score;
+                    bestOverlapCount = overlapTokens.Length;
+                    bestAliasTokenCount = searchEntry.Tokens.Count;
+                }
+            }
+
+            return bestMatch;
+        }
+
+        private static ClubBrandingCatalogEntry BuildDerivedClub(string teamName)
+        {
+            var fallbackLabel = BuildDerivedClubLabel(teamName);
+            var normalizedKey = NormalizeLookupValue(fallbackLabel);
+            if (string.IsNullOrWhiteSpace(normalizedKey))
+            {
+                normalizedKey = "EQUIPO";
+                fallbackLabel = NormalizeValue(teamName);
+            }
+
+            var clubKey = $"derived-club:{normalizedKey.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal)}";
+            return new ClubBrandingCatalogEntry
+            {
+                ClubKey = clubKey,
+                ClubId = 0,
+                ClubName = fallbackLabel,
+                ShortName = fallbackLabel,
+                Aliases = [fallbackLabel]
+            };
+        }
+
+        private static string BuildDerivedClubLabel(string teamName)
+        {
+            var rawParts = SplitCandidateRegex.Split(NormalizeValue(teamName))
+                .Select(NormalizeValue)
+                .Where(part => !string.IsNullOrWhiteSpace(part))
+                .ToArray();
+            if (rawParts.Length == 0)
+            {
+                return NormalizeValue(teamName);
+            }
+
+            var bestPart = rawParts
+                .OrderByDescending(ScoreDerivedClubPart)
+                .ThenByDescending(part => part.Length)
+                .First();
+            var cleaned = bestPart;
+
+            while (!string.IsNullOrWhiteSpace(cleaned))
+            {
+                var next = DerivedClubSuffixRegex.Replace(cleaned, "").Trim().Trim('-', '/', '|');
+                next = DerivedTrailingVariantRegex.Replace(next, "").Trim().Trim('-', '/', '|');
+                if (string.Equals(next, cleaned, StringComparison.Ordinal))
+                {
+                    break;
+                }
+
+                cleaned = next;
+            }
+
+            return string.IsNullOrWhiteSpace(cleaned) ? bestPart : cleaned;
+        }
+
+        private static int ScoreDerivedClubPart(string value)
+        {
+            var normalized = NormalizeLookupValue(value);
+            if (string.IsNullOrWhiteSpace(normalized))
+            {
+                return 0;
+            }
+
+            var tokens = BuildSignificantTokens(normalized);
+            return (ClubMarkerRegex.IsMatch(normalized) ? 25 : 0)
+                   + tokens.Count * 8
+                   + tokens.Sum(token => Math.Min(token.Length, 10))
+                   + Math.Min(normalized.Length, 20);
+        }
+
+        private static IReadOnlyList<string> BuildLookupCandidates(string rawValue)
         {
             var expanded = new HashSet<string>(StringComparer.Ordinal);
             var initial = NormalizeValue(rawValue);
@@ -1169,7 +1442,38 @@ public static class PrecomputedDatasetsBuilder
                 }
             }
 
-            return candidates;
+            return [.. candidates];
+        }
+
+        private static List<string> BuildSignificantTokens(string value)
+        {
+            return NormalizeLookupValue(value)
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                .Where(token => token.Length > 1
+                                && !Regex.IsMatch(token, @"^\d+$", RegexOptions.None)
+                                && !ClubTokenStopWords.Contains(token))
+                .Distinct(StringComparer.Ordinal)
+                .ToList();
+        }
+
+        private static ClubBrandingCatalogEntry MergeClubEntries(IGrouping<string, ClubBrandingCatalogEntry> group)
+        {
+            var entries = group.ToList();
+            var primary = entries[0];
+            var aliases = entries
+                .SelectMany(entry => entry.Aliases ?? [])
+                .Where(alias => !string.IsNullOrWhiteSpace(alias))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            return new ClubBrandingCatalogEntry
+            {
+                ClubKey = primary.ClubKey,
+                ClubId = entries.Select(entry => entry.ClubId).FirstOrDefault(id => id > 0),
+                ClubName = entries.Select(entry => NormalizeValue(entry.ClubName)).FirstOrDefault(value => !string.IsNullOrWhiteSpace(value)) ?? "",
+                ShortName = entries.Select(entry => NormalizeValue(entry.ShortName)).FirstOrDefault(value => !string.IsNullOrWhiteSpace(value)) ?? "",
+                Aliases = aliases
+            };
         }
 
         private static T? ParseGeneratedJs<T>(string path, string exportName)
@@ -1197,6 +1501,39 @@ public static class PrecomputedDatasetsBuilder
                 PropertyNameCaseInsensitive = true
             });
         }
+
+        private static T? LoadJson<T>(string path)
+        {
+            if (!File.Exists(path))
+            {
+                return default;
+            }
+
+            return JsonSerializer.Deserialize<T>(File.ReadAllText(path), new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+        }
+
+        private sealed class ClubSearchEntry
+        {
+            public ClubSearchEntry(ClubBrandingCatalogEntry club, string alias, IReadOnlyList<string> tokens)
+            {
+                Club = club;
+                Alias = alias;
+                Tokens = tokens;
+            }
+
+            public ClubBrandingCatalogEntry Club { get; }
+            public string Alias { get; }
+            public IReadOnlyList<string> Tokens { get; }
+        }
+    }
+
+    private sealed class ClubBrandingSupplementalData
+    {
+        public List<ClubBrandingCatalogEntry> Clubs { get; init; } = [];
+        public Dictionary<string, string> TeamClubMap { get; init; } = new(StringComparer.Ordinal);
     }
 
     public sealed class ClubBrandingCatalogEntry

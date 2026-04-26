@@ -1,0 +1,29 @@
+{
+  "clubs": [
+    {
+      "clubKey": "manual-club:ue-mataro",
+      "clubId": 0,
+      "clubName": "U.E. MATARÓ",
+      "shortName": "U.E. MATARÓ",
+      "aliases": [
+        "U.E. MATARÓ",
+        "U.E.MATARÓ",
+        "ROMAKURUMA U.E.MATARÓ",
+        "U E MATARO",
+        "UE MATARO",
+        "UNIO ESPORTIVA MATARO"
+      ]
+    },
+    {
+      "clubKey": "fcbq-club:134",
+      "clubId": 134,
+      "clubName": "CLUB BASQUET BOET MARESME MATARO",
+      "shortName": "C.B. MARESME BOET M",
+      "aliases": [
+        "BOET MATARO",
+        "TALENOM BOET MATARO"
+      ]
+    }
+  ],
+  "teamClubMap": {}
+}

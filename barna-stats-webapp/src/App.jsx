@@ -974,10 +974,36 @@ function App() {
         meta: club.meta,
         searchText: `${club.searchText} ${club.meta}`
     }))), [currentClubEntities]);
+    const clubKeyByTeamIdentity = useMemo(() => {
+        const nextMap = new Map();
+
+        currentClubEntities.forEach((club) => {
+            club?.categories?.forEach((category) => {
+                category?.levels?.forEach((level) => {
+                    level?.teams?.forEach((team) => {
+                        if (team?.teamKey) {
+                            nextMap.set(`key:${team.teamKey}`, club.key);
+                        }
+
+                        if (team?.teamIdExtern) {
+                            nextMap.set(`id:${team.teamIdExtern}`, club.key);
+                        }
+                    });
+                });
+            });
+        });
+
+        return nextMap;
+    }, [currentClubEntities]);
     const selectedTeamBranding = selectedTeamSummary
         ? getClubBrandingForTeam(selectedTeamSummary.teamIdExtern, selectedTeamSummary.teamName)
         : null;
-    const selectedTeamClubKey = selectedTeamBranding?.clubKey ?? "";
+    const selectedTeamClubKey = selectedTeamSummary
+        ? (clubKeyByTeamIdentity.get(`key:${selectedTeamSummary.teamKey}`)
+            ?? clubKeyByTeamIdentity.get(`id:${selectedTeamSummary.teamIdExtern}`)
+            ?? selectedTeamBranding?.clubKey
+            ?? "")
+        : "";
     const fallbackClubKey = currentClubEntities.some((club) => club.key === selectedTeamClubKey)
         ? selectedTeamClubKey
         : (currentClubEntities[0]?.key ?? "");
