@@ -5,6 +5,7 @@ export const COMPETITION_ROUTE = "#/competition";
 export const CLUB_ROUTE = "#/club";
 export const HISTORY_ROUTE = "#/history";
 export const PLAYERS_ROUTE = "#/players";
+export const COMPARE_ROUTE = "#/compare";
 
 const TEAM_ROUTE_PREFIX = `${DASHBOARD_ROUTE}/`;
 const CLUB_ROUTE_PREFIX = `${CLUB_ROUTE}/`;
@@ -65,6 +66,10 @@ export function buildPlayersRoute(playerKey = "") {
     return buildHash(PLAYERS_ROUTE, {player: playerKey});
 }
 
+export function buildCompareRoute({tab = "", team1 = "", team2 = "", player1 = "", player2 = ""} = {}) {
+    return buildHash(COMPARE_ROUTE, {tab, team1, team2, player1, player2});
+}
+
 export function parseHash(hash) {
     const [path, queryString = ""] = String(hash ?? "").split("?");
     const params = new URLSearchParams(queryString);
@@ -75,6 +80,11 @@ export function parseHash(hash) {
     const competitionCategory = params.get("category") ?? "";
     const competitionLevel = params.get("level") ?? "";
     const competitionPhase = params.get("phase") ?? "";
+    const compareTab = params.get("tab") ?? "";
+    const compareTeam1 = params.get("team1") ?? "";
+    const compareTeam2 = params.get("team2") ?? "";
+    const comparePlayer1 = params.get("player1") ?? "";
+    const comparePlayer2 = params.get("player2") ?? "";
 
     if (path === SYNC_ROUTE) {
         return {
@@ -85,7 +95,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -98,7 +113,12 @@ export function parseHash(hash) {
             competitionTab,
             competitionCategory,
             competitionLevel,
-            competitionPhase
+            competitionPhase,
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -111,7 +131,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -124,7 +149,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -137,7 +167,30 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
+        };
+    }
+
+    if (path === COMPARE_ROUTE) {
+        return {
+            route: "compare",
+            teamKey: null,
+            clubKey: "",
+            playerKey: "",
+            competitionTab: "",
+            competitionCategory: "",
+            competitionLevel: "",
+            competitionPhase: "",
+            compareTab,
+            compareTeam1,
+            compareTeam2,
+            comparePlayer1,
+            comparePlayer2
         };
     }
 
@@ -150,7 +203,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -165,7 +223,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -180,7 +243,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -195,7 +263,12 @@ export function parseHash(hash) {
             competitionTab: "",
             competitionCategory: "",
             competitionLevel: "",
-            competitionPhase: ""
+            competitionPhase: "",
+            compareTab: "",
+            compareTeam1: "",
+            compareTeam2: "",
+            comparePlayer1: "",
+            comparePlayer2: ""
         };
     }
 
@@ -207,7 +280,12 @@ export function parseHash(hash) {
         competitionTab: "",
         competitionCategory: "",
         competitionLevel: "",
-        competitionPhase: ""
+        competitionPhase: "",
+        compareTab: "",
+        compareTeam1: "",
+        compareTeam2: "",
+        comparePlayer1: "",
+        comparePlayer2: ""
     };
 }
 
@@ -249,6 +327,14 @@ export function getPageMetadata(route, currentSeasonLabel = "") {
             title: "Jugadoras",
             note: "Buscador histórico de jugadoras con acumulado global y detalle temporada a temporada.",
             seasonLabel: ""
+        };
+    }
+
+    if (route === "compare") {
+        return {
+            title: "Comparador",
+            note: "Compara dos equipos o dos jugadoras cara a cara.",
+            seasonLabel: currentSeasonLabel
         };
     }
 
