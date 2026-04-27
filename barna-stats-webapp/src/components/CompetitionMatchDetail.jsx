@@ -257,7 +257,8 @@ function CompetitionMatchDetail({
     teamDetailsByKey,
     analysisVersion,
     onTeamNavigate,
-    onPlayerNavigate
+    onPlayerNavigate,
+    enableMatchReportOnDemand = true
 }) {
     const homeTeam = teamDetailsByKey.get(match.homeTeamKey) ?? {
         teamKey: match.homeTeamKey,
@@ -273,22 +274,41 @@ function CompetitionMatchDetail({
         matchesFile: "",
         playersFile: ""
     };
+    const sharedReportMatchesUrl = !enableMatchReportOnDemand
+        ? (homeTeam.matchesFile
+            ? `data/${homeTeam.matchesFile}?v=${analysisVersion}`
+            : (awayTeam.matchesFile ? `data/${awayTeam.matchesFile}?v=${analysisVersion}` : null))
+        : null;
+    const {analysis: sharedReportMatches} = useAnalysisData(sharedReportMatchesUrl);
+    const sharedReportSummary = useMemo(
+        () => (Array.isArray(sharedReportMatches)
+            ? sharedReportMatches.find((summary) => Number(summary.matchWebId) === Number(match.matchWebId)) ?? null
+            : null),
+        [match.matchWebId, sharedReportMatches]
+    );
+    const sharedMatchReport = sharedReportSummary?.matchReport ?? "";
+    const sharedMatchReportGeneratedAtUtc = sharedReportSummary?.matchReportGeneratedAtUtc ?? null;
+    const sharedMatchReportModel = sharedReportSummary?.matchReportModel ?? "";
+    const showSharedReport = enableMatchReportOnDemand || !!sharedMatchReport;
 
     return (
         <div style={styles.shell}>
-            <div style={styles.reportShell}>
-                <div style={styles.reportEyebrow}>Gemini</div>
-                <div style={styles.reportCaption}>
-                    Este análisis es único para todo el partido y se comparte entre el equipo local y el visitante.
+            {showSharedReport ? (
+                <div style={styles.reportShell}>
+                    <div style={styles.reportEyebrow}>Gemini</div>
+                    <div style={styles.reportCaption}>
+                        Este análisis es único para todo el partido y se comparte entre el equipo local y el visitante.
+                    </div>
+                    <MatchReportPanel
+                        matchWebId={match.matchWebId}
+                        matchReport={sharedMatchReport}
+                        matchReportGeneratedAtUtc={sharedMatchReportGeneratedAtUtc}
+                        matchReportModel={sharedMatchReportModel}
+                        subtitle="Análisis compartido del partido para ambos equipos. Si ya se generó, se carga desde la caché on demand."
+                        enableOnDemand={enableMatchReportOnDemand}
+                    />
                 </div>
-                <MatchReportPanel
-                    matchWebId={match.matchWebId}
-                    matchReport=""
-                    matchReportGeneratedAtUtc={null}
-                    matchReportModel=""
-                    subtitle="Análisis compartido del partido para ambos equipos. Si ya se generó, se carga desde la caché on demand."
-                />
-            </div>
+            ) : null}
             <div style={styles.grid}>
                 <CompetitionMatchTeamDetail
                     match={match}

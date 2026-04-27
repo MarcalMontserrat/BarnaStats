@@ -119,10 +119,11 @@ function MatchReportPanel({
     matchReportModel,
     subtitle,
     focusTeamIdExtern,
-    focusTeamName
+    focusTeamName,
+    enableOnDemand = true
 }) {
     const [reportState, setReportState] = useState(() =>
-        Number(focusTeamIdExtern) > 0
+        enableOnDemand && Number(focusTeamIdExtern) > 0
             ? getInitialReportState("", null, "")
             : getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchReportModel));
     const [loading, setLoading] = useState(false);
@@ -131,13 +132,13 @@ function MatchReportPanel({
 
     useEffect(() => {
         setReportState(
-            Number(focusTeamIdExtern) > 0
+            enableOnDemand && Number(focusTeamIdExtern) > 0
                 ? getInitialReportState("", null, "")
                 : getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchReportModel)
         );
         setError("");
 
-        if (!matchWebId) {
+        if (!enableOnDemand || !matchWebId) {
             return undefined;
         }
 
@@ -186,7 +187,7 @@ function MatchReportPanel({
         return () => {
             cancelled = true;
         };
-    }, [matchWebId, matchReport, matchReportGeneratedAtUtc, matchReportModel, focusTeamIdExtern]);
+    }, [enableOnDemand, matchWebId, matchReport, matchReportGeneratedAtUtc, matchReportModel, focusTeamIdExtern]);
 
     async function generateReport(forceRefresh) {
         if (!matchWebId) {
@@ -221,6 +222,10 @@ function MatchReportPanel({
         }
     }
 
+    if (!enableOnDemand && !reportState.summary) {
+        return null;
+    }
+
     if (!matchWebId && !reportState.summary) {
         return null;
     }
@@ -244,12 +249,12 @@ function MatchReportPanel({
                     <div style={styles.title}>Análisis del partido</div>
                     <div style={styles.subtitle}>
                         {subtitle ?? "Resumen on demand generado con Gemini a partir de los stats y el play-by-play ya descargados."}
-                        {Number(focusTeamIdExtern) > 0 && focusTeamName
+                        {enableOnDemand && Number(focusTeamIdExtern) > 0 && focusTeamName
                             ? ` En esta vista, el análisis se enfoca en ${focusTeamName}.`
                             : ""}
                     </div>
                 </div>
-                {matchWebId ? (
+                {enableOnDemand && matchWebId ? (
                     <button
                         type="button"
                         style={{
@@ -264,7 +269,7 @@ function MatchReportPanel({
                 ) : null}
             </div>
 
-            {loading && !hasReport ? (
+            {enableOnDemand && loading && !hasReport ? (
                 <div style={styles.statusText}>Buscando si ya existe un análisis generado para este partido...</div>
             ) : null}
 
@@ -272,7 +277,7 @@ function MatchReportPanel({
                 <div style={styles.errorText}>{error}</div>
             ) : null}
 
-            {!hasReport && !loading ? (
+            {!hasReport && !loading && enableOnDemand ? (
                 <div style={styles.statusText}>
                     Todavía no hay análisis guardado para este partido. Puedes pedirlo ahora mismo desde aquí.
                 </div>

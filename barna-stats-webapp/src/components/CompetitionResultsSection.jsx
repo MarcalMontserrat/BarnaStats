@@ -305,7 +305,8 @@ function CompetitionResultsSection({
     onTeamNavigate,
     onPlayerNavigate,
     openMatches,
-    onToggleMatch
+    onToggleMatch,
+    enableMatchReportOnDemand = true
 }) {
     const sortedFilteredMatches = [...filterRowsByCategory(
         filterRowsByLevel(
@@ -509,6 +510,7 @@ function CompetitionResultsSection({
                                             analysisVersion={analysisVersion}
                                             onTeamNavigate={onTeamNavigate}
                                             onPlayerNavigate={onPlayerNavigate}
+                                            enableMatchReportOnDemand={enableMatchReportOnDemand}
                                         />
                                     </div>
                                 ) : null}

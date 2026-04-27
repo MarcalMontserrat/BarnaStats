@@ -620,6 +620,7 @@ function navigateToHash(hash) {
 
 function App() {
     const syncUiEnabled = import.meta.env.VITE_ENABLE_SYNC_UI !== "false";
+    const matchReportOnDemandEnabled = syncUiEnabled;
     const initialHashState = parseHash(window.location.hash);
     const [analysisVersion, setAnalysisVersion] = useState(() => Date.now());
     const [route, setRoute] = useState(() => initialHashState.route);
@@ -1990,6 +1991,7 @@ function App() {
                                     onToggleMatch={handleToggleMatch}
                                     onTeamNavigate={handleTeamNavigate}
                                     onPlayerNavigate={handlePlayerNavigate}
+                                    enableMatchReportOnDemand={matchReportOnDemandEnabled}
                                 />
                             </Suspense>
                         ) : null}
@@ -2135,6 +2137,7 @@ function App() {
                                     onPlayerNavigate={handleCompetitionPlayerNavigate}
                                     openMatches={openMatches}
                                     onToggleMatch={handleToggleMatch}
+                                    enableMatchReportOnDemand={matchReportOnDemandEnabled}
                                 />
                             </Suspense>
                         )

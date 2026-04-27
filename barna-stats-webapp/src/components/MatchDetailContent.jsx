@@ -30,10 +30,14 @@ function MatchDetailContent({
     matchReportModel,
     onPlayerNavigate,
     showMatchReport = true,
+    enableMatchReportOnDemand = true,
     emptyMessage = "No hay detalle disponible para este partido."
 }) {
     const safePlayers = Array.isArray(players) ? players : [];
-    const hasContent = safePlayers.length > 0 || !!insights || !!matchReport || (showMatchReport && !!matchWebId);
+    const hasContent = safePlayers.length > 0
+        || !!insights
+        || !!matchReport
+        || (showMatchReport && enableMatchReportOnDemand && !!matchWebId);
 
     if (!hasContent) {
         return (
@@ -58,6 +62,7 @@ function MatchDetailContent({
                     matchReportGeneratedAtUtc={matchReportGeneratedAtUtc}
                     matchReportModel={matchReportModel}
                     subtitle="Resumen on demand generado con Gemini a partir de los stats y el play-by-play ya descargados."
+                    enableOnDemand={enableMatchReportOnDemand}
                 />
             ) : null}
         </div>
