@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "generatedAtUtc": "2026-04-26T12:57:45.396777Z",
-  "totalMatches": 8673,
+  "generatedAtUtc": "2026-04-27T10:53:29.704539Z",
+  "totalMatches": 8674,
   "totalTeams": 836,
   "teams": [
     {
@@ -10030,7 +10030,7 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 17,
       "matchesFile": "teams/d08efbc8f9176a7d/matches.json",
       "playersFile": "teams/d08efbc8f9176a7d/players.json",
@@ -10058,6 +10058,18 @@
           "levelCode": "B",
           "groupCode": "02",
           "matchesPlayed": 7
+        },
+        {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
+          "phaseNumber": 2,
+          "sourcePhaseId": 21974,
+          "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+          "phaseName": "Tercera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "01",
+          "matchesPlayed": 1
         }
       ]
     },
@@ -30138,7 +30150,7 @@
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 11,
       "matchesFile": "teams/f2133414870ef719/matches.json",
       "playersFile": "teams/f2133414870ef719/players.json",
@@ -30166,6 +30178,18 @@
           "levelCode": "B",
           "groupCode": "02",
           "matchesPlayed": 8
+        },
+        {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
+          "phaseNumber": 2,
+          "sourcePhaseId": 21974,
+          "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+          "phaseName": "Tercera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "01",
+          "matchesPlayed": 1
         }
       ]
     },

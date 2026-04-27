@@ -2356,11 +2356,11 @@
     "clubId": 451,
     "primaryTeamIdExtern": 81365,
     "totalTeams": 3,
-    "totalMatches": 55,
+    "totalMatches": 56,
     "totalPlayers": 44,
     "categoriesCount": 3,
     "levelsCount": 2,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 55 partidos",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 56 partidos",
     "searchText": "ASSOCIACIO ESPORTIVA PARE MANYANET PARE MANYANET A.E. CB MANYANET LES CORTS GROC C.t. Pre-mini Femen\u00ED 1r. Any Nivell B CB MANYANET LES CORTS VERD C.c. J\u00FAnior Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell B1",
     "categories": [
       {
@@ -2445,24 +2445,24 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
                 "teamIdExtern": 81365,
                 "teamName": "CB MANYANET LES CORTS GROC",
-                "matchesPlayed": 16,
+                "matchesPlayed": 17,
                 "playersCount": 17,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
-                "phaseLabel": "Segona Fase \u00B7 Nivell B \u00B7 Grupo 02",
-                "latestPhaseOptionValue": "source:21631",
-                "groupCode": "02",
+                "phaseLabel": "Tercera Fase \u00B7 Nivell B \u00B7 Grupo 01",
+                "latestPhaseOptionValue": "source:21974",
+                "groupCode": "01",
                 "standingPosition": 4,
                 "record": {
                   "wins": 7,
-                  "losses": 9,
+                  "losses": 10,
                   "ties": 0,
-                  "pointsFor": 419,
-                  "pointsAgainst": 570
+                  "pointsFor": 435,
+                  "pointsAgainst": 626
                 },
-                "pointDiff": -151,
-                "avgValuation": 7.625
+                "pointDiff": -191,
+                "avgValuation": 7.705882352941177
               }
             ]
           }
@@ -32415,11 +32415,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 80885,
     "totalTeams": 14,
-    "totalMatches": 289,
+    "totalMatches": 290,
     "totalPlayers": 201,
     "categoriesCount": 12,
     "levelsCount": 6,
-    "meta": "14 equipos \u00B7 12 categorias \u00B7 289 partidos",
+    "meta": "14 equipos \u00B7 12 categorias \u00B7 290 partidos",
     "searchText": "U.E. MATAR\u00D3 ROMAKURUMA U.E.MATAR\u00D3 Liga Femenina De Baloncesto 2 U.E.MATAR\u00D3 - CBF C.c. Cadet Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - IAF C.c Infantil Femen\u00ED Preferent Preferent A U.E.MATAR\u00D3 - IBF C.c. Infantil Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - J1F C.c. J\u00FAnior Femen\u00ED Interterritorial U.E.MATAR\u00D3 - JAF C. C. J\u00FAnior Femen\u00ED Preferent Preferent B U.E.MATAR\u00D3 - JBF C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - PR1F C.t. Pre-mini Femen\u00ED Nivell C1 U.E.MATAR\u00D3 - PR2F C.t. Pre-mini Femen\u00ED 1r. Any Nivell D U.E.MATAR\u00D3 - PRAF Nivell A U.E.MATAR\u00D3 - PRBF Nivell B U.E.MATAR\u00D3 -C1F C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 U.E.MATAR\u00D3 -CAF C.c. Cadet Femen\u00ED Preferent UE CELLERA AMER LES PLANES HIPRA C.c. Segona Categoria Femenina",
     "categories": [
       {
@@ -32814,24 +32814,24 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
                 "teamIdExtern": 80889,
                 "teamName": "U.E.MATAR\u00D3 - PRBF",
-                "matchesPlayed": 16,
+                "matchesPlayed": 17,
                 "playersCount": 11,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
-                "phaseLabel": "Segona Fase \u00B7 Nivell B \u00B7 Grupo 02",
-                "latestPhaseOptionValue": "source:21631",
-                "groupCode": "02",
+                "phaseLabel": "Tercera Fase \u00B7 Nivell B \u00B7 Grupo 01",
+                "latestPhaseOptionValue": "source:21974",
+                "groupCode": "01",
                 "standingPosition": 1,
                 "record": {
-                  "wins": 12,
+                  "wins": 13,
                   "losses": 4,
                   "ties": 0,
-                  "pointsFor": 891,
-                  "pointsAgainst": 335
+                  "pointsFor": 947,
+                  "pointsAgainst": 351
                 },
-                "pointDiff": 556,
-                "avgValuation": 37.875
+                "pointDiff": 596,
+                "avgValuation": 38.05882352941177
               }
             ]
           },

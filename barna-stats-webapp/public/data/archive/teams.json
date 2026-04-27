@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-26T12:57:45.396777Z",
+  "generatedAtUtc": "2026-04-27T10:53:29.704539Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -7380,16 +7380,16 @@
           "teamName": "CB MANYANET LES CORTS GROC",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 16,
+          "matchesPlayed": 17,
           "playersCount": 17,
-          "pointsFor": 419,
-          "pointsAgainst": 570,
-          "pointDiff": -151,
+          "pointsFor": 435,
+          "pointsAgainst": 626,
+          "pointDiff": -191,
           "wins": 7,
-          "losses": 9,
+          "losses": 10,
           "ties": 0,
           "standingPosition": 4,
-          "avgValuation": 7.625
+          "avgValuation": 7.705882352941177
         }
       ]
     },
@@ -21586,16 +21586,16 @@
           "teamName": "U.E.MATAR\u00D3 - PRBF",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 16,
+          "matchesPlayed": 17,
           "playersCount": 11,
-          "pointsFor": 891,
-          "pointsAgainst": 335,
-          "pointDiff": 556,
-          "wins": 12,
+          "pointsFor": 947,
+          "pointsAgainst": 351,
+          "pointDiff": 596,
+          "wins": 13,
           "losses": 4,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 37.875
+          "avgValuation": 38.05882352941177
         }
       ]
     },

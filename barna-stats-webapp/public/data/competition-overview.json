@@ -2,7 +2,7 @@
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
   "totalTeams": 836,
-  "totalMatches": 8673,
+  "totalMatches": 8674,
   "phases": [
     {
       "seasonStartYear": 2025,
@@ -2546,7 +2546,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 1
+      "matchesCount": 2
     }
   ],
   "teams": [
@@ -4868,9 +4868,9 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 17,
-      "totalValuation": 122
+      "totalValuation": 131
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
@@ -9494,9 +9494,9 @@
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 11,
-      "totalValuation": 606
+      "totalValuation": 647
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80888",

@@ -1906,5 +1906,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "teamIdIntern": 565599,
+    "teamIdExtern": 81365,
+    "teamName": "CB MANYANET LES CORTS GROC",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "matchWebId": 73888,
+    "matchInternId": 281498,
+    "matchExternId": 1170705,
+    "matchDate": "2026-04-26T12:45:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 8,
+    "roundNumber": 17,
+    "homeTeam": "U.E.MATAR\u00D3 - PRBF",
+    "homeScore": 56,
+    "awayScore": 16,
+    "awayTeam": "CB MANYANET LES CORTS GROC",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "rivalTeam": "U.E.MATAR\u00D3 - PRBF",
+    "officialTeamScore": 16,
+    "officialRivalScore": 56,
+    "teamScore": 16,
+    "rivalScore": 56,
+    "result": "L",
+    "topScorer": "AYESIRA DIALLO DIALLO",
+    "topScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+    "topScorerPoints": 19,
+    "teamTopScorer": "CARLOTA PRAT RIERA",
+    "teamTopScorerPoints": 5,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 40,
+      "bestRun": 4,
+      "rivalBestRun": 20,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "ONA VALERO CALVO",
+      "firstScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+      "lastScorer": "AYESIRA DIALLO DIALLO",
+      "lastScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+      "teamFirstScorer": "ANA LE\u00D3N MARZO",
+      "teamLastScorer": "ONA RUETE LORENZO",
+      "bestPeriodLabel": "Parcial 5",
+      "bestPeriodDiff": 1,
+      "worstPeriodLabel": "Parcial 1",
+      "worstPeriodDiff": -10,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 10,
+          "diff": -10
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 0,
+          "rivalPoints": 4,
+          "diff": -4
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 2,
+          "rivalPoints": 6,
+          "diff": -4
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 3,
+          "rivalPoints": 10,
+          "diff": -7
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 5,
+          "rivalPoints": 4,
+          "diff": 1
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 7,
+          "diff": -7
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 6,
+          "diff": -6
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 6,
+          "rivalPoints": 9,
+          "diff": -3
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]
