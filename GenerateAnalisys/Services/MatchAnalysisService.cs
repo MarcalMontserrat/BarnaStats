@@ -51,6 +51,7 @@ public sealed class MatchAnalysisService
                 match,
                 json,
                 movesRaw);
+            var cachedReportsByTeamIdExtern = new Dictionary<int, MatchReportResult?>();
 
             processedMatches += 1;
 
@@ -111,6 +112,19 @@ public sealed class MatchAnalysisService
                     .OrderByDescending(x => x.Points)
                     .ThenByDescending(x => x.Valoration)
                     .FirstOrDefault();
+                MatchReportResult? teamSpecificReport = null;
+                if (team.TeamIdExtern > 0)
+                {
+                    if (!cachedReportsByTeamIdExtern.TryGetValue(team.TeamIdExtern, out teamSpecificReport))
+                    {
+                        teamSpecificReport = await _matchReportService.GetCachedAsync(
+                            matchWebId,
+                            json,
+                            movesRaw,
+                            team.TeamIdExtern);
+                        cachedReportsByTeamIdExtern[team.TeamIdExtern] = teamSpecificReport;
+                    }
+                }
 
                 accumulator.MatchSummaries.Add(new MatchSummary
                 {
@@ -151,9 +165,9 @@ public sealed class MatchAnalysisService
                     TeamTopScorer = teamTopScorer?.PlayerName ?? "",
                     TeamTopScorerPoints = teamTopScorer?.Points ?? 0,
                     Insights = BuildMatchInsights(match, team, isHome, moves),
-                    MatchReport = matchReport?.Summary ?? "",
-                    MatchReportGeneratedAtUtc = matchReport?.GeneratedAtUtc,
-                    MatchReportModel = matchReport?.Model ?? ""
+                    MatchReport = teamSpecificReport?.Summary ?? matchReport?.Summary ?? "",
+                    MatchReportGeneratedAtUtc = teamSpecificReport?.GeneratedAtUtc ?? matchReport?.GeneratedAtUtc,
+                    MatchReportModel = teamSpecificReport?.Model ?? matchReport?.Model ?? ""
                 });
 
                 foreach (var player in team.Players ?? [])

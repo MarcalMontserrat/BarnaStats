@@ -74,20 +74,15 @@ public sealed class GeminiMatchReportService : IMatchReportService
     {
         LastFailure = null;
         var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
-        var cachePath = Path.Combine(_cacheDir, MatchReportCacheFileName.Build(matchWebId, focusTeamIdExtern));
+        var cachePath = BuildCachePath(matchWebId, focusTeamIdExtern);
         var cached = await TryReadCacheAsync(cachePath);
+        var hasMatchingCachedContent = cached is not null && cached.ContentHash == contentHash;
 
         if (cached is not null &&
             cached.ContentHash == contentHash &&
             string.Equals(cached.Model, _model, StringComparison.OrdinalIgnoreCase))
         {
-            return new MatchReportResult
-            {
-                Summary = cached.Summary,
-                ContentHash = cached.ContentHash,
-                Model = cached.Model,
-                GeneratedAtUtc = cached.GeneratedAtUtc
-            };
+            return ToResult(cached);
         }
 
         if (!_enabled)
@@ -103,7 +98,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
                 Kind = MatchReportFailureKind.Disabled,
                 Message = "La generación AI está desactivada por configuración."
             };
-            return null;
+            return hasMatchingCachedContent && cached is not null ? ToResult(cached) : null;
         }
 
         if (string.IsNullOrWhiteSpace(_apiKey))
@@ -119,7 +114,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
                 Kind = MatchReportFailureKind.MissingApiKey,
                 Message = "Falta GEMINI_API_KEY."
             };
-            return null;
+            return hasMatchingCachedContent && cached is not null ? ToResult(cached) : null;
         }
 
         var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw, focusTeamIdExtern);
@@ -147,6 +142,20 @@ public sealed class GeminiMatchReportService : IMatchReportService
 
         await WriteCacheAsync(cachePath, cacheEntry);
         return result;
+    }
+
+    public async Task<MatchReportResult?> GetCachedAsync(
+        int matchWebId,
+        string statsRaw,
+        string? movesRaw,
+        int? focusTeamIdExtern = null)
+    {
+        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
+        var cached = await TryReadCacheAsync(BuildCachePath(matchWebId, focusTeamIdExtern));
+
+        return cached is not null && cached.ContentHash == contentHash
+            ? ToResult(cached)
+            : null;
     }
 
     private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw, int? focusTeamIdExtern)
@@ -322,6 +331,22 @@ public sealed class GeminiMatchReportService : IMatchReportService
     {
         var json = JsonSerializer.Serialize(cacheEntry, _jsonOptions);
         await File.WriteAllTextAsync(cachePath, json);
+    }
+
+    private string BuildCachePath(int matchWebId, int? focusTeamIdExtern = null)
+    {
+        return Path.Combine(_cacheDir, MatchReportCacheFileName.Build(matchWebId, focusTeamIdExtern));
+    }
+
+    private static MatchReportResult ToResult(MatchReportCacheEntry cached)
+    {
+        return new MatchReportResult
+        {
+            Summary = cached.Summary,
+            ContentHash = cached.ContentHash,
+            Model = cached.Model,
+            GeneratedAtUtc = cached.GeneratedAtUtc
+        };
     }
 
     private static string ComputeContentHash(string statsRaw, string? movesRaw, string promptVersion, int? focusTeamIdExtern)

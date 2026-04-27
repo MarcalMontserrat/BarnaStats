@@ -13,6 +13,12 @@ public sealed class MatchAiReportService
     {
         PropertyNameCaseInsensitive = true
     };
+    private readonly JsonSerializerOptions _publishedJsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    };
 
     public MatchAiReportService(BarnaStatsPaths paths)
     {
@@ -89,6 +95,8 @@ public sealed class MatchAiReportService
         var report = await geminiService.GetOrGenerateAsync(matchWebId, stats, statsRaw, movesRaw, focusTeamIdExtern);
         if (report is not null)
         {
+            await PersistReportToPublishedDatasetsAsync(matchWebId, stats, report, focusTeamIdExtern);
+
             return new MatchAiReportOperationResult
             {
                 Report = new MatchAiReportResponse
@@ -222,6 +230,150 @@ public sealed class MatchAiReportService
         {
             File.Delete(cachePath);
         }
+    }
+
+    private async Task PersistReportToPublishedDatasetsAsync(
+        int matchWebId,
+        StatsRoot stats,
+        MatchReportResult report,
+        int? focusTeamIdExtern)
+    {
+        var affectedTeamIdsExtern = focusTeamIdExtern is > 0
+            ? new HashSet<int> { focusTeamIdExtern.Value }
+            : (stats.Teams ?? [])
+                .Select(team => team.TeamIdExtern)
+                .Where(teamIdExtern => teamIdExtern > 0)
+                .ToHashSet();
+        var updatedFiles = 0;
+
+        foreach (var root in EnumeratePublishedMatchRoots())
+        {
+            updatedFiles += await UpdatePublishedMatchesUnderRootAsync(
+                root,
+                matchWebId,
+                report,
+                focusTeamIdExtern,
+                affectedTeamIdsExtern);
+        }
+
+        Console.WriteLine(
+            $"Análisis {matchWebId} persistido en {updatedFiles} fichero(s) de datos publicados{(focusTeamIdExtern is > 0 ? $" para el equipo {focusTeamIdExtern.Value}" : "")}.");
+    }
+
+    private IEnumerable<string> EnumeratePublishedMatchRoots()
+    {
+        yield return Path.Combine(_paths.OutputDir, "analysis", "teams");
+        yield return Path.Combine(_paths.OutputDir, "analysis", "seasons");
+        yield return Path.Combine(_paths.RepoRoot, "barna-stats-webapp", "public", "data", "teams");
+        yield return Path.Combine(_paths.RepoRoot, "barna-stats-webapp", "public", "data", "seasons");
+    }
+
+    private async Task<int> UpdatePublishedMatchesUnderRootAsync(
+        string rootDirectory,
+        int matchWebId,
+        MatchReportResult report,
+        int? focusTeamIdExtern,
+        ISet<int> affectedTeamIdsExtern)
+    {
+        if (!Directory.Exists(rootDirectory))
+        {
+            return 0;
+        }
+
+        var updatedFiles = 0;
+        foreach (var matchesPath in Directory.EnumerateFiles(rootDirectory, "matches.json", SearchOption.AllDirectories))
+        {
+            if (!await TryUpdatePublishedMatchesFileAsync(
+                    matchesPath,
+                    matchWebId,
+                    report,
+                    focusTeamIdExtern,
+                    affectedTeamIdsExtern))
+            {
+                continue;
+            }
+
+            updatedFiles += 1;
+        }
+
+        return updatedFiles;
+    }
+
+    private async Task<bool> TryUpdatePublishedMatchesFileAsync(
+        string matchesPath,
+        int matchWebId,
+        MatchReportResult report,
+        int? focusTeamIdExtern,
+        ISet<int> affectedTeamIdsExtern)
+    {
+        try
+        {
+            var json = await File.ReadAllTextAsync(matchesPath);
+            if (!json.Contains($"\"matchWebId\": {matchWebId}", StringComparison.Ordinal) &&
+                !json.Contains($"\"matchWebId\":{matchWebId}", StringComparison.Ordinal))
+            {
+                return false;
+            }
+
+            var summaries = JsonSerializer.Deserialize<List<MatchSummary>>(json, _publishedJsonOptions);
+            if (summaries is null || summaries.Count == 0)
+            {
+                return false;
+            }
+
+            var updated = false;
+            foreach (var summary in summaries)
+            {
+                if (summary.MatchWebId != matchWebId)
+                {
+                    continue;
+                }
+
+                if (!ShouldUpdateSummary(summary, focusTeamIdExtern, affectedTeamIdsExtern))
+                {
+                    continue;
+                }
+
+                if (string.Equals(summary.MatchReport, report.Summary, StringComparison.Ordinal) &&
+                    summary.MatchReportGeneratedAtUtc == report.GeneratedAtUtc &&
+                    string.Equals(summary.MatchReportModel, report.Model, StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                summary.MatchReport = report.Summary;
+                summary.MatchReportGeneratedAtUtc = report.GeneratedAtUtc;
+                summary.MatchReportModel = report.Model;
+                updated = true;
+            }
+
+            if (!updated)
+            {
+                return false;
+            }
+
+            var updatedJson = JsonSerializer.Serialize(summaries, _publishedJsonOptions);
+            await File.WriteAllTextAsync(matchesPath, updatedJson);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"No se pudo persistir el análisis en `{matchesPath}`: {ex.Message}");
+            return false;
+        }
+    }
+
+    private static bool ShouldUpdateSummary(
+        MatchSummary summary,
+        int? focusTeamIdExtern,
+        ISet<int> affectedTeamIdsExtern)
+    {
+        if (focusTeamIdExtern is > 0)
+        {
+            return summary.TeamIdExtern == focusTeamIdExtern.Value;
+        }
+
+        return affectedTeamIdsExtern.Count == 0 || affectedTeamIdsExtern.Contains(summary.TeamIdExtern);
     }
 
     private static MatchAiReportResponse ToResponse(int matchWebId, MatchReportCacheEntry cacheEntry)
