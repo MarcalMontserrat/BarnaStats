@@ -9,7 +9,15 @@ if (paths is null)
     return;
 }
 
-var matchReportService = new OpenAiMatchReportService(paths.MatchReportsDir);
+var aiProvider = (Environment.GetEnvironmentVariable("BARNASTATS_AI_PROVIDER") ?? "openai")
+    .Trim().ToLowerInvariant();
+
+IMatchReportService matchReportService = aiProvider switch
+{
+    "gemini" => new GeminiMatchReportService(paths.MatchReportsDir),
+    _        => new OpenAiMatchReportService(paths.MatchReportsDir)
+};
+
 var service = new MatchAnalysisService(matchReportService);
 var result = await service.ProcessAsync(paths.RawDataRootDir);
 

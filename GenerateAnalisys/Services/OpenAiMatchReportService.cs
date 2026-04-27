@@ -6,16 +6,18 @@ using GenerateAnalisys.Models;
 
 namespace GenerateAnalisys.Services;
 
-public sealed class OpenAiMatchReportService
+public sealed class OpenAiMatchReportService : IMatchReportService
 {
-    private const string PromptVersion = "match-report-v1";
-
     private readonly string _cacheDir;
+    private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
         WriteIndented = true
     };
+    private readonly AiRequestRetrySettings _retrySettings;
+    private readonly Func<TimeSpan, Task> _delayAsync;
+    private readonly MatchReportPromptTemplateLoader.MatchReportPromptTemplate _promptTemplate;
 
     private readonly string? _apiKey;
     private readonly string _model;
@@ -24,7 +26,10 @@ public sealed class OpenAiMatchReportService
     private bool _missingApiKeyLogged;
     private bool _disabledLogged;
 
-    public OpenAiMatchReportService(string cacheDir)
+    public OpenAiMatchReportService(
+        string cacheDir,
+        HttpMessageHandler? httpMessageHandler = null,
+        Func<TimeSpan, Task>? delayAsync = null)
     {
         _cacheDir = cacheDir;
         Directory.CreateDirectory(_cacheDir);
@@ -37,16 +42,25 @@ public sealed class OpenAiMatchReportService
         _baseUri = new Uri(
             Environment.GetEnvironmentVariable("OPENAI_BASE_URL")
             ?? "https://api.openai.com/v1/");
+        _retrySettings = AiRequestRetrySettings.FromEnvironment();
+        _delayAsync = delayAsync ?? Task.Delay;
+        _promptTemplate = MatchReportPromptTemplateLoader.Load();
+        _httpClient = httpMessageHandler is null
+            ? new HttpClient()
+            : new HttpClient(httpMessageHandler, disposeHandler: false);
+        _httpClient.BaseAddress = _baseUri;
+        _httpClient.Timeout = TimeSpan.FromSeconds(90);
     }
 
     public async Task<MatchReportResult?> GetOrGenerateAsync(
         int matchWebId,
         StatsRoot match,
         string statsRaw,
-        string? movesRaw)
+        string? movesRaw,
+        int? focusTeamIdExtern = null)
     {
-        var contentHash = ComputeContentHash(statsRaw, movesRaw);
-        var cachePath = Path.Combine(_cacheDir, $"{matchWebId}.json");
+        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
+        var cachePath = Path.Combine(_cacheDir, MatchReportCacheFileName.Build(matchWebId, focusTeamIdExtern));
         var cached = await TryReadCacheAsync(cachePath);
 
         if (cached is not null &&
@@ -84,7 +98,7 @@ public sealed class OpenAiMatchReportService
             return null;
         }
 
-        var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw);
+        var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw, focusTeamIdExtern);
         if (string.IsNullOrWhiteSpace(summary))
             return null;
 
@@ -99,6 +113,7 @@ public sealed class OpenAiMatchReportService
         var cacheEntry = new MatchReportCacheEntry
         {
             MatchWebId = matchWebId,
+            FocusTeamIdExtern = focusTeamIdExtern,
             ContentHash = result.ContentHash,
             Model = result.Model,
             GeneratedAtUtc = result.GeneratedAtUtc,
@@ -109,47 +124,32 @@ public sealed class OpenAiMatchReportService
         return result;
     }
 
-    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw)
+    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw, int? focusTeamIdExtern)
     {
         try
         {
-            var prompt = MatchReportPromptBuilder.Build(match, movesRaw);
-
-            using var http = new HttpClient
-            {
-                BaseAddress = _baseUri,
-                Timeout = TimeSpan.FromSeconds(90)
-            };
-
-            using var request = new HttpRequestMessage(HttpMethod.Post, "responses");
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
-
+            var prompt = MatchReportPromptBuilder.Build(match, statsRaw, movesRaw, focusTeamIdExtern);
             var requestBody = new
             {
                 model = _model,
-                instructions = """
-                               Eres una analista de baloncesto base. 
-                               Escribe en espanol, con tono claro y natural, sin exagerar ni inventar nada.
-                               Quiero un resumen corto para incrustar en una app:
-                               - 1 titular corto
-                               - 2 parrafos breves
-                               - 3 bullets finales con claves del partido
-                               Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
-                               Basa el analisis solo en los datos recibidos.
-                               """,
+                instructions = _promptTemplate.SystemInstruction,
                 input = prompt,
                 max_output_tokens = 700
             };
 
-            request.Content = new StringContent(
-                JsonSerializer.Serialize(requestBody),
-                Encoding.UTF8,
-                "application/json");
-
-            using var response = await http.SendAsync(request);
-            var responseText = await response.Content.ReadAsStringAsync();
-            response.EnsureSuccessStatusCode();
-
+            var payload = JsonSerializer.Serialize(requestBody);
+            var responseText = await AiRequestRetryHelper.SendWithRetriesAsync(
+                _httpClient,
+                () =>
+                {
+                    var request = new HttpRequestMessage(HttpMethod.Post, "responses");
+                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+                    request.Content = new StringContent(payload, Encoding.UTF8, "application/json");
+                    return request;
+                },
+                "OpenAI",
+                _retrySettings,
+                _delayAsync);
             return ExtractOutputText(responseText);
         }
         catch (Exception ex)
@@ -163,6 +163,7 @@ public sealed class OpenAiMatchReportService
     {
         using var document = JsonDocument.Parse(responseText);
         var root = document.RootElement;
+        var textBuilder = new StringBuilder();
 
         if (root.TryGetProperty("output_text", out var outputTextElement) &&
             outputTextElement.ValueKind == JsonValueKind.String)
@@ -189,12 +190,14 @@ public sealed class OpenAiMatchReportService
                 if (contentItem.TryGetProperty("text", out var textElement) &&
                     textElement.ValueKind == JsonValueKind.String)
                 {
-                    return textElement.GetString();
+                    textBuilder.Append(textElement.GetString());
                 }
             }
         }
 
-        return null;
+        return textBuilder.Length > 0
+            ? textBuilder.ToString()
+            : null;
     }
 
     private async Task<MatchReportCacheEntry?> TryReadCacheAsync(string cachePath)
@@ -219,9 +222,9 @@ public sealed class OpenAiMatchReportService
         await File.WriteAllTextAsync(cachePath, json);
     }
 
-    private static string ComputeContentHash(string statsRaw, string? movesRaw)
+    private static string ComputeContentHash(string statsRaw, string? movesRaw, string promptVersion, int? focusTeamIdExtern)
     {
-        var normalized = $"{PromptVersion}\n---stats---\n{statsRaw.Trim()}\n---moves---\n{movesRaw?.Trim() ?? ""}";
+        var normalized = $"{promptVersion}\n---focus-team---\n{focusTeamIdExtern?.ToString() ?? ""}\n---stats---\n{statsRaw.Trim()}\n---moves---\n{movesRaw?.Trim() ?? ""}";
         var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(normalized));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
@@ -235,206 +238,5 @@ public sealed class OpenAiMatchReportService
                rawValue.Equals("true", StringComparison.OrdinalIgnoreCase) ||
                rawValue.Equals("yes", StringComparison.OrdinalIgnoreCase) ||
                rawValue.Equals("on", StringComparison.OrdinalIgnoreCase);
-    }
-
-    private static class MatchReportPromptBuilder
-    {
-        public static string Build(StatsRoot match, string? movesRaw)
-        {
-            var localTeam = match.Teams.FirstOrDefault(team => team.TeamIdIntern == match.LocalId)
-                            ?? match.Teams.FirstOrDefault();
-            var visitTeam = match.Teams.FirstOrDefault(team => team.TeamIdIntern == match.VisitId)
-                            ?? match.Teams.Skip(1).FirstOrDefault();
-
-            if (localTeam is null || visitTeam is null)
-                return "Partido sin equipos validos.";
-
-            var moves = TryDeserializeMoves(movesRaw);
-            var prompt = new StringBuilder();
-
-            prompt.AppendLine("RESUMEN TECNICO DEL PARTIDO");
-            prompt.AppendLine($"Partido: {localTeam.Name} vs {visitTeam.Name}");
-            prompt.AppendLine($"Fecha: {match.Time ?? "desconocida"}");
-            prompt.AppendLine($"Marcador final: {localTeam.Data?.Score ?? 0}-{visitTeam.Data?.Score ?? 0}");
-            prompt.AppendLine($"Puntos calculados por jugadoras: {SumPlayerPoints(localTeam)}-{SumPlayerPoints(visitTeam)}");
-            prompt.AppendLine();
-
-            prompt.AppendLine("PARCIALES POR PERIODO");
-            foreach (var periodLine in BuildPeriodSummaries(match))
-            {
-                prompt.AppendLine($"- {periodLine}");
-            }
-
-            var leadSummary = BuildLeadSummary(match);
-            if (!string.IsNullOrWhiteSpace(leadSummary))
-            {
-                prompt.AppendLine();
-                prompt.AppendLine("DINAMICA DEL MARCADOR");
-                prompt.AppendLine(leadSummary);
-            }
-
-            prompt.AppendLine();
-            prompt.AppendLine("JUGADORAS DESTACADAS");
-            foreach (var line in BuildTopPlayers(localTeam, "Local"))
-                prompt.AppendLine($"- {line}");
-            foreach (var line in BuildTopPlayers(visitTeam, "Visitante"))
-                prompt.AppendLine($"- {line}");
-
-            prompt.AppendLine();
-            prompt.AppendLine("PLANTILLAS Y BOXSCORE");
-            AppendTeamBoxScore(prompt, "Local", localTeam);
-            AppendTeamBoxScore(prompt, "Visitante", visitTeam);
-
-            if (moves.Count > 0)
-            {
-                prompt.AppendLine();
-                prompt.AppendLine("EVENTOS RELEVANTES DEL PLAY-BY-PLAY");
-                foreach (var line in BuildRelevantMoveLines(moves, localTeam, visitTeam))
-                    prompt.AppendLine($"- {line}");
-            }
-
-            return prompt.ToString();
-        }
-
-        private static void AppendTeamBoxScore(StringBuilder prompt, string side, TeamInfo team)
-        {
-            prompt.AppendLine($"{side}: {team.Name}");
-
-            foreach (var player in (team.Players ?? [])
-                         .OrderByDescending(player => player.Data?.Score ?? 0)
-                         .ThenByDescending(player => player.Data?.Valoration ?? 0)
-                         .ThenBy(player => player.Name, StringComparer.OrdinalIgnoreCase))
-            {
-                var data = player.Data ?? new StatBlock();
-                prompt.AppendLine(
-                    $"  - {player.Name} #{player.Dorsal}: {data.Score} pts, {data.Valoration} val, {player.TimePlayed} min, T1 {data.ShotsOfOneSuccessful}/{data.ShotsOfOneAttempted}, T2 {data.ShotsOfTwoSuccessful}/{data.ShotsOfTwoAttempted}, T3 {data.ShotsOfThreeSuccessful}/{data.ShotsOfThreeAttempted}, faltas {data.Faults}");
-            }
-        }
-
-        private static IEnumerable<string> BuildPeriodSummaries(StatsRoot match)
-        {
-            if (match.Score.Count == 0)
-                yield break;
-
-            var localRunning = 0;
-            var visitRunning = 0;
-
-            foreach (var group in match.Score
-                         .GroupBy(point => point.Period)
-                         .OrderBy(group => group.Key))
-            {
-                var finalPoint = group
-                    .OrderBy(point => point.MinuteAbsolute)
-                    .ThenBy(point => point.MinuteQuarter)
-                    .Last();
-
-                var localPeriod = finalPoint.Local - localRunning;
-                var visitPeriod = finalPoint.Visit - visitRunning;
-
-                yield return $"Periodo {group.Key}: {localPeriod}-{visitPeriod} (acumulado {finalPoint.Local}-{finalPoint.Visit})";
-
-                localRunning = finalPoint.Local;
-                visitRunning = finalPoint.Visit;
-            }
-        }
-
-        private static string BuildLeadSummary(StatsRoot match)
-        {
-            if (match.Score.Count == 0)
-                return "";
-
-            var leadChanges = 0;
-            var previousLeader = 0;
-            var maxLocalLead = 0;
-            var maxVisitLead = 0;
-
-            foreach (var point in match.Score.OrderBy(point => point.MinuteAbsolute).ThenBy(point => point.Period))
-            {
-                var diff = point.Local - point.Visit;
-
-                if (diff > maxLocalLead)
-                    maxLocalLead = diff;
-
-                if (-diff > maxVisitLead)
-                    maxVisitLead = -diff;
-
-                var leader = diff == 0 ? 0 : diff > 0 ? 1 : -1;
-                if (leader != 0 && previousLeader != 0 && leader != previousLeader)
-                    leadChanges += 1;
-
-                if (leader != 0)
-                    previousLeader = leader;
-            }
-
-            return $"Cambios de liderato: {leadChanges}. Maxima ventaja local: +{maxLocalLead}. Maxima ventaja visitante: +{maxVisitLead}.";
-        }
-
-        private static IEnumerable<string> BuildTopPlayers(TeamInfo team, string side)
-        {
-            return (team.Players ?? [])
-                .OrderByDescending(player => player.Data?.Score ?? 0)
-                .ThenByDescending(player => player.Data?.Valoration ?? 0)
-                .Take(3)
-                .Select(player =>
-                {
-                    var data = player.Data ?? new StatBlock();
-                    return $"{side} {team.Name}: {player.Name} con {data.Score} pts, {data.Valoration} val y {player.TimePlayed} min";
-                });
-        }
-
-        private static List<string> BuildRelevantMoveLines(
-            IReadOnlyList<MoveEvent> moves,
-            TeamInfo localTeam,
-            TeamInfo visitTeam)
-        {
-            return moves
-                .Where(move => IsRelevantMove(move.Move))
-                .OrderBy(move => move.Period)
-                .ThenByDescending(move => move.Min)
-                .ThenByDescending(move => move.Sec)
-                .Take(80)
-                .Select(move =>
-                {
-                    var teamName = move.IdTeam == localTeam.TeamIdIntern
-                        ? localTeam.Name
-                        : move.IdTeam == visitTeam.TeamIdIntern
-                            ? visitTeam.Name
-                            : "Equipo";
-
-                    return $"P{move.Period} {move.Min}:{move.Sec:00} · {teamName} · {move.ActorName} · {move.Move} · {move.Score}";
-                })
-                .ToList();
-        }
-
-        private static bool IsRelevantMove(string? moveName)
-        {
-            if (string.IsNullOrWhiteSpace(moveName))
-                return false;
-
-            return moveName.StartsWith("Cistella de", StringComparison.OrdinalIgnoreCase) ||
-                   moveName.StartsWith("Temps mort", StringComparison.OrdinalIgnoreCase) ||
-                   moveName.StartsWith("Final de període", StringComparison.OrdinalIgnoreCase) ||
-                   moveName.StartsWith("Final de per", StringComparison.OrdinalIgnoreCase);
-        }
-
-        private static int SumPlayerPoints(TeamInfo team)
-        {
-            return (team.Players ?? []).Sum(player => player.Data?.Score ?? 0);
-        }
-
-        private static List<MoveEvent> TryDeserializeMoves(string? movesRaw)
-        {
-            if (string.IsNullOrWhiteSpace(movesRaw))
-                return [];
-
-            try
-            {
-                return JsonSerializer.Deserialize<List<MoveEvent>>(movesRaw) ?? [];
-            }
-            catch
-            {
-                return [];
-            }
-        }
     }
 }
