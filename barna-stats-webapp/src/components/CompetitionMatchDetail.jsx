@@ -1,6 +1,7 @@
 import {useMemo} from "react";
 import TeamBadge from "./TeamBadge.jsx";
 import MatchDetailContent from "./MatchDetailContent.jsx";
+import MatchReportPanel from "./MatchReportPanel.jsx";
 import {useAnalysisData} from "../hooks/useAnalysisData.js";
 
 const EMPTY_LIST = [];
@@ -8,7 +9,29 @@ const EMPTY_LIST = [];
 const styles = {
     shell: {
         display: "grid",
+        gap: 16,
         minWidth: 0
+    },
+    reportShell: {
+        display: "grid",
+        gap: 10,
+        padding: 16,
+        borderRadius: "var(--radius-lg)",
+        background: "linear-gradient(180deg, rgba(255, 250, 241, 0.98) 0%, rgba(250, 241, 225, 0.95) 100%)",
+        border: "1px solid rgba(211, 159, 52, 0.24)",
+        boxShadow: "var(--shadow-sm)"
+    },
+    reportEyebrow: {
+        color: "#7b4b10",
+        fontSize: 11,
+        fontWeight: 900,
+        letterSpacing: "0.12em",
+        textTransform: "uppercase"
+    },
+    reportCaption: {
+        color: "#7f684a",
+        lineHeight: 1.55,
+        fontSize: 14
     },
     grid: {
         display: "grid",
@@ -215,12 +238,14 @@ function CompetitionMatchTeamDetail({
             )}
 
             <MatchDetailContent
+                matchWebId={match.matchWebId}
                 players={players}
                 insights={matchSummary?.insights ?? null}
                 matchReport={matchSummary?.matchReport ?? ""}
                 matchReportGeneratedAtUtc={matchSummary?.matchReportGeneratedAtUtc ?? null}
                 matchReportModel={matchSummary?.matchReportModel ?? ""}
                 onPlayerNavigate={onPlayerNavigate}
+                showMatchReport={false}
                 emptyMessage={`No hay detalle disponible para ${team.teamName} en este partido.`}
             />
         </div>
@@ -251,6 +276,19 @@ function CompetitionMatchDetail({
 
     return (
         <div style={styles.shell}>
+            <div style={styles.reportShell}>
+                <div style={styles.reportEyebrow}>Gemini</div>
+                <div style={styles.reportCaption}>
+                    Este análisis es único para todo el partido y se comparte entre el equipo local y el visitante.
+                </div>
+                <MatchReportPanel
+                    matchWebId={match.matchWebId}
+                    matchReport=""
+                    matchReportGeneratedAtUtc={null}
+                    matchReportModel=""
+                    subtitle="Análisis compartido del partido para ambos equipos. Si ya se generó, se carga desde la caché on demand."
+                />
+            </div>
             <div style={styles.grid}>
                 <CompetitionMatchTeamDetail
                     match={match}

@@ -82,14 +82,32 @@ public sealed class PlayerInfo
     [JsonPropertyName("dorsal")]
     public string? Dorsal { get; set; }
 
+    [JsonPropertyName("starting")]
+    public bool Starting { get; set; }
+
     [JsonPropertyName("timePlayed")]
     public int TimePlayed { get; set; }
 
     [JsonPropertyName("inOut")]
     public int InOut { get; set; }
 
+    [JsonPropertyName("inOutsList")]
+    public List<PlayerInOutMark> InOutsList { get; set; } = new();
+
     [JsonPropertyName("data")]
     public StatBlock? Data { get; set; }
+}
+
+public sealed class PlayerInOutMark
+{
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    [JsonPropertyName("minuteAbsolut")]
+    public int MinuteAbsolut { get; set; }
+
+    [JsonPropertyName("pointDiff")]
+    public int PointDiff { get; set; }
 }
 
 public sealed class StatBlock

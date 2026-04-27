@@ -462,6 +462,9 @@ function MatchListSection({
                         {isOpen ? (
                             <div id={detailId} style={styles.detailShell}>
                                 <MatchDetailContent
+                                    matchWebId={match.matchWebId}
+                                    focusTeamIdExtern={Number(match.teamIdExtern ?? 0)}
+                                    focusTeamName={homeTeam.isCurrentTeam ? homeTeam.name : awayTeam.name}
                                     players={match.players}
                                     insights={match.insights}
                                     matchReport={match.matchReport}
