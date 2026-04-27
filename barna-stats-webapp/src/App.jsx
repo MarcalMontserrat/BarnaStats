@@ -678,6 +678,8 @@ function App() {
     const [compareTeamKey2, setCompareTeamKey2] = useState(
         () => initialHashState.route === "compare" ? (initialHashState.compareTeam2 ?? "") : ""
     );
+    const [compareTeamQuery1, setCompareTeamQuery1] = useState("");
+    const [compareTeamQuery2, setCompareTeamQuery2] = useState("");
     const [comparePlayerKey1, setComparePlayerKey1] = useState(
         () => initialHashState.route === "compare" ? (initialHashState.comparePlayer1 ?? "") : ""
     );
@@ -867,6 +869,10 @@ function App() {
                 setCompareTeamKey2(nextState.compareTeam2 ?? "");
                 setComparePlayerKey1(nextState.comparePlayer1 ?? "");
                 setComparePlayerKey2(nextState.comparePlayer2 ?? "");
+                setCompareTeamQuery1("");
+                setCompareTeamQuery2("");
+                setComparePlayerQuery1("");
+                setComparePlayerQuery2("");
             }
         };
 
@@ -1387,6 +1393,30 @@ function App() {
         );
         return rows.find((row) => row.teamKey === compareTeamKey2) ?? null;
     }, [compareTeam2CategoryName, compareTeamKey2, competitionStandingScopes]);
+    const compareTeamOptions = useMemo(
+        () => sortFilterOptions(sortedTeams.map((team) => {
+            const latestContext = latestTeamContexts.get(team.teamKey);
+            const metaParts = [
+                latestContext?.categoryName,
+                latestContext?.levelName,
+                latestContext?.phaseName
+            ].filter(Boolean);
+
+            return {
+                value: team.teamKey,
+                label: team.teamName,
+                meta: metaParts.join(" · "),
+                searchText: [
+                    team.teamName,
+                    latestContext?.categoryName,
+                    latestContext?.levelName,
+                    latestContext?.phaseName,
+                    latestContext?.groupCode
+                ].filter(Boolean).join(" ")
+            };
+        })),
+        [latestTeamContexts, sortedTeams]
+    );
     const compareHistoricalPlayerEntities = historicalPlayersDirectory?.players ?? EMPTY_LIST;
     const comparePlayerOptions = useMemo(
         () => sortFilterOptions(compareHistoricalPlayerEntities.map((entity) => ({
@@ -2663,22 +2693,38 @@ function App() {
         ];
         const activeCompareTab = COMPARE_TABS.find((t) => t.id === compareTab) ?? COMPARE_TABS[0];
 
-        const handleCompareTeam1Change = (teamKey) => {
-            setCompareTeamKey1(teamKey);
+        const handleCompareTeam1Select = (option) => {
+            setCompareTeamKey1(option.value);
+            setCompareTeamQuery1(option.label);
             navigateToHash(buildCompareRoute({
                 tab: compareTab,
-                team1: teamKey,
+                team1: option.value,
                 team2: compareTeamKey2
             }));
         };
 
-        const handleCompareTeam2Change = (teamKey) => {
-            setCompareTeamKey2(teamKey);
+        const handleCompareTeam2Select = (option) => {
+            setCompareTeamKey2(option.value);
+            setCompareTeamQuery2(option.label);
             navigateToHash(buildCompareRoute({
                 tab: compareTab,
                 team1: compareTeamKey1,
-                team2: teamKey
+                team2: option.value
             }));
+        };
+
+        const handleCompareTeam1QueryChange = (value) => {
+            setCompareTeamQuery1(value);
+            if (!String(value ?? "").trim()) {
+                setCompareTeamKey1("");
+            }
+        };
+
+        const handleCompareTeam2QueryChange = (value) => {
+            setCompareTeamQuery2(value);
+            if (!String(value ?? "").trim()) {
+                setCompareTeamKey2("");
+            }
         };
 
         const handleComparePlayer1Select = (option) => {
@@ -2766,11 +2812,13 @@ function App() {
                 {!analysisIndexLoading && activeCompareTab.id === "teams" ? (
                     <Suspense fallback={<SectionFallback message="Cargando comparador de equipos..." />}>
                         <TeamCompareSection
-                            teams={sortedTeams}
-                            selectedTeamKey1={compareTeamKey1}
-                            selectedTeamKey2={compareTeamKey2}
-                            onTeam1Change={handleCompareTeam1Change}
-                            onTeam2Change={handleCompareTeam2Change}
+                            teamOptions={compareTeamOptions}
+                            teamQuery1={compareTeamQuery1 || compareTeam1SummaryFromIndex?.teamName || ""}
+                            teamQuery2={compareTeamQuery2 || compareTeam2SummaryFromIndex?.teamName || ""}
+                            onTeam1QueryChange={handleCompareTeam1QueryChange}
+                            onTeam2QueryChange={handleCompareTeam2QueryChange}
+                            onTeam1Select={handleCompareTeam1Select}
+                            onTeam2Select={handleCompareTeam2Select}
                             teamData1={{
                                 summary: compareTeam1SummaryFromIndex,
                                 record: compareTeam1Record,
@@ -2805,8 +2853,8 @@ function App() {
                     <Suspense fallback={<SectionFallback message="Cargando comparador de jugadoras..." />}>
                         <PlayerCompareSection
                             playerOptions={comparePlayerOptions}
-                            playerQuery1={comparePlayerQuery1}
-                            playerQuery2={comparePlayerQuery2}
+                            playerQuery1={comparePlayerQuery1 || compareSelectedPlayer1?.label || ""}
+                            playerQuery2={comparePlayerQuery2 || compareSelectedPlayer2?.label || ""}
                             onPlayer1QueryChange={handleComparePlayer1QueryChange}
                             onPlayer2QueryChange={handleComparePlayer2QueryChange}
                             onPlayer1Select={handleComparePlayer1Select}

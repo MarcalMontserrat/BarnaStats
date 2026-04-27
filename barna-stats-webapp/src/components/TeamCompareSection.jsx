@@ -1,4 +1,4 @@
-import PrettySelect from "./PrettySelect.jsx";
+import AutocompleteField from "./AutocompleteField.jsx";
 import TeamBadge from "./TeamBadge.jsx";
 
 const styles = {
@@ -305,11 +305,13 @@ function TeamCard({team, record, standingRow, bestWinStreak, teamAvg, topScorer,
 }
 
 function TeamCompareSection({
-    teams,
-    selectedTeamKey1,
-    selectedTeamKey2,
-    onTeam1Change,
-    onTeam2Change,
+    teamOptions,
+    teamQuery1,
+    teamQuery2,
+    onTeam1QueryChange,
+    onTeam2QueryChange,
+    onTeam1Select,
+    onTeam2Select,
     teamData1,
     teamData2
 }) {
@@ -337,42 +339,40 @@ function TeamCompareSection({
         summary: summary2
     } = teamData2;
 
-    const teamOptions = teams.map((team) => (
-        <option key={team.teamKey} value={team.teamKey}>{team.teamName}</option>
-    ));
-
     return (
         <section style={styles.section}>
             <div style={styles.header}>
                 <div style={styles.eyebrow}>Comparativa de equipos</div>
                 <h2 style={styles.title}>Elige dos equipos y compara sus estadísticas</h2>
                 <p style={styles.subtitle}>
-                    Selecciona dos equipos de la temporada actual para ver sus estadísticas cara a cara: balance, posición, media de puntos, diferencial y jugadoras destacadas.
+                    Busca dos equipos de la temporada actual para ver sus estadísticas cara a cara: balance, posición, media de puntos, diferencial y jugadoras destacadas.
                 </p>
             </div>
 
             <div style={styles.selectorRow}>
-                <PrettySelect
+                <AutocompleteField
                     label="Equipo A"
-                    value={selectedTeamKey1}
-                    onChange={(e) => onTeam1Change(e.target.value)}
-                    ariaLabel="Selecciona el primer equipo"
-                    minWidth="260px"
-                >
-                    <option value="">— Elige un equipo —</option>
-                    {teamOptions}
-                </PrettySelect>
+                    value={teamQuery1}
+                    onValueChange={onTeam1QueryChange}
+                    onSelectOption={onTeam1Select}
+                    options={teamOptions}
+                    placeholder="Escribe el nombre del equipo"
+                    ariaLabel="Busca el primer equipo"
+                    noResultsText="No se han encontrado equipos con ese nombre"
+                    minWidth="min(100%, 360px)"
+                />
 
-                <PrettySelect
+                <AutocompleteField
                     label="Equipo B"
-                    value={selectedTeamKey2}
-                    onChange={(e) => onTeam2Change(e.target.value)}
-                    ariaLabel="Selecciona el segundo equipo"
-                    minWidth="260px"
-                >
-                    <option value="">— Elige un equipo —</option>
-                    {teamOptions}
-                </PrettySelect>
+                    value={teamQuery2}
+                    onValueChange={onTeam2QueryChange}
+                    onSelectOption={onTeam2Select}
+                    options={teamOptions}
+                    placeholder="Escribe el nombre del equipo"
+                    ariaLabel="Busca el segundo equipo"
+                    noResultsText="No se han encontrado equipos con ese nombre"
+                    minWidth="min(100%, 360px)"
+                />
             </div>
 
             <div style={styles.comparisonGrid}>
