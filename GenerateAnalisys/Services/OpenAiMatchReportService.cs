@@ -8,8 +8,6 @@ namespace GenerateAnalisys.Services;
 
 public sealed class OpenAiMatchReportService : IMatchReportService
 {
-    private const string PromptVersion = "match-report-v2";
-
     private readonly string _cacheDir;
     private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _jsonOptions = new()
@@ -19,6 +17,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
     };
     private readonly AiRequestRetrySettings _retrySettings;
     private readonly Func<TimeSpan, Task> _delayAsync;
+    private readonly MatchReportPromptTemplateLoader.MatchReportPromptTemplate _promptTemplate;
 
     private readonly string? _apiKey;
     private readonly string _model;
@@ -45,6 +44,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
             ?? "https://api.openai.com/v1/");
         _retrySettings = AiRequestRetrySettings.FromEnvironment();
         _delayAsync = delayAsync ?? Task.Delay;
+        _promptTemplate = MatchReportPromptTemplateLoader.Load();
         _httpClient = httpMessageHandler is null
             ? new HttpClient()
             : new HttpClient(httpMessageHandler, disposeHandler: false);
@@ -56,10 +56,11 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         int matchWebId,
         StatsRoot match,
         string statsRaw,
-        string? movesRaw)
+        string? movesRaw,
+        int? focusTeamIdExtern = null)
     {
-        var contentHash = ComputeContentHash(statsRaw, movesRaw);
-        var cachePath = Path.Combine(_cacheDir, $"{matchWebId}.json");
+        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
+        var cachePath = Path.Combine(_cacheDir, MatchReportCacheFileName.Build(matchWebId, focusTeamIdExtern));
         var cached = await TryReadCacheAsync(cachePath);
 
         if (cached is not null &&
@@ -97,7 +98,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
             return null;
         }
 
-        var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw);
+        var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw, focusTeamIdExtern);
         if (string.IsNullOrWhiteSpace(summary))
             return null;
 
@@ -112,6 +113,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         var cacheEntry = new MatchReportCacheEntry
         {
             MatchWebId = matchWebId,
+            FocusTeamIdExtern = focusTeamIdExtern,
             ContentHash = result.ContentHash,
             Model = result.Model,
             GeneratedAtUtc = result.GeneratedAtUtc,
@@ -122,29 +124,15 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         return result;
     }
 
-    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw)
+    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw, int? focusTeamIdExtern)
     {
         try
         {
-            var prompt = MatchReportPromptBuilder.Build(match, movesRaw);
+            var prompt = MatchReportPromptBuilder.Build(match, statsRaw, movesRaw, focusTeamIdExtern);
             var requestBody = new
             {
                 model = _model,
-                instructions = """
-                               Eres una analista de baloncesto base. 
-                               Escribe en espanol, con tono claro y natural, sin exagerar ni inventar nada.
-                               Quiero un resumen corto para incrustar en una app:
-                               - 1 titular corto
-                               - 2 parrafos breves
-                               - 3 bullets finales con claves del partido
-                               No te limites a narrar el marcador: incluye inferencias del partido basadas en señales concretas de los datos.
-                               Prioriza inferencias sobre: parciales, rachas, cambios de liderato, reparto anotador, perfil de tiro y cierre del partido.
-                               Si una inferencia depende de un dato concreto, mencionalo de forma natural.
-                               Si la evidencia es debil, usa lenguaje prudente: "apunta a", "sugiere", "parece".
-                               No inventes rebotes, asistencias, perdidas, defensa o ritmo si esos datos no aparecen.
-                               Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
-                               Basa el analisis solo en los datos recibidos.
-                               """,
+                instructions = _promptTemplate.SystemInstruction,
                 input = prompt,
                 max_output_tokens = 700
             };
@@ -234,9 +222,9 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         await File.WriteAllTextAsync(cachePath, json);
     }
 
-    private static string ComputeContentHash(string statsRaw, string? movesRaw)
+    private static string ComputeContentHash(string statsRaw, string? movesRaw, string promptVersion, int? focusTeamIdExtern)
     {
-        var normalized = $"{PromptVersion}\n---stats---\n{statsRaw.Trim()}\n---moves---\n{movesRaw?.Trim() ?? ""}";
+        var normalized = $"{promptVersion}\n---focus-team---\n{focusTeamIdExtern?.ToString() ?? ""}\n---stats---\n{statsRaw.Trim()}\n---moves---\n{movesRaw?.Trim() ?? ""}";
         var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(normalized));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }

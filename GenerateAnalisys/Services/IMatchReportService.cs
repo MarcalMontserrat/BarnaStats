@@ -8,5 +8,6 @@ public interface IMatchReportService
         int matchWebId,
         StatsRoot match,
         string statsRaw,
-        string? movesRaw);
+        string? movesRaw,
+        int? focusTeamIdExtern = null);
 }

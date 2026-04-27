@@ -72,25 +72,9 @@ app.MapGet("/api/health", () => Results.Ok(new
     repoRoot = repoPaths.RepoRoot
 }));
 
-app.MapGet("/api/matches/{matchWebId:int}/report", async (int matchWebId, MatchAiReportService matchAiReportService) =>
-{
-    if (matchWebId <= 0)
-    {
-        return Results.BadRequest(new
-        {
-            error = "El identificador del partido no es válido."
-        });
-    }
-
-    var cachedReport = await matchAiReportService.GetCachedAsync(matchWebId);
-    return cachedReport is null
-        ? Results.NoContent()
-        : Results.Ok(cachedReport);
-});
-
-app.MapPost("/api/matches/{matchWebId:int}/report", async (
+app.MapGet("/api/matches/{matchWebId:int}/report", async (
     int matchWebId,
-    bool forceRefresh,
+    int? focusTeamIdExtern,
     MatchAiReportService matchAiReportService) =>
 {
     if (matchWebId <= 0)
@@ -101,7 +85,27 @@ app.MapPost("/api/matches/{matchWebId:int}/report", async (
         });
     }
 
-    var result = await matchAiReportService.GenerateAsync(matchWebId, forceRefresh);
+    var cachedReport = await matchAiReportService.GetCachedAsync(matchWebId, focusTeamIdExtern);
+    return cachedReport is null
+        ? Results.NoContent()
+        : Results.Ok(cachedReport);
+});
+
+app.MapPost("/api/matches/{matchWebId:int}/report", async (
+    int matchWebId,
+    bool forceRefresh,
+    int? focusTeamIdExtern,
+    MatchAiReportService matchAiReportService) =>
+{
+    if (matchWebId <= 0)
+    {
+        return Results.BadRequest(new
+        {
+            error = "El identificador del partido no es válido."
+        });
+    }
+
+    var result = await matchAiReportService.GenerateAsync(matchWebId, forceRefresh, focusTeamIdExtern);
     if (result.Succeeded)
         return Results.Ok(result.Report);
 

@@ -19,15 +19,15 @@ public sealed class MatchAiReportService
         _paths = paths;
     }
 
-    public async Task<MatchAiReportResponse?> GetCachedAsync(int matchWebId)
+    public async Task<MatchAiReportResponse?> GetCachedAsync(int matchWebId, int? focusTeamIdExtern = null)
     {
-        var cacheEntry = await TryReadCacheEntryAsync(matchWebId);
+        var cacheEntry = await TryReadCacheEntryAsync(matchWebId, focusTeamIdExtern);
         return cacheEntry is null
             ? null
             : ToResponse(matchWebId, cacheEntry);
     }
 
-    public async Task<MatchAiReportOperationResult> GenerateAsync(int matchWebId, bool forceRefresh)
+    public async Task<MatchAiReportOperationResult> GenerateAsync(int matchWebId, bool forceRefresh, int? focusTeamIdExtern = null)
     {
         var sourceFiles = FindBestSourceFiles(matchWebId);
         if (sourceFiles is null)
@@ -49,12 +49,12 @@ public sealed class MatchAiReportService
         }
 
         var previousCacheEntry = forceRefresh
-            ? await TryReadCacheEntryAsync(matchWebId)
+            ? await TryReadCacheEntryAsync(matchWebId, focusTeamIdExtern)
             : null;
 
         if (forceRefresh)
         {
-            DeleteCacheIfPresent(matchWebId);
+            DeleteCacheIfPresent(matchWebId, focusTeamIdExtern);
         }
 
         var statsRaw = await File.ReadAllTextAsync(sourceFiles.StatsPath);
@@ -72,11 +72,21 @@ public sealed class MatchAiReportService
             };
         }
 
+        if (focusTeamIdExtern is > 0 &&
+            stats.Teams.All(team => team.TeamIdExtern != focusTeamIdExtern.Value))
+        {
+            return new MatchAiReportOperationResult
+            {
+                ErrorKind = MatchAiReportErrorKind.InvalidMatchData,
+                ErrorMessage = "El equipo seleccionado no aparece en los stats de este partido."
+            };
+        }
+
         var geminiService = new GeminiMatchReportService(
             GetMatchReportsDir(),
             enabledOverride: true);
 
-        var report = await geminiService.GetOrGenerateAsync(matchWebId, stats, statsRaw, movesRaw);
+        var report = await geminiService.GetOrGenerateAsync(matchWebId, stats, statsRaw, movesRaw, focusTeamIdExtern);
         if (report is not null)
         {
             return new MatchAiReportOperationResult
@@ -93,7 +103,7 @@ public sealed class MatchAiReportService
 
         if (previousCacheEntry is not null)
         {
-            await WriteCacheEntryAsync(matchWebId, previousCacheEntry);
+            await WriteCacheEntryAsync(matchWebId, previousCacheEntry, focusTeamIdExtern);
         }
 
         return new MatchAiReportOperationResult
@@ -104,9 +114,9 @@ public sealed class MatchAiReportService
         };
     }
 
-    private async Task<MatchReportCacheEntry?> TryReadCacheEntryAsync(int matchWebId)
+    private async Task<MatchReportCacheEntry?> TryReadCacheEntryAsync(int matchWebId, int? focusTeamIdExtern = null)
     {
-        var cachePath = GetCachePath(matchWebId);
+        var cachePath = GetCachePath(matchWebId, focusTeamIdExtern);
         if (!File.Exists(cachePath))
             return null;
 
@@ -193,21 +203,21 @@ public sealed class MatchAiReportService
         return directory;
     }
 
-    private string GetCachePath(int matchWebId)
+    private string GetCachePath(int matchWebId, int? focusTeamIdExtern = null)
     {
-        return Path.Combine(GetMatchReportsDir(), $"{matchWebId}.json");
+        return Path.Combine(GetMatchReportsDir(), MatchReportCacheFileName.Build(matchWebId, focusTeamIdExtern));
     }
 
-    private async Task WriteCacheEntryAsync(int matchWebId, MatchReportCacheEntry cacheEntry)
+    private async Task WriteCacheEntryAsync(int matchWebId, MatchReportCacheEntry cacheEntry, int? focusTeamIdExtern = null)
     {
-        var cachePath = GetCachePath(matchWebId);
+        var cachePath = GetCachePath(matchWebId, focusTeamIdExtern);
         var json = JsonSerializer.Serialize(cacheEntry, _jsonOptions);
         await File.WriteAllTextAsync(cachePath, json);
     }
 
-    private void DeleteCacheIfPresent(int matchWebId)
+    private void DeleteCacheIfPresent(int matchWebId, int? focusTeamIdExtern = null)
     {
-        var cachePath = GetCachePath(matchWebId);
+        var cachePath = GetCachePath(matchWebId, focusTeamIdExtern);
         if (File.Exists(cachePath))
         {
             File.Delete(cachePath);

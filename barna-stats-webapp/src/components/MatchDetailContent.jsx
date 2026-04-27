@@ -21,6 +21,8 @@ const styles = {
 
 function MatchDetailContent({
     matchWebId,
+    focusTeamIdExtern,
+    focusTeamName,
     players,
     insights,
     matchReport,
@@ -50,6 +52,8 @@ function MatchDetailContent({
             {showMatchReport ? (
                 <MatchReportPanel
                     matchWebId={matchWebId}
+                    focusTeamIdExtern={focusTeamIdExtern}
+                    focusTeamName={focusTeamName}
                     matchReport={matchReport}
                     matchReportGeneratedAtUtc={matchReportGeneratedAtUtc}
                     matchReportModel={matchReportModel}

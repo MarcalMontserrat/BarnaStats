@@ -100,6 +100,52 @@ public sealed class MatchReportServiceRetryTests
     }
 
     [Fact]
+    public async Task Gemini_includes_focus_team_context_and_uses_dedicated_cache_file()
+    {
+        using var environment = new EnvironmentVariableScope(
+            ("BARNASTATS_ENABLE_AI_MATCH_REPORTS", "true"),
+            ("GEMINI_API_KEY", "test-gemini-key"));
+        using var sandbox = new TemporaryDirectory();
+
+        var cacheDir = Path.Combine(sandbox.Path, "match-reports");
+        var handler = new SequenceHttpMessageHandler(
+            request =>
+            {
+                var body = request.Content?.ReadAsStringAsync().GetAwaiter().GetResult();
+                Assert.False(string.IsNullOrWhiteSpace(body));
+
+                using var document = JsonDocument.Parse(body!);
+                var prompt = document.RootElement
+                    .GetProperty("contents")[0]
+                    .GetProperty("parts")[0]
+                    .GetProperty("text")
+                    .GetString();
+
+                Assert.Contains("PERSPECTIVA SOLICITADA", prompt);
+                Assert.Contains("Enfoca el análisis en Barna Local.", prompt);
+
+                return new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    Content = new StringContent("""{"candidates":[{"content":{"parts":[{"text":"Resumen enfocado"}]}}]}""")
+                };
+            });
+
+        var service = new GeminiMatchReportService(cacheDir, handler);
+
+        var result = await service.GetOrGenerateAsync(
+            34951,
+            BuildMatch(),
+            """{"match":"fixture"}""",
+            null,
+            focusTeamIdExtern: 1001);
+
+        Assert.NotNull(result);
+        Assert.Equal("Resumen enfocado", result.Summary);
+        Assert.Equal(1, handler.CallCount);
+        Assert.True(File.Exists(Path.Combine(cacheDir, "34951__team-1001.json")));
+    }
+
+    [Fact]
     public async Task OpenAi_retries_transient_server_errors_with_exponential_backoff()
     {
         using var environment = new EnvironmentVariableScope(

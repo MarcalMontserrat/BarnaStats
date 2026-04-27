@@ -90,6 +90,19 @@ function getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchRepo
     };
 }
 
+function buildReportUrl(matchWebId, focusTeamIdExtern, forceRefresh) {
+    const query = new URLSearchParams();
+    if (typeof forceRefresh === "boolean") {
+        query.set("forceRefresh", forceRefresh ? "true" : "false");
+    }
+    if (Number(focusTeamIdExtern) > 0) {
+        query.set("focusTeamIdExtern", String(Number(focusTeamIdExtern)));
+    }
+
+    const queryString = query.toString();
+    return `${API_BASE_URL}/api/matches/${matchWebId}/report${queryString ? `?${queryString}` : ""}`;
+}
+
 async function readApiPayload(response) {
     const contentType = response.headers.get("content-type") ?? "";
     if (!contentType.includes("application/json")) {
@@ -104,16 +117,24 @@ function MatchReportPanel({
     matchReport,
     matchReportGeneratedAtUtc,
     matchReportModel,
-    subtitle
+    subtitle,
+    focusTeamIdExtern,
+    focusTeamName
 }) {
     const [reportState, setReportState] = useState(() =>
-        getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchReportModel));
+        Number(focusTeamIdExtern) > 0
+            ? getInitialReportState("", null, "")
+            : getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchReportModel));
     const [loading, setLoading] = useState(false);
     const [generating, setGenerating] = useState(false);
     const [error, setError] = useState("");
 
     useEffect(() => {
-        setReportState(getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchReportModel));
+        setReportState(
+            Number(focusTeamIdExtern) > 0
+                ? getInitialReportState("", null, "")
+                : getInitialReportState(matchReport, matchReportGeneratedAtUtc, matchReportModel)
+        );
         setError("");
 
         if (!matchWebId) {
@@ -127,7 +148,7 @@ function MatchReportPanel({
             setError("");
 
             try {
-                const response = await fetch(`${API_BASE_URL}/api/matches/${matchWebId}/report`);
+                const response = await fetch(buildReportUrl(matchWebId, focusTeamIdExtern));
                 if (cancelled) {
                     return;
                 }
@@ -165,7 +186,7 @@ function MatchReportPanel({
         return () => {
             cancelled = true;
         };
-    }, [matchWebId, matchReport, matchReportGeneratedAtUtc, matchReportModel]);
+    }, [matchWebId, matchReport, matchReportGeneratedAtUtc, matchReportModel, focusTeamIdExtern]);
 
     async function generateReport(forceRefresh) {
         if (!matchWebId) {
@@ -177,7 +198,7 @@ function MatchReportPanel({
 
         try {
             const response = await fetch(
-                `${API_BASE_URL}/api/matches/${matchWebId}/report?forceRefresh=${forceRefresh ? "true" : "false"}`,
+                buildReportUrl(matchWebId, focusTeamIdExtern, forceRefresh),
                 {
                     method: "POST"
                 }
@@ -223,6 +244,9 @@ function MatchReportPanel({
                     <div style={styles.title}>Análisis del partido</div>
                     <div style={styles.subtitle}>
                         {subtitle ?? "Resumen on demand generado con Gemini a partir de los stats y el play-by-play ya descargados."}
+                        {Number(focusTeamIdExtern) > 0 && focusTeamName
+                            ? ` En esta vista, el análisis se enfoca en ${focusTeamName}.`
+                            : ""}
                     </div>
                 </div>
                 {matchWebId ? (

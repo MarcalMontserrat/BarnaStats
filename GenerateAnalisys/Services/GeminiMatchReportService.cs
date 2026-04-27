@@ -7,8 +7,6 @@ namespace GenerateAnalisys.Services;
 
 public sealed class GeminiMatchReportService : IMatchReportService
 {
-    private const string PromptVersion = "match-report-v3";
-
     private readonly string _cacheDir;
     private readonly HttpClient _httpClient;
     private readonly JsonSerializerOptions _jsonOptions = new()
@@ -22,6 +20,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
     private readonly Func<DateTimeOffset> _nowProvider;
     private readonly int _maxOutputTokens;
     private readonly int? _thinkingBudget;
+    private readonly MatchReportPromptTemplateLoader.MatchReportPromptTemplate _promptTemplate;
 
     private readonly string? _apiKey;
     private readonly string _model;
@@ -57,6 +56,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
         _thinkingBudget = SupportsThinkingBudget(_model)
             ? ParseInt("BARNASTATS_GEMINI_THINKING_BUDGET", 0, minValue: -1)
             : null;
+        _promptTemplate = MatchReportPromptTemplateLoader.Load();
         _quotaLimiter = new GeminiRequestQuotaLimiter(_cacheDir, _delayAsync, _nowProvider);
         _httpClient = httpMessageHandler is null
             ? new HttpClient()
@@ -69,11 +69,12 @@ public sealed class GeminiMatchReportService : IMatchReportService
         int matchWebId,
         StatsRoot match,
         string statsRaw,
-        string? movesRaw)
+        string? movesRaw,
+        int? focusTeamIdExtern = null)
     {
         LastFailure = null;
-        var contentHash = ComputeContentHash(statsRaw, movesRaw);
-        var cachePath = Path.Combine(_cacheDir, $"{matchWebId}.json");
+        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
+        var cachePath = Path.Combine(_cacheDir, MatchReportCacheFileName.Build(matchWebId, focusTeamIdExtern));
         var cached = await TryReadCacheAsync(cachePath);
 
         if (cached is not null &&
@@ -121,7 +122,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
             return null;
         }
 
-        var summary = await GenerateSummaryAsync(match, movesRaw);
+        var summary = await GenerateSummaryAsync(match, statsRaw, movesRaw, focusTeamIdExtern);
         if (string.IsNullOrWhiteSpace(summary))
             return null;
 
@@ -137,6 +138,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
         var cacheEntry = new MatchReportCacheEntry
         {
             MatchWebId = matchWebId,
+            FocusTeamIdExtern = focusTeamIdExtern,
             ContentHash = result.ContentHash,
             Model = result.Model,
             GeneratedAtUtc = result.GeneratedAtUtc,
@@ -147,7 +149,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
         return result;
     }
 
-    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string? movesRaw)
+    private async Task<string?> GenerateSummaryAsync(StatsRoot match, string statsRaw, string? movesRaw, int? focusTeamIdExtern)
     {
         if (_dailyQuotaReached)
         {
@@ -161,7 +163,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
 
         try
         {
-            var prompt = MatchReportPromptBuilder.Build(match, movesRaw);
+            var prompt = MatchReportPromptBuilder.Build(match, statsRaw, movesRaw, focusTeamIdExtern);
             var endpoint = $"models/{_model}:generateContent?key={_apiKey}";
             var generationConfig = new Dictionary<string, object?>
             {
@@ -185,21 +187,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
                     {
                         new
                         {
-                            text = """
-                                   Eres una analista de baloncesto base. 
-                                   Escribe en español, con tono claro y natural, sin exagerar ni inventar nada.
-                                   Quiero un resumen corto para incrustar en una app:
-                                   - 1 titular corto
-                                   - 2 parrafos breves
-                                   - 3 bullets finales con claves del partido
-                                   No te limites a narrar el marcador: incluye inferencias del partido basadas en señales concretas de los datos.
-                                   Prioriza inferencias sobre: parciales, rachas, cambios de liderato, reparto anotador, perfil de tiro y cierre del partido.
-                                   Si una inferencia depende de un dato concreto, mencionalo de forma natural.
-                                   Si la evidencia es debil, usa lenguaje prudente: "apunta a", "sugiere", "parece".
-                                   No inventes rebotes, asistencias, perdidas, defensa o ritmo si esos datos no aparecen.
-                                   Devuelve solo texto plano, sin markdown, sin encabezados JSON y sin comillas.
-                                   Basa el análisis solo en los datos recibidos.
-                                   """
+                            text = _promptTemplate.SystemInstruction
                         }
                     }
                 },
@@ -336,9 +324,9 @@ public sealed class GeminiMatchReportService : IMatchReportService
         await File.WriteAllTextAsync(cachePath, json);
     }
 
-    private static string ComputeContentHash(string statsRaw, string? movesRaw)
+    private static string ComputeContentHash(string statsRaw, string? movesRaw, string promptVersion, int? focusTeamIdExtern)
     {
-        var normalized = $"{PromptVersion}\n---stats---\n{statsRaw.Trim()}\n---moves---\n{movesRaw?.Trim() ?? ""}";
+        var normalized = $"{promptVersion}\n---focus-team---\n{focusTeamIdExtern?.ToString() ?? ""}\n---stats---\n{statsRaw.Trim()}\n---moves---\n{movesRaw?.Trim() ?? ""}";
         var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(normalized));
         return Convert.ToHexString(bytes).ToLowerInvariant();
     }
