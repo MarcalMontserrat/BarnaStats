@@ -5,7 +5,7 @@ using GenerateAnalisys.Models;
 
 namespace GenerateAnalisys.Services;
 
-public sealed class GeminiMatchReportService : IMatchReportService
+public sealed class GeminiMatchReportService : IMatchReportProviderService
 {
     private readonly string _cacheDir;
     private readonly HttpClient _httpClient;
@@ -29,6 +29,7 @@ public sealed class GeminiMatchReportService : IMatchReportService
     private bool _missingApiKeyLogged;
     private bool _disabledLogged;
     private bool _dailyQuotaReached;
+    public string ProviderName => "Gemini";
     public MatchReportFailure? LastFailure { get; private set; }
 
     public GeminiMatchReportService(
@@ -259,6 +260,18 @@ public sealed class GeminiMatchReportService : IMatchReportService
                 Message = ex.Message
             };
             Console.WriteLine(ex.Message);
+            return null;
+        }
+        catch (AiProviderRequestException ex)
+        {
+            LastFailure = new MatchReportFailure
+            {
+                Kind = ex.IsRetryableStatusCode
+                    ? MatchReportFailureKind.TransientFailure
+                    : MatchReportFailureKind.RequestFailed,
+                Message = ex.Message
+            };
+            Console.WriteLine($"No se pudo generar el resumen AI del partido (Gemini): {ex.Message}");
             return null;
         }
         catch (Exception ex)

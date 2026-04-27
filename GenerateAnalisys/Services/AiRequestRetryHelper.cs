@@ -2,6 +2,27 @@ using System.Net;
 
 namespace GenerateAnalisys.Services;
 
+internal sealed class AiProviderRequestException : HttpRequestException
+{
+    public AiProviderRequestException(
+        string providerName,
+        HttpStatusCode statusCode,
+        string? reasonPhrase,
+        string responseText,
+        bool isRetryableStatusCode)
+        : base(
+            $"{providerName} respondió {(int)statusCode} {reasonPhrase}. {AiRequestRetryHelper.SummarizeBody(responseText)}",
+            inner: null,
+            statusCode: statusCode)
+    {
+        ProviderName = providerName;
+        IsRetryableStatusCode = isRetryableStatusCode;
+    }
+
+    public string ProviderName { get; }
+    public bool IsRetryableStatusCode { get; }
+}
+
 internal sealed class AiRequestRetrySettings
 {
     public int MaxRetries { get; init; } = 4;
@@ -55,8 +76,12 @@ internal static class AiRequestRetryHelper
             var retryDelay = GetRetryDelay(response, attempt, settings);
             if (retryDelay is null || attempt >= settings.MaxRetries)
             {
-                throw new HttpRequestException(
-                    $"{providerName} respondió {(int)response.StatusCode} {response.ReasonPhrase}. {SummarizeBody(responseText)}");
+                throw new AiProviderRequestException(
+                    providerName,
+                    response.StatusCode,
+                    response.ReasonPhrase,
+                    responseText,
+                    IsRetryableStatusCode(response.StatusCode));
             }
 
             Console.WriteLine(
@@ -101,7 +126,7 @@ internal static class AiRequestRetryHelper
                statusCode == HttpStatusCode.InternalServerError;
     }
 
-    private static string SummarizeBody(string responseText)
+    internal static string SummarizeBody(string responseText)
     {
         if (string.IsNullOrWhiteSpace(responseText))
             return "Sin cuerpo de respuesta.";

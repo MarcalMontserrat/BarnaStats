@@ -1992,6 +1992,7 @@ function App() {
                                     onTeamNavigate={handleTeamNavigate}
                                     onPlayerNavigate={handlePlayerNavigate}
                                     enableMatchReportOnDemand={matchReportOnDemandEnabled}
+                                    matchReportApiAvailable={apiAvailable}
                                 />
                             </Suspense>
                         ) : null}
@@ -2138,6 +2139,7 @@ function App() {
                                     openMatches={openMatches}
                                     onToggleMatch={handleToggleMatch}
                                     enableMatchReportOnDemand={matchReportOnDemandEnabled}
+                                    matchReportApiAvailable={apiAvailable}
                                 />
                             </Suspense>
                         )

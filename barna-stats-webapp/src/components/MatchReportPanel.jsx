@@ -4,36 +4,71 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:5071
 
 const styles = {
     card: {
-        marginTop: 12,
         display: "grid",
-        gap: 14,
-        background: "linear-gradient(180deg, rgba(255, 248, 236, 0.96) 0%, rgba(250, 238, 219, 0.9) 100%)",
-        border: "1px solid rgba(211, 159, 52, 0.22)",
+        gap: 16,
+        background: "linear-gradient(180deg, rgba(255, 250, 242, 0.98) 0%, rgba(248, 239, 225, 0.94) 100%)",
+        border: "1px solid rgba(180, 133, 44, 0.18)",
         borderRadius: "var(--radius-lg)",
         padding: 18,
         boxShadow: "var(--shadow-sm)"
     },
+    cardWithTopMargin: {
+        marginTop: 12
+    },
     header: {
         display: "flex",
-        gap: 12,
+        gap: 14,
         justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: "flex-start",
         flexWrap: "wrap"
     },
     titleBlock: {
         display: "grid",
-        gap: 6
+        gap: 10,
+        minWidth: 0,
+        flex: "1 1 340px"
+    },
+    badgeRow: {
+        display: "flex",
+        gap: 8,
+        flexWrap: "wrap",
+        alignItems: "center"
+    },
+    eyebrow: {
+        display: "inline-flex",
+        alignItems: "center",
+        minHeight: 24,
+        padding: "0 10px",
+        borderRadius: 999,
+        background: "rgba(26, 53, 87, 0.08)",
+        color: "var(--navy)",
+        fontSize: 11,
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase"
+    },
+    providerBadge: {
+        display: "inline-flex",
+        alignItems: "center",
+        minHeight: 24,
+        padding: "0 10px",
+        borderRadius: 999,
+        background: "rgba(188, 63, 43, 0.12)",
+        color: "var(--accent-strong)",
+        fontSize: 11,
+        fontWeight: 800,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase"
     },
     title: {
-        fontWeight: 800,
-        color: "#7b4b10",
-        textTransform: "uppercase",
-        letterSpacing: "0.08em",
-        fontSize: 12
+        fontWeight: 900,
+        color: "var(--navy)",
+        fontSize: 18,
+        lineHeight: 1.2
     },
     subtitle: {
-        color: "#7f684a",
-        lineHeight: 1.55,
+        color: "#6b5a43",
+        lineHeight: 1.6,
         fontSize: 14
     },
     actionButton: {
@@ -54,31 +89,60 @@ const styles = {
         opacity: 0.66,
         cursor: "wait"
     },
-    statusText: {
-        color: "#8b7355",
+    notice: {
+        padding: "12px 14px",
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 255, 255, 0.58)",
+        border: "1px solid rgba(123, 75, 16, 0.12)",
+        color: "#7c684c",
         fontSize: 13,
         lineHeight: 1.55
     },
-    errorText: {
+    errorNotice: {
+        padding: "12px 14px",
+        borderRadius: "var(--radius-md)",
+        background: "rgba(255, 239, 234, 0.9)",
+        border: "1px solid rgba(179, 58, 26, 0.18)",
         color: "#b33a1a",
         fontSize: 13,
         lineHeight: 1.55
     },
+    body: {
+        display: "grid",
+        gap: 12
+    },
     paragraph: {
-        margin: "0 0 12px",
-        lineHeight: 1.65,
-        color: "#51473d"
+        margin: 0,
+        lineHeight: 1.7,
+        color: "#41352a",
+        fontSize: 15
     },
     list: {
-        margin: "0 0 12px",
+        margin: 0,
         paddingLeft: 20,
-        color: "#51473d",
-        lineHeight: 1.6
+        color: "#41352a",
+        lineHeight: 1.7
     },
-    meta: {
-        marginTop: 10,
+    footer: {
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 12,
+        paddingTop: 12,
+        borderTop: "1px solid rgba(123, 75, 16, 0.14)",
         color: "#8b7355",
         fontSize: 12
+    },
+    footerItem: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 6
+    },
+    footerLabel: {
+        color: "#7b4b10",
+        fontWeight: 800,
+        textTransform: "uppercase",
+        letterSpacing: "0.06em",
+        fontSize: 11
     }
 };
 
@@ -112,6 +176,25 @@ async function readApiPayload(response) {
     return await response.json();
 }
 
+function inferProviderFromModel(model, enableOnDemand) {
+    const normalizedModel = String(model ?? "").trim().toLowerCase();
+    if (normalizedModel.includes("gemini")) {
+        return "Gemini";
+    }
+
+    if (
+        normalizedModel.includes("openai")
+        || normalizedModel.startsWith("gpt")
+        || normalizedModel.startsWith("o1")
+        || normalizedModel.startsWith("o3")
+        || normalizedModel.startsWith("o4")
+    ) {
+        return "OpenAI";
+    }
+
+    return enableOnDemand ? "Gemini" : "IA";
+}
+
 function MatchReportPanel({
     matchWebId,
     matchReport,
@@ -120,7 +203,9 @@ function MatchReportPanel({
     subtitle,
     focusTeamIdExtern,
     focusTeamName,
-    enableOnDemand = true
+    enableOnDemand = true,
+    apiAvailable = true,
+    withTopMargin = true
 }) {
     const [reportState, setReportState] = useState(() =>
         enableOnDemand && Number(focusTeamIdExtern) > 0
@@ -138,7 +223,7 @@ function MatchReportPanel({
         );
         setError("");
 
-        if (!enableOnDemand || !matchWebId) {
+        if (!enableOnDemand || !apiAvailable || !matchWebId) {
             return undefined;
         }
 
@@ -187,7 +272,7 @@ function MatchReportPanel({
         return () => {
             cancelled = true;
         };
-    }, [enableOnDemand, matchWebId, matchReport, matchReportGeneratedAtUtc, matchReportModel, focusTeamIdExtern]);
+    }, [apiAvailable, enableOnDemand, matchWebId, matchReport, matchReportGeneratedAtUtc, matchReportModel, focusTeamIdExtern]);
 
     async function generateReport(forceRefresh) {
         if (!matchWebId) {
@@ -236,19 +321,28 @@ function MatchReportPanel({
         .filter(Boolean);
     const isBusy = loading || generating;
     const hasReport = !!reportState.summary;
+    const providerLabel = inferProviderFromModel(reportState.model, enableOnDemand);
+    const canGenerate = enableOnDemand && apiAvailable && !!matchWebId;
     const actionLabel = generating
         ? "Generando análisis..."
         : hasReport
-            ? "Regenerar con Gemini"
-            : "Generar con Gemini";
+            ? "Regenerar análisis"
+            : "Generar análisis";
+    const cardStyle = withTopMargin
+        ? {...styles.card, ...styles.cardWithTopMargin}
+        : styles.card;
 
     return (
-        <div style={styles.card}>
+        <div style={cardStyle}>
             <div style={styles.header}>
                 <div style={styles.titleBlock}>
+                    <div style={styles.badgeRow}>
+                        <div style={styles.eyebrow}>Análisis IA</div>
+                        <div style={styles.providerBadge}>{providerLabel}</div>
+                    </div>
                     <div style={styles.title}>Análisis del partido</div>
                     <div style={styles.subtitle}>
-                        {subtitle ?? "Resumen on demand generado con Gemini a partir de los stats y el play-by-play ya descargados."}
+                        {subtitle ?? "Resumen generado a partir de los stats y del play-by-play ya descargados."}
                         {enableOnDemand && Number(focusTeamIdExtern) > 0 && focusTeamName
                             ? ` En esta vista, el análisis se enfoca en ${focusTeamName}.`
                             : ""}
@@ -259,57 +353,78 @@ function MatchReportPanel({
                         type="button"
                         style={{
                             ...styles.actionButton,
-                            ...(isBusy ? styles.actionButtonDisabled : {})
+                            ...((isBusy || !canGenerate) ? styles.actionButtonDisabled : {})
                         }}
-                        disabled={isBusy}
+                        disabled={isBusy || !canGenerate}
                         onClick={() => generateReport(hasReport)}
                     >
-                        {actionLabel}
+                        {canGenerate ? actionLabel : "API no disponible"}
                     </button>
                 ) : null}
             </div>
 
+            {enableOnDemand && !apiAvailable ? (
+                <div style={styles.notice}>
+                    El servicio de análisis no está disponible ahora mismo. Cuando la API vuelva a estar accesible,
+                    aquí podrás generar un único análisis del partido.
+                </div>
+            ) : null}
+
             {enableOnDemand && loading && !hasReport ? (
-                <div style={styles.statusText}>Buscando si ya existe un análisis generado para este partido...</div>
+                <div style={styles.notice}>Buscando si ya existe un análisis generado para este partido...</div>
             ) : null}
 
             {error ? (
-                <div style={styles.errorText}>{error}</div>
+                <div style={styles.errorNotice}>{error}</div>
             ) : null}
 
-            {!hasReport && !loading && enableOnDemand ? (
-                <div style={styles.statusText}>
+            {!hasReport && !loading && enableOnDemand && apiAvailable ? (
+                <div style={styles.notice}>
                     Todavía no hay análisis guardado para este partido. Puedes pedirlo ahora mismo desde aquí.
                 </div>
             ) : null}
 
-            {blocks.map((block, index) => {
-                const lines = block
-                    .split("\n")
-                    .map((line) => line.trim())
-                    .filter(Boolean);
-                const isBulletBlock = lines.every((line) => line.startsWith("- "));
+            {hasReport ? (
+                <div style={styles.body}>
+                    {blocks.map((block, index) => {
+                        const lines = block
+                            .split("\n")
+                            .map((line) => line.trim())
+                            .filter(Boolean);
+                        const isBulletBlock = lines.every((line) => line.startsWith("- "));
 
-                if (isBulletBlock) {
-                    return (
-                        <ul key={index} style={styles.list}>
-                            {lines.map((line) => (
-                                <li key={line}>{line.slice(2)}</li>
-                            ))}
-                        </ul>
-                    );
-                }
+                        if (isBulletBlock) {
+                            return (
+                                <ul key={index} style={styles.list}>
+                                    {lines.map((line) => (
+                                        <li key={line}>{line.slice(2)}</li>
+                                    ))}
+                                </ul>
+                            );
+                        }
 
-                return (
-                    <p key={index} style={styles.paragraph}>
-                        {block}
-                    </p>
-                );
-            })}
-            {reportState.generatedAtUtc ? (
-                <div style={styles.meta}>
-                    Generado: {new Date(reportState.generatedAtUtc).toLocaleString("es-ES")}
-                    {reportState.model ? ` · ${reportState.model}` : ""}
+                        return (
+                            <p key={index} style={styles.paragraph}>
+                                {block}
+                            </p>
+                        );
+                    })}
+                </div>
+            ) : null}
+            {reportState.generatedAtUtc || reportState.model ? (
+                <div style={styles.footer}>
+                    {reportState.generatedAtUtc ? (
+                        <div style={styles.footerItem}>
+                            <span style={styles.footerLabel}>Generado</span>
+                            <span>{new Date(reportState.generatedAtUtc).toLocaleString("es-ES")}</span>
+                        </div>
+                    ) : null}
+                    {reportState.model ? (
+                        <div style={styles.footerItem}>
+                            <span style={styles.footerLabel}>Modelo</span>
+                            <span>{reportState.model}</span>
+                        </div>
+                    ) : null}
                 </div>
             ) : null}
         </div>

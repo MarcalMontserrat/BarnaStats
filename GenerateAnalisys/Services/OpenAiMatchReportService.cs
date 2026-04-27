@@ -6,7 +6,7 @@ using GenerateAnalisys.Models;
 
 namespace GenerateAnalisys.Services;
 
-public sealed class OpenAiMatchReportService : IMatchReportService
+public sealed class OpenAiMatchReportService : IMatchReportProviderService
 {
     private readonly string _cacheDir;
     private readonly HttpClient _httpClient;
@@ -25,16 +25,19 @@ public sealed class OpenAiMatchReportService : IMatchReportService
     private readonly bool _enabled;
     private bool _missingApiKeyLogged;
     private bool _disabledLogged;
+    public string ProviderName => "OpenAI";
+    public MatchReportFailure? LastFailure { get; private set; }
 
     public OpenAiMatchReportService(
         string cacheDir,
         HttpMessageHandler? httpMessageHandler = null,
-        Func<TimeSpan, Task>? delayAsync = null)
+        Func<TimeSpan, Task>? delayAsync = null,
+        bool? enabledOverride = null)
     {
         _cacheDir = cacheDir;
         Directory.CreateDirectory(_cacheDir);
 
-        _enabled = ParseBooleanFlag(
+        _enabled = enabledOverride ?? ParseBooleanFlag(
             Environment.GetEnvironmentVariable("BARNASTATS_ENABLE_AI_MATCH_REPORTS"));
         _apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
         _model = Environment.GetEnvironmentVariable("BARNASTATS_OPENAI_MODEL")
@@ -59,6 +62,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
         string? movesRaw,
         int? focusTeamIdExtern = null)
     {
+        LastFailure = null;
         var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
         var cachePath = BuildCachePath(matchWebId, focusTeamIdExtern);
         var cached = await TryReadCacheAsync(cachePath);
@@ -79,6 +83,11 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                 _disabledLogged = true;
             }
 
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.Disabled,
+                Message = "La generación AI está desactivada por configuración."
+            };
             return hasMatchingCachedContent && cached is not null ? ToResult(cached) : null;
         }
 
@@ -90,6 +99,11 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                 _missingApiKeyLogged = true;
             }
 
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.MissingApiKey,
+                Message = "Falta OPENAI_API_KEY."
+            };
             return hasMatchingCachedContent && cached is not null ? ToResult(cached) : null;
         }
 
@@ -104,6 +118,7 @@ public sealed class OpenAiMatchReportService : IMatchReportService
             Model = _model,
             GeneratedAtUtc = DateTime.UtcNow
         };
+        LastFailure = null;
 
         var cacheEntry = new MatchReportCacheEntry
         {
@@ -161,9 +176,26 @@ public sealed class OpenAiMatchReportService : IMatchReportService
                 _delayAsync);
             return ExtractOutputText(responseText);
         }
+        catch (AiProviderRequestException ex)
+        {
+            LastFailure = new MatchReportFailure
+            {
+                Kind = ex.IsRetryableStatusCode
+                    ? MatchReportFailureKind.TransientFailure
+                    : MatchReportFailureKind.RequestFailed,
+                Message = ex.Message
+            };
+            Console.WriteLine($"No se pudo generar el resumen AI del partido (OpenAI): {ex.Message}");
+            return null;
+        }
         catch (Exception ex)
         {
-            Console.WriteLine($"No se pudo generar el resumen AI del partido: {ex.Message}");
+            LastFailure = new MatchReportFailure
+            {
+                Kind = MatchReportFailureKind.RequestFailed,
+                Message = ex.Message
+            };
+            Console.WriteLine($"No se pudo generar el resumen AI del partido (OpenAI): {ex.Message}");
             return null;
         }
     }

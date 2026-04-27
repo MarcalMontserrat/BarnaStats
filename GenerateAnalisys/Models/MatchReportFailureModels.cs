@@ -5,6 +5,7 @@ public enum MatchReportFailureKind
     Disabled = 0,
     MissingApiKey,
     DailyQuotaReached,
+    TransientFailure,
     RequestFailed,
     EmptyResponse
 }

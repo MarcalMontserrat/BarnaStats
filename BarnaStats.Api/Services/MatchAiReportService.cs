@@ -9,6 +9,8 @@ namespace BarnaStats.Api.Services;
 public sealed class MatchAiReportService
 {
     private readonly BarnaStatsPaths _paths;
+    private readonly Func<string, IMatchReportProviderService> _createGeminiService;
+    private readonly Func<string, IMatchReportProviderService> _createOpenAiService;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true
@@ -20,9 +22,16 @@ public sealed class MatchAiReportService
         WriteIndented = true
     };
 
-    public MatchAiReportService(BarnaStatsPaths paths)
+    public MatchAiReportService(
+        BarnaStatsPaths paths,
+        Func<string, IMatchReportProviderService>? createGeminiService = null,
+        Func<string, IMatchReportProviderService>? createOpenAiService = null)
     {
         _paths = paths;
+        _createGeminiService = createGeminiService
+            ?? (cacheDir => new GeminiMatchReportService(cacheDir, enabledOverride: true));
+        _createOpenAiService = createOpenAiService
+            ?? (cacheDir => new OpenAiMatchReportService(cacheDir, enabledOverride: true));
     }
 
     public async Task<MatchAiReportResponse?> GetCachedAsync(int matchWebId, int? focusTeamIdExtern = null)
@@ -42,15 +51,6 @@ public sealed class MatchAiReportService
             {
                 ErrorKind = MatchAiReportErrorKind.MatchDataNotFound,
                 ErrorMessage = "No se han encontrado los stats descargados de este partido. Sincroniza primero la fase correspondiente."
-            };
-        }
-
-        if (string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("GEMINI_API_KEY")))
-        {
-            return new MatchAiReportOperationResult
-            {
-                ErrorKind = MatchAiReportErrorKind.MissingApiKey,
-                ErrorMessage = "Falta GEMINI_API_KEY en el entorno de la API."
             };
         }
 
@@ -88,11 +88,24 @@ public sealed class MatchAiReportService
             };
         }
 
-        var geminiService = new GeminiMatchReportService(
-            GetMatchReportsDir(),
-            enabledOverride: true);
+        var providerFailures = new List<(string ProviderName, MatchReportFailure Failure)>();
+        MatchReportResult? report = null;
 
-        var report = await geminiService.GetOrGenerateAsync(matchWebId, stats, statsRaw, movesRaw, focusTeamIdExtern);
+        foreach (var provider in CreateProviderChain())
+        {
+            report = await provider.GetOrGenerateAsync(matchWebId, stats, statsRaw, movesRaw, focusTeamIdExtern);
+            if (report is not null)
+            {
+                Console.WriteLine($"Análisis {matchWebId} generado con {provider.ProviderName} ({report.Model}).");
+                break;
+            }
+
+            if (provider.LastFailure is not null)
+            {
+                providerFailures.Add((provider.ProviderName, provider.LastFailure));
+            }
+        }
+
         if (report is not null)
         {
             await PersistReportToPublishedDatasetsAsync(matchWebId, stats, report, focusTeamIdExtern);
@@ -116,10 +129,66 @@ public sealed class MatchAiReportService
 
         return new MatchAiReportOperationResult
         {
-            ErrorKind = MapFailureKind(geminiService.LastFailure?.Kind),
-            ErrorMessage = geminiService.LastFailure?.Message
-                           ?? "Gemini no pudo generar el análisis de este partido."
+            ErrorKind = MapFailureKind(SelectFailure(providerFailures)?.Kind),
+            ErrorMessage = BuildFailureMessage(providerFailures)
         };
+    }
+
+    private IEnumerable<IMatchReportProviderService> CreateProviderChain()
+    {
+        var preferredProvider = (Environment.GetEnvironmentVariable("BARNASTATS_AI_PROVIDER") ?? "gemini")
+            .Trim()
+            .ToLowerInvariant();
+        var cacheDir = GetMatchReportsDir();
+
+        if (preferredProvider == "openai")
+        {
+            yield return _createOpenAiService(cacheDir);
+            yield return _createGeminiService(cacheDir);
+            yield break;
+        }
+
+        yield return _createGeminiService(cacheDir);
+        yield return _createOpenAiService(cacheDir);
+    }
+
+    private static MatchReportFailure? SelectFailure(
+        IReadOnlyList<(string ProviderName, MatchReportFailure Failure)> providerFailures)
+    {
+        if (providerFailures.Count == 0)
+            return null;
+
+        var dailyQuotaFailure = providerFailures
+            .Select(entry => entry.Failure)
+            .FirstOrDefault(failure => failure.Kind == MatchReportFailureKind.DailyQuotaReached);
+        if (dailyQuotaFailure is not null)
+            return dailyQuotaFailure;
+
+        var nonMissingKeyFailure = providerFailures
+            .Select(entry => entry.Failure)
+            .LastOrDefault(failure => failure.Kind != MatchReportFailureKind.MissingApiKey);
+        if (nonMissingKeyFailure is not null)
+            return nonMissingKeyFailure;
+
+        return providerFailures[^1].Failure;
+    }
+
+    private static string BuildFailureMessage(
+        IReadOnlyList<(string ProviderName, MatchReportFailure Failure)> providerFailures)
+    {
+        if (providerFailures.Count == 0)
+        {
+            return "No se pudo generar el análisis del partido con los proveedores configurados.";
+        }
+
+        if (providerFailures.Count == 1)
+        {
+            return providerFailures[0].Failure.Message;
+        }
+
+        return string.Join(
+            " ",
+            providerFailures.Select(entry => $"{entry.ProviderName}: {entry.Failure.Message}"));
     }
 
     private async Task<MatchReportCacheEntry?> TryReadCacheEntryAsync(int matchWebId, int? focusTeamIdExtern = null)

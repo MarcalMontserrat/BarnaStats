@@ -31,6 +31,7 @@ function MatchDetailContent({
     onPlayerNavigate,
     showMatchReport = true,
     enableMatchReportOnDemand = true,
+    matchReportApiAvailable = true,
     emptyMessage = "No hay detalle disponible para este partido."
 }) {
     const safePlayers = Array.isArray(players) ? players : [];
@@ -61,8 +62,8 @@ function MatchDetailContent({
                     matchReport={matchReport}
                     matchReportGeneratedAtUtc={matchReportGeneratedAtUtc}
                     matchReportModel={matchReportModel}
-                    subtitle="Resumen on demand generado con Gemini a partir de los stats y el play-by-play ya descargados."
                     enableOnDemand={enableMatchReportOnDemand}
+                    apiAvailable={matchReportApiAvailable}
                 />
             ) : null}
         </div>

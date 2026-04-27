@@ -17,3 +17,9 @@ public interface IMatchReportService
         string? movesRaw,
         int? focusTeamIdExtern = null);
 }
+
+public interface IMatchReportProviderService : IMatchReportService
+{
+    string ProviderName { get; }
+    MatchReportFailure? LastFailure { get; }
+}

@@ -277,7 +277,8 @@ function MatchListSection({
     onToggleMatch,
     onTeamNavigate,
     onPlayerNavigate,
-    enableMatchReportOnDemand = true
+    enableMatchReportOnDemand = true,
+    matchReportApiAvailable = true
 }) {
     const formatMatchTitle = (match) => `Jornada ${match.phaseRound ?? "-"} · vs ${match.rival}`;
 
@@ -473,6 +474,7 @@ function MatchListSection({
                                     matchReportModel={match.matchReportModel}
                                     onPlayerNavigate={onPlayerNavigate}
                                     enableMatchReportOnDemand={enableMatchReportOnDemand}
+                                    matchReportApiAvailable={matchReportApiAvailable}
                                     emptyMessage="No hay detalle disponible para este partido."
                                 />
                             </div>

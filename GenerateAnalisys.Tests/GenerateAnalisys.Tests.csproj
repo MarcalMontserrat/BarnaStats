@@ -19,6 +19,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\GenerateAnalisys\GenerateAnalisys.csproj"/>
+        <ProjectReference Include="..\BarnaStats.Api\BarnaStats.Api.csproj"/>
     </ItemGroup>
 
     <ItemGroup>

@@ -12,27 +12,6 @@ const styles = {
         gap: 16,
         minWidth: 0
     },
-    reportShell: {
-        display: "grid",
-        gap: 10,
-        padding: 16,
-        borderRadius: "var(--radius-lg)",
-        background: "linear-gradient(180deg, rgba(255, 250, 241, 0.98) 0%, rgba(250, 241, 225, 0.95) 100%)",
-        border: "1px solid rgba(211, 159, 52, 0.24)",
-        boxShadow: "var(--shadow-sm)"
-    },
-    reportEyebrow: {
-        color: "#7b4b10",
-        fontSize: 11,
-        fontWeight: 900,
-        letterSpacing: "0.12em",
-        textTransform: "uppercase"
-    },
-    reportCaption: {
-        color: "#7f684a",
-        lineHeight: 1.55,
-        fontSize: 14
-    },
     grid: {
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
@@ -130,6 +109,16 @@ function formatResultLabel(result) {
     default:
         return "";
     }
+}
+
+function areSharedSummariesEquivalent(firstSummary, secondSummary) {
+    if (!firstSummary || !secondSummary) {
+        return false;
+    }
+
+    return String(firstSummary.matchReport ?? "") === String(secondSummary.matchReport ?? "")
+        && String(firstSummary.matchReportGeneratedAtUtc ?? "") === String(secondSummary.matchReportGeneratedAtUtc ?? "")
+        && String(firstSummary.matchReportModel ?? "") === String(secondSummary.matchReportModel ?? "");
 }
 
 function CompetitionMatchTeamDetail({
@@ -258,7 +247,8 @@ function CompetitionMatchDetail({
     analysisVersion,
     onTeamNavigate,
     onPlayerNavigate,
-    enableMatchReportOnDemand = true
+    enableMatchReportOnDemand = true,
+    matchReportApiAvailable = true
 }) {
     const homeTeam = teamDetailsByKey.get(match.homeTeamKey) ?? {
         teamKey: match.homeTeamKey,
@@ -274,18 +264,37 @@ function CompetitionMatchDetail({
         matchesFile: "",
         playersFile: ""
     };
-    const sharedReportMatchesUrl = !enableMatchReportOnDemand
-        ? (homeTeam.matchesFile
-            ? `data/${homeTeam.matchesFile}?v=${analysisVersion}`
-            : (awayTeam.matchesFile ? `data/${awayTeam.matchesFile}?v=${analysisVersion}` : null))
+    const homeSharedReportMatchesUrl = homeTeam.matchesFile
+        ? `data/${homeTeam.matchesFile}?v=${analysisVersion}`
         : null;
-    const {analysis: sharedReportMatches} = useAnalysisData(sharedReportMatchesUrl);
-    const sharedReportSummary = useMemo(
-        () => (Array.isArray(sharedReportMatches)
-            ? sharedReportMatches.find((summary) => Number(summary.matchWebId) === Number(match.matchWebId)) ?? null
+    const awaySharedReportMatchesUrl = awayTeam.matchesFile
+        ? `data/${awayTeam.matchesFile}?v=${analysisVersion}`
+        : null;
+    const {
+        analysis: homeSharedReportMatches
+    } = useAnalysisData(homeSharedReportMatchesUrl);
+    const {
+        analysis: awaySharedReportMatches
+    } = useAnalysisData(awaySharedReportMatchesUrl);
+    const homeSharedReportSummary = useMemo(
+        () => (Array.isArray(homeSharedReportMatches)
+            ? homeSharedReportMatches.find((summary) => Number(summary.matchWebId) === Number(match.matchWebId)) ?? null
             : null),
-        [match.matchWebId, sharedReportMatches]
+        [homeSharedReportMatches, match.matchWebId]
     );
+    const awaySharedReportSummary = useMemo(
+        () => (Array.isArray(awaySharedReportMatches)
+            ? awaySharedReportMatches.find((summary) => Number(summary.matchWebId) === Number(match.matchWebId)) ?? null
+            : null),
+        [awaySharedReportMatches, match.matchWebId]
+    );
+    const sharedReportSummary = useMemo(() => {
+        if (areSharedSummariesEquivalent(homeSharedReportSummary, awaySharedReportSummary)) {
+            return homeSharedReportSummary;
+        }
+
+        return null;
+    }, [awaySharedReportSummary, homeSharedReportSummary]);
     const sharedMatchReport = sharedReportSummary?.matchReport ?? "";
     const sharedMatchReportGeneratedAtUtc = sharedReportSummary?.matchReportGeneratedAtUtc ?? null;
     const sharedMatchReportModel = sharedReportSummary?.matchReportModel ?? "";
@@ -293,22 +302,6 @@ function CompetitionMatchDetail({
 
     return (
         <div style={styles.shell}>
-            {showSharedReport ? (
-                <div style={styles.reportShell}>
-                    <div style={styles.reportEyebrow}>Gemini</div>
-                    <div style={styles.reportCaption}>
-                        Este análisis es único para todo el partido y se comparte entre el equipo local y el visitante.
-                    </div>
-                    <MatchReportPanel
-                        matchWebId={match.matchWebId}
-                        matchReport={sharedMatchReport}
-                        matchReportGeneratedAtUtc={sharedMatchReportGeneratedAtUtc}
-                        matchReportModel={sharedMatchReportModel}
-                        subtitle="Análisis compartido del partido para ambos equipos. Si ya se generó, se carga desde la caché on demand."
-                        enableOnDemand={enableMatchReportOnDemand}
-                    />
-                </div>
-            ) : null}
             <div style={styles.grid}>
                 <CompetitionMatchTeamDetail
                     match={match}
@@ -331,6 +324,18 @@ function CompetitionMatchDetail({
                         : undefined}
                 />
             </div>
+            {showSharedReport ? (
+                <MatchReportPanel
+                    matchWebId={match.matchWebId}
+                    matchReport={sharedMatchReport}
+                    matchReportGeneratedAtUtc={sharedMatchReportGeneratedAtUtc}
+                    matchReportModel={sharedMatchReportModel}
+                    subtitle="Lectura compartida del partido para local y visitante. Si ya existe, se recupera desde la caché; si no, puedes generarla aquí."
+                    enableOnDemand={enableMatchReportOnDemand}
+                    apiAvailable={matchReportApiAvailable}
+                    withTopMargin={false}
+                />
+            ) : null}
         </div>
     );
 }
