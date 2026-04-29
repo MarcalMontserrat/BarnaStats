@@ -578,6 +578,17 @@ const appStyles = {
         border: "1px solid rgba(26, 53, 87, 0.12)",
         boxShadow: "var(--shadow-sm)",
         fontWeight: 800
+    },
+    playerTeamButton: {
+        background: "none",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
+        textAlign: "left",
+        color: "var(--accent-strong)",
+        fontSize: 14,
+        fontWeight: 700,
+        lineHeight: 1.4
     }
 };
 
@@ -2573,6 +2584,22 @@ function App() {
                                     <span style={appStyles.metaChip}>{formatDecimal(playerTotals.avgFouls, 1)} faltas por partido</span>
                                     <span style={appStyles.metaChip}>{playerTotals.minutes} minutos acumulados</span>
                                 </div>
+
+                                {(() => {
+                                    const latestSeason = [...(selectedHistoricalPlayer.seasonSummaries ?? [])]
+                                        .sort((a, b) => (b.seasonStartYear ?? 0) - (a.seasonStartYear ?? 0))[0];
+                                    return latestSeason?.primaryTeamKey ? (
+                                        <div style={appStyles.heroActions}>
+                                            <button
+                                                type="button"
+                                                style={appStyles.secondaryLink}
+                                                onClick={() => handleTeamNavigate(latestSeason.primaryTeamKey)}
+                                            >
+                                                Ver equipo
+                                            </button>
+                                        </div>
+                                    ) : null;
+                                })()}
                             </div>
                         </section>
 
@@ -2642,9 +2669,19 @@ function App() {
                                                     {seasonSummary.shirtNumber ? ` · #${seasonSummary.shirtNumber}` : ""}
                                                 </div>
                                                 <h3 style={appStyles.seasonCardTitle}>{seasonSummary.playerName}</h3>
-                                                <p style={appStyles.seasonCardMeta}>
-                                                    {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}
-                                                </p>
+                                                {seasonSummary.primaryTeamKey ? (
+                                                    <button
+                                                        type="button"
+                                                        style={appStyles.playerTeamButton}
+                                                        onClick={() => handleTeamNavigate(seasonSummary.primaryTeamKey)}
+                                                    >
+                                                        {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}
+                                                    </button>
+                                                ) : (
+                                                    <p style={appStyles.seasonCardMeta}>
+                                                        {seasonSummary.teamNames.join(" · ") || "Equipo no disponible"}
+                                                    </p>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
