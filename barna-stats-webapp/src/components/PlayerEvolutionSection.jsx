@@ -180,6 +180,12 @@ function PlayerEvolutionSection({
                             </div>
 
                             <div style={styles.summaryCard}>
+                                <div style={styles.summaryLabel}>+/-</div>
+                                <div style={styles.summaryValue}>{selectedPlayerSummary.plusMinus > 0 ? "+" : ""}{selectedPlayerSummary.plusMinus}</div>
+                                <div style={styles.summaryMeta}>{selectedPlayerSummary.avgPlusMinus > 0 ? "+" : ""}{formatMetric(selectedPlayerSummary.avgPlusMinus)} de media.</div>
+                            </div>
+
+                            <div style={styles.summaryCard}>
                                 <div style={styles.summaryLabel}>Tope de puntos</div>
                                 <div style={styles.summaryValue}>{selectedPlayerSummary.bestPointsGame}</div>
                                 <div style={styles.summaryMeta}>Mejor partido en anotación.</div>
