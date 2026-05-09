@@ -8,7 +8,7 @@ const tableStyles = {
     },
     table: {
         width: "100%",
-        minWidth: 940,
+        minWidth: 1020,
         borderCollapse: "collapse",
         background: "rgba(255, 252, 247, 0.96)"
     },
@@ -69,6 +69,10 @@ const tableStyles = {
 function MatchTable({players, onPlayerNavigate}) {
     const sortedPlayers = [...players].sort((a, b) => b.points - a.points);
     const formatShots = (made, attempted) => `${Number(made ?? 0)}/${Number(attempted ?? 0)}`;
+    const formatPlusMinus = (value) => {
+        const numericValue = Number(value ?? 0);
+        return numericValue > 0 ? `+${numericValue}` : String(numericValue);
+    };
 
     return (
         <div style={tableStyles.shell}>
@@ -83,6 +87,7 @@ function MatchTable({players, onPlayerNavigate}) {
                     <th style={tableStyles.headerCell}>T3</th>
                     <th style={tableStyles.headerCell}>Min</th>
                     <th style={tableStyles.headerCell}>Flt</th>
+                    <th style={tableStyles.headerCell}>+/-</th>
                     <th style={tableStyles.headerCell}>Val</th>
                 </tr>
                 </thead>
@@ -133,6 +138,7 @@ function MatchTable({players, onPlayerNavigate}) {
                             </td>
                             <td style={tableStyles.bodyCell}>{player.minutes}</td>
                             <td style={tableStyles.bodyCell}>{player.fouls ?? 0}</td>
+                            <td style={tableStyles.bodyCell}>{formatPlusMinus(player.plusMinus)}</td>
                             <td style={tableStyles.bodyCell}>{player.valuation}</td>
                         </tr>
                     );
