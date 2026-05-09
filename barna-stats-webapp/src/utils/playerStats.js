@@ -222,6 +222,7 @@ export function buildPlayersArray(players) {
                 points: 0,
                 valuation: 0,
                 fouls: 0,
+                plusMinus: 0,
                 games: 0
             };
         }
@@ -230,6 +231,7 @@ export function buildPlayersArray(players) {
         totalsByPlayer[playerKey].points += Number(player.points);
         totalsByPlayer[playerKey].valuation += Number(player.valuation);
         totalsByPlayer[playerKey].fouls += Number(player.fouls ?? 0);
+        totalsByPlayer[playerKey].plusMinus += Number(player.plusMinus ?? 0);
         totalsByPlayer[playerKey].games += 1;
     });
 
@@ -242,7 +244,8 @@ export function buildPlayersArray(players) {
             avgPoints: stats.games > 0 ? stats.points / stats.games : 0,
             avgValuation: stats.games > 0 ? stats.valuation / stats.games : 0,
             avgFouls: stats.games > 0 ? stats.fouls / stats.games : 0,
-            avgVal: stats.games > 0 ? stats.valuation / stats.games : 0
+            avgVal: stats.games > 0 ? stats.valuation / stats.games : 0,
+            avgPlusMinus: stats.games > 0 ? stats.plusMinus / stats.games : 0
         };
     });
 }
@@ -285,6 +288,7 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
     const valuation = selectedRows.reduce((sum, player) => sum + Number(player.valuation ?? 0), 0);
     const minutes = selectedRows.reduce((sum, player) => sum + Number(player.minutes ?? 0), 0);
     const fouls = selectedRows.reduce((sum, player) => sum + Number(player.fouls ?? 0), 0);
+    const plusMinus = selectedRows.reduce((sum, player) => sum + Number(player.plusMinus ?? 0), 0);
     const ftMade = selectedRows.reduce((sum, player) => sum + Number(player.ftMade ?? 0), 0);
     const ftAttempted = selectedRows.reduce((sum, player) => sum + Number(player.ftAttempted ?? 0), 0);
     const twoMade = selectedRows.reduce((sum, player) => sum + Number(player.twoMade ?? 0), 0);
@@ -305,6 +309,7 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
         valuation,
         minutes,
         fouls,
+        plusMinus,
         ftMade,
         ftAttempted,
         twoMade,
@@ -315,6 +320,7 @@ export function getSelectedPlayerSummary(players, selectedPlayer) {
         avgValuation: games > 0 ? valuation / games : 0,
         avgMinutes: games > 0 ? minutes / games : 0,
         avgFouls: games > 0 ? fouls / games : 0,
+        avgPlusMinus: games > 0 ? plusMinus / games : 0,
         ftPercentage: ftAttempted > 0 ? (ftMade / ftAttempted) * 100 : 0,
         twoPercentage: twoAttempted > 0 ? (twoMade / twoAttempted) * 100 : 0,
         threePercentage: threeAttempted > 0 ? (threeMade / threeAttempted) * 100 : 0,
@@ -330,6 +336,7 @@ export function buildGlobalPlayers(teams) {
             const points = Number(player.points) || 0;
             const valuation = Number(player.valuation) || 0;
             const fouls = Number(player.fouls) || 0;
+            const plusMinus = Number(player.plusMinus) || 0;
             const playerIdentityKey = resolvePlayerIdentityKey(player);
 
             return {
@@ -343,11 +350,13 @@ export function buildGlobalPlayers(teams) {
                 points,
                 valuation,
                 fouls,
+                plusMinus,
                 minutes: Number(player.minutes) || 0,
                 shirtNumber: String(player.shirtNumber ?? "").trim(),
                 avgPoints: games > 0 ? points / games : 0,
                 avgValuation: games > 0 ? valuation / games : 0,
-                avgFouls: games > 0 ? fouls / games : 0
+                avgFouls: games > 0 ? fouls / games : 0,
+                avgPlusMinus: games > 0 ? plusMinus / games : 0
             };
         })
     );
