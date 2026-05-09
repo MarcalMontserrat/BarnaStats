@@ -181,8 +181,8 @@ function PlayerEvolutionSection({
 
                             <div style={styles.summaryCard}>
                                 <div style={styles.summaryLabel}>+/-</div>
-                                <div style={styles.summaryValue}>{selectedPlayerSummary.plusMinus > 0 ? "+" : ""}{selectedPlayerSummary.plusMinus}</div>
-                                <div style={styles.summaryMeta}>{selectedPlayerSummary.avgPlusMinus > 0 ? "+" : ""}{formatMetric(selectedPlayerSummary.avgPlusMinus)} de media.</div>
+                                <div style={styles.summaryValue}>{selectedPlayerSummary.plusMinus > 0 ? "+" : selectedPlayerSummary.plusMinus < 0 ? "-" : ""}{Math.abs(selectedPlayerSummary.plusMinus)}</div>
+                                <div style={styles.summaryMeta}>{selectedPlayerSummary.avgPlusMinus > 0 ? "+" : selectedPlayerSummary.avgPlusMinus < 0 ? "-" : ""}{formatMetric(Math.abs(selectedPlayerSummary.avgPlusMinus))} de media.</div>
                             </div>
 
                             <div style={styles.summaryCard}>
