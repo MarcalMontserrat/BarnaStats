@@ -2255,5 +2255,112 @@
     "matchReport": "Victoria contundente de Grup Barna Vermell\n\nC.B Grup Barna Vermell 1er Any domin\u00F3 el partido de principio a fin, logrando una victoria de 31 puntos sin ceder el liderato en ning\u00FAn momento. Su superioridad se gest\u00F3 desde el primer periodo con un parcial de 2-9 y se consolid\u00F3 en el tercer cuarto con un abrumador 4-16, que ampli\u00F3 su ventaja a 18 puntos.\n\nLa clave del \u00E9xito de C.B Grup Barna Vermell radic\u00F3 en el rendimiento excepcional de Noa C\u00F3rdoba Pinto, quien con 29 puntos fue la m\u00E1xima anotadora del partido y registr\u00F3 un impresionante \u002B/- de \u002B30. Abril Ariza Bernal tambi\u00E9n tuvo un impacto significativo con 15 puntos y un \u002B/- de \u002B30. La consistencia del ataque se evidenci\u00F3 en que diez jugadoras sumaron puntos y un alto porcentaje de acierto en tiros de campo (31/31 en tiros de 2 y 1/1 en tiros de 3), aunque la l\u00EDnea de tiros libres (4/14) es un \u00E1rea de mejora.\n\nClaves del partido:\n- El quinteto formado por Abril Ariza Bernal, Claudia Jou Garcia, Elia Ribes Sarroca, Laia Denc\u00E0s Guarda y Noa C\u00F3rdoba Pinto fue determinante, acumulando un diferencial de \u002B12 en 6 minutos.\n- El impacto de Noa C\u00F3rdoba Pinto fue fundamental, ya que con ella en cancha, el equipo registr\u00F3 un parcial de \u002B30.\n- La racha de 14-0 en el tercer periodo fue decisiva para que C.B Grup Barna Vermell estableciera una ventaja insalvable.",
     "matchReportGeneratedAtUtc": "2026-04-27T10:27:36.549072Z",
     "matchReportModel": "gemini-2.5-flash"
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "teamIdIntern": 569516,
+    "teamIdExtern": 81178,
+    "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "matchWebId": 73892,
+    "matchInternId": 283457,
+    "matchExternId": 1171744,
+    "matchDate": "2026-05-09T14:15:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 12,
+    "roundNumber": 20,
+    "homeTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "homeScore": 54,
+    "awayScore": 4,
+    "awayTeam": "U.E.MATAR\u00D3 - PRBF",
+    "isHome": true,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "rivalTeam": "U.E.MATAR\u00D3 - PRBF",
+    "officialTeamScore": 54,
+    "officialRivalScore": 4,
+    "teamScore": 81,
+    "rivalScore": 4,
+    "result": "W",
+    "topScorer": "NOA C\u00D3RDOBA PINTO",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 17,
+    "teamTopScorer": "NOA C\u00D3RDOBA PINTO",
+    "teamTopScorerPoints": 17,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 1,
+      "maxLead": 52,
+      "maxDeficit": 2,
+      "bestRun": 54,
+      "rivalBestRun": 2,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "J\u00DALIA M\u00C1RMOL CASTILLO",
+      "firstScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+      "lastScorer": "NOA C\u00D3RDOBA PINTO",
+      "lastScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "teamFirstScorer": "EVA RODRIGUEZ CANO",
+      "teamLastScorer": "NOA C\u00D3RDOBA PINTO",
+      "bestPeriodLabel": "Parcial 5",
+      "bestPeriodDiff": 13,
+      "worstPeriodLabel": "Parcial 8",
+      "worstPeriodDiff": -2,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 12,
+          "rivalPoints": 2,
+          "diff": 10
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 11,
+          "rivalPoints": 0,
+          "diff": 11
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 9,
+          "rivalPoints": 0,
+          "diff": 9
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 9,
+          "rivalPoints": 0,
+          "diff": 9
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 13,
+          "rivalPoints": 0,
+          "diff": 13
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 0,
+          "rivalPoints": 2,
+          "diff": -2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

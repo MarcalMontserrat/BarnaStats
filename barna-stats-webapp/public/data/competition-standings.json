@@ -24058,34 +24058,46 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 2,
+      "matchesCount": 4,
       "rows": [
         {
           "position": 1,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-          "teamName": "U.E.MATAR\u00D3 - PRBF",
-          "played": 1,
-          "wins": 1,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+          "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+          "played": 2,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 56,
-          "pointsAgainst": 16,
-          "pointDiff": 40
+          "pointsFor": 150,
+          "pointsAgainst": 42,
+          "pointDiff": 108
         },
         {
           "position": 2,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-          "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
           "played": 1,
           "wins": 1,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 69,
-          "pointsAgainst": 38,
-          "pointDiff": 31
+          "pointsFor": 17,
+          "pointsAgainst": 16,
+          "pointDiff": 1
         },
         {
           "position": 3,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+          "teamName": "U.E.MATAR\u00D3 - PRBF",
+          "played": 2,
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 60,
+          "pointsAgainst": 97,
+          "pointDiff": -37
+        },
+        {
+          "position": 4,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
           "teamName": "JAC SANTS BARCELONA U10",
           "played": 1,
@@ -24097,16 +24109,16 @@
           "pointDiff": -31
         },
         {
-          "position": 4,
+          "position": 5,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
           "teamName": "CB MANYANET LES CORTS GROC",
-          "played": 1,
+          "played": 2,
           "wins": 0,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 16,
-          "pointsAgainst": 56,
-          "pointDiff": -40
+          "pointsFor": 32,
+          "pointsAgainst": 73,
+          "pointDiff": -41
         }
       ]
     }

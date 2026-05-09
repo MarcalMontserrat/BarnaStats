@@ -2,7 +2,7 @@
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
   "totalTeams": 836,
-  "totalMatches": 8674,
+  "totalMatches": 8676,
   "phases": [
     {
       "seasonStartYear": 2025,
@@ -2546,7 +2546,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 2
+      "matchesCount": 4
     }
   ],
   "teams": [
@@ -3797,9 +3797,9 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 19,
+      "matchesPlayed": 20,
       "playersCount": 12,
-      "totalValuation": 718
+      "totalValuation": 778
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80319",
@@ -4868,9 +4868,9 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 17,
+      "matchesPlayed": 18,
       "playersCount": 17,
-      "totalValuation": 131
+      "totalValuation": 112
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
@@ -5957,9 +5957,9 @@
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 9,
-      "totalValuation": 210
+      "totalValuation": 188
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80298",
@@ -9494,9 +9494,9 @@
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "matchesPlayed": 17,
+      "matchesPlayed": 18,
       "playersCount": 11,
-      "totalValuation": 647
+      "totalValuation": 631
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80888",

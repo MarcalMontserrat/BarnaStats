@@ -2148,5 +2148,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+    "teamIdIntern": 567697,
+    "teamIdExtern": 81071,
+    "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+    "matchWebId": 73891,
+    "matchInternId": 282547,
+    "matchExternId": 1171248,
+    "matchDate": "2026-05-08T21:45:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 11,
+    "roundNumber": 19,
+    "homeTeam": "CB MANYANET LES CORTS GROC",
+    "homeScore": 16,
+    "awayScore": 17,
+    "awayTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "rivalTeam": "CB MANYANET LES CORTS GROC",
+    "officialTeamScore": 17,
+    "officialRivalScore": 16,
+    "teamScore": 17,
+    "rivalScore": 16,
+    "result": "W",
+    "topScorer": "ELIA JIMENEZ ROMERO",
+    "topScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+    "topScorerPoints": 7,
+    "teamTopScorer": "ELIA JIMENEZ ROMERO",
+    "teamTopScorerPoints": 7,
+    "insights": {
+      "leadChanges": 3,
+      "ties": 5,
+      "maxLead": 3,
+      "maxDeficit": 3,
+      "bestRun": 5,
+      "rivalBestRun": 5,
+      "closingRun": 1,
+      "rivalClosingRun": 0,
+      "firstScorer": "ONA MARTINEZ ARAUZO",
+      "firstScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+      "lastScorer": "ONA MARTINEZ ARAUZO",
+      "lastScorerTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+      "teamFirstScorer": "ONA MARTINEZ ARAUZO",
+      "teamLastScorer": "ONA MARTINEZ ARAUZO",
+      "bestPeriodLabel": "Parcial 2",
+      "bestPeriodDiff": 2,
+      "worstPeriodLabel": "Parcial 1",
+      "worstPeriodDiff": -2,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 4,
+          "diff": -2
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 2,
+          "rivalPoints": 0,
+          "diff": 2
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 3,
+          "rivalPoints": 3,
+          "diff": 0
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 1,
+          "rivalPoints": 2,
+          "diff": -1
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 5,
+          "rivalPoints": 4,
+          "diff": 1
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 2,
+          "rivalPoints": 1,
+          "diff": 1
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 1,
+          "rivalPoints": 2,
+          "diff": -1
+        },
+        {
+          "periodNumber": 9,
+          "label": "Parcial 9",
+          "teamPoints": 1,
+          "rivalPoints": 0,
+          "diff": 1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

@@ -1285,11 +1285,11 @@
     "clubId": 25,
     "primaryTeamIdExtern": 81071,
     "totalTeams": 1,
-    "totalMatches": 18,
+    "totalMatches": 19,
     "totalPlayers": 9,
     "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 18 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 19 partidos",
     "searchText": "ASSOCIACIO CENTRE CATOLIC DE L\u0027 HOSPITALET DE LLOBREGAT CENTRE CATOLIC HOSP CENTRE CAT\u00D2LIC L\u0027H C.t. Pre-mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
       {
@@ -1304,24 +1304,24 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
                 "teamIdExtern": 81071,
                 "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-                "matchesPlayed": 18,
+                "matchesPlayed": 19,
                 "playersCount": 9,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
-                "phaseLabel": "Segona Fase \u00B7 Nivell B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21630",
+                "phaseLabel": "Tercera Fase \u00B7 Nivell B \u00B7 Grupo 01",
+                "latestPhaseOptionValue": "source:21974",
                 "groupCode": "01",
                 "standingPosition": 2,
                 "record": {
-                  "wins": 9,
+                  "wins": 10,
                   "losses": 9,
                   "ties": 0,
-                  "pointsFor": 553,
-                  "pointsAgainst": 688
+                  "pointsFor": 570,
+                  "pointsAgainst": 704
                 },
-                "pointDiff": -135,
-                "avgValuation": 11.666666666666666
+                "pointDiff": -134,
+                "avgValuation": 9.894736842105264
               }
             ]
           }
@@ -2356,11 +2356,11 @@
     "clubId": 451,
     "primaryTeamIdExtern": 81365,
     "totalTeams": 3,
-    "totalMatches": 56,
+    "totalMatches": 57,
     "totalPlayers": 44,
     "categoriesCount": 3,
     "levelsCount": 2,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 56 partidos",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 57 partidos",
     "searchText": "ASSOCIACIO ESPORTIVA PARE MANYANET PARE MANYANET A.E. CB MANYANET LES CORTS GROC C.t. Pre-mini Femen\u00ED 1r. Any Nivell B CB MANYANET LES CORTS VERD C.c. J\u00FAnior Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell B1",
     "categories": [
       {
@@ -2445,7 +2445,7 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
                 "teamIdExtern": 81365,
                 "teamName": "CB MANYANET LES CORTS GROC",
-                "matchesPlayed": 17,
+                "matchesPlayed": 18,
                 "playersCount": 17,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
@@ -2456,13 +2456,13 @@
                 "standingPosition": 4,
                 "record": {
                   "wins": 7,
-                  "losses": 10,
+                  "losses": 11,
                   "ties": 0,
-                  "pointsFor": 435,
-                  "pointsAgainst": 626
+                  "pointsFor": 451,
+                  "pointsAgainst": 643
                 },
-                "pointDiff": -191,
-                "avgValuation": 7.705882352941177
+                "pointDiff": -192,
+                "avgValuation": 6.222222222222222
               }
             ]
           }
@@ -15220,11 +15220,11 @@
     "clubId": 24,
     "primaryTeamIdExtern": 80323,
     "totalTeams": 11,
-    "totalMatches": 251,
+    "totalMatches": 252,
     "totalPlayers": 176,
     "categoriesCount": 11,
     "levelsCount": 4,
-    "meta": "11 equipos \u00B7 11 categorias \u00B7 251 partidos",
+    "meta": "11 equipos \u00B7 11 categorias \u00B7 252 partidos",
     "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.c. Cadet Femen\u00ED Preferent Preferent B C.c Infantil Femen\u00ED Preferent Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED Nivell B2 C.B GRUP BARNA B Copa Catalunya Femenina C.B GRUP BARNA VERMELL  1ER ANY C.t. Pre-mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A C.c. J\u00FAnior Femen\u00ED Interterritorial CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA C.c. Cadet Femen\u00ED Preferent 1r. Any INSTAX - CB GRUP BARNA A Super Copa Femenina",
     "categories": [
       {
@@ -15484,7 +15484,7 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
                 "teamIdExtern": 81178,
                 "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-                "matchesPlayed": 19,
+                "matchesPlayed": 20,
                 "playersCount": 12,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
@@ -15494,14 +15494,14 @@
                 "groupCode": "01",
                 "standingPosition": 1,
                 "record": {
-                  "wins": 17,
+                  "wins": 18,
                   "losses": 2,
                   "ties": 0,
-                  "pointsFor": 1074,
-                  "pointsAgainst": 366
+                  "pointsFor": 1155,
+                  "pointsAgainst": 370
                 },
-                "pointDiff": 708,
-                "avgValuation": 37.78947368421053
+                "pointDiff": 785,
+                "avgValuation": 38.9
               }
             ]
           }
@@ -32415,11 +32415,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 80885,
     "totalTeams": 14,
-    "totalMatches": 290,
+    "totalMatches": 291,
     "totalPlayers": 201,
     "categoriesCount": 12,
     "levelsCount": 6,
-    "meta": "14 equipos \u00B7 12 categorias \u00B7 290 partidos",
+    "meta": "14 equipos \u00B7 12 categorias \u00B7 291 partidos",
     "searchText": "U.E. MATAR\u00D3 ROMAKURUMA U.E.MATAR\u00D3 Liga Femenina De Baloncesto 2 U.E.MATAR\u00D3 - CBF C.c. Cadet Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - IAF C.c Infantil Femen\u00ED Preferent Preferent A U.E.MATAR\u00D3 - IBF C.c. Infantil Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - J1F C.c. J\u00FAnior Femen\u00ED Interterritorial U.E.MATAR\u00D3 - JAF C. C. J\u00FAnior Femen\u00ED Preferent Preferent B U.E.MATAR\u00D3 - JBF C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - PR1F C.t. Pre-mini Femen\u00ED Nivell C1 U.E.MATAR\u00D3 - PR2F C.t. Pre-mini Femen\u00ED 1r. Any Nivell D U.E.MATAR\u00D3 - PRAF Nivell A U.E.MATAR\u00D3 - PRBF Nivell B U.E.MATAR\u00D3 -C1F C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 U.E.MATAR\u00D3 -CAF C.c. Cadet Femen\u00ED Preferent UE CELLERA AMER LES PLANES HIPRA C.c. Segona Categoria Femenina",
     "categories": [
       {
@@ -32814,7 +32814,7 @@
                 "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
                 "teamIdExtern": 80889,
                 "teamName": "U.E.MATAR\u00D3 - PRBF",
-                "matchesPlayed": 17,
+                "matchesPlayed": 18,
                 "playersCount": 11,
                 "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
@@ -32825,13 +32825,13 @@
                 "standingPosition": 1,
                 "record": {
                   "wins": 13,
-                  "losses": 4,
+                  "losses": 5,
                   "ties": 0,
-                  "pointsFor": 947,
-                  "pointsAgainst": 351
+                  "pointsFor": 951,
+                  "pointsAgainst": 432
                 },
-                "pointDiff": 596,
-                "avgValuation": 38.05882352941177
+                "pointDiff": 519,
+                "avgValuation": 35.05555555555556
               }
             ]
           },

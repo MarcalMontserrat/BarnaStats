@@ -2013,5 +2013,112 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "teamIdIntern": 569517,
+    "teamIdExtern": 80889,
+    "teamName": "U.E.MATAR\u00D3 - PRBF",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "matchWebId": 73892,
+    "matchInternId": 283457,
+    "matchExternId": 1171744,
+    "matchDate": "2026-05-09T14:15:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 10,
+    "roundNumber": 18,
+    "homeTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "homeScore": 54,
+    "awayScore": 4,
+    "awayTeam": "U.E.MATAR\u00D3 - PRBF",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "rivalTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "officialTeamScore": 4,
+    "officialRivalScore": 54,
+    "teamScore": 4,
+    "rivalScore": 81,
+    "result": "L",
+    "topScorer": "NOA C\u00D3RDOBA PINTO",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 17,
+    "teamTopScorer": "TANIT TUTUSAUS RUIZ",
+    "teamTopScorerPoints": 2,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 1,
+      "maxLead": 2,
+      "maxDeficit": 52,
+      "bestRun": 2,
+      "rivalBestRun": 54,
+      "closingRun": 2,
+      "rivalClosingRun": 0,
+      "firstScorer": "J\u00DALIA M\u00C1RMOL CASTILLO",
+      "firstScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+      "lastScorer": "NOA C\u00D3RDOBA PINTO",
+      "lastScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "teamFirstScorer": "J\u00DALIA M\u00C1RMOL CASTILLO",
+      "teamLastScorer": "TANIT TUTUSAUS RUIZ",
+      "bestPeriodLabel": "Parcial 8",
+      "bestPeriodDiff": 2,
+      "worstPeriodLabel": "Parcial 5",
+      "worstPeriodDiff": -13,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 12,
+          "diff": -10
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 0,
+          "rivalPoints": 11,
+          "diff": -11
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 0,
+          "rivalPoints": 9,
+          "diff": -9
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 9,
+          "diff": -9
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 13,
+          "diff": -13
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 2,
+          "rivalPoints": 0,
+          "diff": 2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]
