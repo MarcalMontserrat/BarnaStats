@@ -881,7 +881,10 @@ public sealed class MatchAnalysisService
             .OrderBy(period => period)
             .Select(period =>
             {
-                periodPointsByPeriod.TryGetValue(period, out var points);
+                if (!periodPointsByPeriod.TryGetValue(period, out var points))
+                {
+                    points = (LocalPoints: 0, VisitPoints: 0);
+                }
                 var localPoints = points.LocalPoints;
                 var visitPoints = points.VisitPoints;
                 var teamPoints = isHome ? localPoints : visitPoints;
