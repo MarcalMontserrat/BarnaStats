@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-05-09T15:32:16.887381Z",
+  "generatedAtUtc": "2026-05-16T12:33:49.83048Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -3880,16 +3880,16 @@
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 20,
+          "matchesPlayed": 21,
           "playersCount": 12,
-          "pointsFor": 1155,
-          "pointsAgainst": 370,
-          "pointDiff": 785,
-          "wins": 18,
+          "pointsFor": 1241,
+          "pointsAgainst": 381,
+          "pointDiff": 860,
+          "wins": 19,
           "losses": 2,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 38.9
+          "avgValuation": 40.333333333333336
         }
       ]
     },
@@ -7380,16 +7380,16 @@
           "teamName": "CB MANYANET LES CORTS GROC",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 18,
+          "matchesPlayed": 19,
           "playersCount": 17,
-          "pointsFor": 451,
-          "pointsAgainst": 643,
-          "pointDiff": -192,
+          "pointsFor": 464,
+          "pointsAgainst": 679,
+          "pointDiff": -215,
           "wins": 7,
-          "losses": 11,
+          "losses": 12,
           "ties": 0,
           "standingPosition": 4,
-          "avgValuation": 6.222222222222222
+          "avgValuation": 5
         }
       ]
     },
@@ -10731,16 +10731,16 @@
           "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 19,
+          "matchesPlayed": 20,
           "playersCount": 9,
-          "pointsFor": 570,
-          "pointsAgainst": 704,
-          "pointDiff": -134,
+          "pointsFor": 581,
+          "pointsAgainst": 790,
+          "pointDiff": -209,
           "wins": 10,
-          "losses": 9,
+          "losses": 10,
           "ties": 0,
           "standingPosition": 2,
-          "avgValuation": 9.894736842105264
+          "avgValuation": 8.9
         }
       ]
     },
@@ -12411,16 +12411,16 @@
           "teamName": "DOMINIQUES BARCELONA NEGRE",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 15,
+          "matchesPlayed": 16,
           "playersCount": 12,
-          "pointsFor": 419,
-          "pointsAgainst": 350,
-          "pointDiff": 69,
-          "wins": 9,
+          "pointsFor": 455,
+          "pointsAgainst": 363,
+          "pointDiff": 92,
+          "wins": 10,
           "losses": 6,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 4.4
+          "avgValuation": 4.6875
         }
       ]
     },

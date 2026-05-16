@@ -101,6 +101,13 @@
           "diff": 3
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 0,
@@ -639,9 +646,16 @@
       "teamLastScorer": "CLAUDIA MART\u00CDNEZ HERNANDEZ",
       "bestPeriodLabel": "Parcial 2",
       "bestPeriodDiff": 10,
-      "worstPeriodLabel": "Parcial 4",
-      "worstPeriodDiff": 2,
+      "worstPeriodLabel": "Parcial 1",
+      "worstPeriodDiff": 0,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",

@@ -80,6 +80,20 @@
           "diff": 13
         },
         {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 6,
           "label": "Parcial 6",
           "teamPoints": 0,
@@ -415,6 +429,13 @@
           "diff": -5
         },
         {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 6,
           "label": "Parcial 6",
           "teamPoints": 0,
@@ -536,6 +557,13 @@
           "diff": 4
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 0,
@@ -641,6 +669,13 @@
           "teamPoints": 10,
           "rivalPoints": 0,
           "diff": 10
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
         },
         {
           "periodNumber": 7,

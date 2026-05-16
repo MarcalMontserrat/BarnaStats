@@ -222,6 +222,13 @@
           "diff": -6
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 2,

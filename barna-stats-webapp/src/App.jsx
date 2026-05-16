@@ -2059,13 +2059,6 @@ function App() {
 
     const renderCompetitionPage = () => (
         <div style={appStyles.pageShell}>
-            <a
-                href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : buildDashboardRoute()}
-                style={appStyles.pageBackLink}
-            >
-                Volver al panel
-            </a>
-
             <section style={appStyles.syncIntro}>
                 <div style={appStyles.syncEyebrow}>Competición</div>
                 <h2 style={appStyles.syncTitle}>Clasificación, resultados y líderes globales</h2>
@@ -2201,13 +2194,6 @@ function App() {
 
         return (
             <div style={appStyles.pageShell}>
-                <a
-                    href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : buildDashboardRoute()}
-                    style={appStyles.pageBackLink}
-                >
-                    Volver al panel
-                </a>
-
                 <section style={appStyles.syncIntro}>
                     <div style={appStyles.syncEyebrow}>Clubes</div>
                     <h2 style={appStyles.syncTitle}>Mapa del club por categoria y nivel</h2>
@@ -2814,13 +2800,6 @@ function App() {
 
         return (
             <div style={appStyles.pageShell}>
-                <a
-                    href={selectedTeamSummary ? buildTeamRoute(selectedTeamSummary.teamKey) : buildDashboardRoute()}
-                    style={appStyles.pageBackLink}
-                >
-                    Volver al panel
-                </a>
-
                 <section style={appStyles.syncIntro}>
                     <div style={appStyles.syncEyebrow}>Comparador</div>
                     <h2 style={appStyles.syncTitle}>Compara equipos o jugadoras cara a cara</h2>

@@ -329,6 +329,13 @@
           "diff": 5
         },
         {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 6,
           "label": "Parcial 6",
           "teamPoints": 2,

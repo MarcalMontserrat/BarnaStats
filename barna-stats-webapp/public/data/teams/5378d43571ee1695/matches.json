@@ -1484,11 +1484,19 @@
       "lastScorerTeam": "",
       "teamFirstScorer": "",
       "teamLastScorer": "",
-      "bestPeriodLabel": "",
+      "bestPeriodLabel": "Parcial 1",
       "bestPeriodDiff": 0,
-      "worstPeriodLabel": "",
+      "worstPeriodLabel": "Parcial 1",
       "worstPeriodDiff": 0,
-      "periodScores": []
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        }
+      ]
     },
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
@@ -1908,6 +1916,13 @@
           "teamPoints": 0,
           "rivalPoints": 3,
           "diff": -3
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
         },
         {
           "periodNumber": 8,

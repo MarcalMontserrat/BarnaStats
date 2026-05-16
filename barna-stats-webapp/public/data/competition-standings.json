@@ -24058,31 +24058,31 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 4,
+      "matchesCount": 6,
       "rows": [
         {
           "position": 1,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-          "played": 2,
-          "wins": 2,
+          "played": 3,
+          "wins": 3,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 150,
-          "pointsAgainst": 42,
-          "pointDiff": 108
+          "pointsFor": 236,
+          "pointsAgainst": 53,
+          "pointDiff": 183
         },
         {
           "position": 2,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+          "teamName": "DOMINIQUES BARCELONA NEGRE",
           "played": 1,
           "wins": 1,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 17,
-          "pointsAgainst": 16,
-          "pointDiff": 1
+          "pointsFor": 36,
+          "pointsAgainst": 13,
+          "pointDiff": 23
         },
         {
           "position": 3,
@@ -24098,6 +24098,18 @@
         },
         {
           "position": 4,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+          "played": 2,
+          "wins": 1,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 28,
+          "pointsAgainst": 102,
+          "pointDiff": -74
+        },
+        {
+          "position": 5,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
           "teamName": "JAC SANTS BARCELONA U10",
           "played": 1,
@@ -24109,16 +24121,16 @@
           "pointDiff": -31
         },
         {
-          "position": 5,
+          "position": 6,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
           "teamName": "CB MANYANET LES CORTS GROC",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 32,
-          "pointsAgainst": 73,
-          "pointDiff": -41
+          "pointsFor": 45,
+          "pointsAgainst": 109,
+          "pointDiff": -64
         }
       ]
     }

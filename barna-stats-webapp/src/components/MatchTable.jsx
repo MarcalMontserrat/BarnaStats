@@ -1,6 +1,5 @@
 const tableStyles = {
     shell: {
-        marginTop: 14,
         overflowX: "auto",
         borderRadius: "var(--radius-lg)",
         border: "1px solid rgba(26, 53, 87, 0.1)",
@@ -63,10 +62,13 @@ const tableStyles = {
         font: "inherit",
         fontWeight: 800,
         textAlign: "left"
+    },
+    shellWithTopMargin: {
+        marginTop: 14
     }
 };
 
-function MatchTable({players, onPlayerNavigate}) {
+function MatchTable({players, onPlayerNavigate, withTopMargin = true}) {
     const sortedPlayers = [...players].sort((a, b) => b.points - a.points);
     const formatShots = (made, attempted) => `${Number(made ?? 0)}/${Number(attempted ?? 0)}`;
     const formatPlusMinus = (value) => {
@@ -75,7 +77,11 @@ function MatchTable({players, onPlayerNavigate}) {
     };
 
     return (
-        <div style={tableStyles.shell}>
+        <div
+            style={withTopMargin
+                ? {...tableStyles.shell, ...tableStyles.shellWithTopMargin}
+                : tableStyles.shell}
+        >
             <table style={tableStyles.table}>
                 <thead>
                 <tr style={tableStyles.headRow}>

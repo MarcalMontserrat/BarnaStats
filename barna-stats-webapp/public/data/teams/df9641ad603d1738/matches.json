@@ -450,6 +450,13 @@
           "diff": -3
         },
         {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 7,
           "label": "Parcial 7",
           "teamPoints": 5,
@@ -925,6 +932,13 @@
           "teamPoints": 2,
           "rivalPoints": 5,
           "diff": -3
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
         },
         {
           "periodNumber": 8,

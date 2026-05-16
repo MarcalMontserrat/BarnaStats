@@ -651,11 +651,18 @@
       "lastScorerTeam": "C.E.MARISTES SANTS LES CORTS",
       "teamFirstScorer": "MARTINA MONTOYA MARTINEZ",
       "teamLastScorer": "MARTINA MONTOYA MARTINEZ",
-      "bestPeriodLabel": "Parcial 4",
-      "bestPeriodDiff": -2,
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": 0,
       "worstPeriodLabel": "Parcial 2",
       "worstPeriodDiff": -10,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",
@@ -1167,6 +1174,13 @@
           "teamPoints": 0,
           "rivalPoints": 2,
           "diff": -2
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
         },
         {
           "periodNumber": 8,

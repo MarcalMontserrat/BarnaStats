@@ -1013,6 +1013,13 @@
       "worstPeriodDiff": -4,
       "periodScores": [
         {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 2,
           "label": "Parcial 2",
           "teamPoints": 2,
@@ -1771,6 +1778,127 @@
           "label": "Parcial 8",
           "teamPoints": 5,
           "rivalPoints": 4,
+          "diff": 1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+    "teamIdIntern": 573948,
+    "teamIdExtern": 82476,
+    "teamName": "DOMINIQUES BARCELONA NEGRE",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "matchWebId": 73895,
+    "matchInternId": 285673,
+    "matchExternId": 1170633,
+    "matchDate": "2026-05-16T13:00:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 9,
+    "roundNumber": 16,
+    "homeTeam": "DOMINIQUES BARCELONA NEGRE",
+    "homeScore": 36,
+    "awayScore": 13,
+    "awayTeam": "CB MANYANET LES CORTS GROC",
+    "isHome": true,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "rivalTeam": "CB MANYANET LES CORTS GROC",
+    "officialTeamScore": 36,
+    "officialRivalScore": 13,
+    "teamScore": 36,
+    "rivalScore": 13,
+    "result": "W",
+    "topScorer": "ANTONELLA CORNEJO MERIDA",
+    "topScorerTeam": "DOMINIQUES BARCELONA NEGRE",
+    "topScorerPoints": 8,
+    "teamTopScorer": "ANTONELLA CORNEJO MERIDA",
+    "teamTopScorerPoints": 8,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 24,
+      "maxDeficit": 0,
+      "bestRun": 10,
+      "rivalBestRun": 2,
+      "closingRun": 0,
+      "rivalClosingRun": 1,
+      "firstScorer": "SANDRA RIBES TAPIAS",
+      "firstScorerTeam": "DOMINIQUES BARCELONA NEGRE",
+      "lastScorer": "ALEJANDRA URRUTIA MUN\u00C1RRIZ",
+      "lastScorerTeam": "CB MANYANET LES CORTS GROC",
+      "teamFirstScorer": "SANDRA RIBES TAPIAS",
+      "teamLastScorer": "ANTONELLA CORNEJO MERIDA",
+      "bestPeriodLabel": "Parcial 3",
+      "bestPeriodDiff": 5,
+      "worstPeriodLabel": "Parcial 6",
+      "worstPeriodDiff": 1,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 5,
+          "rivalPoints": 2,
+          "diff": 3
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 4,
+          "rivalPoints": 0,
+          "diff": 4
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 9,
+          "rivalPoints": 4,
+          "diff": 5
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 4,
+          "rivalPoints": 0,
+          "diff": 4
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 3,
+          "rivalPoints": 0,
+          "diff": 3
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 3,
+          "rivalPoints": 2,
+          "diff": 1
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 6,
+          "rivalPoints": 4,
+          "diff": 2
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 2,
+          "rivalPoints": 1,
           "diff": 1
         }
       ]

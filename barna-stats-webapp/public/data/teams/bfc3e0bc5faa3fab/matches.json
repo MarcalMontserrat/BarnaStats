@@ -1358,9 +1358,16 @@
       "teamLastScorer": "DANIELA RAMIL VELASCO",
       "bestPeriodLabel": "Parcial 7",
       "bestPeriodDiff": 10,
-      "worstPeriodLabel": "Parcial 3",
+      "worstPeriodLabel": "Parcial 1",
       "worstPeriodDiff": 0,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",

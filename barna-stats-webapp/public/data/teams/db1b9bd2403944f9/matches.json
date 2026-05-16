@@ -1975,11 +1975,18 @@
       "lastScorerTeam": "CB MONTPEDR\u00D3S",
       "teamFirstScorer": "M.S.R.",
       "teamLastScorer": "VERA TAMAYO MARTIN",
-      "bestPeriodLabel": "Parcial 5",
+      "bestPeriodLabel": "Parcial 1",
       "bestPeriodDiff": 0,
       "worstPeriodLabel": "Parcial 3",
       "worstPeriodDiff": -6,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",
