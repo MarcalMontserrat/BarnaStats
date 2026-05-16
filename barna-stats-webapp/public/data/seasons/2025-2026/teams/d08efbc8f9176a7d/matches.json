@@ -422,6 +422,13 @@
       "worstPeriodDiff": -2,
       "periodScores": [
         {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 2,
           "label": "Parcial 2",
           "teamPoints": 5,
@@ -1774,6 +1781,13 @@
           "diff": -1
         },
         {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 7,
           "label": "Parcial 7",
           "teamPoints": 2,
@@ -2141,6 +2155,127 @@
           "label": "Parcial 9",
           "teamPoints": 0,
           "rivalPoints": 1,
+          "diff": -1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "teamIdIntern": 573949,
+    "teamIdExtern": 81365,
+    "teamName": "CB MANYANET LES CORTS GROC",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "matchWebId": 73895,
+    "matchInternId": 285673,
+    "matchExternId": 1170633,
+    "matchDate": "2026-05-16T13:00:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 10,
+    "roundNumber": 19,
+    "homeTeam": "DOMINIQUES BARCELONA NEGRE",
+    "homeScore": 36,
+    "awayScore": 13,
+    "awayTeam": "CB MANYANET LES CORTS GROC",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+    "rivalTeam": "DOMINIQUES BARCELONA NEGRE",
+    "officialTeamScore": 13,
+    "officialRivalScore": 36,
+    "teamScore": 13,
+    "rivalScore": 36,
+    "result": "L",
+    "topScorer": "ANTONELLA CORNEJO MERIDA",
+    "topScorerTeam": "DOMINIQUES BARCELONA NEGRE",
+    "topScorerPoints": 8,
+    "teamTopScorer": "CARLOTA PRAT RIERA",
+    "teamTopScorerPoints": 4,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 24,
+      "bestRun": 2,
+      "rivalBestRun": 10,
+      "closingRun": 1,
+      "rivalClosingRun": 0,
+      "firstScorer": "SANDRA RIBES TAPIAS",
+      "firstScorerTeam": "DOMINIQUES BARCELONA NEGRE",
+      "lastScorer": "ALEJANDRA URRUTIA MUN\u00C1RRIZ",
+      "lastScorerTeam": "CB MANYANET LES CORTS GROC",
+      "teamFirstScorer": "CARLOTA PRAT RIERA",
+      "teamLastScorer": "ALEJANDRA URRUTIA MUN\u00C1RRIZ",
+      "bestPeriodLabel": "Parcial 6",
+      "bestPeriodDiff": -1,
+      "worstPeriodLabel": "Parcial 3",
+      "worstPeriodDiff": -5,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 5,
+          "diff": -3
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 0,
+          "rivalPoints": 4,
+          "diff": -4
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 4,
+          "rivalPoints": 9,
+          "diff": -5
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 4,
+          "diff": -4
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 3,
+          "diff": -3
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 2,
+          "rivalPoints": 3,
+          "diff": -1
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 4,
+          "rivalPoints": 6,
+          "diff": -2
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 1,
+          "rivalPoints": 2,
           "diff": -1
         }
       ]

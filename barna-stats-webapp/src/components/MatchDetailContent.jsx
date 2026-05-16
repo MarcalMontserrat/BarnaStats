@@ -32,6 +32,7 @@ function MatchDetailContent({
     showMatchReport = true,
     enableMatchReportOnDemand = true,
     matchReportApiAvailable = true,
+    tableWithTopMargin = true,
     emptyMessage = "No hay detalle disponible para este partido."
 }) {
     const safePlayers = Array.isArray(players) ? players : [];
@@ -51,7 +52,11 @@ function MatchDetailContent({
     return (
         <div style={styles.shell}>
             {safePlayers.length > 0 ? (
-                <MatchTable players={safePlayers} onPlayerNavigate={onPlayerNavigate}/>
+                <MatchTable
+                    players={safePlayers}
+                    onPlayerNavigate={onPlayerNavigate}
+                    withTopMargin={tableWithTopMargin}
+                />
             ) : null}
             <MatchInsightsPanel insights={insights}/>
             {showMatchReport ? (

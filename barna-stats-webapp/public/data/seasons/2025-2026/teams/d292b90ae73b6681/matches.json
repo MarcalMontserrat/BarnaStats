@@ -1628,9 +1628,16 @@
       "teamLastScorer": "EMMA LLOP FERNANDEZ",
       "bestPeriodLabel": "Parcial 2",
       "bestPeriodDiff": 2,
-      "worstPeriodLabel": "Parcial 2",
-      "worstPeriodDiff": 2,
+      "worstPeriodLabel": "Parcial 1",
+      "worstPeriodDiff": 0,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",
@@ -1698,11 +1705,19 @@
       "lastScorerTeam": "",
       "teamFirstScorer": "",
       "teamLastScorer": "",
-      "bestPeriodLabel": "",
+      "bestPeriodLabel": "Parcial 1",
       "bestPeriodDiff": 0,
-      "worstPeriodLabel": "",
+      "worstPeriodLabel": "Parcial 1",
       "worstPeriodDiff": 0,
-      "periodScores": []
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        }
+      ]
     },
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,

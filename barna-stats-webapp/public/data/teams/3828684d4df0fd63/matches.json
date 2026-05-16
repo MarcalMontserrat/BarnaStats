@@ -422,6 +422,13 @@
       "worstPeriodDiff": -14,
       "periodScores": [
         {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 2,
           "label": "Parcial 2",
           "teamPoints": 2,
@@ -1532,6 +1539,13 @@
           "diff": -9
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 6,
@@ -2263,6 +2277,120 @@
           "teamPoints": 1,
           "rivalPoints": 0,
           "diff": 1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+    "teamIdIntern": 573288,
+    "teamIdExtern": 81071,
+    "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "matchWebId": 73894,
+    "matchInternId": 285343,
+    "matchExternId": 1170632,
+    "matchDate": "2026-05-16T11:30:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 12,
+    "roundNumber": 20,
+    "homeTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+    "homeScore": 11,
+    "awayScore": 61,
+    "awayTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "isHome": true,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "rivalTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "officialTeamScore": 11,
+    "officialRivalScore": 61,
+    "teamScore": 11,
+    "rivalScore": 86,
+    "result": "L",
+    "topScorer": "ABRIL ARIZA BERNAL",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 14,
+    "teamTopScorer": "ONA MARTINEZ ARAUZO",
+    "teamTopScorerPoints": 5,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 52,
+      "bestRun": 3,
+      "rivalBestRun": 24,
+      "closingRun": 2,
+      "rivalClosingRun": 0,
+      "firstScorer": "MIA GOMEZ VALLS",
+      "firstScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "lastScorer": "EVA RODRIGUEZ CANO",
+      "lastScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "teamFirstScorer": "ARLET PEREZ RODRIGUEZ",
+      "teamLastScorer": "ONA MARTINEZ ARAUZO",
+      "bestPeriodLabel": "Parcial 3",
+      "bestPeriodDiff": 1,
+      "worstPeriodLabel": "Parcial 2",
+      "worstPeriodDiff": -16,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 13,
+          "diff": -13
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 2,
+          "rivalPoints": 18,
+          "diff": -16
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 5,
+          "rivalPoints": 4,
+          "diff": 1
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 7,
+          "diff": -7
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 2,
+          "rivalPoints": 9,
+          "diff": -7
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 6,
+          "diff": -6
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 2,
+          "rivalPoints": 4,
+          "diff": -2
         }
       ]
     },

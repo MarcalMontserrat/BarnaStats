@@ -101,6 +101,13 @@
           "diff": 9
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 0,
@@ -692,6 +699,13 @@
           "diff": 9
         },
         {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 7,
           "label": "Parcial 7",
           "teamPoints": 0,
@@ -1247,6 +1261,13 @@
       "worstPeriodLabel": "Parcial 5",
       "worstPeriodDiff": -3,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",

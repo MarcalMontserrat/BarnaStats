@@ -766,7 +766,7 @@ public sealed class MatchAnalysisService
         IReadOnlyList<MoveEvent> moves)
     {
         var scoringEvents = BuildScoringEvents(match);
-        var periodScores = BuildPeriodScores(scoringEvents, isHome);
+        var periodScores = BuildPeriodScores(match, scoringEvents, isHome);
         var bestPeriod = periodScores
             .OrderByDescending(period => period.Diff)
             .ThenBy(period => period.PeriodNumber)
@@ -859,23 +859,41 @@ public sealed class MatchAnalysisService
     }
 
     private static List<MatchPeriodScore> BuildPeriodScores(
+        StatsRoot match,
         IReadOnlyList<ScoringEvent> scoringEvents,
         bool isHome)
     {
-        return scoringEvents
+        var periodPointsByPeriod = scoringEvents
             .GroupBy(scoringEvent => scoringEvent.Period)
-            .OrderBy(group => group.Key)
-            .Select(group =>
+            .ToDictionary(
+                group => group.Key,
+                group =>
+                {
+                    var localPoints = group.Sum(item => item.DeltaLocal);
+                    var visitPoints = group.Sum(item => item.DeltaVisit);
+                    return (LocalPoints: localPoints, VisitPoints: visitPoints);
+                });
+
+        return match.Score
+            .Select(point => point.Period)
+            .Where(period => period > 0)
+            .Distinct()
+            .OrderBy(period => period)
+            .Select(period =>
             {
-                var localPoints = group.Sum(item => item.DeltaLocal);
-                var visitPoints = group.Sum(item => item.DeltaVisit);
+                if (!periodPointsByPeriod.TryGetValue(period, out var points))
+                {
+                    points = (LocalPoints: 0, VisitPoints: 0);
+                }
+                var localPoints = points.LocalPoints;
+                var visitPoints = points.VisitPoints;
                 var teamPoints = isHome ? localPoints : visitPoints;
                 var rivalPoints = isHome ? visitPoints : localPoints;
 
                 return new MatchPeriodScore
                 {
-                    PeriodNumber = group.Key,
-                    Label = $"Parcial {group.Key}",
+                    PeriodNumber = period,
+                    Label = $"Parcial {period}",
                     TeamPoints = teamPoints,
                     RivalPoints = rivalPoints,
                     Diff = teamPoints - rivalPoints

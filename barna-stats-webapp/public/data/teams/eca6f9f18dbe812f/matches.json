@@ -201,6 +201,13 @@
           "diff": -11
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 4,
@@ -393,6 +400,13 @@
       "worstPeriodLabel": "Parcial 6",
       "worstPeriodDiff": -2,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",
@@ -800,6 +814,13 @@
       "worstPeriodLabel": "Parcial 8",
       "worstPeriodDiff": -4,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 3,
           "label": "Parcial 3",
@@ -1586,11 +1607,19 @@
       "lastScorerTeam": "",
       "teamFirstScorer": "",
       "teamLastScorer": "",
-      "bestPeriodLabel": "",
+      "bestPeriodLabel": "Parcial 1",
       "bestPeriodDiff": 0,
-      "worstPeriodLabel": "",
+      "worstPeriodLabel": "Parcial 1",
       "worstPeriodDiff": 0,
-      "periodScores": []
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        }
+      ]
     },
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
@@ -2006,11 +2035,19 @@
       "lastScorerTeam": "",
       "teamFirstScorer": "",
       "teamLastScorer": "",
-      "bestPeriodLabel": "",
+      "bestPeriodLabel": "Parcial 1",
       "bestPeriodDiff": 0,
-      "worstPeriodLabel": "",
+      "worstPeriodLabel": "Parcial 1",
       "worstPeriodDiff": 0,
-      "periodScores": []
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        }
+      ]
     },
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,

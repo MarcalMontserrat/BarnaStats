@@ -1984,9 +1984,16 @@
       "teamLastScorer": "AILA L\u00D3PEZ PAU",
       "bestPeriodLabel": "Parcial 3",
       "bestPeriodDiff": 6,
-      "worstPeriodLabel": "Parcial 5",
+      "worstPeriodLabel": "Parcial 1",
       "worstPeriodDiff": 0,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",

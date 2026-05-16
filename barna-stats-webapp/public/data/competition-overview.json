@@ -2,7 +2,7 @@
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
   "totalTeams": 836,
-  "totalMatches": 8676,
+  "totalMatches": 8678,
   "phases": [
     {
       "seasonStartYear": 2025,
@@ -2546,7 +2546,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 4
+      "matchesCount": 6
     }
   ],
   "teams": [
@@ -3797,9 +3797,9 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 20,
+      "matchesPlayed": 21,
       "playersCount": 12,
-      "totalValuation": 778
+      "totalValuation": 847
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80319",
@@ -4868,9 +4868,9 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 17,
-      "totalValuation": 112
+      "totalValuation": 95
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
@@ -5957,9 +5957,9 @@
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 19,
+      "matchesPlayed": 20,
       "playersCount": 9,
-      "totalValuation": 188
+      "totalValuation": 178
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80298",
@@ -6542,9 +6542,9 @@
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "matchesPlayed": 15,
+      "matchesPlayed": 16,
       "playersCount": 12,
-      "totalValuation": 66
+      "totalValuation": 75
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",

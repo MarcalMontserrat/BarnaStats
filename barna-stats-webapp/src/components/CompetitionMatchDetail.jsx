@@ -20,18 +20,30 @@ const styles = {
     },
     card: {
         display: "grid",
-        gap: 14,
+        gridTemplateColumns: "auto minmax(0, 1fr)",
+        columnGap: 12,
+        rowGap: 14,
+        alignContent: "start",
         padding: 16,
         borderRadius: "var(--radius-lg)",
         background: "linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 242, 233, 0.94) 100%)",
         border: "1px solid rgba(107, 86, 58, 0.12)",
         minWidth: 0
     },
+    badgeButton: {
+        gridColumn: 1,
+        alignSelf: "start",
+        padding: 0,
+        border: "none",
+        background: "transparent",
+        cursor: "pointer",
+        minWidth: 0
+    },
     headerButton: {
         display: "grid",
-        gridTemplateColumns: "auto minmax(0, 1fr)",
-        gap: 12,
-        alignItems: "start",
+        gap: 8,
+        gridColumn: 2,
+        alignSelf: "start",
         padding: 0,
         border: "none",
         background: "transparent",
@@ -39,19 +51,25 @@ const styles = {
         cursor: "pointer",
         minWidth: 0
     },
+    badgeWrap: {
+        gridColumn: 1,
+        alignSelf: "start",
+        paddingTop: 2
+    },
     headerStatic: {
         display: "grid",
-        gridTemplateColumns: "auto minmax(0, 1fr)",
-        gap: 12,
-        alignItems: "start",
+        gap: 8,
+        gridColumn: 2,
+        alignSelf: "start",
         minWidth: 0
-    },
-    badgeWrap: {
-        paddingTop: 2
     },
     titleBlock: {
         display: "grid",
         gap: 8,
+        minWidth: 0
+    },
+    contentWrap: {
+        gridColumn: 2,
         minWidth: 0
     },
     metaRow: {
@@ -89,6 +107,7 @@ const styles = {
         lineHeight: 1.45
     },
     stateCard: {
+        gridColumn: "1 / -1",
         padding: 18,
         borderRadius: "var(--radius-lg)",
         background: "rgba(255, 251, 245, 0.82)",
@@ -185,58 +204,76 @@ function CompetitionMatchTeamDetail({
         );
     }
 
-    const headerContent = (
-        <>
-            <div style={styles.badgeWrap}>
-                <TeamBadge
-                    size="md"
-                    teamIdExtern={team.teamIdExtern}
-                    teamName={team.teamName}
-                />
-            </div>
-            <div style={styles.titleBlock}>
-                <div style={styles.metaRow}>
-                    <div style={styles.eyebrow}>{sideLabel}</div>
-                    <div style={styles.subtitle}>
-                        {formatResultLabel(matchSummary?.result)
-                            ? `Perspectiva: ${formatResultLabel(matchSummary.result)}`
-                            : "Detalle partido a partido del equipo"}
-                    </div>
+    const titleContent = (
+        <div style={styles.titleBlock}>
+            <div style={styles.metaRow}>
+                <div style={styles.eyebrow}>{sideLabel}</div>
+                <div style={styles.subtitle}>
+                    {formatResultLabel(matchSummary?.result)
+                        ? `Perspectiva: ${formatResultLabel(matchSummary.result)}`
+                        : "Detalle partido a partido del equipo"}
                 </div>
-                <div style={styles.teamName} title={team.teamName}>{team.teamName}</div>
             </div>
-        </>
+            <div style={styles.teamName} title={team.teamName}>{team.teamName}</div>
+        </div>
     );
 
     return (
         <div style={styles.card}>
             {team.teamKey && onTeamNavigate ? (
-                <button
-                    type="button"
-                    style={styles.headerButton}
-                    onClick={() => onTeamNavigate(team.teamKey)}
-                    title={`Abrir ficha de ${team.teamName}`}
-                    aria-label={`Abrir ficha de ${team.teamName}`}
-                >
-                    {headerContent}
-                </button>
+                <>
+                    <button
+                        type="button"
+                        style={styles.badgeButton}
+                        onClick={() => onTeamNavigate(team.teamKey)}
+                        title={`Abrir ficha de ${team.teamName}`}
+                        aria-label={`Abrir ficha de ${team.teamName}`}
+                    >
+                        <TeamBadge
+                            size="md"
+                            teamIdExtern={team.teamIdExtern}
+                            teamName={team.teamName}
+                        />
+                    </button>
+                    <button
+                        type="button"
+                        style={styles.headerButton}
+                        onClick={() => onTeamNavigate(team.teamKey)}
+                        title={`Abrir ficha de ${team.teamName}`}
+                        aria-label={`Abrir ficha de ${team.teamName}`}
+                    >
+                        {titleContent}
+                    </button>
+                </>
             ) : (
-                <div style={styles.headerStatic}>
-                    {headerContent}
-                </div>
+                <>
+                    <div style={styles.badgeWrap}>
+                        <TeamBadge
+                            size="md"
+                            teamIdExtern={team.teamIdExtern}
+                            teamName={team.teamName}
+                        />
+                    </div>
+                    <div style={styles.headerStatic}>
+                        {titleContent}
+                    </div>
+                </>
             )}
 
-            <MatchDetailContent
-                matchWebId={match.matchWebId}
-                players={players}
-                insights={matchSummary?.insights ?? null}
-                matchReport={matchSummary?.matchReport ?? ""}
-                matchReportGeneratedAtUtc={matchSummary?.matchReportGeneratedAtUtc ?? null}
-                matchReportModel={matchSummary?.matchReportModel ?? ""}
-                onPlayerNavigate={onPlayerNavigate}
-                showMatchReport={false}
-                emptyMessage={`No hay detalle disponible para ${team.teamName} en este partido.`}
-            />
+            <div style={styles.contentWrap}>
+                <MatchDetailContent
+                    matchWebId={match.matchWebId}
+                    players={players}
+                    insights={matchSummary?.insights ?? null}
+                    matchReport={matchSummary?.matchReport ?? ""}
+                    matchReportGeneratedAtUtc={matchSummary?.matchReportGeneratedAtUtc ?? null}
+                    matchReportModel={matchSummary?.matchReportModel ?? ""}
+                    onPlayerNavigate={onPlayerNavigate}
+                    showMatchReport={false}
+                    tableWithTopMargin={false}
+                    emptyMessage={`No hay detalle disponible para ${team.teamName} en este partido.`}
+                />
+            </div>
         </div>
     );
 }

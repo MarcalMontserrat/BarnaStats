@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "generatedAtUtc": "2026-05-09T15:32:16.887381Z",
-  "totalMatches": 8676,
+  "generatedAtUtc": "2026-05-16T12:33:49.83048Z",
+  "totalMatches": 8678,
   "totalTeams": 836,
   "teams": [
     {
@@ -5388,7 +5388,7 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 20,
+      "matchesPlayed": 21,
       "playersCount": 12,
       "matchesFile": "teams/9d5846387df09ab0/matches.json",
       "playersFile": "teams/9d5846387df09ab0/players.json",
@@ -5427,7 +5427,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -10030,7 +10030,7 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 17,
       "matchesFile": "teams/d08efbc8f9176a7d/matches.json",
       "playersFile": "teams/d08efbc8f9176a7d/players.json",
@@ -10069,7 +10069,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -14844,7 +14844,7 @@
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 19,
+      "matchesPlayed": 20,
       "playersCount": 9,
       "matchesFile": "teams/3828684d4df0fd63/matches.json",
       "playersFile": "teams/3828684d4df0fd63/players.json",
@@ -14883,7 +14883,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -17326,7 +17326,7 @@
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "matchesPlayed": 15,
+      "matchesPlayed": 16,
       "playersCount": 12,
       "matchesFile": "teams/18552d39c04035d5/matches.json",
       "playersFile": "teams/18552d39c04035d5/players.json",
@@ -17354,6 +17354,18 @@
           "levelCode": "B",
           "groupCode": "02",
           "matchesPlayed": 8
+        },
+        {
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
+          "phaseNumber": 2,
+          "sourcePhaseId": 21974,
+          "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+          "phaseName": "Tercera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "01",
+          "matchesPlayed": 1
         }
       ]
     },

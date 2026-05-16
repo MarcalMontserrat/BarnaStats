@@ -215,6 +215,20 @@
           "diff": 0
         },
         {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 0,
@@ -441,6 +455,13 @@
           "teamPoints": 5,
           "rivalPoints": 2,
           "diff": 3
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
         },
         {
           "periodNumber": 7,
@@ -913,6 +934,13 @@
           "diff": 3
         },
         {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 0,
@@ -1342,11 +1370,18 @@
       "lastScorerTeam": "MARISTES ADEMAR",
       "teamFirstScorer": "LEIZE URBERUAGA SLATER",
       "teamLastScorer": "LEIZE URBERUAGA SLATER",
-      "bestPeriodLabel": "Parcial 2",
-      "bestPeriodDiff": -2,
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": 0,
       "worstPeriodLabel": "Parcial 2",
       "worstPeriodDiff": -2,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",

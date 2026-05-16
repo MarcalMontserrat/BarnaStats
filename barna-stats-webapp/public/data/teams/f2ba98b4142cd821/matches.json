@@ -1000,11 +1000,18 @@
       "lastScorerTeam": "BC SANT JOAN DESPI B",
       "teamFirstScorer": "GEORGINA AMELIE",
       "teamLastScorer": "JOANA SERRA BADIA",
-      "bestPeriodLabel": "Parcial 3",
+      "bestPeriodLabel": "Parcial 1",
       "bestPeriodDiff": 0,
       "worstPeriodLabel": "Parcial 7",
       "worstPeriodDiff": -10,
       "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
         {
           "periodNumber": 2,
           "label": "Parcial 2",

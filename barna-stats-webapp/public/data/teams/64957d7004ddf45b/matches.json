@@ -301,6 +301,13 @@
       "worstPeriodDiff": -6,
       "periodScores": [
         {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 2,
           "label": "Parcial 2",
           "teamPoints": 4,
@@ -455,6 +462,13 @@
           "teamPoints": 0,
           "rivalPoints": 3,
           "diff": -3
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
         },
         {
           "periodNumber": 8,

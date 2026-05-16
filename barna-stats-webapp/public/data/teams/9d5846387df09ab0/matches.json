@@ -2351,11 +2351,139 @@
           "diff": 13
         },
         {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
           "periodNumber": 8,
           "label": "Parcial 8",
           "teamPoints": 0,
           "rivalPoints": 2,
           "diff": -2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "teamIdIntern": 573289,
+    "teamIdExtern": 81178,
+    "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "matchWebId": 73894,
+    "matchInternId": 285343,
+    "matchExternId": 1170632,
+    "matchDate": "2026-05-16T11:30:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 13,
+    "roundNumber": 21,
+    "homeTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+    "homeScore": 11,
+    "awayScore": 61,
+    "awayTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+    "rivalTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+    "officialTeamScore": 61,
+    "officialRivalScore": 11,
+    "teamScore": 86,
+    "rivalScore": 11,
+    "result": "W",
+    "topScorer": "ABRIL ARIZA BERNAL",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 14,
+    "teamTopScorer": "ABRIL ARIZA BERNAL",
+    "teamTopScorerPoints": 14,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 52,
+      "maxDeficit": 0,
+      "bestRun": 24,
+      "rivalBestRun": 3,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "MIA GOMEZ VALLS",
+      "firstScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "lastScorer": "EVA RODRIGUEZ CANO",
+      "lastScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "teamFirstScorer": "MIA GOMEZ VALLS",
+      "teamLastScorer": "EVA RODRIGUEZ CANO",
+      "bestPeriodLabel": "Parcial 2",
+      "bestPeriodDiff": 16,
+      "worstPeriodLabel": "Parcial 3",
+      "worstPeriodDiff": -1,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 13,
+          "rivalPoints": 0,
+          "diff": 13
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 18,
+          "rivalPoints": 2,
+          "diff": 16
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 4,
+          "rivalPoints": 5,
+          "diff": -1
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 7,
+          "rivalPoints": 0,
+          "diff": 7
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 9,
+          "rivalPoints": 2,
+          "diff": 7
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 6,
+          "rivalPoints": 0,
+          "diff": 6
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 4,
+          "rivalPoints": 2,
+          "diff": 2
         }
       ]
     },
