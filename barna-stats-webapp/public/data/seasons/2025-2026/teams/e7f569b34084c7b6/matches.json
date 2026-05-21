@@ -2292,5 +2292,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+    "teamIdIntern": 577174,
+    "teamIdExtern": 83018,
+    "teamName": "JAC SANTS BARCELONA U10",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "matchWebId": 73893,
+    "matchInternId": 287286,
+    "matchExternId": 1174315,
+    "matchDate": "2026-05-19T20:30:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 12,
+    "roundNumber": 21,
+    "homeTeam": "JAC SANTS BARCELONA U10",
+    "homeScore": 41,
+    "awayScore": 48,
+    "awayTeam": "U.E.MATAR\u00D3 - PRBF",
+    "isHome": true,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+    "rivalTeam": "U.E.MATAR\u00D3 - PRBF",
+    "officialTeamScore": 41,
+    "officialRivalScore": 48,
+    "teamScore": 41,
+    "rivalScore": 48,
+    "result": "L",
+    "topScorer": "AYESIRA DIALLO DIALLO",
+    "topScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+    "topScorerPoints": 18,
+    "teamTopScorer": "EMMA CROSAS LARRA\u00D1AGA",
+    "teamTopScorerPoints": 14,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 5,
+      "maxLead": 7,
+      "maxDeficit": 13,
+      "bestRun": 7,
+      "rivalBestRun": 10,
+      "closingRun": 4,
+      "rivalClosingRun": 0,
+      "firstScorer": "EMMA CROSAS LARRA\u00D1AGA",
+      "firstScorerTeam": "JAC SANTS BARCELONA U10",
+      "lastScorer": "EMMA CROSAS LARRA\u00D1AGA",
+      "lastScorerTeam": "JAC SANTS BARCELONA U10",
+      "teamFirstScorer": "EMMA CROSAS LARRA\u00D1AGA",
+      "teamLastScorer": "EMMA CROSAS LARRA\u00D1AGA",
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": 5,
+      "worstPeriodLabel": "Parcial 6",
+      "worstPeriodDiff": -9,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 7,
+          "rivalPoints": 2,
+          "diff": 5
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 0,
+          "rivalPoints": 8,
+          "diff": -8
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 7,
+          "rivalPoints": 4,
+          "diff": 3
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 2,
+          "rivalPoints": 4,
+          "diff": -2
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 6,
+          "rivalPoints": 8,
+          "diff": -2
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 4,
+          "rivalPoints": 13,
+          "diff": -9
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 7,
+          "rivalPoints": 2,
+          "diff": 5
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 8,
+          "rivalPoints": 7,
+          "diff": 1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

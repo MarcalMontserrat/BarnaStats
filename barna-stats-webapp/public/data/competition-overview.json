@@ -2,7 +2,7 @@
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
   "totalTeams": 836,
-  "totalMatches": 8678,
+  "totalMatches": 8680,
   "phases": [
     {
       "seasonStartYear": 2025,
@@ -2546,7 +2546,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 6
+      "matchesCount": 8
     }
   ],
   "teams": [
@@ -3797,9 +3797,9 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 21,
+      "matchesPlayed": 22,
       "playersCount": 12,
-      "totalValuation": 847
+      "totalValuation": 878
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80319",
@@ -6542,9 +6542,9 @@
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "matchesPlayed": 16,
+      "matchesPlayed": 17,
       "playersCount": 12,
-      "totalValuation": 75
+      "totalValuation": 68
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -7307,9 +7307,9 @@
       "teamIdIntern": 454013,
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
-      "matchesPlayed": 20,
+      "matchesPlayed": 21,
       "playersCount": 12,
-      "totalValuation": 942
+      "totalValuation": 953
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83463",
@@ -9494,9 +9494,9 @@
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "matchesPlayed": 18,
+      "matchesPlayed": 19,
       "playersCount": 11,
-      "totalValuation": 631
+      "totalValuation": 648
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80888",

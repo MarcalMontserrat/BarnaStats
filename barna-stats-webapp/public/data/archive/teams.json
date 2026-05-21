@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-05-16T12:33:49.83048Z",
+  "generatedAtUtc": "2026-05-21T19:03:29.221253Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -3880,16 +3880,16 @@
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 21,
+          "matchesPlayed": 22,
           "playersCount": 12,
-          "pointsFor": 1241,
-          "pointsAgainst": 381,
-          "pointDiff": 860,
-          "wins": 19,
+          "pointsFor": 1294,
+          "pointsAgainst": 398,
+          "pointDiff": 896,
+          "wins": 20,
           "losses": 2,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 40.333333333333336
+          "avgValuation": 39.90909090909091
         }
       ]
     },
@@ -12411,16 +12411,16 @@
           "teamName": "DOMINIQUES BARCELONA NEGRE",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 16,
+          "matchesPlayed": 17,
           "playersCount": 12,
-          "pointsFor": 455,
-          "pointsAgainst": 363,
-          "pointDiff": 92,
+          "pointsFor": 472,
+          "pointsAgainst": 416,
+          "pointDiff": 56,
           "wins": 10,
-          "losses": 6,
+          "losses": 7,
           "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 4.6875
+          "standingPosition": 2,
+          "avgValuation": 4
         }
       ]
     },
@@ -14791,16 +14791,16 @@
           "teamName": "JAC SANTS BARCELONA U10",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 20,
+          "matchesPlayed": 21,
           "playersCount": 12,
-          "pointsFor": 1308,
-          "pointsAgainst": 480,
-          "pointDiff": 828,
+          "pointsFor": 1349,
+          "pointsAgainst": 528,
+          "pointDiff": 821,
           "wins": 17,
-          "losses": 3,
+          "losses": 4,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 47.1
+          "avgValuation": 45.38095238095238
         }
       ]
     },
@@ -21586,16 +21586,16 @@
           "teamName": "U.E.MATAR\u00D3 - PRBF",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 18,
+          "matchesPlayed": 19,
           "playersCount": 11,
-          "pointsFor": 951,
-          "pointsAgainst": 432,
-          "pointDiff": 519,
-          "wins": 13,
+          "pointsFor": 999,
+          "pointsAgainst": 473,
+          "pointDiff": 526,
+          "wins": 14,
           "losses": 5,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 35.05555555555556
+          "avgValuation": 34.10526315789474
         }
       ]
     },

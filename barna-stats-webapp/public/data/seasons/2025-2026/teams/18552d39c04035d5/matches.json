@@ -1906,5 +1906,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+    "teamIdIntern": 577249,
+    "teamIdExtern": 82476,
+    "teamName": "DOMINIQUES BARCELONA NEGRE",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+    "matchWebId": 73897,
+    "matchInternId": 287323,
+    "matchExternId": 1175624,
+    "matchDate": "2026-05-21T20:30:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 10,
+    "roundNumber": 17,
+    "homeTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "homeScore": 53,
+    "awayScore": 17,
+    "awayTeam": "DOMINIQUES BARCELONA NEGRE",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "rivalTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "officialTeamScore": 17,
+    "officialRivalScore": 53,
+    "teamScore": 17,
+    "rivalScore": 53,
+    "result": "L",
+    "topScorer": "MIA GOMEZ VALLS",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 14,
+    "teamTopScorer": "CHRISTELLE GIL ALVARO",
+    "teamTopScorerPoints": 6,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 36,
+      "bestRun": 5,
+      "rivalBestRun": 19,
+      "closingRun": 0,
+      "rivalClosingRun": 6,
+      "firstScorer": "MIA GOMEZ VALLS",
+      "firstScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "lastScorer": "MIA GOMEZ VALLS",
+      "lastScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "teamFirstScorer": "ANTONELLA CORNEJO MERIDA",
+      "teamLastScorer": "GALA GUILLEM CRESPO",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 5,
+      "worstPeriodLabel": "Parcial 5",
+      "worstPeriodDiff": -11,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 8,
+          "diff": -6
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 3,
+          "rivalPoints": 5,
+          "diff": -2
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 0,
+          "rivalPoints": 8,
+          "diff": -8
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 4,
+          "rivalPoints": 11,
+          "diff": -7
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 11,
+          "diff": -11
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 3,
+          "rivalPoints": 4,
+          "diff": -1
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 5,
+          "rivalPoints": 0,
+          "diff": 5
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 0,
+          "rivalPoints": 6,
+          "diff": -6
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

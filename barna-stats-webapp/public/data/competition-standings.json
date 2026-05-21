@@ -24058,43 +24058,43 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 6,
+      "matchesCount": 8,
       "rows": [
         {
           "position": 1,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-          "played": 3,
-          "wins": 3,
+          "played": 4,
+          "wins": 4,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 236,
-          "pointsAgainst": 53,
-          "pointDiff": 183
+          "pointsFor": 289,
+          "pointsAgainst": 70,
+          "pointDiff": 219
         },
         {
           "position": 2,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-          "teamName": "DOMINIQUES BARCELONA NEGRE",
-          "played": 1,
-          "wins": 1,
-          "losses": 0,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+          "teamName": "U.E.MATAR\u00D3 - PRBF",
+          "played": 3,
+          "wins": 2,
+          "losses": 1,
           "ties": 0,
-          "pointsFor": 36,
-          "pointsAgainst": 13,
-          "pointDiff": 23
+          "pointsFor": 108,
+          "pointsAgainst": 138,
+          "pointDiff": -30
         },
         {
           "position": 3,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-          "teamName": "U.E.MATAR\u00D3 - PRBF",
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+          "teamName": "DOMINIQUES BARCELONA NEGRE",
           "played": 2,
           "wins": 1,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 60,
-          "pointsAgainst": 97,
-          "pointDiff": -37
+          "pointsFor": 53,
+          "pointsAgainst": 66,
+          "pointDiff": -13
         },
         {
           "position": 4,
@@ -24112,13 +24112,13 @@
           "position": 5,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
           "teamName": "JAC SANTS BARCELONA U10",
-          "played": 1,
+          "played": 2,
           "wins": 0,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 38,
-          "pointsAgainst": 69,
-          "pointDiff": -31
+          "pointsFor": 79,
+          "pointsAgainst": 117,
+          "pointDiff": -38
         },
         {
           "position": 6,
