@@ -21,7 +21,12 @@ public sealed class MsStatsClient
         using var response = await _http.SendAsync(request);
         var content = await response.Content.ReadAsStringAsync();
 
-        response.EnsureSuccessStatusCode();
+        if (!response.IsSuccessStatusCode)
+            throw new HttpRequestException(
+                $"HTTP {(int)response.StatusCode} ({response.StatusCode}) — {content}",
+                inner: null,
+                statusCode: response.StatusCode);
+
         return content;
     }
 
@@ -37,7 +42,12 @@ public sealed class MsStatsClient
         using var response = await _http.SendAsync(request);
         var content = await response.Content.ReadAsStringAsync();
 
-        response.EnsureSuccessStatusCode();
+        if (!response.IsSuccessStatusCode)
+            throw new HttpRequestException(
+                $"HTTP {(int)response.StatusCode} ({response.StatusCode}) — {content}",
+                inner: null,
+                statusCode: response.StatusCode);
+
         return content;
     }
 }

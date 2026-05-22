@@ -8,7 +8,7 @@ namespace GenerateAnalisys.Services;
 public sealed class MatchAnalysisService
 {
     private readonly IMatchReportService _matchReportService;
-    private readonly JsonSerializerOptions _jsonOptions = new()
+    private static readonly JsonSerializerOptions JsonOptions = new()
     {
         PropertyNameCaseInsensitive = true
     };
@@ -36,7 +36,7 @@ public sealed class MatchAnalysisService
             Console.WriteLine($"Procesando partido {matchWebId}...");
 
             var json = await File.ReadAllTextAsync(statsPath);
-            var match = JsonSerializer.Deserialize<StatsRoot>(json, _jsonOptions);
+            var match = JsonSerializer.Deserialize<StatsRoot>(json, JsonOptions);
 
             if (match is null || match.Teams is null || match.Teams.Count < 2)
             {
@@ -164,7 +164,7 @@ public sealed class MatchAnalysisService
                     TopScorerPoints = matchTopScorer?.Points ?? 0,
                     TeamTopScorer = teamTopScorer?.PlayerName ?? "",
                     TeamTopScorerPoints = teamTopScorer?.Points ?? 0,
-                    Insights = BuildMatchInsights(match, team, isHome, moves),
+                    Insights = MatchInsightsBuilder.BuildMatchInsights(match, team, isHome, moves),
                     MatchReport = teamSpecificReport?.Summary ?? matchReport?.Summary ?? "",
                     MatchReportGeneratedAtUtc = teamSpecificReport?.GeneratedAtUtc ?? matchReport?.GeneratedAtUtc,
                     MatchReportModel = teamSpecificReport?.Model ?? matchReport?.Model ?? ""
@@ -258,390 +258,19 @@ public sealed class MatchAnalysisService
         }
 
         var teamAnalyses = teamsByKey.Values
-            .Select(BuildTeamAnalysis)
+            .Select(TeamAnalysisBuilder.BuildTeamAnalysis)
             .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
             .ToList();
 
         return new AnalysisResult
         {
-            SeasonStartYear = ResolveSingleSeasonStartYear(teamAnalyses),
-            SeasonLabel = ResolveSingleSeasonLabel(teamAnalyses),
+            SeasonStartYear = CompetitionAnalysisBuilder.ResolveSingleSeasonStartYear(teamAnalyses),
+            SeasonLabel = CompetitionAnalysisBuilder.ResolveSingleSeasonLabel(teamAnalyses),
             GeneratedAtUtc = DateTime.UtcNow,
             TotalMatches = processedMatches,
-            Competition = BuildCompetitionAnalysis(teamAnalyses),
+            Competition = CompetitionAnalysisBuilder.BuildCompetitionAnalysis(teamAnalyses),
             Teams = teamAnalyses
         };
-    }
-
-    private static TeamAnalysis BuildTeamAnalysis(TeamAccumulator accumulator)
-    {
-        var seasonTotals = accumulator.SeasonTotals
-            .Select(entry =>
-            {
-                entry.Value.ShirtNumber = accumulator.ResolveDominantShirtNumber(entry.Key, entry.Value.ShirtNumber);
-                return entry.Value;
-            })
-            .OrderByDescending(player => player.Points)
-            .ThenBy(player => player.PlayerName, StringComparer.OrdinalIgnoreCase)
-            .ToList();
-
-        var matchSummaries = accumulator.MatchSummaries
-            .OrderBy(summary => summary.MatchDate ?? DateTime.MaxValue)
-            .ThenBy(summary => summary.MatchWebId)
-            .ToList();
-
-        for (var index = 0; index < matchSummaries.Count; index += 1)
-        {
-            matchSummaries[index].RoundNumber = index + 1;
-        }
-
-        var phaseRounds = new Dictionary<int, int>();
-        foreach (var summary in matchSummaries)
-        {
-            var nextRound = phaseRounds.GetValueOrDefault(summary.PhaseNumber) + 1;
-            phaseRounds[summary.PhaseNumber] = nextRound;
-            summary.PhaseRound = nextRound;
-        }
-
-        var summariesByMatchId = matchSummaries.ToDictionary(summary => summary.MatchWebId);
-
-        foreach (var row in accumulator.MatchPlayerRows)
-        {
-            if (!summariesByMatchId.TryGetValue(row.MatchWebId, out var summary))
-                continue;
-
-            row.MatchDate = summary.MatchDate;
-            row.PhaseNumber = summary.PhaseNumber;
-            row.SourcePhaseId = summary.SourcePhaseId;
-            row.SeasonStartYear = summary.SeasonStartYear;
-            row.SeasonLabel = summary.SeasonLabel;
-            row.CategoryName = summary.CategoryName;
-            row.PhaseName = summary.PhaseName;
-            row.LevelName = summary.LevelName;
-            row.LevelCode = summary.LevelCode;
-            row.GroupCode = summary.GroupCode;
-            row.PhaseRound = summary.PhaseRound;
-        }
-
-        var matchPlayers = accumulator.MatchPlayerRows
-            .OrderBy(row => row.PhaseNumber)
-            .ThenBy(row => row.PhaseRound)
-            .ThenBy(row => row.MatchWebId)
-            .ThenByDescending(row => row.Points)
-            .ThenBy(row => row.PlayerName, StringComparer.OrdinalIgnoreCase)
-            .ToList();
-
-        return new TeamAnalysis
-        {
-            SeasonStartYear = matchSummaries.Select(summary => summary.SeasonStartYear).FirstOrDefault(value => value.HasValue),
-            SeasonLabel = matchSummaries.Select(summary => summary.SeasonLabel).FirstOrDefault(label => !string.IsNullOrWhiteSpace(label)) ?? "",
-            TeamKey = accumulator.TeamKey,
-            TeamIdIntern = accumulator.TeamIdIntern,
-            TeamIdExtern = accumulator.TeamIdExtern,
-            TeamName = accumulator.TeamName,
-            MatchesPlayed = matchSummaries.Count,
-            PlayersCount = seasonTotals.Count,
-            Phases = BuildTeamPhases(matchSummaries),
-            MatchSummaries = matchSummaries,
-            MatchPlayers = matchPlayers,
-            SeasonTotals = seasonTotals,
-            MatchMVPs = BuildMatchMvps(matchPlayers),
-            Ranking = BuildRanking(seasonTotals),
-            Evolution = BuildEvolution(matchPlayers)
-        };
-    }
-
-    private static List<TeamPhaseInfo> BuildTeamPhases(IEnumerable<MatchSummary> matchSummaries)
-    {
-        return matchSummaries
-            .GroupBy(summary => new
-            {
-                summary.SeasonStartYear,
-                summary.SeasonLabel,
-                summary.PhaseNumber,
-                summary.SourcePhaseId,
-                summary.CategoryName,
-                summary.PhaseName,
-                summary.LevelName,
-                summary.LevelCode,
-                summary.GroupCode
-            })
-            .OrderBy(group => group.Key.PhaseNumber)
-            .ThenBy(group => group.Key.SourcePhaseId ?? int.MaxValue)
-            .Select(group => new TeamPhaseInfo
-            {
-                SeasonStartYear = group.Key.SeasonStartYear,
-                SeasonLabel = group.Key.SeasonLabel,
-                PhaseNumber = group.Key.PhaseNumber,
-                SourcePhaseId = group.Key.SourcePhaseId,
-                CategoryName = group.Key.CategoryName,
-                PhaseName = group.Key.PhaseName,
-                LevelName = group.Key.LevelName,
-                LevelCode = group.Key.LevelCode,
-                GroupCode = group.Key.GroupCode,
-                MatchesPlayed = group.Count()
-            })
-            .ToList();
-    }
-
-    private static CompetitionAnalysis BuildCompetitionAnalysis(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
-    {
-        var totalValuationByTeam = teamAnalyses
-            .ToDictionary(
-                team => team.TeamKey,
-                team => team.SeasonTotals.Sum(player => player.Valuation),
-                StringComparer.Ordinal);
-
-        var competitionTeams = teamAnalyses
-            .Select(team => new CompetitionTeamOverview
-            {
-                TeamKey = team.TeamKey,
-                TeamIdIntern = team.TeamIdIntern,
-                TeamIdExtern = team.TeamIdExtern,
-                TeamName = team.TeamName,
-                MatchesPlayed = team.MatchesPlayed,
-                PlayersCount = team.PlayersCount,
-                TotalValuation = totalValuationByTeam.GetValueOrDefault(team.TeamKey)
-            })
-            .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
-            .ToList();
-
-        var competitionMatches = BuildCompetitionMatches(teamAnalyses);
-        var competitionPhases = competitionMatches
-            .GroupBy(match => new
-            {
-                match.SeasonStartYear,
-                match.SeasonLabel,
-                match.PhaseNumber,
-                match.SourcePhaseId,
-                match.CategoryName,
-                match.PhaseName,
-                match.LevelName,
-                match.LevelCode,
-                match.GroupCode
-            })
-            .OrderBy(group => group.Key.PhaseNumber)
-            .ThenBy(group => group.Key.SourcePhaseId ?? int.MaxValue)
-            .Select(group => new CompetitionPhase
-            {
-                SeasonStartYear = group.Key.SeasonStartYear,
-                SeasonLabel = group.Key.SeasonLabel,
-                PhaseNumber = group.Key.PhaseNumber,
-                SourcePhaseId = group.Key.SourcePhaseId,
-                CategoryName = group.Key.CategoryName,
-                PhaseName = group.Key.PhaseName,
-                LevelName = group.Key.LevelName,
-                LevelCode = group.Key.LevelCode,
-                GroupCode = group.Key.GroupCode,
-                MatchesCount = group.Count()
-            })
-            .ToList();
-
-        return new CompetitionAnalysis
-        {
-            SeasonStartYear = ResolveSingleSeasonStartYear(teamAnalyses),
-            SeasonLabel = ResolveSingleSeasonLabel(teamAnalyses),
-            TotalTeams = competitionTeams.Count,
-            TotalMatches = competitionMatches.Count,
-            Phases = competitionPhases,
-            Teams = competitionTeams,
-            Matches = competitionMatches,
-            StandingsByPhase = BuildCompetitionStandings(competitionMatches),
-            PlayerLeaders = BuildCompetitionPlayerLeaders(teamAnalyses)
-        };
-    }
-
-    private static List<CompetitionMatch> BuildCompetitionMatches(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
-    {
-        return teamAnalyses
-            .SelectMany(team => team.MatchSummaries)
-            .GroupBy(summary => summary.MatchWebId)
-            .Select(group =>
-            {
-                var homePerspective = group.FirstOrDefault(summary => summary.IsHome) ?? group.First();
-                var homeScore = homePerspective.IsHome ? homePerspective.TeamScore : homePerspective.RivalScore;
-                var awayScore = homePerspective.IsHome ? homePerspective.RivalScore : homePerspective.TeamScore;
-
-                return new CompetitionMatch
-                {
-                    SeasonStartYear = homePerspective.SeasonStartYear,
-                    SeasonLabel = homePerspective.SeasonLabel,
-                    MatchWebId = homePerspective.MatchWebId,
-                    MatchInternId = homePerspective.MatchInternId,
-                    MatchExternId = homePerspective.MatchExternId,
-                    MatchDate = homePerspective.MatchDate,
-                    PhaseNumber = homePerspective.PhaseNumber,
-                    SourcePhaseId = homePerspective.SourcePhaseId,
-                    CategoryName = homePerspective.CategoryName,
-                    PhaseName = homePerspective.PhaseName,
-                    LevelName = homePerspective.LevelName,
-                    LevelCode = homePerspective.LevelCode,
-                    GroupCode = homePerspective.GroupCode,
-                    HomeTeamKey = homePerspective.HomeTeamKey,
-                    HomeTeam = homePerspective.HomeTeam,
-                    HomeScore = homeScore,
-                    AwayTeamKey = homePerspective.AwayTeamKey,
-                    AwayTeam = homePerspective.AwayTeam,
-                    AwayScore = awayScore,
-                    TopScorer = homePerspective.TopScorer,
-                    TopScorerTeam = homePerspective.TopScorerTeam,
-                    TopScorerPoints = homePerspective.TopScorerPoints
-                };
-            })
-            .OrderBy(match => match.MatchDate ?? DateTime.MaxValue)
-            .ThenBy(match => match.MatchWebId)
-            .ToList();
-    }
-
-    private static List<CompetitionPhaseStandings> BuildCompetitionStandings(IReadOnlyCollection<CompetitionMatch> matches)
-    {
-        return matches
-            .GroupBy(match => new
-            {
-                match.SeasonStartYear,
-                match.SeasonLabel,
-                match.PhaseNumber
-            })
-            .OrderBy(group => group.Key.SeasonStartYear ?? int.MaxValue)
-            .ThenBy(group => group.Key.PhaseNumber)
-            .Select(group => new CompetitionPhaseStandings
-            {
-                SeasonStartYear = group.Key.SeasonStartYear,
-                SeasonLabel = group.Key.SeasonLabel,
-                PhaseNumber = group.Key.PhaseNumber,
-                Rows = BuildCompetitionStandingRows(group)
-            })
-            .ToList();
-    }
-
-    private static List<CompetitionStandingRow> BuildCompetitionStandingRows(IEnumerable<CompetitionMatch> matches)
-    {
-        var rowsByTeam = new Dictionary<string, MutableStandingRow>(StringComparer.Ordinal);
-
-        foreach (var match in matches)
-        {
-            var home = GetOrCreateStandingRow(rowsByTeam, match.HomeTeamKey, match.HomeTeam);
-            var away = GetOrCreateStandingRow(rowsByTeam, match.AwayTeamKey, match.AwayTeam);
-
-            home.Played += 1;
-            home.PointsFor += match.HomeScore;
-            home.PointsAgainst += match.AwayScore;
-
-            away.Played += 1;
-            away.PointsFor += match.AwayScore;
-            away.PointsAgainst += match.HomeScore;
-
-            if (match.HomeScore > match.AwayScore)
-            {
-                home.Wins += 1;
-                away.Losses += 1;
-            }
-            else if (match.HomeScore < match.AwayScore)
-            {
-                away.Wins += 1;
-                home.Losses += 1;
-            }
-            else
-            {
-                home.Ties += 1;
-                away.Ties += 1;
-            }
-        }
-
-        return rowsByTeam.Values
-            .OrderByDescending(row => row.Wins)
-            .ThenBy(row => row.Losses)
-            .ThenByDescending(row => row.PointDiff)
-            .ThenByDescending(row => row.PointsFor)
-            .ThenBy(row => row.TeamName, StringComparer.OrdinalIgnoreCase)
-            .Select((row, index) => new CompetitionStandingRow
-            {
-                Position = index + 1,
-                TeamKey = row.TeamKey,
-                TeamName = row.TeamName,
-                Played = row.Played,
-                Wins = row.Wins,
-                Losses = row.Losses,
-                Ties = row.Ties,
-                PointsFor = row.PointsFor,
-                PointsAgainst = row.PointsAgainst,
-                PointDiff = row.PointDiff
-            })
-            .ToList();
-    }
-
-    private static MutableStandingRow GetOrCreateStandingRow(
-        IDictionary<string, MutableStandingRow> rowsByTeam,
-        string teamKey,
-        string teamName)
-    {
-        if (!rowsByTeam.TryGetValue(teamKey, out var row))
-        {
-            row = new MutableStandingRow(teamKey, teamName);
-            rowsByTeam[teamKey] = row;
-        }
-
-        return row;
-    }
-
-    private static List<CompetitionPlayerLeader> BuildCompetitionPlayerLeaders(IReadOnlyCollection<TeamAnalysis> teamAnalyses)
-    {
-        return teamAnalyses
-            .SelectMany(team => team.SeasonTotals)
-            .Select(player => new CompetitionPlayerLeader
-            {
-                Key = $"{player.TeamKey}:{player.PlayerIdentityKey}:{player.ShirtNumber}",
-                TeamKey = player.TeamKey,
-                TeamIdIntern = player.TeamIdIntern,
-                TeamIdExtern = player.TeamIdExtern,
-                TeamName = player.TeamName,
-                SeasonStartYear = player.SeasonStartYear,
-                SeasonLabel = player.SeasonLabel,
-                PlayerUuid = player.PlayerUuid,
-                PlayerActorId = player.PlayerActorId,
-                PlayerIdentityKey = player.PlayerIdentityKey,
-                PlayerName = player.PlayerName,
-                ShirtNumber = player.ShirtNumber,
-                Games = player.Games,
-                Minutes = player.Minutes,
-                Points = player.Points,
-                AvgPoints = player.Games > 0 ? (double)player.Points / player.Games : 0,
-                Valuation = player.Valuation,
-                AvgValuation = player.Games > 0 ? (double)player.Valuation / player.Games : 0,
-                Fouls = player.Fouls,
-                AvgFouls = player.Games > 0 ? (double)player.Fouls / player.Games : 0
-            })
-            .OrderByDescending(player => player.Points)
-            .ThenBy(player => player.PlayerName, StringComparer.OrdinalIgnoreCase)
-            .ToList();
-    }
-
-    private static List<MatchMVP> BuildMatchMvps(IEnumerable<MatchPlayerRow> matchPlayerRows)
-    {
-        return matchPlayerRows
-            .GroupBy(row => row.MatchWebId)
-            .Select(group =>
-            {
-                var mvp = group
-                    .OrderByDescending(row => row.Valuation)
-                    .ThenByDescending(row => row.Points)
-                    .ThenByDescending(row => row.Minutes)
-                    .First();
-
-                return new MatchMVP
-                {
-                    MatchWebId = group.Key,
-                    PlayerUuid = mvp.PlayerUuid,
-                    PlayerActorId = mvp.PlayerActorId,
-                    PlayerIdentityKey = mvp.PlayerIdentityKey,
-                    PlayerName = mvp.PlayerName,
-                    Points = mvp.Points,
-                    Valuation = mvp.Valuation,
-                    Minutes = mvp.Minutes
-                };
-            })
-            .OrderBy(row => row.MatchWebId)
-            .ToList();
     }
 
     private IEnumerable<StatsFileContext> GetUniqueStatsFiles(string rawDataRootDir)
@@ -721,7 +350,7 @@ public sealed class MatchAnalysisService
         try
         {
             var json = File.ReadAllText(phaseMetadataPath);
-            var metadata = JsonSerializer.Deserialize<PhaseMetadataFile>(json, _jsonOptions);
+            var metadata = JsonSerializer.Deserialize<PhaseMetadataFile>(json, JsonOptions);
             phaseMetadataByRoot[phaseRootDir] = metadata;
             return metadata;
         }
@@ -757,254 +386,6 @@ public sealed class MatchAnalysisService
             return null;
 
         return await File.ReadAllTextAsync(movesPath);
-    }
-
-    private static MatchInsights BuildMatchInsights(
-        StatsRoot match,
-        TeamInfo team,
-        bool isHome,
-        IReadOnlyList<MoveEvent> moves)
-    {
-        var scoringEvents = BuildScoringEvents(match);
-        var periodScores = BuildPeriodScores(match, scoringEvents, isHome);
-        var bestPeriod = periodScores
-            .OrderByDescending(period => period.Diff)
-            .ThenBy(period => period.PeriodNumber)
-            .FirstOrDefault();
-        var worstPeriod = periodScores
-            .OrderBy(period => period.Diff)
-            .ThenBy(period => period.PeriodNumber)
-            .FirstOrDefault();
-
-        var leadChanges = 0;
-        var ties = 0;
-        var maxLead = 0;
-        var maxDeficit = 0;
-        var bestRun = 0;
-        var rivalBestRun = 0;
-        var currentRun = 0;
-        var rivalCurrentRun = 0;
-
-        var previousDiff = 0;
-        foreach (var scoringEvent in scoringEvents)
-        {
-            var teamDelta = isHome ? scoringEvent.DeltaLocal : scoringEvent.DeltaVisit;
-            var rivalDelta = isHome ? scoringEvent.DeltaVisit : scoringEvent.DeltaLocal;
-            var teamDiff = isHome
-                ? scoringEvent.LocalScore - scoringEvent.VisitScore
-                : scoringEvent.VisitScore - scoringEvent.LocalScore;
-
-            maxLead = Math.Max(maxLead, teamDiff);
-            maxDeficit = Math.Max(maxDeficit, -teamDiff);
-
-            var previousSign = Math.Sign(previousDiff);
-            var currentSign = Math.Sign(teamDiff);
-
-            if (currentSign == 0 && previousSign != 0)
-            {
-                ties += 1;
-            }
-            else if (previousSign != 0 && currentSign != 0 && previousSign != currentSign)
-            {
-                leadChanges += 1;
-            }
-
-            if (teamDelta > 0)
-            {
-                currentRun += teamDelta;
-                rivalCurrentRun = 0;
-                bestRun = Math.Max(bestRun, currentRun);
-            }
-
-            if (rivalDelta > 0)
-            {
-                rivalCurrentRun += rivalDelta;
-                currentRun = 0;
-                rivalBestRun = Math.Max(rivalBestRun, rivalCurrentRun);
-            }
-
-            previousDiff = teamDiff;
-        }
-
-        var scoringMoves = moves
-            .Where(IsScoringMove)
-            .ToList();
-        var firstScorer = scoringMoves.FirstOrDefault();
-        var lastScorer = scoringMoves.LastOrDefault();
-        var teamFirstScorer = scoringMoves.FirstOrDefault(move => move.IdTeam == team.TeamIdIntern);
-        var teamLastScorer = scoringMoves.LastOrDefault(move => move.IdTeam == team.TeamIdIntern);
-
-        return new MatchInsights
-        {
-            LeadChanges = leadChanges,
-            Ties = ties,
-            MaxLead = maxLead,
-            MaxDeficit = maxDeficit,
-            BestRun = bestRun,
-            RivalBestRun = rivalBestRun,
-            ClosingRun = currentRun,
-            RivalClosingRun = rivalCurrentRun,
-            FirstScorer = firstScorer?.ActorName ?? "",
-            FirstScorerTeam = ResolveMoveTeamName(match, firstScorer?.IdTeam),
-            LastScorer = lastScorer?.ActorName ?? "",
-            LastScorerTeam = ResolveMoveTeamName(match, lastScorer?.IdTeam),
-            TeamFirstScorer = teamFirstScorer?.ActorName ?? "",
-            TeamLastScorer = teamLastScorer?.ActorName ?? "",
-            BestPeriodLabel = bestPeriod?.Label ?? "",
-            BestPeriodDiff = bestPeriod?.Diff ?? 0,
-            WorstPeriodLabel = worstPeriod?.Label ?? "",
-            WorstPeriodDiff = worstPeriod?.Diff ?? 0,
-            PeriodScores = periodScores
-        };
-    }
-
-    private static List<MatchPeriodScore> BuildPeriodScores(
-        StatsRoot match,
-        IReadOnlyList<ScoringEvent> scoringEvents,
-        bool isHome)
-    {
-        var periodPointsByPeriod = scoringEvents
-            .GroupBy(scoringEvent => scoringEvent.Period)
-            .ToDictionary(
-                group => group.Key,
-                group =>
-                {
-                    var localPoints = group.Sum(item => item.DeltaLocal);
-                    var visitPoints = group.Sum(item => item.DeltaVisit);
-                    return (LocalPoints: localPoints, VisitPoints: visitPoints);
-                });
-
-        return match.Score
-            .Select(point => point.Period)
-            .Where(period => period > 0)
-            .Distinct()
-            .OrderBy(period => period)
-            .Select(period =>
-            {
-                if (!periodPointsByPeriod.TryGetValue(period, out var points))
-                {
-                    points = (LocalPoints: 0, VisitPoints: 0);
-                }
-                var localPoints = points.LocalPoints;
-                var visitPoints = points.VisitPoints;
-                var teamPoints = isHome ? localPoints : visitPoints;
-                var rivalPoints = isHome ? visitPoints : localPoints;
-
-                return new MatchPeriodScore
-                {
-                    PeriodNumber = period,
-                    Label = $"Parcial {period}",
-                    TeamPoints = teamPoints,
-                    RivalPoints = rivalPoints,
-                    Diff = teamPoints - rivalPoints
-                };
-            })
-            .ToList();
-    }
-
-    private static List<ScoringEvent> BuildScoringEvents(StatsRoot match)
-    {
-        var scoringEvents = new List<ScoringEvent>();
-
-        if (match.Score is null || match.Score.Count < 2)
-            return scoringEvents;
-
-        var previousPoint = match.Score[0];
-
-        foreach (var point in match.Score.Skip(1))
-        {
-            var deltaLocal = Math.Max(0, point.Local - previousPoint.Local);
-            var deltaVisit = Math.Max(0, point.Visit - previousPoint.Visit);
-
-            if (deltaLocal == 0 && deltaVisit == 0)
-            {
-                previousPoint = point;
-                continue;
-            }
-
-            scoringEvents.Add(new ScoringEvent(
-                point.Period,
-                point.MinuteAbsolute,
-                point.Local,
-                point.Visit,
-                deltaLocal,
-                deltaVisit));
-
-            previousPoint = point;
-        }
-
-        return scoringEvents;
-    }
-
-    private static bool IsScoringMove(MoveEvent move)
-    {
-        return move.IdTeam > 0
-               && !string.IsNullOrWhiteSpace(move.ActorName)
-               && !string.IsNullOrWhiteSpace(move.Move)
-               && move.Move.StartsWith("Cistella de ", StringComparison.OrdinalIgnoreCase);
-    }
-
-    private static string ResolveMoveTeamName(StatsRoot match, int? teamId)
-    {
-        if (!teamId.HasValue || teamId.Value <= 0)
-            return "";
-
-        return match.Teams.FirstOrDefault(team => team.TeamIdIntern == teamId.Value)?.Name ?? "";
-    }
-
-    private static List<PlayerRanking> BuildRanking(IEnumerable<PlayerSeasonTotal> seasonTotals)
-    {
-        return seasonTotals
-            .Select(player => new PlayerRanking
-            {
-                PlayerUuid = player.PlayerUuid,
-                PlayerActorId = player.PlayerActorId,
-                PlayerIdentityKey = player.PlayerIdentityKey,
-                PlayerName = player.PlayerName,
-                Dorsal = player.ShirtNumber,
-                Games = player.Games,
-                Points = player.Points,
-                AvgPoints = player.Games > 0 ? (double)player.Points / player.Games : 0,
-                Valuation = player.Valuation,
-                AvgValuation = player.Games > 0 ? (double)player.Valuation / player.Games : 0,
-                Minutes = player.Minutes
-            })
-            .OrderByDescending(row => row.Points)
-            .ThenBy(row => row.PlayerName, StringComparer.OrdinalIgnoreCase)
-            .ToList();
-    }
-
-    private static List<PlayerEvolution> BuildEvolution(IEnumerable<MatchPlayerRow> matchPlayerRows)
-    {
-        return matchPlayerRows
-            .GroupBy(row => BuildEvolutionKey(row))
-            .SelectMany(group =>
-                group.OrderBy(row => row.PhaseNumber)
-                    .ThenBy(row => row.PhaseRound)
-                    .ThenBy(row => row.MatchWebId)
-                    .Select((row, index) => new PlayerEvolution
-                    {
-                        PlayerUuid = row.PlayerUuid,
-                        PlayerActorId = row.PlayerActorId,
-                        PlayerIdentityKey = row.PlayerIdentityKey,
-                        PlayerName = row.PlayerName,
-                        PhaseNumber = row.PhaseNumber,
-                        PhaseRound = row.PhaseRound,
-                        MatchNumber = index + 1,
-                        MatchWebId = row.MatchWebId,
-                        Points = row.Points,
-                        Valuation = row.Valuation
-                    }))
-            .OrderBy(row => row.PlayerName, StringComparer.OrdinalIgnoreCase)
-            .ThenBy(row => row.PhaseNumber)
-            .ThenBy(row => row.PhaseRound)
-            .ThenBy(row => row.MatchWebId)
-            .ToList();
-    }
-
-    private static string BuildEvolutionKey(MatchPlayerRow row)
-    {
-        return $"{row.TeamKey}|{row.PlayerIdentityKey}";
     }
 
     private static string BuildResult(int teamScore, int rivalScore)
@@ -1122,136 +503,84 @@ public sealed class MatchAnalysisService
         return $"{seasonStartYear.Value}-{seasonStartYear.Value + 1}";
     }
 
-    private static int? ResolveSingleSeasonStartYear(IEnumerable<TeamAnalysis> teamAnalyses)
-    {
-        var seasons = teamAnalyses
-            .Select(team => team.SeasonStartYear)
-            .Where(value => value.HasValue)
-            .Select(value => value!.Value)
-            .Distinct()
-            .Take(2)
-            .ToList();
-
-        return seasons.Count == 1 ? seasons[0] : null;
-    }
-
-    private static string ResolveSingleSeasonLabel(IEnumerable<TeamAnalysis> teamAnalyses)
-    {
-        var labels = teamAnalyses
-            .Select(team => team.SeasonLabel)
-            .Where(label => !string.IsNullOrWhiteSpace(label))
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .Take(2)
-            .ToList();
-
-        return labels.Count == 1 ? labels[0] : "";
-    }
-
-    private sealed record ScoringEvent(
-        int Period,
-        int MinuteAbsolute,
-        int LocalScore,
-        int VisitScore,
-        int DeltaLocal,
-        int DeltaVisit);
-
     private sealed record StatsFileContext(
         string Path,
         int MatchWebId,
         PhaseMetadataFile? PhaseMetadata);
+}
 
-    private sealed class MutableStandingRow
+internal sealed class TeamAccumulator
+{
+    public TeamAccumulator(string teamKey, TeamInfo team)
     {
-        public MutableStandingRow(string teamKey, string teamName)
-        {
-            TeamKey = teamKey;
-            TeamName = teamName;
-        }
-
-        public string TeamKey { get; }
-        public string TeamName { get; }
-        public int Played { get; set; }
-        public int Wins { get; set; }
-        public int Losses { get; set; }
-        public int Ties { get; set; }
-        public int PointsFor { get; set; }
-        public int PointsAgainst { get; set; }
-        public int PointDiff => PointsFor - PointsAgainst;
+        TeamKey = teamKey;
+        TeamIdIntern = team.TeamIdIntern;
+        TeamIdExtern = team.TeamIdExtern;
+        TeamName = team.Name ?? "";
     }
 
-    private sealed class TeamAccumulator
+    public string TeamKey { get; }
+    public int TeamIdIntern { get; private set; }
+    public int TeamIdExtern { get; private set; }
+    public string TeamName { get; private set; }
+    public List<MatchSummary> MatchSummaries { get; } = [];
+    public List<MatchPlayerRow> MatchPlayerRows { get; } = [];
+    public Dictionary<string, PlayerSeasonTotal> SeasonTotals { get; } = new(StringComparer.Ordinal);
+    public Dictionary<string, Dictionary<string, int>> ShirtNumbersByPlayer { get; } = new(StringComparer.Ordinal);
+
+    public void UpdateMetadata(TeamInfo team)
     {
-        public TeamAccumulator(string teamKey, TeamInfo team)
-        {
-            TeamKey = teamKey;
+        if (TeamIdIntern == 0 && team.TeamIdIntern > 0)
             TeamIdIntern = team.TeamIdIntern;
+
+        if (TeamIdExtern == 0 && team.TeamIdExtern > 0)
             TeamIdExtern = team.TeamIdExtern;
-            TeamName = team.Name ?? "";
-        }
 
-        public string TeamKey { get; }
-        public int TeamIdIntern { get; private set; }
-        public int TeamIdExtern { get; private set; }
-        public string TeamName { get; private set; }
-        public List<MatchSummary> MatchSummaries { get; } = [];
-        public List<MatchPlayerRow> MatchPlayerRows { get; } = [];
-        public Dictionary<string, PlayerSeasonTotal> SeasonTotals { get; } = new(StringComparer.Ordinal);
-        public Dictionary<string, Dictionary<string, int>> ShirtNumbersByPlayer { get; } = new(StringComparer.Ordinal);
+        if (ShouldUseTeamName(team.Name, TeamName))
+            TeamName = team.Name!;
+    }
 
-        public void UpdateMetadata(TeamInfo team)
+    public void TrackShirtNumber(string playerKey, string? shirtNumber)
+    {
+        if (string.IsNullOrWhiteSpace(playerKey) || string.IsNullOrWhiteSpace(shirtNumber))
+            return;
+
+        var normalizedShirtNumber = shirtNumber.Trim();
+        if (normalizedShirtNumber.Length == 0)
+            return;
+
+        if (!ShirtNumbersByPlayer.TryGetValue(playerKey, out var shirtNumbers))
         {
-            if (TeamIdIntern == 0 && team.TeamIdIntern > 0)
-                TeamIdIntern = team.TeamIdIntern;
-
-            if (TeamIdExtern == 0 && team.TeamIdExtern > 0)
-                TeamIdExtern = team.TeamIdExtern;
-
-            if (ShouldUseTeamName(team.Name, TeamName))
-                TeamName = team.Name!;
+            shirtNumbers = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+            ShirtNumbersByPlayer[playerKey] = shirtNumbers;
         }
 
-        public void TrackShirtNumber(string playerKey, string? shirtNumber)
-        {
-            if (string.IsNullOrWhiteSpace(playerKey) || string.IsNullOrWhiteSpace(shirtNumber))
-                return;
+        shirtNumbers[normalizedShirtNumber] = shirtNumbers.GetValueOrDefault(normalizedShirtNumber) + 1;
+    }
 
-            var normalizedShirtNumber = shirtNumber.Trim();
-            if (normalizedShirtNumber.Length == 0)
-                return;
+    public string ResolveDominantShirtNumber(string playerKey, string? fallback)
+    {
+        if (!ShirtNumbersByPlayer.TryGetValue(playerKey, out var shirtNumbers) || shirtNumbers.Count == 0)
+            return fallback?.Trim() ?? "";
 
-            if (!ShirtNumbersByPlayer.TryGetValue(playerKey, out var shirtNumbers))
-            {
-                shirtNumbers = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-                ShirtNumbersByPlayer[playerKey] = shirtNumbers;
-            }
+        var normalizedFallback = fallback?.Trim() ?? "";
 
-            shirtNumbers[normalizedShirtNumber] = shirtNumbers.GetValueOrDefault(normalizedShirtNumber) + 1;
-        }
+        return shirtNumbers
+            .OrderByDescending(entry => entry.Value)
+            .ThenByDescending(entry => string.Equals(entry.Key, normalizedFallback, StringComparison.OrdinalIgnoreCase))
+            .ThenBy(entry => entry.Key, StringComparer.OrdinalIgnoreCase)
+            .Select(entry => entry.Key)
+            .FirstOrDefault() ?? normalizedFallback;
+    }
 
-        public string ResolveDominantShirtNumber(string playerKey, string? fallback)
-        {
-            if (!ShirtNumbersByPlayer.TryGetValue(playerKey, out var shirtNumbers) || shirtNumbers.Count == 0)
-                return fallback?.Trim() ?? "";
+    private static bool ShouldUseTeamName(string? candidateName, string currentName)
+    {
+        if (string.IsNullOrWhiteSpace(candidateName))
+            return false;
 
-            var normalizedFallback = fallback?.Trim() ?? "";
+        if (string.IsNullOrWhiteSpace(currentName))
+            return true;
 
-            return shirtNumbers
-                .OrderByDescending(entry => entry.Value)
-                .ThenByDescending(entry => string.Equals(entry.Key, normalizedFallback, StringComparison.OrdinalIgnoreCase))
-                .ThenBy(entry => entry.Key, StringComparer.OrdinalIgnoreCase)
-                .Select(entry => entry.Key)
-                .FirstOrDefault() ?? normalizedFallback;
-        }
-
-        private static bool ShouldUseTeamName(string? candidateName, string currentName)
-        {
-            if (string.IsNullOrWhiteSpace(candidateName))
-                return false;
-
-            if (string.IsNullOrWhiteSpace(currentName))
-                return true;
-
-            return candidateName.Length > currentName.Length;
-        }
+        return candidateName.Length > currentName.Length;
     }
 }
