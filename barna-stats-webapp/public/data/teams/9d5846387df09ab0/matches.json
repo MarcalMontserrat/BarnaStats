@@ -2611,5 +2611,112 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "teamIdIntern": 578585,
+    "teamIdExtern": 81178,
+    "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+    "matchWebId": 73901,
+    "matchInternId": 287991,
+    "matchExternId": 1175749,
+    "matchDate": "2026-05-29T21:45:00+02:00",
+    "phaseNumber": 2,
+    "sourcePhaseId": 21974,
+    "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+    "phaseName": "Tercera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "01",
+    "phaseRound": 15,
+    "roundNumber": 23,
+    "homeTeam": "CB MANYANET LES CORTS GROC",
+    "homeScore": 7,
+    "awayScore": 57,
+    "awayTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "isHome": false,
+    "rivalTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+    "rivalTeam": "CB MANYANET LES CORTS GROC",
+    "officialTeamScore": 57,
+    "officialRivalScore": 7,
+    "teamScore": 104,
+    "rivalScore": 7,
+    "result": "W",
+    "topScorer": "ABRIL ARIZA BERNAL",
+    "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+    "topScorerPoints": 25,
+    "teamTopScorer": "ABRIL ARIZA BERNAL",
+    "teamTopScorerPoints": 25,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 52,
+      "maxDeficit": 0,
+      "bestRun": 18,
+      "rivalBestRun": 2,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "ABRIL ARIZA BERNAL",
+      "firstScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "lastScorer": "EVA RODRIGUEZ CANO",
+      "lastScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "teamFirstScorer": "ABRIL ARIZA BERNAL",
+      "teamLastScorer": "EVA RODRIGUEZ CANO",
+      "bestPeriodLabel": "Parcial 4",
+      "bestPeriodDiff": 14,
+      "worstPeriodLabel": "Parcial 6",
+      "worstPeriodDiff": -2,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 12,
+          "rivalPoints": 0,
+          "diff": 12
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 10,
+          "rivalPoints": 2,
+          "diff": 8
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 10,
+          "rivalPoints": 0,
+          "diff": 10
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 15,
+          "rivalPoints": 1,
+          "diff": 14
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 10,
+          "rivalPoints": 2,
+          "diff": 8
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 2,
+          "diff": -2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

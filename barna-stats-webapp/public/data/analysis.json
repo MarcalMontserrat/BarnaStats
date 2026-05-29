@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "generatedAtUtc": "2026-05-21T19:03:29.221253Z",
-  "totalMatches": 8680,
+  "generatedAtUtc": "2026-05-29T22:05:22.404023Z",
+  "totalMatches": 8685,
   "totalTeams": 836,
   "teams": [
     {
@@ -5388,7 +5388,7 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 22,
+      "matchesPlayed": 23,
       "playersCount": 12,
       "matchesFile": "teams/9d5846387df09ab0/matches.json",
       "playersFile": "teams/9d5846387df09ab0/players.json",
@@ -5427,7 +5427,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 4
+          "matchesPlayed": 5
         }
       ]
     },
@@ -10030,7 +10030,7 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 19,
+      "matchesPlayed": 21,
       "playersCount": 17,
       "matchesFile": "teams/d08efbc8f9176a7d/matches.json",
       "playersFile": "teams/d08efbc8f9176a7d/players.json",
@@ -10069,7 +10069,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 3
+          "matchesPlayed": 5
         }
       ]
     },
@@ -14844,7 +14844,7 @@
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 20,
+      "matchesPlayed": 22,
       "playersCount": 9,
       "matchesFile": "teams/3828684d4df0fd63/matches.json",
       "playersFile": "teams/3828684d4df0fd63/players.json",
@@ -14883,7 +14883,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 2
+          "matchesPlayed": 4
         }
       ]
     },
@@ -17326,7 +17326,7 @@
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "matchesPlayed": 17,
+      "matchesPlayed": 18,
       "playersCount": 12,
       "matchesFile": "teams/18552d39c04035d5/matches.json",
       "playersFile": "teams/18552d39c04035d5/players.json",
@@ -17365,7 +17365,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -20616,7 +20616,7 @@
       "teamIdIntern": 454013,
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
-      "matchesPlayed": 21,
+      "matchesPlayed": 24,
       "playersCount": 12,
       "matchesFile": "teams/e7f569b34084c7b6/matches.json",
       "playersFile": "teams/e7f569b34084c7b6/players.json",
@@ -20655,7 +20655,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 2
+          "matchesPlayed": 5
         }
       ]
     },
@@ -30174,7 +30174,7 @@
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "matchesPlayed": 19,
+      "matchesPlayed": 20,
       "playersCount": 11,
       "matchesFile": "teams/f2133414870ef719/matches.json",
       "playersFile": "teams/f2133414870ef719/players.json",
@@ -30213,7 +30213,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "01",
-          "matchesPlayed": 3
+          "matchesPlayed": 4
         }
       ]
     },

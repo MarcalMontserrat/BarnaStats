@@ -2,7 +2,7 @@
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
   "totalTeams": 836,
-  "totalMatches": 8680,
+  "totalMatches": 8685,
   "phases": [
     {
       "seasonStartYear": 2025,
@@ -2546,7 +2546,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 8
+      "matchesCount": 13
     }
   ],
   "teams": [
@@ -3797,9 +3797,9 @@
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
       "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "matchesPlayed": 22,
+      "matchesPlayed": 23,
       "playersCount": 12,
-      "totalValuation": 878
+      "totalValuation": 970
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80319",
@@ -4868,9 +4868,9 @@
       "teamIdIntern": 453402,
       "teamIdExtern": 81365,
       "teamName": "CB MANYANET LES CORTS GROC",
-      "matchesPlayed": 19,
+      "matchesPlayed": 21,
       "playersCount": 17,
-      "totalValuation": 95
+      "totalValuation": 92
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
@@ -5957,9 +5957,9 @@
       "teamIdIntern": 454078,
       "teamIdExtern": 81071,
       "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 20,
+      "matchesPlayed": 22,
       "playersCount": 9,
-      "totalValuation": 178
+      "totalValuation": 179
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80298",
@@ -6542,9 +6542,9 @@
       "teamIdIntern": 454766,
       "teamIdExtern": 82476,
       "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "matchesPlayed": 17,
+      "matchesPlayed": 18,
       "playersCount": 12,
-      "totalValuation": 68
+      "totalValuation": 69
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475",
@@ -7307,9 +7307,9 @@
       "teamIdIntern": 454013,
       "teamIdExtern": 83018,
       "teamName": "JAC SANTS BARCELONA U10",
-      "matchesPlayed": 21,
+      "matchesPlayed": 24,
       "playersCount": 12,
-      "totalValuation": 953
+      "totalValuation": 1030
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83463",
@@ -9494,9 +9494,9 @@
       "teamIdIntern": 456900,
       "teamIdExtern": 80889,
       "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "matchesPlayed": 19,
+      "matchesPlayed": 20,
       "playersCount": 11,
-      "totalValuation": 648
+      "totalValuation": 663
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80888",
@@ -218395,6 +218395,126 @@
       "topScorer": "MIA GOMEZ VALLS",
       "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
       "topScorerPoints": 14
+    },
+    {
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "matchWebId": 73896,
+      "matchInternId": 287419,
+      "matchExternId": 1170634,
+      "matchDate": "2026-05-23T11:30:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21974,
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "phaseName": "Tercera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "01",
+      "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "homeTeam": "JAC SANTS BARCELONA U10",
+      "homeScore": 45,
+      "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "awayTeam": "CB MANYANET LES CORTS GROC",
+      "awayScore": 14,
+      "topScorer": "MARIONA SOLEY BODRO",
+      "topScorerTeam": "JAC SANTS BARCELONA U10",
+      "topScorerPoints": 17
+    },
+    {
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "matchWebId": 73898,
+      "matchInternId": 287488,
+      "matchExternId": 1174685,
+      "matchDate": "2026-05-23T12:30:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21974,
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "phaseName": "Tercera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "01",
+      "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "homeTeam": "U.E.MATAR\u00D3 - PRBF",
+      "homeScore": 46,
+      "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "awayTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+      "awayScore": 18,
+      "topScorer": "AYESIRA DIALLO DIALLO",
+      "topScorerTeam": "U.E.MATAR\u00D3 - PRBF",
+      "topScorerPoints": 11
+    },
+    {
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "matchWebId": 73890,
+      "matchInternId": 282607,
+      "matchExternId": 1175593,
+      "matchDate": "2026-05-26T18:30:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21974,
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "phaseName": "Tercera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "01",
+      "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+      "homeTeam": "DOMINIQUES BARCELONA NEGRE",
+      "homeScore": 18,
+      "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "awayTeam": "JAC SANTS BARCELONA U10",
+      "awayScore": 45,
+      "topScorer": "MARIONA SOLEY BODRO",
+      "topScorerTeam": "JAC SANTS BARCELONA U10",
+      "topScorerPoints": 11
+    },
+    {
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "matchWebId": 73899,
+      "matchInternId": 287980,
+      "matchExternId": 1176190,
+      "matchDate": "2026-05-29T20:00:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21974,
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "phaseName": "Tercera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "01",
+      "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "homeTeam": "CENTRE CAT\u00D2LIC L\u0027H",
+      "homeScore": 29,
+      "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "awayTeam": "JAC SANTS BARCELONA U10",
+      "awayScore": 47,
+      "topScorer": "MARIONA SOLEY BODRO",
+      "topScorerTeam": "JAC SANTS BARCELONA U10",
+      "topScorerPoints": 13
+    },
+    {
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "matchWebId": 73901,
+      "matchInternId": 287991,
+      "matchExternId": 1175749,
+      "matchDate": "2026-05-29T21:45:00+02:00",
+      "phaseNumber": 2,
+      "sourcePhaseId": 21974,
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "phaseName": "Tercera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "01",
+      "homeTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "homeTeam": "CB MANYANET LES CORTS GROC",
+      "homeScore": 7,
+      "awayTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "awayTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "awayScore": 104,
+      "topScorer": "ABRIL ARIZA BERNAL",
+      "topScorerTeam": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "topScorerPoints": 25
     }
   ],
   "standingsByPhase": [
@@ -228348,6 +228468,18 @@
       "rows": [
         {
           "position": 1,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+          "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+          "played": 15,
+          "wins": 15,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 983,
+          "pointsAgainst": 241,
+          "pointDiff": 742
+        },
+        {
+          "position": 2,
           "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80228",
           "teamName": "LOQUILLO FEMEN\u00CD SANT ADRI\u00C0 A",
           "played": 16,
@@ -228357,18 +228489,6 @@
           "pointsFor": 1037,
           "pointsAgainst": 833,
           "pointDiff": 204
-        },
-        {
-          "position": 2,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-          "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-          "played": 14,
-          "wins": 14,
-          "losses": 0,
-          "ties": 0,
-          "pointsFor": 879,
-          "pointsAgainst": 234,
-          "pointDiff": 645
         },
         {
           "position": 3,
@@ -228480,6 +228600,18 @@
         },
         {
           "position": 12,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+          "teamName": "U.E.MATAR\u00D3 - PRBF",
+          "played": 12,
+          "wins": 11,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 698,
+          "pointsAgainst": 266,
+          "pointDiff": 432
+        },
+        {
+          "position": 13,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80969",
           "teamName": "CB BLANES A",
           "played": 12,
@@ -228491,7 +228623,7 @@
           "pointDiff": 249
         },
         {
-          "position": 13,
+          "position": 14,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83067",
           "teamName": "ARESA SHIPYARD - ARENYS B\u00C0SQUET",
           "played": 12,
@@ -228503,7 +228635,7 @@
           "pointDiff": 239
         },
         {
-          "position": 14,
+          "position": 15,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78471",
           "teamName": "CESET U16 VERD",
           "played": 12,
@@ -228515,7 +228647,7 @@
           "pointDiff": 237
         },
         {
-          "position": 15,
+          "position": 16,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79879",
           "teamName": "SESE B",
           "played": 12,
@@ -228527,7 +228659,7 @@
           "pointDiff": 209
         },
         {
-          "position": 16,
+          "position": 17,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80991",
           "teamName": "B\u00C0SQUET GIRONA U16 VERMELL",
           "played": 12,
@@ -228539,7 +228671,7 @@
           "pointDiff": 205
         },
         {
-          "position": 17,
+          "position": 18,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81333",
           "teamName": "CB ALPICAT",
           "played": 12,
@@ -228551,7 +228683,7 @@
           "pointDiff": 203
         },
         {
-          "position": 18,
+          "position": 19,
           "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:78684",
           "teamName": "MUSEU DEL COMIC - CASTELLDEFELS A",
           "played": 12,
@@ -228563,7 +228695,7 @@
           "pointDiff": 194
         },
         {
-          "position": 19,
+          "position": 20,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78486",
           "teamName": "CN CALDES",
           "played": 12,
@@ -228575,7 +228707,7 @@
           "pointDiff": 184
         },
         {
-          "position": 20,
+          "position": 21,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79151",
           "teamName": "C.B. PRAT - MONTIBELLO B",
           "played": 12,
@@ -228587,7 +228719,7 @@
           "pointDiff": 164
         },
         {
-          "position": 21,
+          "position": 22,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79317",
           "teamName": "CB VILASSAR DE DALT A",
           "played": 12,
@@ -228599,7 +228731,7 @@
           "pointDiff": 149
         },
         {
-          "position": 22,
+          "position": 23,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78654",
           "teamName": "C.E. XAMBA KRAAL",
           "played": 12,
@@ -228611,7 +228743,7 @@
           "pointDiff": 139
         },
         {
-          "position": 23,
+          "position": 24,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80239",
           "teamName": "FEMEN\u00CD SANT ADRI\u00C0 B",
           "played": 12,
@@ -228623,7 +228755,7 @@
           "pointDiff": 116
         },
         {
-          "position": 24,
+          "position": 25,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80238",
           "teamName": "CESA FEMEN\u00CD SANT ADRI\u00C0 A",
           "played": 13,
@@ -228635,7 +228767,19 @@
           "pointDiff": 285
         },
         {
-          "position": 25,
+          "position": 26,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+          "teamName": "JAC SANTS BARCELONA U10",
+          "played": 15,
+          "wins": 11,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 805,
+          "pointsAgainst": 487,
+          "pointDiff": 318
+        },
+        {
+          "position": 27,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306",
           "teamName": "CB MANLLEU (U10F)",
           "played": 10,
@@ -228647,7 +228791,7 @@
           "pointDiff": 557
         },
         {
-          "position": 26,
+          "position": 28,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80193",
           "teamName": "JOVENTUT BADALONA A",
           "played": 10,
@@ -228659,7 +228803,7 @@
           "pointDiff": 491
         },
         {
-          "position": 27,
+          "position": 29,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81574",
           "teamName": "FEMENI MARESME 3 VILES - JF",
           "played": 10,
@@ -228671,7 +228815,7 @@
           "pointDiff": 435
         },
         {
-          "position": 28,
+          "position": 30,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79727",
           "teamName": "BC TECLA SALA  B",
           "played": 10,
@@ -228683,7 +228827,7 @@
           "pointDiff": 334
         },
         {
-          "position": 29,
+          "position": 31,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79646",
           "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER A",
           "played": 10,
@@ -228695,7 +228839,7 @@
           "pointDiff": 230
         },
         {
-          "position": 30,
+          "position": 32,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79495",
           "teamName": "PETROPINTO ASFE B",
           "played": 10,
@@ -228707,7 +228851,7 @@
           "pointDiff": 223
         },
         {
-          "position": 31,
+          "position": 33,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82930",
           "teamName": "BC FONTAJAU - KABLER",
           "played": 10,
@@ -228719,7 +228863,7 @@
           "pointDiff": 213
         },
         {
-          "position": 32,
+          "position": 34,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229",
           "teamName": "CAMPUS UDL - CB IGUALADA JF U18",
           "played": 10,
@@ -228731,7 +228875,7 @@
           "pointDiff": 160
         },
         {
-          "position": 33,
+          "position": 35,
           "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80010",
           "teamName": "CB VILADECANS BLANC",
           "played": 10,
@@ -228743,19 +228887,7 @@
           "pointDiff": 159
         },
         {
-          "position": 34,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-          "teamName": "U.E.MATAR\u00D3 - PRBF",
-          "played": 11,
-          "wins": 10,
-          "losses": 1,
-          "ties": 0,
-          "pointsFor": 652,
-          "pointsAgainst": 248,
-          "pointDiff": 404
-        },
-        {
-          "position": 35,
+          "position": 36,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81681",
           "teamName": "B\u00C0SQUET SANT SADURN\u00CD",
           "played": 11,
@@ -228767,7 +228899,7 @@
           "pointDiff": 356
         },
         {
-          "position": 36,
+          "position": 37,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83286",
           "teamName": "RIO LOGISTIC CB LLI\u00C7A D\u2019AMUNT BLAU",
           "played": 11,
@@ -228779,7 +228911,7 @@
           "pointDiff": 243
         },
         {
-          "position": 37,
+          "position": 38,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80957",
           "teamName": "BASKET ESPLUGUES A",
           "played": 11,
@@ -228791,7 +228923,7 @@
           "pointDiff": 242
         },
         {
-          "position": 38,
+          "position": 39,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79489",
           "teamName": "FEMENI MARESME 3 VILES - IF",
           "played": 11,
@@ -228803,7 +228935,7 @@
           "pointDiff": 231
         },
         {
-          "position": 39,
+          "position": 40,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78695",
           "teamName": "CL\u00CDNICA DENTAL MAVP - CB. CANET",
           "played": 11,
@@ -228815,7 +228947,7 @@
           "pointDiff": 221
         },
         {
-          "position": 40,
+          "position": 41,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78841",
           "teamName": "BASQUETPIASABADELL - M3E2 ENGINYERIA HIGIENICO SANITARIA",
           "played": 11,
@@ -228827,7 +228959,7 @@
           "pointDiff": 182
         },
         {
-          "position": 41,
+          "position": 42,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83244",
           "teamName": "CE LA MARINA",
           "played": 11,
@@ -228839,7 +228971,7 @@
           "pointDiff": 182
         },
         {
-          "position": 42,
+          "position": 43,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80154",
           "teamName": "C.E. ONYAR",
           "played": 11,
@@ -228851,7 +228983,7 @@
           "pointDiff": 169
         },
         {
-          "position": 43,
+          "position": 44,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81710",
           "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
           "played": 11,
@@ -228863,7 +228995,7 @@
           "pointDiff": 168
         },
         {
-          "position": 44,
+          "position": 45,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79632",
           "teamName": "BASKET ALMEDA NEGRE",
           "played": 11,
@@ -228875,7 +229007,7 @@
           "pointDiff": 158
         },
         {
-          "position": 45,
+          "position": 46,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78571",
           "teamName": "CB OLOT OLOTINOX",
           "played": 11,
@@ -228887,7 +229019,7 @@
           "pointDiff": 158
         },
         {
-          "position": 46,
+          "position": 47,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80319",
           "teamName": "C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY",
           "played": 11,
@@ -228899,7 +229031,7 @@
           "pointDiff": 150
         },
         {
-          "position": 47,
+          "position": 48,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81745",
           "teamName": "AFYNEX - UE B\u00C0SQUET MARTORELLES",
           "played": 11,
@@ -228911,7 +229043,7 @@
           "pointDiff": 136
         },
         {
-          "position": 48,
+          "position": 49,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78685",
           "teamName": "CHIRINGUITO CELESTE - CASTELLDEFELS FEMEN\u00CD B",
           "played": 11,
@@ -228923,7 +229055,7 @@
           "pointDiff": 127
         },
         {
-          "position": 49,
+          "position": 50,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801",
           "teamName": "CB GRANOLLERS 1",
           "played": 11,
@@ -228935,7 +229067,7 @@
           "pointDiff": 127
         },
         {
-          "position": 50,
+          "position": 51,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807",
           "teamName": "CB GRANOLLERS 1",
           "played": 11,
@@ -228947,7 +229079,7 @@
           "pointDiff": 109
         },
         {
-          "position": 51,
+          "position": 52,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81885",
           "teamName": "CB MANYANET LES CORTS",
           "played": 12,
@@ -228959,7 +229091,7 @@
           "pointDiff": 234
         },
         {
-          "position": 52,
+          "position": 53,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81463",
           "teamName": "CB MANLLEU (SF)",
           "played": 12,
@@ -228971,7 +229103,7 @@
           "pointDiff": 233
         },
         {
-          "position": 53,
+          "position": 54,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80368",
           "teamName": "CB CERVERA MOBEL L\u00CDNEA",
           "played": 12,
@@ -228983,7 +229115,7 @@
           "pointDiff": 228
         },
         {
-          "position": 54,
+          "position": 55,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78405",
           "teamName": "CB QUART CONSTRUCCIONS CRUZ",
           "played": 12,
@@ -228995,7 +229127,7 @@
           "pointDiff": 224
         },
         {
-          "position": 55,
+          "position": 56,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79813",
           "teamName": "SOL GIRON\u00C8S BISBAL B\u00C0SQUET",
           "played": 12,
@@ -229007,7 +229139,7 @@
           "pointDiff": 201
         },
         {
-          "position": 56,
+          "position": 57,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79021",
           "teamName": "GPU ARTS GR\u00C0FIQUES MANRESA CBF U17",
           "played": 12,
@@ -229019,7 +229151,7 @@
           "pointDiff": 198
         },
         {
-          "position": 57,
+          "position": 58,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81728",
           "teamName": "A.E.E. COL\u00B7LEGI CULTURAL BADALONA",
           "played": 12,
@@ -229031,7 +229163,7 @@
           "pointDiff": 189
         },
         {
-          "position": 58,
+          "position": 59,
           "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79991",
           "teamName": "B\u00C0SQUET SAFA CLAROR A",
           "played": 12,
@@ -229043,7 +229175,7 @@
           "pointDiff": 172
         },
         {
-          "position": 59,
+          "position": 60,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79531",
           "teamName": "FEMEN\u00CD OSONA- OVA PROJECTS",
           "played": 12,
@@ -229055,7 +229187,7 @@
           "pointDiff": 161
         },
         {
-          "position": 60,
+          "position": 61,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78474",
           "teamName": "LA SALLE MANRESA 1",
           "played": 12,
@@ -229067,7 +229199,7 @@
           "pointDiff": 152
         },
         {
-          "position": 61,
+          "position": 62,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78985",
           "teamName": "VIROLAI A",
           "played": 12,
@@ -229079,7 +229211,7 @@
           "pointDiff": 144
         },
         {
-          "position": 62,
+          "position": 63,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80298",
           "teamName": "CENTRE CAT\u00D2LIC L\u0027H A",
           "played": 12,
@@ -229091,7 +229223,7 @@
           "pointDiff": 144
         },
         {
-          "position": 63,
+          "position": 64,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78715",
           "teamName": "U.E.MATAR\u00D3 - JBF",
           "played": 12,
@@ -229103,7 +229235,7 @@
           "pointDiff": 136
         },
         {
-          "position": 64,
+          "position": 65,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79318",
           "teamName": "CB VILASSAR DE DALT B",
           "played": 12,
@@ -229115,7 +229247,7 @@
           "pointDiff": 135
         },
         {
-          "position": 65,
+          "position": 66,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79155",
           "teamName": "CB PARETS",
           "played": 12,
@@ -229127,7 +229259,7 @@
           "pointDiff": 133
         },
         {
-          "position": 66,
+          "position": 67,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80605",
           "teamName": "FC MARTINENC B\u00C0SQUET A",
           "played": 12,
@@ -229139,7 +229271,7 @@
           "pointDiff": 132
         },
         {
-          "position": 67,
+          "position": 68,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79351",
           "teamName": "TGN B\u00C0SQUET 09A",
           "played": 12,
@@ -229151,7 +229283,7 @@
           "pointDiff": 128
         },
         {
-          "position": 68,
+          "position": 69,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79072",
           "teamName": "BASQUET MOLINS",
           "played": 12,
@@ -229163,7 +229295,7 @@
           "pointDiff": 121
         },
         {
-          "position": 69,
+          "position": 70,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79127",
           "teamName": "CB LA VALL D\u0027EN BAS 2",
           "played": 12,
@@ -229175,7 +229307,7 @@
           "pointDiff": 108
         },
         {
-          "position": 70,
+          "position": 71,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
           "teamName": "CB TARRAGONA",
           "played": 12,
@@ -229187,7 +229319,7 @@
           "pointDiff": 88
         },
         {
-          "position": 71,
+          "position": 72,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79824",
           "teamName": "U. B. LLEFI\u00C0  B",
           "played": 12,
@@ -229199,7 +229331,7 @@
           "pointDiff": 84
         },
         {
-          "position": 72,
+          "position": 73,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78585",
           "teamName": "JET TERRASSA U14",
           "played": 12,
@@ -229211,7 +229343,7 @@
           "pointDiff": 82
         },
         {
-          "position": 73,
+          "position": 74,
           "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:80628",
           "teamName": "VALLCUERBA REUS PLOMS SALLE",
           "played": 12,
@@ -229223,7 +229355,7 @@
           "pointDiff": 80
         },
         {
-          "position": 74,
+          "position": 75,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79024",
           "teamName": "MECVIL MANRESA CBF B",
           "played": 13,
@@ -229235,7 +229367,7 @@
           "pointDiff": 67
         },
         {
-          "position": 75,
+          "position": 76,
           "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:78716",
           "teamName": "U.E.MATAR\u00D3 - JAF",
           "played": 14,
@@ -229247,7 +229379,7 @@
           "pointDiff": 80
         },
         {
-          "position": 76,
+          "position": 77,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518",
           "teamName": "SE LA SALLE BONANOVA VERMELL",
           "played": 9,
@@ -229259,7 +229391,7 @@
           "pointDiff": 248
         },
         {
-          "position": 77,
+          "position": 78,
           "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:78875",
           "teamName": "C.B. VILASSAR DE MAR 1984 VERD",
           "played": 9,
@@ -229271,7 +229403,7 @@
           "pointDiff": 204
         },
         {
-          "position": 78,
+          "position": 79,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79785",
           "teamName": "B\u00C0SQUET VILAFANT",
           "played": 9,
@@ -229283,7 +229415,7 @@
           "pointDiff": 167
         },
         {
-          "position": 79,
+          "position": 80,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82901",
           "teamName": "MANYANET REUS A",
           "played": 9,
@@ -229295,7 +229427,7 @@
           "pointDiff": 160
         },
         {
-          "position": 80,
+          "position": 81,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:82910",
           "teamName": "MANYANET REUS B",
           "played": 9,
@@ -229307,7 +229439,7 @@
           "pointDiff": 143
         },
         {
-          "position": 81,
+          "position": 82,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83987",
           "teamName": "LA VALLALTA BC LILA",
           "played": 10,
@@ -229319,7 +229451,7 @@
           "pointDiff": 373
         },
         {
-          "position": 82,
+          "position": 83,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81567",
           "teamName": "UB MIR A",
           "played": 10,
@@ -229331,7 +229463,7 @@
           "pointDiff": 292
         },
         {
-          "position": 83,
+          "position": 84,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79859",
           "teamName": "SESE A",
           "played": 10,
@@ -229343,7 +229475,7 @@
           "pointDiff": 228
         },
         {
-          "position": 84,
+          "position": 85,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:78971",
           "teamName": "AUTOESCOLA DOEX - E.B. ROSELLA VERMELL",
           "played": 10,
@@ -229355,7 +229487,7 @@
           "pointDiff": 87
         },
         {
-          "position": 85,
+          "position": 86,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81439",
           "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA",
           "played": 11,
@@ -229367,7 +229499,7 @@
           "pointDiff": 229
         },
         {
-          "position": 86,
+          "position": 87,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79639",
           "teamName": "BASKET ALMEDA",
           "played": 11,
@@ -229379,7 +229511,7 @@
           "pointDiff": 223
         },
         {
-          "position": 87,
+          "position": 88,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80127",
           "teamName": "CBS FEM U16",
           "played": 11,
@@ -229391,7 +229523,7 @@
           "pointDiff": 190
         },
         {
-          "position": 88,
+          "position": 89,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:82633",
           "teamName": "CLUB B\u00C0SQUET SANT CELONI",
           "played": 11,
@@ -229403,7 +229535,7 @@
           "pointDiff": 166
         },
         {
-          "position": 89,
+          "position": 90,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78451",
           "teamName": "CB GU\u00CDXOLS HELENA JORNET FINQUES",
           "played": 11,
@@ -229415,7 +229547,7 @@
           "pointDiff": 165
         },
         {
-          "position": 90,
+          "position": 91,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80075",
           "teamName": "S\u0026C LEISURE C.E.B. SANT JORDI BLAU",
           "played": 11,
@@ -229427,7 +229559,7 @@
           "pointDiff": 155
         },
         {
-          "position": 91,
+          "position": 92,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79667",
           "teamName": "TALENOM BOET MATAR\u00D3 2012",
           "played": 11,
@@ -229439,7 +229571,7 @@
           "pointDiff": 151
         },
         {
-          "position": 92,
+          "position": 93,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79252",
           "teamName": "ALAIN AFFLELOU - CB IGUALADA JF U17",
           "played": 11,
@@ -229451,7 +229583,7 @@
           "pointDiff": 151
         },
         {
-          "position": 93,
+          "position": 94,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
           "teamName": "C.B GRUP BARNA A",
           "played": 11,
@@ -229463,7 +229595,7 @@
           "pointDiff": 127
         },
         {
-          "position": 94,
+          "position": 95,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:78422",
           "teamName": "VOLVO DISELAUTO CBT",
           "played": 11,
@@ -229475,7 +229607,7 @@
           "pointDiff": 125
         },
         {
-          "position": 95,
+          "position": 96,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79306",
           "teamName": "UE BARBERA",
           "played": 11,
@@ -229487,7 +229619,7 @@
           "pointDiff": 120
         },
         {
-          "position": 96,
+          "position": 97,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80546",
           "teamName": "AB PREMI\u00C0",
           "played": 11,
@@ -229499,7 +229631,7 @@
           "pointDiff": 115
         },
         {
-          "position": 97,
+          "position": 98,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79312",
           "teamName": "BASQUET ATENEU MONTSERRAT",
           "played": 11,
@@ -229511,7 +229643,7 @@
           "pointDiff": 108
         },
         {
-          "position": 98,
+          "position": 99,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79053",
           "teamName": "RACC ESPLUGUES - CB SANT JUST",
           "played": 11,
@@ -229523,7 +229655,7 @@
           "pointDiff": 104
         },
         {
-          "position": 99,
+          "position": 100,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78829",
           "teamName": "BASQUETPIASABADELL",
           "played": 11,
@@ -229535,7 +229667,7 @@
           "pointDiff": 101
         },
         {
-          "position": 100,
+          "position": 101,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81834",
           "teamName": "C.B. TORREFARRERA",
           "played": 11,
@@ -229547,7 +229679,7 @@
           "pointDiff": 90
         },
         {
-          "position": 101,
+          "position": 102,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78606",
           "teamName": "CE SANT NICOLAU B",
           "played": 11,
@@ -229559,7 +229691,7 @@
           "pointDiff": 57
         },
         {
-          "position": 102,
+          "position": 103,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80459",
           "teamName": "A.E. SANT ANDREU NATZARET-A",
           "played": 12,
@@ -229571,7 +229703,7 @@
           "pointDiff": 211
         },
         {
-          "position": 103,
+          "position": 104,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80181",
           "teamName": "BBC - JOVENTUT BADALONA B",
           "played": 12,
@@ -229583,7 +229715,7 @@
           "pointDiff": 165
         },
         {
-          "position": 104,
+          "position": 105,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80604",
           "teamName": "FC MARTINENC B\u00C0SQUET U19",
           "played": 12,
@@ -229595,7 +229727,7 @@
           "pointDiff": 150
         },
         {
-          "position": 105,
+          "position": 106,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79017",
           "teamName": "CARDONER GROUP - MANRESA CBF U14",
           "played": 12,
@@ -229607,7 +229739,7 @@
           "pointDiff": 135
         },
         {
-          "position": 106,
+          "position": 107,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79944",
           "teamName": "JOVENTUT LES CORTS GROC",
           "played": 12,
@@ -229619,7 +229751,7 @@
           "pointDiff": 134
         },
         {
-          "position": 107,
+          "position": 108,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80989",
           "teamName": "B\u00C0SQUET GIRONA U15",
           "played": 12,
@@ -229631,7 +229763,7 @@
           "pointDiff": 127
         },
         {
-          "position": 108,
+          "position": 109,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82008",
           "teamName": "UNI\u00D3 ESPORTIVA BELLCAIRE",
           "played": 12,
@@ -229643,7 +229775,7 @@
           "pointDiff": 117
         },
         {
-          "position": 109,
+          "position": 110,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79988",
           "teamName": "B\u00C0SQUET SAFA CLAROR B",
           "played": 12,
@@ -229655,7 +229787,7 @@
           "pointDiff": 110
         },
         {
-          "position": 110,
+          "position": 111,
           "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:80314",
           "teamName": "INSTAX - CB GRUP BARNA A",
           "played": 12,
@@ -229667,7 +229799,7 @@
           "pointDiff": 97
         },
         {
-          "position": 111,
+          "position": 112,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78627",
           "teamName": "SANT GERVASI 1R ANY",
           "played": 12,
@@ -229679,7 +229811,7 @@
           "pointDiff": 95
         },
         {
-          "position": 112,
+          "position": 113,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80855",
           "teamName": "U.E.MATAR\u00D3 - CBF",
           "played": 12,
@@ -229691,7 +229823,7 @@
           "pointDiff": 94
         },
         {
-          "position": 113,
+          "position": 114,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79932",
           "teamName": "CENG TALLERS CARDENYES",
           "played": 12,
@@ -229703,7 +229835,7 @@
           "pointDiff": 84
         },
         {
-          "position": 114,
+          "position": 115,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80043",
           "teamName": "U.E. HORTA A",
           "played": 12,
@@ -229715,7 +229847,7 @@
           "pointDiff": 84
         },
         {
-          "position": 115,
+          "position": 116,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79217",
           "teamName": "CB IPSI A",
           "played": 12,
@@ -229727,7 +229859,7 @@
           "pointDiff": 79
         },
         {
-          "position": 116,
+          "position": 117,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:81002",
           "teamName": "B\u00C0SQUET GIRONA U13",
           "played": 12,
@@ -229739,7 +229871,7 @@
           "pointDiff": 79
         },
         {
-          "position": 117,
+          "position": 118,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79804",
           "teamName": "ASSOLIM - LLU\u00CFSOS DE GR\u00C0CIA  A",
           "played": 12,
@@ -229751,7 +229883,7 @@
           "pointDiff": 75
         },
         {
-          "position": 118,
+          "position": 119,
           "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79925",
           "teamName": "CUD\u00D3S CB BALAGUER A",
           "played": 12,
@@ -229763,7 +229895,7 @@
           "pointDiff": 49
         },
         {
-          "position": 119,
+          "position": 120,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78413",
           "teamName": "CB VALLS CLINICA DENTAL CLOFENT",
           "played": 12,
@@ -229775,7 +229907,7 @@
           "pointDiff": 7
         },
         {
-          "position": 120,
+          "position": 121,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80339",
           "teamName": "CB. CORNELL\u00C0 A",
           "played": 13,
@@ -229787,7 +229919,7 @@
           "pointDiff": 103
         },
         {
-          "position": 121,
+          "position": 122,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80201",
           "teamName": "UE CELLERA AMER LES PLANES HIPRA",
           "played": 13,
@@ -229799,7 +229931,7 @@
           "pointDiff": 55
         },
         {
-          "position": 122,
+          "position": 123,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79420",
           "teamName": "RIO LOGISTIC CB LLI\u00C7\u00C0 D\u2019AMUNT A",
           "played": 13,
@@ -229811,7 +229943,7 @@
           "pointDiff": 46
         },
         {
-          "position": 123,
+          "position": 124,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79811",
           "teamName": "SOL GIRON\u00C8S BISBAL B\u00C0SQUET",
           "played": 13,
@@ -229823,7 +229955,7 @@
           "pointDiff": 29
         },
         {
-          "position": 124,
+          "position": 125,
           "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79023",
           "teamName": "UNIHABIT - MANRESA CBF U18",
           "played": 14,
@@ -229835,7 +229967,7 @@
           "pointDiff": 55
         },
         {
-          "position": 125,
+          "position": 126,
           "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79200",
           "teamName": "SABADELL BQ VALL\u00C8S U18F",
           "played": 16,
@@ -229847,7 +229979,7 @@
           "pointDiff": 20
         },
         {
-          "position": 126,
+          "position": 127,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85973",
           "teamName": "CB NAV\u00C0S B",
           "played": 8,
@@ -229859,7 +229991,7 @@
           "pointDiff": 270
         },
         {
-          "position": 127,
+          "position": 128,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85230",
           "teamName": "QBASKET SANT CUGAT NEGRE",
           "played": 8,
@@ -229871,7 +230003,7 @@
           "pointDiff": 207
         },
         {
-          "position": 128,
+          "position": 129,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
           "teamName": "C.B.VILASSAR DE MAR 1984",
           "played": 9,
@@ -229883,7 +230015,7 @@
           "pointDiff": 425
         },
         {
-          "position": 129,
+          "position": 130,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
           "teamName": "VEDRUNA GR\u00C0CIA VERD",
           "played": 9,
@@ -229895,7 +230027,7 @@
           "pointDiff": 351
         },
         {
-          "position": 130,
+          "position": 131,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:82039",
           "teamName": "C.E.THAU",
           "played": 9,
@@ -229907,7 +230039,7 @@
           "pointDiff": 226
         },
         {
-          "position": 131,
+          "position": 132,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81896",
           "teamName": "PUJOL MOLLERUSSA B",
           "played": 9,
@@ -229919,7 +230051,7 @@
           "pointDiff": 188
         },
         {
-          "position": 132,
+          "position": 133,
           "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82329",
           "teamName": "UE SANT CUGAT - OCCIDENT 2013",
           "played": 9,
@@ -229931,7 +230063,7 @@
           "pointDiff": 156
         },
         {
-          "position": 133,
+          "position": 134,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:79416",
           "teamName": "CREU ALTA SABADELL 1",
           "played": 9,
@@ -229943,7 +230075,7 @@
           "pointDiff": 153
         },
         {
-          "position": 134,
+          "position": 135,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
           "teamName": "BASQUET NEUS",
           "played": 9,
@@ -229955,7 +230087,7 @@
           "pointDiff": 145
         },
         {
-          "position": 135,
+          "position": 136,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
           "teamName": "EL MASNOU BASQUETBOL",
           "played": 9,
@@ -229967,7 +230099,7 @@
           "pointDiff": 114
         },
         {
-          "position": 136,
+          "position": 137,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79503",
           "teamName": "PAIDOS-ASFE U10F VERD",
           "played": 10,
@@ -229979,7 +230111,7 @@
           "pointDiff": 283
         },
         {
-          "position": 137,
+          "position": 138,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80754",
           "teamName": "SANT QUIRZE B\u00C0SQUET CLUB B",
           "played": 10,
@@ -229991,7 +230123,7 @@
           "pointDiff": 187
         },
         {
-          "position": 138,
+          "position": 139,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79219",
           "teamName": "ESCOLA IPSI 12",
           "played": 10,
@@ -230003,7 +230135,7 @@
           "pointDiff": 171
         },
         {
-          "position": 139,
+          "position": 140,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81426",
           "teamName": "CB JOVENTUT CASTELLDEFELS",
           "played": 10,
@@ -230015,7 +230147,7 @@
           "pointDiff": 158
         },
         {
-          "position": 140,
+          "position": 141,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79398",
           "teamName": "CREU ALTA SABADELL",
           "played": 10,
@@ -230027,7 +230159,7 @@
           "pointDiff": 152
         },
         {
-          "position": 141,
+          "position": 142,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79438",
           "teamName": "BASQUET SANT PERE B",
           "played": 10,
@@ -230039,7 +230171,7 @@
           "pointDiff": 150
         },
         {
-          "position": 142,
+          "position": 143,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
           "teamName": "VILAB\u00C0SQUET VILADECANS PMF BLANC",
           "played": 10,
@@ -230051,7 +230183,7 @@
           "pointDiff": 147
         },
         {
-          "position": 143,
+          "position": 144,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870",
           "teamName": "SESE C",
           "played": 10,
@@ -230063,7 +230195,7 @@
           "pointDiff": 141
         },
         {
-          "position": 144,
+          "position": 145,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:81129",
           "teamName": "CBU LLORET RECREATIVOS LLORET VERD",
           "played": 10,
@@ -230075,7 +230207,7 @@
           "pointDiff": 108
         },
         {
-          "position": 145,
+          "position": 146,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80844",
           "teamName": "CB VALLS SALA RED STAR",
           "played": 10,
@@ -230087,7 +230219,7 @@
           "pointDiff": 106
         },
         {
-          "position": 146,
+          "position": 147,
           "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81030",
           "teamName": "JET TERRASSA U13 BLAU",
           "played": 10,
@@ -230099,7 +230231,7 @@
           "pointDiff": 106
         },
         {
-          "position": 147,
+          "position": 148,
           "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81179",
           "teamName": "C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN",
           "played": 10,
@@ -230111,7 +230243,7 @@
           "pointDiff": 101
         },
         {
-          "position": 148,
+          "position": 149,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81266",
           "teamName": "UE BARBERA",
           "played": 10,
@@ -230123,7 +230255,7 @@
           "pointDiff": 100
         },
         {
-          "position": 149,
+          "position": 150,
           "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79305",
           "teamName": "BARICENTRO BARBERA",
           "played": 10,
@@ -230135,7 +230267,7 @@
           "pointDiff": 58
         },
         {
-          "position": 150,
+          "position": 151,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80772",
           "teamName": "ESCOLAPIS SARRI\u00C0",
           "played": 11,
@@ -230147,7 +230279,7 @@
           "pointDiff": 271
         },
         {
-          "position": 151,
+          "position": 152,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:80123",
           "teamName": "CBS FEM  U14",
           "played": 11,
@@ -230159,7 +230291,7 @@
           "pointDiff": 187
         },
         {
-          "position": 152,
+          "position": 153,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80479",
           "teamName": "C.B.COLL",
           "played": 11,
@@ -230171,7 +230303,7 @@
           "pointDiff": 132
         },
         {
-          "position": 153,
+          "position": 154,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78443",
           "teamName": "CB TARRAGONA",
           "played": 11,
@@ -230183,7 +230315,7 @@
           "pointDiff": 100
         },
         {
-          "position": 154,
+          "position": 155,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83373",
           "teamName": "CB LA GARRIGA",
           "played": 11,
@@ -230195,7 +230327,7 @@
           "pointDiff": 97
         },
         {
-          "position": 155,
+          "position": 156,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80223",
           "teamName": "UE SANT CUGAT - OCCIDENT",
           "played": 11,
@@ -230207,7 +230339,7 @@
           "pointDiff": 95
         },
         {
-          "position": 156,
+          "position": 157,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78860",
           "teamName": "NAYOX FOR\u00C7A LLEIDA B",
           "played": 11,
@@ -230219,7 +230351,7 @@
           "pointDiff": 94
         },
         {
-          "position": 157,
+          "position": 158,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78650",
           "teamName": "C.E. XAMBA NEGRE",
           "played": 11,
@@ -230231,7 +230363,7 @@
           "pointDiff": 92
         },
         {
-          "position": 158,
+          "position": 159,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79227",
           "teamName": "CB IGUALADA CF U15",
           "played": 11,
@@ -230243,7 +230375,7 @@
           "pointDiff": 88
         },
         {
-          "position": 159,
+          "position": 160,
           "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82113",
           "teamName": "U.E. CLARET B",
           "played": 11,
@@ -230255,7 +230387,7 @@
           "pointDiff": 88
         },
         {
-          "position": 160,
+          "position": 161,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80167",
           "teamName": "JOVENTUT BADALONA B",
           "played": 11,
@@ -230267,7 +230399,7 @@
           "pointDiff": 86
         },
         {
-          "position": 161,
+          "position": 162,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80817",
           "teamName": "BASQUET CANYELLES",
           "played": 11,
@@ -230279,7 +230411,7 @@
           "pointDiff": 79
         },
         {
-          "position": 162,
+          "position": 163,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80995",
           "teamName": "B\u00C0SQUET GIRONA U17",
           "played": 11,
@@ -230291,7 +230423,7 @@
           "pointDiff": 78
         },
         {
-          "position": 163,
+          "position": 164,
           "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79806",
           "teamName": "FORMULA SR -LLU\u00CFSOS DE GRACIA A",
           "played": 11,
@@ -230303,7 +230435,7 @@
           "pointDiff": 74
         },
         {
-          "position": 164,
+          "position": 165,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78564",
           "teamName": "CB BANYOLES A",
           "played": 11,
@@ -230315,7 +230447,7 @@
           "pointDiff": 72
         },
         {
-          "position": 165,
+          "position": 166,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80062",
           "teamName": "U.E. GAUDI-FORUS SARDENYA",
           "played": 11,
@@ -230327,7 +230459,7 @@
           "pointDiff": 65
         },
         {
-          "position": 166,
+          "position": 167,
           "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78818",
           "teamName": "CB GRANOLLERS 2",
           "played": 11,
@@ -230339,7 +230471,7 @@
           "pointDiff": 60
         },
         {
-          "position": 167,
+          "position": 168,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80691",
           "teamName": "EL MASNOU BASQUETBOL",
           "played": 11,
@@ -230351,7 +230483,7 @@
           "pointDiff": 58
         },
         {
-          "position": 168,
+          "position": 169,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80344",
           "teamName": "CB. CORNELLA",
           "played": 11,
@@ -230363,7 +230495,7 @@
           "pointDiff": 51
         },
         {
-          "position": 169,
+          "position": 170,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80530",
           "teamName": "AE MINGUELLA B - PURE CUISINE",
           "played": 11,
@@ -230375,7 +230507,7 @@
           "pointDiff": 50
         },
         {
-          "position": 170,
+          "position": 171,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80326",
           "teamName": "CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A",
           "played": 11,
@@ -230387,7 +230519,7 @@
           "pointDiff": 34
         },
         {
-          "position": 171,
+          "position": 172,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79515",
           "teamName": "PETROPINTO ASFE U18 VERD",
           "played": 11,
@@ -230399,7 +230531,7 @@
           "pointDiff": 34
         },
         {
-          "position": 172,
+          "position": 173,
           "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79751",
           "teamName": "C\u00C0MPING BIANYA ROSER A",
           "played": 11,
@@ -230411,7 +230543,7 @@
           "pointDiff": 29
         },
         {
-          "position": 173,
+          "position": 174,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80504",
           "teamName": "CLUB B\u00C0SQUET ALISOS",
           "played": 11,
@@ -230421,18 +230553,6 @@
           "pointsFor": 460,
           "pointsAgainst": 434,
           "pointDiff": 26
-        },
-        {
-          "position": 174,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-          "teamName": "JAC SANTS BARCELONA U10",
-          "played": 12,
-          "wins": 8,
-          "losses": 4,
-          "ties": 0,
-          "pointsFor": 668,
-          "pointsAgainst": 426,
-          "pointDiff": 242
         },
         {
           "position": 175,
@@ -232332,18 +232452,6 @@
         },
         {
           "position": 333,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-          "teamName": "DOMINIQUES BARCELONA NEGRE",
-          "played": 10,
-          "wins": 6,
-          "losses": 4,
-          "ties": 0,
-          "pointsFor": 245,
-          "pointsAgainst": 260,
-          "pointDiff": -15
-        },
-        {
-          "position": 334,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80719",
           "teamName": "CB CASTELLBISBAL B",
           "played": 10,
@@ -232355,7 +232463,7 @@
           "pointDiff": -28
         },
         {
-          "position": 335,
+          "position": 334,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:82686",
           "teamName": "ELS BESSONS - B\u00C0SQUET RIBES",
           "played": 11,
@@ -232367,7 +232475,7 @@
           "pointDiff": 153
         },
         {
-          "position": 336,
+          "position": 335,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80973",
           "teamName": "CB BLANES B",
           "played": 11,
@@ -232379,7 +232487,7 @@
           "pointDiff": 94
         },
         {
-          "position": 337,
+          "position": 336,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80763",
           "teamName": "QBASKET SANT CUGAT 1",
           "played": 11,
@@ -232391,7 +232499,7 @@
           "pointDiff": 90
         },
         {
-          "position": 338,
+          "position": 337,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78784",
           "teamName": "SE LA SALLE BONANOVA",
           "played": 11,
@@ -232403,7 +232511,7 @@
           "pointDiff": 86
         },
         {
-          "position": 339,
+          "position": 338,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79736",
           "teamName": "CB MATADEPERA VERD",
           "played": 11,
@@ -232415,7 +232523,7 @@
           "pointDiff": 84
         },
         {
-          "position": 340,
+          "position": 339,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81851",
           "teamName": "B\u00C0SQUET NOU BARRIS",
           "played": 11,
@@ -232427,7 +232535,7 @@
           "pointDiff": 72
         },
         {
-          "position": 341,
+          "position": 340,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78984",
           "teamName": "VIROLAI ROSA",
           "played": 11,
@@ -232439,7 +232547,7 @@
           "pointDiff": 67
         },
         {
-          "position": 342,
+          "position": 341,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79183",
           "teamName": "CNB VILANOVA AKO SF1",
           "played": 11,
@@ -232451,7 +232559,7 @@
           "pointDiff": 61
         },
         {
-          "position": 343,
+          "position": 342,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269",
           "teamName": "CLUB NATACI\u00D3 SABADELL A",
           "played": 11,
@@ -232463,7 +232571,7 @@
           "pointDiff": 41
         },
         {
-          "position": 344,
+          "position": 343,
           "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79861",
           "teamName": "SESE A",
           "played": 11,
@@ -232475,7 +232583,7 @@
           "pointDiff": 39
         },
         {
-          "position": 345,
+          "position": 344,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78898",
           "teamName": "CB TONA - TRANSMONTSENY S.L.",
           "played": 11,
@@ -232487,7 +232595,7 @@
           "pointDiff": 36
         },
         {
-          "position": 346,
+          "position": 345,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80909",
           "teamName": "VEDRUNA GR\u00C0CIA B",
           "played": 11,
@@ -232499,7 +232607,7 @@
           "pointDiff": 33
         },
         {
-          "position": 347,
+          "position": 346,
           "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80159",
           "teamName": "CB RIPOLLET A",
           "played": 11,
@@ -232511,7 +232619,7 @@
           "pointDiff": 23
         },
         {
-          "position": 348,
+          "position": 347,
           "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79263",
           "teamName": "IBERSOFAS CB ARGENTONA",
           "played": 11,
@@ -232523,7 +232631,7 @@
           "pointDiff": 20
         },
         {
-          "position": 349,
+          "position": 348,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80220",
           "teamName": "UE SANT CUGAT - OCCIDENT B",
           "played": 11,
@@ -232535,7 +232643,7 @@
           "pointDiff": 19
         },
         {
-          "position": 350,
+          "position": 349,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78938",
           "teamName": "CE SAGRAT COR DIPUTACIO",
           "played": 11,
@@ -232547,7 +232655,7 @@
           "pointDiff": 8
         },
         {
-          "position": 351,
+          "position": 350,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79363",
           "teamName": "NOU B\u00C0SQUET OLESA B",
           "played": 11,
@@ -232559,7 +232667,7 @@
           "pointDiff": 5
         },
         {
-          "position": 352,
+          "position": 351,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80347",
           "teamName": "CB. CORNELL\u00C0",
           "played": 11,
@@ -232571,7 +232679,7 @@
           "pointDiff": 3
         },
         {
-          "position": 353,
+          "position": 352,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:80886",
           "teamName": "U.E.MATAR\u00D3 - IAF",
           "played": 11,
@@ -232583,7 +232691,7 @@
           "pointDiff": 0
         },
         {
-          "position": 354,
+          "position": 353,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749",
           "teamName": "C\u00C0MPING BIANYA ROSER VERMELL",
           "played": 11,
@@ -232595,7 +232703,7 @@
           "pointDiff": 0
         },
         {
-          "position": 355,
+          "position": 354,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81725",
           "teamName": "CB ABRERA",
           "played": 11,
@@ -232607,7 +232715,7 @@
           "pointDiff": -2
         },
         {
-          "position": 356,
+          "position": 355,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79860",
           "teamName": "SESE A",
           "played": 11,
@@ -232619,7 +232727,7 @@
           "pointDiff": -9
         },
         {
-          "position": 357,
+          "position": 356,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80811",
           "teamName": "ODENA CLUB BASQUET",
           "played": 11,
@@ -232631,7 +232739,7 @@
           "pointDiff": -10
         },
         {
-          "position": 358,
+          "position": 357,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79743",
           "teamName": "DISHELEC 65 VILAB\u00C0SQUET VILADECANS JF",
           "played": 11,
@@ -232643,7 +232751,7 @@
           "pointDiff": -12
         },
         {
-          "position": 359,
+          "position": 358,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79271",
           "teamName": "CLUB BASQUET ARGENTONA GROC",
           "played": 11,
@@ -232655,7 +232763,7 @@
           "pointDiff": -13
         },
         {
-          "position": 360,
+          "position": 359,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79524",
           "teamName": "FEMEN\u00CD OSONA NEGRE- OVA PROJECTS",
           "played": 11,
@@ -232667,7 +232775,7 @@
           "pointDiff": -18
         },
         {
-          "position": 361,
+          "position": 360,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80764",
           "teamName": "QBASKET SANT CUGAT",
           "played": 11,
@@ -232679,7 +232787,7 @@
           "pointDiff": -19
         },
         {
-          "position": 362,
+          "position": 361,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79250",
           "teamName": "CB IGUALADA IF U13 A",
           "played": 11,
@@ -232691,7 +232799,7 @@
           "pointDiff": -19
         },
         {
-          "position": 363,
+          "position": 362,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78412",
           "teamName": "CB VALLS SOLIDITY",
           "played": 11,
@@ -232703,7 +232811,7 @@
           "pointDiff": -21
         },
         {
-          "position": 364,
+          "position": 363,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80705",
           "teamName": "CB ART\u00C9S",
           "played": 11,
@@ -232715,7 +232823,7 @@
           "pointDiff": -24
         },
         {
-          "position": 365,
+          "position": 364,
           "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:80315",
           "teamName": "C.B GRUP BARNA A",
           "played": 11,
@@ -232725,6 +232833,18 @@
           "pointsFor": 713,
           "pointsAgainst": 738,
           "pointDiff": -25
+        },
+        {
+          "position": 365,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+          "teamName": "DOMINIQUES BARCELONA NEGRE",
+          "played": 11,
+          "wins": 6,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 263,
+          "pointsAgainst": 305,
+          "pointDiff": -42
         },
         {
           "position": 366,
@@ -232992,18 +233112,6 @@
         },
         {
           "position": 388,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-          "played": 12,
-          "wins": 6,
-          "losses": 6,
-          "ties": 0,
-          "pointsFor": 312,
-          "pointsAgainst": 559,
-          "pointDiff": -247
-        },
-        {
-          "position": 389,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79152",
           "teamName": "C.B. PRAT - MONTIBELLO A",
           "played": 13,
@@ -233015,7 +233123,7 @@
           "pointDiff": -10
         },
         {
-          "position": 390,
+          "position": 389,
           "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79642",
           "teamName": "BASKET ALMEDA",
           "played": 14,
@@ -233025,6 +233133,18 @@
           "pointsFor": 797,
           "pointsAgainst": 774,
           "pointDiff": 23
+        },
+        {
+          "position": 390,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+          "played": 14,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 359,
+          "pointsAgainst": 652,
+          "pointDiff": -293
         },
         {
           "position": 391,
@@ -236184,18 +236304,6 @@
         },
         {
           "position": 654,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-          "teamName": "CB MANYANET LES CORTS GROC",
-          "played": 10,
-          "wins": 2,
-          "losses": 8,
-          "ties": 0,
-          "pointsFor": 212,
-          "pointsAgainst": 423,
-          "pointDiff": -211
-        },
-        {
-          "position": 655,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78930",
           "teamName": "CB MARTORELL B",
           "played": 10,
@@ -236207,7 +236315,7 @@
           "pointDiff": -219
         },
         {
-          "position": 656,
+          "position": 655,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83217",
           "teamName": "FEMENI MARESME 3 VILES - PMF",
           "played": 10,
@@ -236219,7 +236327,7 @@
           "pointDiff": -238
         },
         {
-          "position": 657,
+          "position": 656,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78653",
           "teamName": "C.E. XAMBA NEGRE",
           "played": 10,
@@ -236231,7 +236339,7 @@
           "pointDiff": -277
         },
         {
-          "position": 658,
+          "position": 657,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84151",
           "teamName": "CB LES FRANQUESES",
           "played": 10,
@@ -236243,7 +236351,7 @@
           "pointDiff": -402
         },
         {
-          "position": 659,
+          "position": 658,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80105",
           "teamName": "CB SANT GREGORI VALL DE LL\u00C9MENA",
           "played": 11,
@@ -236255,7 +236363,7 @@
           "pointDiff": -51
         },
         {
-          "position": 660,
+          "position": 659,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81262",
           "teamName": "CB SOLSONA",
           "played": 11,
@@ -236267,7 +236375,7 @@
           "pointDiff": -56
         },
         {
-          "position": 661,
+          "position": 660,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79978",
           "teamName": "U15 JOVENTUT LES CORTS",
           "played": 11,
@@ -236279,7 +236387,7 @@
           "pointDiff": -69
         },
         {
-          "position": 662,
+          "position": 661,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80572",
           "teamName": "REUS DEPORTIU BLANC",
           "played": 11,
@@ -236291,7 +236399,7 @@
           "pointDiff": -71
         },
         {
-          "position": 663,
+          "position": 662,
           "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79698",
           "teamName": "CLUB NATACI\u00D3 TERRASSA A",
           "played": 11,
@@ -236303,7 +236411,7 @@
           "pointDiff": -84
         },
         {
-          "position": 664,
+          "position": 663,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78749",
           "teamName": "JOVENTUT BADALONA 2",
           "played": 11,
@@ -236315,7 +236423,7 @@
           "pointDiff": -84
         },
         {
-          "position": 665,
+          "position": 664,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80627",
           "teamName": "REUS PLOMS SALLE NEGRE",
           "played": 11,
@@ -236327,7 +236435,7 @@
           "pointDiff": -89
         },
         {
-          "position": 666,
+          "position": 665,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80877",
           "teamName": "U.E.MATAR\u00D3 - J1F",
           "played": 11,
@@ -236339,7 +236447,7 @@
           "pointDiff": -90
         },
         {
-          "position": 667,
+          "position": 666,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79589",
           "teamName": "C.B. CIC B NUTRABETTER",
           "played": 11,
@@ -236351,7 +236459,7 @@
           "pointDiff": -96
         },
         {
-          "position": 668,
+          "position": 667,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80716",
           "teamName": "CB CASTELLBISBAL A",
           "played": 11,
@@ -236363,7 +236471,7 @@
           "pointDiff": -102
         },
         {
-          "position": 669,
+          "position": 668,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79973",
           "teamName": "U17 JOVENTUT LES CORTS",
           "played": 11,
@@ -236375,7 +236483,7 @@
           "pointDiff": -108
         },
         {
-          "position": 670,
+          "position": 669,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79921",
           "teamName": "PRISCO-L\u0027ESCALA",
           "played": 11,
@@ -236387,7 +236495,7 @@
           "pointDiff": -120
         },
         {
-          "position": 671,
+          "position": 670,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80003",
           "teamName": "CB VILADECANS",
           "played": 11,
@@ -236399,7 +236507,7 @@
           "pointDiff": -126
         },
         {
-          "position": 672,
+          "position": 671,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81367",
           "teamName": "B\u00C0SQUET PRATENC 2 - PRAT ACTIU",
           "played": 11,
@@ -236411,7 +236519,7 @@
           "pointDiff": -131
         },
         {
-          "position": 673,
+          "position": 672,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79112",
           "teamName": "CB VILABLAREIX",
           "played": 11,
@@ -236423,7 +236531,7 @@
           "pointDiff": -133
         },
         {
-          "position": 674,
+          "position": 673,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:83447",
           "teamName": "B\u00C0SQUET VILAFANT",
           "played": 11,
@@ -236435,7 +236543,7 @@
           "pointDiff": -143
         },
         {
-          "position": 675,
+          "position": 674,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78456",
           "teamName": "EL RAC\u00D3 DE LA BODEGA - AECAM MALGRAT",
           "played": 11,
@@ -236447,7 +236555,7 @@
           "pointDiff": -145
         },
         {
-          "position": 676,
+          "position": 675,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79197",
           "teamName": "SABADELL BQ VALL\u00C8S U14F",
           "played": 11,
@@ -236459,7 +236567,7 @@
           "pointDiff": -162
         },
         {
-          "position": 677,
+          "position": 676,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83267",
           "teamName": "FACHADAS MARTOS JOVENTUT SANT VICEN\u00C7",
           "played": 11,
@@ -236471,7 +236579,7 @@
           "pointDiff": -165
         },
         {
-          "position": 678,
+          "position": 677,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79486",
           "teamName": "UCAP SCOOTFAST U15",
           "played": 11,
@@ -236483,7 +236591,7 @@
           "pointDiff": -171
         },
         {
-          "position": 679,
+          "position": 678,
           "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:80938",
           "teamName": "C.B. PRAT - MONTIBELLO",
           "played": 11,
@@ -236495,7 +236603,7 @@
           "pointDiff": -195
         },
         {
-          "position": 680,
+          "position": 679,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80828",
           "teamName": "CAMPING LA LLOSA - C.B. CAMBRILS A",
           "played": 11,
@@ -236507,7 +236615,7 @@
           "pointDiff": -214
         },
         {
-          "position": 681,
+          "position": 680,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79355",
           "teamName": "CLUB BASQUET VALL DEL TERRI-ROSA D\u0027ABRIL",
           "played": 11,
@@ -236519,7 +236627,7 @@
           "pointDiff": -256
         },
         {
-          "position": 682,
+          "position": 681,
           "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79376",
           "teamName": "PROMOVIATGES CBF CERDANYOLA B",
           "played": 12,
@@ -236531,7 +236639,7 @@
           "pointDiff": -108
         },
         {
-          "position": 683,
+          "position": 682,
           "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79924",
           "teamName": "BASQUET PORQUERES",
           "played": 12,
@@ -236543,7 +236651,7 @@
           "pointDiff": -109
         },
         {
-          "position": 684,
+          "position": 683,
           "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79121",
           "teamName": "CB LA VALL D\u0027EN BAS 1",
           "played": 12,
@@ -236555,7 +236663,7 @@
           "pointDiff": -114
         },
         {
-          "position": 685,
+          "position": 684,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78519",
           "teamName": "CB CALELLA",
           "played": 12,
@@ -236567,7 +236675,7 @@
           "pointDiff": -119
         },
         {
-          "position": 686,
+          "position": 685,
           "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80699",
           "teamName": "PUJOL MOLLERUSSA SOLUXIONS",
           "played": 12,
@@ -236579,7 +236687,7 @@
           "pointDiff": -128
         },
         {
-          "position": 687,
+          "position": 686,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79701",
           "teamName": "CLUB NATACI\u00D3 TERRASSA B",
           "played": 12,
@@ -236591,7 +236699,7 @@
           "pointDiff": -134
         },
         {
-          "position": 688,
+          "position": 687,
           "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80468",
           "teamName": "A.E. SANT ANDREU NATZARET-B",
           "played": 12,
@@ -236603,7 +236711,7 @@
           "pointDiff": -142
         },
         {
-          "position": 689,
+          "position": 688,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79379",
           "teamName": "PROMOVIATGES CBF CERDANYOLA U16",
           "played": 12,
@@ -236615,7 +236723,7 @@
           "pointDiff": -161
         },
         {
-          "position": 690,
+          "position": 689,
           "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79530",
           "teamName": "FEMEN\u00CD OSONA BLANC- OVA PROJECTS",
           "played": 12,
@@ -236627,7 +236735,7 @@
           "pointDiff": -167
         },
         {
-          "position": 691,
+          "position": 690,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79548",
           "teamName": "C.E. MARISTES A",
           "played": 12,
@@ -236639,7 +236747,7 @@
           "pointDiff": -191
         },
         {
-          "position": 692,
+          "position": 691,
           "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82380",
           "teamName": "C.B. CALAF",
           "played": 12,
@@ -236651,7 +236759,7 @@
           "pointDiff": -197
         },
         {
-          "position": 693,
+          "position": 692,
           "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79343",
           "teamName": "TGN B\u00C0SQUET 12A",
           "played": 12,
@@ -236663,7 +236771,7 @@
           "pointDiff": -201
         },
         {
-          "position": 694,
+          "position": 693,
           "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79349",
           "teamName": "TGN B\u00C0SQUET 11A",
           "played": 12,
@@ -236675,7 +236783,7 @@
           "pointDiff": -225
         },
         {
-          "position": 695,
+          "position": 694,
           "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78589",
           "teamName": "AQUALIS JET TERRASSA U13",
           "played": 12,
@@ -236685,6 +236793,18 @@
           "pointsFor": 529,
           "pointsAgainst": 793,
           "pointDiff": -264
+        },
+        {
+          "position": 695,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+          "teamName": "CB MANYANET LES CORTS GROC",
+          "played": 12,
+          "wins": 2,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 233,
+          "pointsAgainst": 572,
+          "pointDiff": -339
         },
         {
           "position": 696,
@@ -239933,6 +240053,28 @@
       "avgFouls": 3
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:93430e38-8070-413a-8b9e-70524f7266d0:6",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "teamIdIntern": 456900,
+      "teamIdExtern": 80889,
+      "teamName": "U.E.MATAR\u00D3 - PRBF",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "93430e38-8070-413a-8b9e-70524f7266d0",
+      "playerActorId": 7494727,
+      "playerIdentityKey": "UUID:93430e38-8070-413a-8b9e-70524f7266d0",
+      "playerName": "AYESIRA DIALLO DIALLO",
+      "shirtNumber": "6",
+      "games": 19,
+      "minutes": 570,
+      "points": 329,
+      "avgPoints": 17.31578947368421,
+      "valuation": 248,
+      "avgValuation": 13.052631578947368,
+      "fouls": 48,
+      "avgFouls": 2.526315789473684
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79661:UUID:003c6840-98d1-11e9-a2a5-0216824770c2:32",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79661",
       "teamIdIntern": 467545,
@@ -240307,28 +240449,6 @@
       "avgFouls": 2.730769230769231
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:93430e38-8070-413a-8b9e-70524f7266d0:6",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-      "teamIdIntern": 456900,
-      "teamIdExtern": 80889,
-      "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "93430e38-8070-413a-8b9e-70524f7266d0",
-      "playerActorId": 7494727,
-      "playerIdentityKey": "UUID:93430e38-8070-413a-8b9e-70524f7266d0",
-      "playerName": "AYESIRA DIALLO DIALLO",
-      "shirtNumber": "6",
-      "games": 18,
-      "minutes": 539,
-      "points": 318,
-      "avgPoints": 17.666666666666668,
-      "valuation": 246,
-      "avgValuation": 13.666666666666666,
-      "fouls": 44,
-      "avgFouls": 2.4444444444444446
-    },
-    {
       "key": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79824:UUID:001d5577-98d1-11e9-a2a5-0216824770c2:53",
       "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79824",
       "teamIdIntern": 453322,
@@ -240547,6 +240667,28 @@
       "avgValuation": 17.533333333333335,
       "fouls": 31,
       "avgFouls": 2.066666666666667
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:3158310a-da15-43bd-93ea-25a647df6105:17",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "3158310a-da15-43bd-93ea-25a647df6105",
+      "playerActorId": 7444844,
+      "playerIdentityKey": "UUID:3158310a-da15-43bd-93ea-25a647df6105",
+      "playerName": "LAIA DEU ORIOL",
+      "shirtNumber": "17",
+      "games": 24,
+      "minutes": 598,
+      "points": 312,
+      "avgPoints": 13,
+      "valuation": 237,
+      "avgValuation": 9.875,
+      "fouls": 46,
+      "avgFouls": 1.9166666666666667
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79289:UUID:00c09390-98d1-11e9-a2a5-0216824770c2:12",
@@ -242001,28 +242143,6 @@
       "avgFouls": 2.5652173913043477
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:3158310a-da15-43bd-93ea-25a647df6105:17",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "3158310a-da15-43bd-93ea-25a647df6105",
-      "playerActorId": 7444844,
-      "playerIdentityKey": "UUID:3158310a-da15-43bd-93ea-25a647df6105",
-      "playerName": "LAIA DEU ORIOL",
-      "shirtNumber": "17",
-      "games": 21,
-      "minutes": 526,
-      "points": 287,
-      "avgPoints": 13.666666666666666,
-      "valuation": 225,
-      "avgValuation": 10.714285714285714,
-      "fouls": 41,
-      "avgFouls": 1.9523809523809523
-    },
-    {
       "key": "2025-2026::SUPER COPA FEMENINA::TEAM:78825:UUID:fd983f38-98d0-11e9-a2a5-0216824770c2:7",
       "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:78825",
       "teamIdIntern": 492703,
@@ -242153,6 +242273,28 @@
       "avgValuation": 7.625,
       "fouls": 46,
       "avgFouls": 1.9166666666666667
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05:6",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "2bf3e398-3671-41f9-9eab-6af7a9387e05",
+      "playerActorId": 7444854,
+      "playerIdentityKey": "UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05",
+      "playerName": "MARIONA SOLEY BODRO",
+      "shirtNumber": "6",
+      "games": 24,
+      "minutes": 596,
+      "points": 286,
+      "avgPoints": 11.916666666666666,
+      "valuation": 218,
+      "avgValuation": 9.083333333333334,
+      "fouls": 43,
+      "avgFouls": 1.7916666666666667
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78654:UUID:5ae9f101-3d49-4aa5-a3e3-da7f781f15ac:8",
@@ -244729,6 +244871,28 @@
       "avgFouls": 2.269230769230769
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:08857f32-77dd-4c9a-acd9-c1695f704d05:26",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "08857f32-77dd-4c9a-acd9-c1695f704d05",
+      "playerActorId": 7444845,
+      "playerIdentityKey": "UUID:08857f32-77dd-4c9a-acd9-c1695f704d05",
+      "playerName": "EMMA CROSAS LARRA\u00D1AGA",
+      "shirtNumber": "26",
+      "games": 22,
+      "minutes": 528,
+      "points": 261,
+      "avgPoints": 11.863636363636363,
+      "valuation": 214,
+      "avgValuation": 9.727272727272727,
+      "fouls": 16,
+      "avgFouls": 0.7272727272727273
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80699:UUID:01368157-98d1-11e9-a2a5-0216824770c2:23",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80699",
       "teamIdIntern": 451290,
@@ -247149,28 +247313,6 @@
       "avgFouls": 1.1818181818181819
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:08857f32-77dd-4c9a-acd9-c1695f704d05:26",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "08857f32-77dd-4c9a-acd9-c1695f704d05",
-      "playerActorId": 7444845,
-      "playerIdentityKey": "UUID:08857f32-77dd-4c9a-acd9-c1695f704d05",
-      "playerName": "EMMA CROSAS LARRA\u00D1AGA",
-      "shirtNumber": "26",
-      "games": 19,
-      "minutes": 462,
-      "points": 245,
-      "avgPoints": 12.894736842105264,
-      "valuation": 209,
-      "avgValuation": 11,
-      "fouls": 14,
-      "avgFouls": 0.7368421052631579
-    },
-    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79738:UUID:fbc15928-98d0-11e9-a2a5-0216824770c2:5",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79738",
       "teamIdIntern": 451865,
@@ -247301,28 +247443,6 @@
       "avgValuation": 6.925925925925926,
       "fouls": 43,
       "avgFouls": 1.5925925925925926
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05:6",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "2bf3e398-3671-41f9-9eab-6af7a9387e05",
-      "playerActorId": 7444854,
-      "playerIdentityKey": "UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05",
-      "playerName": "MARIONA SOLEY BODRO",
-      "shirtNumber": "6",
-      "games": 21,
-      "minutes": 524,
-      "points": 245,
-      "avgPoints": 11.666666666666666,
-      "valuation": 185,
-      "avgValuation": 8.80952380952381,
-      "fouls": 38,
-      "avgFouls": 1.8095238095238095
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79636:UUID:67ff4536-25ae-4ea1-a91a-800eaf7f6296:25",
@@ -250427,6 +250547,28 @@
       "avgFouls": 2.6153846153846154
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:11",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "fb2eb3fe-c04a-4280-8d08-2a556e68f573",
+      "playerActorId": 7451524,
+      "playerIdentityKey": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573",
+      "playerName": "M\u00C0LIA MONTSERRAT MATEO",
+      "shirtNumber": "11",
+      "games": 23,
+      "minutes": 516,
+      "points": 228,
+      "avgPoints": 9.91304347826087,
+      "valuation": 168,
+      "avgValuation": 7.304347826086956,
+      "fouls": 30,
+      "avgFouls": 1.3043478260869565
+    },
+    {
       "key": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:82444:UUID:6fdf1ef1-7a11-42df-8814-e4e548e30f7a:8",
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:82444",
       "teamIdIntern": 454030,
@@ -252539,28 +252681,6 @@
       "avgFouls": 2.0357142857142856
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:11",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "fb2eb3fe-c04a-4280-8d08-2a556e68f573",
-      "playerActorId": 7451524,
-      "playerIdentityKey": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573",
-      "playerName": "M\u00C0LIA MONTSERRAT MATEO",
-      "shirtNumber": "11",
-      "games": 22,
-      "minutes": 492,
-      "points": 219,
-      "avgPoints": 9.954545454545455,
-      "valuation": 159,
-      "avgValuation": 7.2272727272727275,
-      "fouls": 30,
-      "avgFouls": 1.3636363636363635
-    },
-    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80578:UUID:006efb5f-98d1-11e9-a2a5-0216824770c2:3",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80578",
       "teamIdIntern": 453043,
@@ -253791,6 +253911,28 @@
       "avgValuation": 5.64,
       "fouls": 39,
       "avgFouls": 1.56
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:3d02ec97-f4b8-48a9-a398-df73d8986126:20",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "3d02ec97-f4b8-48a9-a398-df73d8986126",
+      "playerActorId": 7451525,
+      "playerIdentityKey": "UUID:3d02ec97-f4b8-48a9-a398-df73d8986126",
+      "playerName": "ABRIL ARIZA BERNAL",
+      "shirtNumber": "20",
+      "games": 23,
+      "minutes": 482,
+      "points": 212,
+      "avgPoints": 9.217391304347826,
+      "valuation": 191,
+      "avgValuation": 8.304347826086957,
+      "fouls": 14,
+      "avgFouls": 0.6086956521739131
     },
     {
       "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79544:UUID:b4ebf24e-4de6-483d-a88b-58b6023b490e:16",
@@ -256805,6 +256947,28 @@
       "avgValuation": 1.2592592592592593,
       "fouls": 84,
       "avgFouls": 3.111111111111111
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:af0a46bc-cf04-4407-a374-cd5332460409:23",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "teamIdIntern": 456900,
+      "teamIdExtern": 80889,
+      "teamName": "U.E.MATAR\u00D3 - PRBF",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "af0a46bc-cf04-4407-a374-cd5332460409",
+      "playerActorId": 7494726,
+      "playerIdentityKey": "UUID:af0a46bc-cf04-4407-a374-cd5332460409",
+      "playerName": "ONA VALERO CALVO",
+      "shirtNumber": "23",
+      "games": 19,
+      "minutes": 574,
+      "points": 201,
+      "avgPoints": 10.578947368421053,
+      "valuation": 111,
+      "avgValuation": 5.842105263157895,
+      "fouls": 39,
+      "avgFouls": 2.0526315789473686
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:83603:UUID:4fe4bbc3-7906-4583-9ed1-c41a1e2372e3:4",
@@ -259931,28 +260095,6 @@
       "avgFouls": 1.9545454545454546
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:af0a46bc-cf04-4407-a374-cd5332460409:23",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-      "teamIdIntern": 456900,
-      "teamIdExtern": 80889,
-      "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "af0a46bc-cf04-4407-a374-cd5332460409",
-      "playerActorId": 7494726,
-      "playerIdentityKey": "UUID:af0a46bc-cf04-4407-a374-cd5332460409",
-      "playerName": "ONA VALERO CALVO",
-      "shirtNumber": "23",
-      "games": 18,
-      "minutes": 545,
-      "points": 191,
-      "avgPoints": 10.61111111111111,
-      "valuation": 110,
-      "avgValuation": 6.111111111111111,
-      "fouls": 35,
-      "avgFouls": 1.9444444444444444
-    },
-    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80167:UUID:59f29787-dc9e-4275-8b76-63b380fcae92:18",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80167",
       "teamIdIntern": 449838,
@@ -261095,28 +261237,6 @@
       "avgValuation": 6.6,
       "fouls": 40,
       "avgFouls": 2
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:3d02ec97-f4b8-48a9-a398-df73d8986126:20",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "3d02ec97-f4b8-48a9-a398-df73d8986126",
-      "playerActorId": 7451525,
-      "playerIdentityKey": "UUID:3d02ec97-f4b8-48a9-a398-df73d8986126",
-      "playerName": "ABRIL ARIZA BERNAL",
-      "shirtNumber": "20",
-      "games": 22,
-      "minutes": 458,
-      "points": 187,
-      "avgPoints": 8.5,
-      "valuation": 166,
-      "avgValuation": 7.545454545454546,
-      "fouls": 14,
-      "avgFouls": 0.6363636363636364
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79377:UUID:013d83f1-98d1-11e9-a2a5-0216824770c2:9",
@@ -265651,6 +265771,28 @@
       "avgFouls": 2.238095238095238
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:2cf3c218-3570-4c08-a818-396b26e894da:10",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "teamIdIntern": 456900,
+      "teamIdExtern": 80889,
+      "teamName": "U.E.MATAR\u00D3 - PRBF",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "2cf3c218-3570-4c08-a818-396b26e894da",
+      "playerActorId": 7494722,
+      "playerIdentityKey": "UUID:2cf3c218-3570-4c08-a818-396b26e894da",
+      "playerName": "J\u00DALIA M\u00C1RMOL CASTILLO",
+      "shirtNumber": "10",
+      "games": 19,
+      "minutes": 564,
+      "points": 176,
+      "avgPoints": 9.263157894736842,
+      "valuation": 141,
+      "avgValuation": 7.421052631578948,
+      "fouls": 8,
+      "avgFouls": 0.42105263157894735
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79380:UUID:00d4c194-98d1-11e9-a2a5-0216824770c2:22",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79380",
       "teamIdIntern": 449814,
@@ -269611,28 +269753,6 @@
       "avgFouls": 2.2
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:2cf3c218-3570-4c08-a818-396b26e894da:10",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-      "teamIdIntern": 456900,
-      "teamIdExtern": 80889,
-      "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "2cf3c218-3570-4c08-a818-396b26e894da",
-      "playerActorId": 7494722,
-      "playerIdentityKey": "UUID:2cf3c218-3570-4c08-a818-396b26e894da",
-      "playerName": "J\u00DALIA M\u00C1RMOL CASTILLO",
-      "shirtNumber": "10",
-      "games": 18,
-      "minutes": 539,
-      "points": 168,
-      "avgPoints": 9.333333333333334,
-      "valuation": 136,
-      "avgValuation": 7.555555555555555,
-      "fouls": 6,
-      "avgFouls": 0.3333333333333333
-    },
-    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78649:UUID:fff96c67-98d0-11e9-a2a5-0216824770c2:23",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78649",
       "teamIdIntern": 452328,
@@ -271061,6 +271181,28 @@
       "avgValuation": 2.6363636363636362,
       "fouls": 57,
       "avgFouls": 2.590909090909091
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:9bf7459f-d288-401c-8deb-8ed167b09e44:10",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "9bf7459f-d288-401c-8deb-8ed167b09e44",
+      "playerActorId": 7451530,
+      "playerIdentityKey": "UUID:9bf7459f-d288-401c-8deb-8ed167b09e44",
+      "playerName": "NOA C\u00D3RDOBA PINTO",
+      "shirtNumber": "10",
+      "games": 23,
+      "minutes": 497,
+      "points": 165,
+      "avgPoints": 7.173913043478261,
+      "valuation": 92,
+      "avgValuation": 4,
+      "fouls": 31,
+      "avgFouls": 1.3478260869565217
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79870:UUID:b26a30e0-36fb-4589-8e5f-0e217e2a01ce:10",
@@ -274581,28 +274723,6 @@
       "avgValuation": 7.2727272727272725,
       "fouls": 39,
       "avgFouls": 3.5454545454545454
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:9bf7459f-d288-401c-8deb-8ed167b09e44:10",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "9bf7459f-d288-401c-8deb-8ed167b09e44",
-      "playerActorId": 7451530,
-      "playerIdentityKey": "UUID:9bf7459f-d288-401c-8deb-8ed167b09e44",
-      "playerName": "NOA C\u00D3RDOBA PINTO",
-      "shirtNumber": "10",
-      "games": 22,
-      "minutes": 476,
-      "points": 158,
-      "avgPoints": 7.181818181818182,
-      "valuation": 89,
-      "avgValuation": 4.045454545454546,
-      "fouls": 30,
-      "avgFouls": 1.3636363636363635
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80575:UUID:00019163-98d1-11e9-a2a5-0216824770c2:8",
@@ -282041,6 +282161,28 @@
       "avgFouls": 2.8
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:ac95745f-96f3-4a16-a438-44730794c37d:24",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 458157,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "ac95745f-96f3-4a16-a438-44730794c37d",
+      "playerActorId": 7517162,
+      "playerIdentityKey": "UUID:ac95745f-96f3-4a16-a438-44730794c37d",
+      "playerName": "ONA MARTINEZ ARAUZO",
+      "shirtNumber": "24",
+      "games": 17,
+      "minutes": 551,
+      "points": 145,
+      "avgPoints": 8.529411764705882,
+      "valuation": 39,
+      "avgValuation": 2.2941176470588234,
+      "fouls": 58,
+      "avgFouls": 3.411764705882353
+    },
+    {
       "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80368:UUID:76f65592-6811-4ad9-8382-a6550ab81cc9:23",
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80368",
       "teamIdIntern": 449904,
@@ -283975,6 +284117,28 @@
       "avgValuation": 4.8125,
       "fouls": 41,
       "avgFouls": 2.5625
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918:2",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "e2bcee56-5f8f-4a97-9e04-cf57ad6d7918",
+      "playerActorId": 7444849,
+      "playerIdentityKey": "UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918",
+      "playerName": "MIA GOBERNA JUVE",
+      "shirtNumber": "2",
+      "games": 18,
+      "minutes": 458,
+      "points": 142,
+      "avgPoints": 7.888888888888889,
+      "valuation": 117,
+      "avgValuation": 6.5,
+      "fouls": 12,
+      "avgFouls": 0.6666666666666666
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80154:UUID:fd9afd22-98d0-11e9-a2a5-0216824770c2:5",
@@ -286573,6 +286737,28 @@
       "avgFouls": 1.4090909090909092
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:dff9157d-6f54-42f0-9c4d-dd484efc9bf0:17",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+      "teamIdIntern": 454766,
+      "teamIdExtern": 82476,
+      "teamName": "DOMINIQUES BARCELONA NEGRE",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "dff9157d-6f54-42f0-9c4d-dd484efc9bf0",
+      "playerActorId": 7457172,
+      "playerIdentityKey": "UUID:dff9157d-6f54-42f0-9c4d-dd484efc9bf0",
+      "playerName": "ANTONELLA CORNEJO MERIDA",
+      "shirtNumber": "17",
+      "games": 18,
+      "minutes": 458,
+      "points": 137,
+      "avgPoints": 7.611111111111111,
+      "valuation": 91,
+      "avgValuation": 5.055555555555555,
+      "fouls": 27,
+      "avgFouls": 1.5
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79874:UUID:0143d893-98d1-11e9-a2a5-0216824770c2:8",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79874",
       "teamIdIntern": 450580,
@@ -287255,6 +287441,28 @@
       "avgFouls": 1.4761904761904763
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735:8",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
+      "playerActorId": 7451533,
+      "playerIdentityKey": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
+      "playerName": "MIA GOMEZ VALLS",
+      "shirtNumber": "8",
+      "games": 23,
+      "minutes": 510,
+      "points": 137,
+      "avgPoints": 5.956521739130435,
+      "valuation": 82,
+      "avgValuation": 3.5652173913043477,
+      "fouls": 29,
+      "avgFouls": 1.2608695652173914
+    },
+    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79584:UUID:00060e52-98d1-11e9-a2a5-0216824770c2:11",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79584",
       "teamIdIntern": 453042,
@@ -287847,6 +288055,28 @@
       "avgValuation": 3.5,
       "fouls": 50,
       "avgFouls": 2.5
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:1a1faa75-b149-47e3-af5b-42798587d41d:15",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 454078,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "1a1faa75-b149-47e3-af5b-42798587d41d",
+      "playerActorId": 7445983,
+      "playerIdentityKey": "UUID:1a1faa75-b149-47e3-af5b-42798587d41d",
+      "playerName": "OLIVIA RODRIGUEZ MIGUELES",
+      "shirtNumber": "15",
+      "games": 18,
+      "minutes": 523,
+      "points": 136,
+      "avgPoints": 7.555555555555555,
+      "valuation": 57,
+      "avgValuation": 3.1666666666666665,
+      "fouls": 49,
+      "avgFouls": 2.7222222222222223
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78474:UUID:a4744bcd-027c-4d23-a6dd-6a94e9b99ae1:4",
@@ -289277,28 +289507,6 @@
       "avgValuation": 2.185185185185185,
       "fouls": 33,
       "avgFouls": 1.2222222222222223
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:ac95745f-96f3-4a16-a438-44730794c37d:24",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 458157,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "ac95745f-96f3-4a16-a438-44730794c37d",
-      "playerActorId": 7517162,
-      "playerIdentityKey": "UUID:ac95745f-96f3-4a16-a438-44730794c37d",
-      "playerName": "ONA MARTINEZ ARAUZO",
-      "shirtNumber": "24",
-      "games": 15,
-      "minutes": 477,
-      "points": 134,
-      "avgPoints": 8.933333333333334,
-      "valuation": 44,
-      "avgValuation": 2.933333333333333,
-      "fouls": 50,
-      "avgFouls": 3.3333333333333335
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79988:UUID:00903a67-98d1-11e9-a2a5-0216824770c2:7",
@@ -290795,28 +291003,6 @@
       "avgValuation": -0.9090909090909091,
       "fouls": 54,
       "avgFouls": 2.4545454545454546
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:dff9157d-6f54-42f0-9c4d-dd484efc9bf0:17",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-      "teamIdIntern": 454766,
-      "teamIdExtern": 82476,
-      "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "dff9157d-6f54-42f0-9c4d-dd484efc9bf0",
-      "playerActorId": 7457172,
-      "playerIdentityKey": "UUID:dff9157d-6f54-42f0-9c4d-dd484efc9bf0",
-      "playerName": "ANTONELLA CORNEJO MERIDA",
-      "shirtNumber": "17",
-      "games": 17,
-      "minutes": 434,
-      "points": 131,
-      "avgPoints": 7.705882352941177,
-      "valuation": 85,
-      "avgValuation": 5,
-      "fouls": 27,
-      "avgFouls": 1.588235294117647
     },
     {
       "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80141:UUID:b3b18830-660b-4d46-8910-1077e80bf4e0:37",
@@ -294911,28 +295097,6 @@
       "avgFouls": 3.8260869565217392
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:1a1faa75-b149-47e3-af5b-42798587d41d:15",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 454078,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "1a1faa75-b149-47e3-af5b-42798587d41d",
-      "playerActorId": 7445983,
-      "playerIdentityKey": "UUID:1a1faa75-b149-47e3-af5b-42798587d41d",
-      "playerName": "OLIVIA RODRIGUEZ MIGUELES",
-      "shirtNumber": "15",
-      "games": 16,
-      "minutes": 464,
-      "points": 126,
-      "avgPoints": 7.875,
-      "valuation": 55,
-      "avgValuation": 3.4375,
-      "fouls": 42,
-      "avgFouls": 2.625
-    },
-    {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83244:UUID:fea0a60c-98d0-11e9-a2a5-0216824770c2:11",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83244",
       "teamIdIntern": 451738,
@@ -296339,28 +296503,6 @@
       "avgValuation": 2.2,
       "fouls": 28,
       "avgFouls": 1.4
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918:2",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "e2bcee56-5f8f-4a97-9e04-cf57ad6d7918",
-      "playerActorId": 7444849,
-      "playerIdentityKey": "UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918",
-      "playerName": "MIA GOBERNA JUVE",
-      "shirtNumber": "2",
-      "games": 15,
-      "minutes": 386,
-      "points": 124,
-      "avgPoints": 8.266666666666667,
-      "valuation": 104,
-      "avgValuation": 6.933333333333334,
-      "fouls": 8,
-      "avgFouls": 0.5333333333333333
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79942:UUID:010b5515-98d1-11e9-a2a5-0216824770c2:30",
@@ -299553,6 +299695,28 @@
       "avgFouls": 0.7142857142857143
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:d4bf24ce-40da-41f4-a702-e97889567a9d:22",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "d4bf24ce-40da-41f4-a702-e97889567a9d",
+      "playerActorId": 7444855,
+      "playerIdentityKey": "UUID:d4bf24ce-40da-41f4-a702-e97889567a9d",
+      "playerName": "ZOA SALVADOR FERRER",
+      "shirtNumber": "22",
+      "games": 19,
+      "minutes": 417,
+      "points": 120,
+      "avgPoints": 6.315789473684211,
+      "valuation": 102,
+      "avgValuation": 5.368421052631579,
+      "fouls": 12,
+      "avgFouls": 0.631578947368421
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:82177:UUID:013dbb97-98d1-11e9-a2a5-0216824770c2:30",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:82177",
       "teamIdIntern": 451699,
@@ -300035,28 +300199,6 @@
       "avgValuation": -0.08333333333333333,
       "fouls": 72,
       "avgFouls": 3
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735:8",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
-      "playerActorId": 7451533,
-      "playerIdentityKey": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
-      "playerName": "MIA GOMEZ VALLS",
-      "shirtNumber": "8",
-      "games": 22,
-      "minutes": 486,
-      "points": 119,
-      "avgPoints": 5.409090909090909,
-      "valuation": 65,
-      "avgValuation": 2.9545454545454546,
-      "fouls": 28,
-      "avgFouls": 1.2727272727272727
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79874:UUID:08ae48b7-6856-4acf-9de9-dbf727d3fae5:7",
@@ -302787,28 +302929,6 @@
       "avgFouls": 2.3636363636363638
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:d4bf24ce-40da-41f4-a702-e97889567a9d:22",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "d4bf24ce-40da-41f4-a702-e97889567a9d",
-      "playerActorId": 7444855,
-      "playerIdentityKey": "UUID:d4bf24ce-40da-41f4-a702-e97889567a9d",
-      "playerName": "ZOA SALVADOR FERRER",
-      "shirtNumber": "22",
-      "games": 17,
-      "minutes": 375,
-      "points": 116,
-      "avgPoints": 6.823529411764706,
-      "valuation": 99,
-      "avgValuation": 5.823529411764706,
-      "fouls": 11,
-      "avgFouls": 0.6470588235294118
-    },
-    {
       "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801:UUID:0042ff3f-98d1-11e9-a2a5-0216824770c2:25",
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801",
       "teamIdIntern": 450432,
@@ -304393,6 +304513,28 @@
       "avgFouls": 2.25
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:aa996cd9-9cf4-4ade-a3cf-e79485ee36f6:28",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "aa996cd9-9cf4-4ade-a3cf-e79485ee36f6",
+      "playerActorId": 7444847,
+      "playerIdentityKey": "UUID:aa996cd9-9cf4-4ade-a3cf-e79485ee36f6",
+      "playerName": "ABRIL SANZ PEREZ",
+      "shirtNumber": "28",
+      "games": 23,
+      "minutes": 570,
+      "points": 113,
+      "avgPoints": 4.913043478260869,
+      "valuation": 81,
+      "avgValuation": 3.5217391304347827,
+      "fouls": 21,
+      "avgFouls": 0.9130434782608695
+    },
+    {
       "key": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79121:UUID:01219026-98d1-11e9-a2a5-0216824770c2:7",
       "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79121",
       "teamIdIntern": 452159,
@@ -305425,6 +305567,28 @@
       "avgValuation": 4.375,
       "fouls": 30,
       "avgFouls": 1.875
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5:13",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "9b430cde-74e6-46a5-97c6-7961d35d49d5",
+      "playerActorId": 7451523,
+      "playerIdentityKey": "UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5",
+      "playerName": "CLAUDIA PORTO ALFONSO",
+      "shirtNumber": "13",
+      "games": 22,
+      "minutes": 448,
+      "points": 112,
+      "avgPoints": 5.090909090909091,
+      "valuation": 93,
+      "avgValuation": 4.2272727272727275,
+      "fouls": 17,
+      "avgFouls": 0.7727272727272727
     },
     {
       "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78623:UUID:fbc23a3d-98d0-11e9-a2a5-0216824770c2:11",
@@ -309343,28 +309507,6 @@
       "avgFouls": 2.15
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5:13",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "9b430cde-74e6-46a5-97c6-7961d35d49d5",
-      "playerActorId": 7451523,
-      "playerIdentityKey": "UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5",
-      "playerName": "CLAUDIA PORTO ALFONSO",
-      "shirtNumber": "13",
-      "games": 21,
-      "minutes": 424,
-      "points": 107,
-      "avgPoints": 5.095238095238095,
-      "valuation": 89,
-      "avgValuation": 4.238095238095238,
-      "fouls": 17,
-      "avgFouls": 0.8095238095238095
-    },
-    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827:UUID:00d089a0-98d1-11e9-a2a5-0216824770c2:5",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78827",
       "teamIdIntern": 451829,
@@ -310949,6 +311091,28 @@
       "avgFouls": 1.7
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:edadc412-06ff-42a8-80c3-422832166532:0",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 454078,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "edadc412-06ff-42a8-80c3-422832166532",
+      "playerActorId": 7445977,
+      "playerIdentityKey": "UUID:edadc412-06ff-42a8-80c3-422832166532",
+      "playerName": "ELIA JIMENEZ ROMERO",
+      "shirtNumber": "0",
+      "games": 21,
+      "minutes": 633,
+      "points": 105,
+      "avgPoints": 5,
+      "valuation": 71,
+      "avgValuation": 3.380952380952381,
+      "fouls": 16,
+      "avgFouls": 0.7619047619047619
+    },
+    {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80653:UUID:009294f9-98d1-11e9-a2a5-0216824770c2:20",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80653",
       "teamIdIntern": 465235,
@@ -311829,6 +311993,28 @@
       "avgFouls": 2.125
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3:9",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "a902e99d-6a76-4e84-b6cd-df84d63b9ef3",
+      "playerActorId": 7451531,
+      "playerIdentityKey": "UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3",
+      "playerName": "EVA RODRIGUEZ CANO",
+      "shirtNumber": "9",
+      "games": 21,
+      "minutes": 466,
+      "points": 104,
+      "avgPoints": 4.9523809523809526,
+      "valuation": 75,
+      "avgValuation": 3.5714285714285716,
+      "fouls": 20,
+      "avgFouls": 0.9523809523809523
+    },
+    {
       "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79336:UUID:9f5fd756-23ab-49f9-ae06-919ce6723cff:23",
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79336",
       "teamIdIntern": 450422,
@@ -312553,6 +312739,28 @@
       "avgValuation": -2.0952380952380953,
       "fouls": 39,
       "avgFouls": 1.8571428571428572
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:19cd6554-69bb-44ad-a772-51594e594dd1:28",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "teamIdIntern": 453402,
+      "teamIdExtern": 81365,
+      "teamName": "CB MANYANET LES CORTS GROC",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "19cd6554-69bb-44ad-a772-51594e594dd1",
+      "playerActorId": 7434857,
+      "playerIdentityKey": "UUID:19cd6554-69bb-44ad-a772-51594e594dd1",
+      "playerName": "ALEJANDRA URRUTIA MUN\u00C1RRIZ",
+      "shirtNumber": "28",
+      "games": 18,
+      "minutes": 433,
+      "points": 103,
+      "avgPoints": 5.722222222222222,
+      "valuation": 31,
+      "avgValuation": 1.7222222222222223,
+      "fouls": 20,
+      "avgFouls": 1.1111111111111112
     },
     {
       "key": "2025-2026::SUPER COPA FEMENINA::TEAM:79861:UUID:fc2481dc-98d0-11e9-a2a5-0216824770c2:33",
@@ -318121,28 +318329,6 @@
       "avgFouls": 1.7619047619047619
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:edadc412-06ff-42a8-80c3-422832166532:0",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 454078,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "edadc412-06ff-42a8-80c3-422832166532",
-      "playerActorId": 7445977,
-      "playerIdentityKey": "UUID:edadc412-06ff-42a8-80c3-422832166532",
-      "playerName": "ELIA JIMENEZ ROMERO",
-      "shirtNumber": "0",
-      "games": 19,
-      "minutes": 570,
-      "points": 98,
-      "avgPoints": 5.157894736842105,
-      "valuation": 68,
-      "avgValuation": 3.5789473684210527,
-      "fouls": 14,
-      "avgFouls": 0.7368421052631579
-    },
-    {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83121:UUID:fc247d17-98d0-11e9-a2a5-0216824770c2:20",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83121",
       "teamIdIntern": 504521,
@@ -319727,6 +319913,28 @@
       "avgFouls": 1.8333333333333333
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:00362429-2101-49be-9239-bb551c0befee:26",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "teamIdIntern": 456900,
+      "teamIdExtern": 80889,
+      "teamName": "U.E.MATAR\u00D3 - PRBF",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "00362429-2101-49be-9239-bb551c0befee",
+      "playerActorId": 7494725,
+      "playerIdentityKey": "UUID:00362429-2101-49be-9239-bb551c0befee",
+      "playerName": "MIA MARTINEZ GARCIA",
+      "shirtNumber": "26",
+      "games": 20,
+      "minutes": 590,
+      "points": 97,
+      "avgPoints": 4.85,
+      "valuation": 77,
+      "avgValuation": 3.85,
+      "fouls": 9,
+      "avgFouls": 0.45
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80764:UUID:cecac6e3-5e20-46b1-a28a-44d974b5d6b4:15",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80764",
       "teamIdIntern": 450079,
@@ -320033,28 +320241,6 @@
       "avgValuation": 4.2,
       "fouls": 26,
       "avgFouls": 2.6
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:19cd6554-69bb-44ad-a772-51594e594dd1:28",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-      "teamIdIntern": 453402,
-      "teamIdExtern": 81365,
-      "teamName": "CB MANYANET LES CORTS GROC",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "19cd6554-69bb-44ad-a772-51594e594dd1",
-      "playerActorId": 7434857,
-      "playerIdentityKey": "UUID:19cd6554-69bb-44ad-a772-51594e594dd1",
-      "playerName": "ALEJANDRA URRUTIA MUN\u00C1RRIZ",
-      "shirtNumber": "28",
-      "games": 16,
-      "minutes": 385,
-      "points": 96,
-      "avgPoints": 6,
-      "valuation": 29,
-      "avgValuation": 1.8125,
-      "fouls": 19,
-      "avgFouls": 1.1875
     },
     {
       "key": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:78607:UUID:fbb876c6-98d0-11e9-a2a5-0216824770c2:7",
@@ -321045,28 +321231,6 @@
       "avgValuation": -0.8181818181818182,
       "fouls": 37,
       "avgFouls": 1.6818181818181819
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:aa996cd9-9cf4-4ade-a3cf-e79485ee36f6:28",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "aa996cd9-9cf4-4ade-a3cf-e79485ee36f6",
-      "playerActorId": 7444847,
-      "playerIdentityKey": "UUID:aa996cd9-9cf4-4ade-a3cf-e79485ee36f6",
-      "playerName": "ABRIL SANZ PEREZ",
-      "shirtNumber": "28",
-      "games": 20,
-      "minutes": 498,
-      "points": 95,
-      "avgPoints": 4.75,
-      "valuation": 65,
-      "avgValuation": 3.25,
-      "fouls": 19,
-      "avgFouls": 0.95
     },
     {
       "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80991:UUID:01666606-98d1-11e9-a2a5-0216824770c2:18",
@@ -324227,14 +324391,14 @@
       "playerIdentityKey": "UUID:2b0c224e-9b0a-4ed0-9e93-cdaacbf48802",
       "playerName": "VALENTINA MORENO ESPINOZA",
       "shirtNumber": "14",
-      "games": 20,
-      "minutes": 631,
+      "games": 22,
+      "minutes": 685,
       "points": 93,
-      "avgPoints": 4.65,
-      "valuation": 54,
-      "avgValuation": 2.7,
-      "fouls": 22,
-      "avgFouls": 1.1
+      "avgPoints": 4.2272727272727275,
+      "valuation": 53,
+      "avgValuation": 2.409090909090909,
+      "fouls": 23,
+      "avgFouls": 1.0454545454545454
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:80688:UUID:8749adc5-b733-4d0a-a5d6-18e5c6279ddd:21",
@@ -326041,28 +326205,6 @@
       "avgFouls": 3.05
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:00362429-2101-49be-9239-bb551c0befee:26",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-      "teamIdIntern": 456900,
-      "teamIdExtern": 80889,
-      "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "00362429-2101-49be-9239-bb551c0befee",
-      "playerActorId": 7494725,
-      "playerIdentityKey": "UUID:00362429-2101-49be-9239-bb551c0befee",
-      "playerName": "MIA MARTINEZ GARCIA",
-      "shirtNumber": "26",
-      "games": 19,
-      "minutes": 559,
-      "points": 91,
-      "avgPoints": 4.7894736842105265,
-      "valuation": 71,
-      "avgValuation": 3.736842105263158,
-      "fouls": 9,
-      "avgFouls": 0.47368421052631576
-    },
-    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80167:UUID:d22853ce-9c8f-4f81-bb4e-7134757fcdb3:0",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80167",
       "teamIdIntern": 449838,
@@ -327251,6 +327393,28 @@
       "avgFouls": 1.2352941176470589
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:7193236f-3771-4f02-8e43-8507498f0c55:5",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "7193236f-3771-4f02-8e43-8507498f0c55",
+      "playerActorId": 7451526,
+      "playerIdentityKey": "UUID:7193236f-3771-4f02-8e43-8507498f0c55",
+      "playerName": "ELIA RIBES SARROCA",
+      "shirtNumber": "5",
+      "games": 23,
+      "minutes": 471,
+      "points": 89,
+      "avgPoints": 3.869565217391304,
+      "valuation": 58,
+      "avgValuation": 2.5217391304347827,
+      "fouls": 18,
+      "avgFouls": 0.782608695652174
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81997:UUID:fa57f956-e499-4d91-b7ac-6b2a6c518941:3",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81997",
       "teamIdIntern": 454433,
@@ -328371,28 +328535,6 @@
       "avgValuation": 1.12,
       "fouls": 45,
       "avgFouls": 1.8
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3:9",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "a902e99d-6a76-4e84-b6cd-df84d63b9ef3",
-      "playerActorId": 7451531,
-      "playerIdentityKey": "UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3",
-      "playerName": "EVA RODRIGUEZ CANO",
-      "shirtNumber": "9",
-      "games": 20,
-      "minutes": 445,
-      "points": 88,
-      "avgPoints": 4.4,
-      "valuation": 60,
-      "avgValuation": 3,
-      "fouls": 19,
-      "avgFouls": 0.95
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832:UUID:533e1836-846a-4691-9bb3-5e9964b6c1f2:20",
@@ -330001,6 +330143,28 @@
       "avgFouls": 2.642857142857143
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:bb3914cd-46b4-494f-8c84-cdbb97461182:22",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 454078,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "bb3914cd-46b4-494f-8c84-cdbb97461182",
+      "playerActorId": 7445982,
+      "playerIdentityKey": "UUID:bb3914cd-46b4-494f-8c84-cdbb97461182",
+      "playerName": "NORA MORA GAMEZ",
+      "shirtNumber": "22",
+      "games": 20,
+      "minutes": 636,
+      "points": 87,
+      "avgPoints": 4.35,
+      "valuation": 40,
+      "avgValuation": 2,
+      "fouls": 22,
+      "avgFouls": 1.1
+    },
+    {
       "key": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79489:UUID:7fd0fc32-06e5-4f38-8183-ec90df318b20:11",
       "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79489",
       "teamIdIntern": 450635,
@@ -331297,6 +331461,28 @@
       "avgValuation": 1.3181818181818181,
       "fouls": 40,
       "avgFouls": 1.8181818181818181
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:243f8972-793f-4f57-8896-8451c1cd4b93:10",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "teamIdIntern": 453402,
+      "teamIdExtern": 81365,
+      "teamName": "CB MANYANET LES CORTS GROC",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "243f8972-793f-4f57-8896-8451c1cd4b93",
+      "playerActorId": 7434859,
+      "playerIdentityKey": "UUID:243f8972-793f-4f57-8896-8451c1cd4b93",
+      "playerName": "CARLOTA PRAT RIERA",
+      "shirtNumber": "10",
+      "games": 18,
+      "minutes": 461,
+      "points": 85,
+      "avgPoints": 4.722222222222222,
+      "valuation": 44,
+      "avgValuation": 2.4444444444444446,
+      "fouls": 21,
+      "avgFouls": 1.1666666666666667
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82475:UUID:64002a95-5786-4b33-8e8e-e7c1cc3f3e05:7",
@@ -335479,6 +335665,28 @@
       "avgFouls": 3.142857142857143
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1:6",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "74094079-c1cf-4dd1-bdea-bac54159a2a1",
+      "playerActorId": 7451532,
+      "playerIdentityKey": "UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1",
+      "playerName": "LAIA DENC\u00C0S GUARDA",
+      "shirtNumber": "6",
+      "games": 22,
+      "minutes": 447,
+      "points": 82,
+      "avgPoints": 3.727272727272727,
+      "valuation": 58,
+      "avgValuation": 2.6363636363636362,
+      "fouls": 17,
+      "avgFouls": 0.7727272727272727
+    },
+    {
       "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80126:UUID:6a8bae66-867a-4b7a-90c0-7d3880e54681:22",
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80126",
       "teamIdIntern": 450700,
@@ -336249,28 +336457,6 @@
       "avgFouls": 1.1764705882352942
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:243f8972-793f-4f57-8896-8451c1cd4b93:10",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-      "teamIdIntern": 453402,
-      "teamIdExtern": 81365,
-      "teamName": "CB MANYANET LES CORTS GROC",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "243f8972-793f-4f57-8896-8451c1cd4b93",
-      "playerActorId": 7434859,
-      "playerIdentityKey": "UUID:243f8972-793f-4f57-8896-8451c1cd4b93",
-      "playerName": "CARLOTA PRAT RIERA",
-      "shirtNumber": "10",
-      "games": 16,
-      "minutes": 407,
-      "points": 81,
-      "avgPoints": 5.0625,
-      "valuation": 42,
-      "avgValuation": 2.625,
-      "fouls": 19,
-      "avgFouls": 1.1875
-    },
-    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82021:UUID:007c71f7-98d1-11e9-a2a5-0216824770c2:12",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82021",
       "teamIdIntern": 472427,
@@ -336357,6 +336543,28 @@
       "avgValuation": 2.909090909090909,
       "fouls": 25,
       "avgFouls": 2.272727272727273
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e:14",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "28b4749a-a429-4e9b-b717-51d3ba8eae6e",
+      "playerActorId": 7451522,
+      "playerIdentityKey": "UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e",
+      "playerName": "CLAUDIA JOU GARCIA",
+      "shirtNumber": "14",
+      "games": 19,
+      "minutes": 376,
+      "points": 81,
+      "avgPoints": 4.2631578947368425,
+      "valuation": 50,
+      "avgValuation": 2.6315789473684212,
+      "fouls": 17,
+      "avgFouls": 0.8947368421052632
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807:UUID:0145bb48-98d1-11e9-a2a5-0216824770c2:12",
@@ -337701,6 +337909,28 @@
       "avgFouls": 1.5555555555555556
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:8ba357bc-806a-4f75-9ba8-feaab32f30d0:18",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "teamIdIntern": 456900,
+      "teamIdExtern": 80889,
+      "teamName": "U.E.MATAR\u00D3 - PRBF",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "8ba357bc-806a-4f75-9ba8-feaab32f30d0",
+      "playerActorId": 7494728,
+      "playerIdentityKey": "UUID:8ba357bc-806a-4f75-9ba8-feaab32f30d0",
+      "playerName": "EMMA SANCHEZ GARCIA",
+      "shirtNumber": "18",
+      "games": 18,
+      "minutes": 504,
+      "points": 80,
+      "avgPoints": 4.444444444444445,
+      "valuation": 52,
+      "avgValuation": 2.888888888888889,
+      "fouls": 17,
+      "avgFouls": 0.9444444444444444
+    },
+    {
       "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78454:UUID:fbd00aa6-98d0-11e9-a2a5-0216824770c2:15",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78454",
       "teamIdIntern": 452376,
@@ -338139,28 +338369,6 @@
       "avgValuation": 1.8235294117647058,
       "fouls": 35,
       "avgFouls": 2.0588235294117645
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:bb3914cd-46b4-494f-8c84-cdbb97461182:22",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 454078,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "bb3914cd-46b4-494f-8c84-cdbb97461182",
-      "playerActorId": 7445982,
-      "playerIdentityKey": "UUID:bb3914cd-46b4-494f-8c84-cdbb97461182",
-      "playerName": "NORA MORA GAMEZ",
-      "shirtNumber": "22",
-      "games": 19,
-      "minutes": 604,
-      "points": 80,
-      "avgPoints": 4.2105263157894735,
-      "valuation": 34,
-      "avgValuation": 1.7894736842105263,
-      "fouls": 22,
-      "avgFouls": 1.1578947368421053
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497:UUID:c06cb96d-0a70-4883-908e-8590e0e73b67:14",
@@ -338689,28 +338897,6 @@
       "avgValuation": 1.1538461538461537,
       "fouls": 33,
       "avgFouls": 1.2692307692307692
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:7193236f-3771-4f02-8e43-8507498f0c55:5",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "7193236f-3771-4f02-8e43-8507498f0c55",
-      "playerActorId": 7451526,
-      "playerIdentityKey": "UUID:7193236f-3771-4f02-8e43-8507498f0c55",
-      "playerName": "ELIA RIBES SARROCA",
-      "shirtNumber": "5",
-      "games": 22,
-      "minutes": 447,
-      "points": 79,
-      "avgPoints": 3.590909090909091,
-      "valuation": 48,
-      "avgValuation": 2.1818181818181817,
-      "fouls": 18,
-      "avgFouls": 0.8181818181818182
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79489:UUID:01645e23-98d1-11e9-a2a5-0216824770c2:34",
@@ -339857,28 +340043,6 @@
       "avgFouls": 1.3636363636363635
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:8ba357bc-806a-4f75-9ba8-feaab32f30d0:18",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-      "teamIdIntern": 456900,
-      "teamIdExtern": 80889,
-      "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "8ba357bc-806a-4f75-9ba8-feaab32f30d0",
-      "playerActorId": 7494728,
-      "playerIdentityKey": "UUID:8ba357bc-806a-4f75-9ba8-feaab32f30d0",
-      "playerName": "EMMA SANCHEZ GARCIA",
-      "shirtNumber": "18",
-      "games": 17,
-      "minutes": 475,
-      "points": 78,
-      "avgPoints": 4.588235294117647,
-      "valuation": 51,
-      "avgValuation": 3,
-      "fouls": 16,
-      "avgFouls": 0.9411764705882353
-    },
-    {
       "key": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80010:UUID:bf9adf46-b718-4ebe-8e5d-57e0410f03b7:13",
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80010",
       "teamIdIntern": 461108,
@@ -340207,28 +340371,6 @@
       "avgValuation": -2.9130434782608696,
       "fouls": 63,
       "avgFouls": 2.739130434782609
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1:6",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "74094079-c1cf-4dd1-bdea-bac54159a2a1",
-      "playerActorId": 7451532,
-      "playerIdentityKey": "UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1",
-      "playerName": "LAIA DENC\u00C0S GUARDA",
-      "shirtNumber": "6",
-      "games": 21,
-      "minutes": 426,
-      "points": 78,
-      "avgPoints": 3.7142857142857144,
-      "valuation": 55,
-      "avgValuation": 2.619047619047619,
-      "fouls": 16,
-      "avgFouls": 0.7619047619047619
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605:UUID:00dcc1ac-98d1-11e9-a2a5-0216824770c2:5",
@@ -343619,28 +343761,6 @@
       "avgFouls": 1.6956521739130435
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e:14",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "28b4749a-a429-4e9b-b717-51d3ba8eae6e",
-      "playerActorId": 7451522,
-      "playerIdentityKey": "UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e",
-      "playerName": "CLAUDIA JOU GARCIA",
-      "shirtNumber": "14",
-      "games": 18,
-      "minutes": 355,
-      "points": 75,
-      "avgPoints": 4.166666666666667,
-      "valuation": 48,
-      "avgValuation": 2.6666666666666665,
-      "fouls": 16,
-      "avgFouls": 0.8888888888888888
-    },
-    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420:UUID:21c6fdaf-5b52-477e-adeb-1793e2dd2776:30",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
       "teamIdIntern": 451323,
@@ -345465,6 +345585,28 @@
       "avgValuation": 0.2777777777777778,
       "fouls": 50,
       "avgFouls": 2.7777777777777777
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:3e48b176-e623-4e6f-8193-907925044f18:3",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "3e48b176-e623-4e6f-8193-907925044f18",
+      "playerActorId": 7444843,
+      "playerIdentityKey": "UUID:3e48b176-e623-4e6f-8193-907925044f18",
+      "playerName": "MARTINA SEMPER DE FRIAS",
+      "shirtNumber": "3",
+      "games": 20,
+      "minutes": 506,
+      "points": 74,
+      "avgPoints": 3.7,
+      "valuation": 35,
+      "avgValuation": 1.75,
+      "fouls": 23,
+      "avgFouls": 1.15
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80691:UUID:61af7363-5109-4d11-9c95-041f0fbae385:4",
@@ -348151,28 +348293,6 @@
       "avgFouls": 0.6666666666666666
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:3e48b176-e623-4e6f-8193-907925044f18:3",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "3e48b176-e623-4e6f-8193-907925044f18",
-      "playerActorId": 7444843,
-      "playerIdentityKey": "UUID:3e48b176-e623-4e6f-8193-907925044f18",
-      "playerName": "MARTINA SEMPER DE FRIAS",
-      "shirtNumber": "3",
-      "games": 18,
-      "minutes": 463,
-      "points": 72,
-      "avgPoints": 4,
-      "valuation": 37,
-      "avgValuation": 2.0555555555555554,
-      "fouls": 19,
-      "avgFouls": 1.0555555555555556
-    },
-    {
       "key": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79856:UUID:ef4a826f-fad0-4815-9f6a-4c5b2f69fc0e:8",
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79856",
       "teamIdIntern": 450055,
@@ -349293,6 +349413,28 @@
       "avgValuation": 1.5416666666666667,
       "fouls": 23,
       "avgFouls": 0.9583333333333334
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:fb871251-25ce-4d60-a424-0c8e36c359d5:11",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+      "teamIdIntern": 454766,
+      "teamIdExtern": 82476,
+      "teamName": "DOMINIQUES BARCELONA NEGRE",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "fb871251-25ce-4d60-a424-0c8e36c359d5",
+      "playerActorId": 7457169,
+      "playerIdentityKey": "UUID:fb871251-25ce-4d60-a424-0c8e36c359d5",
+      "playerName": "MIA VARGAS RIBAS",
+      "shirtNumber": "11",
+      "games": 18,
+      "minutes": 448,
+      "points": 71,
+      "avgPoints": 3.9444444444444446,
+      "valuation": 22,
+      "avgValuation": 1.2222222222222223,
+      "fouls": 39,
+      "avgFouls": 2.1666666666666665
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81710:UUID:efe0d4e6-0e95-4fcd-ad17-8bbc4465f611:6",
@@ -353255,6 +353397,28 @@
       "avgFouls": 1.3333333333333333
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4:14",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "9c994a4a-fab7-4604-8331-1c62602bc3d4",
+      "playerActorId": 7444846,
+      "playerIdentityKey": "UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4",
+      "playerName": "UMA PONS ARRUF\u00CD",
+      "shirtNumber": "14",
+      "games": 17,
+      "minutes": 368,
+      "points": 68,
+      "avgPoints": 4,
+      "valuation": 12,
+      "avgValuation": 0.7058823529411765,
+      "fouls": 34,
+      "avgFouls": 2
+    },
+    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185:UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232:8",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81185",
       "teamIdIntern": 454749,
@@ -355739,28 +355903,6 @@
       "avgValuation": -1,
       "fouls": 13,
       "avgFouls": 1.1818181818181819
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:fb871251-25ce-4d60-a424-0c8e36c359d5:11",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-      "teamIdIntern": 454766,
-      "teamIdExtern": 82476,
-      "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "fb871251-25ce-4d60-a424-0c8e36c359d5",
-      "playerActorId": 7457169,
-      "playerIdentityKey": "UUID:fb871251-25ce-4d60-a424-0c8e36c359d5",
-      "playerName": "MIA VARGAS RIBAS",
-      "shirtNumber": "11",
-      "games": 17,
-      "minutes": 424,
-      "points": 66,
-      "avgPoints": 3.8823529411764706,
-      "valuation": 20,
-      "avgValuation": 1.1764705882352942,
-      "fouls": 38,
-      "avgFouls": 2.235294117647059
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80932:UUID:fbda9ae6-98d0-11e9-a2a5-0216824770c2:4",
@@ -365201,28 +365343,6 @@
       "avgFouls": 1.6
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4:14",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "9c994a4a-fab7-4604-8331-1c62602bc3d4",
-      "playerActorId": 7444846,
-      "playerIdentityKey": "UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4",
-      "playerName": "UMA PONS ARRUF\u00CD",
-      "shirtNumber": "14",
-      "games": 14,
-      "minutes": 296,
-      "points": 59,
-      "avgPoints": 4.214285714285714,
-      "valuation": 10,
-      "avgValuation": 0.7142857142857143,
-      "fouls": 30,
-      "avgFouls": 2.142857142857143
-    },
-    {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80561:UUID:5347d6bd-a354-43c8-b225-fd2ee35a15cb:3",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80561",
       "teamIdIntern": 452068,
@@ -366807,6 +366927,28 @@
       "avgFouls": 1.8181818181818181
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998:23",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "teamIdIntern": 453402,
+      "teamIdExtern": 81365,
+      "teamName": "CB MANYANET LES CORTS GROC",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "357aa467-e79f-4ebe-ab15-175b3fb8d998",
+      "playerActorId": 7434846,
+      "playerIdentityKey": "UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998",
+      "playerName": "CARLOTA S\u00C1NCHEZ HEINEMANN",
+      "shirtNumber": "23",
+      "games": 17,
+      "minutes": 383,
+      "points": 57,
+      "avgPoints": 3.3529411764705883,
+      "valuation": 4,
+      "avgValuation": 0.23529411764705882,
+      "fouls": 38,
+      "avgFouls": 2.235294117647059
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81583:UUID:ac2b9c8b-a3f9-400b-bcde-5cc86cc48361:30",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81583",
       "teamIdIntern": 451702,
@@ -367545,14 +367687,14 @@
       "playerIdentityKey": "UUID:4aec1319-ea9d-474b-9125-ad6e8d2387ed",
       "playerName": "TANIT TUTUSAUS RUIZ",
       "shirtNumber": "7",
-      "games": 15,
-      "minutes": 407,
+      "games": 16,
+      "minutes": 431,
       "points": 57,
-      "avgPoints": 3.8,
-      "valuation": 22,
-      "avgValuation": 1.4666666666666666,
-      "fouls": 24,
-      "avgFouls": 1.6
+      "avgPoints": 3.5625,
+      "valuation": 19,
+      "avgValuation": 1.1875,
+      "fouls": 27,
+      "avgFouls": 1.6875
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81661:UUID:fa0b994b-a4e1-4453-b78b-2a39c4f541e6:12",
@@ -367971,6 +368113,28 @@
       "avgValuation": 2,
       "fouls": 26,
       "avgFouls": 1.8571428571428572
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:64fcb227-176b-42e7-a45e-2b68180afff6:57",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+      "teamIdIntern": 454766,
+      "teamIdExtern": 82476,
+      "teamName": "DOMINIQUES BARCELONA NEGRE",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "64fcb227-176b-42e7-a45e-2b68180afff6",
+      "playerActorId": 7457173,
+      "playerIdentityKey": "UUID:64fcb227-176b-42e7-a45e-2b68180afff6",
+      "playerName": "GALA GUILLEM CRESPO",
+      "shirtNumber": "57",
+      "games": 18,
+      "minutes": 446,
+      "points": 56,
+      "avgPoints": 3.111111111111111,
+      "valuation": -7,
+      "avgValuation": -0.3888888888888889,
+      "fouls": 49,
+      "avgFouls": 2.7222222222222223
     },
     {
       "key": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79305:UUID:fe4bdbd8-98d0-11e9-a2a5-0216824770c2:21",
@@ -369095,28 +369259,6 @@
       "avgFouls": 0.5416666666666666
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998:23",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-      "teamIdIntern": 453402,
-      "teamIdExtern": 81365,
-      "teamName": "CB MANYANET LES CORTS GROC",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "357aa467-e79f-4ebe-ab15-175b3fb8d998",
-      "playerActorId": 7434846,
-      "playerIdentityKey": "UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998",
-      "playerName": "CARLOTA S\u00C1NCHEZ HEINEMANN",
-      "shirtNumber": "23",
-      "games": 15,
-      "minutes": 335,
-      "points": 55,
-      "avgPoints": 3.6666666666666665,
-      "valuation": 8,
-      "avgValuation": 0.5333333333333333,
-      "fouls": 34,
-      "avgFouls": 2.2666666666666666
-    },
-    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:18c450fb-e63f-44c0-a915-f706d253c466:40",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
       "teamIdIntern": 454766,
@@ -369129,14 +369271,14 @@
       "playerIdentityKey": "UUID:18c450fb-e63f-44c0-a915-f706d253c466",
       "playerName": "CHRISTELLE GIL ALVARO",
       "shirtNumber": "40",
-      "games": 16,
-      "minutes": 393,
+      "games": 17,
+      "minutes": 417,
       "points": 55,
-      "avgPoints": 3.4375,
+      "avgPoints": 3.235294117647059,
       "valuation": 22,
-      "avgValuation": 1.375,
+      "avgValuation": 1.2941176470588236,
       "fouls": 20,
-      "avgFouls": 1.25
+      "avgFouls": 1.1764705882352942
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78884:UUID:01238506-98d1-11e9-a2a5-0216824770c2:3",
@@ -370523,6 +370665,28 @@
       "avgValuation": -1.5555555555555556,
       "fouls": 31,
       "avgFouls": 1.7222222222222223
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:4cad20bc-fcca-4718-ba63-03b9c71da081:28",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
+      "teamIdIntern": 456900,
+      "teamIdExtern": 80889,
+      "teamName": "U.E.MATAR\u00D3 - PRBF",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "4cad20bc-fcca-4718-ba63-03b9c71da081",
+      "playerActorId": 7494724,
+      "playerIdentityKey": "UUID:4cad20bc-fcca-4718-ba63-03b9c71da081",
+      "playerName": "GIULIETTA SCATOLINO GENIS",
+      "shirtNumber": "28",
+      "games": 19,
+      "minutes": 487,
+      "points": 54,
+      "avgPoints": 2.8421052631578947,
+      "valuation": 4,
+      "avgValuation": 0.21052631578947367,
+      "fouls": 32,
+      "avgFouls": 1.6842105263157894
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79076:UUID:4ca1ec1b-2d6d-43f3-af29-34034d0128b6:90",
@@ -374155,28 +374319,6 @@
       "avgFouls": 0.8461538461538461
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:64fcb227-176b-42e7-a45e-2b68180afff6:57",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-      "teamIdIntern": 454766,
-      "teamIdExtern": 82476,
-      "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "64fcb227-176b-42e7-a45e-2b68180afff6",
-      "playerActorId": 7457173,
-      "playerIdentityKey": "UUID:64fcb227-176b-42e7-a45e-2b68180afff6",
-      "playerName": "GALA GUILLEM CRESPO",
-      "shirtNumber": "57",
-      "games": 17,
-      "minutes": 422,
-      "points": 51,
-      "avgPoints": 3,
-      "valuation": -9,
-      "avgValuation": -0.5294117647058824,
-      "fouls": 46,
-      "avgFouls": 2.7058823529411766
-    },
-    {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80973:UUID:00d24058-98d1-11e9-a2a5-0216824770c2:7",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80973",
       "teamIdIntern": 477822,
@@ -375333,14 +375475,14 @@
       "playerIdentityKey": "UUID:68ff59ec-1de4-4e3d-8e3a-c167f6fe0f02",
       "playerName": "BLANCA ALONSO SANTAMARIA",
       "shirtNumber": "17",
-      "games": 15,
-      "minutes": 357,
+      "games": 16,
+      "minutes": 381,
       "points": 50,
-      "avgPoints": 3.3333333333333335,
+      "avgPoints": 3.125,
       "valuation": 22,
-      "avgValuation": 1.4666666666666666,
+      "avgValuation": 1.375,
       "fouls": 8,
-      "avgFouls": 0.5333333333333333
+      "avgFouls": 0.5
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79277:UUID:0148e944-98d1-11e9-a2a5-0216824770c2:77",
@@ -376551,6 +376693,28 @@
       "avgValuation": 0.46153846153846156,
       "fouls": 14,
       "avgFouls": 1.0769230769230769
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:c8ea9eb2-e758-4075-af1e-bb24ba7afe7b:10",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+      "teamIdIntern": 454766,
+      "teamIdExtern": 82476,
+      "teamName": "DOMINIQUES BARCELONA NEGRE",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "c8ea9eb2-e758-4075-af1e-bb24ba7afe7b",
+      "playerActorId": 7457171,
+      "playerIdentityKey": "UUID:c8ea9eb2-e758-4075-af1e-bb24ba7afe7b",
+      "playerName": "ALBA LLAURADO SANCHEZ",
+      "shirtNumber": "10",
+      "games": 16,
+      "minutes": 417,
+      "points": 49,
+      "avgPoints": 3.0625,
+      "valuation": 15,
+      "avgValuation": 0.9375,
+      "fouls": 23,
+      "avgFouls": 1.4375
     },
     {
       "key": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80627:UUID:fdefc224-98d0-11e9-a2a5-0216824770c2:13",
@@ -379213,28 +379377,6 @@
       "avgValuation": 1.7857142857142858,
       "fouls": 11,
       "avgFouls": 0.7857142857142857
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476:UUID:c8ea9eb2-e758-4075-af1e-bb24ba7afe7b:10",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-      "teamIdIntern": 454766,
-      "teamIdExtern": 82476,
-      "teamName": "DOMINIQUES BARCELONA NEGRE",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "c8ea9eb2-e758-4075-af1e-bb24ba7afe7b",
-      "playerActorId": 7457171,
-      "playerIdentityKey": "UUID:c8ea9eb2-e758-4075-af1e-bb24ba7afe7b",
-      "playerName": "ALBA LLAURADO SANCHEZ",
-      "shirtNumber": "10",
-      "games": 15,
-      "minutes": 393,
-      "points": 47,
-      "avgPoints": 3.1333333333333333,
-      "valuation": 15,
-      "avgValuation": 1,
-      "fouls": 22,
-      "avgFouls": 1.4666666666666666
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78898:UUID:0153888b-98d1-11e9-a2a5-0216824770c2:4",
@@ -382383,28 +382525,6 @@
       "avgFouls": 1.9375
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889:UUID:4cad20bc-fcca-4718-ba63-03b9c71da081:28",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
-      "teamIdIntern": 456900,
-      "teamIdExtern": 80889,
-      "teamName": "U.E.MATAR\u00D3 - PRBF",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "4cad20bc-fcca-4718-ba63-03b9c71da081",
-      "playerActorId": 7494724,
-      "playerIdentityKey": "UUID:4cad20bc-fcca-4718-ba63-03b9c71da081",
-      "playerName": "GIULIETTA SCATOLINO GENIS",
-      "shirtNumber": "28",
-      "games": 18,
-      "minutes": 464,
-      "points": 45,
-      "avgPoints": 2.5,
-      "valuation": -3,
-      "avgValuation": -0.16666666666666666,
-      "fouls": 30,
-      "avgFouls": 1.6666666666666667
-    },
-    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719:UUID:b88e97e4-4a18-410e-8268-959aa1bb3a0a:13",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82719",
       "teamIdIntern": 455125,
@@ -384647,6 +384767,28 @@
       "avgValuation": 0,
       "fouls": 26,
       "avgFouls": 1.7333333333333334
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:e6fdb8d5-d01c-495d-8c0e-94018423f484:7",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
+      "teamIdIntern": 454419,
+      "teamIdExtern": 81178,
+      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "e6fdb8d5-d01c-495d-8c0e-94018423f484",
+      "playerActorId": 7451529,
+      "playerIdentityKey": "UUID:e6fdb8d5-d01c-495d-8c0e-94018423f484",
+      "playerName": "ABRIL AMBROJO DOMINGUEZ",
+      "shirtNumber": "7",
+      "games": 23,
+      "minutes": 449,
+      "points": 43,
+      "avgPoints": 1.8695652173913044,
+      "valuation": 9,
+      "avgValuation": 0.391304347826087,
+      "fouls": 23,
+      "avgFouls": 1
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80347:UUID:15656c6e-5d43-4ee1-9e40-98fe6d2dabbc:5",
@@ -387663,6 +387805,28 @@
       "avgFouls": 2.1
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:5fdd5882-6ed7-46a9-a945-4ec01d482d2f:8",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "5fdd5882-6ed7-46a9-a945-4ec01d482d2f",
+      "playerActorId": 7444853,
+      "playerIdentityKey": "UUID:5fdd5882-6ed7-46a9-a945-4ec01d482d2f",
+      "playerName": "M\u00D2NICA GARCIA ISERTE",
+      "shirtNumber": "8",
+      "games": 21,
+      "minutes": 484,
+      "points": 42,
+      "avgPoints": 2,
+      "valuation": 6,
+      "avgValuation": 0.2857142857142857,
+      "fouls": 31,
+      "avgFouls": 1.4761904761904763
+    },
+    {
       "key": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80725:UUID:ff571946-98d0-11e9-a2a5-0216824770c2:4",
       "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80725",
       "teamIdIntern": 452751,
@@ -390633,28 +390797,6 @@
       "avgFouls": 1
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:5fdd5882-6ed7-46a9-a945-4ec01d482d2f:8",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "5fdd5882-6ed7-46a9-a945-4ec01d482d2f",
-      "playerActorId": 7444853,
-      "playerIdentityKey": "UUID:5fdd5882-6ed7-46a9-a945-4ec01d482d2f",
-      "playerName": "M\u00D2NICA GARCIA ISERTE",
-      "shirtNumber": "8",
-      "games": 18,
-      "minutes": 412,
-      "points": 40,
-      "avgPoints": 2.2222222222222223,
-      "valuation": 8,
-      "avgValuation": 0.4444444444444444,
-      "fouls": 29,
-      "avgFouls": 1.6111111111111112
-    },
-    {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79314:UUID:42da24e4-3e20-4e6c-8ce7-c51ca472d855:11",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79314",
       "teamIdIntern": 453937,
@@ -391027,28 +391169,6 @@
       "avgValuation": -1.1818181818181819,
       "fouls": 12,
       "avgFouls": 1.0909090909090908
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178:UUID:e6fdb8d5-d01c-495d-8c0e-94018423f484:7",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
-      "teamIdIntern": 454419,
-      "teamIdExtern": 81178,
-      "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "e6fdb8d5-d01c-495d-8c0e-94018423f484",
-      "playerActorId": 7451529,
-      "playerIdentityKey": "UUID:e6fdb8d5-d01c-495d-8c0e-94018423f484",
-      "playerName": "ABRIL AMBROJO DOMINGUEZ",
-      "shirtNumber": "7",
-      "games": 22,
-      "minutes": 431,
-      "points": 39,
-      "avgPoints": 1.7727272727272727,
-      "valuation": 5,
-      "avgValuation": 0.22727272727272727,
-      "fouls": 23,
-      "avgFouls": 1.0454545454545454
     },
     {
       "key": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79237:UUID:fe74558e-9600-4fe8-bcfd-4893e862808f:10",
@@ -392757,14 +392877,14 @@
       "playerIdentityKey": "UUID:407c0f2c-af3a-4199-a608-a37b261f81ec",
       "playerName": "SANDRA RIBES TAPIAS",
       "shirtNumber": "95",
-      "games": 15,
-      "minutes": 365,
+      "games": 16,
+      "minutes": 389,
       "points": 39,
-      "avgPoints": 2.6,
-      "valuation": -13,
-      "avgValuation": -0.8666666666666667,
-      "fouls": 33,
-      "avgFouls": 2.2
+      "avgPoints": 2.4375,
+      "valuation": -17,
+      "avgValuation": -1.0625,
+      "fouls": 35,
+      "avgFouls": 2.1875
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81087:UUID:068c10cf-305f-46ab-a138-6f66a9bbaff9:5",
@@ -397311,14 +397431,14 @@
       "playerIdentityKey": "UUID:5bba636a-df71-4767-9b37-bbd772c23b43",
       "playerName": "LUCIA S\u00C1EZ HIJANO",
       "shirtNumber": "3",
-      "games": 16,
-      "minutes": 398,
+      "games": 17,
+      "minutes": 422,
       "points": 36,
-      "avgPoints": 2.25,
-      "valuation": -5,
-      "avgValuation": -0.3125,
-      "fouls": 29,
-      "avgFouls": 1.8125
+      "avgPoints": 2.1176470588235294,
+      "valuation": -6,
+      "avgValuation": -0.35294117647058826,
+      "fouls": 30,
+      "avgFouls": 1.7647058823529411
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80179:UUID:e4b44def-c6bf-45ef-8fc3-0a3875c15827:11",
@@ -403195,6 +403315,28 @@
       "avgFouls": 1.3181818181818181
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:96db3224-814e-4ad4-acc5-a935890dab3b:26",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "teamIdIntern": 453402,
+      "teamIdExtern": 81365,
+      "teamName": "CB MANYANET LES CORTS GROC",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "96db3224-814e-4ad4-acc5-a935890dab3b",
+      "playerActorId": 7434854,
+      "playerIdentityKey": "UUID:96db3224-814e-4ad4-acc5-a935890dab3b",
+      "playerName": "SIENA TORRENTS S\u00C1NCHEZ - HERMOSILLA",
+      "shirtNumber": "26",
+      "games": 14,
+      "minutes": 324,
+      "points": 33,
+      "avgPoints": 2.357142857142857,
+      "valuation": 14,
+      "avgValuation": 1,
+      "fouls": 13,
+      "avgFouls": 0.9285714285714286
+    },
+    {
       "key": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80306:UUID:06eea8db-7d06-4d31-82d9-97e1e51c7ce4:26",
       "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80306",
       "teamIdIntern": 449978,
@@ -403413,6 +403555,28 @@
       "avgValuation": 0.18181818181818182,
       "fouls": 20,
       "avgFouls": 0.9090909090909091
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df:22",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "teamIdIntern": 453402,
+      "teamIdExtern": 81365,
+      "teamName": "CB MANYANET LES CORTS GROC",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df",
+      "playerActorId": 7434850,
+      "playerIdentityKey": "UUID:a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df",
+      "playerName": "ANA LE\u00D3N MARZO",
+      "shirtNumber": "22",
+      "games": 19,
+      "minutes": 441,
+      "points": 32,
+      "avgPoints": 1.6842105263157894,
+      "valuation": -5,
+      "avgValuation": -0.2631578947368421,
+      "fouls": 22,
+      "avgFouls": 1.1578947368421053
     },
     {
       "key": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80071:UUID:fff99fde-98d0-11e9-a2a5-0216824770c2:37",
@@ -406705,14 +406869,14 @@
       "playerIdentityKey": "UUID:c0a426cd-9fcf-4f1b-b5d7-96ebac25f0ed",
       "playerName": "A.E.N.",
       "shirtNumber": "9",
-      "games": 18,
-      "minutes": 415,
+      "games": 21,
+      "minutes": 475,
       "points": 30,
-      "avgPoints": 1.6666666666666667,
+      "avgPoints": 1.4285714285714286,
       "valuation": 25,
-      "avgValuation": 1.3888888888888888,
+      "avgValuation": 1.1904761904761905,
       "fouls": 3,
-      "avgFouls": 0.16666666666666666
+      "avgFouls": 0.14285714285714285
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80154:UUID:00764c4e-98d1-11e9-a2a5-0216824770c2:12",
@@ -406801,28 +406965,6 @@
       "avgValuation": -0.09090909090909091,
       "fouls": 27,
       "avgFouls": 1.2272727272727273
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df:22",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-      "teamIdIntern": 453402,
-      "teamIdExtern": 81365,
-      "teamName": "CB MANYANET LES CORTS GROC",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df",
-      "playerActorId": 7434850,
-      "playerIdentityKey": "UUID:a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df",
-      "playerName": "ANA LE\u00D3N MARZO",
-      "shirtNumber": "22",
-      "games": 17,
-      "minutes": 393,
-      "points": 30,
-      "avgPoints": 1.7647058823529411,
-      "valuation": -3,
-      "avgValuation": -0.17647058823529413,
-      "fouls": 20,
-      "avgFouls": 1.1764705882352942
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81906:UUID:0019215b-98d1-11e9-a2a5-0216824770c2:10",
@@ -407637,6 +407779,28 @@
       "avgValuation": -0.21052631578947367,
       "fouls": 23,
       "avgFouls": 1.2105263157894737
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:9d29dcea-b90f-4813-a762-81232a8c2c50:16",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+      "teamIdIntern": 454013,
+      "teamIdExtern": 83018,
+      "teamName": "JAC SANTS BARCELONA U10",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "9d29dcea-b90f-4813-a762-81232a8c2c50",
+      "playerActorId": 7444850,
+      "playerIdentityKey": "UUID:9d29dcea-b90f-4813-a762-81232a8c2c50",
+      "playerName": "IVET CASANOVAS LLAVERIAS",
+      "shirtNumber": "16",
+      "games": 22,
+      "minutes": 497,
+      "points": 30,
+      "avgPoints": 1.3636363636363635,
+      "valuation": -15,
+      "avgValuation": -0.6818181818181818,
+      "fouls": 25,
+      "avgFouls": 1.1363636363636365
     },
     {
       "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78513:UUID:fead0b86-41cc-4009-8ef0-66d5686ccac4:24",
@@ -409927,28 +410091,6 @@
       "avgFouls": 2.3333333333333335
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:96db3224-814e-4ad4-acc5-a935890dab3b:26",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-      "teamIdIntern": 453402,
-      "teamIdExtern": 81365,
-      "teamName": "CB MANYANET LES CORTS GROC",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "96db3224-814e-4ad4-acc5-a935890dab3b",
-      "playerActorId": 7434854,
-      "playerIdentityKey": "UUID:96db3224-814e-4ad4-acc5-a935890dab3b",
-      "playerName": "SIENA TORRENTS S\u00C1NCHEZ - HERMOSILLA",
-      "shirtNumber": "26",
-      "games": 12,
-      "minutes": 276,
-      "points": 29,
-      "avgPoints": 2.4166666666666665,
-      "valuation": 10,
-      "avgValuation": 0.8333333333333334,
-      "fouls": 13,
-      "avgFouls": 1.0833333333333333
-    },
-    {
       "key": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:79754:UUID:9325e121-02ff-4ce6-b276-84313490cdca:18",
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:79754",
       "teamIdIntern": 455793,
@@ -410827,28 +410969,6 @@
       "avgValuation": 1.7777777777777777,
       "fouls": 8,
       "avgFouls": 0.8888888888888888
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018:UUID:9d29dcea-b90f-4813-a762-81232a8c2c50:16",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-      "teamIdIntern": 454013,
-      "teamIdExtern": 83018,
-      "teamName": "JAC SANTS BARCELONA U10",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "9d29dcea-b90f-4813-a762-81232a8c2c50",
-      "playerActorId": 7444850,
-      "playerIdentityKey": "UUID:9d29dcea-b90f-4813-a762-81232a8c2c50",
-      "playerName": "IVET CASANOVAS LLAVERIAS",
-      "shirtNumber": "16",
-      "games": 19,
-      "minutes": 438,
-      "points": 28,
-      "avgPoints": 1.4736842105263157,
-      "valuation": -12,
-      "avgValuation": -0.631578947368421,
-      "fouls": 20,
-      "avgFouls": 1.0526315789473684
     },
     {
       "key": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:78786:UUID:7311c50f-0dcf-471b-9d2a-4d0a14908b7a:13",
@@ -413833,14 +413953,14 @@
       "playerIdentityKey": "UUID:5104913e-22ed-41c9-a2c5-a68d86556ec4",
       "playerName": "AINA MAJORAL PERUL",
       "shirtNumber": "6",
-      "games": 13,
-      "minutes": 293,
+      "games": 14,
+      "minutes": 311,
       "points": 26,
-      "avgPoints": 2,
+      "avgPoints": 1.8571428571428572,
       "valuation": 22,
-      "avgValuation": 1.6923076923076923,
+      "avgValuation": 1.5714285714285714,
       "fouls": 4,
-      "avgFouls": 0.3076923076923077
+      "avgFouls": 0.2857142857142857
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80912:UUID:3517e78d-5a69-4f83-9535-e0429b03da2a:6",
@@ -415989,14 +416109,14 @@
       "playerIdentityKey": "UUID:917b9294-bb7c-4d43-b1e4-7494cc9124dc",
       "playerName": "IVET GRAUPERA ARBON\u00C8S",
       "shirtNumber": "76",
-      "games": 19,
-      "minutes": 492,
+      "games": 20,
+      "minutes": 517,
       "points": 25,
-      "avgPoints": 1.3157894736842106,
-      "valuation": 3,
-      "avgValuation": 0.15789473684210525,
-      "fouls": 11,
-      "avgFouls": 0.5789473684210527
+      "avgPoints": 1.25,
+      "valuation": 1,
+      "avgValuation": 0.05,
+      "fouls": 13,
+      "avgFouls": 0.65
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79701:UUID:012164f0-98d1-11e9-a2a5-0216824770c2:38",
@@ -416063,6 +416183,28 @@
       "avgValuation": 10.666666666666666,
       "fouls": 2,
       "avgFouls": 0.6666666666666666
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:0ad57e7c-a10e-4736-bb9e-0bc99838ba64:23",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 454078,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "0ad57e7c-a10e-4736-bb9e-0bc99838ba64",
+      "playerActorId": 7445980,
+      "playerIdentityKey": "UUID:0ad57e7c-a10e-4736-bb9e-0bc99838ba64",
+      "playerName": "JULIA LIZ MONTES",
+      "shirtNumber": "23",
+      "games": 21,
+      "minutes": 605,
+      "points": 25,
+      "avgPoints": 1.1904761904761905,
+      "valuation": -27,
+      "avgValuation": -1.2857142857142858,
+      "fouls": 48,
+      "avgFouls": 2.2857142857142856
     },
     {
       "key": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79864:UUID:62f1a6fe-5125-4fd1-a816-08285b00bdf6:2",
@@ -420333,28 +420475,6 @@
       "avgFouls": 0.5454545454545454
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:0ad57e7c-a10e-4736-bb9e-0bc99838ba64:23",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 454078,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "0ad57e7c-a10e-4736-bb9e-0bc99838ba64",
-      "playerActorId": 7445980,
-      "playerIdentityKey": "UUID:0ad57e7c-a10e-4736-bb9e-0bc99838ba64",
-      "playerName": "JULIA LIZ MONTES",
-      "shirtNumber": "23",
-      "games": 19,
-      "minutes": 543,
-      "points": 23,
-      "avgPoints": 1.2105263157894737,
-      "valuation": -23,
-      "avgValuation": -1.2105263157894737,
-      "fouls": 44,
-      "avgFouls": 2.3157894736842106
-    },
-    {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79485:UUID:00f086d5-98d1-11e9-a2a5-0216824770c2:14",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79485",
       "teamIdIntern": 455984,
@@ -422049,6 +422169,28 @@
       "avgFouls": 2.2
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:d2fdcbde-1299-49a9-a732-b7cc4379a185:5",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 454078,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "d2fdcbde-1299-49a9-a732-b7cc4379a185",
+      "playerActorId": 7445981,
+      "playerIdentityKey": "UUID:d2fdcbde-1299-49a9-a732-b7cc4379a185",
+      "playerName": "DANIELA LILLA NAVARRO",
+      "shirtNumber": "5",
+      "games": 22,
+      "minutes": 629,
+      "points": 22,
+      "avgPoints": 1,
+      "valuation": -47,
+      "avgValuation": -2.1363636363636362,
+      "fouls": 54,
+      "avgFouls": 2.4545454545454546
+    },
+    {
       "key": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028:UUID:5e15f785-8fc8-4613-b4c8-35ddf6367181:6",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028",
       "teamIdIntern": 510030,
@@ -423315,14 +423457,14 @@
       "playerIdentityKey": "UUID:fec835bb-9db1-407c-bc07-c7df6b346ad1",
       "playerName": "ONA RUETE LORENZO",
       "shirtNumber": "8",
-      "games": 18,
-      "minutes": 378,
+      "games": 19,
+      "minutes": 402,
       "points": 22,
-      "avgPoints": 1.2222222222222223,
+      "avgPoints": 1.1578947368421053,
       "valuation": 2,
-      "avgValuation": 0.1111111111111111,
+      "avgValuation": 0.10526315789473684,
       "fouls": 12,
-      "avgFouls": 0.6666666666666666
+      "avgFouls": 0.631578947368421
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79614:UUID:9111bcdc-1cae-4959-b17b-b942f2d354cc:77",
@@ -423403,14 +423545,14 @@
       "playerIdentityKey": "UUID:167086ab-a8a9-4a70-a8cc-044d437e319c",
       "playerName": "RIM MESEGUER GARCIA",
       "shirtNumber": "8",
-      "games": 18,
-      "minutes": 450,
+      "games": 19,
+      "minutes": 473,
       "points": 22,
-      "avgPoints": 1.2222222222222223,
-      "valuation": 11,
-      "avgValuation": 0.6111111111111112,
-      "fouls": 5,
-      "avgFouls": 0.2777777777777778
+      "avgPoints": 1.1578947368421053,
+      "valuation": 9,
+      "avgValuation": 0.47368421052631576,
+      "fouls": 7,
+      "avgFouls": 0.3684210526315789
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81530:UUID:dac4d959-5595-4138-b20e-0f795f28d373:6",
@@ -428353,14 +428495,14 @@
       "playerIdentityKey": "UUID:279e6f9e-3e7a-4d1e-b8d5-2f767f334340",
       "playerName": "CARLA PEIR\u00D3N COCERA",
       "shirtNumber": "26",
-      "games": 15,
-      "minutes": 391,
+      "games": 16,
+      "minutes": 415,
       "points": 19,
-      "avgPoints": 1.2666666666666666,
-      "valuation": -14,
-      "avgValuation": -0.9333333333333333,
-      "fouls": 25,
-      "avgFouls": 1.6666666666666667
+      "avgPoints": 1.1875,
+      "valuation": -17,
+      "avgValuation": -1.0625,
+      "fouls": 28,
+      "avgFouls": 1.75
     },
     {
       "key": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80010:UUID:e5b1d175-86f3-40fd-bc02-59c01ba9a95a:8",
@@ -428559,28 +428701,6 @@
       "avgValuation": -1.2727272727272727,
       "fouls": 29,
       "avgFouls": 2.6363636363636362
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:d2fdcbde-1299-49a9-a732-b7cc4379a185:5",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 454078,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "d2fdcbde-1299-49a9-a732-b7cc4379a185",
-      "playerActorId": 7445981,
-      "playerIdentityKey": "UUID:d2fdcbde-1299-49a9-a732-b7cc4379a185",
-      "playerName": "DANIELA LILLA NAVARRO",
-      "shirtNumber": "5",
-      "games": 20,
-      "minutes": 571,
-      "points": 19,
-      "avgPoints": 0.95,
-      "valuation": -47,
-      "avgValuation": -2.35,
-      "fouls": 51,
-      "avgFouls": 2.55
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83498:UUID:ff058dcb-98d0-11e9-a2a5-0216824770c2:7",
@@ -432056,6 +432176,28 @@
       "valuation": 13,
       "avgValuation": 3.25,
       "fouls": 3,
+      "avgFouls": 0.75
+    },
+    {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:86aa50e1-91e1-4f67-bbad-eedba7a4958d:7",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
+      "teamIdIntern": 453402,
+      "teamIdExtern": 81365,
+      "teamName": "CB MANYANET LES CORTS GROC",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "86aa50e1-91e1-4f67-bbad-eedba7a4958d",
+      "playerActorId": 7434858,
+      "playerIdentityKey": "UUID:86aa50e1-91e1-4f67-bbad-eedba7a4958d",
+      "playerName": "MARTINA OBRAD\u00D3 GRANELL",
+      "shirtNumber": "7",
+      "games": 16,
+      "minutes": 325,
+      "points": 18,
+      "avgPoints": 1.125,
+      "valuation": -2,
+      "avgValuation": -0.125,
+      "fouls": 12,
       "avgFouls": 0.75
     },
     {
@@ -436471,14 +436613,14 @@
       "playerIdentityKey": "UUID:1b9136f8-eddc-43f1-98f2-00a3bfe81c5f",
       "playerName": "MARIA BERNSHTAM BATLLE",
       "shirtNumber": "8",
-      "games": 15,
-      "minutes": 365,
+      "games": 16,
+      "minutes": 389,
       "points": 16,
-      "avgPoints": 1.0666666666666667,
-      "valuation": -12,
-      "avgValuation": -0.8,
-      "fouls": 21,
-      "avgFouls": 1.4
+      "avgPoints": 1,
+      "valuation": -13,
+      "avgValuation": -0.8125,
+      "fouls": 22,
+      "avgFouls": 1.375
     },
     {
       "key": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79252:UUID:016c36c4-98d1-11e9-a2a5-0216824770c2:52",
@@ -436655,28 +436797,6 @@
       "avgValuation": 2,
       "fouls": 4,
       "avgFouls": 1
-    },
-    {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:86aa50e1-91e1-4f67-bbad-eedba7a4958d:7",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
-      "teamIdIntern": 453402,
-      "teamIdExtern": 81365,
-      "teamName": "CB MANYANET LES CORTS GROC",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "86aa50e1-91e1-4f67-bbad-eedba7a4958d",
-      "playerActorId": 7434858,
-      "playerIdentityKey": "UUID:86aa50e1-91e1-4f67-bbad-eedba7a4958d",
-      "playerName": "MARTINA OBRAD\u00D3 GRANELL",
-      "shirtNumber": "7",
-      "games": 14,
-      "minutes": 277,
-      "points": 16,
-      "avgPoints": 1.1428571428571428,
-      "valuation": -4,
-      "avgValuation": -0.2857142857142857,
-      "fouls": 12,
-      "avgFouls": 0.8571428571428571
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365:UUID:30531024-78f6-4d98-a762-7b05b92d80f9:16",
@@ -437263,14 +437383,14 @@
       "playerIdentityKey": "UUID:bba6aa89-9f49-4090-8644-5e08f24e4fbd",
       "playerName": "TELMA LOPEZ TOMILLERO",
       "shirtNumber": "15",
-      "games": 14,
-      "minutes": 297,
+      "games": 15,
+      "minutes": 315,
       "points": 16,
-      "avgPoints": 1.1428571428571428,
-      "valuation": -10,
-      "avgValuation": -0.7142857142857143,
-      "fouls": 21,
-      "avgFouls": 1.5
+      "avgPoints": 1.0666666666666667,
+      "valuation": -11,
+      "avgValuation": -0.7333333333333333,
+      "fouls": 22,
+      "avgFouls": 1.4666666666666666
     },
     {
       "key": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85622:UUID:owbasket_7a19ef70-9665-4459-a4c3-673b9fdc915e:6",
@@ -442553,6 +442673,28 @@
       "avgFouls": 2
     },
     {
+      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:90a3ae43-33ac-4ad7-a4ae-ee8b9c2564bf:7",
+      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+      "teamIdIntern": 454078,
+      "teamIdExtern": 81071,
+      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "playerUuid": "90a3ae43-33ac-4ad7-a4ae-ee8b9c2564bf",
+      "playerActorId": 7445984,
+      "playerIdentityKey": "UUID:90a3ae43-33ac-4ad7-a4ae-ee8b9c2564bf",
+      "playerName": "ARLET PEREZ RODRIGUEZ",
+      "shirtNumber": "7",
+      "games": 19,
+      "minutes": 494,
+      "points": 13,
+      "avgPoints": 0.6842105263157895,
+      "valuation": -3,
+      "avgValuation": -0.15789473684210525,
+      "fouls": 7,
+      "avgFouls": 0.3684210526315789
+    },
+    {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78662:UUID:012f1570-98d1-11e9-a2a5-0216824770c2:0",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78662",
       "teamIdIntern": 472876,
@@ -444831,14 +444973,14 @@
       "playerIdentityKey": "UUID:c3157839-e1a1-4ef7-9bd2-55c38eb190be",
       "playerName": "AITANA SALVADOR CERESUELA",
       "shirtNumber": "1",
-      "games": 21,
-      "minutes": 389,
+      "games": 22,
+      "minutes": 407,
       "points": 12,
-      "avgPoints": 0.5714285714285714,
+      "avgPoints": 0.5454545454545454,
       "valuation": 3,
-      "avgValuation": 0.14285714285714285,
+      "avgValuation": 0.13636363636363635,
       "fouls": 5,
-      "avgFouls": 0.23809523809523808
+      "avgFouls": 0.22727272727272727
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80957:UUID:00efb98b-98d1-11e9-a2a5-0216824770c2:44",
@@ -447273,14 +447415,14 @@
       "playerIdentityKey": "UUID:f7d1ae88-0267-4a0e-910c-261a2fa44992",
       "playerName": "PAULA OSES FUMANAL",
       "shirtNumber": "4",
-      "games": 14,
-      "minutes": 260,
+      "games": 15,
+      "minutes": 278,
       "points": 12,
-      "avgPoints": 0.8571428571428571,
+      "avgPoints": 0.8,
       "valuation": -6,
-      "avgValuation": -0.42857142857142855,
+      "avgValuation": -0.4,
       "fouls": 16,
-      "avgFouls": 1.1428571428571428
+      "avgFouls": 1.0666666666666667
     },
     {
       "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79530:UUID:881209fe-0741-4b33-a22c-eb5815e5ef73:19",
@@ -452135,14 +452277,14 @@
       "playerIdentityKey": "UUID:95da9f0c-5f10-47dd-80b5-870e2690d014",
       "playerName": "EMMA PAULO SOUTO",
       "shirtNumber": "30",
-      "games": 17,
-      "minutes": 435,
+      "games": 18,
+      "minutes": 459,
       "points": 10,
-      "avgPoints": 0.5882352941176471,
+      "avgPoints": 0.5555555555555556,
       "valuation": -18,
-      "avgValuation": -1.0588235294117647,
+      "avgValuation": -1,
       "fouls": 15,
-      "avgFouls": 0.8823529411764706
+      "avgFouls": 0.8333333333333334
     },
     {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80003:UUID:00868237-98d1-11e9-a2a5-0216824770c2:8",
@@ -457129,14 +457271,14 @@
       "playerIdentityKey": "UUID:53123ba8-86eb-4869-b669-656a30302c42",
       "playerName": "OLIVIA D\u00CDAZ IGLESIAS",
       "shirtNumber": "19",
-      "games": 13,
-      "minutes": 240,
+      "games": 14,
+      "minutes": 258,
       "points": 9,
-      "avgPoints": 0.6923076923076923,
+      "avgPoints": 0.6428571428571429,
       "valuation": 3,
-      "avgValuation": 0.23076923076923078,
+      "avgValuation": 0.21428571428571427,
       "fouls": 6,
-      "avgFouls": 0.46153846153846156
+      "avgFouls": 0.42857142857142855
     },
     {
       "key": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80932:UUID:00bc8819-98d1-11e9-a2a5-0216824770c2:8",
@@ -459857,14 +459999,14 @@
       "playerIdentityKey": "UUID:c5850c3e-9c11-48a8-8de1-9fa5a779f38a",
       "playerName": "LAURA JOVELLS SOLER",
       "shirtNumber": "23",
-      "games": 12,
-      "minutes": 245,
+      "games": 13,
+      "minutes": 263,
       "points": 8,
-      "avgPoints": 0.6666666666666666,
+      "avgPoints": 0.6153846153846154,
       "valuation": -2,
-      "avgValuation": -0.16666666666666666,
+      "avgValuation": -0.15384615384615385,
       "fouls": 10,
-      "avgFouls": 0.8333333333333334
+      "avgFouls": 0.7692307692307693
     },
     {
       "key": "2025-2026::LIGA FEMENINA DE BALONCESTO::TEAM:81376:UUID:53d073c3-5cb2-4706-9c35-dbcc0529a7ac:15",
@@ -466071,28 +466213,6 @@
       "avgFouls": 1.3333333333333333
     },
     {
-      "key": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071:UUID:90a3ae43-33ac-4ad7-a4ae-ee8b9c2564bf:7",
-      "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-      "teamIdIntern": 454078,
-      "teamIdExtern": 81071,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "playerUuid": "90a3ae43-33ac-4ad7-a4ae-ee8b9c2564bf",
-      "playerActorId": 7445984,
-      "playerIdentityKey": "UUID:90a3ae43-33ac-4ad7-a4ae-ee8b9c2564bf",
-      "playerName": "ARLET PEREZ RODRIGUEZ",
-      "shirtNumber": "7",
-      "games": 17,
-      "minutes": 440,
-      "points": 6,
-      "avgPoints": 0.35294117647058826,
-      "valuation": -3,
-      "avgValuation": -0.17647058823529413,
-      "fouls": 3,
-      "avgFouls": 0.17647058823529413
-    },
-    {
       "key": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83271:UUID:546b2c18-ef2f-4cd7-be60-56a36c4c8ace:19",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83271",
       "teamIdIntern": 518658,
@@ -467359,14 +467479,14 @@
       "playerIdentityKey": "UUID:013243b8-febb-414c-9f52-e0590cde2af7",
       "playerName": "IN\u00C9S MARQU\u00C9S NICOL\u00C1S",
       "shirtNumber": "33",
-      "games": 16,
-      "minutes": 320,
+      "games": 17,
+      "minutes": 338,
       "points": 6,
-      "avgPoints": 0.375,
-      "valuation": -29,
-      "avgValuation": -1.8125,
-      "fouls": 35,
-      "avgFouls": 2.1875
+      "avgPoints": 0.35294117647058826,
+      "valuation": -32,
+      "avgValuation": -1.8823529411764706,
+      "fouls": 38,
+      "avgFouls": 2.235294117647059
     },
     {
       "key": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658:UUID:9419b931-2731-4b81-9a19-d3f763038b39:25",
@@ -488127,14 +488247,14 @@
       "playerIdentityKey": "UUID:f3dcdafd-42f2-4346-9eb4-bb69fe4738ee",
       "playerName": "CHLOE FELICES RUIZ",
       "shirtNumber": "18",
-      "games": 19,
-      "minutes": 515,
+      "games": 20,
+      "minutes": 539,
       "points": 2,
-      "avgPoints": 0.10526315789473684,
+      "avgPoints": 0.1,
       "valuation": -4,
-      "avgValuation": -0.21052631578947367,
+      "avgValuation": -0.2,
       "fouls": 4,
-      "avgFouls": 0.21052631578947367
+      "avgFouls": 0.2
     },
     {
       "key": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:80166:PLAYER:67061760783210054:23",
@@ -508213,12 +508333,12 @@
       "playerIdentityKey": "UUID:c535ba23-6f68-4c8a-887a-85c12397a819",
       "playerName": "IRIA ASTALS D\u00CDAZ",
       "shirtNumber": "3",
-      "games": 1,
-      "minutes": 30,
+      "games": 2,
+      "minutes": 54,
       "points": 0,
       "avgPoints": 0,
-      "valuation": 0,
-      "avgValuation": 0,
+      "valuation": -3,
+      "avgValuation": -1.5,
       "fouls": 0,
       "avgFouls": 0
     },
@@ -520665,8 +520785,8 @@
       "playerIdentityKey": "UUID:12f88fca-e523-48dc-90f3-3834cc4a7bab",
       "playerName": "ZOE JIM\u00C9NEZ ECHENIQUE",
       "shirtNumber": "2",
-      "games": 1,
-      "minutes": 30,
+      "games": 2,
+      "minutes": 54,
       "points": 0,
       "avgPoints": 0,
       "valuation": 0,

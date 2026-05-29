@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-05-21T19:03:29.221253Z",
+  "generatedAtUtc": "2026-05-29T22:05:22.404023Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -3880,16 +3880,16 @@
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 22,
+          "matchesPlayed": 23,
           "playersCount": 12,
-          "pointsFor": 1294,
-          "pointsAgainst": 398,
-          "pointDiff": 896,
-          "wins": 20,
+          "pointsFor": 1398,
+          "pointsAgainst": 405,
+          "pointDiff": 993,
+          "wins": 21,
           "losses": 2,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 39.90909090909091
+          "avgValuation": 42.17391304347826
         }
       ]
     },
@@ -7380,16 +7380,16 @@
           "teamName": "CB MANYANET LES CORTS GROC",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 19,
+          "matchesPlayed": 21,
           "playersCount": 17,
-          "pointsFor": 464,
-          "pointsAgainst": 679,
-          "pointDiff": -215,
+          "pointsFor": 485,
+          "pointsAgainst": 828,
+          "pointDiff": -343,
           "wins": 7,
-          "losses": 12,
+          "losses": 14,
           "ties": 0,
           "standingPosition": 4,
-          "avgValuation": 5
+          "avgValuation": 4.380952380952381
         }
       ]
     },
@@ -10731,16 +10731,16 @@
           "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 20,
+          "matchesPlayed": 22,
           "playersCount": 9,
-          "pointsFor": 581,
-          "pointsAgainst": 790,
-          "pointDiff": -209,
+          "pointsFor": 628,
+          "pointsAgainst": 883,
+          "pointDiff": -255,
           "wins": 10,
-          "losses": 10,
+          "losses": 12,
           "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 8.9
+          "standingPosition": 3,
+          "avgValuation": 8.136363636363637
         }
       ]
     },
@@ -12411,16 +12411,16 @@
           "teamName": "DOMINIQUES BARCELONA NEGRE",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 17,
+          "matchesPlayed": 18,
           "playersCount": 12,
-          "pointsFor": 472,
-          "pointsAgainst": 416,
-          "pointDiff": 56,
+          "pointsFor": 490,
+          "pointsAgainst": 461,
+          "pointDiff": 29,
           "wins": 10,
-          "losses": 7,
+          "losses": 8,
           "ties": 0,
           "standingPosition": 2,
-          "avgValuation": 4
+          "avgValuation": 3.8333333333333335
         }
       ]
     },
@@ -14791,16 +14791,16 @@
           "teamName": "JAC SANTS BARCELONA U10",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 21,
+          "matchesPlayed": 24,
           "playersCount": 12,
-          "pointsFor": 1349,
-          "pointsAgainst": 528,
-          "pointDiff": 821,
-          "wins": 17,
+          "pointsFor": 1486,
+          "pointsAgainst": 589,
+          "pointDiff": 897,
+          "wins": 20,
           "losses": 4,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 45.38095238095238
+          "avgValuation": 42.916666666666664
         }
       ]
     },
@@ -21586,16 +21586,16 @@
           "teamName": "U.E.MATAR\u00D3 - PRBF",
           "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 19,
+          "matchesPlayed": 20,
           "playersCount": 11,
-          "pointsFor": 999,
-          "pointsAgainst": 473,
-          "pointDiff": 526,
-          "wins": 14,
+          "pointsFor": 1045,
+          "pointsAgainst": 491,
+          "pointDiff": 554,
+          "wins": 15,
           "losses": 5,
           "ties": 0,
           "standingPosition": 1,
-          "avgValuation": 34.10526315789474
+          "avgValuation": 33.15
         }
       ]
     },

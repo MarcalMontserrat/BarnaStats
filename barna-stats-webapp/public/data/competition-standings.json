@@ -24058,79 +24058,79 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "01",
-      "matchesCount": 8,
+      "matchesCount": 13,
       "rows": [
         {
           "position": 1,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
           "teamName": "C.B GRUP BARNA VERMELL  1ER ANY",
-          "played": 4,
-          "wins": 4,
+          "played": 5,
+          "wins": 5,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 289,
-          "pointsAgainst": 70,
-          "pointDiff": 219
+          "pointsFor": 393,
+          "pointsAgainst": 77,
+          "pointDiff": 316
         },
         {
           "position": 2,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80889",
           "teamName": "U.E.MATAR\u00D3 - PRBF",
-          "played": 3,
-          "wins": 2,
+          "played": 4,
+          "wins": 3,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 108,
-          "pointsAgainst": 138,
-          "pointDiff": -30
+          "pointsFor": 154,
+          "pointsAgainst": 156,
+          "pointDiff": -2
         },
         {
           "position": 3,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
-          "teamName": "DOMINIQUES BARCELONA NEGRE",
-          "played": 2,
-          "wins": 1,
-          "losses": 1,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
+          "teamName": "JAC SANTS BARCELONA U10",
+          "played": 5,
+          "wins": 3,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 53,
-          "pointsAgainst": 66,
-          "pointDiff": -13
+          "pointsFor": 216,
+          "pointsAgainst": 178,
+          "pointDiff": 38
         },
         {
           "position": 4,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
-          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-          "played": 2,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
+          "teamName": "DOMINIQUES BARCELONA NEGRE",
+          "played": 3,
           "wins": 1,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 28,
-          "pointsAgainst": 102,
-          "pointDiff": -74
+          "pointsFor": 71,
+          "pointsAgainst": 111,
+          "pointDiff": -40
         },
         {
           "position": 5,
-          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83018",
-          "teamName": "JAC SANTS BARCELONA U10",
-          "played": 2,
-          "wins": 0,
-          "losses": 2,
+          "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
+          "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
+          "played": 4,
+          "wins": 1,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 79,
-          "pointsAgainst": 117,
-          "pointDiff": -38
+          "pointsFor": 75,
+          "pointsAgainst": 195,
+          "pointDiff": -120
         },
         {
           "position": 6,
           "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81365",
           "teamName": "CB MANYANET LES CORTS GROC",
-          "played": 3,
+          "played": 5,
           "wins": 0,
-          "losses": 3,
+          "losses": 5,
           "ties": 0,
-          "pointsFor": 45,
-          "pointsAgainst": 109,
-          "pointDiff": -64
+          "pointsFor": 66,
+          "pointsAgainst": 258,
+          "pointDiff": -192
         }
       ]
     }
