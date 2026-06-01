@@ -9,6 +9,17 @@ import {
 } from "recharts";
 import PrettySelect from "./PrettySelect.jsx";
 
+const TABLE_STAT_ROWS = [
+    {label: "Puntos", key: (row) => row.points},
+    {label: "Valoración", key: (row) => row.valuation},
+    {label: "Minutos", key: (row) => row.minutes},
+    {label: "Faltas", key: (row) => row.fouls},
+    {label: "+/-", key: (row) => row.plusMinus >= 0 ? `+${row.plusMinus}` : String(row.plusMinus)},
+    {label: "TL", key: (row) => `${row.ftMade}/${row.ftAttempted}`},
+    {label: "T2", key: (row) => `${row.twoMade}/${row.twoAttempted}`},
+    {label: "T3", key: (row) => `${row.threeMade}/${row.threeAttempted}`}
+];
+
 const styles = {
     panel: {
         display: "grid",
@@ -86,6 +97,62 @@ const styles = {
         background: "rgba(245, 236, 224, 0.8)",
         border: "1px dashed rgba(107, 86, 58, 0.22)",
         color: "var(--muted)"
+    },
+    tableWrapper: {
+        overflowX: "auto",
+        borderRadius: "var(--radius-lg)",
+        border: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    table: {
+        width: "100%",
+        borderCollapse: "collapse",
+        fontSize: 13
+    },
+    tableHead: {
+        background: "linear-gradient(180deg, rgba(250, 238, 222, 0.8) 0%, rgba(245, 232, 216, 0.7) 100%)"
+    },
+    tableHeadLabel: {
+        padding: "10px 14px",
+        textAlign: "left",
+        fontWeight: 800,
+        fontSize: 11,
+        textTransform: "uppercase",
+        letterSpacing: "0.08em",
+        color: "var(--muted)",
+        whiteSpace: "nowrap",
+        borderBottom: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    tableHeadMatch: {
+        padding: "10px 12px",
+        textAlign: "center",
+        fontWeight: 700,
+        fontSize: 12,
+        color: "var(--navy)",
+        whiteSpace: "nowrap",
+        borderBottom: "1px solid rgba(107, 86, 58, 0.1)"
+    },
+    tableRow: {
+        borderBottom: "1px solid rgba(107, 86, 58, 0.06)"
+    },
+    tableRowAlt: {
+        borderBottom: "1px solid rgba(107, 86, 58, 0.06)",
+        background: "rgba(250, 238, 222, 0.25)"
+    },
+    tableCellLabel: {
+        padding: "9px 14px",
+        fontWeight: 700,
+        fontSize: 12,
+        textTransform: "uppercase",
+        letterSpacing: "0.06em",
+        color: "var(--muted)",
+        whiteSpace: "nowrap"
+    },
+    tableCellValue: {
+        padding: "9px 12px",
+        textAlign: "center",
+        fontFamily: "var(--font-display)",
+        fontSize: "0.95rem",
+        color: "var(--fg)"
     }
 };
 
@@ -267,6 +334,38 @@ function PlayerEvolutionSection({
                             </LineChart>
                         </ResponsiveContainer>
                     </div>
+
+                    {chartData.length > 0 ? (
+                        <div style={styles.tableWrapper}>
+                            <table style={styles.table}>
+                                <thead style={styles.tableHead}>
+                                    <tr>
+                                        <th style={styles.tableHeadLabel}>Estadística</th>
+                                        {chartData.map((row) => (
+                                            <th key={row.matchId} style={styles.tableHeadMatch}>
+                                                {row.match}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {TABLE_STAT_ROWS.map((stat, i) => (
+                                        <tr
+                                            key={stat.label}
+                                            style={i % 2 === 0 ? styles.tableRow : styles.tableRowAlt}
+                                        >
+                                            <td style={styles.tableCellLabel}>{stat.label}</td>
+                                            {chartData.map((row) => (
+                                                <td key={row.matchId} style={styles.tableCellValue}>
+                                                    {stat.key(row)}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    ) : null}
                 </>
             ) : (
                 <div style={styles.emptyState}>

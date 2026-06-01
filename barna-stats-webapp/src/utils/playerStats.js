@@ -126,7 +126,16 @@ export function getChartData(players, selectedPlayer, selectedPhase) {
                 : `F${row.phaseNumber ?? "-"} · J${row.phaseRound ?? "-"}`,
             matchId: row.matchWebId,
             points: Number(row.points),
-            valuation: Number(row.valuation)
+            valuation: Number(row.valuation),
+            minutes: Number(row.minutes ?? 0),
+            fouls: Number(row.fouls ?? 0),
+            plusMinus: Number(row.plusMinus ?? 0),
+            ftMade: Number(row.ftMade ?? 0),
+            ftAttempted: Number(row.ftAttempted ?? 0),
+            twoMade: Number(row.twoMade ?? 0),
+            twoAttempted: Number(row.twoAttempted ?? 0),
+            threeMade: Number(row.threeMade ?? 0),
+            threeAttempted: Number(row.threeAttempted ?? 0)
         }));
 }
 
