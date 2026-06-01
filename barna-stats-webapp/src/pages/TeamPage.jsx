@@ -82,7 +82,7 @@ const TEAM_TABS = [
 
 function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
     const initialHashState = parseHash(window.location.hash);
-    const [selectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
+    const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
     const [selectedTeamGender, setSelectedTeamGender] = useState("all");
     const [selectedTeamLevel, setSelectedTeamLevel] = useState("all");
     const [selectedTeamCategory, setSelectedTeamCategory] = useState("all");
@@ -319,6 +319,18 @@ function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
         ? "Clasificación acumulada"
         : `Clasificación de ${buildCompetitionPhaseLabel(selectedPhaseContext)}`;
     const teamHeroSummary = `${selectedTeamSummary?.matchesPlayed ?? 0} partidos en total · ${selectedTeamSummary?.playersCount ?? 0} jugadoras registradas`;
+
+    useEffect(() => {
+        const handleHashChange = () => {
+            const nextState = parseHash(window.location.hash);
+            if (nextState.route === "dashboard") {
+                setSelectedTeamKey(nextState.teamKey ?? "");
+            }
+        };
+
+        window.addEventListener("hashchange", handleHashChange);
+        return () => window.removeEventListener("hashchange", handleHashChange);
+    }, []);
 
     useEffect(() => {
         if (!effectiveTeamKey || effectiveTeamKey === selectedTeamKey) {
