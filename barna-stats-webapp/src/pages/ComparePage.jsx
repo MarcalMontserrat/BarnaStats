@@ -3,6 +3,7 @@ import AutocompleteField from "../components/AutocompleteField.jsx";
 import {useAnalysisData} from "../hooks/useAnalysisData.js";
 import {
     aggregateStandingRows,
+    buildCategorySlug,
     buildLatestTeamContextByKey,
     buildTeamRecord,
     getLongestWinStreak
@@ -55,21 +56,34 @@ function ComparePage({analysisVersion}) {
     const {
         analysis: analysisIndex,
         loading: analysisIndexLoading
-    } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
-    const {
-        analysis: competitionStandingsDataset
-    } = useAnalysisData(`data/competition-standings.json?v=${analysisVersion}`);
+    } = useAnalysisData(`data/analysis-light.json?v=${analysisVersion}`);
     const {
         analysis: historicalPlayersDirectory,
         loading: historicalPlayersLoading
-    } = useAnalysisData(`data/archive/players.json?v=${analysisVersion}`);
+    } = useAnalysisData(`data/archive/players-index.json?v=${analysisVersion}`);
 
     const teams = analysisIndex?.teams ?? EMPTY_LIST;
     const latestTeamContexts = useMemo(() => buildLatestTeamContextByKey(teams), [teams]);
-    const competitionStandingScopes = competitionStandingsDataset?.scopes ?? EMPTY_LIST;
     const sortedTeams = useMemo(
         () => [...teams].sort((a, b) => a.teamName.localeCompare(b.teamName, "es")),
         [teams]
+    );
+
+    const compareTeam1Category = String(latestTeamContexts.get(compareTeamKey1)?.categoryName ?? "").trim();
+    const compareTeam2Category = String(latestTeamContexts.get(compareTeamKey2)?.categoryName ?? "").trim();
+    const {
+        analysis: compareTeam1StandingsDataset
+    } = useAnalysisData(
+        compareTeam1Category
+            ? `data/competition-standings/${buildCategorySlug(compareTeam1Category)}.json?v=${analysisVersion}`
+            : null
+    );
+    const {
+        analysis: compareTeam2StandingsDataset
+    } = useAnalysisData(
+        compareTeam2Category && compareTeam2Category !== compareTeam1Category
+            ? `data/competition-standings/${buildCategorySlug(compareTeam2Category)}.json?v=${analysisVersion}`
+            : null
     );
 
     const compareTeam1SummaryFromIndex = useMemo(
@@ -149,38 +163,25 @@ function ComparePage({analysisVersion}) {
     const compareTeam2Mvp = useMemo(() => getMvp(compareTeam2PlayersArray), [compareTeam2PlayersArray]);
     const compareTeam1Avg = useMemo(() => getTeamAverage(compareTeam1PlayersArr), [compareTeam1PlayersArr]);
     const compareTeam2Avg = useMemo(() => getTeamAverage(compareTeam2PlayersArr), [compareTeam2PlayersArr]);
-    const compareTeam1CategoryName = String(compareTeam1SummaryFromIndex
-        ? (latestTeamContexts.get(compareTeamKey1)?.categoryName ?? "")
-        : ""
-    ).trim();
-    const compareTeam2CategoryName = String(compareTeam2SummaryFromIndex
-        ? (latestTeamContexts.get(compareTeamKey2)?.categoryName ?? "")
-        : ""
-    ).trim();
     const compareTeam1StandingRow = useMemo(() => {
-        if (!compareTeamKey1 || !compareTeam1CategoryName) {
+        if (!compareTeamKey1) {
             return null;
         }
 
-        const rows = aggregateStandingRows(
-            competitionStandingScopes
-                .filter((scope) => String(scope?.categoryName ?? "").trim() === compareTeam1CategoryName)
-                .flatMap((scope) => scope?.rows ?? [])
-        );
+        const scopes = (compareTeam1StandingsDataset ?? compareTeam2StandingsDataset)?.scopes ?? EMPTY_LIST;
+        const rows = aggregateStandingRows(scopes.flatMap((scope) => scope?.rows ?? []));
         return rows.find((row) => row.teamKey === compareTeamKey1) ?? null;
-    }, [compareTeam1CategoryName, compareTeamKey1, competitionStandingScopes]);
+    }, [compareTeamKey1, compareTeam1StandingsDataset, compareTeam2StandingsDataset]);
     const compareTeam2StandingRow = useMemo(() => {
-        if (!compareTeamKey2 || !compareTeam2CategoryName) {
+        if (!compareTeamKey2) {
             return null;
         }
 
-        const rows = aggregateStandingRows(
-            competitionStandingScopes
-                .filter((scope) => String(scope?.categoryName ?? "").trim() === compareTeam2CategoryName)
-                .flatMap((scope) => scope?.rows ?? [])
-        );
+        const dataset = compareTeam2StandingsDataset ?? compareTeam1StandingsDataset;
+        const scopes = dataset?.scopes ?? EMPTY_LIST;
+        const rows = aggregateStandingRows(scopes.flatMap((scope) => scope?.rows ?? []));
         return rows.find((row) => row.teamKey === compareTeamKey2) ?? null;
-    }, [compareTeam2CategoryName, compareTeamKey2, competitionStandingScopes]);
+    }, [compareTeamKey2, compareTeam1StandingsDataset, compareTeam2StandingsDataset]);
 
     const compareTeamOptions = useMemo(
         () => sortFilterOptions(sortedTeams.map((team) => {

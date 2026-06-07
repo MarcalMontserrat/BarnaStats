@@ -1,0 +1,117 @@
+{
+  "seasonStartYear": 2025,
+  "seasonLabel": "2025-2026",
+  "scopes": [
+    {
+      "key": "source:2025-2026:19889",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "sourcePhaseId": 19889,
+      "phaseNumber": 1,
+      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
+      "phaseName": "Primera Fase",
+      "levelName": "",
+      "levelCode": "",
+      "groupCode": "01",
+      "matchesCount": 56,
+      "rows": [
+        {
+          "position": 1,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80170",
+          "teamName": "JOVENTUT BADALONA 1",
+          "played": 14,
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1094,
+          "pointsAgainst": 566,
+          "pointDiff": 528
+        },
+        {
+          "position": 2,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79800",
+          "teamName": "LLU\u00CFSOS DE GR\u00C0CIA",
+          "played": 14,
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 966,
+          "pointsAgainst": 626,
+          "pointDiff": 340
+        },
+        {
+          "position": 3,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79489",
+          "teamName": "FEMENI MARESME 3 VILES - IF",
+          "played": 14,
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 889,
+          "pointsAgainst": 647,
+          "pointDiff": 242
+        },
+        {
+          "position": 4,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79965",
+          "teamName": "U14 JOVENTUT LES CORTS",
+          "played": 14,
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 892,
+          "pointsAgainst": 670,
+          "pointDiff": 222
+        },
+        {
+          "position": 5,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79660",
+          "teamName": "TALENOM BOET MATAR\u00D3",
+          "played": 14,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 618,
+          "pointsAgainst": 803,
+          "pointDiff": -185
+        },
+        {
+          "position": 6,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79219",
+          "teamName": "ESCOLA IPSI 12",
+          "played": 14,
+          "wins": 4,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 753,
+          "pointsAgainst": 871,
+          "pointDiff": -118
+        },
+        {
+          "position": 7,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80140",
+          "teamName": "BC MORABANC ANDORRA N\u00DARIA TINTORERIES",
+          "played": 14,
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 661,
+          "pointsAgainst": 1064,
+          "pointDiff": -403
+        },
+        {
+          "position": 8,
+          "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80802",
+          "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
+          "played": 14,
+          "wins": 0,
+          "losses": 14,
+          "ties": 0,
+          "pointsFor": 526,
+          "pointsAgainst": 1152,
+          "pointDiff": -626
+        }
+      ]
+    }
+  ]
+}

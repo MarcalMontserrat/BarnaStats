@@ -1,0 +1,26 @@
+[
+  {
+    "seasonStartYear": 2025,
+    "seasonLabel": "2025-2026",
+    "matchWebId": 347,
+    "matchInternId": 223981,
+    "matchExternId": 1061519,
+    "matchDate": "2025-09-14T18:10:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 19799,
+    "categoryName": "Liga Femenina Challenge",
+    "phaseName": "Lliga Catalana Challenge",
+    "levelName": "",
+    "levelCode": "",
+    "groupCode": "01",
+    "homeTeamKey": "2025-2026::LIGA FEMENINA CHALLENGE::TEAM:81394",
+    "homeTeam": "MCR LIMA-HORTA BARCELONA",
+    "homeScore": 74,
+    "awayTeamKey": "2025-2026::LIGA FEMENINA CHALLENGE::TEAM:80115",
+    "awayTeam": "CLUB BASQUET SANTFELIUENC",
+    "awayScore": 72,
+    "topScorer": "IVET SUBIRATS TERUEL",
+    "topScorerTeam": "MCR LIMA-HORTA BARCELONA",
+    "topScorerPoints": 23
+  }
+]

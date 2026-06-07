@@ -13,7 +13,9 @@ public static class PrecomputedDatasetsBuilder
     private static readonly Regex TrailingLetterRegex = new(@"\b[A-Z]$", RegexOptions.Compiled);
     private static readonly Regex TeamSuffixRegex = new(@"\b(U\d{1,2}|PR[0-9A-Z]*|J[0-9A-Z]*|C[0-9A-Z]*|I[0-9A-Z]*|MINI|PREMINI|SOTS ?\d+)\b.*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-    public static CompetitionOverview BuildCompetitionOverview(CompetitionAnalysis competition)
+    public static CompetitionOverview BuildCompetitionOverview(
+        CompetitionAnalysis competition,
+        IReadOnlyList<CompetitionCategoryFiles> categoryFiles)
     {
         return new CompetitionOverview
         {
@@ -22,7 +24,8 @@ public static class PrecomputedDatasetsBuilder
             TotalTeams = competition.TotalTeams,
             TotalMatches = competition.TotalMatches,
             Phases = competition.Phases,
-            Teams = competition.Teams
+            Teams = competition.Teams,
+            CategoryFiles = categoryFiles.ToList()
         };
     }
 

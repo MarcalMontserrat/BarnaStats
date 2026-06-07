@@ -485,19 +485,35 @@ export function filterCompetitionMatchesByPhaseOption(matches, phaseOptionValue)
     return filterRowsByPhaseOption(matches, phaseOptionValue);
 }
 
+export function buildCategorySlug(categoryName) {
+    return String(categoryName ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/-{2,}/g, "-")
+        .replace(/^-|-$/g, "") || "other";
+}
+
 export function buildLatestTeamContextByKey(teams) {
     const contexts = new Map();
 
     (teams ?? []).forEach((team) => {
-        const latestContext = [...(team.phases ?? [])]
-            .filter((phase) => phase.levelName || phase.groupCode || phase.phaseName || phase.categoryName)
-            .sort((a, b) => {
-                if (Number(a.phaseNumber) !== Number(b.phaseNumber)) {
-                    return Number(b.phaseNumber) - Number(a.phaseNumber);
-                }
+        let latestContext;
 
-                return Number(b.sourcePhaseId ?? 0) - Number(a.sourcePhaseId ?? 0);
-            })[0];
+        if (team.phases?.length > 0) {
+            latestContext = [...team.phases]
+                .filter((phase) => phase.levelName || phase.groupCode || phase.phaseName || phase.categoryName)
+                .sort((a, b) => {
+                    if (Number(a.phaseNumber) !== Number(b.phaseNumber)) {
+                        return Number(b.phaseNumber) - Number(a.phaseNumber);
+                    }
+
+                    return Number(b.sourcePhaseId ?? 0) - Number(a.sourcePhaseId ?? 0);
+                })[0];
+        } else if (team.latestContext) {
+            latestContext = team.latestContext;
+        }
 
         if (!latestContext) {
             return;

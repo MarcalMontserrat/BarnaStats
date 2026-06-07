@@ -28,7 +28,16 @@ function PlayersPage({analysisVersion, totalPublishedSeasons}) {
         error: historicalPlayersError
     } = useAnalysisData(
         shouldLoadHistoricalArchive
-            ? `data/archive/players.json?v=${analysisVersion}`
+            ? `data/archive/players-index.json?v=${analysisVersion}`
+            : null
+    );
+
+    const {
+        analysis: selectedPlayerDetail,
+        loading: selectedPlayerDetailLoading
+    } = useAnalysisData(
+        selectedHistoricalPlayerKey
+            ? `data/archive/players/${selectedHistoricalPlayerKey.replace(":", "-")}.json?v=${analysisVersion}`
             : null
     );
 
@@ -73,6 +82,7 @@ function PlayersPage({analysisVersion, totalPublishedSeasons}) {
 
     const playersArchiveLoading = shouldLoadHistoricalArchive && historicalPlayersLoading;
     const playersArchiveError = shouldLoadHistoricalArchive ? historicalPlayersError : "";
+    const playerTotals = selectedPlayerDetail?.totals ?? null;
 
     if (!shouldLoadHistoricalArchive) {
         return (
@@ -94,8 +104,6 @@ function PlayersPage({analysisVersion, totalPublishedSeasons}) {
     if (playersArchiveError) {
         return <div style={appStyles.emptyState}>{playersArchiveError}</div>;
     }
-
-    const playerTotals = selectedHistoricalPlayer?.totals ?? null;
 
     return (
         <div style={appStyles.pageShell}>
@@ -135,17 +143,19 @@ function PlayersPage({analysisVersion, totalPublishedSeasons}) {
                 <div style={appStyles.teamSelectorMetaRow}>
                     <span style={appStyles.teamSelectorChip}>{historicalPlayerEntities.length} jugadoras indexadas</span>
                     <span style={appStyles.teamSelectorChip}>{totalPublishedSeasons} temporadas publicadas</span>
-                    {selectedHistoricalPlayer ? (
+                    {selectedPlayerDetail ? (
                         <span style={appStyles.teamSelectorChip}>
-                            {selectedHistoricalPlayer.seasonSummaries.length} temporada{selectedHistoricalPlayer.seasonSummaries.length === 1 ? "" : "s"} registrada{selectedHistoricalPlayer.seasonSummaries.length === 1 ? "" : "s"}
+                            {selectedPlayerDetail.seasonSummaries.length} temporada{selectedPlayerDetail.seasonSummaries.length === 1 ? "" : "s"} registrada{selectedPlayerDetail.seasonSummaries.length === 1 ? "" : "s"}
                         </span>
                     ) : null}
                 </div>
             </section>
 
-            {!selectedHistoricalPlayer || !playerTotals ? (
+            {!selectedHistoricalPlayer || !playerTotals || selectedPlayerDetailLoading ? (
                 <div style={appStyles.emptyState}>
-                    Selecciona una jugadora para ver su producción acumulada y su desglose por temporada.
+                    {!selectedHistoricalPlayer
+                        ? "Selecciona una jugadora para ver su producción acumulada y su desglose por temporada."
+                        : "Cargando ficha..."}
                 </div>
             ) : (
                 <>
@@ -172,7 +182,7 @@ function PlayersPage({analysisVersion, totalPublishedSeasons}) {
                             </div>
 
                             {(() => {
-                                const latestSeason = [...(selectedHistoricalPlayer.seasonSummaries ?? [])]
+                                const latestSeason = [...(selectedPlayerDetail.seasonSummaries ?? [])]
                                     .sort((a, b) => (b.seasonStartYear ?? 0) - (a.seasonStartYear ?? 0))[0];
                                 return latestSeason?.primaryTeamKey ? (
                                     <div style={appStyles.heroActions}>
@@ -240,7 +250,7 @@ function PlayersPage({analysisVersion, totalPublishedSeasons}) {
                     </section>
 
                     <section style={appStyles.seasonCards}>
-                        {selectedHistoricalPlayer.seasonSummaries.map((seasonSummary) => (
+                        {selectedPlayerDetail.seasonSummaries.map((seasonSummary) => (
                             <article key={seasonSummary.key} style={appStyles.seasonCard}>
                                 <div style={appStyles.seasonCardHeader}>
                                     <div style={appStyles.seasonCardIdentity}>

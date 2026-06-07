@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "dev:api": "dotnet run --project ../BarnaStats.Api/BarnaStats.Api.csproj",
-    "dev:all": "concurrently -k -n web,api \"vite\" \"dotnet run --project ../BarnaStats.Api/BarnaStats.Api.csproj\"",
+    "build:dotnet": "dotnet build ../BarnaStats.sln -c Release",
+    "dev:all": "npm run build:dotnet && concurrently -k -n web,api \"vite\" \"dotnet run --project ../BarnaStats.Api/BarnaStats.Api.csproj --no-build -c Release\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

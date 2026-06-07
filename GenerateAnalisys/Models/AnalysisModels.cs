@@ -311,6 +311,14 @@ public sealed class CompetitionAnalysis
     public List<CompetitionPlayerLeader> PlayerLeaders { get; init; } = [];
 }
 
+public sealed class CompetitionCategoryFiles
+{
+    public string CategoryName { get; init; } = "";
+    public string? MatchesFile { get; init; }
+    public string? LeadersFile { get; init; }
+    public string? StandingsFile { get; init; }
+}
+
 public sealed class CompetitionOverview
 {
     public int? SeasonStartYear { get; init; }
@@ -319,6 +327,7 @@ public sealed class CompetitionOverview
     public int TotalMatches { get; init; }
     public List<CompetitionPhase> Phases { get; init; } = [];
     public List<CompetitionTeamOverview> Teams { get; init; } = [];
+    public List<CompetitionCategoryFiles> CategoryFiles { get; init; } = [];
 }
 
 public sealed class CompetitionStandingScope
@@ -493,6 +502,21 @@ public sealed class HistoricalPlayerDirectoryDataset
     public List<HistoricalPlayerDirectoryEntry> Players { get; init; } = [];
 }
 
+public sealed class HistoricalPlayerIndexEntry
+{
+    public string Key { get; init; } = "";
+    public string Label { get; init; } = "";
+    public string LatestShirtNumber { get; init; } = "";
+    public string Meta { get; init; } = "";
+    public string SearchText { get; init; } = "";
+}
+
+public sealed class HistoricalPlayerIndexDataset
+{
+    public DateTime GeneratedAtUtc { get; init; }
+    public List<HistoricalPlayerIndexEntry> Players { get; init; } = [];
+}
+
 public sealed class TeamAnalysis
 {
     public int? SeasonStartYear { get; init; }
@@ -545,6 +569,42 @@ public sealed class AnalysisIndex
     public int TotalMatches { get; init; }
     public int TotalTeams { get; init; }
     public List<AnalysisIndexTeam> Teams { get; init; } = [];
+}
+
+public sealed class TeamLatestContext
+{
+    public int PhaseNumber { get; init; }
+    public int? SourcePhaseId { get; init; }
+    public string CategoryName { get; init; } = "";
+    public string PhaseName { get; init; } = "";
+    public string LevelName { get; init; } = "";
+    public string LevelCode { get; init; } = "";
+    public string GroupCode { get; init; } = "";
+}
+
+public sealed class AnalysisIndexLightTeam
+{
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public string TeamKey { get; init; } = "";
+    public int TeamIdIntern { get; init; }
+    public int TeamIdExtern { get; init; }
+    public string TeamName { get; init; } = "";
+    public int MatchesPlayed { get; init; }
+    public int PlayersCount { get; init; }
+    public string MatchesFile { get; init; } = "";
+    public string PlayersFile { get; init; } = "";
+    public TeamLatestContext? LatestContext { get; init; }
+}
+
+public sealed class AnalysisIndexLight
+{
+    public int? SeasonStartYear { get; init; }
+    public string SeasonLabel { get; init; } = "";
+    public DateTime GeneratedAtUtc { get; init; }
+    public int TotalMatches { get; init; }
+    public int TotalTeams { get; init; }
+    public List<AnalysisIndexLightTeam> Teams { get; init; } = [];
 }
 
 public sealed class SeasonDatasetSummary

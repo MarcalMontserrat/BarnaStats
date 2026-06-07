@@ -63,24 +63,39 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         analysis: analysisIndex,
         loading: analysisIndexLoading,
         error: analysisIndexError
-    } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
+    } = useAnalysisData(`data/analysis-light.json?v=${analysisVersion}`);
     const {
         analysis: competitionOverview,
         loading: competitionOverviewLoading,
         error: competitionOverviewError
     } = useAnalysisData(`data/competition-overview.json?v=${analysisVersion}`);
+
+    const categoryFiles = competitionOverview?.categoryFiles ?? EMPTY_LIST;
+    const resolvedMatchesFile = selectedResultsCategory !== "all"
+        ? (categoryFiles.find((cf) => cf.categoryName === selectedResultsCategory)?.matchesFile ?? "competition-matches.json")
+        : "competition-matches.json";
+    const resolvedLeadersFile = selectedLeadersCategory !== "all"
+        ? (categoryFiles.find((cf) => cf.categoryName === selectedLeadersCategory)?.leadersFile ?? "competition-player-leaders.json")
+        : "competition-player-leaders.json";
+    const resolvedStandingsFile = selectedCompetitionTab === "standings"
+        ? (selectedStandingsCategory !== "all"
+            ? (categoryFiles.find((cf) => cf.categoryName === selectedStandingsCategory)?.standingsFile ?? "competition-standings.json")
+            : "competition-standings.json")
+        : null;
+
     const {
         analysis: competitionStandingsDataset,
         loading: competitionStandingsLoading,
         error: competitionStandingsError
-    } = useAnalysisData(`data/competition-standings.json?v=${analysisVersion}`);
+    } = useAnalysisData(resolvedStandingsFile ? `data/${resolvedStandingsFile}?v=${analysisVersion}` : null);
+
     const {
         analysis: competitionMatchesData,
         loading: competitionMatchesLoading,
         error: competitionMatchesError
     } = useAnalysisData(
         selectedCompetitionTab === "matches"
-            ? `data/competition-matches.json?v=${analysisVersion}`
+            ? `data/${resolvedMatchesFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -89,7 +104,7 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         error: competitionPlayerLeadersError
     } = useAnalysisData(
         selectedCompetitionTab === "leaders"
-            ? `data/competition-player-leaders.json?v=${analysisVersion}`
+            ? `data/${resolvedLeadersFile}?v=${analysisVersion}`
             : null
     );
 
@@ -245,7 +260,7 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         : "all";
 
     const activeCompetitionTab = COMPETITION_TABS.find((tab) => tab.id === selectedCompetitionTab) ?? COMPETITION_TABS[0];
-    const competitionBaseLoading = competitionOverviewLoading || competitionStandingsLoading || analysisIndexLoading;
+    const competitionBaseLoading = competitionOverviewLoading || analysisIndexLoading;
     const competitionBaseError = competitionOverviewError || competitionStandingsError || analysisIndexError;
 
     const handleToggleMatch = (matchWebId) => {
@@ -344,22 +359,28 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
                     </section>
 
                     {activeCompetitionTab.id === "standings" ? (
-                        <Suspense fallback={<SectionFallback message="Cargando clasificación..." />}>
-                            <StandingsSection
-                                rows={competitionStandingsRows}
-                                phaseOptions={standingsPhaseOptions}
-                                selectedPhase={effectiveCompetitionPhase}
-                                onSelectedPhaseChange={handleStandingsPhaseChange}
-                                levelOptions={standingsLevelOptions}
-                                selectedLevel={effectiveStandingsLevel}
-                                onSelectedLevelChange={setSelectedStandingsLevel}
-                                categoryOptions={competitionCategoryOptions}
-                                selectedCategory={effectiveStandingsCategory}
-                                onSelectedCategoryChange={handleStandingsCategoryChange}
-                                selectedTeamKey={effectiveTeamKey}
-                                onTeamNavigate={handleTeamNavigate}
-                            />
-                        </Suspense>
+                        competitionStandingsLoading ? (
+                            <SectionFallback message="Cargando clasificación..." />
+                        ) : competitionStandingsError ? (
+                            <div style={appStyles.emptyState}>{competitionStandingsError}</div>
+                        ) : (
+                            <Suspense fallback={<SectionFallback message="Cargando clasificación..." />}>
+                                <StandingsSection
+                                    rows={competitionStandingsRows}
+                                    phaseOptions={standingsPhaseOptions}
+                                    selectedPhase={effectiveCompetitionPhase}
+                                    onSelectedPhaseChange={handleStandingsPhaseChange}
+                                    levelOptions={standingsLevelOptions}
+                                    selectedLevel={effectiveStandingsLevel}
+                                    onSelectedLevelChange={setSelectedStandingsLevel}
+                                    categoryOptions={competitionCategoryOptions}
+                                    selectedCategory={effectiveStandingsCategory}
+                                    onSelectedCategoryChange={handleStandingsCategoryChange}
+                                    selectedTeamKey={effectiveTeamKey}
+                                    onTeamNavigate={handleTeamNavigate}
+                                />
+                            </Suspense>
+                        )
                     ) : null}
 
                     {activeCompetitionTab.id === "matches" ? (

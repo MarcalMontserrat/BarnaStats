@@ -1,6 +1,8 @@
+using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using GenerateAnalisys.Models;
 
 namespace GenerateAnalisys.Utilities;
@@ -183,28 +185,207 @@ public static class AnalysisJsonWriter
         var competitionStandingsPath = Path.Combine(dataRootDir, "competition-standings.json");
         var competitionMatchesPath = Path.Combine(dataRootDir, "competition-matches.json");
         var competitionPlayerLeadersPath = Path.Combine(dataRootDir, "competition-player-leaders.json");
+        var competitionMatchesByCategoryDir = Path.Combine(dataRootDir, "competition-matches");
+        var competitionLeadersByCategoryDir = Path.Combine(dataRootDir, "competition-player-leaders");
+        var competitionStandingsByCategoryDir = Path.Combine(dataRootDir, "competition-standings");
+        var analysisLightPath = Path.Combine(dataRootDir, "analysis-light.json");
         var clubsPath = Path.Combine(dataRootDir, "clubs.json");
         var archiveDir = Path.Combine(dataRootDir, "archive");
         var historicalTeamsPath = Path.Combine(archiveDir, "teams.json");
         var historicalPlayersPath = Path.Combine(archiveDir, "players.json");
+        var historicalPlayersIndexPath = Path.Combine(archiveDir, "players-index.json");
+        var historicalPlayersDetailsDir = Path.Combine(archiveDir, "players");
+
+        await WriteJsonAsync(competitionMatchesPath, latestDataset.Competition.Matches);
+        await WriteJsonAsync(competitionPlayerLeadersPath, latestDataset.Competition.PlayerLeaders);
+
+        // Build per-category files and collect the mapping for competition-overview
+        var teamCategoryLookup = latestDataset.Teams
+            .ToDictionary(
+                t => t.TeamKey,
+                t => t.Phases
+                    .OrderByDescending(p => p.PhaseNumber)
+                    .ThenByDescending(p => p.SourcePhaseId ?? 0)
+                    .FirstOrDefault()?.CategoryName ?? "",
+                StringComparer.Ordinal);
+
+        var categoryFilesDict = new Dictionary<string, CompetitionCategoryFilesBuilder>(StringComparer.Ordinal);
+
+        foreach (var group in latestDataset.Competition.Matches
+            .GroupBy(m => m.CategoryName ?? "")
+            .Where(g => !string.IsNullOrWhiteSpace(g.Key)))
+        {
+            var slug = BuildCategorySlug(group.Key);
+            var relFile = $"competition-matches/{slug}.json";
+            await WriteJsonAsync(Path.Combine(competitionMatchesByCategoryDir, $"{slug}.json"), group.ToList());
+            if (!categoryFilesDict.TryGetValue(group.Key, out var entry))
+            {
+                entry = new CompetitionCategoryFilesBuilder(group.Key);
+                categoryFilesDict[group.Key] = entry;
+            }
+
+            entry.MatchesFile = relFile;
+        }
+
+        foreach (var group in latestDataset.Competition.PlayerLeaders
+            .GroupBy(p => teamCategoryLookup.GetValueOrDefault(p.TeamKey, ""))
+            .Where(g => !string.IsNullOrWhiteSpace(g.Key)))
+        {
+            var slug = BuildCategorySlug(group.Key);
+            var relFile = $"competition-player-leaders/{slug}.json";
+            await WriteJsonAsync(Path.Combine(competitionLeadersByCategoryDir, $"{slug}.json"), group.ToList());
+            if (!categoryFilesDict.TryGetValue(group.Key, out var entry))
+            {
+                entry = new CompetitionCategoryFilesBuilder(group.Key);
+                categoryFilesDict[group.Key] = entry;
+            }
+
+            entry.LeadersFile = relFile;
+        }
+
+        var standingsDataset = PrecomputedDatasetsBuilder.BuildCompetitionStandings(latestDataset.Competition);
+        Directory.CreateDirectory(competitionStandingsByCategoryDir);
+
+        foreach (var group in standingsDataset.Scopes
+            .GroupBy(s => s.CategoryName ?? "")
+            .Where(g => !string.IsNullOrWhiteSpace(g.Key)))
+        {
+            var slug = BuildCategorySlug(group.Key);
+            var relFile = $"competition-standings/{slug}.json";
+            var categoryStandings = new CompetitionStandingsDataset
+            {
+                SeasonStartYear = standingsDataset.SeasonStartYear,
+                SeasonLabel = standingsDataset.SeasonLabel,
+                Scopes = group.ToList()
+            };
+            await WriteJsonAsync(Path.Combine(competitionStandingsByCategoryDir, $"{slug}.json"), categoryStandings);
+            if (!categoryFilesDict.TryGetValue(group.Key, out var entry))
+            {
+                entry = new CompetitionCategoryFilesBuilder(group.Key);
+                categoryFilesDict[group.Key] = entry;
+            }
+
+            entry.StandingsFile = relFile;
+        }
+
+        var categoryFiles = categoryFilesDict.Values
+            .OrderBy(e => e.CategoryName, StringComparer.OrdinalIgnoreCase)
+            .Select(e => new CompetitionCategoryFiles
+            {
+                CategoryName = e.CategoryName,
+                MatchesFile = e.MatchesFile,
+                LeadersFile = e.LeadersFile,
+                StandingsFile = e.StandingsFile
+            })
+            .ToList();
 
         await WriteJsonAsync(
             competitionOverviewPath,
-            PrecomputedDatasetsBuilder.BuildCompetitionOverview(latestDataset.Competition));
-        await WriteJsonAsync(
-            competitionStandingsPath,
-            PrecomputedDatasetsBuilder.BuildCompetitionStandings(latestDataset.Competition));
-        await WriteJsonAsync(competitionMatchesPath, latestDataset.Competition.Matches);
-        await WriteJsonAsync(competitionPlayerLeadersPath, latestDataset.Competition.PlayerLeaders);
+            PrecomputedDatasetsBuilder.BuildCompetitionOverview(latestDataset.Competition, categoryFiles));
+        await WriteJsonAsync(competitionStandingsPath, standingsDataset);
+        await WriteJsonAsync(analysisLightPath, BuildLightIndex(latestDataset));
         await WriteJsonAsync(
             clubsPath,
             PrecomputedDatasetsBuilder.BuildClubDirectory(latestDataset, repoRoot));
         await WriteJsonAsync(
             historicalTeamsPath,
             PrecomputedDatasetsBuilder.BuildHistoricalTeamDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses));
-        await WriteJsonAsync(
-            historicalPlayersPath,
-            PrecomputedDatasetsBuilder.BuildHistoricalPlayerDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses));
+
+        var playerDirectory = PrecomputedDatasetsBuilder.BuildHistoricalPlayerDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses);
+        await WriteJsonAsync(historicalPlayersPath, playerDirectory);
+
+        var playerIndex = new HistoricalPlayerIndexDataset
+        {
+            GeneratedAtUtc = playerDirectory.GeneratedAtUtc,
+            Players = playerDirectory.Players
+                .Select(p => new HistoricalPlayerIndexEntry
+                {
+                    Key = p.Key,
+                    Label = p.Label,
+                    LatestShirtNumber = p.LatestShirtNumber,
+                    Meta = p.Meta,
+                    SearchText = p.SearchText
+                })
+                .ToList()
+        };
+        await WriteJsonAsync(historicalPlayersIndexPath, playerIndex);
+
+        foreach (var player in playerDirectory.Players)
+        {
+            var safeKey = player.Key.Replace(":", "-");
+            await WriteJsonAsync(Path.Combine(historicalPlayersDetailsDir, $"{safeKey}.json"), player);
+        }
+    }
+
+    private static string BuildCategorySlug(string categoryName)
+    {
+        var normalized = categoryName.Normalize(NormalizationForm.FormD);
+        var sb = new StringBuilder();
+        foreach (var c in normalized)
+        {
+            if (CharUnicodeInfo.GetUnicodeCategory(c) == UnicodeCategory.NonSpacingMark)
+                continue;
+            sb.Append(char.IsLetterOrDigit(c) ? char.ToLowerInvariant(c) : '-');
+        }
+
+        var slug = Regex.Replace(sb.ToString(), "-{2,}", "-").Trim('-');
+        return string.IsNullOrEmpty(slug) ? "other" : slug;
+    }
+
+    private sealed class CompetitionCategoryFilesBuilder(string categoryName)
+    {
+        public string CategoryName { get; } = categoryName;
+        public string? MatchesFile { get; set; }
+        public string? LeadersFile { get; set; }
+        public string? StandingsFile { get; set; }
+    }
+
+    private static AnalysisIndexLight BuildLightIndex(AnalysisResult analysis)
+    {
+        return new AnalysisIndexLight
+        {
+            SeasonStartYear = analysis.SeasonStartYear,
+            SeasonLabel = analysis.SeasonLabel,
+            GeneratedAtUtc = analysis.GeneratedAtUtc,
+            TotalMatches = analysis.TotalMatches,
+            TotalTeams = analysis.Teams.Count,
+            Teams = analysis.Teams
+                .Select(team =>
+                {
+                    var latestPhase = team.Phases
+                        .OrderByDescending(p => p.PhaseNumber)
+                        .ThenByDescending(p => p.SourcePhaseId ?? 0)
+                        .FirstOrDefault(p =>
+                            !string.IsNullOrEmpty(p.CategoryName) ||
+                            !string.IsNullOrEmpty(p.LevelName) ||
+                            !string.IsNullOrEmpty(p.PhaseName));
+                    return new AnalysisIndexLightTeam
+                    {
+                        SeasonStartYear = team.SeasonStartYear,
+                        SeasonLabel = team.SeasonLabel,
+                        TeamKey = team.TeamKey,
+                        TeamIdIntern = team.TeamIdIntern,
+                        TeamIdExtern = team.TeamIdExtern,
+                        TeamName = team.TeamName,
+                        MatchesPlayed = team.MatchesPlayed,
+                        PlayersCount = team.PlayersCount,
+                        MatchesFile = $"teams/{GetTeamDirectoryName(team.TeamKey)}/matches.json",
+                        PlayersFile = $"teams/{GetTeamDirectoryName(team.TeamKey)}/players.json",
+                        LatestContext = latestPhase is null ? null : new TeamLatestContext
+                        {
+                            PhaseNumber = latestPhase.PhaseNumber,
+                            SourcePhaseId = latestPhase.SourcePhaseId,
+                            CategoryName = latestPhase.CategoryName ?? "",
+                            PhaseName = latestPhase.PhaseName ?? "",
+                            LevelName = latestPhase.LevelName ?? "",
+                            LevelCode = latestPhase.LevelCode ?? "",
+                            GroupCode = latestPhase.GroupCode ?? ""
+                        }
+                    };
+                })
+                .OrderBy(team => team.TeamName, StringComparer.OrdinalIgnoreCase)
+                .ToList()
+        };
     }
 
     private static IReadOnlyList<SeasonDataset> BuildSeasonDatasets(AnalysisResult analysis)

@@ -1,0 +1,204 @@
+{
+  "seasonStartYear": 2025,
+  "seasonLabel": "2025-2026",
+  "scopes": [
+    {
+      "key": "source:2025-2026:20111",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "sourcePhaseId": 20111,
+      "phaseNumber": 1,
+      "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
+      "phaseName": "Fase Previa",
+      "levelName": "",
+      "levelCode": "",
+      "groupCode": "02",
+      "matchesCount": 29,
+      "rows": [
+        {
+          "position": 1,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82113",
+          "teamName": "U.E. CLARET B",
+          "played": 9,
+          "wins": 9,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 460,
+          "pointsAgainst": 339,
+          "pointDiff": 121
+        },
+        {
+          "position": 2,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:83169",
+          "teamName": "CB SANT JUST U13 BLAU",
+          "played": 10,
+          "wins": 7,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 619,
+          "pointsAgainst": 459,
+          "pointDiff": 160
+        },
+        {
+          "position": 3,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81527",
+          "teamName": "LLU\u00CFSOS DE GR\u00C0CIA",
+          "played": 10,
+          "wins": 6,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 485,
+          "pointsAgainst": 486,
+          "pointDiff": -1
+        },
+        {
+          "position": 4,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82329",
+          "teamName": "UE SANT CUGAT - OCCIDENT 2013",
+          "played": 10,
+          "wins": 4,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 462,
+          "pointsAgainst": 469,
+          "pointDiff": -7
+        },
+        {
+          "position": 5,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81179",
+          "teamName": "C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN",
+          "played": 9,
+          "wins": 3,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 453,
+          "pointsAgainst": 476,
+          "pointDiff": -23
+        },
+        {
+          "position": 6,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81453",
+          "teamName": "C.B. PRAT - MONTIBELLO B",
+          "played": 10,
+          "wins": 0,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 323,
+          "pointsAgainst": 573,
+          "pointDiff": -250
+        }
+      ]
+    },
+    {
+      "key": "source:2025-2026:21491",
+      "seasonStartYear": 2025,
+      "seasonLabel": "2025-2026",
+      "sourcePhaseId": 21491,
+      "phaseNumber": 2,
+      "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
+      "phaseName": "Segona Fase",
+      "levelName": "Nivell A2",
+      "levelCode": "A2",
+      "groupCode": "01",
+      "matchesCount": 39,
+      "rows": [
+        {
+          "position": 1,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:78875",
+          "teamName": "C.B. VILASSAR DE MAR 1984 VERD",
+          "played": 9,
+          "wins": 9,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 541,
+          "pointsAgainst": 337,
+          "pointDiff": 204
+        },
+        {
+          "position": 2,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82329",
+          "teamName": "UE SANT CUGAT - OCCIDENT 2013",
+          "played": 9,
+          "wins": 8,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 454,
+          "pointsAgainst": 298,
+          "pointDiff": 156
+        },
+        {
+          "position": 3,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81179",
+          "teamName": "C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN",
+          "played": 10,
+          "wins": 8,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 525,
+          "pointsAgainst": 424,
+          "pointDiff": 101
+        },
+        {
+          "position": 4,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81741",
+          "teamName": "CB ART\u00C9S",
+          "played": 10,
+          "wins": 5,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 441,
+          "pointsAgainst": 462,
+          "pointDiff": -21
+        },
+        {
+          "position": 5,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82637",
+          "teamName": "CB PARETS VERMELL 1",
+          "played": 10,
+          "wins": 4,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 450,
+          "pointsAgainst": 464,
+          "pointDiff": -14
+        },
+        {
+          "position": 6,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81453",
+          "teamName": "C.B. PRAT - MONTIBELLO B",
+          "played": 10,
+          "wins": 4,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 420,
+          "pointsAgainst": 464,
+          "pointDiff": -44
+        },
+        {
+          "position": 7,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:79666",
+          "teamName": "TALENOM BOET MATAR\u00D3 TARONJA",
+          "played": 10,
+          "wins": 1,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 399,
+          "pointsAgainst": 538,
+          "pointDiff": -139
+        },
+        {
+          "position": 8,
+          "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82705",
+          "teamName": "BASKET ALMEDA GROC",
+          "played": 10,
+          "wins": 0,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 361,
+          "pointsAgainst": 604,
+          "pointDiff": -243
+        }
+      ]
+    }
+  ]
+}

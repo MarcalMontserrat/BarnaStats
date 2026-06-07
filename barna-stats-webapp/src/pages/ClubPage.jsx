@@ -26,7 +26,7 @@ function ClubPage({analysisVersion}) {
         analysis: analysisIndex,
         loading: analysisIndexLoading,
         error: analysisIndexError
-    } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
+    } = useAnalysisData(`data/analysis-light.json?v=${analysisVersion}`);
     const {
         analysis: currentClubDirectory,
         loading: currentClubDirectoryLoading,

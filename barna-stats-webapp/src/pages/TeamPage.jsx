@@ -5,6 +5,7 @@ import {useAnalysisData} from "../hooks/useAnalysisData.js";
 import {
     aggregateStandingRows,
     buildCategoryOptionsFromRows,
+    buildCategorySlug,
     buildCompetitionPhaseLabel,
     buildGenderOptions,
     buildLatestTeamContextByKey,
@@ -99,12 +100,20 @@ function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
         loading: analysisIndexLoading,
         error: analysisIndexError
     } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
+
+    const teams = analysisIndex?.teams ?? EMPTY_LIST;
+    const standingsCategoryName = teams.find((t) => t.teamKey === selectedTeamKey)
+        ?.phases?.slice().sort((a, b) => Number(b.phaseNumber) - Number(a.phaseNumber))[0]
+        ?.categoryName ?? "";
+    const standingsFile = standingsCategoryName
+        ? `data/competition-standings/${buildCategorySlug(standingsCategoryName)}.json?v=${analysisVersion}`
+        : (teams.length > 0 ? `data/competition-standings.json?v=${analysisVersion}` : null);
+
     const {
         analysis: competitionStandingsDataset,
         error: competitionStandingsError
-    } = useAnalysisData(`data/competition-standings.json?v=${analysisVersion}`);
+    } = useAnalysisData(standingsFile);
 
-    const teams = analysisIndex?.teams ?? EMPTY_LIST;
     const currentSeasonLabel = analysisIndex?.seasonLabel ?? "";
     const latestTeamContexts = useMemo(() => buildLatestTeamContextByKey(teams), [teams]);
     const latestTeamContextRows = useMemo(() => [...latestTeamContexts.values()], [latestTeamContexts]);

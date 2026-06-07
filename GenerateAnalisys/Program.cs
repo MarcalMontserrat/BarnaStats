@@ -30,7 +30,6 @@ Console.WriteLine($"Competición:       {Path.GetFullPath(paths.CompetitionJson)
 Console.WriteLine($"Equipos:           {Path.GetFullPath(paths.TeamDetailsDir)}");
 Console.WriteLine($"Temporadas:        {Path.GetFullPath(paths.AnalysisSeasonIndexJson)}");
 Console.WriteLine($"Índice web:        {Path.GetFullPath(paths.WebAnalysisJson)}");
-Console.WriteLine($"Competición web:   {Path.GetFullPath(paths.WebCompetitionJson)}");
 Console.WriteLine($"Equipos web:       {Path.GetFullPath(paths.WebTeamDetailsDir)}");
 Console.WriteLine($"Temporadas web:    {Path.GetFullPath(paths.WebSeasonIndexJson)}");
 Console.WriteLine($"Equipos analizados:{result.Teams.Count}");

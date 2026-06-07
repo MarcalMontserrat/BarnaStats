@@ -1,45 +1,9 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "totalTeams": 836,
-  "totalMatches": 8685,
+  "totalTeams": 566,
+  "totalMatches": 5581,
   "phases": [
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19775,
-      "phaseNumber": 1,
-      "categoryName": "Liga Femenina De Baloncesto 2",
-      "phaseName": "Lliga Catalana Femenina 2",
-      "levelName": "Fase Pr\u00E8via",
-      "levelCode": "Fase Pr\u00E8via",
-      "groupCode": "01",
-      "matchesCount": 3
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19776,
-      "phaseNumber": 1,
-      "categoryName": "Liga Femenina De Baloncesto 2",
-      "phaseName": "Lliga Catalana Femenina 2",
-      "levelName": "Fase Pr\u00E8via",
-      "levelCode": "Fase Pr\u00E8via",
-      "groupCode": "02",
-      "matchesCount": 3
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19777,
-      "phaseNumber": 1,
-      "categoryName": "Liga Femenina De Baloncesto 2",
-      "phaseName": "Lliga Catalana Femenina 2",
-      "levelName": "Fase Pr\u00E8via",
-      "levelCode": "Fase Pr\u00E8via",
-      "groupCode": "03",
-      "matchesCount": 3
-    },
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
@@ -51,150 +15,6 @@
       "levelCode": "",
       "groupCode": "01",
       "matchesCount": 77
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19780,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Primera Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 77
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19781,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Primera Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 73
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19788,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 72
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19789,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 76
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19790,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 77
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19791,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "04",
-      "matchesCount": 77
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19794,
-      "phaseNumber": 1,
-      "categoryName": "Super Copa Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 91
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19798,
-      "phaseNumber": 1,
-      "categoryName": "Copa Catalunya Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 76
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19799,
-      "phaseNumber": 1,
-      "categoryName": "Liga Femenina Challenge",
-      "phaseName": "Lliga Catalana Challenge",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 1
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19800,
-      "phaseNumber": 1,
-      "categoryName": "Liga Femenina De Baloncesto",
-      "phaseName": "Lliga Catalana Femenina",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 3
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19805,
-      "phaseNumber": 1,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 55
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19806,
-      "phaseNumber": 1,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 56
     },
     {
       "seasonStartYear": 2025,
@@ -295,54 +115,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19839,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19840,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19841,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19842,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "04",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 19855,
       "phaseNumber": 1,
       "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
@@ -387,66 +159,6 @@
       "levelCode": "",
       "groupCode": "04",
       "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19859,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 42
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19860,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 42
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19861,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 42
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19862,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "04",
-      "matchesCount": 41
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19863,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "05",
-      "matchesCount": 42
     },
     {
       "seasonStartYear": 2025,
@@ -519,102 +231,6 @@
       "levelCode": "",
       "groupCode": "05",
       "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19889,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19890,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 42
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19891,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 42
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19892,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "04",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19920,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 42
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19921,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 41
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19922,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 41
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19923,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Primera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "04",
-      "matchesCount": 30
     },
     {
       "seasonStartYear": 2025,
@@ -883,18 +499,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 20110,
-      "phaseNumber": 1,
-      "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
-      "phaseName": "Fase Previa",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 20
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 20111,
       "phaseNumber": 1,
       "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
@@ -903,18 +507,6 @@
       "levelCode": "",
       "groupCode": "02",
       "matchesCount": 29
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 20112,
-      "phaseNumber": 1,
-      "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
-      "phaseName": "Fase Previa",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 20
     },
     {
       "seasonStartYear": 2025,
@@ -1147,18 +739,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 20850,
-      "phaseNumber": 1,
-      "categoryName": "Liga Femenina De Baloncesto 2",
-      "phaseName": "Fase Final Lliga Catalana Femenina 2",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 3
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 20853,
       "phaseNumber": 1,
       "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
@@ -1243,18 +823,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21121,
-      "phaseNumber": 1,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Eliminat\u00F2ria 1.3.2",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 4
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 21122,
       "phaseNumber": 1,
       "categoryName": "C.c. Cadet Femen\u00ED Preferent",
@@ -1279,18 +847,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21144,
-      "phaseNumber": 1,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Eliminat\u00F2ria 1.3.2",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 10
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 21145,
       "phaseNumber": 1,
       "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
@@ -1303,30 +859,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21146,
-      "phaseNumber": 1,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Eliminat\u00F2ria 1.3.2",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 8
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21253,
-      "phaseNumber": 1,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Torneig Internacional Ciutat De Badalona",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 6
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 19778,
       "phaseNumber": 2,
       "categoryName": "Copa Catalunya Masculina",
@@ -1335,102 +867,6 @@
       "levelCode": "",
       "groupCode": "01",
       "matchesCount": 77
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19780,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Primera Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 82
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19781,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Primera Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 84
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19788,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 86
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19789,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "02",
-      "matchesCount": 79
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19790,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "03",
-      "matchesCount": 77
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19791,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Segona Categoria Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "04",
-      "matchesCount": 79
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19794,
-      "phaseNumber": 2,
-      "categoryName": "Super Copa Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 82
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 19798,
-      "phaseNumber": 2,
-      "categoryName": "Copa Catalunya Femenina",
-      "phaseName": "Fase Pr\u00E8via",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 80
     },
     {
       "seasonStartYear": 2025,
@@ -1711,30 +1147,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21174,
-      "phaseNumber": 2,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Segona Fase",
-      "levelName": "Preferent A",
-      "levelCode": "Preferent A",
-      "groupCode": "01",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21175,
-      "phaseNumber": 2,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Segona Fase",
-      "levelName": "Preferent B",
-      "levelCode": "Preferent B",
-      "groupCode": "01",
-      "matchesCount": 56
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 21180,
       "phaseNumber": 2,
       "categoryName": "C.c. Cadet Femen\u00ED Preferent",
@@ -1783,54 +1195,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21187,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "05",
-      "matchesCount": 45
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21188,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "06",
-      "matchesCount": 45
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21189,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "07",
-      "matchesCount": 44
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21190,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "08",
-      "matchesCount": 45
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 21196,
       "phaseNumber": 2,
       "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
@@ -1874,30 +1238,6 @@
       "levelName": "",
       "levelCode": "",
       "groupCode": "08",
-      "matchesCount": 45
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21204,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "05",
-      "matchesCount": 47
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21205,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "06",
       "matchesCount": 45
     },
     {
@@ -1963,78 +1303,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21230,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "05",
-      "matchesCount": 48
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21231,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "06",
-      "matchesCount": 46
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21232,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "07",
-      "matchesCount": 36
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21233,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "08",
-      "matchesCount": 34
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21234,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "07",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21235,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "08",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 21236,
       "phaseNumber": 2,
       "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2043,78 +1311,6 @@
       "levelCode": "",
       "groupCode": "09",
       "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21237,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "10",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21238,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "11",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21239,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "12",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21240,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "13",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21273,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "07",
-      "matchesCount": 30
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21274,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Segona Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "08",
-      "matchesCount": 20
     },
     {
       "seasonStartYear": 2025,
@@ -2151,18 +1347,6 @@
       "levelCode": "A1",
       "groupCode": "01",
       "matchesCount": 39
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21490,
-      "phaseNumber": 2,
-      "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
-      "phaseName": "Segona Fase",
-      "levelName": "Nivell A1",
-      "levelCode": "A1",
-      "groupCode": "01",
-      "matchesCount": 41
     },
     {
       "seasonStartYear": 2025,
@@ -2419,42 +1603,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21744,
-      "phaseNumber": 2,
-      "categoryName": "C. C. J\u00FAnior Femen\u00ED Preferent",
-      "phaseName": "Final A Quatre Preferent A",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "01",
-      "matchesCount": 4
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21896,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "14",
-      "matchesCount": 4
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21897,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "15",
-      "matchesCount": 5
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "sourcePhaseId": 21898,
       "phaseNumber": 2,
       "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
@@ -2463,78 +1611,6 @@
       "levelCode": "",
       "groupCode": "16",
       "matchesCount": 3
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21899,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "17",
-      "matchesCount": 4
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21900,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "18",
-      "matchesCount": 4
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21901,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "19",
-      "matchesCount": 4
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21902,
-      "phaseNumber": 2,
-      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "20",
-      "matchesCount": 5
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21931,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "09",
-      "matchesCount": 6
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "sourcePhaseId": 21932,
-      "phaseNumber": 2,
-      "categoryName": "C.c. Infantil Femen\u00ED Preferent 1r. Any",
-      "phaseName": "Tercera Fase",
-      "levelName": "",
-      "levelCode": "",
-      "groupCode": "10",
-      "matchesCount": 4
     },
     {
       "seasonStartYear": 2025,
@@ -2668,15 +1744,6 @@
       "totalValuation": 401
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79328",
-      "teamIdIntern": 453291,
-      "teamIdExtern": 79328,
-      "teamName": "AB VENDRELL",
-      "matchesPlayed": 22,
-      "playersCount": 18,
-      "totalValuation": 410
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81068",
       "teamIdIntern": 452406,
       "teamIdExtern": 81068,
@@ -2722,24 +1789,6 @@
       "totalValuation": 149
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80513",
-      "teamIdIntern": 453231,
-      "teamIdExtern": 80513,
-      "teamName": "AE MINGUELLA A - PURE CUISINE",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": 601
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80512",
-      "teamIdIntern": 451062,
-      "teamIdExtern": 80512,
-      "teamName": "AE MINGUELLA A - PURE CUISINE",
-      "matchesPlayed": 24,
-      "playersCount": 22,
-      "totalValuation": 349
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80522",
       "teamIdIntern": 453643,
       "teamIdExtern": 80522,
@@ -2747,15 +1796,6 @@
       "matchesPlayed": 17,
       "playersCount": 11,
       "totalValuation": 404
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80530",
-      "teamIdIntern": 449976,
-      "teamIdExtern": 80530,
-      "teamName": "AE MINGUELLA B - PURE CUISINE",
-      "matchesPlayed": 25,
-      "playersCount": 12,
-      "totalValuation": 660
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80531",
@@ -2821,15 +1861,6 @@
       "totalValuation": 138
     },
     {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80663",
-      "teamIdIntern": 452044,
-      "teamIdExtern": 80663,
-      "teamName": "AESE A",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": -437
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80671",
       "teamIdIntern": 452342,
       "teamIdExtern": 80671,
@@ -2857,24 +1888,6 @@
       "totalValuation": 553
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78586",
-      "teamIdIntern": 450066,
-      "teamIdExtern": 78586,
-      "teamName": "AL PANINO JET TERRASSA U17",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "totalValuation": 612
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79252",
-      "teamIdIntern": 450068,
-      "teamIdExtern": 79252,
-      "teamName": "ALAIN AFFLELOU - CB IGUALADA JF U17",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 446
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79433",
       "teamIdIntern": 452747,
       "teamIdExtern": 79433,
@@ -2882,24 +1895,6 @@
       "matchesPlayed": 22,
       "playersCount": 17,
       "totalValuation": 536
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78589",
-      "teamIdIntern": 449809,
-      "teamIdExtern": 78589,
-      "teamName": "AQUALIS JET TERRASSA U13",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "totalValuation": 212
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79230",
-      "teamIdIntern": 451870,
-      "teamIdExtern": 79230,
-      "teamName": "ARBRE TEAM - CB IGUALADA SFB",
-      "matchesPlayed": 22,
-      "playersCount": 21,
-      "totalValuation": 423
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83067",
@@ -2920,15 +1915,6 @@
       "totalValuation": 565
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79804",
-      "teamIdIntern": 450289,
-      "teamIdExtern": 79804,
-      "teamName": "ASSOLIM - LLU\u00CFSOS DE GR\u00C0CIA  A",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 512
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81520",
       "teamIdIntern": 452374,
       "teamIdExtern": 81520,
@@ -2936,15 +1922,6 @@
       "matchesPlayed": 19,
       "playersCount": 17,
       "totalValuation": 517
-    },
-    {
-      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:80449",
-      "teamIdIntern": 461625,
-      "teamIdExtern": 80449,
-      "teamName": "ATMOS - BF CORNELLA",
-      "matchesPlayed": 19,
-      "playersCount": 16,
-      "totalValuation": 231
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:78971",
@@ -2956,15 +1933,6 @@
       "totalValuation": 451
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78683",
-      "teamIdIntern": 450065,
-      "teamIdExtern": 78683,
-      "teamName": "AVV DESIGN - BBA CASTELLDEFELS 2009F",
-      "matchesPlayed": 25,
-      "playersCount": 17,
-      "totalValuation": 244
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:83746",
       "teamIdIntern": 452792,
       "teamIdExtern": 83746,
@@ -2972,15 +1940,6 @@
       "matchesPlayed": 19,
       "playersCount": 15,
       "totalValuation": 78
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85627",
-      "teamIdIntern": 502161,
-      "teamIdExtern": 85627,
-      "teamName": "BADALONA B\u00C0SQUET BASE",
-      "matchesPlayed": 3,
-      "playersCount": 11,
-      "totalValuation": -82
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79309",
@@ -2992,15 +1951,6 @@
       "totalValuation": -514
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79926",
-      "teamIdIntern": 452392,
-      "teamIdExtern": 79926,
-      "teamName": "BAR TITO CB BALAGUER B",
-      "matchesPlayed": 21,
-      "playersCount": 18,
-      "totalValuation": 443
-    },
-    {
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79305",
       "teamIdIntern": 452016,
       "teamIdExtern": 79305,
@@ -3008,24 +1958,6 @@
       "matchesPlayed": 22,
       "playersCount": 18,
       "totalValuation": 37
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:81391",
-      "teamIdIntern": 450096,
-      "teamIdExtern": 81391,
-      "teamName": "BASKET ALMEDA",
-      "matchesPlayed": 2,
-      "playersCount": 13,
-      "totalValuation": 93
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79642",
-      "teamIdIntern": 449956,
-      "teamIdExtern": 79642,
-      "teamName": "BASKET ALMEDA",
-      "matchesPlayed": 28,
-      "playersCount": 15,
-      "totalValuation": -411
     },
     {
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79639",
@@ -3047,12 +1979,12 @@
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82705",
-      "teamIdIntern": 455122,
+      "teamIdIntern": 507970,
       "teamIdExtern": 82705,
       "teamName": "BASKET ALMEDA GROC",
-      "matchesPlayed": 18,
-      "playersCount": 25,
-      "totalValuation": 214
+      "matchesPlayed": 10,
+      "playersCount": 22,
+      "totalValuation": 79
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79632",
@@ -3062,15 +1994,6 @@
       "matchesPlayed": 27,
       "playersCount": 27,
       "totalValuation": 534
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79636",
-      "teamIdIntern": 449824,
-      "teamIdExtern": 79636,
-      "teamName": "BASKET ALMEDA NEGRE",
-      "matchesPlayed": 26,
-      "playersCount": 15,
-      "totalValuation": 629
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80957",
@@ -3091,24 +2014,6 @@
       "totalValuation": -740
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79312",
-      "teamIdIntern": 452580,
-      "teamIdExtern": 79312,
-      "teamName": "BASQUET ATENEU MONTSERRAT",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 699
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80746",
-      "teamIdIntern": 467393,
-      "teamIdExtern": 80746,
-      "teamName": "BASQUET ATENEU MONTSERRAT 1ER ANY GROC FEMENI",
-      "matchesPlayed": 23,
-      "playersCount": 10,
-      "totalValuation": 242
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82648",
       "teamIdIntern": 464221,
       "teamIdExtern": 82648,
@@ -3125,24 +2030,6 @@
       "matchesPlayed": 22,
       "playersCount": 13,
       "totalValuation": 501
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:81118",
-      "teamIdIntern": 453187,
-      "teamIdExtern": 81118,
-      "teamName": "BASQUET GIRONA - FONTAJAU",
-      "matchesPlayed": 21,
-      "playersCount": 13,
-      "totalValuation": -115
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79072",
-      "teamIdIntern": 453120,
-      "teamIdExtern": 79072,
-      "teamName": "BASQUET MOLINS",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": 678
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:83385",
@@ -3172,15 +2059,6 @@
       "totalValuation": 270
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79556",
-      "teamIdIntern": 453204,
-      "teamIdExtern": 79556,
-      "teamName": "BASQUET NEUS",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": 571
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83847",
       "teamIdIntern": 455000,
       "teamIdExtern": 83847,
@@ -3190,24 +2068,6 @@
       "totalValuation": 587
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79924",
-      "teamIdIntern": 452631,
-      "teamIdExtern": 79924,
-      "teamName": "BASQUET PORQUERES",
-      "matchesPlayed": 23,
-      "playersCount": 13,
-      "totalValuation": 339
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79436",
-      "teamIdIntern": 449922,
-      "teamIdExtern": 79436,
-      "teamName": "BASQUET SANT PERE A",
-      "matchesPlayed": 25,
-      "playersCount": 15,
-      "totalValuation": 631
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79438",
       "teamIdIntern": 453287,
       "teamIdExtern": 79438,
@@ -3215,15 +2075,6 @@
       "matchesPlayed": 20,
       "playersCount": 14,
       "totalValuation": 467
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79449",
-      "teamIdIntern": 450180,
-      "teamIdExtern": 79449,
-      "teamName": "BASQUET SANT PERE VERMELL",
-      "matchesPlayed": 22,
-      "playersCount": 18,
-      "totalValuation": 273
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81087",
@@ -3242,24 +2093,6 @@
       "matchesPlayed": 22,
       "playersCount": 16,
       "totalValuation": 677
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78829",
-      "teamIdIntern": 450064,
-      "teamIdExtern": 78829,
-      "teamName": "BASQUETPIASABADELL",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "totalValuation": 755
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78843",
-      "teamIdIntern": 450023,
-      "teamIdExtern": 78843,
-      "teamName": "BASQUETPIASABADELL",
-      "matchesPlayed": 20,
-      "playersCount": 14,
-      "totalValuation": 359
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78839",
@@ -3289,15 +2122,6 @@
       "totalValuation": 154
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80181",
-      "teamIdIntern": 449808,
-      "teamIdExtern": 80181,
-      "teamName": "BBC - JOVENTUT BADALONA B",
-      "matchesPlayed": 24,
-      "playersCount": 102,
-      "totalValuation": 625
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82930",
       "teamIdIntern": 452320,
       "teamIdExtern": 82930,
@@ -3325,15 +2149,6 @@
       "totalValuation": 580
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80140",
-      "teamIdIntern": 450634,
-      "teamIdExtern": 80140,
-      "teamName": "BC MORABANC ANDORRA N\u00DARIA TINTORERIES",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 621
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81583",
       "teamIdIntern": 451702,
       "teamIdExtern": 81583,
@@ -3341,24 +2156,6 @@
       "matchesPlayed": 19,
       "playersCount": 23,
       "totalValuation": 318
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80829",
-      "teamIdIntern": 456183,
-      "teamIdExtern": 80829,
-      "teamName": "BC SANT JOAN DESPI A",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": -647
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80207",
-      "teamIdIntern": 451185,
-      "teamIdExtern": 80207,
-      "teamName": "BC SANT JOAN DESPI A",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 307
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81593",
@@ -3377,15 +2174,6 @@
       "matchesPlayed": 16,
       "playersCount": 13,
       "totalValuation": 184
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79724",
-      "teamIdIntern": 487757,
-      "teamIdExtern": 79724,
-      "teamName": "BC TECLA SALA",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "totalValuation": 463
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:79718",
@@ -3460,24 +2248,6 @@
       "totalValuation": 211
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80445",
-      "teamIdIntern": 452132,
-      "teamIdExtern": 80445,
-      "teamName": "BF CORNELLA A",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": 221
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80443",
-      "teamIdIntern": 450616,
-      "teamIdExtern": 80443,
-      "teamName": "BF CORNELLA A",
-      "matchesPlayed": 23,
-      "playersCount": 12,
-      "totalValuation": 464
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83664",
       "teamIdIntern": 456643,
       "teamIdExtern": 83664,
@@ -3494,15 +2264,6 @@
       "matchesPlayed": 23,
       "playersCount": 20,
       "totalValuation": 556
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:81002",
-      "teamIdIntern": 450758,
-      "teamIdExtern": 81002,
-      "teamName": "B\u00C0SQUET GIRONA U13",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 789
     },
     {
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:81005",
@@ -3539,24 +2300,6 @@
       "matchesPlayed": 26,
       "playersCount": 12,
       "totalValuation": 1027
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80995",
-      "teamIdIntern": 449928,
-      "teamIdExtern": 80995,
-      "teamName": "B\u00C0SQUET GIRONA U17",
-      "matchesPlayed": 25,
-      "playersCount": 17,
-      "totalValuation": 719
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80997",
-      "teamIdIntern": 449954,
-      "teamIdExtern": 80997,
-      "teamName": "B\u00C0SQUET GIRONA U18",
-      "matchesPlayed": 30,
-      "playersCount": 19,
-      "totalValuation": -479
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80953",
@@ -3622,15 +2365,6 @@
       "totalValuation": 180
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80833",
-      "teamIdIntern": 452133,
-      "teamIdExtern": 80833,
-      "teamName": "B\u00C0SQUET PRATENC 1 - PRAT ACTIU",
-      "matchesPlayed": 23,
-      "playersCount": 13,
-      "totalValuation": 600
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81367",
       "teamIdIntern": 452372,
       "teamIdExtern": 81367,
@@ -3676,15 +2410,6 @@
       "totalValuation": 264
     },
     {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79991",
-      "teamIdIntern": 452032,
-      "teamIdExtern": 79991,
-      "teamName": "B\u00C0SQUET SAFA CLAROR A",
-      "matchesPlayed": 23,
-      "playersCount": 13,
-      "totalValuation": -199
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79988",
       "teamIdIntern": 451828,
       "teamIdExtern": 79988,
@@ -3692,15 +2417,6 @@
       "matchesPlayed": 22,
       "playersCount": 18,
       "totalValuation": 712
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79469",
-      "teamIdIntern": 451953,
-      "teamIdExtern": 79469,
-      "teamName": "B\u00C0SQUET SANT BOI",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "totalValuation": 361
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79461",
@@ -3784,15 +2500,6 @@
       "totalValuation": 626
     },
     {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:80318",
-      "teamIdIntern": 451961,
-      "teamIdExtern": 80318,
-      "teamName": "C.B GRUP BARNA B",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": -361
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81178",
       "teamIdIntern": 454419,
       "teamIdExtern": 81178,
@@ -3800,15 +2507,6 @@
       "matchesPlayed": 23,
       "playersCount": 12,
       "totalValuation": 970
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80319",
-      "teamIdIntern": 449815,
-      "teamIdExtern": 80319,
-      "teamName": "C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY",
-      "matchesPlayed": 27,
-      "playersCount": 18,
-      "totalValuation": 772
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81179",
@@ -3865,15 +2563,6 @@
       "totalValuation": 352
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80782",
-      "teamIdIntern": 451755,
-      "teamIdExtern": 80782,
-      "teamName": "C.B. CORBERA - AUTOCORB",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 248
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82074",
       "teamIdIntern": 459379,
       "teamIdExtern": 82074,
@@ -3890,15 +2579,6 @@
       "matchesPlayed": 17,
       "playersCount": 13,
       "totalValuation": 218
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80725",
-      "teamIdIntern": 452751,
-      "teamIdExtern": 80725,
-      "teamName": "C.B. LLINARS A",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 455
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80724",
@@ -3935,24 +2615,6 @@
       "matchesPlayed": 27,
       "playersCount": 14,
       "totalValuation": -368
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79152",
-      "teamIdIntern": 452045,
-      "teamIdExtern": 79152,
-      "teamName": "C.B. PRAT - MONTIBELLO A",
-      "matchesPlayed": 23,
-      "playersCount": 22,
-      "totalValuation": -415
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79151",
-      "teamIdIntern": 452005,
-      "teamIdExtern": 79151,
-      "teamName": "C.B. PRAT - MONTIBELLO B",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": 740
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81453",
@@ -4018,40 +2680,22 @@
       "totalValuation": 435
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78879",
-      "teamIdIntern": 452939,
-      "teamIdExtern": 78879,
-      "teamName": "C.B. VILASSAR DE MAR 1984",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 397
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78883",
       "teamIdIntern": 450497,
       "teamIdExtern": 78883,
       "teamName": "C.B. VILASSAR DE MAR 1984 NEGRE",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 468
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78884",
-      "teamIdIntern": 449918,
-      "teamIdExtern": 78884,
-      "teamName": "C.B. VILASSAR DE MAR 1984 VERD",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 135
+      "matchesPlayed": 12,
+      "playersCount": 13,
+      "totalValuation": 243
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:78875",
-      "teamIdIntern": 461324,
+      "teamIdIntern": 506867,
       "teamIdExtern": 78875,
       "teamName": "C.B. VILASSAR DE MAR 1984 VERD",
-      "matchesPlayed": 17,
+      "matchesPlayed": 9,
       "playersCount": 14,
-      "totalValuation": 467
+      "totalValuation": 316
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78889",
@@ -4108,15 +2752,6 @@
       "totalValuation": 732
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79552",
-      "teamIdIntern": 452004,
-      "teamIdExtern": 79552,
-      "teamName": "C.E. MARISTES A",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 551
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79544",
       "teamIdIntern": 450597,
       "teamIdExtern": 79544,
@@ -4124,15 +2759,6 @@
       "matchesPlayed": 20,
       "playersCount": 17,
       "totalValuation": 241
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79548",
-      "teamIdIntern": 450537,
-      "teamIdExtern": 79548,
-      "teamName": "C.E. MARISTES A",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 416
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79551",
@@ -4171,15 +2797,6 @@
       "totalValuation": 161
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78645",
-      "teamIdIntern": 449804,
-      "teamIdExtern": 78645,
-      "teamName": "C.E. XAMBA 1R ANY",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "totalValuation": 562
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:78646",
       "teamIdIntern": 459338,
       "teamIdExtern": 78646,
@@ -4187,24 +2804,6 @@
       "matchesPlayed": 10,
       "playersCount": 14,
       "totalValuation": 256
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78654",
-      "teamIdIntern": 450140,
-      "teamIdExtern": 78654,
-      "teamName": "C.E. XAMBA KRAAL",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 804
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78650",
-      "teamIdIntern": 450206,
-      "teamIdExtern": 78650,
-      "teamName": "C.E. XAMBA NEGRE",
-      "matchesPlayed": 23,
-      "playersCount": 13,
-      "totalValuation": 415
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78648",
@@ -4225,30 +2824,12 @@
       "totalValuation": 498
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78651",
-      "teamIdIntern": 452112,
-      "teamIdExtern": 78651,
-      "teamName": "C.E. XAMBA SALUT DENTAL PENED\u00C8S",
-      "matchesPlayed": 22,
-      "playersCount": 20,
-      "totalValuation": 597
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
       "teamIdIntern": 453926,
       "teamIdExtern": 81783,
       "teamName": "C.E.B. SANT JORDI",
       "matchesPlayed": 15,
       "playersCount": 8,
-      "totalValuation": 450
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79604",
-      "teamIdIntern": 452973,
-      "teamIdExtern": 79604,
-      "teamName": "C.E.B.PALLEJ\u00C0",
-      "matchesPlayed": 22,
-      "playersCount": 17,
       "totalValuation": 450
     },
     {
@@ -4270,15 +2851,6 @@
       "totalValuation": 829
     },
     {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO::TEAM:81423",
-      "teamIdIntern": 450882,
-      "teamIdExtern": 81423,
-      "teamName": "CADI LA SEU",
-      "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": 53
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
       "teamIdIntern": 453430,
       "teamIdExtern": 84066,
@@ -4295,15 +2867,6 @@
       "matchesPlayed": 25,
       "playersCount": 15,
       "totalValuation": 408
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79229",
-      "teamIdIntern": 451083,
-      "teamIdExtern": 79229,
-      "teamName": "CAMPUS UDL - CB IGUALADA JF U18",
-      "matchesPlayed": 21,
-      "playersCount": 12,
-      "totalValuation": 872
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83491",
@@ -4369,15 +2932,6 @@
       "totalValuation": 147
     },
     {
-      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81741",
-      "teamIdIntern": 454321,
-      "teamIdExtern": 81741,
-      "teamName": "CB ART\u00C9S",
-      "matchesPlayed": 18,
-      "playersCount": 15,
-      "totalValuation": 457
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81875",
       "teamIdIntern": 463745,
       "teamIdExtern": 81875,
@@ -4385,6 +2939,15 @@
       "matchesPlayed": 17,
       "playersCount": 15,
       "totalValuation": 583
+    },
+    {
+      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81741",
+      "teamIdIntern": 506991,
+      "teamIdExtern": 81741,
+      "teamName": "CB ART\u00C9S",
+      "matchesPlayed": 10,
+      "playersCount": 15,
+      "totalValuation": 222
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81906",
@@ -4450,15 +3013,6 @@
       "totalValuation": 352
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80716",
-      "teamIdIntern": 452920,
-      "teamIdExtern": 80716,
-      "teamName": "CB CASTELLBISBAL A",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 388
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80719",
       "teamIdIntern": 452568,
       "teamIdExtern": 80719,
@@ -4475,15 +3029,6 @@
       "matchesPlayed": 17,
       "playersCount": 13,
       "totalValuation": 528
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80491",
-      "teamIdIntern": 453194,
-      "teamIdExtern": 80491,
-      "teamName": "CB CASTELLET - MARMOLES MORATONAS",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": 404
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82214",
@@ -4505,12 +3050,12 @@
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80367",
-      "teamIdIntern": 450154,
+      "teamIdIntern": 504781,
       "teamIdExtern": 80367,
       "teamName": "CB CERVERA MOBEL L\u00CDNEA NEGRE",
-      "matchesPlayed": 23,
+      "matchesPlayed": 10,
       "playersCount": 11,
-      "totalValuation": 431
+      "totalValuation": 199
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83095",
@@ -4549,24 +3094,6 @@
       "totalValuation": -755
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:78825",
-      "teamIdIntern": 492703,
-      "teamIdExtern": 78825,
-      "teamName": "CB GRANOLLERS 1",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": 1549
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78807",
-      "teamIdIntern": 450548,
-      "teamIdExtern": 78807,
-      "teamName": "CB GRANOLLERS 1",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": 491
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801",
       "teamIdIntern": 450432,
       "teamIdExtern": 78801,
@@ -4583,15 +3110,6 @@
       "matchesPlayed": 17,
       "playersCount": 12,
       "totalValuation": 115
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78823",
-      "teamIdIntern": 449893,
-      "teamIdExtern": 78823,
-      "teamName": "CB GRANOLLERS 2",
-      "matchesPlayed": 25,
-      "playersCount": 18,
-      "totalValuation": 504
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78806",
@@ -4612,15 +3130,6 @@
       "totalValuation": 47
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78819",
-      "teamIdIntern": 452355,
-      "teamIdExtern": 78819,
-      "teamName": "CB GRANOLLERS 2",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": 533
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:78800",
       "teamIdIntern": 453738,
       "teamIdExtern": 78800,
@@ -4639,15 +3148,6 @@
       "totalValuation": 157
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78796",
-      "teamIdIntern": 450750,
-      "teamIdExtern": 78796,
-      "teamName": "CB GRANOLLERS 4",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 477
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78451",
       "teamIdIntern": 451924,
       "teamIdExtern": 78451,
@@ -4657,15 +3157,6 @@
       "totalValuation": 570
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79232",
-      "teamIdIntern": 492702,
-      "teamIdExtern": 79232,
-      "teamName": "CB IGUALADA",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 1905
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79227",
       "teamIdIntern": 450044,
       "teamIdExtern": 79227,
@@ -4673,15 +3164,6 @@
       "matchesPlayed": 25,
       "playersCount": 17,
       "totalValuation": 590
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79250",
-      "teamIdIntern": 449875,
-      "teamIdExtern": 79250,
-      "teamName": "CB IGUALADA IF U13 A",
-      "matchesPlayed": 22,
-      "playersCount": 11,
-      "totalValuation": 623
     },
     {
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79237",
@@ -4706,18 +3188,9 @@
       "teamIdIntern": 450496,
       "teamIdExtern": 79214,
       "teamName": "CB IPSI 08",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 514
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79217",
-      "teamIdIntern": 452393,
-      "teamIdExtern": 79217,
-      "teamName": "CB IPSI A",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": 576
+      "matchesPlayed": 12,
+      "playersCount": 12,
+      "totalValuation": 264
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79216",
@@ -4765,24 +3238,6 @@
       "totalValuation": 599
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80821",
-      "teamIdIntern": 453000,
-      "teamIdExtern": 80821,
-      "teamName": "CB LA SELVA TRANSPAIS",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": 477
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79121",
-      "teamIdIntern": 452159,
-      "teamIdExtern": 79121,
-      "teamName": "CB LA VALL D\u0027EN BAS 1",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": -491
-    },
-    {
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79122",
       "teamIdIntern": 452377,
       "teamIdExtern": 79122,
@@ -4790,15 +3245,6 @@
       "matchesPlayed": 22,
       "playersCount": 16,
       "totalValuation": -3
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79127",
-      "teamIdIntern": 452750,
-      "teamIdExtern": 79127,
-      "teamName": "CB LA VALL D\u0027EN BAS 2",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": 545
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79124",
@@ -4871,15 +3317,6 @@
       "matchesPlayed": 21,
       "playersCount": 17,
       "totalValuation": 92
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79980",
-      "teamIdIntern": 450173,
-      "teamIdExtern": 79980,
-      "teamName": "CB MANYANET LES CORTS VERD",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 439
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79982",
@@ -4963,15 +3400,6 @@
       "totalValuation": 173
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80820",
-      "teamIdIntern": 453290,
-      "teamIdExtern": 80820,
-      "teamName": "CB MORELL A",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": 343
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81530",
       "teamIdIntern": 452852,
       "teamIdExtern": 81530,
@@ -5017,15 +3445,6 @@
       "totalValuation": 628
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78573",
-      "teamIdIntern": 450438,
-      "teamIdExtern": 78573,
-      "teamName": "CB OLOT",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 469
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78574",
       "teamIdIntern": 449837,
       "teamIdExtern": 78574,
@@ -5035,22 +3454,13 @@
       "totalValuation": 384
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78571",
-      "teamIdIntern": 452630,
-      "teamIdExtern": 78571,
-      "teamName": "CB OLOT OLOTINOX",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "totalValuation": 611
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78572",
-      "teamIdIntern": 450500,
+      "teamIdIntern": 504714,
       "teamIdExtern": 78572,
       "teamName": "CB OLOT PERE BOADA EMPRESA CONSTRUCTORA",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": 539
+      "matchesPlayed": 11,
+      "playersCount": 14,
+      "totalValuation": 238
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79155",
@@ -5072,12 +3482,12 @@
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82637",
-      "teamIdIntern": 454426,
+      "teamIdIntern": 506990,
       "teamIdExtern": 82637,
       "teamName": "CB PARETS VERMELL 1",
-      "matchesPlayed": 18,
-      "playersCount": 14,
-      "totalValuation": 289
+      "matchesPlayed": 10,
+      "playersCount": 12,
+      "totalValuation": 190
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80256",
@@ -5087,15 +3497,6 @@
       "matchesPlayed": 23,
       "playersCount": 28,
       "totalValuation": 338
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78991",
-      "teamIdIntern": 450311,
-      "teamIdExtern": 78991,
-      "teamName": "CB PE\u00D1A FRAGATINA",
-      "matchesPlayed": 24,
-      "playersCount": 10,
-      "totalValuation": 581
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82203",
@@ -5161,15 +3562,6 @@
       "totalValuation": 507
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80338",
-      "teamIdIntern": 450360,
-      "teamIdExtern": 80338,
-      "teamName": "CB SANT ANDREU",
-      "matchesPlayed": 24,
-      "playersCount": 17,
-      "totalValuation": 607
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:81551",
       "teamIdIntern": 452380,
       "teamIdExtern": 81551,
@@ -5186,33 +3578,6 @@
       "matchesPlayed": 16,
       "playersCount": 15,
       "totalValuation": 494
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80105",
-      "teamIdIntern": 452109,
-      "teamIdExtern": 80105,
-      "teamName": "CB SANT GREGORI VALL DE LL\u00C9MENA",
-      "matchesPlayed": 22,
-      "playersCount": 21,
-      "totalValuation": -332
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:81125",
-      "teamIdIntern": 453165,
-      "teamIdExtern": 81125,
-      "teamName": "CB SANT GREGORI VALL DE LL\u00C9MENA",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "totalValuation": 425
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80927",
-      "teamIdIntern": 450259,
-      "teamIdExtern": 80927,
-      "teamName": "CB SANT GREGORI VALL DE LL\u00C9MENA U13",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 404
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79052",
@@ -5237,9 +3602,9 @@
       "teamIdIntern": 455358,
       "teamIdExtern": 83169,
       "teamName": "CB SANT JUST U13 BLAU",
-      "matchesPlayed": 20,
-      "playersCount": 13,
-      "totalValuation": 651
+      "matchesPlayed": 10,
+      "playersCount": 12,
+      "totalValuation": 319
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
@@ -5260,15 +3625,6 @@
       "totalValuation": 676
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78420",
-      "teamIdIntern": 451323,
-      "teamIdExtern": 78420,
-      "teamName": "CB TARRAGONA",
-      "matchesPlayed": 24,
-      "playersCount": 24,
-      "totalValuation": 529
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78443",
       "teamIdIntern": 450184,
       "teamIdExtern": 78443,
@@ -5276,15 +3632,6 @@
       "matchesPlayed": 23,
       "playersCount": 14,
       "totalValuation": 718
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78437",
-      "teamIdIntern": 450181,
-      "teamIdExtern": 78437,
-      "teamName": "CB TARRAGONA",
-      "matchesPlayed": 21,
-      "playersCount": 13,
-      "totalValuation": 247
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78446",
@@ -5305,15 +3652,6 @@
       "totalValuation": 493
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78898",
-      "teamIdIntern": 450208,
-      "teamIdExtern": 78898,
-      "teamName": "CB TONA - TRANSMONTSENY S.L.",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 552
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:78899",
       "teamIdIntern": 451752,
       "teamIdExtern": 78899,
@@ -5332,15 +3670,6 @@
       "totalValuation": 463
     },
     {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:78900",
-      "teamIdIntern": 452018,
-      "teamIdExtern": 78900,
-      "teamName": "CB TONA A",
-      "matchesPlayed": 23,
-      "playersCount": 20,
-      "totalValuation": -263
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78513",
       "teamIdIntern": 449938,
       "teamIdExtern": 78513,
@@ -5348,15 +3677,6 @@
       "matchesPlayed": 28,
       "playersCount": 17,
       "totalValuation": 864
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78510",
-      "teamIdIntern": 450070,
-      "teamIdExtern": 78510,
-      "teamName": "CB TORELL\u00D3 IF",
-      "matchesPlayed": 26,
-      "playersCount": 12,
-      "totalValuation": 999
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:78514",
@@ -5393,15 +3713,6 @@
       "matchesPlayed": 20,
       "playersCount": 10,
       "totalValuation": 869
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78512",
-      "teamIdIntern": 450467,
-      "teamIdExtern": 78512,
-      "teamName": "CB TORELL\u00D3 PIF",
-      "matchesPlayed": 22,
-      "playersCount": 11,
-      "totalValuation": 411
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82130",
@@ -5458,15 +3769,6 @@
       "totalValuation": 476
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78412",
-      "teamIdIntern": 450906,
-      "teamIdExtern": 78412,
-      "teamName": "CB VALLS SOLIDITY",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": 381
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80197",
       "teamIdIntern": 452151,
       "teamIdExtern": 80197,
@@ -5474,24 +3776,6 @@
       "matchesPlayed": 22,
       "playersCount": 15,
       "totalValuation": 490
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79112",
-      "teamIdIntern": 452097,
-      "teamIdExtern": 79112,
-      "teamName": "CB VILABLAREIX",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": -612
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80000",
-      "teamIdIntern": 450631,
-      "teamIdExtern": 80000,
-      "teamName": "CB VILADECANS",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 432
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80003",
@@ -5519,15 +3803,6 @@
       "matchesPlayed": 17,
       "playersCount": 11,
       "totalValuation": 248
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79317",
-      "teamIdIntern": 453323,
-      "teamIdExtern": 79317,
-      "teamName": "CB VILASSAR DE DALT A",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": -94
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79318",
@@ -5567,30 +3842,12 @@
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80344",
-      "teamIdIntern": 450630,
+      "teamIdIntern": 505516,
       "teamIdExtern": 80344,
       "teamName": "CB. CORNELLA",
-      "matchesPlayed": 23,
-      "playersCount": 26,
-      "totalValuation": 548
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80340",
-      "teamIdIntern": 452871,
-      "teamIdExtern": 80340,
-      "teamName": "CB. CORNELLA A",
-      "matchesPlayed": 22,
-      "playersCount": 18,
-      "totalValuation": -248
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80343",
-      "teamIdIntern": 449915,
-      "teamIdExtern": 80343,
-      "teamName": "CB. CORNELLA B",
-      "matchesPlayed": 25,
-      "playersCount": 18,
-      "totalValuation": 593
+      "matchesPlayed": 11,
+      "playersCount": 21,
+      "totalValuation": 295
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80342",
@@ -5600,15 +3857,6 @@
       "matchesPlayed": 28,
       "playersCount": 21,
       "totalValuation": 713
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80347",
-      "teamIdIntern": 450536,
-      "teamIdExtern": 80347,
-      "teamName": "CB. CORNELL\u00C0",
-      "matchesPlayed": 23,
-      "playersCount": 13,
-      "totalValuation": 362
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80339",
@@ -5636,15 +3884,6 @@
       "matchesPlayed": 24,
       "playersCount": 21,
       "totalValuation": 482
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:78411",
-      "teamIdIntern": 452158,
-      "teamIdExtern": 78411,
-      "teamName": "CB. VALLS DIC",
-      "matchesPlayed": 22,
-      "playersCount": 18,
-      "totalValuation": -344
     },
     {
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78904",
@@ -5681,15 +3920,6 @@
       "matchesPlayed": 20,
       "playersCount": 10,
       "totalValuation": 485
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80120",
-      "teamIdIntern": 450601,
-      "teamIdExtern": 80120,
-      "teamName": "CBS FEM  U13 1ER ANY",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": 824
     },
     {
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:80123",
@@ -5737,42 +3967,6 @@
       "totalValuation": 12
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80128",
-      "teamIdIntern": 449929,
-      "teamIdExtern": 80128,
-      "teamName": "CBS FEM U17 1ER ANY",
-      "matchesPlayed": 25,
-      "playersCount": 26,
-      "totalValuation": 618
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80107",
-      "teamIdIntern": 449957,
-      "teamIdExtern": 80107,
-      "teamName": "CBS FEM U18",
-      "matchesPlayed": 30,
-      "playersCount": 19,
-      "totalValuation": -154
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80729",
-      "teamIdIntern": 451936,
-      "teamIdExtern": 80729,
-      "teamName": "CBU LLORET RECREATIVOS LLORET",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": -306
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:81129",
-      "teamIdIntern": 450763,
-      "teamIdExtern": 81129,
-      "teamName": "CBU LLORET RECREATIVOS LLORET VERD",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 451
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:81241",
       "teamIdIntern": 492638,
       "teamIdExtern": 81241,
@@ -5813,9 +4007,9 @@
       "teamIdIntern": 450681,
       "teamIdExtern": 78938,
       "teamName": "CE SAGRAT COR DIPUTACIO",
-      "matchesPlayed": 23,
+      "matchesPlayed": 13,
       "playersCount": 14,
-      "totalValuation": 515
+      "totalValuation": 273
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612",
@@ -5836,15 +4030,6 @@
       "totalValuation": -450
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78605",
-      "teamIdIntern": 450155,
-      "teamIdExtern": 78605,
-      "teamName": "CE SANT NICOLAU 1",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": 334
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:78614",
       "teamIdIntern": 457148,
       "teamIdExtern": 78614,
@@ -5852,15 +4037,6 @@
       "matchesPlayed": 10,
       "playersCount": 11,
       "totalValuation": 152
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:78607",
-      "teamIdIntern": 452019,
-      "teamIdExtern": 78607,
-      "teamName": "CE SANT NICOLAU A",
-      "matchesPlayed": 23,
-      "playersCount": 13,
-      "totalValuation": -405
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78606",
@@ -5881,24 +4057,6 @@
       "totalValuation": 454
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:81015",
-      "teamIdIntern": 450527,
-      "teamIdExtern": 81015,
-      "teamName": "CEEB TORDERA",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "totalValuation": 1217
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80970",
-      "teamIdIntern": 452002,
-      "teamIdExtern": 80970,
-      "teamName": "CEIGRUP CB BLANES A",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": -510
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82021",
       "teamIdIntern": 472427,
       "teamIdExtern": 82021,
@@ -5908,15 +4066,6 @@
       "totalValuation": 398
     },
     {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79934",
-      "teamIdIntern": 449988,
-      "teamIdExtern": 79934,
-      "teamName": "CENG ROS",
-      "matchesPlayed": 28,
-      "playersCount": 21,
-      "totalValuation": -409
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79932",
       "teamIdIntern": 450010,
       "teamIdExtern": 79932,
@@ -5924,33 +4073,6 @@
       "matchesPlayed": 26,
       "playersCount": 12,
       "totalValuation": -470
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79930",
-      "teamIdIntern": 472935,
-      "teamIdExtern": 79930,
-      "teamName": "CENG TASHIA",
-      "matchesPlayed": 22,
-      "playersCount": 18,
-      "totalValuation": 237
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80306",
-      "teamIdIntern": 449978,
-      "teamIdExtern": 80306,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 26,
-      "playersCount": 13,
-      "totalValuation": 581
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80303",
-      "teamIdIntern": 450141,
-      "teamIdExtern": 80303,
-      "teamName": "CENTRE CAT\u00D2LIC L\u0027H",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 510
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81071",
@@ -6088,15 +4210,6 @@
       "totalValuation": 320
     },
     {
-      "teamKey": "2025-2026::LIGA FEMENINA CHALLENGE::TEAM:80115",
-      "teamIdIntern": 450569,
-      "teamIdExtern": 80115,
-      "teamName": "CLUB BASQUET SANTFELIUENC",
-      "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": 2
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79355",
       "teamIdIntern": 453218,
       "teamIdExtern": 79355,
@@ -6151,31 +4264,13 @@
       "totalValuation": 453
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:81028",
-      "teamIdIntern": 449892,
-      "teamIdExtern": 81028,
-      "teamName": "CLUB B\u00C0SQUET SANT CELONI - U17F",
-      "matchesPlayed": 25,
-      "playersCount": 15,
-      "totalValuation": 380
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79776",
-      "teamIdIntern": 451937,
-      "teamIdExtern": 79776,
-      "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": -627
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79780",
       "teamIdIntern": 450586,
       "teamIdExtern": 79780,
       "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
-      "matchesPlayed": 23,
-      "playersCount": 20,
-      "totalValuation": 315
+      "matchesPlayed": 12,
+      "playersCount": 19,
+      "totalValuation": 181
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80804",
@@ -6185,15 +4280,6 @@
       "matchesPlayed": 26,
       "playersCount": 15,
       "totalValuation": 533
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80802",
-      "teamIdIntern": 450227,
-      "teamIdExtern": 80802,
-      "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 330
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79777",
@@ -6223,33 +4309,6 @@
       "totalValuation": 239
     },
     {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85623",
-      "teamIdIntern": 502159,
-      "teamIdExtern": 85623,
-      "teamName": "CLUB ESTUDIANTES",
-      "matchesPlayed": 3,
-      "playersCount": 10,
-      "totalValuation": 393
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO::TEAM:81376",
-      "teamIdIntern": 450883,
-      "teamIdExtern": 81376,
-      "teamName": "CLUB JOVENTUT BADALONA",
-      "matchesPlayed": 2,
-      "playersCount": 14,
-      "totalValuation": 141
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85626",
-      "teamIdIntern": 502160,
-      "teamIdExtern": 85626,
-      "teamName": "CLUB JOVENTUT BADALONA",
-      "matchesPlayed": 3,
-      "playersCount": 12,
-      "totalValuation": 267
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79686",
       "teamIdIntern": 453927,
       "teamIdExtern": 79686,
@@ -6257,33 +4316,6 @@
       "matchesPlayed": 17,
       "playersCount": 13,
       "totalValuation": 341
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80270",
-      "teamIdIntern": 452283,
-      "teamIdExtern": 80270,
-      "teamName": "CLUB NATACI\u00D3 SABADELL A",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": -446
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80269",
-      "teamIdIntern": 450094,
-      "teamIdExtern": 80269,
-      "teamName": "CLUB NATACI\u00D3 SABADELL A",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": 531
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80268",
-      "teamIdIntern": 451871,
-      "teamIdExtern": 80268,
-      "teamName": "CLUB NATACI\u00D3 SABADELL B",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": 420
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80265",
@@ -6295,15 +4327,6 @@
       "totalValuation": 458
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79683",
-      "teamIdIntern": 450095,
-      "teamIdExtern": 79683,
-      "teamName": "CLUB NATACI\u00D3 TERRASSA",
-      "matchesPlayed": 24,
-      "playersCount": 14,
-      "totalValuation": 388
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:79685",
       "teamIdIntern": 455765,
       "teamIdExtern": 79685,
@@ -6311,15 +4334,6 @@
       "matchesPlayed": 20,
       "playersCount": 16,
       "totalValuation": 405
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79698",
-      "teamIdIntern": 453186,
-      "teamIdExtern": 79698,
-      "teamName": "CLUB NATACI\u00D3 TERRASSA A",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": -302
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79701",
@@ -6365,15 +4379,6 @@
       "matchesPlayed": 22,
       "playersCount": 17,
       "totalValuation": 779
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78486",
-      "teamIdIntern": 472721,
-      "teamIdExtern": 78486,
-      "teamName": "CN CALDES",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 818
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497",
@@ -6448,42 +4453,6 @@
       "totalValuation": 594
     },
     {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79925",
-      "teamIdIntern": 452174,
-      "teamIdExtern": 79925,
-      "teamName": "CUD\u00D3S / VIDRES PONENT CB BALAGUER A",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": -230
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78585",
-      "teamIdIntern": 450775,
-      "teamIdExtern": 78585,
-      "teamName": "CURVES JET TERRASSA U14",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 507
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79751",
-      "teamIdIntern": 450332,
-      "teamIdExtern": 79751,
-      "teamName": "C\u00C0MPING BIANYA ROSER A",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 1372
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79752",
-      "teamIdIntern": 501444,
-      "teamIdExtern": 79752,
-      "teamName": "C\u00C0MPING BIANYA ROSER B",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": 754
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:79754",
       "teamIdIntern": 455793,
       "teamIdExtern": 79754,
@@ -6502,15 +4471,6 @@
       "totalValuation": 387
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79749",
-      "teamIdIntern": 450201,
-      "teamIdExtern": 79749,
-      "teamName": "C\u00C0MPING BIANYA ROSER VERMELL",
-      "matchesPlayed": 23,
-      "playersCount": 12,
-      "totalValuation": 271
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80334",
       "teamIdIntern": 452256,
       "teamIdExtern": 80334,
@@ -6518,24 +4478,6 @@
       "matchesPlayed": 22,
       "playersCount": 16,
       "totalValuation": 659
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79743",
-      "teamIdIntern": 450039,
-      "teamIdExtern": 79743,
-      "teamName": "DISHELEC 65 VILAB\u00C0SQUET VILADECANS JF",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 659
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:81436",
-      "teamIdIntern": 450089,
-      "teamIdExtern": 81436,
-      "teamName": "DISHELEC 65 VILADECANS",
-      "matchesPlayed": 2,
-      "playersCount": 12,
-      "totalValuation": 69
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
@@ -6565,15 +4507,6 @@
       "totalValuation": 255
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79426",
-      "teamIdIntern": 453195,
-      "teamIdExtern": 79426,
-      "teamName": "DRAFT GRAMENET",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "totalValuation": 451
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78662",
       "teamIdIntern": 452578,
       "teamIdExtern": 78662,
@@ -6601,15 +4534,6 @@
       "totalValuation": 186
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78996",
-      "teamIdIntern": 449874,
-      "teamIdExtern": 78996,
-      "teamName": "EL C\u00CDRCOL 2013",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 555
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79003",
       "teamIdIntern": 452189,
       "teamIdExtern": 79003,
@@ -6635,15 +4559,6 @@
       "matchesPlayed": 22,
       "playersCount": 15,
       "totalValuation": -202
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80691",
-      "teamIdIntern": 449919,
-      "teamIdExtern": 80691,
-      "teamName": "EL MASNOU BASQUETBOL",
-      "matchesPlayed": 27,
-      "playersCount": 13,
-      "totalValuation": 682
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80690",
@@ -6682,15 +4597,6 @@
       "totalValuation": 629
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79219",
-      "teamIdIntern": 450107,
-      "teamIdExtern": 79219,
-      "teamName": "ESCOLA IPSI 12",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 554
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81620",
       "teamIdIntern": 454096,
       "teamIdExtern": 81620,
@@ -6725,24 +4631,6 @@
       "matchesPlayed": 22,
       "playersCount": 16,
       "totalValuation": -94
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79560",
-      "teamIdIntern": 452402,
-      "teamIdExtern": 79560,
-      "teamName": "ESPANYOL CEJ L\u0027H B",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": -343
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79569",
-      "teamIdIntern": 450362,
-      "teamIdExtern": 79569,
-      "teamName": "ESPANYOL CEJL\u0027H A",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 949
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83715",
@@ -6809,12 +4697,12 @@
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80600",
-      "teamIdIntern": 450288,
+      "teamIdIntern": 556322,
       "teamIdExtern": 80600,
       "teamName": "FC MARTINENC B\u00C0SQUET U18",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": 594
+      "matchesPlayed": 1,
+      "playersCount": 9,
+      "totalValuation": 6
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:80623",
@@ -6862,15 +4750,6 @@
       "totalValuation": 623
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79489",
-      "teamIdIntern": 450635,
-      "teamIdExtern": 79489,
-      "teamName": "FEMENI MARESME 3 VILES - IF",
-      "matchesPlayed": 25,
-      "playersCount": 12,
-      "totalValuation": 744
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81574",
       "teamIdIntern": 452740,
       "teamIdExtern": 81574,
@@ -6896,15 +4775,6 @@
       "matchesPlayed": 18,
       "playersCount": 12,
       "totalValuation": 164
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80777",
-      "teamIdIntern": 452354,
-      "teamIdExtern": 80777,
-      "teamName": "FEMEN\u00CD MARESME 3 VILES - SF",
-      "matchesPlayed": 23,
-      "playersCount": 26,
-      "totalValuation": 487
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79526",
@@ -6943,15 +4813,6 @@
       "totalValuation": 507
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79524",
-      "teamIdIntern": 450071,
-      "teamIdExtern": 79524,
-      "teamName": "FEMEN\u00CD OSONA NEGRE- OVA PROJECTS",
-      "matchesPlayed": 25,
-      "playersCount": 12,
-      "totalValuation": 528
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79532",
       "teamIdIntern": 454115,
       "teamIdExtern": 79532,
@@ -6959,24 +4820,6 @@
       "matchesPlayed": 15,
       "playersCount": 11,
       "totalValuation": 474
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79531",
-      "teamIdIntern": 452096,
-      "teamIdExtern": 79531,
-      "teamName": "FEMEN\u00CD OSONA- OVA PROJECTS",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": -162
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79518",
-      "teamIdIntern": 450233,
-      "teamIdExtern": 79518,
-      "teamName": "FEMEN\u00CD OSONA- OVA PROJECTS",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": 631
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80235",
@@ -6988,15 +4831,6 @@
       "totalValuation": 441
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80239",
-      "teamIdIntern": 449839,
-      "teamIdExtern": 80239,
-      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 B",
-      "matchesPlayed": 26,
-      "playersCount": 26,
-      "totalValuation": 874
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80240",
       "teamIdIntern": 449867,
       "teamIdExtern": 80240,
@@ -7004,24 +4838,6 @@
       "matchesPlayed": 26,
       "playersCount": 22,
       "totalValuation": 850
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80241",
-      "teamIdIntern": 449825,
-      "teamIdExtern": 80241,
-      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 B",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 543
-    },
-    {
-      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:80231",
-      "teamIdIntern": 456575,
-      "teamIdExtern": 80231,
-      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-      "matchesPlayed": 18,
-      "playersCount": 21,
-      "totalValuation": 514
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80233",
@@ -7033,15 +4849,6 @@
       "totalValuation": 609
     },
     {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79260",
-      "teamIdIntern": 452108,
-      "teamIdExtern": 79260,
-      "teamName": "FINQUES EDUARD - C.B. ARGENTONA A",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": -306
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83622",
       "teamIdIntern": 452914,
       "teamIdExtern": 83622,
@@ -7049,33 +4856,6 @@
       "matchesPlayed": 22,
       "playersCount": 19,
       "totalValuation": 383
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79806",
-      "teamIdIntern": 453307,
-      "teamIdExtern": 79806,
-      "teamName": "FORMULA SR -LLU\u00CFSOS DE GRACIA A",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": -379
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:81390",
-      "teamIdIntern": 450097,
-      "teamIdExtern": 81390,
-      "teamName": "FOR\u00C7A LLEIDA",
-      "matchesPlayed": 2,
-      "playersCount": 13,
-      "totalValuation": 67
-    },
-    {
-      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81796",
-      "teamIdIntern": 454320,
-      "teamIdExtern": 81796,
-      "teamName": "FUNDACI\u00D3 BLAI - CB GAV\u00C0 VERMELL",
-      "matchesPlayed": 18,
-      "playersCount": 11,
-      "totalValuation": 244
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:81102",
@@ -7096,15 +4876,6 @@
       "totalValuation": 300
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79095",
-      "teamIdIntern": 501445,
-      "teamIdExtern": 79095,
-      "teamName": "GEFF CBSAPS",
-      "matchesPlayed": 21,
-      "playersCount": 17,
-      "totalValuation": 344
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:79088",
       "teamIdIntern": 455792,
       "teamIdExtern": 79088,
@@ -7112,15 +4883,6 @@
       "matchesPlayed": 7,
       "playersCount": 11,
       "totalValuation": 139
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:79290",
-      "teamIdIntern": 450086,
-      "teamIdExtern": 79290,
-      "teamName": "GEIEG PACISA",
-      "matchesPlayed": 4,
-      "playersCount": 15,
-      "totalValuation": 189
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79284",
@@ -7132,51 +4894,6 @@
       "totalValuation": 401
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79288",
-      "teamIdIntern": 450355,
-      "teamIdExtern": 79288,
-      "teamName": "GEIEG VEDRUNA B OTIS",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": 1236
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79289",
-      "teamIdIntern": 451252,
-      "teamIdExtern": 79289,
-      "teamName": "GEIEG VEDRUNA CATALUNYA TELECOM",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": 531
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:81107",
-      "teamIdIntern": 452322,
-      "teamIdExtern": 81107,
-      "teamName": "GIROBOWLING CB SALT",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": 803
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79021",
-      "teamIdIntern": 450069,
-      "teamIdExtern": 79021,
-      "teamName": "GPU ARTS GR\u00C0FIQUES MANRESA CBF U17",
-      "matchesPlayed": 28,
-      "playersCount": 22,
-      "totalValuation": 950
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80634",
-      "teamIdIntern": 453230,
-      "teamIdExtern": 80634,
-      "teamName": "GRAMENET BC",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": 350
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82569",
       "teamIdIntern": 453795,
       "teamIdExtern": 82569,
@@ -7186,15 +4903,6 @@
       "totalValuation": 253
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80635",
-      "teamIdIntern": 450200,
-      "teamIdExtern": 80635,
-      "teamName": "GRAMENET BC TARONJA",
-      "matchesPlayed": 24,
-      "playersCount": 14,
-      "totalValuation": 396
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83498",
       "teamIdIntern": 452594,
       "teamIdExtern": 83498,
@@ -7202,15 +4910,6 @@
       "matchesPlayed": 21,
       "playersCount": 19,
       "totalValuation": 357
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:78864",
-      "teamIdIntern": 452870,
-      "teamIdExtern": 78864,
-      "teamName": "HERRERUELA FOR\u00C7A LLEIDA",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": -428
     },
     {
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79263",
@@ -7240,15 +4939,6 @@
       "totalValuation": 292
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:80314",
-      "teamIdIntern": 450647,
-      "teamIdExtern": 80314,
-      "teamName": "INSTAX - CB GRUP BARNA A",
-      "matchesPlayed": 24,
-      "playersCount": 20,
-      "totalValuation": 1466
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:82193",
       "teamIdIntern": 458881,
       "teamIdExtern": 82193,
@@ -7256,15 +4946,6 @@
       "matchesPlayed": 10,
       "playersCount": 11,
       "totalValuation": 83
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78674",
-      "teamIdIntern": 450617,
-      "teamIdExtern": 78674,
-      "teamName": "ISEFI C.B. L\u0027HOSPITALET A",
-      "matchesPlayed": 23,
-      "playersCount": 16,
-      "totalValuation": 539
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80089",
@@ -7283,15 +4964,6 @@
       "matchesPlayed": 17,
       "playersCount": 20,
       "totalValuation": 464
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80279",
-      "teamIdIntern": 452040,
-      "teamIdExtern": 80279,
-      "teamName": "JAC SANTS BARCELONA A",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": -381
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80291",
@@ -7375,15 +5047,6 @@
       "totalValuation": 556
     },
     {
-      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81030",
-      "teamIdIntern": 456574,
-      "teamIdExtern": 81030,
-      "teamName": "JET TERRASSA U13 BLAU",
-      "matchesPlayed": 18,
-      "playersCount": 15,
-      "totalValuation": 451
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78587",
       "teamIdIntern": 449965,
       "teamIdExtern": 78587,
@@ -7411,15 +5074,6 @@
       "totalValuation": 361
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80683",
-      "teamIdIntern": 450481,
-      "teamIdExtern": 80683,
-      "teamName": "JET TERRASSA U18",
-      "matchesPlayed": 24,
-      "playersCount": 18,
-      "totalValuation": 418
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:82815",
       "teamIdIntern": 452756,
       "teamIdExtern": 82815,
@@ -7438,15 +5092,6 @@
       "totalValuation": 568
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80170",
-      "teamIdIntern": 450106,
-      "teamIdExtern": 80170,
-      "teamName": "JOVENTUT BADALONA 1",
-      "matchesPlayed": 26,
-      "playersCount": 17,
-      "totalValuation": 920
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80171",
       "teamIdIntern": 453645,
       "teamIdExtern": 80171,
@@ -7463,24 +5108,6 @@
       "matchesPlayed": 26,
       "playersCount": 21,
       "totalValuation": 233
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78749",
-      "teamIdIntern": 467392,
-      "teamIdExtern": 78749,
-      "teamName": "JOVENTUT BADALONA 2",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 522
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80175",
-      "teamIdIntern": 449955,
-      "teamIdExtern": 80175,
-      "teamName": "JOVENTUT BADALONA A",
-      "matchesPlayed": 29,
-      "playersCount": 24,
-      "totalValuation": -443
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80172",
@@ -7510,15 +5137,6 @@
       "totalValuation": 969
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80167",
-      "teamIdIntern": 449838,
-      "teamIdExtern": 80167,
-      "teamName": "JOVENTUT BADALONA B",
-      "matchesPlayed": 25,
-      "playersCount": 23,
-      "totalValuation": 698
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:80192",
       "teamIdIntern": 453739,
       "teamIdExtern": 80192,
@@ -7546,15 +5164,6 @@
       "totalValuation": 338
     },
     {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79951",
-      "teamIdIntern": 452033,
-      "teamIdExtern": 79951,
-      "teamName": "JOVENTUT LES CORTS",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": -394
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79944",
       "teamIdIntern": 453149,
       "teamIdExtern": 79944,
@@ -7571,15 +5180,6 @@
       "matchesPlayed": 20,
       "playersCount": 13,
       "totalValuation": 382
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79646",
-      "teamIdIntern": 452581,
-      "teamIdExtern": 79646,
-      "teamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER A",
-      "matchesPlayed": 21,
-      "playersCount": 16,
-      "totalValuation": 794
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82180",
@@ -7616,15 +5216,6 @@
       "matchesPlayed": 20,
       "playersCount": 12,
       "totalValuation": 468
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78474",
-      "teamIdIntern": 450022,
-      "teamIdExtern": 78474,
-      "teamName": "LA SALLE MANRESA 1",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 558
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:78480",
@@ -7708,22 +5299,13 @@
       "totalValuation": 327
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79800",
-      "teamIdIntern": 450226,
-      "teamIdExtern": 79800,
-      "teamName": "LLU\u00CFSOS DE GR\u00C0CIA",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "totalValuation": 803
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81527",
       "teamIdIntern": 455291,
       "teamIdExtern": 81527,
       "teamName": "LLU\u00CFSOS DE GR\u00C0CIA",
-      "matchesPlayed": 20,
+      "matchesPlayed": 10,
       "playersCount": 11,
-      "totalValuation": 404
+      "totalValuation": 156
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81529",
@@ -7744,15 +5326,6 @@
       "totalValuation": 624
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79805",
-      "teamIdIntern": 453039,
-      "teamIdExtern": 79805,
-      "teamName": "LLU\u00CFSOS DE GR\u00C0CIA B",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": 510
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
       "teamIdIntern": 456495,
       "teamIdExtern": 81522,
@@ -7760,24 +5333,6 @@
       "matchesPlayed": 17,
       "playersCount": 12,
       "totalValuation": 108
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:80229",
-      "teamIdIntern": 450333,
-      "teamIdExtern": 80229,
-      "teamName": "LOQUILLO FEMEN\u00CD SANT ADRI\u00C0",
-      "matchesPlayed": 23,
-      "playersCount": 23,
-      "totalValuation": 1254
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80228",
-      "teamIdIntern": 449960,
-      "teamIdExtern": 80228,
-      "teamName": "LOQUILLO FEMEN\u00CD SANT ADRI\u00C0 A",
-      "matchesPlayed": 30,
-      "playersCount": 18,
-      "totalValuation": -195
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79030",
@@ -7796,15 +5351,6 @@
       "matchesPlayed": 17,
       "playersCount": 13,
       "totalValuation": 124
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:81384",
-      "teamIdIntern": 450649,
-      "teamIdExtern": 81384,
-      "teamName": "MANRESA CBF A",
-      "matchesPlayed": 3,
-      "playersCount": 12,
-      "totalValuation": 187
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82901",
@@ -7843,33 +5389,6 @@
       "totalValuation": 820
     },
     {
-      "teamKey": "2025-2026::LIGA FEMENINA CHALLENGE::TEAM:81394",
-      "teamIdIntern": 450568,
-      "teamIdExtern": 81394,
-      "teamName": "MCR LIMA-HORTA BARCELONA",
-      "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": 18
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO::TEAM:81394",
-      "teamIdIntern": 450793,
-      "teamIdExtern": 81394,
-      "teamName": "MCR LIMA-HORTA BARCELONA",
-      "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": -6
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79024",
-      "teamIdIntern": 452090,
-      "teamIdExtern": 79024,
-      "teamName": "MECVIL MANRESA CBF B",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": -442
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79029",
       "teamIdIntern": 452716,
       "teamIdExtern": 79029,
@@ -7877,15 +5396,6 @@
       "matchesPlayed": 22,
       "playersCount": 20,
       "totalValuation": 396
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:78684",
-      "teamIdIntern": 450646,
-      "teamIdExtern": 78684,
-      "teamName": "MUSEU DEL COMIC - CASTELLDEFELS A",
-      "matchesPlayed": 24,
-      "playersCount": 14,
-      "totalValuation": 1783
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80638",
@@ -7915,15 +5425,6 @@
       "totalValuation": 119
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80647",
-      "teamIdIntern": 449923,
-      "teamIdExtern": 80647,
-      "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - JAF",
-      "matchesPlayed": 25,
-      "playersCount": 17,
-      "totalValuation": 567
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81412",
       "teamIdIntern": 454340,
       "teamIdExtern": 81412,
@@ -7931,15 +5432,6 @@
       "matchesPlayed": 18,
       "playersCount": 13,
       "totalValuation": 263
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80639",
-      "teamIdIntern": 453152,
-      "teamIdExtern": 80639,
-      "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - SAF",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": 350
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832",
@@ -7951,15 +5443,6 @@
       "totalValuation": 200
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78861",
-      "teamIdIntern": 450480,
-      "teamIdExtern": 78861,
-      "teamName": "NAYOX FOR\u00C7A LLEIDA A",
-      "matchesPlayed": 24,
-      "playersCount": 23,
-      "totalValuation": 531
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78859",
       "teamIdIntern": 450297,
       "teamIdExtern": 78859,
@@ -7969,24 +5452,6 @@
       "totalValuation": 860
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:78858",
-      "teamIdIntern": 450310,
-      "teamIdExtern": 78858,
-      "teamName": "NAYOX FOR\u00C7A LLEIDA A",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 627
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78860",
-      "teamIdIntern": 449934,
-      "teamIdExtern": 78860,
-      "teamName": "NAYOX FOR\u00C7A LLEIDA B",
-      "matchesPlayed": 27,
-      "playersCount": 14,
-      "totalValuation": 631
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78857",
       "teamIdIntern": 449947,
       "teamIdExtern": 78857,
@@ -7994,24 +5459,6 @@
       "matchesPlayed": 25,
       "playersCount": 13,
       "totalValuation": 752
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78856",
-      "teamIdIntern": 449805,
-      "teamIdExtern": 78856,
-      "teamName": "NAYOX FOR\u00C7A LLEIDA B",
-      "matchesPlayed": 21,
-      "playersCount": 13,
-      "totalValuation": 351
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79367",
-      "teamIdIntern": 453024,
-      "teamIdExtern": 79367,
-      "teamName": "NOU B\u00C0SQUET OLESA A",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": -311
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79363",
@@ -8041,15 +5488,6 @@
       "totalValuation": 545
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78499",
-      "teamIdIntern": 452921,
-      "teamIdExtern": 78499,
-      "teamName": "NOU CASTELLAR CBC F",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 318
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83695",
       "teamIdIntern": 451836,
       "teamIdExtern": 83695,
@@ -8068,33 +5506,6 @@
       "totalValuation": 411
     },
     {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:80684",
-      "teamIdIntern": 453306,
-      "teamIdExtern": 80684,
-      "teamName": "ODONTOMED JET TERRASSA",
-      "matchesPlayed": 22,
-      "playersCount": 21,
-      "totalValuation": -395
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79455",
-      "teamIdIntern": 453001,
-      "teamIdExtern": 79455,
-      "teamName": "OLARIA ESPORTS - LA PARR\u00D2QUIA - SAM\u00C0 VILANOVA - SBF",
-      "matchesPlayed": 21,
-      "playersCount": 16,
-      "totalValuation": 499
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79457",
-      "teamIdIntern": 452175,
-      "teamIdExtern": 79457,
-      "teamName": "OLARIA ESPORTS - LA PARR\u00D2QUIA - SAM\u00C0 VILANOVA SAF",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": -352
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:82194",
       "teamIdIntern": 452035,
       "teamIdExtern": 82194,
@@ -8102,15 +5513,6 @@
       "matchesPlayed": 20,
       "playersCount": 11,
       "totalValuation": 438
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79742",
-      "teamIdIntern": 457242,
-      "teamIdExtern": 79742,
-      "teamName": "OPENLLAR VIL\u00C0BASQUET VILADECANS SFB",
-      "matchesPlayed": 22,
-      "playersCount": 20,
-      "totalValuation": -202
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79509",
@@ -8167,15 +5569,6 @@
       "totalValuation": 725
     },
     {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:79499",
-      "teamIdIntern": 451960,
-      "teamIdExtern": 79499,
-      "teamName": "PETROPINTO ASFE A",
-      "matchesPlayed": 23,
-      "playersCount": 18,
-      "totalValuation": -577
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79495",
       "teamIdIntern": 452946,
       "teamIdExtern": 79495,
@@ -8213,12 +5606,12 @@
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79515",
-      "teamIdIntern": 450232,
+      "teamIdIntern": 555803,
       "teamIdExtern": 79515,
       "teamName": "PETROPINTO ASFE U18 VERD",
-      "matchesPlayed": 23,
-      "playersCount": 22,
-      "totalValuation": 517
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "totalValuation": 22
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79921",
@@ -8239,33 +5632,6 @@
       "totalValuation": 537
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79378",
-      "teamIdIntern": 450625,
-      "teamIdExtern": 79378,
-      "teamName": "PROMOVIATGES CBF CERDANYOLA A",
-      "matchesPlayed": 23,
-      "playersCount": 20,
-      "totalValuation": 1237
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79376",
-      "teamIdIntern": 452003,
-      "teamIdExtern": 79376,
-      "teamName": "PROMOVIATGES CBF CERDANYOLA B",
-      "matchesPlayed": 23,
-      "playersCount": 20,
-      "totalValuation": -564
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79377",
-      "teamIdIntern": 450209,
-      "teamIdExtern": 79377,
-      "teamName": "PROMOVIATGES CBF CERDANYOLA U14",
-      "matchesPlayed": 25,
-      "playersCount": 11,
-      "totalValuation": 708
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79379",
       "teamIdIntern": 450109,
       "teamIdExtern": 79379,
@@ -8275,33 +5641,6 @@
       "totalValuation": 500
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79380",
-      "teamIdIntern": 449814,
-      "teamIdExtern": 79380,
-      "teamName": "PROMOVIATGES CBF CERDANYOLA U17",
-      "matchesPlayed": 27,
-      "playersCount": 16,
-      "totalValuation": 487
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79375",
-      "teamIdIntern": 449952,
-      "teamIdExtern": 79375,
-      "teamName": "PROMOVIATGES CBF CERDANYOLA U18",
-      "matchesPlayed": 28,
-      "playersCount": 19,
-      "totalValuation": -547
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80696",
-      "teamIdIntern": 453121,
-      "teamIdExtern": 80696,
-      "teamName": "PUJOL MOLLERUSSA",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": 588
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81896",
       "teamIdIntern": 452793,
       "teamIdExtern": 81896,
@@ -8309,24 +5648,6 @@
       "matchesPlayed": 19,
       "playersCount": 16,
       "totalValuation": 614
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80699",
-      "teamIdIntern": 451290,
-      "teamIdExtern": 80699,
-      "teamName": "PUJOL MOLLERUSSA SOLUXIONS",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 308
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80764",
-      "teamIdIntern": 450079,
-      "teamIdExtern": 80764,
-      "teamName": "QBASKET SANT CUGAT",
-      "matchesPlayed": 25,
-      "playersCount": 12,
-      "totalValuation": 504
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83315",
@@ -8356,15 +5677,6 @@
       "totalValuation": 322
     },
     {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79053",
-      "teamIdIntern": 452403,
-      "teamIdExtern": 79053,
-      "teamName": "RACC ESPLUGUES - CB SANT JUST",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "totalValuation": -349
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79051",
       "teamIdIntern": 450185,
       "teamIdExtern": 79051,
@@ -8372,15 +5684,6 @@
       "matchesPlayed": 21,
       "playersCount": 14,
       "totalValuation": 276
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80549",
-      "teamIdIntern": 452091,
-      "teamIdExtern": 80549,
-      "teamName": "REUS DEPORTIU",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "totalValuation": -448
     },
     {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80566",
@@ -8392,15 +5695,6 @@
       "totalValuation": 393
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80572",
-      "teamIdIntern": 449914,
-      "teamIdExtern": 80572,
-      "teamName": "REUS DEPORTIU BLANC",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "totalValuation": 402
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80561",
       "teamIdIntern": 452068,
       "teamIdExtern": 80561,
@@ -8410,22 +5704,13 @@
       "totalValuation": 173
     },
     {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:80554",
-      "teamIdIntern": 449987,
-      "teamIdExtern": 80554,
-      "teamName": "REUS DEPORTIU NEGRE",
-      "matchesPlayed": 28,
-      "playersCount": 18,
-      "totalValuation": -633
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80555",
-      "teamIdIntern": 450207,
+      "teamIdIntern": 504715,
       "teamIdExtern": 80555,
       "teamName": "REUS DEPORTIU VERMELL",
-      "matchesPlayed": 24,
+      "matchesPlayed": 10,
       "playersCount": 12,
-      "totalValuation": 497
+      "totalValuation": 164
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80626",
@@ -8435,33 +5720,6 @@
       "matchesPlayed": 27,
       "playersCount": 14,
       "totalValuation": -607
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80630",
-      "teamIdIntern": 449979,
-      "teamIdExtern": 80630,
-      "teamName": "REUS PLOMS SALLE IFU13",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "totalValuation": 382
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80632",
-      "teamIdIntern": 451092,
-      "teamIdExtern": 80632,
-      "teamName": "REUS PLOMS SALLE IFU14",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 834
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80627",
-      "teamIdIntern": 452113,
-      "teamIdExtern": 80627,
-      "teamName": "REUS PLOMS SALLE NEGRE",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": 396
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83279",
@@ -8482,24 +5740,6 @@
       "totalValuation": 640
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79420",
-      "teamIdIntern": 452938,
-      "teamIdExtern": 79420,
-      "teamName": "RIO LOGISTIC CB LLI\u00C7\u00C0 D\u2019AMUNT A",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 450
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:80885",
-      "teamIdIntern": 450385,
-      "teamIdExtern": 80885,
-      "teamName": "ROMAKURUMA U.E.MATAR\u00D3",
-      "matchesPlayed": 4,
-      "playersCount": 13,
-      "totalValuation": 225
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82137",
       "teamIdIntern": 453006,
       "teamIdExtern": 82137,
@@ -8507,15 +5747,6 @@
       "matchesPlayed": 22,
       "playersCount": 11,
       "totalValuation": 574
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80075",
-      "teamIdIntern": 453153,
-      "teamIdExtern": 80075,
-      "teamName": "S\u0026C LEISURE C.E.B. SANT JORDI BLAU",
-      "matchesPlayed": 22,
-      "playersCount": 11,
-      "totalValuation": 681
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:82822",
@@ -8563,24 +5794,6 @@
       "totalValuation": 295
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79196",
-      "teamIdIntern": 467544,
-      "teamIdExtern": 79196,
-      "teamName": "SABADELL BQ VALL\u00C8S U17F",
-      "matchesPlayed": 27,
-      "playersCount": 15,
-      "totalValuation": 489
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79200",
-      "teamIdIntern": 449958,
-      "teamIdExtern": 79200,
-      "teamName": "SABADELL BQ VALL\u00C8S U18F",
-      "matchesPlayed": 30,
-      "playersCount": 16,
-      "totalValuation": -318
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78921",
       "teamIdIntern": 471662,
       "teamIdExtern": 78921,
@@ -8588,15 +5801,6 @@
       "matchesPlayed": 20,
       "playersCount": 12,
       "totalValuation": 337
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:78625",
-      "teamIdIntern": 455910,
-      "teamIdExtern": 78625,
-      "teamName": "SANT GERVASI",
-      "matchesPlayed": 21,
-      "playersCount": 15,
-      "totalValuation": -390
     },
     {
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:78623",
@@ -8608,15 +5812,6 @@
       "totalValuation": 3
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78628",
-      "teamIdIntern": 450132,
-      "teamIdExtern": 78628,
-      "teamName": "SANT GERVASI 1",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": 541
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78578",
       "teamIdIntern": 459710,
       "teamIdExtern": 78578,
@@ -8624,24 +5819,6 @@
       "matchesPlayed": 16,
       "playersCount": 15,
       "totalValuation": 216
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78624",
-      "teamIdIntern": 449935,
-      "teamIdExtern": 78624,
-      "teamName": "SANT GERVASI 1R ANY",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 702
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:78627",
-      "teamIdIntern": 450123,
-      "teamIdExtern": 78627,
-      "teamName": "SANT GERVASI 1R ANY",
-      "matchesPlayed": 22,
-      "playersCount": 12,
-      "totalValuation": 524
     },
     {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:78633",
@@ -8662,15 +5839,6 @@
       "totalValuation": 501
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80540",
-      "teamIdIntern": 451952,
-      "teamIdExtern": 80540,
-      "teamName": "SANT IGNASI",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 478
-    },
-    {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79314",
       "teamIdIntern": 453937,
       "teamIdExtern": 79314,
@@ -8678,15 +5846,6 @@
       "matchesPlayed": 19,
       "playersCount": 14,
       "totalValuation": 487
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80756",
-      "teamIdIntern": 453205,
-      "teamIdExtern": 80756,
-      "teamName": "SANT QUIRZE B\u00C0SQUET CLUB A",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": 541
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80754",
@@ -8716,15 +5875,6 @@
       "totalValuation": 872
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78784",
-      "teamIdIntern": 453038,
-      "teamIdExtern": 78784,
-      "teamName": "SE LA SALLE BONANOVA",
-      "matchesPlayed": 22,
-      "playersCount": 14,
-      "totalValuation": 485
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78783",
       "teamIdIntern": 455517,
       "teamIdExtern": 78783,
@@ -8752,15 +5902,6 @@
       "totalValuation": 455
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80071",
-      "teamIdIntern": 452225,
-      "teamIdExtern": 80071,
-      "teamName": "SEDIS EFAUSA",
-      "matchesPlayed": 21,
-      "playersCount": 17,
-      "totalValuation": 394
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80069",
       "teamIdIntern": 450596,
       "teamIdExtern": 80069,
@@ -8770,42 +5911,6 @@
       "totalValuation": 516
     },
     {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:81435",
-      "teamIdIntern": 450377,
-      "teamIdExtern": 81435,
-      "teamName": "SEGLE XXI",
-      "matchesPlayed": 3,
-      "playersCount": 13,
-      "totalValuation": 225
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79473",
-      "teamIdIntern": 449961,
-      "teamIdExtern": 79473,
-      "teamName": "SEGLE XXI",
-      "matchesPlayed": 28,
-      "playersCount": 15,
-      "totalValuation": -345
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80933",
-      "teamIdIntern": 452171,
-      "teamIdExtern": 80933,
-      "teamName": "SERMATEC JET TERRASSA",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": 100
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79858",
-      "teamIdIntern": 449959,
-      "teamIdExtern": 79858,
-      "teamName": "SESE A",
-      "matchesPlayed": 30,
-      "playersCount": 14,
-      "totalValuation": -244
-    },
-    {
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79856",
       "teamIdIntern": 450055,
       "teamIdExtern": 79856,
@@ -8813,15 +5918,6 @@
       "matchesPlayed": 25,
       "playersCount": 11,
       "totalValuation": -682
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79861",
-      "teamIdIntern": 451003,
-      "teamIdExtern": 79861,
-      "teamName": "SESE A",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": 1302
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79860",
@@ -8842,15 +5938,6 @@
       "totalValuation": 671
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79874",
-      "teamIdIntern": 449977,
-      "teamIdExtern": 79874,
-      "teamName": "SESE B",
-      "matchesPlayed": 25,
-      "playersCount": 18,
-      "totalValuation": 766
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79879",
       "teamIdIntern": 449905,
       "teamIdExtern": 79879,
@@ -8858,24 +5945,6 @@
       "matchesPlayed": 28,
       "playersCount": 16,
       "totalValuation": 740
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79864",
-      "teamIdIntern": 449861,
-      "teamIdExtern": 79864,
-      "teamName": "SESE B",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 228
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79873",
-      "teamIdIntern": 452282,
-      "teamIdExtern": 79873,
-      "teamName": "SESE B",
-      "matchesPlayed": 23,
-      "playersCount": 20,
-      "totalValuation": -112
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862",
@@ -8924,12 +5993,12 @@
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:78732",
-      "teamIdIntern": 451293,
+      "teamIdIntern": 505517,
       "teamIdExtern": 78732,
       "teamName": "SHAD CB MOLLET A",
-      "matchesPlayed": 23,
+      "matchesPlayed": 10,
       "playersCount": 12,
-      "totalValuation": 376
+      "totalValuation": 132
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79022",
@@ -8941,42 +6010,6 @@
       "totalValuation": -280
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79811",
-      "teamIdIntern": 452323,
-      "teamIdExtern": 79811,
-      "teamName": "SOL GIRON\u00C8S BISBAL B\u00C0SQUET",
-      "matchesPlayed": 23,
-      "playersCount": 19,
-      "totalValuation": 616
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79813",
-      "teamIdIntern": 450501,
-      "teamIdExtern": 79813,
-      "teamName": "SOL GIRON\u00C8S BISBAL B\u00C0SQUET",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 695
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO::TEAM:81375",
-      "teamIdIntern": 450792,
-      "teamIdExtern": 81375,
-      "teamName": "SPAR GIRONA",
-      "matchesPlayed": 2,
-      "playersCount": 14,
-      "totalValuation": 267
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:79653",
-      "teamIdIntern": 450087,
-      "teamIdExtern": 79653,
-      "teamName": "TALENOM BOET MATAR\u00D3",
-      "matchesPlayed": 2,
-      "playersCount": 12,
-      "totalValuation": 70
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79668",
       "teamIdIntern": 450108,
       "teamIdExtern": 79668,
@@ -8984,33 +6017,6 @@
       "matchesPlayed": 26,
       "playersCount": 17,
       "totalValuation": 737
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79660",
-      "teamIdIntern": 450116,
-      "teamIdExtern": 79660,
-      "teamName": "TALENOM BOET MATAR\u00D3",
-      "matchesPlayed": 24,
-      "playersCount": 16,
-      "totalValuation": 377
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79655",
-      "teamIdIntern": 449953,
-      "teamIdExtern": 79655,
-      "teamName": "TALENOM BOET MATAR\u00D3 2008",
-      "matchesPlayed": 28,
-      "playersCount": 13,
-      "totalValuation": -562
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79661",
-      "teamIdIntern": 467545,
-      "teamIdExtern": 79661,
-      "teamName": "TALENOM BOET MATAR\u00D3 2009",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 575
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79651",
@@ -9038,15 +6044,6 @@
       "matchesPlayed": 27,
       "playersCount": 15,
       "totalValuation": -540
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79659",
-      "teamIdIntern": 482067,
-      "teamIdExtern": 79659,
-      "teamName": "TALENOM BOET MATAR\u00D3 2013",
-      "matchesPlayed": 24,
-      "playersCount": 16,
-      "totalValuation": 317
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79658",
@@ -9077,21 +6074,12 @@
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:79666",
-      "teamIdIntern": 454427,
+      "teamIdIntern": 507930,
       "teamIdExtern": 79666,
       "teamName": "TALENOM BOET MATAR\u00D3 TARONJA",
-      "matchesPlayed": 18,
-      "playersCount": 23,
-      "totalValuation": 144
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79019",
-      "teamIdIntern": 450122,
-      "teamIdExtern": 79019,
-      "teamName": "TALLERS BALL\u00DAS MANRESA CBF U13",
-      "matchesPlayed": 20,
-      "playersCount": 14,
-      "totalValuation": 408
+      "matchesPlayed": 10,
+      "playersCount": 20,
+      "totalValuation": 115
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:79423",
@@ -9110,42 +6098,6 @@
       "matchesPlayed": 20,
       "playersCount": 15,
       "totalValuation": 482
-    },
-    {
-      "teamKey": "2025-2026::LIGA FEMENINA DE BALONCESTO 2::TEAM:81434",
-      "teamIdIntern": 450088,
-      "teamIdExtern": 81434,
-      "teamName": "TGN BASQUET A",
-      "matchesPlayed": 2,
-      "playersCount": 13,
-      "totalValuation": 102
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79337",
-      "teamIdIntern": 450361,
-      "teamIdExtern": 79337,
-      "teamName": "TGN B\u00C0SQUET 08-09A",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": 577
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79340",
-      "teamIdIntern": 449989,
-      "teamIdExtern": 79340,
-      "teamName": "TGN B\u00C0SQUET 08A",
-      "matchesPlayed": 28,
-      "playersCount": 23,
-      "totalValuation": -663
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79351",
-      "teamIdIntern": 449872,
-      "teamIdExtern": 79351,
-      "teamName": "TGN B\u00C0SQUET 09A",
-      "matchesPlayed": 28,
-      "playersCount": 13,
-      "totalValuation": 920
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79336",
@@ -9175,42 +6127,6 @@
       "totalValuation": -887
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79332",
-      "teamIdIntern": 450969,
-      "teamIdExtern": 79332,
-      "teamName": "TGN B\u00C0SQUET 12B",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 201
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79338",
-      "teamIdIntern": 450160,
-      "teamIdExtern": 79338,
-      "teamName": "TGN B\u00C0SQUET 13A",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "totalValuation": 297
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:79353",
-      "teamIdIntern": 450526,
-      "teamIdExtern": 79353,
-      "teamName": "TGN B\u00C0SQUET A",
-      "matchesPlayed": 24,
-      "playersCount": 30,
-      "totalValuation": 895
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79348",
-      "teamIdIntern": 451754,
-      "teamIdExtern": 79348,
-      "teamName": "TGN B\u00C0SQUET B",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 376
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79161",
       "teamIdIntern": 452257,
       "teamIdExtern": 79161,
@@ -9229,33 +6145,6 @@
       "totalValuation": 250
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79828",
-      "teamIdIntern": 450133,
-      "teamIdExtern": 79828,
-      "teamName": "U. B. LLEFI\u00C0  A - PERE GARCIA ASSEGURANCES",
-      "matchesPlayed": 23,
-      "playersCount": 22,
-      "totalValuation": 368
-    },
-    {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:79824",
-      "teamIdIntern": 453322,
-      "teamIdExtern": 79824,
-      "teamName": "U. B. LLEFI\u00C0  B",
-      "matchesPlayed": 23,
-      "playersCount": 17,
-      "totalValuation": -313
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:81130",
-      "teamIdIntern": 450624,
-      "teamIdExtern": 81130,
-      "teamName": "U. B. LLEFI\u00C0 - JJ FINQUES BADALONA",
-      "matchesPlayed": 23,
-      "playersCount": 25,
-      "totalValuation": 727
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79832",
       "teamIdIntern": 450222,
       "teamIdExtern": 79832,
@@ -9263,15 +6152,6 @@
       "matchesPlayed": 25,
       "playersCount": 13,
       "totalValuation": 418
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79843",
-      "teamIdIntern": 450439,
-      "teamIdExtern": 79843,
-      "teamName": "U. B. LLEFI\u00C0 A",
-      "matchesPlayed": 23,
-      "playersCount": 15,
-      "totalValuation": 361
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:79834",
@@ -9290,15 +6170,6 @@
       "matchesPlayed": 23,
       "playersCount": 24,
       "totalValuation": 588
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:79293",
-      "teamIdIntern": 452972,
-      "teamIdExtern": 79293,
-      "teamName": "U.E. CLARET A",
-      "matchesPlayed": 22,
-      "playersCount": 18,
-      "totalValuation": 740
     },
     {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79298",
@@ -9350,9 +6221,9 @@
       "teamIdIntern": 454620,
       "teamIdExtern": 82113,
       "teamName": "U.E. CLARET B",
-      "matchesPlayed": 20,
+      "matchesPlayed": 9,
       "playersCount": 12,
-      "totalValuation": 514
+      "totalValuation": 275
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82119",
@@ -9391,15 +6262,6 @@
       "totalValuation": 370
     },
     {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:80043",
-      "teamIdIntern": 453025,
-      "teamIdExtern": 80043,
-      "teamName": "U.E. HORTA A",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": -366
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80039",
       "teamIdIntern": 453179,
       "teamIdExtern": 80039,
@@ -9427,40 +6289,13 @@
       "totalValuation": -356
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:80854",
-      "teamIdIntern": 482066,
-      "teamIdExtern": 80854,
-      "teamName": "U.E.MATAR\u00D3 - IBF",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 416
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80877",
       "teamIdIntern": 450852,
       "teamIdExtern": 80877,
       "teamName": "U.E.MATAR\u00D3 - J1F",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": 503
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:78716",
-      "teamIdIntern": 449990,
-      "teamIdExtern": 78716,
-      "teamName": "U.E.MATAR\u00D3 - JAF",
-      "matchesPlayed": 27,
-      "playersCount": 19,
-      "totalValuation": -475
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:78715",
-      "teamIdIntern": 450067,
-      "teamIdExtern": 78715,
-      "teamName": "U.E.MATAR\u00D3 - JBF",
-      "matchesPlayed": 28,
-      "playersCount": 22,
-      "totalValuation": 792
+      "matchesPlayed": 12,
+      "playersCount": 17,
+      "totalValuation": 166
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80873",
@@ -9526,15 +6361,6 @@
       "totalValuation": 608
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79965",
-      "teamIdIntern": 450117,
-      "teamIdExtern": 79965,
-      "teamName": "U14 JOVENTUT LES CORTS",
-      "matchesPlayed": 26,
-      "playersCount": 18,
-      "totalValuation": 589
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79978",
       "teamIdIntern": 449964,
       "teamIdExtern": 79978,
@@ -9553,15 +6379,6 @@
       "totalValuation": 541
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79973",
-      "teamIdIntern": 450038,
-      "teamIdExtern": 79973,
-      "teamName": "U17 JOVENTUT LES CORTS",
-      "matchesPlayed": 27,
-      "playersCount": 16,
-      "totalValuation": 514
-    },
-    {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:79946",
       "teamIdIntern": 451386,
       "teamIdExtern": 79946,
@@ -9569,15 +6386,6 @@
       "matchesPlayed": 18,
       "playersCount": 24,
       "totalValuation": 561
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:85622",
-      "teamIdIntern": 502158,
-      "teamIdExtern": 85622,
-      "teamName": "U18 LTU WOMEN NATIONAL TEAM",
-      "matchesPlayed": 3,
-      "playersCount": 12,
-      "totalValuation": 241
     },
     {
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79323",
@@ -9634,15 +6442,6 @@
       "totalValuation": -224
     },
     {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI PREFERENT 1R. ANY::TEAM:79484",
-      "teamIdIntern": 449860,
-      "teamIdExtern": 79484,
-      "teamName": "UCAP SCOOTFAST U13",
-      "matchesPlayed": 23,
-      "playersCount": 12,
-      "totalValuation": 508
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79486",
       "teamIdIntern": 449890,
       "teamIdExtern": 79486,
@@ -9650,15 +6449,6 @@
       "matchesPlayed": 25,
       "playersCount": 13,
       "totalValuation": 424
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:79485",
-      "teamIdIntern": 450078,
-      "teamIdExtern": 79485,
-      "teamName": "UCAP SCOOTFAST U17",
-      "matchesPlayed": 26,
-      "playersCount": 13,
-      "totalValuation": 362
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79306",
@@ -9688,15 +6478,6 @@
       "totalValuation": 115
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80201",
-      "teamIdIntern": 453164,
-      "teamIdExtern": 80201,
-      "teamName": "UE CELLERA AMER LES PLANES HIPRA",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "totalValuation": 626
-    },
-    {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79097",
       "teamIdIntern": 452579,
       "teamIdExtern": 79097,
@@ -9724,33 +6505,6 @@
       "totalValuation": 355
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80223",
-      "teamIdIntern": 452170,
-      "teamIdExtern": 80223,
-      "teamName": "UE SANT CUGAT - OCCIDENT",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "totalValuation": 447
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:80219",
-      "teamIdIntern": 450172,
-      "teamIdExtern": 80219,
-      "teamName": "UE SANT CUGAT - OCCIDENT 2008",
-      "matchesPlayed": 24,
-      "playersCount": 20,
-      "totalValuation": 714
-    },
-    {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI PREFERENT 1R. ANY::TEAM:80213",
-      "teamIdIntern": 449873,
-      "teamIdExtern": 80213,
-      "teamName": "UE SANT CUGAT - OCCIDENT 2009",
-      "matchesPlayed": 28,
-      "playersCount": 13,
-      "totalValuation": 569
-    },
-    {
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:82332",
       "teamIdIntern": 458988,
       "teamIdExtern": 82332,
@@ -9758,15 +6512,6 @@
       "matchesPlayed": 17,
       "playersCount": 13,
       "totalValuation": 280
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:80212",
-      "teamIdIntern": 450774,
-      "teamIdExtern": 80212,
-      "teamName": "UE SANT CUGAT - OCCIDENT 2012",
-      "matchesPlayed": 24,
-      "playersCount": 13,
-      "totalValuation": 201
     },
     {
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82329",
@@ -9850,24 +6595,6 @@
       "totalValuation": 112
     },
     {
-      "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79028",
-      "teamIdIntern": 450549,
-      "teamIdExtern": 79028,
-      "teamName": "UMANRESA MANRESA CBF 1",
-      "matchesPlayed": 24,
-      "playersCount": 26,
-      "totalValuation": 447
-    },
-    {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79023",
-      "teamIdIntern": 449991,
-      "teamIdExtern": 79023,
-      "teamName": "UNIHABIT - MANRESA CBF U18",
-      "matchesPlayed": 30,
-      "playersCount": 22,
-      "totalValuation": -580
-    },
-    {
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:82008",
       "teamIdIntern": 452216,
       "teamIdExtern": 82008,
@@ -9875,33 +6602,6 @@
       "matchesPlayed": 22,
       "playersCount": 14,
       "totalValuation": 595
-    },
-    {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:80371",
-      "teamIdIntern": 472720,
-      "teamIdExtern": 80371,
-      "teamName": "UNI\u00D3 GIRONA MARISTES",
-      "matchesPlayed": 22,
-      "playersCount": 13,
-      "totalValuation": 455
-    },
-    {
-      "teamKey": "2025-2026::COPA CATALUNYA FEMENINA::TEAM:80628",
-      "teamIdIntern": 457573,
-      "teamIdExtern": 80628,
-      "teamName": "VALLCUERBA REUS PLOMS SALLE",
-      "matchesPlayed": 22,
-      "playersCount": 17,
-      "totalValuation": -59
-    },
-    {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:80910",
-      "teamIdIntern": 450363,
-      "teamIdExtern": 80910,
-      "teamName": "VEDRUNA GR\u00C0CIA A",
-      "matchesPlayed": 22,
-      "playersCount": 16,
-      "totalValuation": 1130
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80909",
@@ -9917,9 +6617,9 @@
       "teamIdIntern": 450587,
       "teamIdExtern": 80908,
       "teamName": "VEDRUNA GR\u00C0CIA VERD",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "totalValuation": 626
+      "matchesPlayed": 12,
+      "playersCount": 11,
+      "totalValuation": 409
     },
     {
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
@@ -9929,15 +6629,6 @@
       "matchesPlayed": 15,
       "playersCount": 14,
       "totalValuation": 450
-    },
-    {
-      "teamKey": "2025-2026::C.C. INFANTIL FEMENI INTERTERRITORIAL::TEAM:79482",
-      "teamIdIntern": 450932,
-      "teamIdExtern": 79482,
-      "teamName": "VEDRUNA-GEIEG  U14",
-      "matchesPlayed": 26,
-      "playersCount": 13,
-      "totalValuation": 737
     },
     {
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:80937",
@@ -9956,15 +6647,6 @@
       "matchesPlayed": 8,
       "playersCount": 13,
       "totalValuation": 161
-    },
-    {
-      "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81122",
-      "teamIdIntern": 455123,
-      "teamIdExtern": 81122,
-      "teamName": "VILAB\u00C0SQUET VILADECANS IF BLANC",
-      "matchesPlayed": 18,
-      "playersCount": 12,
-      "totalValuation": 368
     },
     {
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81362",
@@ -10003,15 +6685,6 @@
       "totalValuation": 173
     },
     {
-      "teamKey": "2025-2026::C.C. SEGONA CATEGORIA FEMENINA::TEAM:78986",
-      "teamIdIntern": 452224,
-      "teamIdExtern": 78986,
-      "teamName": "VIROLAI A",
-      "matchesPlayed": 23,
-      "playersCount": 21,
-      "totalValuation": 457
-    },
-    {
       "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78985",
       "teamIdIntern": 450316,
       "teamIdExtern": 78985,
@@ -10046,33 +6719,86 @@
       "matchesPlayed": 23,
       "playersCount": 14,
       "totalValuation": 456
+    }
+  ],
+  "categoryFiles": [
+    {
+      "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
+      "matchesFile": "competition-matches/1a-territorial-senior-femeni.json",
+      "leadersFile": "competition-player-leaders/1a-territorial-senior-femeni.json",
+      "standingsFile": "competition-standings/1a-territorial-senior-femeni.json"
     },
     {
-      "teamKey": "2025-2026::C.C. PRIMERA CATEGORIA FEMENINA::TEAM:78422",
-      "teamIdIntern": 452041,
-      "teamIdExtern": 78422,
-      "teamName": "VOLVO DISELAUTO CBT",
-      "matchesPlayed": 21,
-      "playersCount": 18,
-      "totalValuation": -178
+      "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
+      "matchesFile": "competition-matches/2a-territorial-senior-femeni.json",
+      "leadersFile": "competition-player-leaders/2a-territorial-senior-femeni.json",
+      "standingsFile": "competition-standings/2a-territorial-senior-femeni.json"
     },
     {
-      "teamKey": "2025-2026::SUPER COPA FEMENINA::TEAM:80545",
-      "teamIdIntern": 450354,
-      "teamIdExtern": 80545,
-      "teamName": "WECOLORS AB PREMI\u00C0",
-      "matchesPlayed": 24,
-      "playersCount": 15,
-      "totalValuation": 1352
+      "categoryName": "C.c Infantil Femen\u00ED Preferent",
+      "matchesFile": "competition-matches/c-c-infantil-femeni-preferent.json",
+      "leadersFile": "competition-player-leaders/c-c-infantil-femeni-preferent.json",
+      "standingsFile": "competition-standings/c-c-infantil-femeni-preferent.json"
     },
     {
-      "teamKey": "2025-2026::C. C. JUNIOR FEMENI PREFERENT::TEAM:79741",
-      "teamIdIntern": 449986,
-      "teamIdExtern": 79741,
-      "teamName": "ZIGA ZAGA VIL\u00C0BASQUET VILADECANS",
-      "matchesPlayed": 30,
-      "playersCount": 16,
-      "totalValuation": -468
+      "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
+      "matchesFile": "competition-matches/c-c-cadet-femeni-interterritorial.json",
+      "leadersFile": "competition-player-leaders/c-c-cadet-femeni-interterritorial.json",
+      "standingsFile": "competition-standings/c-c-cadet-femeni-interterritorial.json"
+    },
+    {
+      "categoryName": "C.c. Cadet Femen\u00ED Preferent",
+      "matchesFile": "competition-matches/c-c-cadet-femeni-preferent.json",
+      "leadersFile": "competition-player-leaders/c-c-cadet-femeni-preferent.json",
+      "standingsFile": "competition-standings/c-c-cadet-femeni-preferent.json"
+    },
+    {
+      "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
+      "matchesFile": "competition-matches/c-c-cadet-femeni-preferent-1r-any.json",
+      "leadersFile": "competition-player-leaders/c-c-cadet-femeni-preferent-1r-any.json",
+      "standingsFile": "competition-standings/c-c-cadet-femeni-preferent-1r-any.json"
+    },
+    {
+      "categoryName": "C.c. J\u00FAnior Fem. Nivell A",
+      "matchesFile": "competition-matches/c-c-junior-fem-nivell-a.json",
+      "leadersFile": "competition-player-leaders/c-c-junior-fem-nivell-a.json",
+      "standingsFile": "competition-standings/c-c-junior-fem-nivell-a.json"
+    },
+    {
+      "categoryName": "C.c. J\u00FAnior Femen\u00ED Interterritorial",
+      "matchesFile": "competition-matches/c-c-junior-femeni-interterritorial.json",
+      "leadersFile": "competition-player-leaders/c-c-junior-femeni-interterritorial.json",
+      "standingsFile": "competition-standings/c-c-junior-femeni-interterritorial.json"
+    },
+    {
+      "categoryName": "C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
+      "matchesFile": "competition-matches/c-t-bcn-u13-infantil-femeni-1r-any-promocio.json",
+      "leadersFile": "competition-player-leaders/c-t-bcn-u13-infantil-femeni-1r-any-promocio.json",
+      "standingsFile": "competition-standings/c-t-bcn-u13-infantil-femeni-1r-any-promocio.json"
+    },
+    {
+      "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "matchesFile": "competition-matches/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json",
+      "leadersFile": "competition-player-leaders/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json",
+      "standingsFile": "competition-standings/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json"
+    },
+    {
+      "categoryName": "C.t. Pre-mini Femen\u00ED",
+      "matchesFile": "competition-matches/c-t-pre-mini-femeni.json",
+      "leadersFile": "competition-player-leaders/c-t-pre-mini-femeni.json",
+      "standingsFile": "competition-standings/c-t-pre-mini-femeni.json"
+    },
+    {
+      "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
+      "matchesFile": "competition-matches/c-t-pre-mini-femeni-1r-any.json",
+      "leadersFile": "competition-player-leaders/c-t-pre-mini-femeni-1r-any.json",
+      "standingsFile": "competition-standings/c-t-pre-mini-femeni-1r-any.json"
+    },
+    {
+      "categoryName": "Copa Catalunya Masculina",
+      "matchesFile": "competition-matches/copa-catalunya-masculina.json",
+      "leadersFile": "competition-player-leaders/copa-catalunya-masculina.json",
+      "standingsFile": "competition-standings/copa-catalunya-masculina.json"
     }
   ]
 }
