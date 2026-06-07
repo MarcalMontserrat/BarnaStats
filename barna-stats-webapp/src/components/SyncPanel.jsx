@@ -588,6 +588,46 @@ function TrashActionIcon() {
     );
 }
 
+function DeleteProgressSection({deleteProgress}) {
+    const {total, completed, failed} = deleteProgress;
+    const pending = total - completed;
+    const succeeded = completed - failed;
+    const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+    return (
+        <div style={{
+            borderRadius: "var(--radius-lg)",
+            background: "linear-gradient(180deg, #132033 0%, #182a43 100%)",
+            color: "#ecf1f6",
+            padding: "14px 16px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 10
+        }}>
+            <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 13}}>
+                <span style={{fontWeight: 600}}>
+                    {pending > 0
+                        ? `Borrando fases... (${completed} de ${total})`
+                        : `Borrado completado: ${succeeded} OK${failed > 0 ? `, ${failed} con error` : ""}`}
+                </span>
+                <span style={{opacity: 0.7}}>{pct}%</span>
+            </div>
+            <div style={{height: 6, borderRadius: 3, background: "rgba(255,255,255,0.12)", overflow: "hidden"}}>
+                <div style={{
+                    height: "100%",
+                    width: `${pct}%`,
+                    borderRadius: 3,
+                    background: failed > 0 ? "#e5544b" : "#4b9fd4",
+                    transition: "width 0.3s ease"
+                }} />
+            </div>
+            {failed > 0 ? (
+                <div style={{fontSize: 12, color: "#f4a49e"}}>{failed} fase{failed === 1 ? "" : "s"} con error</div>
+            ) : null}
+        </div>
+    );
+}
+
 function SyncPanel({
     apiAvailable,
     job,
@@ -597,6 +637,7 @@ function SyncPanel({
     savedSourcesLoading,
     savedSourcesError,
     deletingPhaseIds,
+    deleteProgress,
     onStartSync,
     onStartSyncBatch,
     onStartSyncAllSavedSources,
@@ -721,16 +762,20 @@ function SyncPanel({
     const isDeleting = activeDeletingPhaseIds.length > 0;
     const isBusy = starting || status === "pending" || status === "running" || isDeleting;
     const canUseApi = apiAvailable && !isBusy;
-    const statusLabel = status === "idle"
-        ? "Lista"
-        : status === "offline"
-            ? "API no disponible"
-            : (STATUS_LABELS[status] ?? status);
-    const statusStyle = status === "idle"
-        ? {background: "#efe4d5", color: "#6c5b49"}
-        : status === "offline"
-            ? {background: "#f8dcd6", color: "#9d2618"}
-            : STATUS_STYLES[status];
+    const statusLabel = isDeleting
+        ? "Borrando"
+        : status === "idle"
+            ? "Lista"
+            : status === "offline"
+                ? "API no disponible"
+                : (STATUS_LABELS[status] ?? status);
+    const statusStyle = isDeleting
+        ? {background: "#fef0cb", color: "#925f00"}
+        : status === "idle"
+            ? {background: "#efe4d5", color: "#6c5b49"}
+            : status === "offline"
+                ? {background: "#f8dcd6", color: "#9d2618"}
+                : STATUS_STYLES[status];
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -1702,6 +1747,10 @@ function SyncPanel({
                         <div style={styles.metaValue}>{job.sourceUrl}</div>
                     </div>
                 </div>
+            ) : null}
+
+            {deleteProgress ? (
+                <DeleteProgressSection deleteProgress={deleteProgress} />
             ) : null}
 
             {!apiAvailable ? (

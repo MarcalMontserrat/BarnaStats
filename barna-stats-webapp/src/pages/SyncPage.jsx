@@ -12,6 +12,7 @@ function SyncPage({syncUiEnabled, onAnalysisVersionChange}) {
         loading: savedResultsSourcesLoading,
         error: savedResultsSourcesError,
         deletingPhaseIds: deletingSavedPhaseIds,
+        deleteProgress: deleteProgress,
         deleteSource: deleteSavedResultsSource,
         deleteSources: deleteSavedResultsSources,
         refreshSources: refreshSavedResultsSources
@@ -49,6 +50,7 @@ function SyncPage({syncUiEnabled, onAnalysisVersionChange}) {
                     savedSourcesLoading={savedResultsSourcesLoading}
                     savedSourcesError={savedResultsSourcesError}
                     deletingPhaseIds={deletingSavedPhaseIds}
+                    deleteProgress={deleteProgress}
                     onStartSync={startSync}
                     onStartSyncBatch={startSyncBatch}
                     onStartSyncAllSavedSources={startSyncAllSavedSources}

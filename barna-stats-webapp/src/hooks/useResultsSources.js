@@ -15,6 +15,7 @@ export function useResultsSources(enabled = true) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [deletingPhaseIds, setDeletingPhaseIds] = useState([]);
+    const [deleteProgress, setDeleteProgress] = useState(null);
 
     const refreshSources = useCallback(async () => {
         if (!enabled) {
@@ -59,6 +60,7 @@ export function useResultsSources(enabled = true) {
         }
 
         setDeletingPhaseIds(normalizedPhaseIds);
+        setDeleteProgress({total: normalizedPhaseIds.length, completed: 0, failed: 0});
         setError("");
 
         const deletedPhaseIds = [];
@@ -92,6 +94,12 @@ export function useResultsSources(enabled = true) {
                     failedPhaseIds.push(phaseId);
                     failureMessages.push(`Fase ${phaseId}: ${message}`);
                 }
+
+                setDeleteProgress({
+                    total: normalizedPhaseIds.length,
+                    completed: deletedPhaseIds.length + failedPhaseIds.length,
+                    failed: failedPhaseIds.length
+                });
             }
 
             if (deletedPhaseIds.length > 0) {
@@ -113,6 +121,7 @@ export function useResultsSources(enabled = true) {
             };
         } finally {
             setDeletingPhaseIds([]);
+            setDeleteProgress(null);
         }
     }, [enabled]);
 
@@ -128,6 +137,7 @@ export function useResultsSources(enabled = true) {
         loading: enabled ? loading : false,
         error: enabled ? error : "",
         deletingPhaseIds: enabled ? deletingPhaseIds : [],
+        deleteProgress: enabled ? deleteProgress : null,
         deleteSource,
         deleteSources,
         refreshSources
