@@ -1,9 +1,9 @@
 {
   "seasonStartYear": 2025,
   "seasonLabel": "2025-2026",
-  "generatedAtUtc": "2026-06-07T10:50:57.947222Z",
-  "totalMatches": 5581,
-  "totalTeams": 566,
+  "generatedAtUtc": "2026-06-07T11:07:29.161747Z",
+  "totalMatches": 4483,
+  "totalTeams": 480,
   "teams": [
     {
       "seasonStartYear": 2025,
@@ -1338,44 +1338,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79309",
-      "teamIdIntern": 450025,
-      "teamIdExtern": 79309,
-      "teamName": "BAM - PORTECA",
-      "matchesPlayed": 26,
-      "playersCount": 16,
-      "matchesFile": "teams/bc5b342d259a2e9b/matches.json",
-      "playersFile": "teams/bc5b342d259a2e9b/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::COPA CATALUNYA MASCULINA::TEAM:79305",
       "teamIdIntern": 452016,
       "teamIdExtern": 79305,
@@ -1452,44 +1414,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79633",
-      "teamIdIntern": 450165,
-      "teamIdExtern": 79633,
-      "teamName": "BASKET ALMEDA GROC",
-      "matchesPlayed": 24,
-      "playersCount": 23,
-      "matchesFile": "teams/6f1d0154b46c0616/matches.json",
-      "playersFile": "teams/6f1d0154b46c0616/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:82705",
       "teamIdIntern": 507970,
       "teamIdExtern": 82705,
@@ -1510,56 +1434,6 @@
           "levelCode": "A2",
           "groupCode": "01",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79632",
-      "teamIdIntern": 449862,
-      "teamIdExtern": 79632,
-      "teamName": "BASKET ALMEDA NEGRE",
-      "matchesPlayed": 27,
-      "playersCount": 27,
-      "matchesFile": "teams/5a7315ae86751c9f/matches.json",
-      "playersFile": "teams/5a7315ae86751c9f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -1598,56 +1472,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79641",
-      "teamIdIntern": 450012,
-      "teamIdExtern": 79641,
-      "teamName": "BASKETB ALMEDA",
-      "matchesPlayed": 28,
-      "playersCount": 17,
-      "matchesFile": "teams/a301b5d4b799f408/matches.json",
-      "playersFile": "teams/a301b5d4b799f408/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21122,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Eliminat\u00F2ria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -2148,44 +1972,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80141",
-      "teamIdIntern": 449891,
-      "teamIdExtern": 80141,
-      "teamName": "BC MORABANC ANDORRA",
-      "matchesPlayed": 26,
-      "playersCount": 13,
-      "matchesFile": "teams/697d01d1d0d59e9d/matches.json",
-      "playersFile": "teams/697d01d1d0d59e9d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:81926",
       "teamIdIntern": 452362,
       "teamIdExtern": 81926,
@@ -2578,44 +2364,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79985",
-      "teamIdIntern": 450278,
-      "teamIdExtern": 79985,
-      "teamName": "BC TORROELLA U16",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "matchesFile": "teams/1b6aae7f701835a2/matches.json",
-      "playersFile": "teams/1b6aae7f701835a2/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80451",
       "teamIdIntern": 461250,
       "teamIdExtern": 80451,
@@ -2762,120 +2510,6 @@
           "levelCode": "Preferent A",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80989",
-      "teamIdIntern": 450073,
-      "teamIdExtern": 80989,
-      "teamName": "B\u00C0SQUET GIRONA U15",
-      "matchesPlayed": 26,
-      "playersCount": 12,
-      "matchesFile": "teams/55c6f7cb7abc5d32/matches.json",
-      "playersFile": "teams/55c6f7cb7abc5d32/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80992",
-      "teamIdIntern": 450015,
-      "teamIdExtern": 80992,
-      "teamName": "B\u00C0SQUET GIRONA U16",
-      "matchesPlayed": 26,
-      "playersCount": 15,
-      "matchesFile": "teams/fb964bdae9a81fd0/matches.json",
-      "playersFile": "teams/fb964bdae9a81fd0/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80991",
-      "teamIdIntern": 450198,
-      "teamIdExtern": 80991,
-      "teamName": "B\u00C0SQUET GIRONA U16 VERMELL",
-      "matchesPlayed": 26,
-      "playersCount": 12,
-      "matchesFile": "teams/d2f9962ad90ab550/matches.json",
-      "playersFile": "teams/d2f9962ad90ab550/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -3478,44 +3112,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79785",
-      "teamIdIntern": 450213,
-      "teamIdExtern": 79785,
-      "teamName": "B\u00C0SQUET VILAFANT",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "matchesFile": "teams/c23d1aff7122f5df/matches.json",
-      "playersFile": "teams/c23d1aff7122f5df/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21229,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "10",
-          "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:83447",
       "teamIdIntern": 477823,
       "teamIdExtern": 83447,
@@ -3560,44 +3156,6 @@
           "levelCode": "Primera Fase",
           "groupCode": "06",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80323",
-      "teamIdIntern": 450017,
-      "teamIdExtern": 80323,
-      "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 26,
-      "playersCount": 20,
-      "matchesFile": "teams/ff48b80e5dd59846/matches.json",
-      "playersFile": "teams/ff48b80e5dd59846/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -4186,44 +3744,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79149",
-      "teamIdIntern": 450007,
-      "teamIdExtern": 79149,
-      "teamName": "C.B. PRAT - MONTIBELLO A",
-      "matchesPlayed": 27,
-      "playersCount": 14,
-      "matchesFile": "teams/ce292c0eb888c60a/matches.json",
-      "playersFile": "teams/ce292c0eb888c60a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 13
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. BCN U13 - INFANTIL FEMENI 1R. ANY PROMOCIO::TEAM:81453",
       "teamIdIntern": 455359,
       "teamIdExtern": 81453,
@@ -4770,44 +4290,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79544",
-      "teamIdIntern": 450597,
-      "teamIdExtern": 79544,
-      "teamName": "C.E. MARISTES A",
-      "matchesPlayed": 20,
-      "playersCount": 17,
-      "matchesFile": "teams/20b2e9e1c0944b6f/matches.json",
-      "playersFile": "teams/20b2e9e1c0944b6f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21229,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "10",
-          "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:79551",
       "teamIdIntern": 452217,
       "teamIdExtern": 79551,
@@ -4998,44 +4480,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78648",
-      "teamIdIntern": 450701,
-      "teamIdExtern": 78648,
-      "teamName": "C.E. XAMBA NEGRE",
-      "matchesPlayed": 24,
-      "playersCount": 18,
-      "matchesFile": "teams/bdcc6a393fcb4d5c/matches.json",
-      "playersFile": "teams/bdcc6a393fcb4d5c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78653",
       "teamIdIntern": 459045,
       "teamIdExtern": 78653,
@@ -5220,44 +4664,6 @@
           "levelCode": "D2",
           "groupCode": "02",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80828",
-      "teamIdIntern": 449896,
-      "teamIdExtern": 80828,
-      "teamName": "CAMPING LA LLOSA - C.B. CAMBRILS A",
-      "matchesPlayed": 25,
-      "playersCount": 15,
-      "matchesFile": "teams/cb4609bd39d67657/matches.json",
-      "playersFile": "teams/cb4609bd39d67657/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -5620,82 +5026,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78564",
-      "teamIdIntern": 449946,
-      "teamIdExtern": 78564,
-      "teamName": "CB BANYOLES A",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/5d16f0ea71dcf297/matches.json",
-      "playersFile": "teams/5d16f0ea71dcf297/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80969",
-      "teamIdIntern": 450229,
-      "teamIdExtern": 80969,
-      "teamName": "CB BLANES A",
-      "matchesPlayed": 26,
-      "playersCount": 19,
-      "matchesFile": "teams/8df11e6727ccf8d9/matches.json",
-      "playersFile": "teams/8df11e6727ccf8d9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80973",
       "teamIdIntern": 477822,
       "teamIdExtern": 80973,
@@ -5777,44 +5107,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "02",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78519",
-      "teamIdIntern": 450212,
-      "teamIdExtern": 78519,
-      "teamName": "CB CALELLA",
-      "matchesPlayed": 26,
-      "playersCount": 12,
-      "matchesFile": "teams/87e07af6d3ae6979/matches.json",
-      "playersFile": "teams/87e07af6d3ae6979/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
           "matchesPlayed": 12
         }
       ]
@@ -5967,44 +5259,6 @@
           "levelName": "GRUP 05",
           "levelCode": "GRUP 05",
           "groupCode": "",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80368",
-      "teamIdIntern": 449904,
-      "teamIdExtern": 80368,
-      "teamName": "CB CERVERA MOBEL L\u00CDNEA",
-      "matchesPlayed": 26,
-      "playersCount": 11,
-      "matchesFile": "teams/ab190c301620350f/matches.json",
-      "playersFile": "teams/ab190c301620350f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
           "matchesPlayed": 12
         }
       ]
@@ -6178,44 +5432,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801",
-      "teamIdIntern": 450432,
-      "teamIdExtern": 78801,
-      "teamName": "CB GRANOLLERS 1",
-      "matchesPlayed": 25,
-      "playersCount": 17,
-      "matchesFile": "teams/97ed97154e58caa9/matches.json",
-      "playersFile": "teams/97ed97154e58caa9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78824",
       "teamIdIntern": 453870,
       "teamIdExtern": 78824,
@@ -6248,56 +5464,6 @@
           "levelCode": "C1",
           "groupCode": "02",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78806",
-      "teamIdIntern": 449857,
-      "teamIdExtern": 78806,
-      "teamName": "CB GRANOLLERS 2",
-      "matchesPlayed": 28,
-      "playersCount": 15,
-      "matchesFile": "teams/bffa83ce1b28f334/matches.json",
-      "playersFile": "teams/bffa83ce1b28f334/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -6450,44 +5616,6 @@
           "levelCode": "Primera Fase",
           "groupCode": "02",
           "matchesPlayed": 3
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79227",
-      "teamIdIntern": 450044,
-      "teamIdExtern": 79227,
-      "teamName": "CB IGUALADA CF U15",
-      "matchesPlayed": 25,
-      "playersCount": 17,
-      "matchesFile": "teams/733e9f5e9b78cb3d/matches.json",
-      "playersFile": "teams/733e9f5e9b78cb3d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -7152,44 +6280,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79982",
-      "teamIdIntern": 450159,
-      "teamIdExtern": 79982,
-      "teamName": "CB MANYANET LES CORTS VERD",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "matchesFile": "teams/0e2bd30d09a47d80/matches.json",
-      "playersFile": "teams/0e2bd30d09a47d80/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81467",
       "teamIdIntern": 453644,
       "teamIdExtern": 81467,
@@ -7678,44 +6768,6 @@
           "levelCode": "Primera Fase",
           "groupCode": "04",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78574",
-      "teamIdIntern": 449837,
-      "teamIdExtern": 78574,
-      "teamName": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES",
-      "matchesPlayed": 25,
-      "playersCount": 12,
-      "matchesFile": "teams/bdb0a5a6cb10e640/matches.json",
-      "playersFile": "teams/bdb0a5a6cb10e640/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -8444,82 +7496,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78443",
-      "teamIdIntern": 450184,
-      "teamIdExtern": 78443,
-      "teamName": "CB TARRAGONA",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "matchesFile": "teams/0103aed41cd78eb0/matches.json",
-      "playersFile": "teams/0103aed41cd78eb0/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78446",
-      "teamIdIntern": 450045,
-      "teamIdExtern": 78446,
-      "teamName": "CB TARRAGONA 1",
-      "matchesPlayed": 26,
-      "playersCount": 13,
-      "matchesFile": "teams/87bedf809cff1b60/matches.json",
-      "playersFile": "teams/87bedf809cff1b60/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:78448",
       "teamIdIntern": 453011,
       "teamIdExtern": 78448,
@@ -8628,56 +7604,6 @@
           "levelCode": "",
           "groupCode": "03",
           "matchesPlayed": 13
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78513",
-      "teamIdIntern": 449938,
-      "teamIdExtern": 78513,
-      "teamName": "CB TORELL\u00D3 CF - FARM\u00C0CIA \u00CDNGRID JAIME I BOFILL",
-      "matchesPlayed": 28,
-      "playersCount": 17,
-      "matchesFile": "teams/aaf71c753807a611/matches.json",
-      "playersFile": "teams/aaf71c753807a611/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -8957,44 +7883,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "04",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78413",
-      "teamIdIntern": 450423,
-      "teamIdExtern": 78413,
-      "teamName": "CB VALLS CLINICA DENTAL CLOFENT",
-      "matchesPlayed": 24,
-      "playersCount": 12,
-      "matchesFile": "teams/1fc8a69b68c4baa0/matches.json",
-      "playersFile": "teams/1fc8a69b68c4baa0/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
           "matchesPlayed": 12
         }
       ]
@@ -9394,94 +8282,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80342",
-      "teamIdIntern": 449836,
-      "teamIdExtern": 80342,
-      "teamName": "CB. CORNELL\u00C0",
-      "matchesPlayed": 28,
-      "playersCount": 21,
-      "matchesFile": "teams/54ffde9414bc834e/matches.json",
-      "playersFile": "teams/54ffde9414bc834e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80339",
-      "teamIdIntern": 450011,
-      "teamIdExtern": 80339,
-      "teamName": "CB. CORNELL\u00C0 A",
-      "matchesPlayed": 27,
-      "playersCount": 23,
-      "matchesFile": "teams/9931e2a902c7f203/matches.json",
-      "playersFile": "teams/9931e2a902c7f203/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 13
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80355",
       "teamIdIntern": 452012,
       "teamIdExtern": 80355,
@@ -9513,44 +8313,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80349",
-      "teamIdIntern": 450296,
-      "teamIdExtern": 80349,
-      "teamName": "CB. CORNELL\u00C0 BLAU",
-      "matchesPlayed": 24,
-      "playersCount": 21,
-      "matchesFile": "teams/d32ed027e9db8f6a/matches.json",
-      "playersFile": "teams/d32ed027e9db8f6a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
           "matchesPlayed": 12
         }
       ]
@@ -9760,44 +8522,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80126",
-      "teamIdIntern": 450700,
-      "teamIdExtern": 80126,
-      "teamName": "CBS FEM  U16 INTERT",
-      "matchesPlayed": 22,
-      "playersCount": 15,
-      "matchesFile": "teams/bf319bb17b82acd4/matches.json",
-      "playersFile": "teams/bf319bb17b82acd4/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
-          "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:80129",
       "teamIdIntern": 451387,
       "teamIdExtern": 80129,
@@ -9830,120 +8554,6 @@
           "levelCode": "",
           "groupCode": "01",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80119",
-      "teamIdIntern": 450040,
-      "teamIdExtern": 80119,
-      "teamName": "CBS FEM U15 1ER ANY",
-      "matchesPlayed": 26,
-      "playersCount": 30,
-      "matchesFile": "teams/cfae8a8ed683af07/matches.json",
-      "playersFile": "teams/cfae8a8ed683af07/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80127",
-      "teamIdIntern": 449994,
-      "teamIdExtern": 80127,
-      "teamName": "CBS FEM U16",
-      "matchesPlayed": 25,
-      "playersCount": 24,
-      "matchesFile": "teams/7b71507a520b78ea/matches.json",
-      "playersFile": "teams/7b71507a520b78ea/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:81241",
-      "teamIdIntern": 492638,
-      "teamIdExtern": 81241,
-      "teamName": "CCE MONTESSORI PALAU A",
-      "matchesPlayed": 26,
-      "playersCount": 11,
-      "matchesFile": "teams/52e52312f450756d/matches.json",
-      "playersFile": "teams/52e52312f450756d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -10152,56 +8762,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:78599",
-      "teamIdIntern": 450016,
-      "teamIdExtern": 78599,
-      "teamName": "CE SANT NICOLAU 1",
-      "matchesPlayed": 29,
-      "playersCount": 13,
-      "matchesFile": "teams/c31f498af54b9aa7/matches.json",
-      "playersFile": "teams/c31f498af54b9aa7/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21122,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Eliminat\u00F2ria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 13
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:78614",
       "teamIdIntern": 457148,
       "teamIdExtern": 78614,
@@ -10336,44 +8896,6 @@
           "levelCode": "GRUP 05",
           "groupCode": "",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79932",
-      "teamIdIntern": 450010,
-      "teamIdExtern": 79932,
-      "teamName": "CENG TALLERS CARDENYES",
-      "matchesPlayed": 26,
-      "playersCount": 12,
-      "matchesFile": "teams/b9b16aca952eda4a/matches.json",
-      "playersFile": "teams/b9b16aca952eda4a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -10532,44 +9054,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80238",
-      "teamIdIntern": 450014,
-      "teamIdExtern": 80238,
-      "teamName": "CESA FEMEN\u00CD SANT ADRI\u00C0 A",
-      "matchesPlayed": 27,
-      "playersCount": 16,
-      "matchesFile": "teams/7284a89183b6ece3/matches.json",
-      "playersFile": "teams/7284a89183b6ece3/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 13
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:80227",
       "teamIdIntern": 450032,
       "teamIdExtern": 80227,
@@ -10601,44 +9085,6 @@
           "levelName": "Preferent A",
           "levelCode": "Preferent A",
           "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78471",
-      "teamIdIntern": 450279,
-      "teamIdExtern": 78471,
-      "teamName": "CESET U16 VERD",
-      "matchesPlayed": 26,
-      "playersCount": 11,
-      "matchesFile": "teams/32c5afda51553375/matches.json",
-      "playersFile": "teams/32c5afda51553375/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
           "matchesPlayed": 12
         }
       ]
@@ -10868,44 +9314,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79271",
-      "teamIdIntern": 449897,
-      "teamIdExtern": 79271,
-      "teamName": "CLUB BASQUET ARGENTONA GROC",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/099ef3226ce81911/matches.json",
-      "playersFile": "teams/099ef3226ce81911/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -11209,44 +9617,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80804",
-      "teamIdIntern": 450433,
-      "teamIdExtern": 80804,
-      "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
-      "matchesPlayed": 26,
-      "playersCount": 15,
-      "matchesFile": "teams/9fd28652f522dd0e/matches.json",
-      "playersFile": "teams/9fd28652f522dd0e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
           "matchesPlayed": 12
         }
       ]
@@ -11564,44 +9934,6 @@
           "levelCode": "",
           "groupCode": "16",
           "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80317",
-      "teamIdIntern": 449940,
-      "teamIdExtern": 80317,
-      "teamName": "CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "matchesFile": "teams/d91d35e241c2f351/matches.json",
-      "playersFile": "teams/d91d35e241c2f351/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -13180,44 +11512,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79491",
-      "teamIdIntern": 450199,
-      "teamIdExtern": 79491,
-      "teamName": "FEMENI MARESME 3 VILES - CF",
-      "matchesPlayed": 26,
-      "playersCount": 18,
-      "matchesFile": "teams/aa19c8ef8f8c0dac/matches.json",
-      "playersFile": "teams/aa19c8ef8f8c0dac/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:81574",
       "teamIdIntern": 452740,
       "teamIdExtern": 81574,
@@ -13363,44 +11657,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "03",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79530",
-      "teamIdIntern": 450417,
-      "teamIdExtern": 79530,
-      "teamName": "FEMEN\u00CD OSONA BLANC- OVA PROJECTS",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "matchesFile": "teams/0f214525718e0f56/matches.json",
-      "playersFile": "teams/0f214525718e0f56/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
           "matchesPlayed": 12
         }
       ]
@@ -13560,82 +11816,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80240",
-      "teamIdIntern": 449867,
-      "teamIdExtern": 80240,
-      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 B",
-      "matchesPlayed": 26,
-      "playersCount": 22,
-      "matchesFile": "teams/6a51d42ab54a9702/matches.json",
-      "playersFile": "teams/6a51d42ab54a9702/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80233",
-      "teamIdIntern": 450223,
-      "teamIdExtern": 80233,
-      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 LILA",
-      "matchesPlayed": 25,
-      "playersCount": 15,
-      "matchesFile": "teams/f440883747df9bce/matches.json",
-      "playersFile": "teams/f440883747df9bce/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:83622",
       "teamIdIntern": 452914,
       "teamIdExtern": 83622,
@@ -13770,44 +11950,6 @@
           "levelCode": "",
           "groupCode": "06",
           "matchesPlayed": 7
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79284",
-      "teamIdIntern": 450228,
-      "teamIdExtern": 79284,
-      "teamName": "GEIEG VEDRUNA",
-      "matchesPlayed": 23,
-      "playersCount": 12,
-      "matchesFile": "teams/209459fbfc2a73dd/matches.json",
-      "playersFile": "teams/209459fbfc2a73dd/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19879,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21229,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "10",
-          "matchesPlayed": 9
         }
       ]
     },
@@ -14460,132 +12602,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78587",
-      "teamIdIntern": 449965,
-      "teamIdExtern": 78587,
-      "teamName": "JET TERRASSA U15",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/ed936d6de0797323/matches.json",
-      "playersFile": "teams/ed936d6de0797323/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80682",
-      "teamIdIntern": 449997,
-      "teamIdExtern": 80682,
-      "teamName": "JET TERRASSA U16",
-      "matchesPlayed": 28,
-      "playersCount": 16,
-      "matchesFile": "teams/941ee67e4b0ab315/matches.json",
-      "playersFile": "teams/941ee67e4b0ab315/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21122,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Eliminat\u00F2ria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80685",
-      "teamIdIntern": 450425,
-      "teamIdExtern": 80685,
-      "teamName": "JET TERRASSA U16 BLAU",
-      "matchesPlayed": 21,
-      "playersCount": 26,
-      "matchesFile": "teams/e50c431af5c0fec7/matches.json",
-      "playersFile": "teams/e50c431af5c0fec7/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21229,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "10",
-          "matchesPlayed": 7
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:82815",
       "teamIdIntern": 452756,
       "teamIdExtern": 82815,
@@ -14624,44 +12640,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80173",
-      "teamIdIntern": 450779,
-      "teamIdExtern": 80173,
-      "teamName": "JOVENTUT BADALONA 1",
-      "matchesPlayed": 24,
-      "playersCount": 14,
-      "matchesFile": "teams/eb9f8e3a48b18ab4/matches.json",
-      "playersFile": "teams/eb9f8e3a48b18ab4/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80171",
       "teamIdIntern": 453645,
       "teamIdExtern": 80171,
@@ -14694,82 +12672,6 @@
           "levelCode": "B1",
           "groupCode": "01",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80168",
-      "teamIdIntern": 449865,
-      "teamIdExtern": 80168,
-      "teamName": "JOVENTUT BADALONA 2",
-      "matchesPlayed": 26,
-      "playersCount": 21,
-      "matchesFile": "teams/c3b03ea76238c381/matches.json",
-      "playersFile": "teams/c3b03ea76238c381/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80172",
-      "teamIdIntern": 449995,
-      "teamIdExtern": 80172,
-      "teamName": "JOVENTUT BADALONA A",
-      "matchesPlayed": 27,
-      "playersCount": 30,
-      "matchesFile": "teams/e410594e1e35d9e4/matches.json",
-      "playersFile": "teams/e410594e1e35d9e4/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 13
         }
       ]
     },
@@ -15112,56 +13014,6 @@
           "levelCode": "D",
           "groupCode": "01",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79740",
-      "teamIdIntern": 450041,
-      "teamIdExtern": 79740,
-      "teamName": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS",
-      "matchesPlayed": 28,
-      "playersCount": 11,
-      "matchesFile": "teams/f064e35df883e428/matches.json",
-      "playersFile": "teams/f064e35df883e428/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -15600,44 +13452,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79802",
-      "teamIdIntern": 450317,
-      "teamIdExtern": 79802,
-      "teamName": "LLU\u00CFSOS DE GR\u00C0CIA A\u00A0",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "matchesFile": "teams/f6449b1830061c7a/matches.json",
-      "playersFile": "teams/f6449b1830061c7a/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81522",
       "teamIdIntern": 456495,
       "teamIdExtern": 81522,
@@ -15942,82 +13756,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80638",
-      "teamIdIntern": 450642,
-      "teamIdExtern": 80638,
-      "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - CAF",
-      "matchesPlayed": 26,
-      "playersCount": 18,
-      "matchesFile": "teams/2f36ccb07f285e8e/matches.json",
-      "playersFile": "teams/2f36ccb07f285e8e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80640",
-      "teamIdIntern": 449939,
-      "teamIdExtern": 80640,
-      "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - CBF",
-      "matchesPlayed": 25,
-      "playersCount": 14,
-      "matchesFile": "teams/67e8747f7b370d17/matches.json",
-      "playersFile": "teams/67e8747f7b370d17/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21198,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:80645",
       "teamIdIntern": 472907,
       "teamIdExtern": 80645,
@@ -16114,82 +13852,6 @@
           "levelCode": "C1",
           "groupCode": "02",
           "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78859",
-      "teamIdIntern": 450297,
-      "teamIdExtern": 78859,
-      "teamName": "NAYOX FOR\u00C7A LLEIDA A",
-      "matchesPlayed": 24,
-      "playersCount": 17,
-      "matchesFile": "teams/fc74ec4494a4faf6/matches.json",
-      "playersFile": "teams/fc74ec4494a4faf6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78857",
-      "teamIdIntern": 449947,
-      "teamIdExtern": 78857,
-      "teamName": "NAYOX FOR\u00C7A LLEIDA B",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/f37453760e3fdf7e/matches.json",
-      "playersFile": "teams/f37453760e3fdf7e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -16614,44 +14276,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79020",
-      "teamIdIntern": 449866,
-      "teamIdExtern": 79020,
-      "teamName": "PEPITU MANRESA CBF U15",
-      "matchesPlayed": 26,
-      "playersCount": 13,
-      "matchesFile": "teams/8a67cca8745da7fd/matches.json",
-      "playersFile": "teams/8a67cca8745da7fd/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:79495",
       "teamIdIntern": 452946,
       "teamIdExtern": 79495,
@@ -16716,82 +14340,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79493",
-      "teamIdIntern": 449856,
-      "teamIdExtern": 79493,
-      "teamName": "PETROPINTO ASFE U15 VERD",
-      "matchesPlayed": 26,
-      "playersCount": 15,
-      "matchesFile": "teams/810ab615ad0cfe96/matches.json",
-      "playersFile": "teams/810ab615ad0cfe96/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79501",
-      "teamIdIntern": 450164,
-      "teamIdExtern": 79501,
-      "teamName": "PETROPINTO ASFE U16",
-      "matchesPlayed": 24,
-      "playersCount": 25,
-      "matchesFile": "teams/faa0e63478a9ef3f/matches.json",
-      "playersFile": "teams/faa0e63478a9ef3f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEMENI INTERTERRITORIAL::TEAM:79515",
       "teamIdIntern": 555803,
       "teamIdExtern": 79515,
@@ -16812,44 +14360,6 @@
           "levelCode": "",
           "groupCode": "16",
           "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79921",
-      "teamIdIntern": 492639,
-      "teamIdExtern": 79921,
-      "teamName": "PRISCO-L\u0027ESCALA",
-      "matchesPlayed": 25,
-      "playersCount": 12,
-      "matchesFile": "teams/25c97c4f1c62e102/matches.json",
-      "playersFile": "teams/25c97c4f1c62e102/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -16900,44 +14410,6 @@
           "levelCode": "Primera Fase",
           "groupCode": "04",
           "matchesPlayed": 2
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79379",
-      "teamIdIntern": 450109,
-      "teamIdExtern": 79379,
-      "teamName": "PROMOVIATGES CBF CERDANYOLA U16",
-      "matchesPlayed": 26,
-      "playersCount": 16,
-      "matchesFile": "teams/c38970145497d962/matches.json",
-      "playersFile": "teams/c38970145497d962/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -17084,44 +14556,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79051",
-      "teamIdIntern": 450185,
-      "teamIdExtern": 79051,
-      "teamName": "RACC ESPLUGUES - CB SANT JUST U16",
-      "matchesPlayed": 21,
-      "playersCount": 14,
-      "matchesFile": "teams/e14e68f0782879d7/matches.json",
-      "playersFile": "teams/e14e68f0782879d7/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21229,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "10",
-          "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::1A. TERRITORIAL SENIOR FEMENI::TEAM:80566",
       "teamIdIntern": 453010,
       "teamIdExtern": 80566,
@@ -17218,44 +14652,6 @@
           "levelCode": "",
           "groupCode": "09",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80626",
-      "teamIdIntern": 450024,
-      "teamIdExtern": 80626,
-      "teamName": "REUS PLOMS SALLE CFU16",
-      "matchesPlayed": 27,
-      "playersCount": 14,
-      "matchesFile": "teams/08e90a8b2e5f2b63/matches.json",
-      "playersFile": "teams/08e90a8b2e5f2b63/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 13
         }
       ]
     },
@@ -17534,56 +14930,6 @@
           "levelCode": "Preferent A",
           "groupCode": "01",
           "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79198",
-      "teamIdIntern": 449863,
-      "teamIdExtern": 79198,
-      "teamName": "SABADELL BQ VALL\u00C8S U15F",
-      "matchesPlayed": 28,
-      "playersCount": 15,
-      "matchesFile": "teams/173b25003fb83ff9/matches.json",
-      "playersFile": "teams/173b25003fb83ff9/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -18034,44 +15380,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80069",
-      "teamIdIntern": 450596,
-      "teamIdExtern": 80069,
-      "teamName": "SEDIS GDOS",
-      "matchesPlayed": 23,
-      "playersCount": 11,
-      "matchesFile": "teams/c432c1da0a894e9b/matches.json",
-      "playersFile": "teams/c432c1da0a894e9b/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19882,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79856",
       "teamIdIntern": 450055,
       "teamIdExtern": 79856,
@@ -18103,44 +15411,6 @@
           "levelName": "Preferent B",
           "levelCode": "Preferent B",
           "groupCode": "01",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79860",
-      "teamIdIntern": 450416,
-      "teamIdExtern": 79860,
-      "teamName": "SESE A",
-      "matchesPlayed": 25,
-      "playersCount": 18,
-      "matchesFile": "teams/6c8e890721a93db6/matches.json",
-      "playersFile": "teams/6c8e890721a93db6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
           "matchesPlayed": 11
         }
       ]
@@ -18180,56 +15450,6 @@
           "levelCode": "B1",
           "groupCode": "01",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79879",
-      "teamIdIntern": 449905,
-      "teamIdExtern": 79879,
-      "teamName": "SESE B",
-      "matchesPlayed": 28,
-      "playersCount": 16,
-      "matchesFile": "teams/1b0ef126b5abcac4/matches.json",
-      "playersFile": "teams/1b0ef126b5abcac4/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -18446,182 +15666,6 @@
           "levelCode": "",
           "groupCode": "09",
           "matchesPlayed": 10
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79022",
-      "teamIdIntern": 450006,
-      "teamIdExtern": 79022,
-      "teamName": "SIMON MOBLES OFICINA MANRESA CBF U16",
-      "matchesPlayed": 29,
-      "playersCount": 16,
-      "matchesFile": "teams/10f745d0a75b380c/matches.json",
-      "playersFile": "teams/10f745d0a75b380c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19810,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21122,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Eliminat\u00F2ria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 13
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79668",
-      "teamIdIntern": 450108,
-      "teamIdExtern": 79668,
-      "teamName": "TALENOM BOET MATAR\u00D3",
-      "matchesPlayed": 26,
-      "playersCount": 17,
-      "matchesFile": "teams/990fbe7ba2fc681c/matches.json",
-      "playersFile": "teams/990fbe7ba2fc681c/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21225,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79651",
-      "teamIdIntern": 449996,
-      "teamIdExtern": 79651,
-      "teamName": "TALENOM BOET MATAR\u00D3 2010",
-      "matchesPlayed": 26,
-      "playersCount": 17,
-      "matchesFile": "teams/1f94e2c9b682014d/matches.json",
-      "playersFile": "teams/1f94e2c9b682014d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21181,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent B",
-          "levelCode": "Preferent B",
-          "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79664",
-      "teamIdIntern": 450072,
-      "teamIdExtern": 79664,
-      "teamName": "TALENOM BOET MATAR\u00D3 2011",
-      "matchesPlayed": 28,
-      "playersCount": 17,
-      "matchesFile": "teams/603f86f160e4e125/matches.json",
-      "playersFile": "teams/603f86f160e4e125/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 12
         }
       ]
     },
@@ -18894,94 +15938,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79336",
-      "teamIdIntern": 450422,
-      "teamIdExtern": 79336,
-      "teamName": "TGN B\u00C0SQUET 10A",
-      "matchesPlayed": 24,
-      "playersCount": 17,
-      "matchesFile": "teams/2d7d1717410772fb/matches.json",
-      "playersFile": "teams/2d7d1717410772fb/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79349",
-      "teamIdIntern": 449941,
-      "teamIdExtern": 79349,
-      "teamName": "TGN B\u00C0SQUET 11A",
-      "matchesPlayed": 28,
-      "playersCount": 13,
-      "matchesFile": "teams/ec19ec25cbdad596/matches.json",
-      "playersFile": "teams/ec19ec25cbdad596/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19856,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:79343",
       "teamIdIntern": 450051,
       "teamIdExtern": 79343,
@@ -19096,44 +16052,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79832",
-      "teamIdIntern": 450222,
-      "teamIdExtern": 79832,
-      "teamName": "U. B. LLEFI\u00C0 A",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/a27ad2094e45e62e/matches.json",
-      "playersFile": "teams/a27ad2094e45e62e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21227,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C. JUNIOR FEM. NIVELL A::TEAM:79834",
       "teamIdIntern": 452936,
       "teamIdExtern": 79834,
@@ -19204,44 +16122,6 @@
           "levelCode": "",
           "groupCode": "02",
           "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79298",
-      "teamIdIntern": 450424,
-      "teamIdExtern": 79298,
-      "teamName": "U.E. CLARET A",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/f5a48aaf591cd441/matches.json",
-      "playersFile": "teams/f5a48aaf591cd441/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21226,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "07",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -19616,44 +16496,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80855",
-      "teamIdIntern": 449864,
-      "teamIdExtern": 80855,
-      "teamName": "U.E.MATAR\u00D3 - CBF",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "matchesFile": "teams/d86dd3ad9a736486/matches.json",
-      "playersFile": "teams/d86dd3ad9a736486/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19855,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21196,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.C INFANTIL FEMENI PREFERENT::TEAM:80886",
       "teamIdIntern": 450031,
       "teamIdExtern": 80886,
@@ -19908,44 +16750,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80872",
-      "teamIdIntern": 450013,
-      "teamIdExtern": 80872,
-      "teamName": "U.E.MATAR\u00D3 -CAF",
-      "matchesPlayed": 26,
-      "playersCount": 15,
-      "matchesFile": "teams/97eb95f21f38a5aa/matches.json",
-      "playersFile": "teams/97eb95f21f38a5aa/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19809,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Fase Pr\u00E8via",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21180,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "phaseName": "Segona Fase",
-          "levelName": "Preferent A",
-          "levelCode": "Preferent A",
-          "groupCode": "01",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79955",
       "teamIdIntern": 454825,
       "teamIdExtern": 79955,
@@ -19978,94 +16782,6 @@
           "levelCode": "C1",
           "groupCode": "02",
           "matchesPlayed": 9
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79978",
-      "teamIdIntern": 449964,
-      "teamIdExtern": 79978,
-      "teamName": "U15 JOVENTUT LES CORTS",
-      "matchesPlayed": 27,
-      "playersCount": 16,
-      "matchesFile": "teams/a05ba9e7c55a53b6/matches.json",
-      "playersFile": "teams/a05ba9e7c55a53b6/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19857,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 21145,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Eliminatoria 1.3.2",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "01",
-          "matchesPlayed": 2
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21197,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "06",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79966",
-      "teamIdIntern": 450643,
-      "teamIdExtern": 79966,
-      "teamName": "U16 JOVENTUT LES CORTS",
-      "matchesPlayed": 25,
-      "playersCount": 22,
-      "matchesFile": "teams/a773448b2c3cec07/matches.json",
-      "playersFile": "teams/a773448b2c3cec07/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
-          "matchesPlayed": 11
         }
       ]
     },
@@ -20186,44 +16902,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79327",
-      "teamIdIntern": 450158,
-      "teamIdExtern": 79327,
-      "teamName": "UB MIR A",
-      "matchesPlayed": 22,
-      "playersCount": 19,
-      "matchesFile": "teams/046902ea5788d77d/matches.json",
-      "playersFile": "teams/046902ea5788d77d/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19883,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "05",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21229,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "10",
-          "matchesPlayed": 8
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81567",
       "teamIdIntern": 457307,
       "teamIdExtern": 81567,
@@ -20331,44 +17009,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "01",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79486",
-      "teamIdIntern": 449890,
-      "teamIdExtern": 79486,
-      "teamName": "UCAP SCOOTFAST U15",
-      "matchesPlayed": 25,
-      "playersCount": 13,
-      "matchesFile": "teams/8c1bc26c63c6ba83/matches.json",
-      "playersFile": "teams/8c1bc26c63c6ba83/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19858,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "04",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21199,
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "08",
           "matchesPlayed": 11
         }
       ]
@@ -21292,44 +17932,6 @@
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78985",
-      "teamIdIntern": 450316,
-      "teamIdExtern": 78985,
-      "teamName": "VIROLAI A",
-      "matchesPlayed": 26,
-      "playersCount": 14,
-      "matchesFile": "teams/50102278ba5b404f/matches.json",
-      "playersFile": "teams/50102278ba5b404f/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19881,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "03",
-          "matchesPlayed": 14
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
-          "matchesPlayed": 12
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
       "teamKey": "2025-2026::2A. TERRITORIAL SENIOR FEMENI::TEAM:78982",
       "teamIdIntern": 453092,
       "teamIdExtern": 78982,
@@ -21399,44 +18001,6 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "04",
-          "matchesPlayed": 11
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2025,
-      "seasonLabel": "2025-2026",
-      "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79612",
-      "teamIdIntern": 451149,
-      "teamIdExtern": 79612,
-      "teamName": "VIRONE CB MONTPEDR\u00D3S",
-      "matchesPlayed": 23,
-      "playersCount": 14,
-      "matchesFile": "teams/064f3e201d9a0d4e/matches.json",
-      "playersFile": "teams/064f3e201d9a0d4e/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 1,
-          "sourcePhaseId": 19880,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Primera Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "02",
-          "matchesPlayed": 12
-        },
-        {
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "phaseNumber": 2,
-          "sourcePhaseId": 21228,
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "phaseName": "Segona Fase",
-          "levelName": "",
-          "levelCode": "",
-          "groupCode": "09",
           "matchesPlayed": 11
         }
       ]

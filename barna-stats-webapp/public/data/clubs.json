@@ -2164,13 +2164,13 @@
     "shortName": "A.E. SANT NICOLAU C",
     "clubId": 3428,
     "primaryTeamIdExtern": 78612,
-    "totalTeams": 4,
-    "totalMatches": 76,
-    "totalPlayers": 51,
-    "categoriesCount": 4,
-    "levelsCount": 2,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 76 partidos",
-    "searchText": "ASSOCIACIO ESPORTIVA SANT NICOLAU CANYELLES A.E. SANT NICOLAU C CE SANT NICOLAU C.t. Pre-mini Femen\u00ED Nivell C1 CE SANT NICOLAU 1 C.c. Cadet Femen\u00ED Preferent Preferent A CE SANT NICOLAU 3 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 CE SANT NICOLAU B 2a. Territorial S\u00E8nior Femen\u00ED",
+    "totalTeams": 3,
+    "totalMatches": 47,
+    "totalPlayers": 38,
+    "categoriesCount": 3,
+    "levelsCount": 1,
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 47 partidos",
+    "searchText": "ASSOCIACIO ESPORTIVA SANT NICOLAU CANYELLES A.E. SANT NICOLAU C CE SANT NICOLAU C.t. Pre-mini Femen\u00ED Nivell C1 CE SANT NICOLAU 3 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 CE SANT NICOLAU B 2a. Territorial S\u00E8nior Femen\u00ED",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -2202,41 +2202,6 @@
                 },
                 "pointDiff": 115,
                 "avgValuation": 19.952380952380953
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:78599",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:78599",
-                "teamIdExtern": 78599,
-                "teamName": "CE SANT NICOLAU 1",
-                "matchesPlayed": 29,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 11,
-                  "losses": 18,
-                  "ties": 0,
-                  "pointsFor": 1597,
-                  "pointsAgainst": 1809
-                },
-                "pointDiff": -212,
-                "avgValuation": -15.517241379310345
               }
             ]
           }
@@ -2473,13 +2438,13 @@
     "shortName": "BASKET ALMEDA",
     "clubId": 0,
     "primaryTeamIdExtern": 79639,
-    "totalTeams": 4,
-    "totalMatches": 86,
-    "totalPlayers": 87,
-    "categoriesCount": 4,
+    "totalTeams": 2,
+    "totalMatches": 35,
+    "totalPlayers": 37,
+    "categoriesCount": 2,
     "levelsCount": 2,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 86 partidos",
-    "searchText": "BASKET ALMEDA C.c Infantil Femen\u00ED Preferent Preferent B BASKET ALMEDA GROC C.c. Cadet Femen\u00ED Interterritorial C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 BASKET ALMEDA NEGRE C.c. Cadet Femen\u00ED Preferent 1r. Any",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 35 partidos",
+    "searchText": "BASKET ALMEDA C.c Infantil Femen\u00ED Preferent Preferent B BASKET ALMEDA GROC C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -2511,76 +2476,6 @@
                 },
                 "pointDiff": 246,
                 "avgValuation": -19.8
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79633",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79633",
-                "teamIdExtern": 79633,
-                "teamName": "BASKET ALMEDA GROC",
-                "matchesPlayed": 24,
-                "playersCount": 23,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 10,
-                "record": {
-                  "wins": 6,
-                  "losses": 18,
-                  "ties": 0,
-                  "pointsFor": 1207,
-                  "pointsAgainst": 1455
-                },
-                "pointDiff": -248,
-                "avgValuation": 14
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79632",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79632",
-                "teamIdExtern": 79632,
-                "teamName": "BASKET ALMEDA NEGRE",
-                "matchesPlayed": 27,
-                "playersCount": 27,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 16,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1595,
-                  "pointsAgainst": 1550
-                },
-                "pointDiff": 45,
-                "avgValuation": 19.77777777777778
               }
             ]
           }
@@ -2667,57 +2562,6 @@
                 },
                 "pointDiff": 349,
                 "avgValuation": 29.5
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:basketb-almeda",
-    "label": "BASKETB ALMEDA",
-    "shortName": "BASKETB ALMEDA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79641,
-    "totalTeams": 1,
-    "totalMatches": 28,
-    "totalPlayers": 17,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 28 partidos",
-    "searchText": "BASKETB ALMEDA C.c. Cadet Femen\u00ED Preferent Preferent B",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79641",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79641",
-                "teamIdExtern": 79641,
-                "teamName": "BASKETB ALMEDA",
-                "matchesPlayed": 28,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 13,
-                  "losses": 15,
-                  "ties": 0,
-                  "pointsFor": 1592,
-                  "pointsAgainst": 1645
-                },
-                "pointDiff": -53,
-                "avgValuation": -26.428571428571427
               }
             ]
           }
@@ -3183,13 +3027,13 @@
     "shortName": "B\u00C0SQUET GIRONA",
     "clubId": 0,
     "primaryTeamIdExtern": 81005,
-    "totalTeams": 4,
-    "totalMatches": 103,
-    "totalPlayers": 51,
-    "categoriesCount": 4,
+    "totalTeams": 1,
+    "totalMatches": 25,
+    "totalPlayers": 12,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 103 partidos",
-    "searchText": "B\u00C0SQUET GIRONA B\u00C0SQUET GIRONA U14 C.c Infantil Femen\u00ED Preferent Preferent A B\u00C0SQUET GIRONA U15 C.c. Cadet Femen\u00ED Preferent 1r. Any B\u00C0SQUET GIRONA U16 C.c. Cadet Femen\u00ED Preferent B\u00C0SQUET GIRONA U16 VERMELL C.c. Cadet Femen\u00ED Interterritorial",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 25 partidos",
+    "searchText": "B\u00C0SQUET GIRONA B\u00C0SQUET GIRONA U14 C.c Infantil Femen\u00ED Preferent Preferent A",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -3221,111 +3065,6 @@
                 },
                 "pointDiff": 125,
                 "avgValuation": -22.2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80991",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80991",
-                "teamIdExtern": 80991,
-                "teamName": "B\u00C0SQUET GIRONA U16 VERMELL",
-                "matchesPlayed": 26,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 24,
-                  "losses": 2,
-                  "ties": 0,
-                  "pointsFor": 1832,
-                  "pointsAgainst": 1294
-                },
-                "pointDiff": 538,
-                "avgValuation": 39.5
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80992",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80992",
-                "teamIdExtern": 80992,
-                "teamName": "B\u00C0SQUET GIRONA U16",
-                "matchesPlayed": 26,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 13,
-                  "losses": 13,
-                  "ties": 0,
-                  "pointsFor": 1512,
-                  "pointsAgainst": 1514
-                },
-                "pointDiff": -2,
-                "avgValuation": -6.538461538461538
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80989",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80989",
-                "teamIdExtern": 80989,
-                "teamName": "B\u00C0SQUET GIRONA U15",
-                "matchesPlayed": 26,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 18,
-                  "losses": 8,
-                  "ties": 0,
-                  "pointsFor": 1716,
-                  "pointsAgainst": 1363
-                },
-                "pointDiff": 353,
-                "avgValuation": 31.923076923076923
               }
             ]
           }
@@ -4090,14 +3829,14 @@
     "label": "B\u00C0SQUET VILAFANT",
     "shortName": "B\u00C0SQUET VILAFANT",
     "clubId": 0,
-    "primaryTeamIdExtern": 79785,
-    "totalTeams": 2,
-    "totalMatches": 43,
-    "totalPlayers": 39,
-    "categoriesCount": 2,
+    "primaryTeamIdExtern": 83447,
+    "totalTeams": 1,
+    "totalMatches": 20,
+    "totalPlayers": 25,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 43 partidos",
-    "searchText": "B\u00C0SQUET VILAFANT C.c. Cadet Femen\u00ED Interterritorial 1a. Territorial S\u00E8nior Femen\u00ED Primera Fase",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 20 partidos",
+    "searchText": "B\u00C0SQUET VILAFANT 1a. Territorial S\u00E8nior Femen\u00ED Primera Fase",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -4129,41 +3868,6 @@
                 },
                 "pointDiff": -354,
                 "avgValuation": 14.75
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79785",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79785",
-                "teamIdExtern": 79785,
-                "teamName": "B\u00C0SQUET VILAFANT",
-                "matchesPlayed": 23,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 10",
-                "latestPhaseOptionValue": "source:21229",
-                "groupCode": "10",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 12,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1353,
-                  "pointsAgainst": 1503
-                },
-                "pointDiff": -150,
-                "avgValuation": 29.47826086956522
               }
             ]
           }
@@ -4274,57 +3978,6 @@
     ]
   },
   {
-    "key": "derived-club:bc-morabanc-andorra",
-    "label": "BC MORABANC ANDORRA",
-    "shortName": "BC MORABANC ANDORRA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80141,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 13,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "BC MORABANC ANDORRA C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80141",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80141",
-                "teamIdExtern": 80141,
-                "teamName": "BC MORABANC ANDORRA",
-                "matchesPlayed": 26,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 12,
-                "record": {
-                  "wins": 2,
-                  "losses": 24,
-                  "ties": 0,
-                  "pointsFor": 1235,
-                  "pointsAgainst": 1845
-                },
-                "pointDiff": -610,
-                "avgValuation": 17.115384615384617
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:bc-morabanc-andorra-gala-perfumeries",
     "label": "BC MORABANC ANDORRA GALA PERFUMERIES",
     "shortName": "BC MORABANC ANDORRA GALA PERFUMERIES",
@@ -4381,13 +4034,13 @@
     "shortName": "BC TORROELLA",
     "clubId": 0,
     "primaryTeamIdExtern": 79984,
-    "totalTeams": 2,
-    "totalMatches": 45,
-    "totalPlayers": 37,
-    "categoriesCount": 2,
+    "totalTeams": 1,
+    "totalMatches": 19,
+    "totalPlayers": 23,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 45 partidos",
-    "searchText": "BC TORROELLA 1a. Territorial S\u00E8nior Femen\u00ED Primera Fase BC TORROELLA U16 C.c. Cadet Femen\u00ED Interterritorial",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 19 partidos",
+    "searchText": "BC TORROELLA 1a. Territorial S\u00E8nior Femen\u00ED Primera Fase",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -4419,41 +4072,6 @@
                 },
                 "pointDiff": -40,
                 "avgValuation": 31.105263157894736
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79985",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79985",
-                "teamIdExtern": 79985,
-                "teamName": "BC TORROELLA U16",
-                "matchesPlayed": 26,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 18,
-                  "losses": 8,
-                  "ties": 0,
-                  "pointsFor": 1550,
-                  "pointsAgainst": 1352
-                },
-                "pointDiff": 198,
-                "avgValuation": 31.807692307692307
               }
             ]
           }
@@ -5348,57 +4966,6 @@
     ]
   },
   {
-    "key": "derived-club:camping-la-llosa",
-    "label": "CAMPING LA LLOSA",
-    "shortName": "CAMPING LA LLOSA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80828,
-    "totalTeams": 1,
-    "totalMatches": 25,
-    "totalPlayers": 15,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 25 partidos",
-    "searchText": "CAMPING LA LLOSA CAMPING LA LLOSA - C.B. CAMBRILS A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80828",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80828",
-                "teamIdExtern": 80828,
-                "teamName": "CAMPING LA LLOSA - C.B. CAMBRILS A",
-                "matchesPlayed": 25,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 11,
-                "record": {
-                  "wins": 5,
-                  "losses": 20,
-                  "ties": 0,
-                  "pointsFor": 1242,
-                  "pointsAgainst": 1599
-                },
-                "pointDiff": -357,
-                "avgValuation": 16.32
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:canovelles-bc",
     "label": "CANOVELLES BC",
     "shortName": "CANOVELLES BC",
@@ -5877,108 +5444,6 @@
     ]
   },
   {
-    "key": "derived-club:cb-banyoles-a",
-    "label": "CB BANYOLES A",
-    "shortName": "CB BANYOLES A",
-    "clubId": 0,
-    "primaryTeamIdExtern": 78564,
-    "totalTeams": 1,
-    "totalMatches": 25,
-    "totalPlayers": 13,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 25 partidos",
-    "searchText": "CB BANYOLES A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78564",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78564",
-                "teamIdExtern": 78564,
-                "teamName": "CB BANYOLES A",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 14,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1443,
-                  "pointsAgainst": 1341
-                },
-                "pointDiff": 102,
-                "avgValuation": 27.12
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cb-blanes-a",
-    "label": "CB BLANES A",
-    "shortName": "CB BLANES A",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80969,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 19,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CB BLANES A C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80969",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80969",
-                "teamIdExtern": 80969,
-                "teamName": "CB BLANES A",
-                "matchesPlayed": 26,
-                "playersCount": 19,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 19,
-                  "losses": 7,
-                  "ties": 0,
-                  "pointsFor": 1660,
-                  "pointsAgainst": 1310
-                },
-                "pointDiff": 350,
-                "avgValuation": 33.88461538461539
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:cb-blanes-b",
     "label": "CB BLANES B",
     "shortName": "CB BLANES B",
@@ -6073,57 +5538,6 @@
                 },
                 "pointDiff": 24,
                 "avgValuation": 25.26086956521739
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cb-calella",
-    "label": "CB CALELLA",
-    "shortName": "CB CALELLA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 78519,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 12,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CB CALELLA C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78519",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78519",
-                "teamIdExtern": 78519,
-                "teamName": "CB CALELLA",
-                "matchesPlayed": 26,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 8,
-                "record": {
-                  "wins": 6,
-                  "losses": 20,
-                  "ties": 0,
-                  "pointsFor": 1223,
-                  "pointsAgainst": 1517
-                },
-                "pointDiff": -294,
-                "avgValuation": 19.653846153846153
               }
             ]
           }
@@ -6239,13 +5653,13 @@
     "shortName": "CB CERVERA MOBEL LINEA",
     "clubId": 0,
     "primaryTeamIdExtern": 82214,
-    "totalTeams": 2,
-    "totalMatches": 47,
-    "totalPlayers": 24,
-    "categoriesCount": 2,
+    "totalTeams": 1,
+    "totalMatches": 21,
+    "totalPlayers": 13,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 47 partidos",
-    "searchText": "CB CERVERA MOBEL LINEA 1a. Territorial S\u00E8nior Femen\u00ED GRUP 05 CB CERVERA MOBEL L\u00CDNEA C.c. Cadet Femen\u00ED Preferent 1r. Any",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 21 partidos",
+    "searchText": "CB CERVERA MOBEL LINEA 1a. Territorial S\u00E8nior Femen\u00ED GRUP 05",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -6277,41 +5691,6 @@
                 },
                 "pointDiff": 71,
                 "avgValuation": 25.904761904761905
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80368",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80368",
-                "teamIdExtern": 80368,
-                "teamName": "CB CERVERA MOBEL L\u00CDNEA",
-                "matchesPlayed": 26,
-                "playersCount": 11,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 12,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 1387,
-                  "pointsAgainst": 1394
-                },
-                "pointDiff": -7,
-                "avgValuation": 19.192307692307693
               }
             ]
           }
@@ -6830,57 +6209,6 @@
     ]
   },
   {
-    "key": "derived-club:cb-manyanet-les-corts-verd",
-    "label": "CB MANYANET LES CORTS VERD",
-    "shortName": "CB MANYANET LES CORTS VERD",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79982,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 14,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CB MANYANET LES CORTS VERD C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79982",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79982",
-                "teamIdExtern": 79982,
-                "teamName": "CB MANYANET LES CORTS VERD",
-                "matchesPlayed": 26,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 14,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1432,
-                  "pointsAgainst": 1333
-                },
-                "pointDiff": 99,
-                "avgValuation": 22.153846153846153
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:cb-martorell-a",
     "label": "CB MARTORELL A",
     "shortName": "CB MARTORELL A",
@@ -7230,57 +6558,6 @@
                 },
                 "pointDiff": 148,
                 "avgValuation": 31.4
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cb-olot-lava-alzamora-grafiques",
-    "label": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES",
-    "shortName": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES",
-    "clubId": 0,
-    "primaryTeamIdExtern": 78574,
-    "totalTeams": 1,
-    "totalMatches": 25,
-    "totalPlayers": 12,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 25 partidos",
-    "searchText": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78574",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78574",
-                "teamIdExtern": 78574,
-                "teamName": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES",
-                "matchesPlayed": 25,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 12,
-                  "losses": 13,
-                  "ties": 0,
-                  "pointsFor": 1346,
-                  "pointsAgainst": 1414
-                },
-                "pointDiff": -68,
-                "avgValuation": 15.36
               }
             ]
           }
@@ -8105,57 +7382,6 @@
     ]
   },
   {
-    "key": "derived-club:cb-valls-clinica-dental-clofent",
-    "label": "CB VALLS CLINICA DENTAL CLOFENT",
-    "shortName": "CB VALLS CLINICA DENTAL CLOFENT",
-    "clubId": 0,
-    "primaryTeamIdExtern": 78413,
-    "totalTeams": 1,
-    "totalMatches": 24,
-    "totalPlayers": 12,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 24 partidos",
-    "searchText": "CB VALLS CLINICA DENTAL CLOFENT C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78413",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78413",
-                "teamIdExtern": 78413,
-                "teamName": "CB VALLS CLINICA DENTAL CLOFENT",
-                "matchesPlayed": 24,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 18,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1396,
-                  "pointsAgainst": 1219
-                },
-                "pointDiff": 177,
-                "avgValuation": 16.875
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:cb-valls-sala-red-star",
     "label": "CB VALLS SALA RED STAR",
     "shortName": "CB VALLS SALA RED STAR",
@@ -8309,108 +7535,6 @@
     ]
   },
   {
-    "key": "derived-club:cb-cornella",
-    "label": "CB. CORNELL\u00C0",
-    "shortName": "CB. CORNELL\u00C0",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80342,
-    "totalTeams": 1,
-    "totalMatches": 28,
-    "totalPlayers": 21,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 28 partidos",
-    "searchText": "CB. CORNELL\u00C0 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80342",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80342",
-                "teamIdExtern": 80342,
-                "teamName": "CB. CORNELL\u00C0",
-                "matchesPlayed": 28,
-                "playersCount": 21,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 16,
-                  "losses": 11,
-                  "ties": 1,
-                  "pointsFor": 1834,
-                  "pointsAgainst": 1527
-                },
-                "pointDiff": 307,
-                "avgValuation": 25.464285714285715
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cb-cornella-a",
-    "label": "CB. CORNELL\u00C0 A",
-    "shortName": "CB. CORNELL\u00C0 A",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80339,
-    "totalTeams": 1,
-    "totalMatches": 27,
-    "totalPlayers": 23,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 27 partidos",
-    "searchText": "CB. CORNELL\u00C0 A C.c. Cadet Femen\u00ED Preferent Preferent B",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80339",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80339",
-                "teamIdExtern": 80339,
-                "teamName": "CB. CORNELL\u00C0 A",
-                "matchesPlayed": 27,
-                "playersCount": 23,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 15,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1742,
-                  "pointsAgainst": 1647
-                },
-                "pointDiff": 95,
-                "avgValuation": -13.222222222222221
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:cb-cornella-b",
     "label": "CB. CORNELL\u00C0 B",
     "shortName": "CB. CORNELL\u00C0 B",
@@ -8454,57 +7578,6 @@
                 },
                 "pointDiff": -112,
                 "avgValuation": 20.434782608695652
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cb-cornella-blau",
-    "label": "CB. CORNELL\u00C0 BLAU",
-    "shortName": "CB. CORNELL\u00C0 BLAU",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80349,
-    "totalTeams": 1,
-    "totalMatches": 24,
-    "totalPlayers": 21,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 24 partidos",
-    "searchText": "CB. CORNELL\u00C0 BLAU C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80349",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80349",
-                "teamIdExtern": 80349,
-                "teamName": "CB. CORNELL\u00C0 BLAU",
-                "matchesPlayed": 24,
-                "playersCount": 21,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 12,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1244,
-                  "pointsAgainst": 1398
-                },
-                "pointDiff": -154,
-                "avgValuation": 20.083333333333332
               }
             ]
           }
@@ -8666,57 +7739,6 @@
     ]
   },
   {
-    "key": "derived-club:cbs-fem-u16-intert",
-    "label": "CBS FEM  U16 INTERT",
-    "shortName": "CBS FEM  U16 INTERT",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80126,
-    "totalTeams": 1,
-    "totalMatches": 22,
-    "totalPlayers": 15,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 22 partidos",
-    "searchText": "CBS FEM  U16 INTERT C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80126",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80126",
-                "teamIdExtern": 80126,
-                "teamName": "CBS FEM  U16 INTERT",
-                "matchesPlayed": 22,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 9,
-                "record": {
-                  "wins": 6,
-                  "losses": 16,
-                  "ties": 0,
-                  "pointsFor": 1016,
-                  "pointsAgainst": 1282
-                },
-                "pointDiff": -266,
-                "avgValuation": 14.681818181818182
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:cbs-fem-u18-nivell-a",
     "label": "CBS FEM  U18 NIVELL A",
     "shortName": "CBS FEM  U18 NIVELL A",
@@ -8760,159 +7782,6 @@
                 },
                 "pointDiff": -378,
                 "avgValuation": 20.105263157894736
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cbs-fem-u15-1er-any",
-    "label": "CBS FEM U15 1ER ANY",
-    "shortName": "CBS FEM U15 1ER ANY",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80119,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 30,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CBS FEM U15 1ER ANY C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80119",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80119",
-                "teamIdExtern": 80119,
-                "teamName": "CBS FEM U15 1ER ANY",
-                "matchesPlayed": 26,
-                "playersCount": 30,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 20,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1619,
-                  "pointsAgainst": 1342
-                },
-                "pointDiff": 277,
-                "avgValuation": 32.84615384615385
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cbs-fem-u16",
-    "label": "CBS FEM U16",
-    "shortName": "CBS FEM U16",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80127,
-    "totalTeams": 1,
-    "totalMatches": 25,
-    "totalPlayers": 24,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 25 partidos",
-    "searchText": "CBS FEM U16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80127",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80127",
-                "teamIdExtern": 80127,
-                "teamName": "CBS FEM U16",
-                "matchesPlayed": 25,
-                "playersCount": 24,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 20,
-                  "losses": 5,
-                  "ties": 0,
-                  "pointsFor": 1767,
-                  "pointsAgainst": 1318
-                },
-                "pointDiff": 449,
-                "avgValuation": 0.48
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:cce-montessori-palau-a",
-    "label": "CCE MONTESSORI PALAU A",
-    "shortName": "CCE MONTESSORI PALAU A",
-    "clubId": 0,
-    "primaryTeamIdExtern": 81241,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 11,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CCE MONTESSORI PALAU A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:81241",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:81241",
-                "teamIdExtern": 81241,
-                "teamName": "CCE MONTESSORI PALAU A",
-                "matchesPlayed": 26,
-                "playersCount": 11,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 17,
-                  "losses": 9,
-                  "ties": 0,
-                  "pointsFor": 1663,
-                  "pointsAgainst": 1445
-                },
-                "pointDiff": 218,
-                "avgValuation": 29.346153846153847
               }
             ]
           }
@@ -9152,57 +8021,6 @@
                 },
                 "pointDiff": -26,
                 "avgValuation": 20.94736842105263
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:ceng-tallers-cardenyes",
-    "label": "CENG TALLERS CARDENYES",
-    "shortName": "CENG TALLERS CARDENYES",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79932,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 12,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CENG TALLERS CARDENYES C.c. Cadet Femen\u00ED Preferent Preferent B",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79932",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79932",
-                "teamIdExtern": 79932,
-                "teamName": "CENG TALLERS CARDENYES",
-                "matchesPlayed": 26,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 17,
-                  "losses": 9,
-                  "ties": 0,
-                  "pointsFor": 1556,
-                  "pointsAgainst": 1384
-                },
-                "pointDiff": 172,
-                "avgValuation": -18.076923076923077
               }
             ]
           }
@@ -9547,57 +8365,6 @@
                 },
                 "pointDiff": -193,
                 "avgValuation": 14.066666666666666
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:ceset-u16-verd",
-    "label": "CESET U16 VERD",
-    "shortName": "CESET U16 VERD",
-    "clubId": 0,
-    "primaryTeamIdExtern": 78471,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 11,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "CESET U16 VERD C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78471",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78471",
-                "teamIdExtern": 78471,
-                "teamName": "CESET U16 VERD",
-                "matchesPlayed": 26,
-                "playersCount": 11,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 22,
-                  "losses": 4,
-                  "ties": 0,
-                  "pointsFor": 1865,
-                  "pointsAgainst": 1327
-                },
-                "pointDiff": 538,
-                "avgValuation": 40.5
               }
             ]
           }
@@ -9952,13 +8719,13 @@
     "shortName": "C.B. ARGENTONA",
     "clubId": 64,
     "primaryTeamIdExtern": 79256,
-    "totalTeams": 5,
-    "totalMatches": 102,
-    "totalPlayers": 82,
-    "categoriesCount": 5,
+    "totalTeams": 4,
+    "totalMatches": 77,
+    "totalPlayers": 69,
+    "categoriesCount": 4,
     "levelsCount": 1,
-    "meta": "5 equipos \u00B7 5 categorias \u00B7 102 partidos",
-    "searchText": "CLUB BASQUET ARGENTONA C.B. ARGENTONA C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED 1r. Any Nivell A CLUB BASQUET ARGENTONA B 2a. Territorial S\u00E8nior Femen\u00ED CLUB BASQUET ARGENTONA GROC C.c. Cadet Femen\u00ED Preferent 1r. Any IBERSOFAS CB ARGENTONA Copa Catalunya Masculina",
+    "meta": "4 equipos \u00B7 4 categorias \u00B7 77 partidos",
+    "searchText": "CLUB BASQUET ARGENTONA C.B. ARGENTONA C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED 1r. Any Nivell A CLUB BASQUET ARGENTONA B 2a. Territorial S\u00E8nior Femen\u00ED IBERSOFAS CB ARGENTONA Copa Catalunya Masculina",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -9990,41 +8757,6 @@
                 },
                 "pointDiff": -512,
                 "avgValuation": 8.333333333333334
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79271",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79271",
-                "teamIdExtern": 79271,
-                "teamName": "CLUB BASQUET ARGENTONA GROC",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 14,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1263,
-                  "pointsAgainst": 1211
-                },
-                "pointDiff": 52,
-                "avgValuation": 19
               }
             ]
           }
@@ -10193,50 +8925,15 @@
     "label": "CLUB BASQUET ATENEU MONTSERRAT",
     "shortName": "BASQUET ATENEU MONT",
     "clubId": 81,
-    "primaryTeamIdExtern": 79309,
-    "totalTeams": 2,
-    "totalMatches": 42,
-    "totalPlayers": 27,
-    "categoriesCount": 2,
-    "levelsCount": 2,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 42 partidos",
-    "searchText": "CLUB BASQUET ATENEU MONTSERRAT BASQUET ATENEU MONT BAM - PORTECA C.c. Cadet Femen\u00ED Preferent Preferent B BASQUET ATENEU MONTSERRAT GROC C.t. Pre-mini Femen\u00ED 1r. Any Nivell B",
+    "primaryTeamIdExtern": 82648,
+    "totalTeams": 1,
+    "totalMatches": 16,
+    "totalPlayers": 11,
+    "categoriesCount": 1,
+    "levelsCount": 1,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 16 partidos",
+    "searchText": "CLUB BASQUET ATENEU MONTSERRAT BASQUET ATENEU MONT BASQUET ATENEU MONTSERRAT GROC C.t. Pre-mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79309",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79309",
-                "teamIdExtern": 79309,
-                "teamName": "BAM - PORTECA",
-                "matchesPlayed": 26,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 8,
-                "record": {
-                  "wins": 8,
-                  "losses": 18,
-                  "ties": 0,
-                  "pointsFor": 1364,
-                  "pointsAgainst": 1545
-                },
-                "pointDiff": -181,
-                "avgValuation": -19.76923076923077
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.t. Pre-mini Femen\u00ED 1r. Any",
         "levels": [
@@ -10279,14 +8976,14 @@
     "label": "CLUB BASQUET BOET MARESME MATARO",
     "shortName": "C.B. MARESME BOET M",
     "clubId": 134,
-    "primaryTeamIdExtern": 79668,
-    "totalTeams": 8,
-    "totalMatches": 163,
-    "totalPlayers": 125,
-    "categoriesCount": 8,
+    "primaryTeamIdExtern": 79667,
+    "totalTeams": 5,
+    "totalMatches": 83,
+    "totalPlayers": 74,
+    "categoriesCount": 5,
     "levelsCount": 4,
-    "meta": "8 equipos \u00B7 8 categorias \u00B7 163 partidos",
-    "searchText": "CLUB BASQUET BOET MARESME MATARO C.B. MARESME BOET M TALENOM BOET MATAR\u00D3 C.c. Cadet Femen\u00ED Interterritorial TALENOM BOET MATAR\u00D3 2010 C.c. Cadet Femen\u00ED Preferent Preferent B TALENOM BOET MATAR\u00D3 2011 C.c. Cadet Femen\u00ED Preferent 1r. Any TALENOM BOET MATAR\u00D3 2012 C.c Infantil Femen\u00ED Preferent TALENOM BOET MATAR\u00D3 2016 C.t. Pre-mini Femen\u00ED Nivell D2 TALENOM BOET MATAR\u00D3 2017 C.t. Pre-mini Femen\u00ED 1r. Any Nivell D TALENOM BOET MATAR\u00D3 TARONJA C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2",
+    "meta": "5 equipos \u00B7 5 categorias \u00B7 83 partidos",
+    "searchText": "CLUB BASQUET BOET MARESME MATARO C.B. MARESME BOET M TALENOM BOET MATAR\u00D3 2012 C.c Infantil Femen\u00ED Preferent Preferent B TALENOM BOET MATAR\u00D3 2016 C.t. Pre-mini Femen\u00ED Nivell D2 TALENOM BOET MATAR\u00D3 2017 C.t. Pre-mini Femen\u00ED 1r. Any Nivell D TALENOM BOET MATAR\u00D3 TARONJA C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -10318,111 +9015,6 @@
                 },
                 "pointDiff": 68,
                 "avgValuation": -20
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79668",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79668",
-                "teamIdExtern": 79668,
-                "teamName": "TALENOM BOET MATAR\u00D3",
-                "matchesPlayed": 26,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 16,
-                  "losses": 10,
-                  "ties": 0,
-                  "pointsFor": 1564,
-                  "pointsAgainst": 1473
-                },
-                "pointDiff": 91,
-                "avgValuation": 28.346153846153847
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79651",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79651",
-                "teamIdExtern": 79651,
-                "teamName": "TALENOM BOET MATAR\u00D3 2010",
-                "matchesPlayed": 26,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 12,
-                "record": {
-                  "wins": 4,
-                  "losses": 22,
-                  "ties": 0,
-                  "pointsFor": 1266,
-                  "pointsAgainst": 1743
-                },
-                "pointDiff": -477,
-                "avgValuation": -28.692307692307693
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79664",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79664",
-                "teamIdExtern": 79664,
-                "teamName": "TALENOM BOET MATAR\u00D3 2011",
-                "matchesPlayed": 28,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 10,
-                  "losses": 18,
-                  "ties": 0,
-                  "pointsFor": 1398,
-                  "pointsAgainst": 1647
-                },
-                "pointDiff": -249,
-                "avgValuation": 15.464285714285714
               }
             ]
           }
@@ -11165,13 +9757,13 @@
     "shortName": "C.B. GRANOLLERS",
     "clubId": 1,
     "primaryTeamIdExtern": 78786,
-    "totalTeams": 7,
-    "totalMatches": 143,
-    "totalPlayers": 110,
-    "categoriesCount": 7,
+    "totalTeams": 5,
+    "totalMatches": 90,
+    "totalPlayers": 78,
+    "categoriesCount": 5,
     "levelsCount": 3,
-    "meta": "7 equipos \u00B7 7 categorias \u00B7 143 partidos",
-    "searchText": "CLUB BASQUET GRANOLLERS C.B. GRANOLLERS CB GRANOLLERS 1 C.c Infantil Femen\u00ED Preferent Preferent B C.c. Cadet Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell C1 CB GRANOLLERS 2 C.c. Cadet Femen\u00ED Preferent 1r. Any Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED 1r. Any Nivell A CB GRANOLLERS 3 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+    "meta": "5 equipos \u00B7 5 categorias \u00B7 90 partidos",
+    "searchText": "CLUB BASQUET GRANOLLERS C.B. GRANOLLERS CB GRANOLLERS 1 C.c Infantil Femen\u00ED Preferent Preferent B C.t. Pre-mini Femen\u00ED Nivell C1 CB GRANOLLERS 2 Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED 1r. Any Nivell A CB GRANOLLERS 3 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -11203,76 +9795,6 @@
                 },
                 "pointDiff": -432,
                 "avgValuation": -30.2
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78801",
-                "teamIdExtern": 78801,
-                "teamName": "CB GRANOLLERS 1",
-                "matchesPlayed": 25,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 15,
-                  "losses": 10,
-                  "ties": 0,
-                  "pointsFor": 1485,
-                  "pointsAgainst": 1372
-                },
-                "pointDiff": 113,
-                "avgValuation": 27.6
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78806",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78806",
-                "teamIdExtern": 78806,
-                "teamName": "CB GRANOLLERS 2",
-                "matchesPlayed": 28,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 16,
-                  "losses": 11,
-                  "ties": 1,
-                  "pointsFor": 1626,
-                  "pointsAgainst": 1566
-                },
-                "pointDiff": 60,
-                "avgValuation": 22.464285714285715
               }
             ]
           }
@@ -11425,14 +9947,14 @@
     "label": "CLUB BASQUET GRUP BARNA",
     "shortName": "C.B. GRUP BARNA",
     "clubId": 24,
-    "primaryTeamIdExtern": 80323,
-    "totalTeams": 8,
-    "totalMatches": 181,
-    "totalPlayers": 122,
-    "categoriesCount": 8,
+    "primaryTeamIdExtern": 80321,
+    "totalTeams": 6,
+    "totalMatches": 129,
+    "totalPlayers": 88,
+    "categoriesCount": 6,
     "levelsCount": 4,
-    "meta": "8 equipos \u00B7 8 categorias \u00B7 181 partidos",
-    "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.c. Cadet Femen\u00ED Preferent Preferent B C.c Infantil Femen\u00ED Preferent Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED Nivell B2 C.B GRUP BARNA VERMELL  1ER ANY C.t. Pre-mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A C.c. J\u00FAnior Femen\u00ED Interterritorial CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA C.c. Cadet Femen\u00ED Preferent 1r. Any",
+    "meta": "6 equipos \u00B7 6 categorias \u00B7 129 partidos",
+    "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.c Infantil Femen\u00ED Preferent Preferent B Copa Catalunya Masculina C.t. Pre-mini Femen\u00ED Nivell B2 C.B GRUP BARNA VERMELL  1ER ANY C.t. Pre-mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA VERMELL GRUP ESP 1ER ANY BCN C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2 CL\u00CDNICA DENTAL BAC DE RODA- C.B GRUP BARNA  A C.c. J\u00FAnior Femen\u00ED Interterritorial",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -11464,76 +9986,6 @@
                 },
                 "pointDiff": -770,
                 "avgValuation": -31.04
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80323",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80323",
-                "teamIdExtern": 80323,
-                "teamName": "C.B GRUP BARNA A",
-                "matchesPlayed": 26,
-                "playersCount": 20,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 11,
-                "record": {
-                  "wins": 3,
-                  "losses": 23,
-                  "ties": 0,
-                  "pointsFor": 1204,
-                  "pointsAgainst": 1781
-                },
-                "pointDiff": -577,
-                "avgValuation": -23.384615384615383
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80317",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80317",
-                "teamIdExtern": 80317,
-                "teamName": "CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA",
-                "matchesPlayed": 26,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 20,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1711,
-                  "pointsAgainst": 1318
-                },
-                "pointDiff": 393,
-                "avgValuation": 32.30769230769231
               }
             ]
           }
@@ -11721,14 +10173,14 @@
     "label": "CLUB BASQUET IGUALADA",
     "shortName": "C.B. IGUALADA",
     "clubId": 65,
-    "primaryTeamIdExtern": 79227,
-    "totalTeams": 4,
-    "totalMatches": 85,
-    "totalPlayers": 54,
-    "categoriesCount": 4,
+    "primaryTeamIdExtern": 79237,
+    "totalTeams": 3,
+    "totalMatches": 60,
+    "totalPlayers": 37,
+    "categoriesCount": 3,
     "levelsCount": 3,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 85 partidos",
-    "searchText": "CLUB BASQUET IGUALADA C.B. IGUALADA CB IGUALADA CF U15 C.c. Cadet Femen\u00ED Preferent 1r. Any CB IGUALADA IF U14 A C.c Infantil Femen\u00ED Preferent Preferent A CB IGUALADA PMF U09 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B CL\u00CDNICA DENTAL BAUSILI \u0026 JANER - CL\u00CDNICA DENTAL - CB IGUALADA PMF U10 C.t. Pre-mini Femen\u00ED Nivell B2",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 60 partidos",
+    "searchText": "CLUB BASQUET IGUALADA C.B. IGUALADA CB IGUALADA IF U14 A C.c Infantil Femen\u00ED Preferent Preferent A CB IGUALADA PMF U09 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B CL\u00CDNICA DENTAL BAUSILI \u0026 JANER - CL\u00CDNICA DENTAL - CB IGUALADA PMF U10 C.t. Pre-mini Femen\u00ED Nivell B2",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -11760,41 +10212,6 @@
                 },
                 "pointDiff": -274,
                 "avgValuation": -25.535714285714285
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79227",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79227",
-                "teamIdExtern": 79227,
-                "teamName": "CB IGUALADA CF U15",
-                "matchesPlayed": 25,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 13,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1332,
-                  "pointsAgainst": 1277
-                },
-                "pointDiff": 55,
-                "avgValuation": 23.6
               }
             ]
           }
@@ -12846,49 +11263,14 @@
     "shortName": "C.B. PRAT",
     "clubId": 91,
     "primaryTeamIdExtern": 80938,
-    "totalTeams": 4,
-    "totalMatches": 78,
-    "totalPlayers": 66,
-    "categoriesCount": 4,
-    "levelsCount": 3,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 78 partidos",
-    "searchText": "CLUB BASQUET PRAT C.B. PRAT C.B. PRAT - MONTIBELLO C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED Nivell D2 C.B. PRAT - MONTIBELLO A C.c. Cadet Femen\u00ED Preferent Preferent B C.B. PRAT - MONTIBELLO B C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2",
+    "totalTeams": 3,
+    "totalMatches": 51,
+    "totalPlayers": 52,
+    "categoriesCount": 3,
+    "levelsCount": 2,
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 51 partidos",
+    "searchText": "CLUB BASQUET PRAT C.B. PRAT C.B. PRAT - MONTIBELLO C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED Nivell D2 C.B. PRAT - MONTIBELLO B C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 Nivell A2",
     "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79149",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79149",
-                "teamIdExtern": 79149,
-                "teamName": "C.B. PRAT - MONTIBELLO A",
-                "matchesPlayed": 27,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 15,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1577,
-                  "pointsAgainst": 1565
-                },
-                "pointDiff": 12,
-                "avgValuation": -13.62962962962963
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.c. J\u00FAnior Fem. Nivell A",
         "levels": [
@@ -13275,85 +11657,15 @@
     "label": "CLUB BASQUET SANT JOSEP BADALONA",
     "shortName": "C.B. SANT JOSEP BAD",
     "clubId": 14,
-    "primaryTeamIdExtern": 80638,
-    "totalTeams": 4,
-    "totalMatches": 77,
-    "totalPlayers": 55,
-    "categoriesCount": 4,
+    "primaryTeamIdExtern": 80645,
+    "totalTeams": 2,
+    "totalMatches": 26,
+    "totalPlayers": 23,
+    "categoriesCount": 2,
     "levelsCount": 1,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 77 partidos",
-    "searchText": "CLUB BASQUET SANT JOSEP BADALONA C.B. SANT JOSEP BAD M\u00C0GIC BADALONA CB SANT JOSEP - CAF C.c. Cadet Femen\u00ED Interterritorial M\u00C0GIC BADALONA CB SANT JOSEP - CBF C.c. Cadet Femen\u00ED Preferent 1r. Any M\u00C0GIC BADALONA CB SANT JOSEP - CCF C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 M\u00C0GIC BADALONA CB SANT JOSEP - PAF C.t. Pre-mini Femen\u00ED Nivell B1",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 26 partidos",
+    "searchText": "CLUB BASQUET SANT JOSEP BADALONA C.B. SANT JOSEP BAD M\u00C0GIC BADALONA CB SANT JOSEP - CCF C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 M\u00C0GIC BADALONA CB SANT JOSEP - PAF C.t. Pre-mini Femen\u00ED Nivell B1",
     "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80638",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80638",
-                "teamIdExtern": 80638,
-                "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - CAF",
-                "matchesPlayed": 26,
-                "playersCount": 18,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 19,
-                  "losses": 7,
-                  "ties": 0,
-                  "pointsFor": 1683,
-                  "pointsAgainst": 1395
-                },
-                "pointDiff": 288,
-                "avgValuation": 33.15384615384615
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80640",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80640",
-                "teamIdExtern": 80640,
-                "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - CBF",
-                "matchesPlayed": 25,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 7,
-                "record": {
-                  "wins": 8,
-                  "losses": 17,
-                  "ties": 0,
-                  "pointsFor": 1421,
-                  "pointsAgainst": 1513
-                },
-                "pointDiff": -92,
-                "avgValuation": 27.88
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
         "levels": [
@@ -13432,13 +11744,13 @@
     "shortName": "C.B. SANT JUST",
     "clubId": 93,
     "primaryTeamIdExtern": 79052,
-    "totalTeams": 4,
-    "totalMatches": 72,
-    "totalPlayers": 51,
-    "categoriesCount": 4,
+    "totalTeams": 3,
+    "totalMatches": 51,
+    "totalPlayers": 37,
+    "categoriesCount": 3,
     "levelsCount": 1,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 72 partidos",
-    "searchText": "CLUB BASQUET SANT JUST C.B. SANT JUST CB SANT JUST  B 1a. Territorial S\u00E8nior Femen\u00ED CB SANT JUST U09 C.t. Pre-mini Femen\u00ED 1r. Any Nivell D CB SANT JUST U13 BLAU C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 RACC ESPLUGUES - CB SANT JUST U16 C.c. Cadet Femen\u00ED Interterritorial",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 51 partidos",
+    "searchText": "CLUB BASQUET SANT JUST C.B. SANT JUST CB SANT JUST  B 1a. Territorial S\u00E8nior Femen\u00ED CB SANT JUST U09 C.t. Pre-mini Femen\u00ED 1r. Any Nivell D CB SANT JUST U13 BLAU C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -13470,41 +11782,6 @@
                 },
                 "pointDiff": -350,
                 "avgValuation": 9.909090909090908
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79051",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79051",
-                "teamIdExtern": 79051,
-                "teamName": "RACC ESPLUGUES - CB SANT JUST U16",
-                "matchesPlayed": 21,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 10",
-                "latestPhaseOptionValue": "source:21229",
-                "groupCode": "10",
-                "standingPosition": 8,
-                "record": {
-                  "wins": 4,
-                  "losses": 17,
-                  "ties": 0,
-                  "pointsFor": 1064,
-                  "pointsAgainst": 1353
-                },
-                "pointDiff": -289,
-                "avgValuation": 13.142857142857142
               }
             ]
           }
@@ -13689,14 +11966,14 @@
     "label": "CLUB BASQUET TARRAGONA",
     "shortName": "C.B. TARRAGONA",
     "clubId": 423,
-    "primaryTeamIdExtern": 78443,
-    "totalTeams": 3,
-    "totalMatches": 67,
-    "totalPlayers": 48,
-    "categoriesCount": 3,
+    "primaryTeamIdExtern": 78448,
+    "totalTeams": 1,
+    "totalMatches": 18,
+    "totalPlayers": 21,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 67 partidos",
-    "searchText": "CLUB BASQUET TARRAGONA C.B. TARRAGONA CB TARRAGONA C.c. Cadet Femen\u00ED Interterritorial CB TARRAGONA 1 C.c. Cadet Femen\u00ED Preferent 1r. Any CB TARRAGONA B 1a. Territorial S\u00E8nior Femen\u00ED GRUP \u00DANIC",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 18 partidos",
+    "searchText": "CLUB BASQUET TARRAGONA C.B. TARRAGONA CB TARRAGONA B 1a. Territorial S\u00E8nior Femen\u00ED GRUP \u00DANIC",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -13728,76 +12005,6 @@
                 },
                 "pointDiff": 176,
                 "avgValuation": 27.38888888888889
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78443",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78443",
-                "teamIdExtern": 78443,
-                "teamName": "CB TARRAGONA",
-                "matchesPlayed": 23,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 17,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1453,
-                  "pointsAgainst": 1188
-                },
-                "pointDiff": 265,
-                "avgValuation": 31.217391304347824
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78446",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78446",
-                "teamIdExtern": 78446,
-                "teamName": "CB TARRAGONA 1",
-                "matchesPlayed": 26,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 15,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1525,
-                  "pointsAgainst": 1424
-                },
-                "pointDiff": 101,
-                "avgValuation": 26.653846153846153
               }
             ]
           }
@@ -15228,13 +13435,13 @@
     "shortName": "C.E. DIAGONAL MAR",
     "clubId": 2679,
     "primaryTeamIdExtern": 79780,
-    "totalTeams": 4,
-    "totalMatches": 79,
-    "totalPlayers": 67,
-    "categoriesCount": 4,
+    "totalTeams": 3,
+    "totalMatches": 53,
+    "totalPlayers": 52,
+    "categoriesCount": 3,
     "levelsCount": 0,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 79 partidos",
-    "searchText": "CLUB ESPORTIU DIAGONAL MAR C.E. DIAGONAL MAR CLUB ESPORTIU DIAGONAL MAR A C.c. J\u00FAnior Femen\u00ED Interterritorial C.c. Cadet Femen\u00ED Interterritorial CLUB ESPORTIU DIAGONAL MAR B 1a. Territorial S\u00E8nior Femen\u00ED C.c. J\u00FAnior Fem. Nivell A",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 53 partidos",
+    "searchText": "CLUB ESPORTIU DIAGONAL MAR C.E. DIAGONAL MAR CLUB ESPORTIU DIAGONAL MAR A C.c. J\u00FAnior Femen\u00ED Interterritorial CLUB ESPORTIU DIAGONAL MAR B 1a. Territorial S\u00E8nior Femen\u00ED C.c. J\u00FAnior Fem. Nivell A",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -15266,41 +13473,6 @@
                 },
                 "pointDiff": -154,
                 "avgValuation": 22.136363636363637
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80804",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80804",
-                "teamIdExtern": 80804,
-                "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
-                "matchesPlayed": 26,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 11,
-                  "losses": 15,
-                  "ties": 0,
-                  "pointsFor": 1472,
-                  "pointsAgainst": 1502
-                },
-                "pointDiff": -30,
-                "avgValuation": 20.5
               }
             ]
           }
@@ -15918,14 +14090,14 @@
     "label": "CLUB ESPORTIU MARISTES SANTS - LES CORTS",
     "shortName": "C.E. MARISTES SANTS",
     "clubId": 69,
-    "primaryTeamIdExtern": 79544,
-    "totalTeams": 3,
-    "totalMatches": 57,
-    "totalPlayers": 47,
-    "categoriesCount": 3,
+    "primaryTeamIdExtern": 79551,
+    "totalTeams": 2,
+    "totalMatches": 37,
+    "totalPlayers": 30,
+    "categoriesCount": 2,
     "levelsCount": 2,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 57 partidos",
-    "searchText": "CLUB ESPORTIU MARISTES SANTS - LES CORTS C.E. MARISTES SANTS C.E. MARISTES A C.c. Cadet Femen\u00ED Interterritorial C.E. MARISTES B 1a. Territorial S\u00E8nior Femen\u00ED GRUP 04 C.E.MARISTES SANTS LES CORTS C.t. Pre-mini Femen\u00ED Nivell C1",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 37 partidos",
+    "searchText": "CLUB ESPORTIU MARISTES SANTS - LES CORTS C.E. MARISTES SANTS C.E. MARISTES B 1a. Territorial S\u00E8nior Femen\u00ED GRUP 04 C.E.MARISTES SANTS LES CORTS C.t. Pre-mini Femen\u00ED Nivell C1",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -15957,41 +14129,6 @@
                 },
                 "pointDiff": 79,
                 "avgValuation": 20.272727272727273
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79544",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79544",
-                "teamIdExtern": 79544,
-                "teamName": "C.E. MARISTES A",
-                "matchesPlayed": 20,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 10",
-                "latestPhaseOptionValue": "source:21229",
-                "groupCode": "10",
-                "standingPosition": 10,
-                "record": {
-                  "wins": 3,
-                  "losses": 17,
-                  "ties": 0,
-                  "pointsFor": 975,
-                  "pointsAgainst": 1378
-                },
-                "pointDiff": -403,
-                "avgValuation": 12.05
               }
             ]
           }
@@ -16091,13 +14228,13 @@
     "shortName": "C.E. XAMBA",
     "clubId": 165,
     "primaryTeamIdExtern": 78649,
-    "totalTeams": 5,
-    "totalMatches": 90,
-    "totalPlayers": 72,
-    "categoriesCount": 5,
+    "totalTeams": 4,
+    "totalMatches": 66,
+    "totalPlayers": 54,
+    "categoriesCount": 4,
     "levelsCount": 2,
-    "meta": "5 equipos \u00B7 5 categorias \u00B7 90 partidos",
-    "searchText": "CLUB ESPORTIU XAMBA C.E. XAMBA 1a. Territorial S\u00E8nior Femen\u00ED C.t. Pre-mini Femen\u00ED 1r. Any Nivell D C.E. XAMBA 1R ANY C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 C.E. XAMBA NEGRE C.c. Cadet Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell A",
+    "meta": "4 equipos \u00B7 4 categorias \u00B7 66 partidos",
+    "searchText": "CLUB ESPORTIU XAMBA C.E. XAMBA 1a. Territorial S\u00E8nior Femen\u00ED C.t. Pre-mini Femen\u00ED 1r. Any Nivell D C.E. XAMBA 1R ANY C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 C.E. XAMBA NEGRE C.t. Pre-mini Femen\u00ED Nivell A",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -16129,41 +14266,6 @@
                 },
                 "pointDiff": 78,
                 "avgValuation": 22.045454545454547
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78648",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78648",
-                "teamIdExtern": 78648,
-                "teamName": "C.E. XAMBA NEGRE",
-                "matchesPlayed": 24,
-                "playersCount": 18,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 16,
-                  "losses": 8,
-                  "ties": 0,
-                  "pointsFor": 1552,
-                  "pointsAgainst": 1430
-                },
-                "pointDiff": 122,
-                "avgValuation": 34.833333333333336
               }
             ]
           }
@@ -16281,14 +14383,14 @@
     "label": "CLUB JOVENTUT BADALONA",
     "shortName": "CLUB JOVENTUT BADAL",
     "clubId": 3,
-    "primaryTeamIdExtern": 80173,
-    "totalTeams": 9,
-    "totalMatches": 193,
-    "totalPlayers": 163,
-    "categoriesCount": 7,
+    "primaryTeamIdExtern": 80171,
+    "totalTeams": 6,
+    "totalMatches": 116,
+    "totalPlayers": 98,
+    "categoriesCount": 4,
     "levelsCount": 4,
-    "meta": "9 equipos \u00B7 7 categorias \u00B7 193 partidos",
-    "searchText": "CLUB JOVENTUT BADALONA CLUB JOVENTUT BADAL JOVENTUT BADALONA 1 C.c. Cadet Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell B1 JOVENTUT BADALONA 2 C.c. Cadet Femen\u00ED Preferent 1r. Any JOVENTUT BADALONA A C.c. Cadet Femen\u00ED Preferent Preferent A C.c Infantil Femen\u00ED Preferent Nivell A JOVENTUT BADALONA B C.t. Pre-mini Femen\u00ED 1r. Any JOVENTUT BADALONA NEGRE C.c. J\u00FAnior Fem. Nivell A JOVENTUT BADALONA VERD Nivell D",
+    "meta": "6 equipos \u00B7 4 categorias \u00B7 116 partidos",
+    "searchText": "CLUB JOVENTUT BADALONA CLUB JOVENTUT BADAL JOVENTUT BADALONA 1 C.t. Pre-mini Femen\u00ED Nivell B1 JOVENTUT BADALONA A C.c Infantil Femen\u00ED Preferent Preferent A Nivell A JOVENTUT BADALONA B C.t. Pre-mini Femen\u00ED 1r. Any JOVENTUT BADALONA NEGRE C.c. J\u00FAnior Fem. Nivell A JOVENTUT BADALONA VERD Nivell D",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -16320,111 +14422,6 @@
                 },
                 "pointDiff": 663,
                 "avgValuation": -5.576923076923077
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80173",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80173",
-                "teamIdExtern": 80173,
-                "teamName": "JOVENTUT BADALONA 1",
-                "matchesPlayed": 24,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 9,
-                  "losses": 15,
-                  "ties": 0,
-                  "pointsFor": 1370,
-                  "pointsAgainst": 1316
-                },
-                "pointDiff": 54,
-                "avgValuation": 23.666666666666668
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80172",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80172",
-                "teamIdExtern": 80172,
-                "teamName": "JOVENTUT BADALONA A",
-                "matchesPlayed": 27,
-                "playersCount": 30,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 21,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1842,
-                  "pointsAgainst": 1377
-                },
-                "pointDiff": 465,
-                "avgValuation": -9
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80168",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80168",
-                "teamIdExtern": 80168,
-                "teamName": "JOVENTUT BADALONA 2",
-                "matchesPlayed": 26,
-                "playersCount": 21,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 14,
-                "record": {
-                  "wins": 1,
-                  "losses": 25,
-                  "ties": 0,
-                  "pointsFor": 1035,
-                  "pointsAgainst": 1783
-                },
-                "pointDiff": -748,
-                "avgValuation": 8.961538461538462
               }
             ]
           }
@@ -16598,139 +14595,18 @@
     ]
   },
   {
-    "key": "fcbq-club:235",
-    "label": "CLUB JOVENTUT ESPORTIVA DE TERRASSA",
-    "shortName": "J.E. TERRASSA",
-    "clubId": 235,
-    "primaryTeamIdExtern": 78587,
-    "totalTeams": 3,
-    "totalMatches": 74,
-    "totalPlayers": 55,
-    "categoriesCount": 3,
-    "levelsCount": 1,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 74 partidos",
-    "searchText": "CLUB JOVENTUT ESPORTIVA DE TERRASSA J.E. TERRASSA JET TERRASSA U15 C.c. Cadet Femen\u00ED Preferent 1r. Any JET TERRASSA U16 C.c. Cadet Femen\u00ED Preferent Preferent B JET TERRASSA U16 BLAU C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80685",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80685",
-                "teamIdExtern": 80685,
-                "teamName": "JET TERRASSA U16 BLAU",
-                "matchesPlayed": 21,
-                "playersCount": 26,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 10",
-                "latestPhaseOptionValue": "source:21229",
-                "groupCode": "10",
-                "standingPosition": 10,
-                "record": {
-                  "wins": 5,
-                  "losses": 16,
-                  "ties": 0,
-                  "pointsFor": 1054,
-                  "pointsAgainst": 1387
-                },
-                "pointDiff": -333,
-                "avgValuation": 17.19047619047619
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent B",
-            "levelName": "Preferent B",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80682",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80682",
-                "teamIdExtern": 80682,
-                "teamName": "JET TERRASSA U16",
-                "matchesPlayed": 28,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent B",
-                "levelName": "Preferent B",
-                "phaseLabel": "Segona Fase \u00B7 Preferent B \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21181",
-                "groupCode": "01",
-                "standingPosition": 10,
-                "record": {
-                  "wins": 7,
-                  "losses": 21,
-                  "ties": 0,
-                  "pointsFor": 1431,
-                  "pointsAgainst": 1839
-                },
-                "pointDiff": -408,
-                "avgValuation": -22.25
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78587",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78587",
-                "teamIdExtern": 78587,
-                "teamName": "JET TERRASSA U15",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 11,
-                "record": {
-                  "wins": 4,
-                  "losses": 21,
-                  "ties": 0,
-                  "pointsFor": 1341,
-                  "pointsAgainst": 1840
-                },
-                "pointDiff": -499,
-                "avgValuation": 22.8
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "fcbq-club:175",
     "label": "CLUB JOVENTUT LES CORTS",
     "shortName": "CLUB JOVENTUT LES C",
     "clubId": 175,
     "primaryTeamIdExtern": 79944,
-    "totalTeams": 5,
-    "totalMatches": 110,
-    "totalPlayers": 88,
-    "categoriesCount": 5,
+    "totalTeams": 3,
+    "totalMatches": 58,
+    "totalPlayers": 50,
+    "categoriesCount": 3,
     "levelsCount": 1,
-    "meta": "5 equipos \u00B7 5 categorias \u00B7 110 partidos",
-    "searchText": "CLUB JOVENTUT LES CORTS CLUB JOVENTUT LES C JOVENTUT LES CORTS GROC 1a. Territorial S\u00E8nior Femen\u00ED U10 JOVENTUT LES CORTS C.t. Pre-mini Femen\u00ED Nivell C1 U15 JOVENTUT LES CORTS C.c. Cadet Femen\u00ED Preferent 1r. Any U16 JOVENTUT LES CORTS C.c. Cadet Femen\u00ED Interterritorial U18 JOVENTUT LES CORTS C.c. J\u00FAnior Fem. Nivell A",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 58 partidos",
+    "searchText": "CLUB JOVENTUT LES CORTS CLUB JOVENTUT LES C JOVENTUT LES CORTS GROC 1a. Territorial S\u00E8nior Femen\u00ED U10 JOVENTUT LES CORTS C.t. Pre-mini Femen\u00ED Nivell C1 U18 JOVENTUT LES CORTS C.c. J\u00FAnior Fem. Nivell A",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -16762,76 +14638,6 @@
                 },
                 "pointDiff": 147,
                 "avgValuation": 21.26086956521739
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79966",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79966",
-                "teamIdExtern": 79966,
-                "teamName": "U16 JOVENTUT LES CORTS",
-                "matchesPlayed": 25,
-                "playersCount": 22,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 6,
-                "record": {
-                  "wins": 9,
-                  "losses": 16,
-                  "ties": 0,
-                  "pointsFor": 1372,
-                  "pointsAgainst": 1467
-                },
-                "pointDiff": -95,
-                "avgValuation": 21.64
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79978",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79978",
-                "teamIdExtern": 79978,
-                "teamName": "U15 JOVENTUT LES CORTS",
-                "matchesPlayed": 27,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 13,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 1571,
-                  "pointsAgainst": 1420
-                },
-                "pointDiff": 151,
-                "avgValuation": 24.037037037037038
               }
             ]
           }
@@ -18189,57 +15995,6 @@
     ]
   },
   {
-    "key": "derived-club:farmacia-ingrid",
-    "label": "FARM\u00C0CIA \u00CDNGRID",
-    "shortName": "FARM\u00C0CIA \u00CDNGRID",
-    "clubId": 0,
-    "primaryTeamIdExtern": 78513,
-    "totalTeams": 1,
-    "totalMatches": 28,
-    "totalPlayers": 17,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 28 partidos",
-    "searchText": "FARM\u00C0CIA \u00CDNGRID CB TORELL\u00D3 CF - FARM\u00C0CIA \u00CDNGRID JAIME I BOFILL C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78513",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78513",
-                "teamIdExtern": 78513,
-                "teamName": "CB TORELL\u00D3 CF - FARM\u00C0CIA \u00CDNGRID JAIME I BOFILL",
-                "matchesPlayed": 28,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21198",
-                "groupCode": "07",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 22,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1913,
-                  "pointsAgainst": 1584
-                },
-                "pointDiff": 329,
-                "avgValuation": 30.857142857142858
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:farratge-la-noguera",
     "label": "FARRATGE LA NOGUERA",
     "shortName": "FARRATGE LA NOGUERA",
@@ -18346,50 +16101,15 @@
     "label": "FEMENI MARESME 3 VILES",
     "shortName": "FEMENI MARESME 3 VILES",
     "clubId": 0,
-    "primaryTeamIdExtern": 79491,
-    "totalTeams": 2,
-    "totalMatches": 46,
-    "totalPlayers": 33,
-    "categoriesCount": 2,
+    "primaryTeamIdExtern": 81574,
+    "totalTeams": 1,
+    "totalMatches": 20,
+    "totalPlayers": 15,
+    "categoriesCount": 1,
     "levelsCount": 0,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 46 partidos",
-    "searchText": "FEMENI MARESME 3 VILES FEMENI MARESME 3 VILES - CF C.c. Cadet Femen\u00ED Interterritorial FEMENI MARESME 3 VILES - JF C.c. J\u00FAnior Fem. Nivell A",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 20 partidos",
+    "searchText": "FEMENI MARESME 3 VILES FEMENI MARESME 3 VILES - JF C.c. J\u00FAnior Fem. Nivell A",
     "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79491",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79491",
-                "teamIdExtern": 79491,
-                "teamName": "FEMENI MARESME 3 VILES - CF",
-                "matchesPlayed": 26,
-                "playersCount": 18,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 11,
-                  "losses": 15,
-                  "ties": 0,
-                  "pointsFor": 1409,
-                  "pointsAgainst": 1529
-                },
-                "pointDiff": -120,
-                "avgValuation": 23.96153846153846
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.c. J\u00FAnior Fem. Nivell A",
         "levels": [
@@ -18479,57 +16199,6 @@
     ]
   },
   {
-    "key": "derived-club:femeni-osona-blanc-ova",
-    "label": "FEMEN\u00CD OSONA BLANC- OVA",
-    "shortName": "FEMEN\u00CD OSONA BLANC- OVA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79530,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 14,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "FEMEN\u00CD OSONA BLANC- OVA FEMEN\u00CD OSONA BLANC- OVA PROJECTS C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79530",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79530",
-                "teamIdExtern": 79530,
-                "teamName": "FEMEN\u00CD OSONA BLANC- OVA PROJECTS",
-                "matchesPlayed": 26,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 14,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1540,
-                  "pointsAgainst": 1575
-                },
-                "pointDiff": -35,
-                "avgValuation": 26.192307692307693
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:fisitoterapia-laura-ibanez",
     "label": "FISITOTER\u00C0PIA LAURA IB\u00C1\u00D1EZ",
     "shortName": "FISITOTER\u00C0PIA LAURA IB\u00C1\u00D1EZ",
@@ -18573,92 +16242,6 @@
                 },
                 "pointDiff": -411,
                 "avgValuation": 17.40909090909091
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "fcbq-club:2735",
-    "label": "FOR\u00C7A LLEIDA CLUB ESPORTIU",
-    "shortName": "FOR\u00C7A LLEIDA CLUB E",
-    "clubId": 2735,
-    "primaryTeamIdExtern": 78859,
-    "totalTeams": 2,
-    "totalMatches": 49,
-    "totalPlayers": 30,
-    "categoriesCount": 2,
-    "levelsCount": 0,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 49 partidos",
-    "searchText": "FOR\u00C7A LLEIDA CLUB ESPORTIU FOR\u00C7A LLEIDA CLUB E NAYOX FOR\u00C7A LLEIDA A C.c. Cadet Femen\u00ED Interterritorial NAYOX FOR\u00C7A LLEIDA B C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78859",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78859",
-                "teamIdExtern": 78859,
-                "teamName": "NAYOX FOR\u00C7A LLEIDA A",
-                "matchesPlayed": 24,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21225",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 16,
-                  "losses": 8,
-                  "ties": 0,
-                  "pointsFor": 1694,
-                  "pointsAgainst": 1336
-                },
-                "pointDiff": 358,
-                "avgValuation": 35.833333333333336
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78857",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:78857",
-                "teamIdExtern": 78857,
-                "teamName": "NAYOX FOR\u00C7A LLEIDA B",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 18,
-                  "losses": 7,
-                  "ties": 0,
-                  "pointsFor": 1659,
-                  "pointsAgainst": 1441
-                },
-                "pointDiff": 218,
-                "avgValuation": 30.08
               }
             ]
           }
@@ -19054,57 +16637,6 @@
                 },
                 "pointDiff": -156,
                 "avgValuation": 19.857142857142858
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:geieg-vedruna",
-    "label": "GEIEG VEDRUNA",
-    "shortName": "GEIEG VEDRUNA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79284,
-    "totalTeams": 1,
-    "totalMatches": 23,
-    "totalPlayers": 12,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 23 partidos",
-    "searchText": "GEIEG VEDRUNA C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79284",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79284",
-                "teamIdExtern": 79284,
-                "teamName": "GEIEG VEDRUNA",
-                "matchesPlayed": 23,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 10",
-                "latestPhaseOptionValue": "source:21229",
-                "groupCode": "10",
-                "standingPosition": 6,
-                "record": {
-                  "wins": 7,
-                  "losses": 16,
-                  "ties": 0,
-                  "pointsFor": 1187,
-                  "pointsAgainst": 1398
-                },
-                "pointDiff": -211,
-                "avgValuation": 17.434782608695652
               }
             ]
           }
@@ -19583,57 +17115,6 @@
                 },
                 "pointDiff": 12,
                 "avgValuation": 28.6
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:la-salchicha-peleona-vilabasquet-viladecans",
-    "label": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS",
-    "shortName": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79740,
-    "totalTeams": 1,
-    "totalMatches": 28,
-    "totalPlayers": 11,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 28 partidos",
-    "searchText": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79740",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79740",
-                "teamIdExtern": 79740,
-                "teamName": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS",
-                "matchesPlayed": 28,
-                "playersCount": 11,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 8,
-                "record": {
-                  "wins": 4,
-                  "losses": 24,
-                  "ties": 0,
-                  "pointsFor": 1565,
-                  "pointsAgainst": 1857
-                },
-                "pointDiff": -292,
-                "avgValuation": 25
               }
             ]
           }
@@ -20282,69 +17763,18 @@
     ]
   },
   {
-    "key": "derived-club:pepitu-manresa",
-    "label": "PEPITU MANRESA",
-    "shortName": "PEPITU MANRESA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79020,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 13,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "PEPITU MANRESA PEPITU MANRESA CBF U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79020",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79020",
-                "teamIdExtern": 79020,
-                "teamName": "PEPITU MANRESA CBF U15",
-                "matchesPlayed": 26,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 15,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1510,
-                  "pointsAgainst": 1415
-                },
-                "pointDiff": 95,
-                "avgValuation": 27.884615384615383
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:petropinto-asfe",
     "label": "PETROPINTO ASFE",
     "shortName": "PETROPINTO ASFE",
     "clubId": 0,
     "primaryTeamIdExtern": 79495,
-    "totalTeams": 4,
-    "totalMatches": 81,
-    "totalPlayers": 74,
-    "categoriesCount": 4,
+    "totalTeams": 2,
+    "totalMatches": 31,
+    "totalPlayers": 34,
+    "categoriesCount": 2,
     "levelsCount": 0,
-    "meta": "4 equipos \u00B7 4 categorias \u00B7 81 partidos",
-    "searchText": "PETROPINTO ASFE PETROPINTO ASFE B 2a. Territorial S\u00E8nior Femen\u00ED PETROPINTO ASFE U15 BLANC C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 PETROPINTO ASFE U15 VERD C.c. Cadet Femen\u00ED Preferent 1r. Any PETROPINTO ASFE U16 C.c. Cadet Femen\u00ED Interterritorial",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 31 partidos",
+    "searchText": "PETROPINTO ASFE PETROPINTO ASFE B 2a. Territorial S\u00E8nior Femen\u00ED PETROPINTO ASFE U15 BLANC C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -20376,76 +17806,6 @@
                 },
                 "pointDiff": 344,
                 "avgValuation": 32.76190476190476
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79501",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79501",
-                "teamIdExtern": 79501,
-                "teamName": "PETROPINTO ASFE U16",
-                "matchesPlayed": 24,
-                "playersCount": 25,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 11,
-                  "losses": 13,
-                  "ties": 0,
-                  "pointsFor": 1317,
-                  "pointsAgainst": 1398
-                },
-                "pointDiff": -81,
-                "avgValuation": 19.791666666666668
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79493",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79493",
-                "teamIdExtern": 79493,
-                "teamName": "PETROPINTO ASFE U15 VERD",
-                "matchesPlayed": 26,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 5,
-                "record": {
-                  "wins": 12,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 1482,
-                  "pointsAgainst": 1554
-                },
-                "pointDiff": -72,
-                "avgValuation": 19.96153846153846
               }
             ]
           }
@@ -20493,14 +17853,14 @@
     "label": "PRISCO-L\u0027ESCALA",
     "shortName": "PRISCO-L\u0027ESCALA",
     "clubId": 0,
-    "primaryTeamIdExtern": 79921,
-    "totalTeams": 2,
-    "totalMatches": 45,
-    "totalPlayers": 40,
-    "categoriesCount": 2,
+    "primaryTeamIdExtern": 79922,
+    "totalTeams": 1,
+    "totalMatches": 20,
+    "totalPlayers": 28,
+    "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 45 partidos",
-    "searchText": "PRISCO-L\u0027ESCALA C.c. Cadet Femen\u00ED Preferent 1r. Any 1a. Territorial S\u00E8nior Femen\u00ED Primera Fase",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 20 partidos",
+    "searchText": "PRISCO-L\u0027ESCALA 1a. Territorial S\u00E8nior Femen\u00ED Primera Fase",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -20532,92 +17892,6 @@
                 },
                 "pointDiff": 48,
                 "avgValuation": 26.85
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79921",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79921",
-                "teamIdExtern": 79921,
-                "teamName": "PRISCO-L\u0027ESCALA",
-                "matchesPlayed": 25,
-                "playersCount": 12,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 12,
-                  "losses": 13,
-                  "ties": 0,
-                  "pointsFor": 1333,
-                  "pointsAgainst": 1380
-                },
-                "pointDiff": -47,
-                "avgValuation": 18.92
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:promoviatges-cbf-cerdanyola-u16",
-    "label": "PROMOVIATGES CBF CERDANYOLA U16",
-    "shortName": "PROMOVIATGES CBF CERDANYOLA U16",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79379,
-    "totalTeams": 1,
-    "totalMatches": 26,
-    "totalPlayers": 16,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 26 partidos",
-    "searchText": "PROMOVIATGES CBF CERDANYOLA U16 C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79379",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79379",
-                "teamIdExtern": 79379,
-                "teamName": "PROMOVIATGES CBF CERDANYOLA U16",
-                "matchesPlayed": 26,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 11,
-                  "losses": 15,
-                  "ties": 0,
-                  "pointsFor": 1258,
-                  "pointsAgainst": 1370
-                },
-                "pointDiff": -112,
-                "avgValuation": 19.23076923076923
               }
             ]
           }
@@ -20798,57 +18072,6 @@
     ]
   },
   {
-    "key": "derived-club:reus-ploms-salle",
-    "label": "REUS PLOMS SALLE",
-    "shortName": "REUS PLOMS SALLE",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80626,
-    "totalTeams": 1,
-    "totalMatches": 27,
-    "totalPlayers": 14,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 27 partidos",
-    "searchText": "REUS PLOMS SALLE REUS PLOMS SALLE CFU16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80626",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80626",
-                "teamIdExtern": 80626,
-                "teamName": "REUS PLOMS SALLE CFU16",
-                "matchesPlayed": 27,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 13,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 1472,
-                  "pointsAgainst": 1678
-                },
-                "pointDiff": -206,
-                "avgValuation": -22.48148148148148
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "derived-club:rubies-abat",
     "label": "RUBIES-ABAT",
     "shortName": "RUBIES-ABAT",
@@ -20994,57 +18217,6 @@
                 },
                 "pointDiff": 6,
                 "avgValuation": -30.074074074074073
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:sabadell-bq-valles-u15f",
-    "label": "SABADELL BQ VALL\u00C8S U15F",
-    "shortName": "SABADELL BQ VALL\u00C8S U15F",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79198,
-    "totalTeams": 1,
-    "totalMatches": 28,
-    "totalPlayers": 15,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 28 partidos",
-    "searchText": "SABADELL BQ VALL\u00C8S U15F C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79198",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79198",
-                "teamIdExtern": 79198,
-                "teamName": "SABADELL BQ VALL\u00C8S U15F",
-                "matchesPlayed": 28,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 3,
-                "record": {
-                  "wins": 15,
-                  "losses": 13,
-                  "ties": 0,
-                  "pointsFor": 1442,
-                  "pointsAgainst": 1473
-                },
-                "pointDiff": -31,
-                "avgValuation": 10.535714285714286
               }
             ]
           }
@@ -21485,49 +18657,14 @@
     "shortName": "LLUISOS GRACIA",
     "clubId": 47,
     "primaryTeamIdExtern": 81520,
-    "totalTeams": 5,
-    "totalMatches": 88,
-    "totalPlayers": 66,
-    "categoriesCount": 5,
+    "totalTeams": 4,
+    "totalMatches": 63,
+    "totalPlayers": 52,
+    "categoriesCount": 4,
     "levelsCount": 2,
-    "meta": "5 equipos \u00B7 5 categorias \u00B7 88 partidos",
-    "searchText": "SECCIO ESPORTIVA DE LLUISOS DE GRACIA LLUISOS GRACIA ASSOLIM - LLU\u00CFSOS DE GR\u00C0CIA B C.c. J\u00FAnior Fem. Nivell A LLU\u00CFSOS DE GR\u00C0CIA C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 LLU\u00CFSOS DE GR\u00C0CIA A C.t. Pre-mini Femen\u00ED Nivell D1 LLU\u00CFSOS DE GR\u00C0CIA A\u00A0 C.c. Cadet Femen\u00ED Interterritorial LLU\u00CFSOS DE GR\u00C0CIA B C.t. Pre-mini Femen\u00ED 1r. Any Nivell C",
+    "meta": "4 equipos \u00B7 4 categorias \u00B7 63 partidos",
+    "searchText": "SECCIO ESPORTIVA DE LLUISOS DE GRACIA LLUISOS GRACIA ASSOLIM - LLU\u00CFSOS DE GR\u00C0CIA B C.c. J\u00FAnior Fem. Nivell A LLU\u00CFSOS DE GR\u00C0CIA C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 LLU\u00CFSOS DE GR\u00C0CIA A C.t. Pre-mini Femen\u00ED Nivell D1 LLU\u00CFSOS DE GR\u00C0CIA B C.t. Pre-mini Femen\u00ED 1r. Any Nivell C",
     "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79802",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79802",
-                "teamIdExtern": 79802,
-                "teamName": "LLU\u00CFSOS DE GR\u00C0CIA A\u00A0",
-                "matchesPlayed": 25,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 14,
-                  "losses": 11,
-                  "ties": 0,
-                  "pointsFor": 1466,
-                  "pointsAgainst": 1274
-                },
-                "pointDiff": 192,
-                "avgValuation": 24.96
-              }
-            ]
-          }
-        ]
-      },
       {
         "categoryName": "C.c. J\u00FAnior Fem. Nivell A",
         "levels": [
@@ -21762,13 +18899,13 @@
     "shortName": "S.E.S.E.",
     "clubId": 43,
     "primaryTeamIdExtern": 79856,
-    "totalTeams": 6,
-    "totalMatches": 130,
-    "totalPlayers": 90,
-    "categoriesCount": 5,
+    "totalTeams": 4,
+    "totalMatches": 77,
+    "totalPlayers": 56,
+    "categoriesCount": 3,
     "levelsCount": 4,
-    "meta": "6 equipos \u00B7 5 categorias \u00B7 130 partidos",
-    "searchText": "SECCIO ESPORTIVA SANTA EULALIA (SESE) S.E.S.E. SESE A C.c Infantil Femen\u00ED Preferent Preferent B C.c. Cadet Femen\u00ED Interterritorial C.t. Pre-mini Femen\u00ED Nivell B1 SESE B C.c. Cadet Femen\u00ED Preferent 1r. Any C.t. Pre-mini Femen\u00ED 1r. Any Nivell A SESE C Nivell D",
+    "meta": "4 equipos \u00B7 3 categorias \u00B7 77 partidos",
+    "searchText": "SECCIO ESPORTIVA SANTA EULALIA (SESE) S.E.S.E. SESE A C.c Infantil Femen\u00ED Preferent Preferent B C.t. Pre-mini Femen\u00ED Nivell B1 SESE B C.t. Pre-mini Femen\u00ED 1r. Any Nivell A SESE C Nivell D",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -21800,76 +18937,6 @@
                 },
                 "pointDiff": -147,
                 "avgValuation": -27.28
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79860",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79860",
-                "teamIdExtern": 79860,
-                "teamName": "SESE A",
-                "matchesPlayed": 25,
-                "playersCount": 18,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 15,
-                  "losses": 10,
-                  "ties": 0,
-                  "pointsFor": 1521,
-                  "pointsAgainst": 1411
-                },
-                "pointDiff": 110,
-                "avgValuation": 31.24
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79879",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79879",
-                "teamIdExtern": 79879,
-                "teamName": "SESE B",
-                "matchesPlayed": 28,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 06",
-                "latestPhaseOptionValue": "source:21197",
-                "groupCode": "06",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 20,
-                  "losses": 8,
-                  "ties": 0,
-                  "pointsFor": 1785,
-                  "pointsAgainst": 1518
-                },
-                "pointDiff": 267,
-                "avgValuation": 26.428571428571427
               }
             ]
           }
@@ -21970,57 +19037,6 @@
                 },
                 "pointDiff": 118,
                 "avgValuation": 28.105263157894736
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:sedis-gdos",
-    "label": "SEDIS GDOS",
-    "shortName": "SEDIS GDOS",
-    "clubId": 0,
-    "primaryTeamIdExtern": 80069,
-    "totalTeams": 1,
-    "totalMatches": 23,
-    "totalPlayers": 11,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 23 partidos",
-    "searchText": "SEDIS GDOS C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80069",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80069",
-                "teamIdExtern": 80069,
-                "teamName": "SEDIS GDOS",
-                "matchesPlayed": 23,
-                "playersCount": 11,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 10,
-                  "losses": 13,
-                  "ties": 0,
-                  "pointsFor": 1236,
-                  "pointsAgainst": 1323
-                },
-                "pointDiff": -87,
-                "avgValuation": 22.434782608695652
               }
             ]
           }
@@ -22182,57 +19198,6 @@
     ]
   },
   {
-    "key": "derived-club:simon-mobles-oficina-manresa",
-    "label": "SIMON MOBLES OFICINA MANRESA",
-    "shortName": "SIMON MOBLES OFICINA MANRESA",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79022,
-    "totalTeams": 1,
-    "totalMatches": 29,
-    "totalPlayers": 16,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 29 partidos",
-    "searchText": "SIMON MOBLES OFICINA MANRESA SIMON MOBLES OFICINA MANRESA CBF U16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79022",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:79022",
-                "teamIdExtern": 79022,
-                "teamName": "SIMON MOBLES OFICINA MANRESA CBF U16",
-                "matchesPlayed": 29,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 15,
-                  "losses": 14,
-                  "ties": 0,
-                  "pointsFor": 1704,
-                  "pointsAgainst": 1534
-                },
-                "pointDiff": 170,
-                "avgValuation": -9.655172413793103
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "key": "fcbq-club:94",
     "label": "SOCIETAT ATLETICA DE SURIA",
     "shortName": "S.A. SURIA",
@@ -22327,108 +19292,6 @@
                 },
                 "pointDiff": 110,
                 "avgValuation": 24.1
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:tgn-basquet-10a",
-    "label": "TGN B\u00C0SQUET 10A",
-    "shortName": "TGN B\u00C0SQUET 10A",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79336,
-    "totalTeams": 1,
-    "totalMatches": 24,
-    "totalPlayers": 17,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 24 partidos",
-    "searchText": "TGN B\u00C0SQUET 10A C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79336",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79336",
-                "teamIdExtern": 79336,
-                "teamName": "TGN B\u00C0SQUET 10A",
-                "matchesPlayed": 24,
-                "playersCount": 17,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 14,
-                  "losses": 10,
-                  "ties": 0,
-                  "pointsFor": 1411,
-                  "pointsAgainst": 1276
-                },
-                "pointDiff": 135,
-                "avgValuation": 29.958333333333332
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:tgn-basquet-11a",
-    "label": "TGN B\u00C0SQUET 11A",
-    "shortName": "TGN B\u00C0SQUET 11A",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79349,
-    "totalTeams": 1,
-    "totalMatches": 28,
-    "totalPlayers": 13,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 28 partidos",
-    "searchText": "TGN B\u00C0SQUET 11A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79349",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79349",
-                "teamIdExtern": 79349,
-                "teamName": "TGN B\u00C0SQUET 11A",
-                "matchesPlayed": 28,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 12,
-                  "losses": 16,
-                  "ties": 0,
-                  "pointsFor": 1536,
-                  "pointsAgainst": 1703
-                },
-                "pointDiff": -167,
-                "avgValuation": 22
               }
             ]
           }
@@ -22543,14 +19406,14 @@
     "label": "U. B. LLEFI\u00C0",
     "shortName": "U. B. LLEFI\u00C0",
     "clubId": 0,
-    "primaryTeamIdExtern": 79832,
-    "totalTeams": 3,
-    "totalMatches": 66,
-    "totalPlayers": 55,
-    "categoriesCount": 3,
+    "primaryTeamIdExtern": 79834,
+    "totalTeams": 2,
+    "totalMatches": 41,
+    "totalPlayers": 42,
+    "categoriesCount": 2,
     "levelsCount": 0,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 66 partidos",
-    "searchText": "U. B. LLEFI\u00C0 U. B. LLEFI\u00C0 A C.c. Cadet Femen\u00ED Interterritorial U. B. LLEFI\u00C0 B C.c. J\u00FAnior Fem. Nivell A U. B. LLEFI\u00C0 C 2a. Territorial S\u00E8nior Femen\u00ED",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 41 partidos",
+    "searchText": "U. B. LLEFI\u00C0 U. B. LLEFI\u00C0 B C.c. J\u00FAnior Fem. Nivell A U. B. LLEFI\u00C0 C 2a. Territorial S\u00E8nior Femen\u00ED",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -22582,41 +19445,6 @@
                 },
                 "pointDiff": 97,
                 "avgValuation": 25.565217391304348
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79832",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79832",
-                "teamIdExtern": 79832,
-                "teamName": "U. B. LLEFI\u00C0 A",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21227",
-                "groupCode": "08",
-                "standingPosition": 2,
-                "record": {
-                  "wins": 13,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1220,
-                  "pointsAgainst": 1226
-                },
-                "pointDiff": -6,
-                "avgValuation": 16.72
               }
             ]
           }
@@ -22715,14 +19543,14 @@
     "label": "U.E. MATAR\u00D3",
     "shortName": "U.E. MATAR\u00D3",
     "clubId": 0,
-    "primaryTeamIdExtern": 80855,
-    "totalTeams": 9,
-    "totalMatches": 176,
-    "totalPlayers": 116,
-    "categoriesCount": 7,
+    "primaryTeamIdExtern": 80886,
+    "totalTeams": 7,
+    "totalMatches": 124,
+    "totalPlayers": 87,
+    "categoriesCount": 5,
     "levelsCount": 5,
-    "meta": "9 equipos \u00B7 7 categorias \u00B7 176 partidos",
-    "searchText": "U.E. MATAR\u00D3 U.E.MATAR\u00D3 - CBF C.c. Cadet Femen\u00ED Preferent 1r. Any U.E.MATAR\u00D3 - IAF C.c Infantil Femen\u00ED Preferent Preferent A U.E.MATAR\u00D3 - J1F C.c. J\u00FAnior Femen\u00ED Interterritorial U.E.MATAR\u00D3 - PR1F C.t. Pre-mini Femen\u00ED Nivell C1 U.E.MATAR\u00D3 - PR2F C.t. Pre-mini Femen\u00ED 1r. Any Nivell D U.E.MATAR\u00D3 - PRAF Nivell A U.E.MATAR\u00D3 - PRBF Nivell B U.E.MATAR\u00D3 -C1F C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 U.E.MATAR\u00D3 -CAF C.c. Cadet Femen\u00ED Preferent",
+    "meta": "7 equipos \u00B7 5 categorias \u00B7 124 partidos",
+    "searchText": "U.E. MATAR\u00D3 U.E.MATAR\u00D3 - IAF C.c Infantil Femen\u00ED Preferent Preferent A U.E.MATAR\u00D3 - J1F C.c. J\u00FAnior Femen\u00ED Interterritorial U.E.MATAR\u00D3 - PR1F C.t. Pre-mini Femen\u00ED Nivell C1 U.E.MATAR\u00D3 - PR2F C.t. Pre-mini Femen\u00ED 1r. Any Nivell D U.E.MATAR\u00D3 - PRAF Nivell A U.E.MATAR\u00D3 - PRBF Nivell B U.E.MATAR\u00D3 -C1F C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -22754,76 +19582,6 @@
                 },
                 "pointDiff": 88,
                 "avgValuation": -14.24
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80872",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80872",
-                "teamIdExtern": 80872,
-                "teamName": "U.E.MATAR\u00D3 -CAF",
-                "matchesPlayed": 26,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 18,
-                  "losses": 8,
-                  "ties": 0,
-                  "pointsFor": 1734,
-                  "pointsAgainst": 1437
-                },
-                "pointDiff": 297,
-                "avgValuation": -10.115384615384615
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80855",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80855",
-                "teamIdExtern": 80855,
-                "teamName": "U.E.MATAR\u00D3 - CBF",
-                "matchesPlayed": 26,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 20,
-                  "losses": 6,
-                  "ties": 0,
-                  "pointsFor": 1564,
-                  "pointsAgainst": 1281
-                },
-                "pointDiff": 283,
-                "avgValuation": 31.615384615384617
               }
             ]
           }
@@ -23037,13 +19795,13 @@
     "shortName": "UB MIR",
     "clubId": 0,
     "primaryTeamIdExtern": 81563,
-    "totalTeams": 2,
-    "totalMatches": 44,
-    "totalPlayers": 39,
-    "categoriesCount": 2,
+    "totalTeams": 1,
+    "totalMatches": 22,
+    "totalPlayers": 20,
+    "categoriesCount": 1,
     "levelsCount": 0,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 44 partidos",
-    "searchText": "UB MIR 2a. Territorial S\u00E8nior Femen\u00ED UB MIR A C.c. Cadet Femen\u00ED Interterritorial",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 22 partidos",
+    "searchText": "UB MIR 2a. Territorial S\u00E8nior Femen\u00ED",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -23075,92 +19833,6 @@
                 },
                 "pointDiff": -201,
                 "avgValuation": 7.545454545454546
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79327",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79327",
-                "teamIdExtern": 79327,
-                "teamName": "UB MIR A",
-                "matchesPlayed": 22,
-                "playersCount": 19,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 10",
-                "latestPhaseOptionValue": "source:21229",
-                "groupCode": "10",
-                "standingPosition": 13,
-                "record": {
-                  "wins": 0,
-                  "losses": 22,
-                  "ties": 0,
-                  "pointsFor": 716,
-                  "pointsAgainst": 1272
-                },
-                "pointDiff": -556,
-                "avgValuation": 3.727272727272727
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:ucap-scootfast",
-    "label": "UCAP SCOOTFAST",
-    "shortName": "UCAP SCOOTFAST",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79486,
-    "totalTeams": 1,
-    "totalMatches": 25,
-    "totalPlayers": 13,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 25 partidos",
-    "searchText": "UCAP SCOOTFAST UCAP SCOOTFAST U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79486",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:79486",
-                "teamIdExtern": 79486,
-                "teamName": "UCAP SCOOTFAST U15",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 08",
-                "latestPhaseOptionValue": "source:21199",
-                "groupCode": "08",
-                "standingPosition": 9,
-                "record": {
-                  "wins": 6,
-                  "losses": 19,
-                  "ties": 0,
-                  "pointsFor": 1147,
-                  "pointsAgainst": 1478
-                },
-                "pointDiff": -331,
-                "avgValuation": 16.96
               }
             ]
           }
@@ -23224,14 +19896,14 @@
     "label": "UNIO BASQUET SANT ADRIA",
     "shortName": "U.B. SANT ADRIA",
     "clubId": 2517,
-    "primaryTeamIdExtern": 80238,
-    "totalTeams": 5,
-    "totalMatches": 126,
-    "totalPlayers": 86,
-    "categoriesCount": 5,
+    "primaryTeamIdExtern": 80227,
+    "totalTeams": 2,
+    "totalMatches": 48,
+    "totalPlayers": 33,
+    "categoriesCount": 2,
     "levelsCount": 1,
-    "meta": "5 equipos \u00B7 5 categorias \u00B7 126 partidos",
-    "searchText": "UNIO BASQUET SANT ADRIA U.B. SANT ADRIA CESA FEMEN\u00CD SANT ADRI\u00C0 A C.c. Cadet Femen\u00ED Preferent Preferent A C.c Infantil Femen\u00ED Preferent FEMEN\u00CD SANT ADRI\u00C0 B C.c. Cadet Femen\u00ED Preferent 1r. Any FEMEN\u00CD SANT ADRI\u00C0 LILA C.c. Cadet Femen\u00ED Interterritorial UB SANT ADRIA A Copa Catalunya Masculina",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 48 partidos",
+    "searchText": "UNIO BASQUET SANT ADRIA U.B. SANT ADRIA CESA FEMEN\u00CD SANT ADRI\u00C0 A C.c Infantil Femen\u00ED Preferent Preferent A UB SANT ADRIA A Copa Catalunya Masculina",
     "categories": [
       {
         "categoryName": "C.c Infantil Femen\u00ED Preferent",
@@ -23263,111 +19935,6 @@
                 },
                 "pointDiff": -95,
                 "avgValuation": -24.076923076923077
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80233",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:80233",
-                "teamIdExtern": 80233,
-                "teamName": "FEMEN\u00CD SANT ADRI\u00C0 LILA",
-                "matchesPlayed": 25,
-                "playersCount": 15,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 10,
-                  "losses": 15,
-                  "ties": 0,
-                  "pointsFor": 1331,
-                  "pointsAgainst": 1424
-                },
-                "pointDiff": -93,
-                "avgValuation": 24.36
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-        "levels": [
-          {
-            "levelKey": "Preferent A",
-            "levelName": "Preferent A",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80238",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT::TEAM:80238",
-                "teamIdExtern": 80238,
-                "teamName": "CESA FEMEN\u00CD SANT ADRI\u00C0 A",
-                "matchesPlayed": 27,
-                "playersCount": 16,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-                "levelKey": "Preferent A",
-                "levelName": "Preferent A",
-                "phaseLabel": "Segona Fase \u00B7 Preferent A \u00B7 Grupo 01",
-                "latestPhaseOptionValue": "source:21180",
-                "groupCode": "01",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 22,
-                  "losses": 5,
-                  "ties": 0,
-                  "pointsFor": 1888,
-                  "pointsAgainst": 1432
-                },
-                "pointDiff": 456,
-                "avgValuation": -2.6296296296296298
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80240",
-                "teamKey": "2025-2026::C.C. CADET FEMENI PREFERENT 1R. ANY::TEAM:80240",
-                "teamIdExtern": 80240,
-                "teamName": "FEMEN\u00CD SANT ADRI\u00C0 B",
-                "matchesPlayed": 26,
-                "playersCount": 22,
-                "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 05",
-                "latestPhaseOptionValue": "source:21196",
-                "groupCode": "05",
-                "standingPosition": 4,
-                "record": {
-                  "wins": 17,
-                  "losses": 9,
-                  "ties": 0,
-                  "pointsFor": 1640,
-                  "pointsAgainst": 1376
-                },
-                "pointDiff": 264,
-                "avgValuation": 32.69230769230769
               }
             ]
           }
@@ -23703,14 +20270,14 @@
     "label": "UNIO ESPORTIVA CLARET",
     "shortName": "U.E. CLARET",
     "clubId": 148,
-    "primaryTeamIdExtern": 79298,
-    "totalTeams": 7,
-    "totalMatches": 125,
-    "totalPlayers": 85,
-    "categoriesCount": 7,
+    "primaryTeamIdExtern": 82114,
+    "totalTeams": 6,
+    "totalMatches": 100,
+    "totalPlayers": 72,
+    "categoriesCount": 6,
     "levelsCount": 3,
-    "meta": "7 equipos \u00B7 7 categorias \u00B7 125 partidos",
-    "searchText": "UNIO ESPORTIVA CLARET U.E. CLARET U.E. CLARET A C.c. Cadet Femen\u00ED Interterritorial C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED Nivell B2 U.E. CLARET B 1a. Territorial S\u00E8nior Femen\u00ED C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 Nivell A1 C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B",
+    "meta": "6 equipos \u00B7 6 categorias \u00B7 100 partidos",
+    "searchText": "UNIO ESPORTIVA CLARET U.E. CLARET U.E. CLARET A C.c. J\u00FAnior Fem. Nivell A C.t. Pre-mini Femen\u00ED Nivell B2 U.E. CLARET B 1a. Territorial S\u00E8nior Femen\u00ED C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3 Nivell A1 C.t. Bcn U13 - Infantil Femen\u00ED 1r. Any Promoci\u00F3 C.t. Pre-mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
       {
         "categoryName": "1a. Territorial S\u00E8nior Femen\u00ED",
@@ -23742,41 +20309,6 @@
                 },
                 "pointDiff": -192,
                 "avgValuation": 19.59090909090909
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79298",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79298",
-                "teamIdExtern": 79298,
-                "teamName": "U.E. CLARET A",
-                "matchesPlayed": 25,
-                "playersCount": 13,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 07",
-                "latestPhaseOptionValue": "source:21226",
-                "groupCode": "07",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 13,
-                  "losses": 12,
-                  "ties": 0,
-                  "pointsFor": 1241,
-                  "pointsAgainst": 1272
-                },
-                "pointDiff": -31,
-                "avgValuation": 20
               }
             ]
           }
@@ -24577,14 +21109,14 @@
     "label": "VIROLAI",
     "shortName": "VIROLAI",
     "clubId": 0,
-    "primaryTeamIdExtern": 78985,
-    "totalTeams": 3,
-    "totalMatches": 70,
-    "totalPlayers": 42,
-    "categoriesCount": 2,
+    "primaryTeamIdExtern": 78982,
+    "totalTeams": 2,
+    "totalMatches": 44,
+    "totalPlayers": 28,
+    "categoriesCount": 1,
     "levelsCount": 0,
-    "meta": "3 equipos \u00B7 2 categorias \u00B7 70 partidos",
-    "searchText": "VIROLAI VIROLAI A C.c. Cadet Femen\u00ED Interterritorial VIROLAI NEGRE 2a. Territorial S\u00E8nior Femen\u00ED VIROLAI ROSA",
+    "meta": "2 equipos \u00B7 1 categoria \u00B7 44 partidos",
+    "searchText": "VIROLAI VIROLAI NEGRE 2a. Territorial S\u00E8nior Femen\u00ED VIROLAI ROSA",
     "categories": [
       {
         "categoryName": "2a. Territorial S\u00E8nior Femen\u00ED",
@@ -24644,41 +21176,6 @@
             ]
           }
         ]
-      },
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78985",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:78985",
-                "teamIdExtern": 78985,
-                "teamName": "VIROLAI A",
-                "matchesPlayed": 26,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 1,
-                "record": {
-                  "wins": 16,
-                  "losses": 10,
-                  "ties": 0,
-                  "pointsFor": 1514,
-                  "pointsAgainst": 1343
-                },
-                "pointDiff": 171,
-                "avgValuation": 28.076923076923077
-              }
-            ]
-          }
-        ]
       }
     ]
   },
@@ -24726,57 +21223,6 @@
                 },
                 "pointDiff": -54,
                 "avgValuation": 21.625
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "derived-club:virone",
-    "label": "VIRONE",
-    "shortName": "VIRONE",
-    "clubId": 0,
-    "primaryTeamIdExtern": 79612,
-    "totalTeams": 1,
-    "totalMatches": 23,
-    "totalPlayers": 14,
-    "categoriesCount": 1,
-    "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 23 partidos",
-    "searchText": "VIRONE VIRONE CB MONTPEDR\u00D3S C.c. Cadet Femen\u00ED Interterritorial",
-    "categories": [
-      {
-        "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-        "levels": [
-          {
-            "levelKey": "__no-level__",
-            "levelName": "Sin nivel visible",
-            "teams": [
-              {
-                "key": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79612",
-                "teamKey": "2025-2026::C.C. CADET FEMENI INTERTERRITORIAL::TEAM:79612",
-                "teamIdExtern": 79612,
-                "teamName": "VIRONE CB MONTPEDR\u00D3S",
-                "matchesPlayed": 23,
-                "playersCount": 14,
-                "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-                "levelKey": "",
-                "levelName": "",
-                "phaseLabel": "Segona Fase \u00B7 Grupo 09",
-                "latestPhaseOptionValue": "source:21228",
-                "groupCode": "09",
-                "standingPosition": 6,
-                "record": {
-                  "wins": 7,
-                  "losses": 16,
-                  "ties": 0,
-                  "pointsFor": 1209,
-                  "pointsAgainst": 1414
-                },
-                "pointDiff": -205,
-                "avgValuation": 19.82608695652174
               }
             ]
           }

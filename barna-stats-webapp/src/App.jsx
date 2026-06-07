@@ -14,6 +14,7 @@ import {
 } from "./utils/appRoutes.js";
 import {navigateToHash} from "./utils/navigation.js";
 import appStyles from "./styles/appStyles.js";
+import Footer from "./components/Footer.jsx";
 import SyncPage from "./pages/SyncPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import CompetitionPage from "./pages/CompetitionPage.jsx";
@@ -164,6 +165,8 @@ function App() {
                         : route === "compare"
                             ? <ComparePage key="compare" analysisVersion={analysisVersion} />
                             : <TeamPage key="dashboard" analysisVersion={analysisVersion} matchReportOnDemandEnabled={matchReportOnDemandEnabled} />}
+
+                <Footer />
             </div>
         </div>
     );

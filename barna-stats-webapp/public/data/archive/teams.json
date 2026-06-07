@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-06-07T10:50:57.947222Z",
+  "generatedAtUtc": "2026-06-07T11:07:29.161747Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -982,34 +982,6 @@
       ]
     },
     {
-      "key": "TEAM:79309",
-      "label": "BAM - PORTECA",
-      "latestTeamIdExtern": 79309,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "BAM - PORTECA C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79309:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79309,
-          "teamName": "BAM - PORTECA",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 26,
-          "playersCount": 16,
-          "pointsFor": 1364,
-          "pointsAgainst": 1545,
-          "pointDiff": -181,
-          "wins": 8,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": -19.76923076923077
-        }
-      ]
-    },
-    {
       "key": "TEAM:79305",
       "label": "BARICENTRO BARBERA",
       "latestTeamIdExtern": 79305,
@@ -1066,34 +1038,6 @@
       ]
     },
     {
-      "key": "TEAM:79633",
-      "label": "BASKET ALMEDA GROC",
-      "latestTeamIdExtern": 79633,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "BASKET ALMEDA GROC C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79633:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79633,
-          "teamName": "BASKET ALMEDA GROC",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 23,
-          "pointsFor": 1207,
-          "pointsAgainst": 1455,
-          "pointDiff": -248,
-          "wins": 6,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": 14
-        }
-      ]
-    },
-    {
       "key": "TEAM:82705",
       "label": "BASKET ALMEDA GROC",
       "latestTeamIdExtern": 82705,
@@ -1122,34 +1066,6 @@
       ]
     },
     {
-      "key": "TEAM:79632",
-      "label": "BASKET ALMEDA NEGRE",
-      "latestTeamIdExtern": 79632,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "BASKET ALMEDA NEGRE C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79632:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79632,
-          "teamName": "BASKET ALMEDA NEGRE",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 27,
-          "playersCount": 27,
-          "pointsFor": 1595,
-          "pointsAgainst": 1550,
-          "pointDiff": 45,
-          "wins": 16,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 19.77777777777778
-        }
-      ]
-    },
-    {
       "key": "TEAM:80957",
       "label": "BASKET ESPLUGUES A",
       "latestTeamIdExtern": 80957,
@@ -1174,34 +1090,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 29.5
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79641",
-      "label": "BASKETB ALMEDA",
-      "latestTeamIdExtern": 79641,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "BASKETB ALMEDA C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79641:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79641,
-          "teamName": "BASKETB ALMEDA",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 28,
-          "playersCount": 17,
-          "pointsFor": 1592,
-          "pointsAgainst": 1645,
-          "pointDiff": -53,
-          "wins": 13,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": -26.428571428571427
         }
       ]
     },
@@ -1314,90 +1202,6 @@
           "ties": 0,
           "standingPosition": 5,
           "avgValuation": -22.2
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80989",
-      "label": "B\u00C0SQUET GIRONA U15",
-      "latestTeamIdExtern": 80989,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "B\u00C0SQUET GIRONA U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80989:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80989,
-          "teamName": "B\u00C0SQUET GIRONA U15",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 12,
-          "pointsFor": 1716,
-          "pointsAgainst": 1363,
-          "pointDiff": 353,
-          "wins": 18,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 31.923076923076923
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80992",
-      "label": "B\u00C0SQUET GIRONA U16",
-      "latestTeamIdExtern": 80992,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "B\u00C0SQUET GIRONA U16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80992:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80992,
-          "teamName": "B\u00C0SQUET GIRONA U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 26,
-          "playersCount": 15,
-          "pointsFor": 1512,
-          "pointsAgainst": 1514,
-          "pointDiff": -2,
-          "wins": 13,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": -6.538461538461538
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80991",
-      "label": "B\u00C0SQUET GIRONA U16 VERMELL",
-      "latestTeamIdExtern": 80991,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "B\u00C0SQUET GIRONA U16 VERMELL C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80991:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80991,
-          "teamName": "B\u00C0SQUET GIRONA U16 VERMELL",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 12,
-          "pointsFor": 1832,
-          "pointsAgainst": 1294,
-          "pointDiff": 538,
-          "wins": 24,
-          "losses": 2,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 39.5
         }
       ]
     },
@@ -2046,34 +1850,6 @@
       ]
     },
     {
-      "key": "TEAM:79785",
-      "label": "B\u00C0SQUET VILAFANT",
-      "latestTeamIdExtern": 79785,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "B\u00C0SQUET VILAFANT C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79785:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79785,
-          "teamName": "B\u00C0SQUET VILAFANT",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 23,
-          "playersCount": 14,
-          "pointsFor": 1353,
-          "pointsAgainst": 1503,
-          "pointDiff": -150,
-          "wins": 12,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 29.47826086956522
-        }
-      ]
-    },
-    {
       "key": "TEAM:83447",
       "label": "B\u00C0SQUET VILAFANT",
       "latestTeamIdExtern": 83447,
@@ -2210,34 +1986,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 42.6
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80141",
-      "label": "BC MORABANC ANDORRA",
-      "latestTeamIdExtern": 80141,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "BC MORABANC ANDORRA C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80141:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80141,
-          "teamName": "BC MORABANC ANDORRA",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 13,
-          "pointsFor": 1235,
-          "pointsAgainst": 1845,
-          "pointDiff": -610,
-          "wins": 2,
-          "losses": 24,
-          "ties": 0,
-          "standingPosition": 12,
-          "avgValuation": 17.115384615384617
         }
       ]
     },
@@ -2522,34 +2270,6 @@
       ]
     },
     {
-      "key": "TEAM:79985",
-      "label": "BC TORROELLA U16",
-      "latestTeamIdExtern": 79985,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "BC TORROELLA U16 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79985:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79985,
-          "teamName": "BC TORROELLA U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 14,
-          "pointsFor": 1550,
-          "pointsAgainst": 1352,
-          "pointDiff": 198,
-          "wins": 18,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 31.807692307692307
-        }
-      ]
-    },
-    {
       "key": "TEAM:80451",
       "label": "BF CORNELLA",
       "latestTeamIdExtern": 80451,
@@ -2602,34 +2322,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 14.058823529411764
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80323",
-      "label": "C.B GRUP BARNA A",
-      "latestTeamIdExtern": 80323,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "C.B GRUP BARNA A C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80323:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80323,
-          "teamName": "C.B GRUP BARNA A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 26,
-          "playersCount": 20,
-          "pointsFor": 1204,
-          "pointsAgainst": 1781,
-          "pointDiff": -577,
-          "wins": 3,
-          "losses": 23,
-          "ties": 0,
-          "standingPosition": 11,
-          "avgValuation": -23.384615384615383
         }
       ]
     },
@@ -3054,34 +2746,6 @@
       ]
     },
     {
-      "key": "TEAM:79149",
-      "label": "C.B. PRAT - MONTIBELLO A",
-      "latestTeamIdExtern": 79149,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "C.B. PRAT - MONTIBELLO A C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79149:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79149,
-          "teamName": "C.B. PRAT - MONTIBELLO A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 27,
-          "playersCount": 14,
-          "pointsFor": 1577,
-          "pointsAgainst": 1565,
-          "pointDiff": 12,
-          "wins": 15,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": -13.62962962962963
-        }
-      ]
-    },
-    {
       "key": "TEAM:81453",
       "label": "C.B. PRAT - MONTIBELLO B",
       "latestTeamIdExtern": 81453,
@@ -3502,34 +3166,6 @@
       ]
     },
     {
-      "key": "TEAM:79544",
-      "label": "C.E. MARISTES A",
-      "latestTeamIdExtern": 79544,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "C.E. MARISTES A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79544:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79544,
-          "teamName": "C.E. MARISTES A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 20,
-          "playersCount": 17,
-          "pointsFor": 975,
-          "pointsAgainst": 1378,
-          "pointDiff": -403,
-          "wins": 3,
-          "losses": 17,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": 12.05
-        }
-      ]
-    },
-    {
       "key": "TEAM:79551",
       "label": "C.E. MARISTES B",
       "latestTeamIdExtern": 79551,
@@ -3666,34 +3302,6 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 25.6
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78648",
-      "label": "C.E. XAMBA NEGRE",
-      "latestTeamIdExtern": 78648,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "C.E. XAMBA NEGRE C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78648:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78648,
-          "teamName": "C.E. XAMBA NEGRE",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 18,
-          "pointsFor": 1552,
-          "pointsAgainst": 1430,
-          "pointDiff": 122,
-          "wins": 16,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 34.833333333333336
         }
       ]
     },
@@ -3890,34 +3498,6 @@
           "ties": 0,
           "standingPosition": 7,
           "avgValuation": 16.82608695652174
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80828",
-      "label": "CAMPING LA LLOSA - C.B. CAMBRILS A",
-      "latestTeamIdExtern": 80828,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CAMPING LA LLOSA - C.B. CAMBRILS A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80828:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80828,
-          "teamName": "CAMPING LA LLOSA - C.B. CAMBRILS A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 15,
-          "pointsFor": 1242,
-          "pointsAgainst": 1599,
-          "pointDiff": -357,
-          "wins": 5,
-          "losses": 20,
-          "ties": 0,
-          "standingPosition": 11,
-          "avgValuation": 16.32
         }
       ]
     },
@@ -4230,62 +3810,6 @@
       ]
     },
     {
-      "key": "TEAM:78564",
-      "label": "CB BANYOLES A",
-      "latestTeamIdExtern": 78564,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB BANYOLES A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78564:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78564,
-          "teamName": "CB BANYOLES A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1443,
-          "pointsAgainst": 1341,
-          "pointDiff": 102,
-          "wins": 14,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 27.12
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80969",
-      "label": "CB BLANES A",
-      "latestTeamIdExtern": 80969,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB BLANES A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80969:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80969,
-          "teamName": "CB BLANES A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 19,
-          "pointsFor": 1660,
-          "pointsAgainst": 1310,
-          "pointDiff": 350,
-          "wins": 19,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 33.88461538461539
-        }
-      ]
-    },
-    {
       "key": "TEAM:80973",
       "label": "CB BLANES B",
       "latestTeamIdExtern": 80973,
@@ -4338,34 +3862,6 @@
           "ties": 0,
           "standingPosition": 8,
           "avgValuation": 25.26086956521739
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78519",
-      "label": "CB CALELLA",
-      "latestTeamIdExtern": 78519,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB CALELLA C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78519:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78519,
-          "teamName": "CB CALELLA",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 12,
-          "pointsFor": 1223,
-          "pointsAgainst": 1517,
-          "pointDiff": -294,
-          "wins": 6,
-          "losses": 20,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": 19.653846153846153
         }
       ]
     },
@@ -4478,34 +3974,6 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 25.904761904761905
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80368",
-      "label": "CB CERVERA MOBEL L\u00CDNEA",
-      "latestTeamIdExtern": 80368,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB CERVERA MOBEL L\u00CDNEA C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80368:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80368,
-          "teamName": "CB CERVERA MOBEL L\u00CDNEA",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 11,
-          "pointsFor": 1387,
-          "pointsAgainst": 1394,
-          "pointDiff": -7,
-          "wins": 12,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 19.192307692307693
         }
       ]
     },
@@ -4650,34 +4118,6 @@
       ]
     },
     {
-      "key": "TEAM:78801",
-      "label": "CB GRANOLLERS 1",
-      "latestTeamIdExtern": 78801,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB GRANOLLERS 1 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78801:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78801,
-          "teamName": "CB GRANOLLERS 1",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 17,
-          "pointsFor": 1485,
-          "pointsAgainst": 1372,
-          "pointDiff": 113,
-          "wins": 15,
-          "losses": 10,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 27.6
-        }
-      ]
-    },
-    {
       "key": "TEAM:78824",
       "label": "CB GRANOLLERS 1",
       "latestTeamIdExtern": 78824,
@@ -4702,34 +4142,6 @@
           "ties": 0,
           "standingPosition": 12,
           "avgValuation": 6.764705882352941
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78806",
-      "label": "CB GRANOLLERS 2",
-      "latestTeamIdExtern": 78806,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB GRANOLLERS 2 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78806:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78806,
-          "teamName": "CB GRANOLLERS 2",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 15,
-          "pointsFor": 1626,
-          "pointsAgainst": 1566,
-          "pointDiff": 60,
-          "wins": 16,
-          "losses": 11,
-          "ties": 1,
-          "standingPosition": 2,
-          "avgValuation": 22.464285714285715
         }
       ]
     },
@@ -4842,34 +4254,6 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 27.142857142857142
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79227",
-      "label": "CB IGUALADA CF U15",
-      "latestTeamIdExtern": 79227,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB IGUALADA CF U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79227:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79227,
-          "teamName": "CB IGUALADA CF U15",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 17,
-          "pointsFor": 1332,
-          "pointsAgainst": 1277,
-          "pointDiff": 55,
-          "wins": 13,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 23.6
         }
       ]
     },
@@ -5350,34 +4734,6 @@
       ]
     },
     {
-      "key": "TEAM:79982",
-      "label": "CB MANYANET LES CORTS VERD",
-      "latestTeamIdExtern": 79982,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB MANYANET LES CORTS VERD C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79982:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79982,
-          "teamName": "CB MANYANET LES CORTS VERD",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 14,
-          "pointsFor": 1432,
-          "pointsAgainst": 1333,
-          "pointDiff": 99,
-          "wins": 14,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 22.153846153846153
-        }
-      ]
-    },
-    {
       "key": "TEAM:81467",
       "label": "CB MANYANET LES CORTS VERD",
       "latestTeamIdExtern": 81467,
@@ -5738,34 +5094,6 @@
           "ties": 0,
           "standingPosition": 10,
           "avgValuation": 31.4
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78574",
-      "label": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES",
-      "latestTeamIdExtern": 78574,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78574:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78574,
-          "teamName": "CB OLOT LAVA ALZAMORA GR\u00C0FIQUES",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 12,
-          "pointsFor": 1346,
-          "pointsAgainst": 1414,
-          "pointDiff": -68,
-          "wins": 12,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 15.36
         }
       ]
     },
@@ -6302,62 +5630,6 @@
       ]
     },
     {
-      "key": "TEAM:78443",
-      "label": "CB TARRAGONA",
-      "latestTeamIdExtern": 78443,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB TARRAGONA C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78443:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78443,
-          "teamName": "CB TARRAGONA",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 23,
-          "playersCount": 14,
-          "pointsFor": 1453,
-          "pointsAgainst": 1188,
-          "pointDiff": 265,
-          "wins": 17,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 31.217391304347824
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78446",
-      "label": "CB TARRAGONA 1",
-      "latestTeamIdExtern": 78446,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB TARRAGONA 1 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78446:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78446,
-          "teamName": "CB TARRAGONA 1",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 13,
-          "pointsFor": 1525,
-          "pointsAgainst": 1424,
-          "pointDiff": 101,
-          "wins": 15,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 26.653846153846153
-        }
-      ]
-    },
-    {
       "key": "TEAM:78448",
       "label": "CB TARRAGONA B",
       "latestTeamIdExtern": 78448,
@@ -6438,34 +5710,6 @@
           "ties": 0,
           "standingPosition": 12,
           "avgValuation": 21.045454545454547
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78513",
-      "label": "CB TORELL\u00D3 CF - FARM\u00C0CIA \u00CDNGRID JAIME I BOFILL",
-      "latestTeamIdExtern": 78513,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB TORELL\u00D3 CF - FARM\u00C0CIA \u00CDNGRID JAIME I BOFILL C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78513:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78513,
-          "teamName": "CB TORELL\u00D3 CF - FARM\u00C0CIA \u00CDNGRID JAIME I BOFILL",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 17,
-          "pointsFor": 1913,
-          "pointsAgainst": 1584,
-          "pointDiff": 329,
-          "wins": 22,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 30.857142857142858
         }
       ]
     },
@@ -6681,34 +5925,6 @@
           "ties": 0,
           "standingPosition": 9,
           "avgValuation": 25.772727272727273
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78413",
-      "label": "CB VALLS CLINICA DENTAL CLOFENT",
-      "latestTeamIdExtern": 78413,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB VALLS CLINICA DENTAL CLOFENT C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78413:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78413,
-          "teamName": "CB VALLS CLINICA DENTAL CLOFENT",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 12,
-          "pointsFor": 1396,
-          "pointsAgainst": 1219,
-          "pointDiff": 177,
-          "wins": 18,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 16.875
         }
       ]
     },
@@ -6965,62 +6181,6 @@
       ]
     },
     {
-      "key": "TEAM:80342",
-      "label": "CB. CORNELL\u00C0",
-      "latestTeamIdExtern": 80342,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CB. CORNELL\u00C0 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80342:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80342,
-          "teamName": "CB. CORNELL\u00C0",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 21,
-          "pointsFor": 1834,
-          "pointsAgainst": 1527,
-          "pointDiff": 307,
-          "wins": 16,
-          "losses": 11,
-          "ties": 1,
-          "standingPosition": 1,
-          "avgValuation": 25.464285714285715
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80339",
-      "label": "CB. CORNELL\u00C0 A",
-      "latestTeamIdExtern": 80339,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "CB. CORNELL\u00C0 A C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80339:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80339,
-          "teamName": "CB. CORNELL\u00C0 A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 27,
-          "playersCount": 23,
-          "pointsFor": 1742,
-          "pointsAgainst": 1647,
-          "pointDiff": 95,
-          "wins": 15,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": -13.222222222222221
-        }
-      ]
-    },
-    {
       "key": "TEAM:80355",
       "label": "CB. CORNELL\u00C0 B",
       "latestTeamIdExtern": 80355,
@@ -7045,34 +6205,6 @@
           "ties": 0,
           "standingPosition": 9,
           "avgValuation": 20.434782608695652
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80349",
-      "label": "CB. CORNELL\u00C0 BLAU",
-      "latestTeamIdExtern": 80349,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CB. CORNELL\u00C0 BLAU C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80349:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80349,
-          "teamName": "CB. CORNELL\u00C0 BLAU",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 21,
-          "pointsFor": 1244,
-          "pointsAgainst": 1398,
-          "pointDiff": -154,
-          "wins": 12,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 20.083333333333332
         }
       ]
     },
@@ -7217,34 +6349,6 @@
       ]
     },
     {
-      "key": "TEAM:80126",
-      "label": "CBS FEM  U16 INTERT",
-      "latestTeamIdExtern": 80126,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CBS FEM  U16 INTERT C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80126:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80126,
-          "teamName": "CBS FEM  U16 INTERT",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 15,
-          "pointsFor": 1016,
-          "pointsAgainst": 1282,
-          "pointDiff": -266,
-          "wins": 6,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 9,
-          "avgValuation": 14.681818181818182
-        }
-      ]
-    },
-    {
       "key": "TEAM:80129",
       "label": "CBS FEM  U18 NIVELL A",
       "latestTeamIdExtern": 80129,
@@ -7269,90 +6373,6 @@
           "ties": 0,
           "standingPosition": 12,
           "avgValuation": 20.105263157894736
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80119",
-      "label": "CBS FEM U15 1ER ANY",
-      "latestTeamIdExtern": 80119,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CBS FEM U15 1ER ANY C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80119:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80119,
-          "teamName": "CBS FEM U15 1ER ANY",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 30,
-          "pointsFor": 1619,
-          "pointsAgainst": 1342,
-          "pointDiff": 277,
-          "wins": 20,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 32.84615384615385
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80127",
-      "label": "CBS FEM U16",
-      "latestTeamIdExtern": 80127,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "CBS FEM U16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80127:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80127,
-          "teamName": "CBS FEM U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 25,
-          "playersCount": 24,
-          "pointsFor": 1767,
-          "pointsAgainst": 1318,
-          "pointDiff": 449,
-          "wins": 20,
-          "losses": 5,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 0.48
-        }
-      ]
-    },
-    {
-      "key": "TEAM:81241",
-      "label": "CCE MONTESSORI PALAU A",
-      "latestTeamIdExtern": 81241,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CCE MONTESSORI PALAU A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:81241:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 81241,
-          "teamName": "CCE MONTESSORI PALAU A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 11,
-          "pointsFor": 1663,
-          "pointsAgainst": 1445,
-          "pointDiff": 218,
-          "wins": 17,
-          "losses": 9,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 29.346153846153847
         }
       ]
     },
@@ -7497,34 +6517,6 @@
       ]
     },
     {
-      "key": "TEAM:78599",
-      "label": "CE SANT NICOLAU 1",
-      "latestTeamIdExtern": 78599,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "CE SANT NICOLAU 1 C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78599:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78599,
-          "teamName": "CE SANT NICOLAU 1",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 29,
-          "playersCount": 13,
-          "pointsFor": 1597,
-          "pointsAgainst": 1809,
-          "pointDiff": -212,
-          "wins": 11,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": -15.517241379310345
-        }
-      ]
-    },
-    {
       "key": "TEAM:78614",
       "label": "CE SANT NICOLAU 3",
       "latestTeamIdExtern": 78614,
@@ -7633,34 +6625,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 20.94736842105263
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79932",
-      "label": "CENG TALLERS CARDENYES",
-      "latestTeamIdExtern": 79932,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "CENG TALLERS CARDENYES C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79932:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79932,
-          "teamName": "CENG TALLERS CARDENYES",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 26,
-          "playersCount": 12,
-          "pointsFor": 1556,
-          "pointsAgainst": 1384,
-          "pointDiff": 172,
-          "wins": 17,
-          "losses": 9,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": -18.076923076923077
         }
       ]
     },
@@ -7777,34 +6741,6 @@
       ]
     },
     {
-      "key": "TEAM:80238",
-      "label": "CESA FEMEN\u00CD SANT ADRI\u00C0 A",
-      "latestTeamIdExtern": 80238,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "CESA FEMEN\u00CD SANT ADRI\u00C0 A C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80238:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80238,
-          "teamName": "CESA FEMEN\u00CD SANT ADRI\u00C0 A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 27,
-          "playersCount": 16,
-          "pointsFor": 1888,
-          "pointsAgainst": 1432,
-          "pointDiff": 456,
-          "wins": 22,
-          "losses": 5,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": -2.6296296296296298
-        }
-      ]
-    },
-    {
       "key": "TEAM:80227",
       "label": "CESA FEMEN\u00CD SANT ADRI\u00C0 A",
       "latestTeamIdExtern": 80227,
@@ -7829,34 +6765,6 @@
           "ties": 0,
           "standingPosition": 4,
           "avgValuation": -24.076923076923077
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78471",
-      "label": "CESET U16 VERD",
-      "latestTeamIdExtern": 78471,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CESET U16 VERD C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78471:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78471,
-          "teamName": "CESET U16 VERD",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 11,
-          "pointsFor": 1865,
-          "pointsAgainst": 1327,
-          "pointDiff": 538,
-          "wins": 22,
-          "losses": 4,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 40.5
         }
       ]
     },
@@ -7941,34 +6849,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 24.82608695652174
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80317",
-      "label": "CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA",
-      "latestTeamIdExtern": 80317,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80317:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80317,
-          "teamName": "CL\u00CDNICA DENTAL BAC DE RODA-C.B GRUP BARNA",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 14,
-          "pointsFor": 1711,
-          "pointsAgainst": 1318,
-          "pointDiff": 393,
-          "wins": 20,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 32.30769230769231
         }
       ]
     },
@@ -8169,34 +7049,6 @@
       ]
     },
     {
-      "key": "TEAM:79271",
-      "label": "CLUB BASQUET ARGENTONA GROC",
-      "latestTeamIdExtern": 79271,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "CLUB BASQUET ARGENTONA GROC C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79271:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79271,
-          "teamName": "CLUB BASQUET ARGENTONA GROC",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1263,
-          "pointsAgainst": 1211,
-          "pointDiff": 52,
-          "wins": 14,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 19
-        }
-      ]
-    },
-    {
       "key": "TEAM:81810",
       "label": "CLUB BASQUET MONTBLANC",
       "latestTeamIdExtern": 81810,
@@ -8389,34 +7241,6 @@
           "ties": 0,
           "standingPosition": 5,
           "avgValuation": 15.083333333333334
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80804",
-      "label": "CLUB ESPORTIU DIAGONAL MAR A",
-      "latestTeamIdExtern": 80804,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "CLUB ESPORTIU DIAGONAL MAR A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80804:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80804,
-          "teamName": "CLUB ESPORTIU DIAGONAL MAR A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 15,
-          "pointsFor": 1472,
-          "pointsAgainst": 1502,
-          "pointDiff": -30,
-          "wins": 11,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 20.5
         }
       ]
     },
@@ -9681,34 +8505,6 @@
       ]
     },
     {
-      "key": "TEAM:79491",
-      "label": "FEMENI MARESME 3 VILES - CF",
-      "latestTeamIdExtern": 79491,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "FEMENI MARESME 3 VILES - CF C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79491:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79491,
-          "teamName": "FEMENI MARESME 3 VILES - CF",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 18,
-          "pointsFor": 1409,
-          "pointsAgainst": 1529,
-          "pointDiff": -120,
-          "wins": 11,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 23.96153846153846
-        }
-      ]
-    },
-    {
       "key": "TEAM:81574",
       "label": "FEMENI MARESME 3 VILES - JF",
       "latestTeamIdExtern": 81574,
@@ -9817,34 +8613,6 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 29.869565217391305
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79530",
-      "label": "FEMEN\u00CD OSONA BLANC- OVA PROJECTS",
-      "latestTeamIdExtern": 79530,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "FEMEN\u00CD OSONA BLANC- OVA PROJECTS C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79530:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79530,
-          "teamName": "FEMEN\u00CD OSONA BLANC- OVA PROJECTS",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 14,
-          "pointsFor": 1540,
-          "pointsAgainst": 1575,
-          "pointDiff": -35,
-          "wins": 14,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 26.192307692307693
         }
       ]
     },
@@ -9961,62 +8729,6 @@
       ]
     },
     {
-      "key": "TEAM:80240",
-      "label": "FEMEN\u00CD SANT ADRI\u00C0 B",
-      "latestTeamIdExtern": 80240,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "FEMEN\u00CD SANT ADRI\u00C0 B C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80240:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80240,
-          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 B",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 22,
-          "pointsFor": 1640,
-          "pointsAgainst": 1376,
-          "pointDiff": 264,
-          "wins": 17,
-          "losses": 9,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 32.69230769230769
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80233",
-      "label": "FEMEN\u00CD SANT ADRI\u00C0 LILA",
-      "latestTeamIdExtern": 80233,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "FEMEN\u00CD SANT ADRI\u00C0 LILA C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80233:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80233,
-          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 LILA",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 15,
-          "pointsFor": 1331,
-          "pointsAgainst": 1424,
-          "pointDiff": -93,
-          "wins": 10,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 24.36
-        }
-      ]
-    },
-    {
       "key": "TEAM:83622",
       "label": "FISITOTER\u00C0PIA LAURA IB\u00C1\u00D1EZ - CB MONTPEDR\u00D3S C",
       "latestTeamIdExtern": 83622,
@@ -10125,34 +8837,6 @@
           "ties": 0,
           "standingPosition": 4,
           "avgValuation": 19.857142857142858
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79284",
-      "label": "GEIEG VEDRUNA",
-      "latestTeamIdExtern": 79284,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "GEIEG VEDRUNA C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79284:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79284,
-          "teamName": "GEIEG VEDRUNA",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 23,
-          "playersCount": 12,
-          "pointsFor": 1187,
-          "pointsAgainst": 1398,
-          "pointDiff": -211,
-          "wins": 7,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 6,
-          "avgValuation": 17.434782608695652
         }
       ]
     },
@@ -10633,90 +9317,6 @@
       ]
     },
     {
-      "key": "TEAM:78587",
-      "label": "JET TERRASSA U15",
-      "latestTeamIdExtern": 78587,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "JET TERRASSA U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78587:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78587,
-          "teamName": "JET TERRASSA U15",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1341,
-          "pointsAgainst": 1840,
-          "pointDiff": -499,
-          "wins": 4,
-          "losses": 21,
-          "ties": 0,
-          "standingPosition": 11,
-          "avgValuation": 22.8
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80682",
-      "label": "JET TERRASSA U16",
-      "latestTeamIdExtern": 80682,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "JET TERRASSA U16 C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80682:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80682,
-          "teamName": "JET TERRASSA U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 28,
-          "playersCount": 16,
-          "pointsFor": 1431,
-          "pointsAgainst": 1839,
-          "pointDiff": -408,
-          "wins": 7,
-          "losses": 21,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": -22.25
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80685",
-      "label": "JET TERRASSA U16 BLAU",
-      "latestTeamIdExtern": 80685,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "JET TERRASSA U16 BLAU C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80685:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80685,
-          "teamName": "JET TERRASSA U16 BLAU",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 26,
-          "pointsFor": 1054,
-          "pointsAgainst": 1387,
-          "pointDiff": -333,
-          "wins": 5,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 10,
-          "avgValuation": 17.19047619047619
-        }
-      ]
-    },
-    {
       "key": "TEAM:82815",
       "label": "JF MADERAS SAN PASQUAL - AECAM MALGRAT",
       "latestTeamIdExtern": 82815,
@@ -10745,34 +9345,6 @@
       ]
     },
     {
-      "key": "TEAM:80173",
-      "label": "JOVENTUT BADALONA 1",
-      "latestTeamIdExtern": 80173,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "JOVENTUT BADALONA 1 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80173:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80173,
-          "teamName": "JOVENTUT BADALONA 1",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 14,
-          "pointsFor": 1370,
-          "pointsAgainst": 1316,
-          "pointDiff": 54,
-          "wins": 9,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 23.666666666666668
-        }
-      ]
-    },
-    {
       "key": "TEAM:80171",
       "label": "JOVENTUT BADALONA 1",
       "latestTeamIdExtern": 80171,
@@ -10797,62 +9369,6 @@
           "ties": 0,
           "standingPosition": 4,
           "avgValuation": 17.294117647058822
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80168",
-      "label": "JOVENTUT BADALONA 2",
-      "latestTeamIdExtern": 80168,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "JOVENTUT BADALONA 2 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80168:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80168,
-          "teamName": "JOVENTUT BADALONA 2",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 21,
-          "pointsFor": 1035,
-          "pointsAgainst": 1783,
-          "pointDiff": -748,
-          "wins": 1,
-          "losses": 25,
-          "ties": 0,
-          "standingPosition": 14,
-          "avgValuation": 8.961538461538462
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80172",
-      "label": "JOVENTUT BADALONA A",
-      "latestTeamIdExtern": 80172,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "JOVENTUT BADALONA A C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80172:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80172,
-          "teamName": "JOVENTUT BADALONA A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 27,
-          "playersCount": 30,
-          "pointsFor": 1842,
-          "pointsAgainst": 1377,
-          "pointDiff": 465,
-          "wins": 21,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": -9
         }
       ]
     },
@@ -11105,34 +9621,6 @@
           "ties": 0,
           "standingPosition": 5,
           "avgValuation": 12.777777777777779
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79740",
-      "label": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS",
-      "latestTeamIdExtern": 79740,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79740:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79740,
-          "teamName": "LA SALCHICHA PELEONA VILAB\u00C0SQUET VILADECANS",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 11,
-          "pointsFor": 1565,
-          "pointsAgainst": 1857,
-          "pointDiff": -292,
-          "wins": 4,
-          "losses": 24,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": 25
         }
       ]
     },
@@ -11473,34 +9961,6 @@
       ]
     },
     {
-      "key": "TEAM:79802",
-      "label": "LLU\u00CFSOS DE GR\u00C0CIA A\u00A0",
-      "latestTeamIdExtern": 79802,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "LLU\u00CFSOS DE GR\u00C0CIA A\u00A0 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79802:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79802,
-          "teamName": "LLU\u00CFSOS DE GR\u00C0CIA A\u00A0",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 14,
-          "pointsFor": 1466,
-          "pointsAgainst": 1274,
-          "pointDiff": 192,
-          "wins": 14,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 24.96
-        }
-      ]
-    },
-    {
       "key": "TEAM:81522",
       "label": "LLU\u00CFSOS DE GR\u00C0CIA B",
       "latestTeamIdExtern": 81522,
@@ -11525,62 +9985,6 @@
           "ties": 0,
           "standingPosition": 7,
           "avgValuation": 6.352941176470588
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80638",
-      "label": "M\u00C0GIC BADALONA CB SANT JOSEP - CAF",
-      "latestTeamIdExtern": 80638,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "M\u00C0GIC BADALONA CB SANT JOSEP - CAF C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80638:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80638,
-          "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - CAF",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 18,
-          "pointsFor": 1683,
-          "pointsAgainst": 1395,
-          "pointDiff": 288,
-          "wins": 19,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 33.15384615384615
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80640",
-      "label": "M\u00C0GIC BADALONA CB SANT JOSEP - CBF",
-      "latestTeamIdExtern": 80640,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "M\u00C0GIC BADALONA CB SANT JOSEP - CBF C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80640:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80640,
-          "teamName": "M\u00C0GIC BADALONA CB SANT JOSEP - CBF",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 14,
-          "pointsFor": 1421,
-          "pointsAgainst": 1513,
-          "pointDiff": -92,
-          "wins": 8,
-          "losses": 17,
-          "ties": 0,
-          "standingPosition": 7,
-          "avgValuation": 27.88
         }
       ]
     },
@@ -11861,62 +10265,6 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 14.285714285714286
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78859",
-      "label": "NAYOX FOR\u00C7A LLEIDA A",
-      "latestTeamIdExtern": 78859,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "NAYOX FOR\u00C7A LLEIDA A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78859:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78859,
-          "teamName": "NAYOX FOR\u00C7A LLEIDA A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 17,
-          "pointsFor": 1694,
-          "pointsAgainst": 1336,
-          "pointDiff": 358,
-          "wins": 16,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 35.833333333333336
-        }
-      ]
-    },
-    {
-      "key": "TEAM:78857",
-      "label": "NAYOX FOR\u00C7A LLEIDA B",
-      "latestTeamIdExtern": 78857,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "NAYOX FOR\u00C7A LLEIDA B C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78857:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78857,
-          "teamName": "NAYOX FOR\u00C7A LLEIDA B",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1659,
-          "pointsAgainst": 1441,
-          "pointDiff": 218,
-          "wins": 18,
-          "losses": 7,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 30.08
         }
       ]
     },
@@ -12229,34 +10577,6 @@
       ]
     },
     {
-      "key": "TEAM:79020",
-      "label": "PEPITU MANRESA CBF U15",
-      "latestTeamIdExtern": 79020,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "PEPITU MANRESA CBF U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79020:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79020,
-          "teamName": "PEPITU MANRESA CBF U15",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 13,
-          "pointsFor": 1510,
-          "pointsAgainst": 1415,
-          "pointDiff": 95,
-          "wins": 15,
-          "losses": 11,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 27.884615384615383
-        }
-      ]
-    },
-    {
       "key": "TEAM:79495",
       "label": "PETROPINTO ASFE B",
       "latestTeamIdExtern": 79495,
@@ -12313,62 +10633,6 @@
       ]
     },
     {
-      "key": "TEAM:79493",
-      "label": "PETROPINTO ASFE U15 VERD",
-      "latestTeamIdExtern": 79493,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "PETROPINTO ASFE U15 VERD C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79493:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79493,
-          "teamName": "PETROPINTO ASFE U15 VERD",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 15,
-          "pointsFor": 1482,
-          "pointsAgainst": 1554,
-          "pointDiff": -72,
-          "wins": 12,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 19.96153846153846
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79501",
-      "label": "PETROPINTO ASFE U16",
-      "latestTeamIdExtern": 79501,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "PETROPINTO ASFE U16 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79501:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79501,
-          "teamName": "PETROPINTO ASFE U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 25,
-          "pointsFor": 1317,
-          "pointsAgainst": 1398,
-          "pointDiff": -81,
-          "wins": 11,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 19.791666666666668
-        }
-      ]
-    },
-    {
       "key": "TEAM:79515",
       "label": "PETROPINTO ASFE U18 VERD",
       "latestTeamIdExtern": 79515,
@@ -12397,34 +10661,6 @@
       ]
     },
     {
-      "key": "TEAM:79921",
-      "label": "PRISCO-L\u0027ESCALA",
-      "latestTeamIdExtern": 79921,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "PRISCO-L\u0027ESCALA C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79921:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79921,
-          "teamName": "PRISCO-L\u0027ESCALA",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 12,
-          "pointsFor": 1333,
-          "pointsAgainst": 1380,
-          "pointDiff": -47,
-          "wins": 12,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 18.92
-        }
-      ]
-    },
-    {
       "key": "TEAM:79922",
       "label": "PRISCO-L\u0027ESCALA",
       "latestTeamIdExtern": 79922,
@@ -12449,34 +10685,6 @@
           "ties": 0,
           "standingPosition": 11,
           "avgValuation": 26.85
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79379",
-      "label": "PROMOVIATGES CBF CERDANYOLA U16",
-      "latestTeamIdExtern": 79379,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "PROMOVIATGES CBF CERDANYOLA U16 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79379:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79379,
-          "teamName": "PROMOVIATGES CBF CERDANYOLA U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 16,
-          "pointsFor": 1258,
-          "pointsAgainst": 1370,
-          "pointDiff": -112,
-          "wins": 11,
-          "losses": 15,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 19.23076923076923
         }
       ]
     },
@@ -12593,34 +10801,6 @@
       ]
     },
     {
-      "key": "TEAM:79051",
-      "label": "RACC ESPLUGUES - CB SANT JUST U16",
-      "latestTeamIdExtern": 79051,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "RACC ESPLUGUES - CB SANT JUST U16 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79051:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79051,
-          "teamName": "RACC ESPLUGUES - CB SANT JUST U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 21,
-          "playersCount": 14,
-          "pointsFor": 1064,
-          "pointsAgainst": 1353,
-          "pointDiff": -289,
-          "wins": 4,
-          "losses": 17,
-          "ties": 0,
-          "standingPosition": 8,
-          "avgValuation": 13.142857142857142
-        }
-      ]
-    },
-    {
       "key": "TEAM:80566",
       "label": "REUS DEPORTIU B",
       "latestTeamIdExtern": 80566,
@@ -12701,34 +10881,6 @@
           "ties": 0,
           "standingPosition": 4,
           "avgValuation": 16.4
-        }
-      ]
-    },
-    {
-      "key": "TEAM:80626",
-      "label": "REUS PLOMS SALLE CFU16",
-      "latestTeamIdExtern": 80626,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "REUS PLOMS SALLE CFU16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80626:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80626,
-          "teamName": "REUS PLOMS SALLE CFU16",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 27,
-          "playersCount": 14,
-          "pointsFor": 1472,
-          "pointsAgainst": 1678,
-          "pointDiff": -206,
-          "wins": 13,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": -22.48148148148148
         }
       ]
     },
@@ -12925,34 +11077,6 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": -30.074074074074073
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79198",
-      "label": "SABADELL BQ VALL\u00C8S U15F",
-      "latestTeamIdExtern": 79198,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "SABADELL BQ VALL\u00C8S U15F C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79198:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79198,
-          "teamName": "SABADELL BQ VALL\u00C8S U15F",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 15,
-          "pointsFor": 1442,
-          "pointsAgainst": 1473,
-          "pointDiff": -31,
-          "wins": 15,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 10.535714285714286
         }
       ]
     },
@@ -13293,34 +11417,6 @@
       ]
     },
     {
-      "key": "TEAM:80069",
-      "label": "SEDIS GDOS",
-      "latestTeamIdExtern": 80069,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "SEDIS GDOS C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80069:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80069,
-          "teamName": "SEDIS GDOS",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 23,
-          "playersCount": 11,
-          "pointsFor": 1236,
-          "pointsAgainst": 1323,
-          "pointDiff": -87,
-          "wins": 10,
-          "losses": 13,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 22.434782608695652
-        }
-      ]
-    },
-    {
       "key": "TEAM:79856",
       "label": "SESE A",
       "latestTeamIdExtern": 79856,
@@ -13349,34 +11445,6 @@
       ]
     },
     {
-      "key": "TEAM:79860",
-      "label": "SESE A",
-      "latestTeamIdExtern": 79860,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "SESE A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79860:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79860,
-          "teamName": "SESE A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 18,
-          "pointsFor": 1521,
-          "pointsAgainst": 1411,
-          "pointDiff": 110,
-          "wins": 15,
-          "losses": 10,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 31.24
-        }
-      ]
-    },
-    {
       "key": "TEAM:79859",
       "label": "SESE A",
       "latestTeamIdExtern": 79859,
@@ -13401,34 +11469,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 37.27777777777778
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79879",
-      "label": "SESE B",
-      "latestTeamIdExtern": 79879,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "SESE B C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79879:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79879,
-          "teamName": "SESE B",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 16,
-          "pointsFor": 1785,
-          "pointsAgainst": 1518,
-          "pointDiff": 267,
-          "wins": 20,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 26.428571428571427
         }
       ]
     },
@@ -13597,118 +11637,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 13.2
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79022",
-      "label": "SIMON MOBLES OFICINA MANRESA CBF U16",
-      "latestTeamIdExtern": 79022,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "SIMON MOBLES OFICINA MANRESA CBF U16 C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79022:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79022,
-          "teamName": "SIMON MOBLES OFICINA MANRESA CBF U16",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 29,
-          "playersCount": 16,
-          "pointsFor": 1704,
-          "pointsAgainst": 1534,
-          "pointDiff": 170,
-          "wins": 15,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": -9.655172413793103
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79668",
-      "label": "TALENOM BOET MATAR\u00D3",
-      "latestTeamIdExtern": 79668,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "TALENOM BOET MATAR\u00D3 C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79668:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79668,
-          "teamName": "TALENOM BOET MATAR\u00D3",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 17,
-          "pointsFor": 1564,
-          "pointsAgainst": 1473,
-          "pointDiff": 91,
-          "wins": 16,
-          "losses": 10,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 28.346153846153847
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79651",
-      "label": "TALENOM BOET MATAR\u00D3 2010",
-      "latestTeamIdExtern": 79651,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent B",
-      "searchText": "TALENOM BOET MATAR\u00D3 2010 C.c. Cadet Femen\u00ED Preferent Preferent B",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79651:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79651,
-          "teamName": "TALENOM BOET MATAR\u00D3 2010",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent B",
-          "matchesPlayed": 26,
-          "playersCount": 17,
-          "pointsFor": 1266,
-          "pointsAgainst": 1743,
-          "pointDiff": -477,
-          "wins": 4,
-          "losses": 22,
-          "ties": 0,
-          "standingPosition": 12,
-          "avgValuation": -28.692307692307693
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79664",
-      "label": "TALENOM BOET MATAR\u00D3 2011",
-      "latestTeamIdExtern": 79664,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "TALENOM BOET MATAR\u00D3 2011 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79664:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79664,
-          "teamName": "TALENOM BOET MATAR\u00D3 2011",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 17,
-          "pointsFor": 1398,
-          "pointsAgainst": 1647,
-          "pointDiff": -249,
-          "wins": 10,
-          "losses": 18,
-          "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 15.464285714285714
         }
       ]
     },
@@ -13909,62 +11837,6 @@
       ]
     },
     {
-      "key": "TEAM:79336",
-      "label": "TGN B\u00C0SQUET 10A",
-      "latestTeamIdExtern": 79336,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "TGN B\u00C0SQUET 10A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79336:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79336,
-          "teamName": "TGN B\u00C0SQUET 10A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 24,
-          "playersCount": 17,
-          "pointsFor": 1411,
-          "pointsAgainst": 1276,
-          "pointDiff": 135,
-          "wins": 14,
-          "losses": 10,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 29.958333333333332
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79349",
-      "label": "TGN B\u00C0SQUET 11A",
-      "latestTeamIdExtern": 79349,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "TGN B\u00C0SQUET 11A C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79349:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79349,
-          "teamName": "TGN B\u00C0SQUET 11A",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 28,
-          "playersCount": 13,
-          "pointsFor": 1536,
-          "pointsAgainst": 1703,
-          "pointDiff": -167,
-          "wins": 12,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 22
-        }
-      ]
-    },
-    {
       "key": "TEAM:79343",
       "label": "TGN B\u00C0SQUET 12A",
       "latestTeamIdExtern": 79343,
@@ -14049,34 +11921,6 @@
       ]
     },
     {
-      "key": "TEAM:79832",
-      "label": "U. B. LLEFI\u00C0 A",
-      "latestTeamIdExtern": 79832,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "U. B. LLEFI\u00C0 A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79832:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79832,
-          "teamName": "U. B. LLEFI\u00C0 A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1220,
-          "pointsAgainst": 1226,
-          "pointDiff": -6,
-          "wins": 13,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 16.72
-        }
-      ]
-    },
-    {
       "key": "TEAM:79834",
       "label": "U. B. LLEFI\u00C0 B",
       "latestTeamIdExtern": 79834,
@@ -14129,34 +11973,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 25.565217391304348
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79298",
-      "label": "U.E. CLARET A",
-      "latestTeamIdExtern": 79298,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "U.E. CLARET A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79298:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79298,
-          "teamName": "U.E. CLARET A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1241,
-          "pointsAgainst": 1272,
-          "pointDiff": -31,
-          "wins": 13,
-          "losses": 12,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 20
         }
       ]
     },
@@ -14441,34 +12257,6 @@
       ]
     },
     {
-      "key": "TEAM:80855",
-      "label": "U.E.MATAR\u00D3 - CBF",
-      "latestTeamIdExtern": 80855,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "U.E.MATAR\u00D3 - CBF C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80855:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80855,
-          "teamName": "U.E.MATAR\u00D3 - CBF",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 14,
-          "pointsFor": 1564,
-          "pointsAgainst": 1281,
-          "pointDiff": 283,
-          "wins": 20,
-          "losses": 6,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 31.615384615384617
-        }
-      ]
-    },
-    {
       "key": "TEAM:80886",
       "label": "U.E.MATAR\u00D3 - IAF",
       "latestTeamIdExtern": 80886,
@@ -14665,34 +12453,6 @@
       ]
     },
     {
-      "key": "TEAM:80872",
-      "label": "U.E.MATAR\u00D3 -CAF",
-      "latestTeamIdExtern": 80872,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent \u00B7 Preferent A",
-      "searchText": "U.E.MATAR\u00D3 -CAF C.c. Cadet Femen\u00ED Preferent Preferent A",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:80872:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 80872,
-          "teamName": "U.E.MATAR\u00D3 -CAF",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent",
-          "levelName": "Preferent A",
-          "matchesPlayed": 26,
-          "playersCount": 15,
-          "pointsFor": 1734,
-          "pointsAgainst": 1437,
-          "pointDiff": 297,
-          "wins": 18,
-          "losses": 8,
-          "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": -10.115384615384615
-        }
-      ]
-    },
-    {
       "key": "TEAM:79955",
       "label": "U10 JOVENTUT LES CORTS",
       "latestTeamIdExtern": 79955,
@@ -14717,62 +12477,6 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 35.76470588235294
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79978",
-      "label": "U15 JOVENTUT LES CORTS",
-      "latestTeamIdExtern": 79978,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "U15 JOVENTUT LES CORTS C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79978:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79978,
-          "teamName": "U15 JOVENTUT LES CORTS",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 27,
-          "playersCount": 16,
-          "pointsFor": 1571,
-          "pointsAgainst": 1420,
-          "pointDiff": 151,
-          "wins": 13,
-          "losses": 14,
-          "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 24.037037037037038
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79966",
-      "label": "U16 JOVENTUT LES CORTS",
-      "latestTeamIdExtern": 79966,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "U16 JOVENTUT LES CORTS C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79966:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79966,
-          "teamName": "U16 JOVENTUT LES CORTS",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 22,
-          "pointsFor": 1372,
-          "pointsAgainst": 1467,
-          "pointDiff": -95,
-          "wins": 9,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 6,
-          "avgValuation": 21.64
         }
       ]
     },
@@ -14861,34 +12565,6 @@
       ]
     },
     {
-      "key": "TEAM:79327",
-      "label": "UB MIR A",
-      "latestTeamIdExtern": 79327,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "UB MIR A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79327:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79327,
-          "teamName": "UB MIR A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 22,
-          "playersCount": 19,
-          "pointsFor": 716,
-          "pointsAgainst": 1272,
-          "pointDiff": -556,
-          "wins": 0,
-          "losses": 22,
-          "ties": 0,
-          "standingPosition": 13,
-          "avgValuation": 3.727272727272727
-        }
-      ]
-    },
-    {
       "key": "TEAM:81567",
       "label": "UB MIR A",
       "latestTeamIdExtern": 81567,
@@ -14969,34 +12645,6 @@
           "ties": 0,
           "standingPosition": 8,
           "avgValuation": -10.181818181818182
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79486",
-      "label": "UCAP SCOOTFAST U15",
-      "latestTeamIdExtern": 79486,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "searchText": "UCAP SCOOTFAST U15 C.c. Cadet Femen\u00ED Preferent 1r. Any",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79486:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79486,
-          "teamName": "UCAP SCOOTFAST U15",
-          "categoryName": "C.c. Cadet Femen\u00ED Preferent 1r. Any",
-          "levelName": "",
-          "matchesPlayed": 25,
-          "playersCount": 13,
-          "pointsFor": 1147,
-          "pointsAgainst": 1478,
-          "pointDiff": -331,
-          "wins": 6,
-          "losses": 19,
-          "ties": 0,
-          "standingPosition": 9,
-          "avgValuation": 16.96
         }
       ]
     },
@@ -15729,34 +13377,6 @@
       ]
     },
     {
-      "key": "TEAM:78985",
-      "label": "VIROLAI A",
-      "latestTeamIdExtern": 78985,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "VIROLAI A C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:78985:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 78985,
-          "teamName": "VIROLAI A",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 26,
-          "playersCount": 14,
-          "pointsFor": 1514,
-          "pointsAgainst": 1343,
-          "pointDiff": 171,
-          "wins": 16,
-          "losses": 10,
-          "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 28.076923076923077
-        }
-      ]
-    },
-    {
       "key": "TEAM:78982",
       "label": "VIROLAI NEGRE",
       "latestTeamIdExtern": 78982,
@@ -15809,34 +13429,6 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 16.636363636363637
-        }
-      ]
-    },
-    {
-      "key": "TEAM:79612",
-      "label": "VIRONE CB MONTPEDR\u00D3S",
-      "latestTeamIdExtern": 79612,
-      "meta": "1 temporada \u00B7 C.c. Cadet Femen\u00ED Interterritorial",
-      "searchText": "VIRONE CB MONTPEDR\u00D3S C.c. Cadet Femen\u00ED Interterritorial",
-      "seasonSummaries": [
-        {
-          "key": "TEAM:79612:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "teamIdExtern": 79612,
-          "teamName": "VIRONE CB MONTPEDR\u00D3S",
-          "categoryName": "C.c. Cadet Femen\u00ED Interterritorial",
-          "levelName": "",
-          "matchesPlayed": 23,
-          "playersCount": 14,
-          "pointsFor": 1209,
-          "pointsAgainst": 1414,
-          "pointDiff": -205,
-          "wins": 7,
-          "losses": 16,
-          "ties": 0,
-          "standingPosition": 6,
-          "avgValuation": 19.82608695652174
         }
       ]
     }
