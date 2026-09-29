@@ -176,7 +176,8 @@ public sealed class MatchAnalysisService
                         TopScorerPoints = matchTopScorer?.Points ?? 0,
                         TeamTopScorer = teamTopScorer?.PlayerName ?? "",
                         TeamTopScorerPoints = teamTopScorer?.Points ?? 0,
-                        Insights = MatchInsightsBuilder.BuildMatchInsights(match, team, isHome, moves),
+                        Insights = match.RecoveredInsightsByTeamIdIntern?.GetValueOrDefault(team.TeamIdIntern)
+                                   ?? MatchInsightsBuilder.BuildMatchInsights(match, team, isHome, moves),
                         MatchReport = teamSpecificReport?.Summary ?? matchReport?.Summary ?? "",
                         MatchReportGeneratedAtUtc = teamSpecificReport?.GeneratedAtUtc ?? matchReport?.GeneratedAtUtc,
                         MatchReportModel = teamSpecificReport?.Model ?? matchReport?.Model ?? ""

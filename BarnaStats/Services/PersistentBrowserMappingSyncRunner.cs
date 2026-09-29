@@ -9,6 +9,7 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
     private readonly SemaphoreSlim _semaphore = new(1, 1);
     private IPlaywright? _playwright;
     private IBrowserContext? _browserContext;
+    private volatile bool _browserContextClosed;
     private bool _disposed;
 
     public PersistentBrowserMappingSyncRunner(string browserProfileDir)
@@ -29,18 +30,40 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
         {
             ThrowIfDisposed();
             await EnsureBrowserContextAsync();
-            return await _syncService.SyncWithBrowserContextAsync(
-                _browserContext!,
-                existingMappings,
-                explicitMatchWebIds,
-                includeAll,
-                sourceUrl,
-                interactive);
+
+            try
+            {
+                return await RunSyncAsync(existingMappings, explicitMatchWebIds, includeAll, sourceUrl, interactive);
+            }
+            catch (PlaywrightException ex) when (IsClosedTargetError(ex))
+            {
+                // El navegador se cerró entre syncs (ventana cerrada a mano o caída): se relanza y se reintenta una vez.
+                Console.WriteLine("El navegador persistente estaba cerrado. Se vuelve a abrir y se reintenta.");
+                await ResetBrowserContextAsync();
+                await EnsureBrowserContextAsync();
+                return await RunSyncAsync(existingMappings, explicitMatchWebIds, includeAll, sourceUrl, interactive);
+            }
         }
         finally
         {
             _semaphore.Release();
         }
+    }
+
+    private Task<MatchMappingSyncResult> RunSyncAsync(
+        IReadOnlyList<MatchMapping> existingMappings,
+        IReadOnlyCollection<int> explicitMatchWebIds,
+        bool includeAll,
+        string? sourceUrl,
+        bool interactive)
+    {
+        return _syncService.SyncWithBrowserContextAsync(
+            _browserContext!,
+            existingMappings,
+            explicitMatchWebIds,
+            includeAll,
+            sourceUrl,
+            interactive);
     }
 
     public async ValueTask DisposeAsync()
@@ -75,14 +98,19 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
 
     private async Task EnsureBrowserContextAsync()
     {
-        if (_browserContext is not null)
+        if (_browserContext is not null && !_browserContextClosed)
             return;
 
+        await ResetBrowserContextAsync();
         _playwright = await Playwright.CreateAsync();
 
         try
         {
-            _browserContext = await _syncService.LaunchContextAsync(_playwright, headless: false);
+            var browserContext = await _syncService.LaunchContextAsync(_playwright, headless: false);
+            _browserContextClosed = false;
+            browserContext.Close += (_, _) => _browserContextClosed = true;
+            _browserContext = browserContext;
+
             if (_browserContext.Pages.Count == 0)
                 await _browserContext.NewPageAsync();
         }
@@ -92,6 +120,33 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
             _playwright = null;
             throw;
         }
+    }
+
+    private async Task ResetBrowserContextAsync()
+    {
+        if (_browserContext is not null)
+        {
+            try
+            {
+                await _browserContext.CloseAsync();
+            }
+            catch (PlaywrightException)
+            {
+                // Ya estaba cerrado.
+            }
+
+            _browserContext = null;
+        }
+
+        _playwright?.Dispose();
+        _playwright = null;
+    }
+
+    private static bool IsClosedTargetError(PlaywrightException ex)
+    {
+        // Los dos síntomas vistos cuando el navegador de la sync se cierra o queda colgado.
+        return ex.Message.Contains("has been closed", StringComparison.OrdinalIgnoreCase) ||
+               ex.Message.Contains("Failed to open a new tab", StringComparison.OrdinalIgnoreCase);
     }
 
     private void ThrowIfDisposed()

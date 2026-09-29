@@ -270,6 +270,16 @@ public sealed class SyncOrchestrator
                 job.SourceUrl,
                 job.SourceId ?? TryGetPhaseIdFromSourceUrl(job.SourceUrl));
 
+            if (await GetPastSeasonBlockReasonAsync(source) is { } blockReason)
+            {
+                job.Status = SyncJobStatus.Failed;
+                job.CompletedAtUtc = DateTimeOffset.UtcNow;
+                job.ExitCode = 1;
+                job.Error = blockReason;
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] BLOQUEADO: {blockReason}");
+                return;
+            }
+
             if (await TrySkipCompletedPhaseAsync(source, job.ForceRefresh, job.AppendLog))
             {
                 job.ExitCode = 0;
@@ -338,6 +348,7 @@ public sealed class SyncOrchestrator
         job.AppendLog(startMessage);
 
         var failures = new List<string>();
+        var blockedSources = new List<string>();
         var analysisDirtyMarker = Path.Combine(_repoPaths.TempDir, $"analysis-dirty-{job.JobId}.marker");
 
         try
@@ -353,6 +364,14 @@ public sealed class SyncOrchestrator
                 var reference = source.Reference;
 
                 job.AppendLog($"{prefix} {reference}");
+
+                if (await GetPastSeasonBlockReasonAsync(source) is { } blockReason)
+                {
+                    // Se omite sin contarla como fallo: el resto del lote sigue.
+                    blockedSources.Add(reference);
+                    job.AppendLog($"{prefix} BLOQUEADO: {blockReason}");
+                    continue;
+                }
 
                 if (await TrySkipCompletedPhaseAsync(
                         source,
@@ -396,6 +415,11 @@ public sealed class SyncOrchestrator
             else
             {
                 job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Sin cambios acumulados. Se reutiliza el analysis.json actual.");
+            }
+
+            if (blockedSources.Count > 0)
+            {
+                job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Omitidas {blockedSources.Count} fases de temporadas pasadas para no perder sus datos.");
             }
 
             job.CompletedAtUtc = DateTimeOffset.UtcNow;
@@ -526,6 +550,14 @@ public sealed class SyncOrchestrator
             interactive: false,
             explicitMatchIds: Array.Empty<int>(),
             appendLog);
+    }
+
+    private async Task<string?> GetPastSeasonBlockReasonAsync(BatchSourceEntry source)
+    {
+        if (source.PhaseId is not > 0)
+            return null;
+
+        return await PastSeasonImportGuard.GetBlockReasonAsync(CreateStorageForSource(source), DateTime.Now);
     }
 
     private async Task<bool> TrySkipCompletedPhaseAsync(

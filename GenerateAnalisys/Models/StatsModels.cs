@@ -30,6 +30,14 @@ public sealed class StatsRoot
 
     [JsonPropertyName("teams")]
     public List<TeamInfo> Teams { get; set; } = new();
+
+    // Solo en partidos reconstruidos a partir de datos ya publicados, cuando la fuente dejó de servirlos
+    // (p. ej. temporada archivada). Sin jugadas no se pueden recalcular los insights, así que viajan aquí.
+    [JsonPropertyName("recoveredFrom")]
+    public string? RecoveredFrom { get; set; }
+
+    [JsonPropertyName("recoveredInsightsByTeamIdIntern")]
+    public Dictionary<int, MatchInsights>? RecoveredInsightsByTeamIdIntern { get; set; }
 }
 
 public sealed class ScoreTimelinePoint

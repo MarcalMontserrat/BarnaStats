@@ -39,6 +39,13 @@ if (args.Length > 0)
     }
 }
 
+if (await PastSeasonImportGuard.GetBlockReasonAsync(defaultStorage, DateTime.Now) is { } defaultBlockReason)
+{
+    Console.WriteLine(defaultBlockReason);
+    Environment.ExitCode = 1;
+    return;
+}
+
 var initialDownloadResult = await RunDownloadAsync(defaultStorage, forceRefresh: false);
 if (!initialDownloadResult.Succeeded)
     Environment.ExitCode = 1;
@@ -59,6 +66,12 @@ async Task<bool> RunSyncMappingsAsync(string[] syncArgs)
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
 
+    if (await PastSeasonImportGuard.GetBlockReasonAsync(storage, DateTime.Now) is { } blockReason)
+    {
+        Console.WriteLine(blockReason);
+        return false;
+    }
+
     var syncResult = await ExecuteSyncMappingsAsync(storage, sourceUrl, includeAll, nonInteractive, explicitMatchIds);
     return syncResult.Succeeded;
 }
@@ -70,6 +83,12 @@ async Task<bool> RunSyncAllAsync(string[] syncArgs)
 
     var storage = paths.CreateStorage(scope);
     storage.EnsureDirectories();
+
+    if (await PastSeasonImportGuard.GetBlockReasonAsync(storage, DateTime.Now) is { } blockReason)
+    {
+        Console.WriteLine(blockReason);
+        return false;
+    }
 
     if (!forceRefresh && !includeAll && explicitMatchIds.Count == 0)
     {
@@ -262,11 +281,23 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
                 var movesTask = client.GetMatchMovesRawAsync(mapping.UuidMatch!);
                 await Task.WhenAll(statsTask, movesTask);
 
-                var prettyStats = JsonFormatting.PrettyPrint(await statsTask);
-                var prettyMoves = JsonFormatting.PrettyPrint(await movesTask);
+                var statsRaw = await statsTask;
+                var movesRaw = await movesTask;
+
+                // La fuente puede responder 200 con `{}` (p. ej. partidos de una temporada ya archivada).
+                // Eso no es un partido: se trata como fallo para no sobrescribir datos buenos con vacíos.
+                if (!HasMatchTeams(statsRaw))
+                    throw new InvalidDataException("La fuente devolvió estadísticas vacías (sin equipos). No se sobrescribe nada.");
+
+                var prettyStats = JsonFormatting.PrettyPrint(statsRaw);
+                var prettyMoves = JsonFormatting.PrettyPrint(movesRaw);
 
                 var statsChanged = await WriteFileIfChangedAsync(statsPath, prettyStats);
-                var movesChanged = await WriteFileIfChangedAsync(movesPath, prettyMoves);
+                // Un partido puede no tener jugada a jugada, pero unas jugadas ya guardadas no se sustituyen por vacías.
+                var keepExistingMoves = IsEmptyJsonPayload(movesRaw) &&
+                                        File.Exists(movesPath) &&
+                                        !IsEmptyJsonPayload(await File.ReadAllTextAsync(movesPath));
+                var movesChanged = !keepExistingMoves && await WriteFileIfChangedAsync(movesPath, prettyMoves);
                 var staleFilesDeleted = DeleteStaleMatchFiles(storage, mapping.MatchWebId, mapping.UuidMatch!);
                 var anyChanged = statsChanged || movesChanged || staleFilesDeleted;
 
@@ -359,6 +390,28 @@ async Task<List<MatchMapping>> LoadMappingsAsync(string mappingFile, JsonSeriali
 
     var mappingJson = await File.ReadAllTextAsync(mappingFile);
     return JsonSerializer.Deserialize<List<MatchMapping>>(mappingJson, options) ?? [];
+}
+
+static bool HasMatchTeams(string statsRaw)
+{
+    try
+    {
+        using var document = JsonDocument.Parse(statsRaw);
+        return document.RootElement.ValueKind == JsonValueKind.Object &&
+               document.RootElement.TryGetProperty("teams", out var teams) &&
+               teams.ValueKind == JsonValueKind.Array &&
+               teams.GetArrayLength() >= 2;
+    }
+    catch (JsonException)
+    {
+        return false;
+    }
+}
+
+static bool IsEmptyJsonPayload(string? raw)
+{
+    var trimmed = raw?.Trim() ?? "";
+    return trimmed is "" or "{}" or "[]" or "null";
 }
 
 async Task<bool> WriteFileIfChangedAsync(string path, string content)

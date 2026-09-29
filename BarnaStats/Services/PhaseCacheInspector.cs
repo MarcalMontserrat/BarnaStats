@@ -59,7 +59,9 @@ public sealed class PhaseCacheInspector
         var canReuseWithoutRefresh = missingUuidMappings.Count == 0 && missingDataMappings == 0;
 
         var reason = canReuseWithoutRefresh
-            ? "La fase ya está completa en caché."
+            ? downloadableMappings.Count == 0 && futureMappings.Count > 0
+                ? $"Todavía no se ha jugado ningún partido ({futureMappings.Count} programados). No hay nada que descargar."
+                : "La fase ya está completa en caché."
             : missingUuidMappings.Count > 0
                 ? $"Faltan UUIDs en {missingUuidMappings.Count} partidos."
                 : $"Faltan stats/moves en {missingDataMappings} partidos.";

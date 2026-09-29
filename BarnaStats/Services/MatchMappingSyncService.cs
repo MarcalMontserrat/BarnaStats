@@ -256,7 +256,10 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             : await DiscoverMappingsAsync(page, sourceUrl, interactive, headless);
         var discoveredMappings = sourceInspection?.DiscoveredMappings ?? Array.Empty<MatchDiscovery>();
 
+        // Los partidos futuros se guardan en el mapping (con fecha y sin UUID) para que la fase quede registrada,
+        // pero no se visitan: todavía no tienen estadísticas y cada visita es una petición más a la web.
         var discoveredMatchWebIds = discoveredMappings
+            .Where(x => !IsFutureMatch(x.MatchDate))
             .Select(x => x.MatchWebId)
             .Distinct()
             .OrderBy(x => x)
@@ -286,6 +289,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         {
             Console.WriteLine($"Partidos encontrados en la fuente: {discoveredMappings.Count}");
             Console.WriteLine($"UUIDs directos encontrados     : {discoveredMappings.Count(x => !string.IsNullOrWhiteSpace(x.UuidMatch))}");
+            Console.WriteLine($"Partidos aún sin jugar         : {discoveredMappings.Count(x => IsFutureMatch(x.MatchDate))}");
         }
 
         Console.WriteLine($"Partidos a resolver: {targetMatchWebIds.Count(matchWebId => !resolved.ContainsKey(matchWebId))}");
@@ -851,9 +855,6 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
     {
         foreach (var discovery in discoveries)
         {
-            if (IsFutureMatch(discovery.MatchDate))
-                continue;
-
             if (!target.TryGetValue(discovery.MatchWebId, out var existing))
             {
                 target[discovery.MatchWebId] = discovery;
@@ -943,12 +944,6 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
                 continue;
 
             var matchDate = TryExtractMatchDateAroundIndex(normalizedText, index);
-            if (IsFutureMatch(matchDate))
-            {
-                discovered.Remove(matchWebId);
-                continue;
-            }
-
             if (!matchDate.HasValue)
                 continue;
 
@@ -1003,8 +998,6 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             return null;
 
         var matchDate = TryExtractMatchDateFromText(chunk);
-        if (IsFutureMatch(matchDate))
-            return null;
 
         return new MatchDiscovery
         {
