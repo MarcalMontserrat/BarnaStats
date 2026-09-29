@@ -24,29 +24,42 @@ public static class AnalysisJsonWriter
         // contra la web y cada fichero se escribe en ambos árboles.
         var output = new JsonOutput(paths);
 
-        WriteDataset(
-            output,
-            latestDataset,
-            paths.WebAnalysisJson,
-            paths.WebCompetitionJson,
-            paths.WebTeamDetailsDir,
-            teamFilesRelativeRoot: "teams");
+        // La temporada actual vive en la raíz de `data/`; las anteriores en `data/seasons/{temporada}/`
+        // con la misma estructura. `archive/` es transversal a todas las temporadas.
+        WriteSeasonData(output, paths.WebDataDir, latestDataset, paths.RepoRoot);
 
-        WriteDerivedDatasets(
+        WriteArchiveDatasets(
             output,
             paths.WebDataDir,
-            latestDataset,
-            seasonDatasets.Select(dataset => dataset.Analysis).ToList(),
-            paths.RepoRoot);
+            latestDataset.GeneratedAtUtc,
+            seasonDatasets.Select(dataset => dataset.Analysis).ToList());
 
         WriteSeasonDatasets(
             output,
             paths.WebSeasonsDir,
             paths.WebSeasonIndexJson,
             analysis.GeneratedAtUtc,
-            seasonDatasets);
+            seasonDatasets,
+            paths.RepoRoot);
 
         await output.FlushAsync();
+    }
+
+    private static void WriteSeasonData(
+        JsonOutput output,
+        string seasonRootDir,
+        AnalysisResult dataset,
+        string repoRoot)
+    {
+        WriteDataset(
+            output,
+            dataset,
+            Path.Combine(seasonRootDir, "analysis.json"),
+            Path.Combine(seasonRootDir, "competition.json"),
+            Path.Combine(seasonRootDir, "teams"),
+            teamFilesRelativeRoot: "teams");
+
+        WriteDerivedDatasets(output, seasonRootDir, dataset, repoRoot);
     }
 
     private static void WriteSeasonDatasets(
@@ -54,29 +67,29 @@ public static class AnalysisJsonWriter
         string seasonsDir,
         string seasonIndexPath,
         DateTime generatedAtUtc,
-        IReadOnlyList<SeasonDataset> seasonDatasets)
+        IReadOnlyList<SeasonDataset> seasonDatasets,
+        string repoRoot)
     {
         output.CreateDirectory(seasonsDir);
 
         var expectedSeasonDirectories = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var seasonSummaries = new List<SeasonDatasetSummary>();
 
-        foreach (var seasonDataset in seasonDatasets)
+        for (var index = 0; index < seasonDatasets.Count; index++)
         {
-            expectedSeasonDirectories.Add(seasonDataset.DirectoryName);
+            var seasonDataset = seasonDatasets[index];
 
-            var seasonDir = Path.Combine(seasonsDir, seasonDataset.DirectoryName);
-            var analysisPath = Path.Combine(seasonDir, "analysis.json");
-            var competitionPath = Path.Combine(seasonDir, "competition.json");
-            var teamDetailsDir = Path.Combine(seasonDir, "teams");
-
-            WriteDataset(
-                output,
-                seasonDataset.Analysis,
-                analysisPath,
-                competitionPath,
-                teamDetailsDir,
-                teamFilesRelativeRoot: $"seasons/{seasonDataset.DirectoryName}/teams");
+            // La temporada actual ya está en la raíz: no se duplica en `seasons/`.
+            var dataRoot = index == 0 ? "" : $"seasons/{seasonDataset.DirectoryName}/";
+            if (index > 0)
+            {
+                expectedSeasonDirectories.Add(seasonDataset.DirectoryName);
+                WriteSeasonData(
+                    output,
+                    Path.Combine(seasonsDir, seasonDataset.DirectoryName),
+                    seasonDataset.Analysis,
+                    repoRoot);
+            }
 
             seasonSummaries.Add(new SeasonDatasetSummary
             {
@@ -84,15 +97,16 @@ public static class AnalysisJsonWriter
                 SeasonLabel = seasonDataset.Analysis.SeasonLabel,
                 TotalTeams = seasonDataset.Analysis.Teams.Count,
                 TotalMatches = seasonDataset.Analysis.TotalMatches,
-                AnalysisFile = $"seasons/{seasonDataset.DirectoryName}/analysis.json",
-                CompetitionFile = $"seasons/{seasonDataset.DirectoryName}/competition.json"
+                DataRoot = dataRoot,
+                AnalysisFile = $"{dataRoot}analysis.json",
+                CompetitionFile = $"{dataRoot}competition.json"
             });
         }
 
         foreach (var directory in output.ResolveTargets(seasonsDir))
             DeleteStaleSeasonDirectories(directory, expectedSeasonDirectories);
 
-        var index = new SeasonDatasetIndex
+        var seasonIndex = new SeasonDatasetIndex
         {
             GeneratedAtUtc = generatedAtUtc,
             DefaultSeasonLabel = seasonDatasets.FirstOrDefault()?.Analysis.SeasonLabel ?? "",
@@ -101,7 +115,7 @@ public static class AnalysisJsonWriter
             Seasons = seasonSummaries
         };
 
-        output.Enqueue(seasonIndexPath, index);
+        output.Enqueue(seasonIndexPath, seasonIndex);
     }
 
     private static void WriteDataset(
@@ -169,7 +183,6 @@ public static class AnalysisJsonWriter
         JsonOutput output,
         string dataRootDir,
         AnalysisResult latestDataset,
-        IReadOnlyCollection<AnalysisResult> seasonAnalyses,
         string repoRoot)
     {
         output.CreateDirectory(dataRootDir);
@@ -183,11 +196,6 @@ public static class AnalysisJsonWriter
         var competitionStandingsByCategoryDir = Path.Combine(dataRootDir, "competition-standings");
         var analysisLightPath = Path.Combine(dataRootDir, "analysis-light.json");
         var clubsPath = Path.Combine(dataRootDir, "clubs.json");
-        var archiveDir = Path.Combine(dataRootDir, "archive");
-        var historicalTeamsPath = Path.Combine(archiveDir, "teams.json");
-        var historicalPlayersPath = Path.Combine(archiveDir, "players.json");
-        var historicalPlayersIndexPath = Path.Combine(archiveDir, "players-index.json");
-        var historicalPlayersDetailsDir = Path.Combine(archiveDir, "players");
 
         output.Enqueue(competitionMatchesPath, latestDataset.Competition.Matches);
         output.Enqueue(competitionPlayerLeadersPath, latestDataset.Competition.PlayerLeaders);
@@ -280,11 +288,25 @@ public static class AnalysisJsonWriter
         output.Enqueue(
             clubsPath,
             PrecomputedDatasetsBuilder.BuildClubDirectory(latestDataset, repoRoot));
+    }
+
+    private static void WriteArchiveDatasets(
+        JsonOutput output,
+        string dataRootDir,
+        DateTime generatedAtUtc,
+        IReadOnlyCollection<AnalysisResult> seasonAnalyses)
+    {
+        var archiveDir = Path.Combine(dataRootDir, "archive");
+        var historicalTeamsPath = Path.Combine(archiveDir, "teams.json");
+        var historicalPlayersPath = Path.Combine(archiveDir, "players.json");
+        var historicalPlayersIndexPath = Path.Combine(archiveDir, "players-index.json");
+        var historicalPlayersDetailsDir = Path.Combine(archiveDir, "players");
+
         output.Enqueue(
             historicalTeamsPath,
-            PrecomputedDatasetsBuilder.BuildHistoricalTeamDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses));
+            PrecomputedDatasetsBuilder.BuildHistoricalTeamDirectory(generatedAtUtc, seasonAnalyses));
 
-        var playerDirectory = PrecomputedDatasetsBuilder.BuildHistoricalPlayerDirectory(latestDataset.GeneratedAtUtc, seasonAnalyses);
+        var playerDirectory = PrecomputedDatasetsBuilder.BuildHistoricalPlayerDirectory(generatedAtUtc, seasonAnalyses);
         output.Enqueue(historicalPlayersPath, playerDirectory);
 
         var playerIndex = new HistoricalPlayerIndexDataset

@@ -340,7 +340,48 @@ export function getPageMetadata(route, currentSeasonLabel = "") {
 
     return {
         title: "Cuaderno de juego",
-        note: "Sigue la temporada actual por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.",
+        note: "Sigue la temporada por equipo y por fase, con el detalle de cada partido y una lectura clara de su evolución.",
         seasonLabel: currentSeasonLabel
     };
+}
+
+const SEASON_SCOPED_ROUTE_BASES = {
+    dashboard: DASHBOARD_ROUTE,
+    competition: COMPETITION_ROUTE,
+    club: CLUB_ROUTE,
+    compare: COMPARE_ROUTE
+};
+
+export function isSeasonScopedRoute(route) {
+    return Object.hasOwn(SEASON_SCOPED_ROUTE_BASES, route);
+}
+
+export function getSeasonScopedRouteBase(route) {
+    return SEASON_SCOPED_ROUTE_BASES[route] ?? DASHBOARD_ROUTE;
+}
+
+// Las claves de equipo empiezan por la temporada (`2025-2026::CATEGORIA::TEAM:id`), así que cualquier
+// enlace a un equipo ya indica su temporada. `?season=` explícito tiene prioridad.
+export function resolveSeasonFromHash(hash, knownSeasonLabels) {
+    const known = new Set(knownSeasonLabels ?? []);
+    if (known.size === 0) {
+        return "";
+    }
+
+    const [, queryString = ""] = String(hash ?? "").split("?");
+    const explicitSeason = new URLSearchParams(queryString).get("season") ?? "";
+    if (known.has(explicitSeason)) {
+        return explicitSeason;
+    }
+
+    const state = parseHash(hash);
+    const candidateKeys = [state.teamKey, state.compareTeam1, state.compareTeam2];
+    for (const key of candidateKeys) {
+        const seasonPrefix = String(key ?? "").split("::")[0];
+        if (known.has(seasonPrefix)) {
+            return seasonPrefix;
+        }
+    }
+
+    return "";
 }

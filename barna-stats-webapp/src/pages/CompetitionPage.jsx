@@ -40,7 +40,7 @@ const COMPETITION_TABS = [
     }
 ];
 
-function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
+function CompetitionPage({analysisVersion, dataRoot = "data/", matchReportOnDemandEnabled}) {
     const initialHashState = parseHash(window.location.hash);
     const initialCompetitionTab = initialHashState.competitionTab || "standings";
     const initialCompetitionCategory = initialHashState.competitionCategory || "all";
@@ -63,12 +63,12 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         analysis: analysisIndex,
         loading: analysisIndexLoading,
         error: analysisIndexError
-    } = useAnalysisData(`data/analysis-light.json?v=${analysisVersion}`);
+    } = useAnalysisData(`${dataRoot}analysis-light.json?v=${analysisVersion}`);
     const {
         analysis: competitionOverview,
         loading: competitionOverviewLoading,
         error: competitionOverviewError
-    } = useAnalysisData(`data/competition-overview.json?v=${analysisVersion}`);
+    } = useAnalysisData(`${dataRoot}competition-overview.json?v=${analysisVersion}`);
 
     const categoryFiles = competitionOverview?.categoryFiles ?? EMPTY_LIST;
     const resolvedMatchesFile = selectedResultsCategory !== "all"
@@ -87,7 +87,7 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         analysis: competitionStandingsDataset,
         loading: competitionStandingsLoading,
         error: competitionStandingsError
-    } = useAnalysisData(resolvedStandingsFile ? `data/${resolvedStandingsFile}?v=${analysisVersion}` : null);
+    } = useAnalysisData(resolvedStandingsFile ? `${dataRoot}${resolvedStandingsFile}?v=${analysisVersion}` : null);
 
     const {
         analysis: competitionMatchesData,
@@ -95,7 +95,7 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         error: competitionMatchesError
     } = useAnalysisData(
         selectedCompetitionTab === "matches"
-            ? `data/${resolvedMatchesFile}?v=${analysisVersion}`
+            ? `${dataRoot}${resolvedMatchesFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -104,7 +104,7 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
         error: competitionPlayerLeadersError
     } = useAnalysisData(
         selectedCompetitionTab === "leaders"
-            ? `data/${resolvedLeadersFile}?v=${analysisVersion}`
+            ? `${dataRoot}${resolvedLeadersFile}?v=${analysisVersion}`
             : null
     );
 
@@ -394,6 +394,7 @@ function CompetitionPage({analysisVersion, matchReportOnDemandEnabled}) {
                                     matches={competitionMatchesWithBranding}
                                     teamDetailsByKey={teamDirectoryByKey}
                                     analysisVersion={analysisVersion}
+                                    dataRoot={dataRoot}
                                     phaseOptions={resultsPhaseOptions}
                                     selectedPhase={effectiveResultsPhase}
                                     onSelectedPhaseChange={setSelectedResultsPhase}

@@ -145,11 +145,12 @@ function CompetitionMatchTeamDetail({
     team,
     sideLabel,
     analysisVersion,
+    dataRoot,
     onTeamNavigate,
     onPlayerNavigate
 }) {
-    const matchesUrl = team?.matchesFile ? `data/${team.matchesFile}?v=${analysisVersion}` : null;
-    const playersUrl = team?.playersFile ? `data/${team.playersFile}?v=${analysisVersion}` : null;
+    const matchesUrl = team?.matchesFile ? `${dataRoot}${team.matchesFile}?v=${analysisVersion}` : null;
+    const playersUrl = team?.playersFile ? `${dataRoot}${team.playersFile}?v=${analysisVersion}` : null;
     const {
         analysis: teamMatches,
         loading: teamMatchesLoading,
@@ -282,6 +283,7 @@ function CompetitionMatchDetail({
     match,
     teamDetailsByKey,
     analysisVersion,
+    dataRoot = "data/",
     onTeamNavigate,
     onPlayerNavigate,
     enableMatchReportOnDemand = true,
@@ -302,10 +304,10 @@ function CompetitionMatchDetail({
         playersFile: ""
     };
     const homeSharedReportMatchesUrl = homeTeam.matchesFile
-        ? `data/${homeTeam.matchesFile}?v=${analysisVersion}`
+        ? `${dataRoot}${homeTeam.matchesFile}?v=${analysisVersion}`
         : null;
     const awaySharedReportMatchesUrl = awayTeam.matchesFile
-        ? `data/${awayTeam.matchesFile}?v=${analysisVersion}`
+        ? `${dataRoot}${awayTeam.matchesFile}?v=${analysisVersion}`
         : null;
     const {
         analysis: homeSharedReportMatches
@@ -345,6 +347,7 @@ function CompetitionMatchDetail({
                     team={homeTeam}
                     sideLabel="Local"
                     analysisVersion={analysisVersion}
+                    dataRoot={dataRoot}
                     onTeamNavigate={onTeamNavigate}
                     onPlayerNavigate={onPlayerNavigate
                         ? (playerIdentityKey) => onPlayerNavigate(homeTeam.teamKey, playerIdentityKey)
@@ -355,6 +358,7 @@ function CompetitionMatchDetail({
                     team={awayTeam}
                     sideLabel="Visitante"
                     analysisVersion={analysisVersion}
+                    dataRoot={dataRoot}
                     onTeamNavigate={onTeamNavigate}
                     onPlayerNavigate={onPlayerNavigate
                         ? (playerIdentityKey) => onPlayerNavigate(awayTeam.teamKey, playerIdentityKey)

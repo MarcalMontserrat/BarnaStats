@@ -31,7 +31,9 @@ const cardStyles = {
         padding: 22,
         borderRadius: "var(--radius-lg)",
         boxShadow: "var(--shadow-md)",
-        border: "1px solid transparent",
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: "transparent",
         overflow: "hidden"
     },
     aura: {

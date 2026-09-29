@@ -17,7 +17,7 @@ const ClubOverviewSection = lazy(() => import("../components/ClubOverviewSection
 
 const EMPTY_LIST = [];
 
-function ClubPage({analysisVersion}) {
+function ClubPage({analysisVersion, dataRoot = "data/"}) {
     const initialHashState = parseHash(window.location.hash);
     const [selectedClubKey, setSelectedClubKey] = useState(() => initialHashState.clubKey ?? "");
     const [clubQuery, setClubQuery] = useState("");
@@ -26,12 +26,12 @@ function ClubPage({analysisVersion}) {
         analysis: analysisIndex,
         loading: analysisIndexLoading,
         error: analysisIndexError
-    } = useAnalysisData(`data/analysis-light.json?v=${analysisVersion}`);
+    } = useAnalysisData(`${dataRoot}analysis-light.json?v=${analysisVersion}`);
     const {
         analysis: currentClubDirectory,
         loading: currentClubDirectoryLoading,
         error: currentClubDirectoryError
-    } = useAnalysisData(`data/clubs.json?v=${analysisVersion}`);
+    } = useAnalysisData(`${dataRoot}clubs.json?v=${analysisVersion}`);
 
     const teams = analysisIndex?.teams ?? EMPTY_LIST;
     const currentClubEntities = Array.isArray(currentClubDirectory) ? currentClubDirectory : EMPTY_LIST;

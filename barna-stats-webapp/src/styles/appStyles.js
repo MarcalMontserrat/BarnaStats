@@ -44,7 +44,8 @@ const appStyles = {
     },
     topBarActions: {
         display: "grid",
-        justifyItems: "start"
+        justifyItems: "start",
+        gap: 12
     },
     brand: {
         display: "grid",
@@ -81,7 +82,9 @@ const appStyles = {
         borderRadius: 999,
         textDecoration: "none",
         fontWeight: 800,
-        border: "1px solid rgba(26, 53, 87, 0.14)",
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: "rgba(26, 53, 87, 0.14)",
         color: "var(--navy)",
         background: "rgba(255, 251, 245, 0.78)",
         boxShadow: "var(--shadow-sm)",
@@ -351,7 +354,9 @@ const appStyles = {
         minHeight: 44,
         padding: "0 18px",
         borderRadius: 999,
-        border: "1px solid rgba(26, 53, 87, 0.12)",
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: "rgba(26, 53, 87, 0.12)",
         background: "rgba(255, 251, 245, 0.86)",
         color: "var(--navy)",
         fontWeight: 800,

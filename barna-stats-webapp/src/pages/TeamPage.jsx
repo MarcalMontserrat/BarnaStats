@@ -81,7 +81,7 @@ const TEAM_TABS = [
     }
 ];
 
-function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
+function TeamPage({analysisVersion, dataRoot = "data/", matchReportOnDemandEnabled}) {
     const initialHashState = parseHash(window.location.hash);
     const [selectedTeamKey, setSelectedTeamKey] = useState(() => initialHashState.teamKey ?? "");
     const [selectedTeamGender, setSelectedTeamGender] = useState("all");
@@ -99,15 +99,15 @@ function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
         analysis: analysisIndex,
         loading: analysisIndexLoading,
         error: analysisIndexError
-    } = useAnalysisData(`data/analysis.json?v=${analysisVersion}`);
+    } = useAnalysisData(`${dataRoot}analysis.json?v=${analysisVersion}`);
 
     const teams = analysisIndex?.teams ?? EMPTY_LIST;
     const standingsCategoryName = teams.find((t) => t.teamKey === selectedTeamKey)
         ?.phases?.slice().sort((a, b) => Number(b.phaseNumber) - Number(a.phaseNumber))[0]
         ?.categoryName ?? "";
     const standingsFile = standingsCategoryName
-        ? `data/competition-standings/${buildCategorySlug(standingsCategoryName)}.json?v=${analysisVersion}`
-        : (teams.length > 0 ? `data/competition-standings.json?v=${analysisVersion}` : null);
+        ? `${dataRoot}competition-standings/${buildCategorySlug(standingsCategoryName)}.json?v=${analysisVersion}`
+        : (teams.length > 0 ? `${dataRoot}competition-standings.json?v=${analysisVersion}` : null);
 
     const {
         analysis: competitionStandingsDataset,
@@ -229,7 +229,7 @@ function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
         error: selectedTeamMatchesError
     } = useAnalysisData(
         shouldLoadTeamMatches
-            ? `data/${selectedTeamSummary.matchesFile}?v=${analysisVersion}`
+            ? `${dataRoot}${selectedTeamSummary.matchesFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -238,7 +238,7 @@ function TeamPage({analysisVersion, matchReportOnDemandEnabled}) {
         error: selectedTeamPlayersError
     } = useAnalysisData(
         shouldLoadTeamPlayers
-            ? `data/${selectedTeamSummary.playersFile}?v=${analysisVersion}`
+            ? `${dataRoot}${selectedTeamSummary.playersFile}?v=${analysisVersion}`
             : null
     );
     const teamPlayers = useMemo(

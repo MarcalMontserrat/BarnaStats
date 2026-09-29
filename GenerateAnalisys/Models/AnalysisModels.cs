@@ -613,6 +613,8 @@ public sealed class SeasonDatasetSummary
     public string SeasonLabel { get; init; } = "";
     public int TotalTeams { get; init; }
     public int TotalMatches { get; init; }
+    // Prefijo relativo a `data/` bajo el que están todos los ficheros de la temporada ("" = raíz).
+    public string DataRoot { get; init; } = "";
     public string AnalysisFile { get; init; } = "";
     public string CompetitionFile { get; init; } = "";
 }

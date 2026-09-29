@@ -94,15 +94,17 @@ const styles = {
         padding: "18px 20px",
         borderRadius: "var(--radius-lg)",
         background: "linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(248, 242, 233, 0.92) 100%)",
-        border: "1px solid rgba(107, 86, 58, 0.12)",
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: "rgba(107, 86, 58, 0.12)",
         boxShadow: "var(--shadow-sm)",
         position: "relative",
         cursor: "pointer"
     },
     rowOpen: {
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 0,
-        borderBottom: "none"
+        // Mismas propiedades que la base (sin esquinas ni borde inferior) para no mezclar shorthand y longhand.
+        borderRadius: "var(--radius-lg) var(--radius-lg) 0 0",
+        borderStyle: "solid solid none"
     },
     rowHighlighted: {
         borderColor: "rgba(188, 63, 43, 0.28)",
@@ -190,7 +192,9 @@ const styles = {
         width: 32,
         height: 32,
         borderRadius: 999,
-        border: "1px solid rgba(26, 53, 87, 0.14)",
+        borderWidth: 1,
+        borderStyle: "solid",
+        borderColor: "rgba(26, 53, 87, 0.14)",
         background: "rgba(255, 251, 245, 0.72)",
         boxShadow: "0 8px 18px rgba(22, 18, 15, 0.08)",
         color: "var(--navy)",
@@ -292,6 +296,7 @@ function CompetitionResultsSection({
     matches,
     teamDetailsByKey,
     analysisVersion,
+    dataRoot,
     phaseOptions,
     selectedPhase,
     onSelectedPhaseChange,
@@ -509,6 +514,7 @@ function CompetitionResultsSection({
                                             match={match}
                                             teamDetailsByKey={teamDetailsByKey}
                                             analysisVersion={analysisVersion}
+                                            dataRoot={dataRoot}
                                             onTeamNavigate={onTeamNavigate}
                                             onPlayerNavigate={onPlayerNavigate}
                                             enableMatchReportOnDemand={enableMatchReportOnDemand}

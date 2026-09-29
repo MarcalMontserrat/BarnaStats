@@ -30,7 +30,7 @@ const COMPARE_TABS = [
     {id: "players", label: "Jugadoras", description: "Compara dos jugadoras con sus estadísticas históricas acumuladas."}
 ];
 
-function ComparePage({analysisVersion}) {
+function ComparePage({analysisVersion, dataRoot = "data/"}) {
     const initialHashState = parseHash(window.location.hash);
 
     const [compareTab, setCompareTab] = useState(
@@ -56,7 +56,7 @@ function ComparePage({analysisVersion}) {
     const {
         analysis: analysisIndex,
         loading: analysisIndexLoading
-    } = useAnalysisData(`data/analysis-light.json?v=${analysisVersion}`);
+    } = useAnalysisData(`${dataRoot}analysis-light.json?v=${analysisVersion}`);
     const {
         analysis: historicalPlayersDirectory,
         loading: historicalPlayersLoading
@@ -75,14 +75,14 @@ function ComparePage({analysisVersion}) {
         analysis: compareTeam1StandingsDataset
     } = useAnalysisData(
         compareTeam1Category
-            ? `data/competition-standings/${buildCategorySlug(compareTeam1Category)}.json?v=${analysisVersion}`
+            ? `${dataRoot}competition-standings/${buildCategorySlug(compareTeam1Category)}.json?v=${analysisVersion}`
             : null
     );
     const {
         analysis: compareTeam2StandingsDataset
     } = useAnalysisData(
         compareTeam2Category && compareTeam2Category !== compareTeam1Category
-            ? `data/competition-standings/${buildCategorySlug(compareTeam2Category)}.json?v=${analysisVersion}`
+            ? `${dataRoot}competition-standings/${buildCategorySlug(compareTeam2Category)}.json?v=${analysisVersion}`
             : null
     );
 
@@ -104,7 +104,7 @@ function ComparePage({analysisVersion}) {
         error: compareTeam1MatchesError
     } = useAnalysisData(
         compareTeam1SummaryFromIndex?.matchesFile
-            ? `data/${compareTeam1SummaryFromIndex.matchesFile}?v=${analysisVersion}`
+            ? `${dataRoot}${compareTeam1SummaryFromIndex.matchesFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -113,7 +113,7 @@ function ComparePage({analysisVersion}) {
         error: compareTeam1PlayersError
     } = useAnalysisData(
         compareTeam1SummaryFromIndex?.playersFile
-            ? `data/${compareTeam1SummaryFromIndex.playersFile}?v=${analysisVersion}`
+            ? `${dataRoot}${compareTeam1SummaryFromIndex.playersFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -122,7 +122,7 @@ function ComparePage({analysisVersion}) {
         error: compareTeam2MatchesError
     } = useAnalysisData(
         compareTeam2SummaryFromIndex?.matchesFile
-            ? `data/${compareTeam2SummaryFromIndex.matchesFile}?v=${analysisVersion}`
+            ? `${dataRoot}${compareTeam2SummaryFromIndex.matchesFile}?v=${analysisVersion}`
             : null
     );
     const {
@@ -131,7 +131,7 @@ function ComparePage({analysisVersion}) {
         error: compareTeam2PlayersError
     } = useAnalysisData(
         compareTeam2SummaryFromIndex?.playersFile
-            ? `data/${compareTeam2SummaryFromIndex.playersFile}?v=${analysisVersion}`
+            ? `${dataRoot}${compareTeam2SummaryFromIndex.playersFile}?v=${analysisVersion}`
             : null
     );
 
