@@ -17,7 +17,7 @@ internal static class SyncEndpoints
 
         app.MapGet("/api/results-sources", async (ResultsSourceCatalogService catalogService) =>
         {
-            var sources = await catalogService.GetAllAsync();
+            var sources = await catalogService.GetAllWithSeasonStatusAsync();
             return Results.Ok(sources);
         });
 

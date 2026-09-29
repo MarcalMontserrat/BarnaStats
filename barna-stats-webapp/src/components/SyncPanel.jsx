@@ -468,6 +468,26 @@ const styles = {
         fontSize: 12,
         wordBreak: "break-word"
     },
+    seasonChip: {
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 6,
+        padding: "3px 10px",
+        borderRadius: 999,
+        fontSize: 12,
+        fontWeight: 800,
+        whiteSpace: "nowrap",
+        background: "rgba(26, 53, 87, 0.08)",
+        color: "var(--navy)"
+    },
+    seasonChipCurrent: {
+        background: "rgba(75, 159, 212, 0.16)",
+        color: "#1d5f8c"
+    },
+    seasonChipBlocked: {
+        background: "rgba(107, 86, 58, 0.1)",
+        color: "var(--muted)"
+    },
     savedSourcesEmpty: {
         padding: 16,
         borderRadius: "var(--radius-md)",
@@ -554,6 +574,8 @@ function normalizeBulkTerritoryValues(values) {
 
     return normalizedValues.sort((left, right) => Number(left) - Number(right));
 }
+
+const SEASON_FILTER_UNKNOWN = "__sin-temporada__";
 
 function pluralize(value, singular, plural) {
     return `${value} ${value === 1 ? singular : plural}`;
@@ -648,6 +670,7 @@ function SyncPanel({
     const [bulkPreviewLoading, setBulkPreviewLoading] = useState(false);
     const [bulkPreviewError, setBulkPreviewError] = useState("");
     const [savedSourcesQuery, setSavedSourcesQuery] = useState("");
+    const [savedSourcesSeason, setSavedSourcesSeason] = useState("");
     const [savedSourcesPage, setSavedSourcesPage] = useState(1);
     const [savedSourcesPageSize, setSavedSourcesPageSize] = useState(() => {
         const storedValue = Number(window.localStorage.getItem("barna-sync-saved-sources-page-size"));
@@ -798,8 +821,9 @@ function SyncPanel({
         await onStartSync(effectiveSourceUrl);
     };
 
-    const handleStartSavedSource = async (savedSourceUrl) => {
-        if (!savedSourceUrl || isBusy) {
+    const handleStartSavedSource = async (source) => {
+        const savedSourceUrl = source?.sourceUrl;
+        if (!savedSourceUrl || isBusy || source.importBlocked) {
             return;
         }
 
@@ -979,6 +1003,11 @@ function SyncPanel({
         setSavedSourcesPage(1);
     };
 
+    const handleSavedSourcesSeasonChange = (event) => {
+        setSavedSourcesSeason(event.target.value);
+        setSavedSourcesPage(1);
+    };
+
     const handleSavedSourcesPageSizeChange = (event) => {
         setSavedSourcesPageSize(Number(event.target.value));
         setSavedSourcesPage(1);
@@ -1011,7 +1040,23 @@ function SyncPanel({
     }
 
     const normalizedSavedSourcesQuery = normalizeSearchText(deferredSavedSourcesQuery);
+    const savedSourcesSeasonOptions = [...new Map((savedSources ?? [])
+        .filter((source) => source.seasonLabel)
+        .map((source) => [source.seasonLabel, {
+            seasonLabel: source.seasonLabel,
+            seasonStartYear: Number(source.seasonStartYear ?? 0),
+            isCurrentSeason: !!source.isCurrentSeason
+        }])).values()]
+        .sort((first, second) => second.seasonStartYear - first.seasonStartYear);
+    const hasSavedSourcesWithoutSeason = (savedSources ?? []).some((source) => !source.seasonLabel);
+    const isSavedSourcesFilterActive = !!normalizedSavedSourcesQuery || !!savedSourcesSeason;
     const filteredSavedSources = (savedSources ?? []).filter((source) => {
+        if (savedSourcesSeason === SEASON_FILTER_UNKNOWN
+            ? !!source.seasonLabel
+            : savedSourcesSeason && source.seasonLabel !== savedSourcesSeason) {
+            return false;
+        }
+
         if (!normalizedSavedSourcesQuery) {
             return true;
         }
@@ -1503,7 +1548,7 @@ function SyncPanel({
                         </button>
                     </div>
                     <div style={styles.savedSourcesHelper}>
-                        Aquí quedan registradas las URLs de resultados ya usadas para que puedas repetir la sincronización sin volver a pegarlas. `Sincronizar todo` reutiliza la caché y solo descarga lo que falte o cambie.
+                        Aquí quedan registradas las URLs de resultados ya usadas para que puedas repetir la sincronización sin volver a pegarlas. `Sincronizar todo` reutiliza la caché y solo descarga lo que falte o cambie. Las fases de temporadas pasadas quedan bloqueadas: la fuente ya no publica sus partidos y reimportarlas borraría sus datos.
                     </div>
                 </div>
 
@@ -1526,6 +1571,24 @@ function SyncPanel({
                             </label>
 
                             <PrettySelect
+                                label="Temporada"
+                                value={savedSourcesSeason}
+                                onChange={handleSavedSourcesSeasonChange}
+                                ariaLabel="Filtra las fases guardadas por temporada"
+                                minWidth="200px"
+                            >
+                                <option value="">Todas las temporadas</option>
+                                {savedSourcesSeasonOptions.map((season) => (
+                                    <option key={season.seasonLabel} value={season.seasonLabel}>
+                                        {season.isCurrentSeason ? `${season.seasonLabel} (actual)` : season.seasonLabel}
+                                    </option>
+                                ))}
+                                {hasSavedSourcesWithoutSeason ? (
+                                    <option value={SEASON_FILTER_UNKNOWN}>Sin temporada</option>
+                                ) : null}
+                            </PrettySelect>
+
+                            <PrettySelect
                                 label="Por página"
                                 value={String(savedSourcesPageSize)}
                                 onChange={handleSavedSourcesPageSizeChange}
@@ -1542,7 +1605,7 @@ function SyncPanel({
 
                         <div style={styles.savedSourcesSummaryRow}>
                             <div style={styles.savedSourcesSummary}>
-                                {normalizedSavedSourcesQuery
+                                {isSavedSourcesFilterActive
                                     ? `${pluralize(filteredSavedSources.length, "coincidencia", "coincidencias")} de ${savedSources.length} fases guardadas`
                                     : `${savedSources.length} fases guardadas`}
                                 {paginatedSavedSources.length > 0
@@ -1648,6 +1711,7 @@ function SyncPanel({
                                                 />
                                             </div>
                                         </th>
+                                        <th style={styles.savedSourcesHeaderCell}>Temporada</th>
                                         <th style={styles.savedSourcesHeaderCell}>Categoría</th>
                                         <th style={styles.savedSourcesHeaderCell}>Referencia</th>
                                         <th style={styles.savedSourcesHeaderCell}>Última sincronización</th>
@@ -1670,6 +1734,19 @@ function SyncPanel({
                                                 </div>
                                             </td>
                                             <td style={styles.savedSourcesBodyCell}>
+                                                <span
+                                                    style={source.importBlocked
+                                                        ? {...styles.seasonChip, ...styles.seasonChipBlocked}
+                                                        : source.isCurrentSeason
+                                                            ? {...styles.seasonChip, ...styles.seasonChipCurrent}
+                                                            : styles.seasonChip}
+                                                    title={source.importBlockedReason ?? undefined}
+                                                >
+                                                    {source.seasonLabel || "Sin temporada"}
+                                                    {source.importBlocked ? " · bloqueada" : ""}
+                                                </span>
+                                            </td>
+                                            <td style={styles.savedSourcesBodyCell}>
                                                 {source.categoryName || "Sin categoría"}
                                             </td>
                                             <td style={styles.savedSourcesBodyCell}>
@@ -1683,11 +1760,13 @@ function SyncPanel({
                                                 <div style={styles.inlineActions}>
                                                     <button
                                                         type="button"
-                                                        style={!canUseApi ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
-                                                        disabled={!canUseApi}
-                                                        onClick={() => void handleStartSavedSource(source.sourceUrl)}
+                                                        style={!canUseApi || source.importBlocked ? {...styles.inlineButton, ...styles.mutedButton} : styles.inlineButton}
+                                                        disabled={!canUseApi || source.importBlocked}
+                                                        onClick={() => void handleStartSavedSource(source)}
                                                         aria-label={`Sincronizar ${formatSourceReference(source)}`}
-                                                        title="Sincronizar"
+                                                        title={source.importBlocked
+                                                            ? "Temporada pasada: la importación está bloqueada para no perder sus datos"
+                                                            : "Sincronizar"}
                                                     >
                                                         <SyncActionIcon/>
                                                     </button>
