@@ -19,6 +19,18 @@ Uso (desde cualquier directorio):
 Después, regenera y compara con el commit: la salida debería ser idéntica salvo `generatedAtUtc`.
     dotnet run --project GenerateAnalisys
     git diff --stat <commit> -- barna-stats-webapp/public/data
+
+Por defecto nunca se pisa un stats descargado y válido (con equipos y sin `recoveredFrom`): solo se
+escriben los que faltan, están vacíos o ya eran reconstruidos.
+
+--force: sobrescribe TAMBIÉN los stats descargados válidos. Úsalo solo si sabes que un fichero
+descargado está mal, porque degrada los datos crudos aunque la web siga saliendo igual:
+- se pierde lo que la reconstrucción no copia: la línea temporal del marcador (`score`) y todas las
+  estadísticas que la web no usa (rebotes, asistencias, tapones, cinco inicial, periodos...);
+- los insights pasan a ser los guardados en el commit en vez de calcularse con las jugadas;
+- si el commit es antiguo, se meten datos desfasados.
+Las jugadas no se tocan con --force: solo se escribe `[]` donde ya estaban vacías.
+Si es una temporada pasada, esos datos no se pueden volver a descargar: haz copia de la fase antes.
 """
 import argparse
 import json
@@ -64,7 +76,7 @@ def main():
     parser.add_argument("commit", help="commit con los datos web buenos (p. ej. eb35b61f)")
     parser.add_argument("phase", type=int, help="id de la fase (carpeta en BarnaStats/out/phases)")
     parser.add_argument("--write", action="store_true", help="escribe los ficheros (por defecto solo simula)")
-    parser.add_argument("--force", action="store_true", help="permite sobrescribir stats descargados válidos")
+    parser.add_argument("--force", action="store_true", help="sobrescribe también stats descargados válidos; degrada los crudos (ver cabecera del script)")
     args = parser.parse_args()
 
     phase_dir = REPO / "BarnaStats" / "out" / "phases" / str(args.phase)
