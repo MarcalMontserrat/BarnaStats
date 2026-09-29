@@ -106,6 +106,16 @@ a {
   }
 }
 
+@keyframes indeterminate-slide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(290%);
+  }
+}
+
 @media (max-width: 720px) {
   :root {
     --radius-xl: 24px;

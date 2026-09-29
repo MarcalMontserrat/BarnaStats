@@ -195,22 +195,48 @@ public sealed class SyncOrchestrator
 
     public async Task<DeleteSavedSourceResult> TryDeleteSavedSourceAsync(int phaseId)
     {
+        var batchResult = await TryDeleteSavedSourcesAsync([phaseId]);
+
+        if (!string.IsNullOrWhiteSpace(batchResult.Error))
+        {
+            return new DeleteSavedSourceResult
+            {
+                PhaseId = phaseId,
+                Error = batchResult.Error
+            };
+        }
+
+        return new DeleteSavedSourceResult
+        {
+            Deleted = true,
+            PhaseId = phaseId,
+            Reference = batchResult.References.FirstOrDefault() ?? $"Fase {phaseId}",
+            RemovedRegistryEntries = batchResult.RemovedRegistryEntries,
+            DeletedPhaseDirectory = batchResult.DeletedPhaseDirectories > 0,
+            AnalysisRegenerated = batchResult.AnalysisRegenerated,
+            AnalysisUpdatedAtUtc = batchResult.AnalysisUpdatedAtUtc,
+            Warning = batchResult.Warning
+        };
+    }
+
+    public async Task<DeleteSavedSourcesResult> TryDeleteSavedSourcesAsync(IReadOnlyCollection<int> phaseIds)
+    {
         lock (_lock)
         {
             if (_maintenanceInProgress)
             {
-                return new DeleteSavedSourceResult
+                return new DeleteSavedSourcesResult
                 {
-                    PhaseId = phaseId,
+                    Conflict = true,
                     Error = "Ya hay una operación de mantenimiento en marcha. Espera a que termine."
                 };
             }
 
             if (_currentJob is { Status: SyncJobStatus.Pending or SyncJobStatus.Running })
             {
-                return new DeleteSavedSourceResult
+                return new DeleteSavedSourcesResult
                 {
-                    PhaseId = phaseId,
+                    Conflict = true,
                     Error = "No se puede borrar una fase mientras hay una sincronización en marcha."
                 };
             }
@@ -220,7 +246,7 @@ public sealed class SyncOrchestrator
 
         try
         {
-            return await DeleteSavedSourceCoreAsync(phaseId);
+            return await DeleteSavedSourcesCoreAsync(phaseIds);
         }
         finally
         {
@@ -584,21 +610,51 @@ public sealed class SyncOrchestrator
         return _barnaStatsPaths.CreateStorage();
     }
 
-    private async Task<DeleteSavedSourceResult> DeleteSavedSourceCoreAsync(int phaseId)
+    private async Task<DeleteSavedSourcesResult> DeleteSavedSourcesCoreAsync(IReadOnlyCollection<int> phaseIds)
     {
-        var entries = await LoadResultsSourceEntriesAsync();
-        var removedEntries = entries
-            .Where(entry => entry.PhaseId == phaseId || TryGetPhaseIdFromSourceUrl(entry.SourceUrl) == phaseId)
+        var requestedPhaseIds = phaseIds
+            .Where(phaseId => phaseId > 0)
+            .Distinct()
             .ToList();
-        var phaseDir = Path.Combine(_repoPaths.BarnaStatsPhasesDir, phaseId.ToString());
-        var phaseDirectoryExists = Directory.Exists(phaseDir);
+        var entries = await LoadResultsSourceEntriesAsync();
+        var removedEntries = new List<ResultsSourceSnapshot>();
+        var deletedPhaseIds = new List<int>();
+        var missingPhaseIds = new List<int>();
+        var references = new List<string>();
+        var phaseDirectoriesToDelete = new List<string>();
 
-        if (removedEntries.Count == 0 && !phaseDirectoryExists)
+        foreach (var phaseId in requestedPhaseIds)
         {
-            return new DeleteSavedSourceResult
+            var phaseEntries = entries
+                .Where(entry => entry.PhaseId == phaseId || TryGetPhaseIdFromSourceUrl(entry.SourceUrl) == phaseId)
+                .ToList();
+            var phaseDir = Path.Combine(_repoPaths.BarnaStatsPhasesDir, phaseId.ToString());
+            var phaseDirectoryExists = Directory.Exists(phaseDir);
+
+            if (phaseEntries.Count == 0 && !phaseDirectoryExists)
             {
-                PhaseId = phaseId,
-                Error = "La fase guardada ya no existe."
+                missingPhaseIds.Add(phaseId);
+                continue;
+            }
+
+            removedEntries.AddRange(phaseEntries);
+            deletedPhaseIds.Add(phaseId);
+            references.Add(phaseEntries.FirstOrDefault() is { } removedSource
+                ? FormatSourceReference(removedSource)
+                : $"Fase {phaseId}");
+
+            if (phaseDirectoryExists)
+                phaseDirectoriesToDelete.Add(phaseDir);
+        }
+
+        if (deletedPhaseIds.Count == 0)
+        {
+            return new DeleteSavedSourcesResult
+            {
+                MissingPhaseIds = missingPhaseIds,
+                Error = requestedPhaseIds.Count == 1
+                    ? "La fase guardada ya no existe."
+                    : "Ninguna de las fases seleccionadas existe ya."
             };
         }
 
@@ -616,16 +672,10 @@ public sealed class SyncOrchestrator
             await SaveResultsSourceEntriesAsync(remainingEntries);
         }
 
-        var deletedPhaseDirectory = false;
-        if (phaseDirectoryExists)
-        {
+        foreach (var phaseDir in phaseDirectoriesToDelete)
             Directory.Delete(phaseDir, recursive: true);
-            deletedPhaseDirectory = true;
-        }
 
-        var sourceReference = removedEntries.FirstOrDefault() is { } removedSource
-            ? FormatSourceReference(removedSource)
-            : $"Fase {phaseId}";
+        // Una sola regeneración para todo el lote: es la parte cara del borrado.
         var generateAnalysisLogs = new List<string>();
         var analysisExitCode = await RunGenerateAnalysisProcessAsync(line =>
         {
@@ -634,32 +684,19 @@ public sealed class SyncOrchestrator
                 generateAnalysisLogs.Add(line);
             }
         });
-        var analysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc();
 
-        if (analysisExitCode != 0)
+        return new DeleteSavedSourcesResult
         {
-            return new DeleteSavedSourceResult
-            {
-                Deleted = true,
-                PhaseId = phaseId,
-                Reference = sourceReference,
-                RemovedRegistryEntries = removedEntries.Count,
-                DeletedPhaseDirectory = deletedPhaseDirectory,
-                AnalysisRegenerated = false,
-                AnalysisUpdatedAtUtc = analysisUpdatedAtUtc,
-                Warning = BuildGenerateAnalysisWarning(analysisExitCode, generateAnalysisLogs)
-            };
-        }
-
-        return new DeleteSavedSourceResult
-        {
-            Deleted = true,
-            PhaseId = phaseId,
-            Reference = sourceReference,
+            DeletedPhaseIds = deletedPhaseIds,
+            MissingPhaseIds = missingPhaseIds,
+            References = references,
             RemovedRegistryEntries = removedEntries.Count,
-            DeletedPhaseDirectory = deletedPhaseDirectory,
-            AnalysisRegenerated = true,
-            AnalysisUpdatedAtUtc = analysisUpdatedAtUtc
+            DeletedPhaseDirectories = phaseDirectoriesToDelete.Count,
+            AnalysisRegenerated = analysisExitCode == 0,
+            AnalysisUpdatedAtUtc = ReadAnalysisUpdatedAtUtc(),
+            Warning = analysisExitCode == 0
+                ? null
+                : BuildGenerateAnalysisWarning(analysisExitCode, generateAnalysisLogs)
         };
     }
 

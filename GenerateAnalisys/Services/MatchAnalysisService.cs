@@ -26,159 +26,119 @@ public sealed class MatchAnalysisService
         var statsFiles = GetUniqueStatsFiles(rawDataRootDir)
             .ToList();
 
-        foreach (var statsFile in statsFiles)
+        // Leer y deserializar es lo caro y cada partido es independiente: se prepara en paralelo por bloques
+        // (memoria acotada) y se acumula en serie en el orden original para que la salida sea idéntica.
+        var chunkSize = Math.Max(1, Environment.ProcessorCount) * 4;
+
+        foreach (var chunk in statsFiles.Chunk(chunkSize))
         {
-            var statsPath = statsFile.Path;
-            var fileName = Path.GetFileName(statsPath);
-            var matchWebId = statsFile.MatchWebId;
-            var phaseMetadata = statsFile.PhaseMetadata;
+            var preparedChunk = new PreparedMatch[chunk.Length];
+            await Parallel.ForEachAsync(
+                Enumerable.Range(0, chunk.Length),
+                async (index, cancellationToken) =>
+                    preparedChunk[index] = await PrepareMatchAsync(chunk[index], cancellationToken));
 
-            Console.WriteLine($"Procesando partido {matchWebId}...");
-
-            var json = await File.ReadAllTextAsync(statsPath);
-            var match = JsonSerializer.Deserialize<StatsRoot>(json, JsonOptions);
-
-            if (match is null || match.Teams is null || match.Teams.Count < 2)
+            foreach (var prepared in preparedChunk)
             {
-                Console.WriteLine($"JSON inválido o sin equipos: {fileName}");
-                continue;
-            }
+                var statsFile = prepared.StatsFile;
+                var fileName = Path.GetFileName(statsFile.Path);
+                var matchWebId = statsFile.MatchWebId;
+                var phaseMetadata = statsFile.PhaseMetadata;
 
-            var movesRaw = await TryReadMovesRawAsync(statsPath);
-            var moves = DeserializeMoves(movesRaw);
-            var matchReport = await _matchReportService.GetOrGenerateAsync(
-                matchWebId,
-                match,
-                json,
-                movesRaw);
-            var cachedReportsByTeamIdExtern = new Dictionary<int, MatchReportResult?>();
+                Console.WriteLine($"Procesando partido {matchWebId}...");
 
-            processedMatches += 1;
+                var json = prepared.StatsRaw;
+                var match = prepared.Match;
 
-            var localTeam = match.Teams.FirstOrDefault(t => t.TeamIdIntern == match.LocalId)
-                            ?? match.Teams.First();
-
-            var visitTeam = match.Teams.FirstOrDefault(t => t.TeamIdIntern == match.VisitId)
-                            ?? match.Teams.Skip(1).FirstOrDefault()
-                            ?? match.Teams.Last();
-            var matchDate = TryParseMatchDate(match.Time);
-            var seasonStartYear = ResolveSeasonStartYear(phaseMetadata, matchDate);
-            var seasonLabel = ResolveSeasonLabel(phaseMetadata, seasonStartYear);
-            var homeTeamKey = BuildTeamKey(localTeam, phaseMetadata, seasonLabel);
-            var awayTeamKey = BuildTeamKey(visitTeam, phaseMetadata, seasonLabel);
-
-            var matchTopScorer = match.Teams
-                .SelectMany(team => (team.Players ?? []).Select(player => new
+                if (match is null || match.Teams is null || match.Teams.Count < 2)
                 {
-                    TeamName = team.Name ?? "",
-                    PlayerName = player.Name ?? "",
-                    Points = player.Data?.Score ?? 0,
-                    Valoration = player.Data?.Valoration ?? 0
-                }))
-                .OrderByDescending(x => x.Points)
-                .ThenByDescending(x => x.Valoration)
-                .FirstOrDefault();
-
-            foreach (var team in match.Teams)
-            {
-                if (string.IsNullOrWhiteSpace(team.Name))
+                    Console.WriteLine($"JSON inválido o sin equipos: {fileName}");
                     continue;
-
-                var rivalTeam = match.Teams.FirstOrDefault(other => !ReferenceEquals(other, team))
-                                ?? match.Teams.First();
-
-                var teamKey = BuildTeamKey(team, phaseMetadata, seasonLabel);
-
-                if (!teamsByKey.TryGetValue(teamKey, out var accumulator))
-                {
-                    accumulator = new TeamAccumulator(teamKey, team);
-                    teamsByKey[teamKey] = accumulator;
                 }
 
-                accumulator.UpdateMetadata(team);
+                var movesRaw = prepared.MovesRaw;
+                var moves = prepared.Moves;
+                var matchReport = await _matchReportService.GetOrGenerateAsync(
+                    matchWebId,
+                    match,
+                    json,
+                    movesRaw);
+                var cachedReportsByTeamIdExtern = new Dictionary<int, MatchReportResult?>();
 
-                var isHome = team.TeamIdIntern == match.LocalId;
-                var teamPlayerScore = (team.Players ?? [])
-                    .Sum(player => player.Data?.Score ?? 0);
-                var rivalPlayerScore = (rivalTeam.Players ?? [])
-                    .Sum(player => player.Data?.Score ?? 0);
-                var teamTopScorer = (team.Players ?? [])
-                    .Select(player => new
+                processedMatches += 1;
+
+                var localTeam = match.Teams.FirstOrDefault(t => t.TeamIdIntern == match.LocalId)
+                                ?? match.Teams.First();
+
+                var visitTeam = match.Teams.FirstOrDefault(t => t.TeamIdIntern == match.VisitId)
+                                ?? match.Teams.Skip(1).FirstOrDefault()
+                                ?? match.Teams.Last();
+                var matchDate = TryParseMatchDate(match.Time);
+                var seasonStartYear = ResolveSeasonStartYear(phaseMetadata, matchDate);
+                var seasonLabel = ResolveSeasonLabel(phaseMetadata, seasonStartYear);
+                var homeTeamKey = BuildTeamKey(localTeam, phaseMetadata, seasonLabel);
+                var awayTeamKey = BuildTeamKey(visitTeam, phaseMetadata, seasonLabel);
+
+                var matchTopScorer = match.Teams
+                    .SelectMany(team => (team.Players ?? []).Select(player => new
                     {
+                        TeamName = team.Name ?? "",
                         PlayerName = player.Name ?? "",
                         Points = player.Data?.Score ?? 0,
                         Valoration = player.Data?.Valoration ?? 0
-                    })
+                    }))
                     .OrderByDescending(x => x.Points)
                     .ThenByDescending(x => x.Valoration)
                     .FirstOrDefault();
-                MatchReportResult? teamSpecificReport = null;
-                if (team.TeamIdExtern > 0)
+
+                foreach (var team in match.Teams)
                 {
-                    if (!cachedReportsByTeamIdExtern.TryGetValue(team.TeamIdExtern, out teamSpecificReport))
+                    if (string.IsNullOrWhiteSpace(team.Name))
+                        continue;
+
+                    var rivalTeam = match.Teams.FirstOrDefault(other => !ReferenceEquals(other, team))
+                                    ?? match.Teams.First();
+
+                    var teamKey = BuildTeamKey(team, phaseMetadata, seasonLabel);
+
+                    if (!teamsByKey.TryGetValue(teamKey, out var accumulator))
                     {
-                        teamSpecificReport = await _matchReportService.GetCachedAsync(
-                            matchWebId,
-                            json,
-                            movesRaw,
-                            team.TeamIdExtern);
-                        cachedReportsByTeamIdExtern[team.TeamIdExtern] = teamSpecificReport;
+                        accumulator = new TeamAccumulator(teamKey, team);
+                        teamsByKey[teamKey] = accumulator;
                     }
-                }
 
-                accumulator.MatchSummaries.Add(new MatchSummary
-                {
-                    TeamKey = teamKey,
-                    TeamIdIntern = team.TeamIdIntern,
-                    TeamIdExtern = team.TeamIdExtern,
-                    TeamName = team.Name ?? "",
-                    SeasonStartYear = seasonStartYear,
-                    SeasonLabel = seasonLabel,
-                    HomeTeamKey = homeTeamKey,
-                    AwayTeamKey = awayTeamKey,
-                    MatchWebId = matchWebId,
-                    MatchInternId = match.IdMatchIntern,
-                    MatchExternId = match.IdMatchExtern,
-                    MatchDate = matchDate,
-                    PhaseNumber = GetPhaseNumber(matchDate),
-                    SourcePhaseId = phaseMetadata?.PhaseId,
-                    CategoryName = phaseMetadata?.CategoryName ?? "",
-                    PhaseName = phaseMetadata?.PhaseName ?? "",
-                    LevelName = phaseMetadata?.LevelName ?? "",
-                    LevelCode = phaseMetadata?.LevelCode ?? "",
-                    GroupCode = phaseMetadata?.GroupCode ?? "",
-                    HomeTeam = localTeam.Name ?? "",
-                    HomeScore = localTeam.Data?.Score ?? 0,
-                    AwayTeam = visitTeam.Name ?? "",
-                    AwayScore = visitTeam.Data?.Score ?? 0,
-                    IsHome = isHome,
-                    RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata, seasonLabel),
-                    RivalTeam = rivalTeam.Name ?? "",
-                    OfficialTeamScore = team.Data?.Score ?? 0,
-                    OfficialRivalScore = rivalTeam.Data?.Score ?? 0,
-                    TeamScore = teamPlayerScore,
-                    RivalScore = rivalPlayerScore,
-                    Result = BuildResult(teamPlayerScore, rivalPlayerScore),
-                    TopScorer = matchTopScorer?.PlayerName ?? "",
-                    TopScorerTeam = matchTopScorer?.TeamName ?? "",
-                    TopScorerPoints = matchTopScorer?.Points ?? 0,
-                    TeamTopScorer = teamTopScorer?.PlayerName ?? "",
-                    TeamTopScorerPoints = teamTopScorer?.Points ?? 0,
-                    Insights = MatchInsightsBuilder.BuildMatchInsights(match, team, isHome, moves),
-                    MatchReport = teamSpecificReport?.Summary ?? matchReport?.Summary ?? "",
-                    MatchReportGeneratedAtUtc = teamSpecificReport?.GeneratedAtUtc ?? matchReport?.GeneratedAtUtc,
-                    MatchReportModel = teamSpecificReport?.Model ?? matchReport?.Model ?? ""
-                });
+                    accumulator.UpdateMetadata(team);
 
-                foreach (var player in team.Players ?? [])
-                {
-                    var data = player.Data ?? new StatBlock();
-                    var playerName = player.Name ?? "";
-                    var dorsal = player.Dorsal ?? "";
-                    var playerUuid = NormalizePlayerUuid(player.Uuid);
-                    var playerIdentityKey = BuildPlayerIdentityKey(playerUuid, player.ActorId, playerName);
+                    var isHome = team.TeamIdIntern == match.LocalId;
+                    var teamPlayerScore = (team.Players ?? [])
+                        .Sum(player => player.Data?.Score ?? 0);
+                    var rivalPlayerScore = (rivalTeam.Players ?? [])
+                        .Sum(player => player.Data?.Score ?? 0);
+                    var teamTopScorer = (team.Players ?? [])
+                        .Select(player => new
+                        {
+                            PlayerName = player.Name ?? "",
+                            Points = player.Data?.Score ?? 0,
+                            Valoration = player.Data?.Valoration ?? 0
+                        })
+                        .OrderByDescending(x => x.Points)
+                        .ThenByDescending(x => x.Valoration)
+                        .FirstOrDefault();
+                    MatchReportResult? teamSpecificReport = null;
+                    if (team.TeamIdExtern > 0)
+                    {
+                        if (!cachedReportsByTeamIdExtern.TryGetValue(team.TeamIdExtern, out teamSpecificReport))
+                        {
+                            teamSpecificReport = await _matchReportService.GetCachedAsync(
+                                matchWebId,
+                                json,
+                                movesRaw,
+                                team.TeamIdExtern);
+                            cachedReportsByTeamIdExtern[team.TeamIdExtern] = teamSpecificReport;
+                        }
+                    }
 
-                    accumulator.MatchPlayerRows.Add(new MatchPlayerRow
+                    accumulator.MatchSummaries.Add(new MatchSummary
                     {
                         TeamKey = teamKey,
                         TeamIdIntern = team.TeamIdIntern,
@@ -186,6 +146,8 @@ public sealed class MatchAnalysisService
                         TeamName = team.Name ?? "",
                         SeasonStartYear = seasonStartYear,
                         SeasonLabel = seasonLabel,
+                        HomeTeamKey = homeTeamKey,
+                        AwayTeamKey = awayTeamKey,
                         MatchWebId = matchWebId,
                         MatchInternId = match.IdMatchIntern,
                         MatchExternId = match.IdMatchExtern,
@@ -197,32 +159,38 @@ public sealed class MatchAnalysisService
                         LevelName = phaseMetadata?.LevelName ?? "",
                         LevelCode = phaseMetadata?.LevelCode ?? "",
                         GroupCode = phaseMetadata?.GroupCode ?? "",
+                        HomeTeam = localTeam.Name ?? "",
+                        HomeScore = localTeam.Data?.Score ?? 0,
+                        AwayTeam = visitTeam.Name ?? "",
+                        AwayScore = visitTeam.Data?.Score ?? 0,
                         IsHome = isHome,
                         RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata, seasonLabel),
-                        Rival = rivalTeam.Name ?? "",
-                        PlayerUuid = playerUuid,
-                        PlayerActorId = player.ActorId,
-                        PlayerIdentityKey = playerIdentityKey,
-                        PlayerName = playerName,
-                        Dorsal = dorsal,
-                        Minutes = player.TimePlayed,
-                        Points = data.Score,
-                        Valuation = data.Valoration,
-                        Fouls = data.Faults,
-                        PlusMinus = player.InOut,
-                        FtMade = data.ShotsOfOneSuccessful,
-                        FtAttempted = data.ShotsOfOneAttempted,
-                        TwoMade = data.ShotsOfTwoSuccessful,
-                        TwoAttempted = data.ShotsOfTwoAttempted,
-                        ThreeMade = data.ShotsOfThreeSuccessful,
-                        ThreeAttempted = data.ShotsOfThreeAttempted
+                        RivalTeam = rivalTeam.Name ?? "",
+                        OfficialTeamScore = team.Data?.Score ?? 0,
+                        OfficialRivalScore = rivalTeam.Data?.Score ?? 0,
+                        TeamScore = teamPlayerScore,
+                        RivalScore = rivalPlayerScore,
+                        Result = BuildResult(teamPlayerScore, rivalPlayerScore),
+                        TopScorer = matchTopScorer?.PlayerName ?? "",
+                        TopScorerTeam = matchTopScorer?.TeamName ?? "",
+                        TopScorerPoints = matchTopScorer?.Points ?? 0,
+                        TeamTopScorer = teamTopScorer?.PlayerName ?? "",
+                        TeamTopScorerPoints = teamTopScorer?.Points ?? 0,
+                        Insights = MatchInsightsBuilder.BuildMatchInsights(match, team, isHome, moves),
+                        MatchReport = teamSpecificReport?.Summary ?? matchReport?.Summary ?? "",
+                        MatchReportGeneratedAtUtc = teamSpecificReport?.GeneratedAtUtc ?? matchReport?.GeneratedAtUtc,
+                        MatchReportModel = teamSpecificReport?.Model ?? matchReport?.Model ?? ""
                     });
 
-                    var playerKey = BuildPlayerKey(teamKey, player);
-
-                    if (!accumulator.SeasonTotals.TryGetValue(playerKey, out var seasonTotal))
+                    foreach (var player in team.Players ?? [])
                     {
-                        seasonTotal = new PlayerSeasonTotal
+                        var data = player.Data ?? new StatBlock();
+                        var playerName = player.Name ?? "";
+                        var dorsal = player.Dorsal ?? "";
+                        var playerUuid = NormalizePlayerUuid(player.Uuid);
+                        var playerIdentityKey = BuildPlayerIdentityKey(playerUuid, player.ActorId, playerName);
+
+                        accumulator.MatchPlayerRows.Add(new MatchPlayerRow
                         {
                             TeamKey = teamKey,
                             TeamIdIntern = team.TeamIdIntern,
@@ -230,29 +198,74 @@ public sealed class MatchAnalysisService
                             TeamName = team.Name ?? "",
                             SeasonStartYear = seasonStartYear,
                             SeasonLabel = seasonLabel,
+                            MatchWebId = matchWebId,
+                            MatchInternId = match.IdMatchIntern,
+                            MatchExternId = match.IdMatchExtern,
+                            MatchDate = matchDate,
+                            PhaseNumber = GetPhaseNumber(matchDate),
+                            SourcePhaseId = phaseMetadata?.PhaseId,
+                            CategoryName = phaseMetadata?.CategoryName ?? "",
+                            PhaseName = phaseMetadata?.PhaseName ?? "",
+                            LevelName = phaseMetadata?.LevelName ?? "",
+                            LevelCode = phaseMetadata?.LevelCode ?? "",
+                            GroupCode = phaseMetadata?.GroupCode ?? "",
+                            IsHome = isHome,
+                            RivalTeamKey = BuildTeamKey(rivalTeam, phaseMetadata, seasonLabel),
+                            Rival = rivalTeam.Name ?? "",
                             PlayerUuid = playerUuid,
                             PlayerActorId = player.ActorId,
                             PlayerIdentityKey = playerIdentityKey,
                             PlayerName = playerName,
-                            ShirtNumber = dorsal
-                        };
+                            Dorsal = dorsal,
+                            Minutes = player.TimePlayed,
+                            Points = data.Score,
+                            Valuation = data.Valoration,
+                            Fouls = data.Faults,
+                            PlusMinus = player.InOut,
+                            FtMade = data.ShotsOfOneSuccessful,
+                            FtAttempted = data.ShotsOfOneAttempted,
+                            TwoMade = data.ShotsOfTwoSuccessful,
+                            TwoAttempted = data.ShotsOfTwoAttempted,
+                            ThreeMade = data.ShotsOfThreeSuccessful,
+                            ThreeAttempted = data.ShotsOfThreeAttempted
+                        });
 
-                        accumulator.SeasonTotals[playerKey] = seasonTotal;
+                        var playerKey = BuildPlayerKey(teamKey, player);
+
+                        if (!accumulator.SeasonTotals.TryGetValue(playerKey, out var seasonTotal))
+                        {
+                            seasonTotal = new PlayerSeasonTotal
+                            {
+                                TeamKey = teamKey,
+                                TeamIdIntern = team.TeamIdIntern,
+                                TeamIdExtern = team.TeamIdExtern,
+                                TeamName = team.Name ?? "",
+                                SeasonStartYear = seasonStartYear,
+                                SeasonLabel = seasonLabel,
+                                PlayerUuid = playerUuid,
+                                PlayerActorId = player.ActorId,
+                                PlayerIdentityKey = playerIdentityKey,
+                                PlayerName = playerName,
+                                ShirtNumber = dorsal
+                            };
+
+                            accumulator.SeasonTotals[playerKey] = seasonTotal;
+                        }
+
+                        seasonTotal.Games += 1;
+                        seasonTotal.Minutes += player.TimePlayed;
+                        seasonTotal.Points += data.Score;
+                        seasonTotal.Valuation += data.Valoration;
+                        seasonTotal.Fouls += data.Faults;
+                        seasonTotal.PlusMinus += player.InOut;
+                        seasonTotal.FtMade += data.ShotsOfOneSuccessful;
+                        seasonTotal.FtAttempted += data.ShotsOfOneAttempted;
+                        seasonTotal.TwoMade += data.ShotsOfTwoSuccessful;
+                        seasonTotal.TwoAttempted += data.ShotsOfTwoAttempted;
+                        seasonTotal.ThreeMade += data.ShotsOfThreeSuccessful;
+                        seasonTotal.ThreeAttempted += data.ShotsOfThreeAttempted;
+                        accumulator.TrackShirtNumber(playerKey, dorsal);
                     }
-
-                    seasonTotal.Games += 1;
-                    seasonTotal.Minutes += player.TimePlayed;
-                    seasonTotal.Points += data.Score;
-                    seasonTotal.Valuation += data.Valoration;
-                    seasonTotal.Fouls += data.Faults;
-                    seasonTotal.PlusMinus += player.InOut;
-                    seasonTotal.FtMade += data.ShotsOfOneSuccessful;
-                    seasonTotal.FtAttempted += data.ShotsOfOneAttempted;
-                    seasonTotal.TwoMade += data.ShotsOfTwoSuccessful;
-                    seasonTotal.TwoAttempted += data.ShotsOfTwoAttempted;
-                    seasonTotal.ThreeMade += data.ShotsOfThreeSuccessful;
-                    seasonTotal.ThreeAttempted += data.ShotsOfThreeAttempted;
-                    accumulator.TrackShirtNumber(playerKey, dorsal);
                 }
             }
         }
@@ -502,6 +515,22 @@ public sealed class MatchAnalysisService
 
         return $"{seasonStartYear.Value}-{seasonStartYear.Value + 1}";
     }
+
+    private static async Task<PreparedMatch> PrepareMatchAsync(StatsFileContext statsFile, CancellationToken cancellationToken)
+    {
+        var statsRaw = await File.ReadAllTextAsync(statsFile.Path, cancellationToken);
+        var match = JsonSerializer.Deserialize<StatsRoot>(statsRaw, JsonOptions);
+        var movesRaw = await TryReadMovesRawAsync(statsFile.Path);
+
+        return new PreparedMatch(statsFile, statsRaw, match, movesRaw, DeserializeMoves(movesRaw));
+    }
+
+    private sealed record PreparedMatch(
+        StatsFileContext StatsFile,
+        string StatsRaw,
+        StatsRoot? Match,
+        string? MovesRaw,
+        List<MoveEvent> Moves);
 
     private sealed record StatsFileContext(
         string Path,

@@ -74,13 +74,15 @@ public sealed class GeminiMatchReportService : IMatchReportProviderService
         int? focusTeamIdExtern = null)
     {
         LastFailure = null;
-        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
         var cachePath = BuildCachePath(matchWebId, focusTeamIdExtern);
         var cached = await TryReadCacheAsync(cachePath);
-        var hasMatchingCachedContent = cached is not null && cached.ContentHash == contentHash;
+        // El hash recorre stats + moves completos: solo se calcula si hay caché que validar o resumen que guardar.
+        string? contentHash = null;
+        string GetContentHash() => contentHash ??= ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
+        var hasMatchingCachedContent = cached is not null && cached.ContentHash == GetContentHash();
 
         if (cached is not null &&
-            cached.ContentHash == contentHash &&
+            hasMatchingCachedContent &&
             string.Equals(cached.Model, _model, StringComparison.OrdinalIgnoreCase))
         {
             return ToResult(cached);
@@ -125,7 +127,7 @@ public sealed class GeminiMatchReportService : IMatchReportProviderService
         var result = new MatchReportResult
         {
             Summary = summary.Trim(),
-            ContentHash = contentHash,
+            ContentHash = GetContentHash(),
             Model = _model,
             GeneratedAtUtc = DateTime.UtcNow
         };
@@ -151,10 +153,12 @@ public sealed class GeminiMatchReportService : IMatchReportProviderService
         string? movesRaw,
         int? focusTeamIdExtern = null)
     {
-        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
         var cached = await TryReadCacheAsync(BuildCachePath(matchWebId, focusTeamIdExtern));
+        if (cached is null)
+            return null;
 
-        return cached is not null && cached.ContentHash == contentHash
+        var contentHash = ComputeContentHash(statsRaw, movesRaw, _promptTemplate.Version, focusTeamIdExtern);
+        return cached.ContentHash == contentHash
             ? ToResult(cached)
             : null;
     }

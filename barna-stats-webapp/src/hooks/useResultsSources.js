@@ -60,56 +60,35 @@ export function useResultsSources(enabled = true) {
         }
 
         setDeletingPhaseIds(normalizedPhaseIds);
-        setDeleteProgress({total: normalizedPhaseIds.length, completed: 0, failed: 0});
+        setDeleteProgress({total: normalizedPhaseIds.length});
         setError("");
 
-        const deletedPhaseIds = [];
-        const failedPhaseIds = [];
-        const warningMessages = [];
-        const failureMessages = [];
-        const results = [];
-
         try {
-            for (const phaseId of normalizedPhaseIds) {
-                try {
-                    const response = await fetch(`${API_BASE_URL}/api/results-sources/${phaseId}`, {
-                        method: "DELETE"
-                    });
-                    const hasJson = response.headers
-                        .get("content-type")
-                        ?.includes("application/json");
-                    const payload = hasJson ? await response.json() : null;
+            const response = await fetch(`${API_BASE_URL}/api/results-sources/delete-batch`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({phaseIds: normalizedPhaseIds})
+            });
+            const hasJson = response.headers
+                .get("content-type")
+                ?.includes("application/json");
+            const payload = hasJson ? await response.json() : null;
 
-                    if (!response.ok) {
-                        throw new Error(payload?.error ?? "No se pudo borrar la fase guardada.");
-                    }
-
-                    deletedPhaseIds.push(phaseId);
-                    results.push(payload ?? true);
-                    if (payload?.warning) {
-                        warningMessages.push(payload.warning);
-                    }
-                } catch (err) {
-                    const message = String(err);
-                    failedPhaseIds.push(phaseId);
-                    failureMessages.push(`Fase ${phaseId}: ${message}`);
-                }
-
-                setDeleteProgress({
-                    total: normalizedPhaseIds.length,
-                    completed: deletedPhaseIds.length + failedPhaseIds.length,
-                    failed: failedPhaseIds.length
-                });
+            if (!response.ok) {
+                throw new Error(payload?.error ?? "No se pudieron borrar las fases guardadas.");
             }
+
+            const deletedPhaseIds = normalizePhaseIds(payload?.deletedPhaseIds);
+            const failedPhaseIds = normalizePhaseIds(payload?.missingPhaseIds);
 
             if (deletedPhaseIds.length > 0) {
                 setSources((currentSources) => currentSources.filter((source) => !deletedPhaseIds.includes(Number(source.phaseId))));
             }
 
-            if (failureMessages.length > 0) {
-                setError(failureMessages.join(" "));
-            } else if (warningMessages.length > 0) {
-                setError([...new Set(warningMessages)].join(" "));
+            if (payload?.warning) {
+                setError(payload.warning);
+            } else if (failedPhaseIds.length > 0) {
+                setError(`No se encontraron las fases: ${failedPhaseIds.join(", ")}.`);
             } else {
                 setError("");
             }
@@ -117,7 +96,14 @@ export function useResultsSources(enabled = true) {
             return {
                 deletedPhaseIds,
                 failedPhaseIds,
-                results
+                results: payload ? [payload] : []
+            };
+        } catch (err) {
+            setError(String(err));
+            return {
+                deletedPhaseIds: [],
+                failedPhaseIds: normalizedPhaseIds,
+                results: []
             };
         } finally {
             setDeletingPhaseIds([]);

@@ -589,10 +589,7 @@ function TrashActionIcon() {
 }
 
 function DeleteProgressSection({deleteProgress}) {
-    const {total, completed, failed} = deleteProgress;
-    const pending = total - completed;
-    const succeeded = completed - failed;
-    const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+    const {total} = deleteProgress;
 
     return (
         <div style={{
@@ -604,26 +601,18 @@ function DeleteProgressSection({deleteProgress}) {
             flexDirection: "column",
             gap: 10
         }}>
-            <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 13}}>
-                <span style={{fontWeight: 600}}>
-                    {pending > 0
-                        ? `Borrando fases... (${completed} de ${total})`
-                        : `Borrado completado: ${succeeded} OK${failed > 0 ? `, ${failed} con error` : ""}`}
-                </span>
-                <span style={{opacity: 0.7}}>{pct}%</span>
+            <div style={{fontSize: 13, fontWeight: 600}}>
+                {`Borrando ${pluralize(total, "fase", "fases")} y regenerando el análisis...`}
             </div>
             <div style={{height: 6, borderRadius: 3, background: "rgba(255,255,255,0.12)", overflow: "hidden"}}>
                 <div style={{
                     height: "100%",
-                    width: `${pct}%`,
+                    width: "35%",
                     borderRadius: 3,
-                    background: failed > 0 ? "#e5544b" : "#4b9fd4",
-                    transition: "width 0.3s ease"
+                    background: "#4b9fd4",
+                    animation: "indeterminate-slide 1.4s ease-in-out infinite"
                 }} />
             </div>
-            {failed > 0 ? (
-                <div style={{fontSize: 12, color: "#f4a49e"}}>{failed} fase{failed === 1 ? "" : "s"} con error</div>
-            ) : null}
         </div>
     );
 }

@@ -44,6 +44,33 @@ internal static class SyncEndpoints
             return Results.Ok(result);
         });
 
+        app.MapPost("/api/results-sources/delete-batch", async (DeleteSavedSourcesRequest request, SyncOrchestrator orchestrator) =>
+        {
+            var phaseIds = (request.PhaseIds ?? [])
+                .Where(phaseId => phaseId > 0)
+                .Distinct()
+                .ToList();
+
+            if (phaseIds.Count == 0)
+            {
+                return Results.BadRequest(new
+                {
+                    error = "Tienes que indicar al menos una fase para borrar."
+                });
+            }
+
+            var result = await orchestrator.TryDeleteSavedSourcesAsync(phaseIds);
+
+            if (!string.IsNullOrWhiteSpace(result.Error))
+            {
+                return result.Conflict
+                    ? Results.Conflict(new { error = result.Error })
+                    : Results.NotFound(new { error = result.Error, missingPhaseIds = result.MissingPhaseIds });
+            }
+
+            return Results.Ok(result);
+        });
+
         app.MapPost("/api/results-sources/sync-all", async (SyncOrchestrator orchestrator) =>
         {
             var startResult = await orchestrator.TryStartSavedSourcesAsync();
