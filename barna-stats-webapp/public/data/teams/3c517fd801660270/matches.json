@@ -1,0 +1,123 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+    "teamIdIntern": 584406,
+    "teamIdExtern": 91937,
+    "teamName": "DOMINIQUES BARCELONA",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+    "matchWebId": 35421,
+    "matchInternId": 290902,
+    "matchExternId": 1217009,
+    "matchDate": "2026-10-03T13:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24344,
+    "categoryName": "C.t. Pre-mini Mascul\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell C",
+    "levelCode": "C",
+    "groupCode": "23",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "DOMINIQUES BARCELONA",
+    "homeScore": 66,
+    "awayScore": 16,
+    "awayTeam": "UE SANT ANDREU GROC",
+    "isHome": true,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+    "rivalTeam": "UE SANT ANDREU GROC",
+    "officialTeamScore": 66,
+    "officialRivalScore": 16,
+    "teamScore": 103,
+    "rivalScore": 16,
+    "result": "W",
+    "topScorer": "MARC MUNILL MARIN",
+    "topScorerTeam": "DOMINIQUES BARCELONA",
+    "topScorerPoints": 20,
+    "teamTopScorer": "MARC MUNILL MARIN",
+    "teamTopScorerPoints": 20,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 55,
+      "maxDeficit": 0,
+      "bestRun": 18,
+      "rivalBestRun": 5,
+      "closingRun": 0,
+      "rivalClosingRun": 5,
+      "firstScorer": "ERIC VI\u00D1OLA PERTEGAL",
+      "firstScorerTeam": "DOMINIQUES BARCELONA",
+      "lastScorer": "ALEIX PASCUAL GUAJARDO",
+      "lastScorerTeam": "DOMINIQUES BARCELONA",
+      "teamFirstScorer": "ERIC VI\u00D1OLA PERTEGAL",
+      "teamLastScorer": "ALEIX PASCUAL GUAJARDO",
+      "bestPeriodLabel": "Parcial 5",
+      "bestPeriodDiff": 15,
+      "worstPeriodLabel": "Parcial 6",
+      "worstPeriodDiff": -3,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 10,
+          "rivalPoints": 1,
+          "diff": 9
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 11,
+          "rivalPoints": 5,
+          "diff": 6
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 16,
+          "rivalPoints": 2,
+          "diff": 14
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 14,
+          "rivalPoints": 3,
+          "diff": 11
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 15,
+          "rivalPoints": 0,
+          "diff": 15
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 3,
+          "diff": -3
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 0,
+          "rivalPoints": 2,
+          "diff": -2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

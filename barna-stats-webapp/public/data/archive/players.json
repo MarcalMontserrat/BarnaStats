@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-09-29T09:18:12.734685Z",
+  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -131,6 +131,49 @@
       ]
     },
     {
+      "key": "UUID:e5ede6f7-5270-4f49-866c-4a0e674719a1",
+      "label": "A.C.A.",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 B.I.M.",
+      "searchText": "A.C.A. B.I.M. #5",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:e5ede6f7-5270-4f49-866c-4a0e674719a1:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "A.C.A.",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
       "key": "UUID:e73d9361-28ad-4802-a250-a6861f2d2333",
       "label": "A.D.C.\u00C0.",
       "latestShirtNumber": "20",
@@ -220,21 +263,43 @@
       "key": "UUID:c0a426cd-9fcf-4f1b-b5d7-96ebac25f0ed",
       "label": "A.E.N.",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "A.E.N. JAC SANTS BARCELONA U10 #9",
+      "meta": "2 temporadas \u00B7 #9 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "A.E.N. JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #9",
       "totals": {
-        "seasons": 1,
-        "games": 21,
+        "seasons": 2,
+        "games": 22,
         "points": 30,
         "valuation": 25,
         "fouls": 3,
-        "minutes": 475,
-        "avgPoints": 1.4285714285714286,
-        "avgValuation": 1.1904761904761905,
-        "avgFouls": 0.14285714285714285,
-        "avgMinutes": 22.61904761904762
+        "minutes": 495,
+        "avgPoints": 1.3636363636363635,
+        "avgValuation": 1.1363636363636365,
+        "avgFouls": 0.13636363636363635,
+        "avgMinutes": 22.5
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:c0a426cd-9fcf-4f1b-b5d7-96ebac25f0ed:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "A.E.N.",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 20,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 20,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:c0a426cd-9fcf-4f1b-b5d7-96ebac25f0ed:2025-2026",
           "seasonStartYear": 2025,
@@ -996,21 +1061,43 @@
       "key": "UUID:3d02ec97-f4b8-48a9-a398-df73d8986126",
       "label": "ABRIL ARIZA BERNAL",
       "latestShirtNumber": "20",
-      "meta": "1 temporada \u00B7 #20 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "ABRIL ARIZA BERNAL C.B GRUP BARNA VERMELL  1ER ANY #20",
+      "meta": "2 temporadas \u00B7 #20 \u00B7 C.B GRUP BARNA A",
+      "searchText": "ABRIL ARIZA BERNAL C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #20",
       "totals": {
-        "seasons": 1,
-        "games": 23,
-        "points": 212,
-        "valuation": 191,
+        "seasons": 2,
+        "games": 24,
+        "points": 218,
+        "valuation": 197,
         "fouls": 14,
-        "minutes": 482,
-        "avgPoints": 9.217391304347826,
-        "avgValuation": 8.304347826086957,
-        "avgFouls": 0.6086956521739131,
-        "avgMinutes": 20.956521739130434
+        "minutes": 500,
+        "avgPoints": 9.083333333333334,
+        "avgValuation": 8.208333333333334,
+        "avgFouls": 0.5833333333333334,
+        "avgMinutes": 20.833333333333332
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:3d02ec97-f4b8-48a9-a398-df73d8986126:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ABRIL ARIZA BERNAL",
+          "shirtNumber": "20",
+          "games": 1,
+          "points": 6,
+          "valuation": 6,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 6,
+          "avgValuation": 6,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:3d02ec97-f4b8-48a9-a398-df73d8986126:2025-2026",
           "seasonStartYear": 2025,
@@ -1383,21 +1470,43 @@
       "key": "UUID:21df3e14-3e66-4dcc-8a34-1c75b72a0b5d",
       "label": "ABRIL MOYA AGUILAR",
       "latestShirtNumber": "14",
-      "meta": "1 temporada \u00B7 #14 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "ABRIL MOYA AGUILAR AE MINGUELLA B - PURE CUISINE #14",
+      "meta": "2 temporadas \u00B7 #14 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "ABRIL MOYA AGUILAR AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #14",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 42,
-        "valuation": 34,
+        "seasons": 2,
+        "games": 17,
+        "points": 51,
+        "valuation": 41,
         "fouls": 7,
-        "minutes": 314,
-        "avgPoints": 2.625,
-        "avgValuation": 2.125,
-        "avgFouls": 0.4375,
-        "avgMinutes": 19.625
+        "minutes": 340,
+        "avgPoints": 3,
+        "avgValuation": 2.411764705882353,
+        "avgFouls": 0.4117647058823529,
+        "avgMinutes": 20
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:21df3e14-3e66-4dcc-8a34-1c75b72a0b5d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ABRIL MOYA AGUILAR",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 9,
+          "valuation": 7,
+          "fouls": 0,
+          "minutes": 26,
+          "avgPoints": 9,
+          "avgValuation": 7,
+          "avgFouls": 0,
+          "avgMinutes": 26,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:21df3e14-3e66-4dcc-8a34-1c75b72a0b5d:2025-2026",
           "seasonStartYear": 2025,
@@ -2504,21 +2613,43 @@
       "key": "UUID:3da1ab39-4fe5-4ada-83dd-c48541434704",
       "label": "AGN\u00C8S TAMARIT SORIANO",
       "latestShirtNumber": "4",
-      "meta": "1 temporada \u00B7 #4 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "meta": "2 temporadas \u00B7 #4 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
       "searchText": "AGN\u00C8S TAMARIT SORIANO FEMEN\u00CD SANT ADRI\u00C0 A #4",
       "totals": {
-        "seasons": 1,
-        "games": 18,
+        "seasons": 2,
+        "games": 19,
         "points": 51,
-        "valuation": 31,
-        "fouls": 12,
-        "minutes": 379,
-        "avgPoints": 2.8333333333333335,
-        "avgValuation": 1.7222222222222223,
-        "avgFouls": 0.6666666666666666,
-        "avgMinutes": 21.055555555555557
+        "valuation": 30,
+        "fouls": 13,
+        "minutes": 397,
+        "avgPoints": 2.6842105263157894,
+        "avgValuation": 1.5789473684210527,
+        "avgFouls": 0.6842105263157895,
+        "avgMinutes": 20.894736842105264
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:3da1ab39-4fe5-4ada-83dd-c48541434704:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AGN\u00C8S TAMARIT SORIANO",
+          "shirtNumber": "4",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:3da1ab39-4fe5-4ada-83dd-c48541434704:2025-2026",
           "seasonStartYear": 2025,
@@ -3236,21 +3367,43 @@
       "key": "UUID:bee94fec-509e-41d3-b62b-f2bd128b92ab",
       "label": "AINA GUARDIOLA BARGALL\u00D3",
       "latestShirtNumber": "24",
-      "meta": "1 temporada \u00B7 #24 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "AINA GUARDIOLA BARGALL\u00D3 AE MINGUELLA B - PURE CUISINE #24",
+      "meta": "2 temporadas \u00B7 #24 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "AINA GUARDIOLA BARGALL\u00D3 AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #24",
       "totals": {
-        "seasons": 1,
-        "games": 15,
+        "seasons": 2,
+        "games": 16,
         "points": 11,
-        "valuation": -15,
-        "fouls": 26,
-        "minutes": 301,
-        "avgPoints": 0.7333333333333333,
-        "avgValuation": -1,
-        "avgFouls": 1.7333333333333334,
-        "avgMinutes": 20.066666666666666
+        "valuation": -20,
+        "fouls": 31,
+        "minutes": 323,
+        "avgPoints": 0.6875,
+        "avgValuation": -1.25,
+        "avgFouls": 1.9375,
+        "avgMinutes": 20.1875
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:bee94fec-509e-41d3-b62b-f2bd128b92ab:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AINA GUARDIOLA BARGALL\u00D3",
+          "shirtNumber": "24",
+          "games": 1,
+          "points": 0,
+          "valuation": -5,
+          "fouls": 5,
+          "minutes": 22,
+          "avgPoints": 0,
+          "avgValuation": -5,
+          "avgFouls": 5,
+          "avgMinutes": 22,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:bee94fec-509e-41d3-b62b-f2bd128b92ab:2025-2026",
           "seasonStartYear": 2025,
@@ -3408,21 +3561,43 @@
       "key": "UUID:00458f87-8782-4757-be53-8fa3a6249cb9",
       "label": "AINA MACIAS PE\u00D1ALVER",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 UB MIR B",
-      "searchText": "AINA MACIAS PE\u00D1ALVER UB MIR B UB MIR A #10",
+      "meta": "2 temporadas \u00B7 #10 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "searchText": "AINA MACIAS PE\u00D1ALVER FEMEN\u00CD SANT ADRI\u00C0 A UB MIR B UB MIR A #10",
       "totals": {
-        "seasons": 1,
-        "games": 27,
-        "points": 74,
-        "valuation": 36,
-        "fouls": 23,
-        "minutes": 668,
-        "avgPoints": 2.740740740740741,
-        "avgValuation": 1.3333333333333333,
-        "avgFouls": 0.8518518518518519,
-        "avgMinutes": 24.74074074074074
+        "seasons": 2,
+        "games": 28,
+        "points": 80,
+        "valuation": 37,
+        "fouls": 25,
+        "minutes": 704,
+        "avgPoints": 2.857142857142857,
+        "avgValuation": 1.3214285714285714,
+        "avgFouls": 0.8928571428571429,
+        "avgMinutes": 25.142857142857142
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:00458f87-8782-4757-be53-8fa3a6249cb9:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AINA MACIAS PE\u00D1ALVER",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 6,
+          "valuation": 1,
+          "fouls": 2,
+          "minutes": 36,
+          "avgPoints": 6,
+          "avgValuation": 1,
+          "avgFouls": 2,
+          "avgMinutes": 36,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:00458f87-8782-4757-be53-8fa3a6249cb9:2025-2026",
           "seasonStartYear": 2025,
@@ -6253,6 +6428,49 @@
       ]
     },
     {
+      "key": "UUID:cd9367ef-a202-4847-b153-84791fe63e6b",
+      "label": "ALEIX PASCUAL GUAJARDO",
+      "latestShirtNumber": "91",
+      "meta": "1 temporada \u00B7 #91 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "ALEIX PASCUAL GUAJARDO DOMINIQUES BARCELONA #91",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 13,
+        "valuation": 11,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 13,
+        "avgValuation": 11,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:cd9367ef-a202-4847-b153-84791fe63e6b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALEIX PASCUAL GUAJARDO",
+          "shirtNumber": "91",
+          "games": 1,
+          "points": 13,
+          "valuation": 11,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 13,
+          "avgValuation": 11,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
       "key": "UUID:5ce1beb9-b153-4701-8106-f108908d4918",
       "label": "ALEJANDRA CAMPOS BA\u00D1OLAS",
       "latestShirtNumber": "8",
@@ -6425,6 +6643,49 @@
       ]
     },
     {
+      "key": "UUID:96bda936-293f-429a-8fa1-3ce4049fd0a4",
+      "label": "ALEJANDRO MIRANDA SOLER",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "ALEJANDRO MIRANDA SOLER C.B GRUP BARNA NEGRE #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 9,
+        "valuation": 5,
+        "fouls": 2,
+        "minutes": 20,
+        "avgPoints": 9,
+        "avgValuation": 5,
+        "avgFouls": 2,
+        "avgMinutes": 20
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:96bda936-293f-429a-8fa1-3ce4049fd0a4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALEJANDRO MIRANDA SOLER",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 9,
+          "valuation": 5,
+          "fouls": 2,
+          "minutes": 20,
+          "avgPoints": 9,
+          "avgValuation": 5,
+          "avgFouls": 2,
+          "avgMinutes": 20,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:54cbeed7-5d23-4227-a90c-1571104a6103",
       "label": "ALESIA LOZANO CASTILLEJO",
       "latestShirtNumber": "5",
@@ -6464,6 +6725,49 @@
           "primaryTeamName": "BC SANT JOAN DESPI B",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:81584",
           "primaryTeamIdExtern": 81584
+        }
+      ]
+    },
+    {
+      "key": "UUID:fdec3cfe-ae1f-4074-8196-fe95ed32a247",
+      "label": "ALEX GARCIA RIOJA",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "ALEX GARCIA RIOJA DOMINIQUES BARCELONA #5",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 5,
+        "fouls": 2,
+        "minutes": 24,
+        "avgPoints": 7,
+        "avgValuation": 5,
+        "avgFouls": 2,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:fdec3cfe-ae1f-4074-8196-fe95ed32a247:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALEX GARCIA RIOJA",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 7,
+          "valuation": 5,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 7,
+          "avgValuation": 5,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
         }
       ]
     },
@@ -7937,21 +8241,43 @@
       "key": "UUID:4256eb8f-c186-4988-b1e5-29d2d28bee80",
       "label": "AMAYA PUERTO PANTOJA",
       "latestShirtNumber": "13",
-      "meta": "1 temporada \u00B7 #13 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "AMAYA PUERTO PANTOJA JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE JESU\u00CFTES GR\u00C0CIA KOSTKA VERD #13",
+      "meta": "2 temporadas \u00B7 #13 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "AMAYA PUERTO PANTOJA JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #13",
       "totals": {
-        "seasons": 1,
-        "games": 27,
-        "points": 79,
-        "valuation": 24,
-        "fouls": 18,
-        "minutes": 657,
-        "avgPoints": 2.925925925925926,
-        "avgValuation": 0.8888888888888888,
-        "avgFouls": 0.6666666666666666,
-        "avgMinutes": 24.333333333333332
+        "seasons": 2,
+        "games": 28,
+        "points": 81,
+        "valuation": 25,
+        "fouls": 19,
+        "minutes": 681,
+        "avgPoints": 2.892857142857143,
+        "avgValuation": 0.8928571428571429,
+        "avgFouls": 0.6785714285714286,
+        "avgMinutes": 24.321428571428573
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:4256eb8f-c186-4988-b1e5-29d2d28bee80:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AMAYA PUERTO PANTOJA",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:4256eb8f-c186-4988-b1e5-29d2d28bee80:2025-2026",
           "seasonStartYear": 2025,
@@ -8971,21 +9297,43 @@
       "key": "UUID:0976657a-b627-48c9-8a1f-7bd3d411f8e9",
       "label": "ANNA GUITART SINSARD",
       "latestShirtNumber": "32",
-      "meta": "1 temporada \u00B7 #32 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "ANNA GUITART SINSARD C.B GRUP BARNA VERMELL  1ER ANY C.B GRUP BARNA A #32",
+      "meta": "2 temporadas \u00B7 #32 \u00B7 C.B GRUP BARNA A",
+      "searchText": "ANNA GUITART SINSARD C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #32",
       "totals": {
-        "seasons": 1,
-        "games": 22,
-        "points": 133,
-        "valuation": 91,
-        "fouls": 13,
-        "minutes": 469,
-        "avgPoints": 6.045454545454546,
-        "avgValuation": 4.136363636363637,
-        "avgFouls": 0.5909090909090909,
-        "avgMinutes": 21.318181818181817
+        "seasons": 2,
+        "games": 23,
+        "points": 145,
+        "valuation": 99,
+        "fouls": 15,
+        "minutes": 493,
+        "avgPoints": 6.304347826086956,
+        "avgValuation": 4.304347826086956,
+        "avgFouls": 0.6521739130434783,
+        "avgMinutes": 21.434782608695652
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:0976657a-b627-48c9-8a1f-7bd3d411f8e9:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ANNA GUITART SINSARD",
+          "shirtNumber": "32",
+          "games": 1,
+          "points": 12,
+          "valuation": 8,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 12,
+          "avgValuation": 8,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:0976657a-b627-48c9-8a1f-7bd3d411f8e9:2025-2026",
           "seasonStartYear": 2025,
@@ -9144,21 +9492,43 @@
       "key": "UUID:77cb937b-0220-49bd-b08e-b6d1a5b38323",
       "label": "ANNA VILANOVA GAREA",
       "latestShirtNumber": "23",
-      "meta": "1 temporada \u00B7 #23 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #23 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "ANNA VILANOVA GAREA DOMINIQUES BARCELONA TARONJA #23",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 82,
-        "valuation": 49,
-        "fouls": 21,
-        "minutes": 498,
-        "avgPoints": 5.125,
-        "avgValuation": 3.0625,
-        "avgFouls": 1.3125,
-        "avgMinutes": 31.125
+        "seasons": 2,
+        "games": 17,
+        "points": 94,
+        "valuation": 54,
+        "fouls": 26,
+        "minutes": 521,
+        "avgPoints": 5.529411764705882,
+        "avgValuation": 3.176470588235294,
+        "avgFouls": 1.5294117647058822,
+        "avgMinutes": 30.647058823529413
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:77cb937b-0220-49bd-b08e-b6d1a5b38323:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ANNA VILANOVA GAREA",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 12,
+          "valuation": 5,
+          "fouls": 5,
+          "minutes": 23,
+          "avgPoints": 12,
+          "avgValuation": 5,
+          "avgFouls": 5,
+          "avgMinutes": 23,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:77cb937b-0220-49bd-b08e-b6d1a5b38323:2025-2026",
           "seasonStartYear": 2025,
@@ -9524,6 +9894,49 @@
           "primaryTeamName": "BASQUET MOLINS",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83386",
           "primaryTeamIdExtern": 83386
+        }
+      ]
+    },
+    {
+      "key": "UUID:9f1f54fd-faff-4a79-a086-343dbf954f40",
+      "label": "ARES FERNANDEZ MATEO",
+      "latestShirtNumber": "35",
+      "meta": "1 temporada \u00B7 #35 \u00B7 CE VILA OLIMPICA",
+      "searchText": "ARES FERNANDEZ MATEO CE VILA OLIMPICA #35",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -5,
+        "fouls": 5,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -5,
+        "avgFouls": 5,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:9f1f54fd-faff-4a79-a086-343dbf954f40:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ARES FERNANDEZ MATEO",
+          "shirtNumber": "35",
+          "games": 1,
+          "points": 0,
+          "valuation": -5,
+          "fouls": 5,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -5,
+          "avgFouls": 5,
+          "avgMinutes": 24,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
         }
       ]
     },
@@ -10685,6 +11098,49 @@
           "primaryTeamName": "CE SANT NICOLAU",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78612",
           "primaryTeamIdExtern": 78612
+        }
+      ]
+    },
+    {
+      "key": "UUID:79099743-8673-45a4-bfeb-b7e41bf1961b",
+      "label": "ARITZ CABRE MORTE",
+      "latestShirtNumber": "3",
+      "meta": "1 temporada \u00B7 #3 \u00B7 B.I.M.",
+      "searchText": "ARITZ CABRE MORTE B.I.M. #3",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 1,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 2,
+        "avgValuation": 1,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:79099743-8673-45a4-bfeb-b7e41bf1961b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ARITZ CABRE MORTE",
+          "shirtNumber": "3",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
         }
       ]
     },
@@ -11984,21 +12440,43 @@
       "key": "UUID:713e042d-f37a-4e50-b2ac-6b4c6cedb7a9",
       "label": "ARLET VILAR FERRER",
       "latestShirtNumber": "18",
-      "meta": "1 temporada \u00B7 #18 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "ARLET VILAR FERRER AE MINGUELLA B - PURE CUISINE #18",
+      "meta": "2 temporadas \u00B7 #18 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "ARLET VILAR FERRER AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #18",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 65,
-        "valuation": 42,
+        "seasons": 2,
+        "games": 17,
+        "points": 81,
+        "valuation": 58,
         "fouls": 19,
-        "minutes": 327,
-        "avgPoints": 4.0625,
-        "avgValuation": 2.625,
-        "avgFouls": 1.1875,
-        "avgMinutes": 20.4375
+        "minutes": 351,
+        "avgPoints": 4.764705882352941,
+        "avgValuation": 3.411764705882353,
+        "avgFouls": 1.1176470588235294,
+        "avgMinutes": 20.647058823529413
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:713e042d-f37a-4e50-b2ac-6b4c6cedb7a9:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ARLET VILAR FERRER",
+          "shirtNumber": "18",
+          "games": 1,
+          "points": 16,
+          "valuation": 16,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 16,
+          "avgValuation": 16,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:713e042d-f37a-4e50-b2ac-6b4c6cedb7a9:2025-2026",
           "seasonStartYear": 2025,
@@ -14393,6 +14871,92 @@
       ]
     },
     {
+      "key": "UUID:6e4e358c-7177-4893-92b7-720dbfb3fb34",
+      "label": "BIEL HOCES GARCIA",
+      "latestShirtNumber": "4",
+      "meta": "1 temporada \u00B7 #4 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "BIEL HOCES GARCIA UE SANT ANDREU GROC #4",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:6e4e358c-7177-4893-92b7-720dbfb3fb34:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "BIEL HOCES GARCIA",
+          "shirtNumber": "4",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
+        }
+      ]
+    },
+    {
+      "key": "UUID:8ebd726b-fd70-46bd-b208-30ffe78fb9dd",
+      "label": "BIEL RIBERA BLANCO",
+      "latestShirtNumber": "3",
+      "meta": "1 temporada \u00B7 #3 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "BIEL RIBERA BLANCO C.B GRUP BARNA NEGRE #3",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 4,
+        "fouls": 0,
+        "minutes": 18,
+        "avgPoints": 4,
+        "avgValuation": 4,
+        "avgFouls": 0,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:8ebd726b-fd70-46bd-b208-30ffe78fb9dd:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "BIEL RIBERA BLANCO",
+          "shirtNumber": "3",
+          "games": 1,
+          "points": 4,
+          "valuation": 4,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 4,
+          "avgValuation": 4,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:e557ab70-f790-4854-ac3b-e70b68e276ef",
       "label": "BINTOU CAMARA KEITA",
       "latestShirtNumber": "5",
@@ -14778,6 +15342,49 @@
           "primaryTeamName": "VEDRUNA GR\u00C0CIA VERD",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
           "primaryTeamIdExtern": 82766
+        }
+      ]
+    },
+    {
+      "key": "UUID:1c7233f3-5766-4ba6-bc4c-6868886122f0",
+      "label": "BRUC TORIBIO ALBERT",
+      "latestShirtNumber": "24",
+      "meta": "1 temporada \u00B7 #24 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "BRUC TORIBIO ALBERT UE SANT ANDREU GROC #24",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 1,
+        "fouls": 0,
+        "minutes": 30,
+        "avgPoints": 2,
+        "avgValuation": 1,
+        "avgFouls": 0,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:1c7233f3-5766-4ba6-bc4c-6868886122f0:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "BRUC TORIBIO ALBERT",
+          "shirtNumber": "24",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 0,
+          "minutes": 30,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 0,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
         }
       ]
     },
@@ -15816,6 +16423,49 @@
       ]
     },
     {
+      "key": "UUID:a40805a4-4367-4890-8426-e795dcd5192f",
+      "label": "CARLA COBOS JUVANY",
+      "latestShirtNumber": "24",
+      "meta": "1 temporada \u00B7 #24 \u00B7 C.B GRUP BARNA A",
+      "searchText": "CARLA COBOS JUVANY C.B GRUP BARNA A #24",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 2,
+        "fouls": 1,
+        "minutes": 30,
+        "avgPoints": 4,
+        "avgValuation": 2,
+        "avgFouls": 1,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:a40805a4-4367-4890-8426-e795dcd5192f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA COBOS JUVANY",
+          "shirtNumber": "24",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        }
+      ]
+    },
+    {
       "key": "UUID:b3f90893-2fae-4e37-b9a6-21f3b05df98c",
       "label": "CARLA CORRALES PASTORET",
       "latestShirtNumber": "30",
@@ -15991,21 +16641,43 @@
       "key": "UUID:103837ef-85a4-4831-9cff-04ec1b9a53c6",
       "label": "CARLA EXPOSITO CHUECO",
       "latestShirtNumber": "28",
-      "meta": "1 temporada \u00B7 #28 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "meta": "2 temporadas \u00B7 #28 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
       "searchText": "CARLA EXPOSITO CHUECO FEMEN\u00CD SANT ADRI\u00C0 A #28",
       "totals": {
-        "seasons": 1,
-        "games": 18,
-        "points": 64,
-        "valuation": -3,
-        "fouls": 63,
-        "minutes": 527,
-        "avgPoints": 3.5555555555555554,
-        "avgValuation": -0.16666666666666666,
-        "avgFouls": 3.5,
-        "avgMinutes": 29.27777777777778
+        "seasons": 2,
+        "games": 19,
+        "points": 85,
+        "valuation": 15,
+        "fouls": 66,
+        "minutes": 563,
+        "avgPoints": 4.473684210526316,
+        "avgValuation": 0.7894736842105263,
+        "avgFouls": 3.473684210526316,
+        "avgMinutes": 29.63157894736842
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:103837ef-85a4-4831-9cff-04ec1b9a53c6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA EXPOSITO CHUECO",
+          "shirtNumber": "28",
+          "games": 1,
+          "points": 21,
+          "valuation": 18,
+          "fouls": 3,
+          "minutes": 36,
+          "avgPoints": 21,
+          "avgValuation": 18,
+          "avgFouls": 3,
+          "avgMinutes": 36,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:103837ef-85a4-4831-9cff-04ec1b9a53c6:2025-2026",
           "seasonStartYear": 2025,
@@ -17455,22 +18127,44 @@
     {
       "key": "UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998",
       "label": "CARLOTA S\u00C1NCHEZ HEINEMANN",
-      "latestShirtNumber": "23",
-      "meta": "1 temporada \u00B7 #23 \u00B7 CB MANYANET LES CORTS GROC",
-      "searchText": "CARLOTA S\u00C1NCHEZ HEINEMANN CB MANYANET LES CORTS GROC #23",
+      "latestShirtNumber": "8",
+      "meta": "2 temporadas \u00B7 #8 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "CARLOTA S\u00C1NCHEZ HEINEMANN JAC SANTS BARCELONA U10 1 CB MANYANET LES CORTS GROC #8",
       "totals": {
-        "seasons": 1,
-        "games": 17,
+        "seasons": 2,
+        "games": 18,
         "points": 57,
-        "valuation": 4,
-        "fouls": 38,
-        "minutes": 383,
-        "avgPoints": 3.3529411764705883,
-        "avgValuation": 0.23529411764705882,
-        "avgFouls": 2.235294117647059,
-        "avgMinutes": 22.529411764705884
+        "valuation": 3,
+        "fouls": 39,
+        "minutes": 407,
+        "avgPoints": 3.1666666666666665,
+        "avgValuation": 0.16666666666666666,
+        "avgFouls": 2.1666666666666665,
+        "avgMinutes": 22.61111111111111
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLOTA S\u00C1NCHEZ HEINEMANN",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:357aa467-e79f-4ebe-ab15-175b3fb8d998:2025-2026",
           "seasonStartYear": 2025,
@@ -17499,21 +18193,43 @@
       "key": "UUID:0b83c0d2-fb47-4138-9573-698bc45b4d36",
       "label": "CARLOTA SERAROLS PADR\u00D3",
       "latestShirtNumber": "14",
-      "meta": "1 temporada \u00B7 #14 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "CARLOTA SERAROLS PADR\u00D3 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #14",
+      "meta": "2 temporadas \u00B7 #14 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "CARLOTA SERAROLS PADR\u00D3 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #14",
       "totals": {
-        "seasons": 1,
-        "games": 12,
+        "seasons": 2,
+        "games": 13,
         "points": 46,
         "valuation": 25,
         "fouls": 7,
-        "minutes": 247,
-        "avgPoints": 3.8333333333333335,
-        "avgValuation": 2.0833333333333335,
-        "avgFouls": 0.5833333333333334,
-        "avgMinutes": 20.583333333333332
+        "minutes": 274,
+        "avgPoints": 3.5384615384615383,
+        "avgValuation": 1.9230769230769231,
+        "avgFouls": 0.5384615384615384,
+        "avgMinutes": 21.076923076923077
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:0b83c0d2-fb47-4138-9573-698bc45b4d36:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLOTA SERAROLS PADR\u00D3",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 27,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 27,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:0b83c0d2-fb47-4138-9573-698bc45b4d36:2025-2026",
           "seasonStartYear": 2025,
@@ -17751,6 +18467,49 @@
           "primaryTeamName": "MANRESA CBF 3",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79034",
           "primaryTeamIdExtern": 79034
+        }
+      ]
+    },
+    {
+      "key": "UUID:06babedd-0cf3-4ce3-b8a3-d59685c36dc2",
+      "label": "CESC CALVO CABALLERO",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "CESC CALVO CABALLERO UE SANT ANDREU GROC #9",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": -3,
+        "fouls": 2,
+        "minutes": 30,
+        "avgPoints": 4,
+        "avgValuation": -3,
+        "avgFouls": 2,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:06babedd-0cf3-4ce3-b8a3-d59685c36dc2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CESC CALVO CABALLERO",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 4,
+          "valuation": -3,
+          "fouls": 2,
+          "minutes": 30,
+          "avgPoints": 4,
+          "avgValuation": -3,
+          "avgFouls": 2,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
         }
       ]
     },
@@ -18401,6 +19160,49 @@
       ]
     },
     {
+      "key": "UUID:a7ebc49a-56de-4191-8499-01f613d233ed",
+      "label": "CIARA SANTOS SEGURA",
+      "latestShirtNumber": "20",
+      "meta": "1 temporada \u00B7 #20 \u00B7 B.I.M.",
+      "searchText": "CIARA SANTOS SEGURA B.I.M. #20",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 30,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:a7ebc49a-56de-4191-8499-01f613d233ed:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CIARA SANTOS SEGURA",
+          "shirtNumber": "20",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
       "key": "UUID:9e43069f-df9d-406a-a654-929b8b58bda2",
       "label": "CLARA CALVO FERN\u00C1NDEZ",
       "latestShirtNumber": "5",
@@ -18447,21 +19249,43 @@
       "key": "UUID:64002a95-5786-4b33-8e8e-e7c1cc3f3e05",
       "label": "CLARA CASTRO GUBERT",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #7 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "CLARA CASTRO GUBERT DOMINIQUES BARCELONA TARONJA #7",
       "totals": {
-        "seasons": 1,
-        "games": 10,
-        "points": 85,
-        "valuation": 44,
-        "fouls": 20,
-        "minutes": 294,
-        "avgPoints": 8.5,
-        "avgValuation": 4.4,
-        "avgFouls": 2,
-        "avgMinutes": 29.4
+        "seasons": 2,
+        "games": 11,
+        "points": 94,
+        "valuation": 47,
+        "fouls": 24,
+        "minutes": 328,
+        "avgPoints": 8.545454545454545,
+        "avgValuation": 4.2727272727272725,
+        "avgFouls": 2.1818181818181817,
+        "avgMinutes": 29.818181818181817
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:64002a95-5786-4b33-8e8e-e7c1cc3f3e05:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLARA CASTRO GUBERT",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 9,
+          "valuation": 3,
+          "fouls": 4,
+          "minutes": 34,
+          "avgPoints": 9,
+          "avgValuation": 3,
+          "avgFouls": 4,
+          "avgMinutes": 34,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:64002a95-5786-4b33-8e8e-e7c1cc3f3e05:2025-2026",
           "seasonStartYear": 2025,
@@ -19006,21 +19830,43 @@
       "key": "UUID:062d4275-ddac-46f7-a033-6c3602d4a9e2",
       "label": "CLAUDIA CASTELLET BLANCO",
       "latestShirtNumber": "27",
-      "meta": "1 temporada \u00B7 #27 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #27 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "CLAUDIA CASTELLET BLANCO DOMINIQUES BARCELONA TARONJA #27",
       "totals": {
-        "seasons": 1,
-        "games": 16,
+        "seasons": 2,
+        "games": 17,
         "points": 15,
-        "valuation": -15,
-        "fouls": 19,
-        "minutes": 416,
-        "avgPoints": 0.9375,
-        "avgValuation": -0.9375,
-        "avgFouls": 1.1875,
-        "avgMinutes": 26
+        "valuation": -19,
+        "fouls": 23,
+        "minutes": 440,
+        "avgPoints": 0.8823529411764706,
+        "avgValuation": -1.1176470588235294,
+        "avgFouls": 1.3529411764705883,
+        "avgMinutes": 25.88235294117647
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:062d4275-ddac-46f7-a033-6c3602d4a9e2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLAUDIA CASTELLET BLANCO",
+          "shirtNumber": "27",
+          "games": 1,
+          "points": 0,
+          "valuation": -4,
+          "fouls": 4,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -4,
+          "avgFouls": 4,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:062d4275-ddac-46f7-a033-6c3602d4a9e2:2025-2026",
           "seasonStartYear": 2025,
@@ -19178,21 +20024,43 @@
       "key": "UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e",
       "label": "CLAUDIA JOU GARCIA",
       "latestShirtNumber": "14",
-      "meta": "1 temporada \u00B7 #14 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "CLAUDIA JOU GARCIA C.B GRUP BARNA VERMELL  1ER ANY #14",
+      "meta": "2 temporadas \u00B7 #14 \u00B7 C.B GRUP BARNA A",
+      "searchText": "CLAUDIA JOU GARCIA C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #14",
       "totals": {
-        "seasons": 1,
-        "games": 19,
+        "seasons": 2,
+        "games": 20,
         "points": 81,
-        "valuation": 50,
-        "fouls": 17,
-        "minutes": 376,
-        "avgPoints": 4.2631578947368425,
-        "avgValuation": 2.6315789473684212,
-        "avgFouls": 0.8947368421052632,
-        "avgMinutes": 19.789473684210527
+        "valuation": 47,
+        "fouls": 18,
+        "minutes": 394,
+        "avgPoints": 4.05,
+        "avgValuation": 2.35,
+        "avgFouls": 0.9,
+        "avgMinutes": 19.7
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLAUDIA JOU GARCIA",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 0,
+          "valuation": -3,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -3,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:28b4749a-a429-4e9b-b717-51d3ba8eae6e:2025-2026",
           "seasonStartYear": 2025,
@@ -19566,21 +20434,43 @@
       "key": "UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5",
       "label": "CLAUDIA PORTO ALFONSO",
       "latestShirtNumber": "13",
-      "meta": "1 temporada \u00B7 #13 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "CLAUDIA PORTO ALFONSO C.B GRUP BARNA VERMELL  1ER ANY #13",
+      "meta": "2 temporadas \u00B7 #13 \u00B7 C.B GRUP BARNA A",
+      "searchText": "CLAUDIA PORTO ALFONSO C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #13",
       "totals": {
-        "seasons": 1,
-        "games": 22,
-        "points": 112,
-        "valuation": 93,
+        "seasons": 2,
+        "games": 23,
+        "points": 114,
+        "valuation": 95,
         "fouls": 17,
-        "minutes": 448,
-        "avgPoints": 5.090909090909091,
-        "avgValuation": 4.2272727272727275,
-        "avgFouls": 0.7727272727272727,
-        "avgMinutes": 20.363636363636363
+        "minutes": 460,
+        "avgPoints": 4.956521739130435,
+        "avgValuation": 4.130434782608695,
+        "avgFouls": 0.7391304347826086,
+        "avgMinutes": 20
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLAUDIA PORTO ALFONSO",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 12,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 12,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:9b430cde-74e6-46a5-97c6-7961d35d49d5:2025-2026",
           "seasonStartYear": 2025,
@@ -19652,21 +20542,43 @@
       "key": "UUID:6a768594-3f36-4c6e-8e35-b093edbc68b0",
       "label": "CLAUDIA ROCA MARTI",
       "latestShirtNumber": "78",
-      "meta": "1 temporada \u00B7 #78 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #78 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "CLAUDIA ROCA MARTI DOMINIQUES BARCELONA TARONJA #78",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 188,
-        "valuation": 89,
-        "fouls": 48,
-        "minutes": 561,
-        "avgPoints": 11.75,
-        "avgValuation": 5.5625,
+        "seasons": 2,
+        "games": 17,
+        "points": 215,
+        "valuation": 110,
+        "fouls": 51,
+        "minutes": 601,
+        "avgPoints": 12.647058823529411,
+        "avgValuation": 6.470588235294118,
         "avgFouls": 3,
-        "avgMinutes": 35.0625
+        "avgMinutes": 35.35294117647059
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:6a768594-3f36-4c6e-8e35-b093edbc68b0:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLAUDIA ROCA MARTI",
+          "shirtNumber": "78",
+          "games": 1,
+          "points": 27,
+          "valuation": 21,
+          "fouls": 3,
+          "minutes": 40,
+          "avgPoints": 27,
+          "avgValuation": 21,
+          "avgFouls": 3,
+          "avgMinutes": 40,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:6a768594-3f36-4c6e-8e35-b093edbc68b0:2025-2026",
           "seasonStartYear": 2025,
@@ -20683,6 +21595,49 @@
       ]
     },
     {
+      "key": "UUID:2bf76e8b-6610-4861-97bc-9273412da914",
+      "label": "DANIEL MARCHIANO CARRERAS",
+      "latestShirtNumber": "6",
+      "meta": "1 temporada \u00B7 #6 \u00B7 CE VILA OLIMPICA",
+      "searchText": "DANIEL MARCHIANO CARRERAS CE VILA OLIMPICA #6",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 28,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 28
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:2bf76e8b-6610-4861-97bc-9273412da914:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "DANIEL MARCHIANO CARRERAS",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 28,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 28,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
+        }
+      ]
+    },
+    {
       "key": "UUID:dc18738a-b266-4c89-9bde-79dbb8593b92",
       "label": "DANIELA BONILLA GARCIA",
       "latestShirtNumber": "21",
@@ -21281,6 +22236,49 @@
           "primaryTeamName": "CB TORELL\u00D3 PF VERMELL - - PERRUQUERIA XAMPR\u00D3",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82054",
           "primaryTeamIdExtern": 82054
+        }
+      ]
+    },
+    {
+      "key": "UUID:fafcf52d-e89c-4375-90cd-4e3c0595249c",
+      "label": "DAVID MUELA MIRAT",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "DAVID MUELA MIRAT UE SANT CUGAT - OCCIDENT NEGRE #11",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 13,
+        "valuation": 12,
+        "fouls": 1,
+        "minutes": 30,
+        "avgPoints": 13,
+        "avgValuation": 12,
+        "avgFouls": 1,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:fafcf52d-e89c-4375-90cd-4e3c0595249c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "DAVID MUELA MIRAT",
+          "shirtNumber": "11",
+          "games": 1,
+          "points": 13,
+          "valuation": 12,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 13,
+          "avgValuation": 12,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
         }
       ]
     },
@@ -22234,6 +23232,49 @@
       ]
     },
     {
+      "key": "UUID:08a4be1c-ea74-403b-8007-29cbc54b1751",
+      "label": "EIDER DAVI  MART\u00CDNEZ DE COMPA\u00D1\u00D3N",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "EIDER DAVI  MART\u00CDNEZ DE COMPA\u00D1\u00D3N JESU\u00CFTES GR\u00C0CIA KOSTKA VERD #8",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:08a4be1c-ea74-403b-8007-29cbc54b1751:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EIDER DAVI  MART\u00CDNEZ DE COMPA\u00D1\u00D3N",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        }
+      ]
+    },
+    {
       "key": "UUID:b754c6b0-719f-440e-8404-9dbea126c739",
       "label": "EIDER RODR\u00CDGUEZ ORTEGA",
       "latestShirtNumber": "3",
@@ -23140,21 +24181,43 @@
       "key": "UUID:7193236f-3771-4f02-8e43-8507498f0c55",
       "label": "ELIA RIBES SARROCA",
       "latestShirtNumber": "5",
-      "meta": "1 temporada \u00B7 #5 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "ELIA RIBES SARROCA C.B GRUP BARNA VERMELL  1ER ANY #5",
+      "meta": "2 temporadas \u00B7 #5 \u00B7 C.B GRUP BARNA A",
+      "searchText": "ELIA RIBES SARROCA C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #5",
       "totals": {
-        "seasons": 1,
-        "games": 23,
+        "seasons": 2,
+        "games": 24,
         "points": 89,
-        "valuation": 58,
-        "fouls": 18,
-        "minutes": 471,
-        "avgPoints": 3.869565217391304,
-        "avgValuation": 2.5217391304347827,
-        "avgFouls": 0.782608695652174,
-        "avgMinutes": 20.47826086956522
+        "valuation": 55,
+        "fouls": 19,
+        "minutes": 489,
+        "avgPoints": 3.7083333333333335,
+        "avgValuation": 2.2916666666666665,
+        "avgFouls": 0.7916666666666666,
+        "avgMinutes": 20.375
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:7193236f-3771-4f02-8e43-8507498f0c55:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ELIA RIBES SARROCA",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 0,
+          "valuation": -3,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -3,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:7193236f-3771-4f02-8e43-8507498f0c55:2025-2026",
           "seasonStartYear": 2025,
@@ -23305,6 +24368,49 @@
           "primaryTeamName": "UB MIR B",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
           "primaryTeamIdExtern": 81569
+        }
+      ]
+    },
+    {
+      "key": "UUID:043cff3f-97e6-44cb-8c9d-7b0fdc0ebedb",
+      "label": "ELIAS SALMI GOMIS",
+      "latestShirtNumber": "99",
+      "meta": "1 temporada \u00B7 #99 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "ELIAS SALMI GOMIS UE SANT CUGAT - OCCIDENT NEGRE #99",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 31,
+        "valuation": 30,
+        "fouls": 0,
+        "minutes": 32,
+        "avgPoints": 31,
+        "avgValuation": 30,
+        "avgFouls": 0,
+        "avgMinutes": 32
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:043cff3f-97e6-44cb-8c9d-7b0fdc0ebedb:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ELIAS SALMI GOMIS",
+          "shirtNumber": "99",
+          "games": 1,
+          "points": 31,
+          "valuation": 30,
+          "fouls": 0,
+          "minutes": 32,
+          "avgPoints": 31,
+          "avgValuation": 30,
+          "avgFouls": 0,
+          "avgMinutes": 32,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
         }
       ]
     },
@@ -24392,21 +25498,43 @@
       "key": "UUID:08857f32-77dd-4c9a-acd9-c1695f704d05",
       "label": "EMMA CROSAS LARRA\u00D1AGA",
       "latestShirtNumber": "26",
-      "meta": "1 temporada \u00B7 #26 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "EMMA CROSAS LARRA\u00D1AGA JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #26",
+      "meta": "2 temporadas \u00B7 #26 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "EMMA CROSAS LARRA\u00D1AGA JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #26",
       "totals": {
-        "seasons": 1,
-        "games": 25,
-        "points": 297,
-        "valuation": 239,
-        "fouls": 17,
-        "minutes": 600,
-        "avgPoints": 11.88,
-        "avgValuation": 9.56,
-        "avgFouls": 0.68,
-        "avgMinutes": 24
+        "seasons": 2,
+        "games": 26,
+        "points": 305,
+        "valuation": 244,
+        "fouls": 18,
+        "minutes": 630,
+        "avgPoints": 11.73076923076923,
+        "avgValuation": 9.384615384615385,
+        "avgFouls": 0.6923076923076923,
+        "avgMinutes": 24.23076923076923
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:08857f32-77dd-4c9a-acd9-c1695f704d05:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EMMA CROSAS LARRA\u00D1AGA",
+          "shirtNumber": "26",
+          "games": 1,
+          "points": 8,
+          "valuation": 5,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 8,
+          "avgValuation": 5,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:08857f32-77dd-4c9a-acd9-c1695f704d05:2025-2026",
           "seasonStartYear": 2025,
@@ -24564,22 +25692,44 @@
     {
       "key": "UUID:10c8045b-4e61-4819-8ab6-00ffdd314d3f",
       "label": "EMMA GERDEJ BURGOS",
-      "latestShirtNumber": "77",
-      "meta": "1 temporada \u00B7 #77 \u00B7 UE.MONTGAT - VERMELL",
-      "searchText": "EMMA GERDEJ BURGOS UE.MONTGAT - VERMELL #77",
+      "latestShirtNumber": "1",
+      "meta": "2 temporadas \u00B7 #1 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "searchText": "EMMA GERDEJ BURGOS FEMEN\u00CD SANT ADRI\u00C0 A UE.MONTGAT - VERMELL #1",
       "totals": {
-        "seasons": 1,
-        "games": 13,
-        "points": 44,
-        "valuation": 21,
-        "fouls": 10,
-        "minutes": 281,
-        "avgPoints": 3.3846153846153846,
-        "avgValuation": 1.6153846153846154,
-        "avgFouls": 0.7692307692307693,
-        "avgMinutes": 21.615384615384617
+        "seasons": 2,
+        "games": 14,
+        "points": 55,
+        "valuation": 28,
+        "fouls": 13,
+        "minutes": 317,
+        "avgPoints": 3.9285714285714284,
+        "avgValuation": 2,
+        "avgFouls": 0.9285714285714286,
+        "avgMinutes": 22.642857142857142
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:10c8045b-4e61-4819-8ab6-00ffdd314d3f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EMMA GERDEJ BURGOS",
+          "shirtNumber": "1",
+          "games": 1,
+          "points": 11,
+          "valuation": 7,
+          "fouls": 3,
+          "minutes": 36,
+          "avgPoints": 11,
+          "avgValuation": 7,
+          "avgFouls": 3,
+          "avgMinutes": 36,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:10c8045b-4e61-4819-8ab6-00ffdd314d3f:2025-2026",
           "seasonStartYear": 2025,
@@ -25040,21 +26190,43 @@
       "key": "UUID:8aeac8d5-329c-423d-a89d-26048e58d7c8",
       "label": "EMMA RIEGO SOLAN",
       "latestShirtNumber": "3",
-      "meta": "1 temporada \u00B7 #3 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "EMMA RIEGO SOLAN JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #3",
+      "meta": "2 temporadas \u00B7 #3 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "EMMA RIEGO SOLAN JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #3",
       "totals": {
-        "seasons": 1,
-        "games": 12,
-        "points": 20,
+        "seasons": 2,
+        "games": 13,
+        "points": 22,
         "valuation": 16,
         "fouls": 2,
-        "minutes": 292,
-        "avgPoints": 1.6666666666666667,
-        "avgValuation": 1.3333333333333333,
-        "avgFouls": 0.16666666666666666,
-        "avgMinutes": 24.333333333333332
+        "minutes": 319,
+        "avgPoints": 1.6923076923076923,
+        "avgValuation": 1.2307692307692308,
+        "avgFouls": 0.15384615384615385,
+        "avgMinutes": 24.53846153846154
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:8aeac8d5-329c-423d-a89d-26048e58d7c8:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EMMA RIEGO SOLAN",
+          "shirtNumber": "3",
+          "games": 1,
+          "points": 2,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 27,
+          "avgPoints": 2,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 27,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:8aeac8d5-329c-423d-a89d-26048e58d7c8:2025-2026",
           "seasonStartYear": 2025,
@@ -25385,21 +26557,43 @@
       "key": "UUID:179e3871-a41a-4d98-bdf9-be2533a51895",
       "label": "EMMA UBACH GARCIA",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "EMMA UBACH GARCIA JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #10",
+      "meta": "2 temporadas \u00B7 #10 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "EMMA UBACH GARCIA JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #10",
       "totals": {
-        "seasons": 1,
-        "games": 10,
+        "seasons": 2,
+        "games": 11,
         "points": 7,
-        "valuation": 6,
-        "fouls": 0,
-        "minutes": 210,
-        "avgPoints": 0.7,
-        "avgValuation": 0.6,
-        "avgFouls": 0,
-        "avgMinutes": 21
+        "valuation": 5,
+        "fouls": 1,
+        "minutes": 240,
+        "avgPoints": 0.6363636363636364,
+        "avgValuation": 0.45454545454545453,
+        "avgFouls": 0.09090909090909091,
+        "avgMinutes": 21.818181818181817
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:179e3871-a41a-4d98-bdf9-be2533a51895:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EMMA UBACH GARCIA",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:179e3871-a41a-4d98-bdf9-be2533a51895:2025-2026",
           "seasonStartYear": 2025,
@@ -25641,6 +26835,49 @@
       ]
     },
     {
+      "key": "UUID:27d06b7a-577d-444f-86f3-11c3ae49c7d2",
+      "label": "ERIC VI\u00D1OLA PERTEGAL",
+      "latestShirtNumber": "00",
+      "meta": "1 temporada \u00B7 #00 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "ERIC VI\u00D1OLA PERTEGAL DOMINIQUES BARCELONA #00",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 16,
+        "valuation": 16,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 16,
+        "avgValuation": 16,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:27d06b7a-577d-444f-86f3-11c3ae49c7d2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ERIC VI\u00D1OLA PERTEGAL",
+          "shirtNumber": "00",
+          "games": 1,
+          "points": 16,
+          "valuation": 16,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 16,
+          "avgValuation": 16,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
       "key": "UUID:fa4b9930-a6aa-445c-ac9d-fce0e507c9d9",
       "label": "\u00C8RICA BERENGU\u00C9 ARI\u00D1O",
       "latestShirtNumber": "2",
@@ -25816,21 +27053,43 @@
       "key": "UUID:e6cf5916-4262-4e8e-a184-9a2a3d3638a3",
       "label": "ERIN TOR L\u00D3PEZ",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "ERIN TOR L\u00D3PEZ AE MINGUELLA B - PURE CUISINE #10",
+      "meta": "2 temporadas \u00B7 #10 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "ERIN TOR L\u00D3PEZ AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #10",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 145,
-        "valuation": 103,
-        "fouls": 22,
-        "minutes": 368,
-        "avgPoints": 9.0625,
-        "avgValuation": 6.4375,
-        "avgFouls": 1.375,
-        "avgMinutes": 23
+        "seasons": 2,
+        "games": 17,
+        "points": 157,
+        "valuation": 113,
+        "fouls": 24,
+        "minutes": 392,
+        "avgPoints": 9.235294117647058,
+        "avgValuation": 6.647058823529412,
+        "avgFouls": 1.411764705882353,
+        "avgMinutes": 23.058823529411764
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:e6cf5916-4262-4e8e-a184-9a2a3d3638a3:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ERIN TOR L\u00D3PEZ",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 12,
+          "valuation": 10,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 12,
+          "avgValuation": 10,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:e6cf5916-4262-4e8e-a184-9a2a3d3638a3:2025-2026",
           "seasonStartYear": 2025,
@@ -26119,21 +27378,43 @@
       "key": "UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3",
       "label": "EVA RODRIGUEZ CANO",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "EVA RODRIGUEZ CANO C.B GRUP BARNA VERMELL  1ER ANY #9",
+      "meta": "2 temporadas \u00B7 #9 \u00B7 C.B GRUP BARNA A",
+      "searchText": "EVA RODRIGUEZ CANO C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #9",
       "totals": {
-        "seasons": 1,
-        "games": 21,
-        "points": 104,
-        "valuation": 75,
-        "fouls": 20,
-        "minutes": 466,
-        "avgPoints": 4.9523809523809526,
-        "avgValuation": 3.5714285714285716,
-        "avgFouls": 0.9523809523809523,
-        "avgMinutes": 22.19047619047619
+        "seasons": 2,
+        "games": 22,
+        "points": 108,
+        "valuation": 77,
+        "fouls": 22,
+        "minutes": 493,
+        "avgPoints": 4.909090909090909,
+        "avgValuation": 3.5,
+        "avgFouls": 1,
+        "avgMinutes": 22.40909090909091
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EVA RODRIGUEZ CANO",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 2,
+          "minutes": 27,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 2,
+          "avgMinutes": 27,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:a902e99d-6a76-4e84-b6cd-df84d63b9ef3:2025-2026",
           "seasonStartYear": 2025,
@@ -26371,6 +27652,49 @@
           "primaryTeamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLAU",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82181",
           "primaryTeamIdExtern": 82181
+        }
+      ]
+    },
+    {
+      "key": "UUID:2e2304a7-3118-4d67-a524-9285c6298066",
+      "label": "FERRAN MULA BLAS",
+      "latestShirtNumber": "6",
+      "meta": "1 temporada \u00B7 #6 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "FERRAN MULA BLAS UE SANT ANDREU GROC #6",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": 1,
+        "fouls": 4,
+        "minutes": 24,
+        "avgPoints": 5,
+        "avgValuation": 1,
+        "avgFouls": 4,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:2e2304a7-3118-4d67-a524-9285c6298066:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "FERRAN MULA BLAS",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 5,
+          "valuation": 1,
+          "fouls": 4,
+          "minutes": 24,
+          "avgPoints": 5,
+          "avgValuation": 1,
+          "avgFouls": 4,
+          "avgMinutes": 24,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
         }
       ]
     },
@@ -26767,21 +28091,43 @@
       "key": "UUID:95a03e68-7ede-445a-b812-6ee5735312d4",
       "label": "GALA CERAIN JIM\u00C9NEZ",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "GALA CERAIN JIM\u00C9NEZ JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #15",
+      "meta": "2 temporadas \u00B7 #15 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "GALA CERAIN JIM\u00C9NEZ JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #15",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 34,
-        "valuation": 2,
-        "fouls": 9,
-        "minutes": 330,
-        "avgPoints": 2.4285714285714284,
-        "avgValuation": 0.14285714285714285,
-        "avgFouls": 0.6428571428571429,
-        "avgMinutes": 23.571428571428573
+        "seasons": 2,
+        "games": 15,
+        "points": 36,
+        "valuation": 0,
+        "fouls": 11,
+        "minutes": 354,
+        "avgPoints": 2.4,
+        "avgValuation": 0,
+        "avgFouls": 0.7333333333333333,
+        "avgMinutes": 23.6
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:95a03e68-7ede-445a-b812-6ee5735312d4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "GALA CERAIN JIM\u00C9NEZ",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 2,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:95a03e68-7ede-445a-b812-6ee5735312d4:2025-2026",
           "seasonStartYear": 2025,
@@ -27068,21 +28414,43 @@
       "key": "UUID:d1bfa19e-fc36-44eb-a3a7-d7207f3831bb",
       "label": "GALA PELA\u00D3 SALVAD\u00D3",
       "latestShirtNumber": "55",
-      "meta": "1 temporada \u00B7 #55 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #55 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "GALA PELA\u00D3 SALVAD\u00D3 DOMINIQUES BARCELONA TARONJA #55",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 63,
-        "valuation": 43,
-        "fouls": 18,
-        "minutes": 441,
-        "avgPoints": 3.9375,
-        "avgValuation": 2.6875,
-        "avgFouls": 1.125,
-        "avgMinutes": 27.5625
+        "seasons": 2,
+        "games": 17,
+        "points": 65,
+        "valuation": 44,
+        "fouls": 19,
+        "minutes": 469,
+        "avgPoints": 3.823529411764706,
+        "avgValuation": 2.588235294117647,
+        "avgFouls": 1.1176470588235294,
+        "avgMinutes": 27.58823529411765
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:d1bfa19e-fc36-44eb-a3a7-d7207f3831bb:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "GALA PELA\u00D3 SALVAD\u00D3",
+          "shirtNumber": "55",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 1,
+          "minutes": 28,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 1,
+          "avgMinutes": 28,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:d1bfa19e-fc36-44eb-a3a7-d7207f3831bb:2025-2026",
           "seasonStartYear": 2025,
@@ -27240,21 +28608,43 @@
       "key": "UUID:3c86eb1f-80fa-4101-9d73-0ac3c47ea31f",
       "label": "GALA ROS GRIFOL",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "GALA ROS GRIFOL AE MINGUELLA B - PURE CUISINE #15",
+      "meta": "2 temporadas \u00B7 #15 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "GALA ROS GRIFOL AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #15",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 23,
-        "valuation": 7,
+        "seasons": 2,
+        "games": 17,
+        "points": 26,
+        "valuation": 8,
         "fouls": 11,
-        "minutes": 316,
-        "avgPoints": 1.4375,
-        "avgValuation": 0.4375,
-        "avgFouls": 0.6875,
-        "avgMinutes": 19.75
+        "minutes": 340,
+        "avgPoints": 1.5294117647058822,
+        "avgValuation": 0.47058823529411764,
+        "avgFouls": 0.6470588235294118,
+        "avgMinutes": 20
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:3c86eb1f-80fa-4101-9d73-0ac3c47ea31f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "GALA ROS GRIFOL",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 3,
+          "valuation": 1,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 3,
+          "avgValuation": 1,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:3c86eb1f-80fa-4101-9d73-0ac3c47ea31f:2025-2026",
           "seasonStartYear": 2025,
@@ -28488,6 +29878,49 @@
       ]
     },
     {
+      "key": "UUID:01a3db0f-bb20-4b3a-9693-d3c0a85746d5",
+      "label": "GRAU CODINA ALCOBERO",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "GRAU CODINA ALCOBERO UE SANT CUGAT - OCCIDENT NEGRE #10",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 8,
+        "valuation": 6,
+        "fouls": 2,
+        "minutes": 32,
+        "avgPoints": 8,
+        "avgValuation": 6,
+        "avgFouls": 2,
+        "avgMinutes": 32
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:01a3db0f-bb20-4b3a-9693-d3c0a85746d5:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "GRAU CODINA ALCOBERO",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 8,
+          "valuation": 6,
+          "fouls": 2,
+          "minutes": 32,
+          "avgPoints": 8,
+          "avgValuation": 6,
+          "avgFouls": 2,
+          "avgMinutes": 32,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
+        }
+      ]
+    },
+    {
       "key": "UUID:8278b269-bebd-4cc7-b2e7-f1cf1a73da9b",
       "label": "GRETA HUMEDES MOR",
       "latestShirtNumber": "15",
@@ -29522,6 +30955,49 @@
       ]
     },
     {
+      "key": "UUID:243dd928-b4dd-4e7e-8154-bbac001fb497",
+      "label": "I.A.G.",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "I.A.G. C.B GRUP BARNA NEGRE #7",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 10,
+        "valuation": 7,
+        "fouls": 3,
+        "minutes": 30,
+        "avgPoints": 10,
+        "avgValuation": 7,
+        "avgFouls": 3,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:243dd928-b4dd-4e7e-8154-bbac001fb497:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "I.A.G.",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 10,
+          "valuation": 7,
+          "fouls": 3,
+          "minutes": 30,
+          "avgPoints": 10,
+          "avgValuation": 7,
+          "avgFouls": 3,
+          "avgMinutes": 30,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:3d59d0ba-f6f5-40bc-a539-f381fe85cc7f",
       "label": "I.C.J.",
       "latestShirtNumber": "2",
@@ -29561,6 +31037,92 @@
           "primaryTeamName": "A.E. BADALON\u00C8S - PINTURAS CORBACHO",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79136",
           "primaryTeamIdExtern": 79136
+        }
+      ]
+    },
+    {
+      "key": "UUID:8814e6e9-46d5-4932-a981-903cb58845d1",
+      "label": "I.F.T.",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 B.I.M.",
+      "searchText": "I.F.T. B.I.M. #19",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 1,
+        "valuation": -3,
+        "fouls": 3,
+        "minutes": 30,
+        "avgPoints": 1,
+        "avgValuation": -3,
+        "avgFouls": 3,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:8814e6e9-46d5-4932-a981-903cb58845d1:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "I.F.T.",
+          "shirtNumber": "19",
+          "games": 1,
+          "points": 1,
+          "valuation": -3,
+          "fouls": 3,
+          "minutes": 30,
+          "avgPoints": 1,
+          "avgValuation": -3,
+          "avgFouls": 3,
+          "avgMinutes": 30,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
+      "key": "UUID:09d28495-27c9-42b9-a532-94378beea177",
+      "label": "IAN BRAUN SIMAL",
+      "latestShirtNumber": "1",
+      "meta": "1 temporada \u00B7 #1 \u00B7 CE VILA OLIMPICA",
+      "searchText": "IAN BRAUN SIMAL CE VILA OLIMPICA #1",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 1,
+        "valuation": -3,
+        "fouls": 0,
+        "minutes": 30,
+        "avgPoints": 1,
+        "avgValuation": -3,
+        "avgFouls": 0,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:09d28495-27c9-42b9-a532-94378beea177:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IAN BRAUN SIMAL",
+          "shirtNumber": "1",
+          "games": 1,
+          "points": 1,
+          "valuation": -3,
+          "fouls": 0,
+          "minutes": 30,
+          "avgPoints": 1,
+          "avgValuation": -3,
+          "avgFouls": 0,
+          "avgMinutes": 30,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
         }
       ]
     },
@@ -29697,21 +31259,43 @@
       "key": "UUID:e5760ebc-44e2-4eea-bf48-f227c250b88d",
       "label": "IN\u00C9S \u00C1LVAREZ NAVARRO",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "meta": "2 temporadas \u00B7 #12 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
       "searchText": "IN\u00C9S \u00C1LVAREZ NAVARRO FEMEN\u00CD SANT ADRI\u00C0 A #12",
       "totals": {
-        "seasons": 1,
-        "games": 18,
-        "points": 157,
-        "valuation": 101,
-        "fouls": 29,
-        "minutes": 567,
-        "avgPoints": 8.722222222222221,
-        "avgValuation": 5.611111111111111,
-        "avgFouls": 1.6111111111111112,
-        "avgMinutes": 31.5
+        "seasons": 2,
+        "games": 19,
+        "points": 185,
+        "valuation": 115,
+        "fouls": 32,
+        "minutes": 609,
+        "avgPoints": 9.736842105263158,
+        "avgValuation": 6.052631578947368,
+        "avgFouls": 1.6842105263157894,
+        "avgMinutes": 32.05263157894737
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:e5760ebc-44e2-4eea-bf48-f227c250b88d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IN\u00C9S \u00C1LVAREZ NAVARRO",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 28,
+          "valuation": 14,
+          "fouls": 3,
+          "minutes": 42,
+          "avgPoints": 28,
+          "avgValuation": 14,
+          "avgFouls": 3,
+          "avgMinutes": 42,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:e5760ebc-44e2-4eea-bf48-f227c250b88d:2025-2026",
           "seasonStartYear": 2025,
@@ -31635,21 +33219,43 @@
       "key": "UUID:9d29dcea-b90f-4813-a762-81232a8c2c50",
       "label": "IVET CASANOVAS LLAVERIAS",
       "latestShirtNumber": "16",
-      "meta": "1 temporada \u00B7 #16 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "IVET CASANOVAS LLAVERIAS JAC SANTS BARCELONA U10 #16",
+      "meta": "2 temporadas \u00B7 #16 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "IVET CASANOVAS LLAVERIAS JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #16",
       "totals": {
-        "seasons": 1,
-        "games": 22,
+        "seasons": 2,
+        "games": 23,
         "points": 30,
-        "valuation": -15,
-        "fouls": 25,
-        "minutes": 497,
-        "avgPoints": 1.3636363636363635,
-        "avgValuation": -0.6818181818181818,
-        "avgFouls": 1.1363636363636365,
-        "avgMinutes": 22.59090909090909
+        "valuation": -16,
+        "fouls": 26,
+        "minutes": 518,
+        "avgPoints": 1.3043478260869565,
+        "avgValuation": -0.6956521739130435,
+        "avgFouls": 1.1304347826086956,
+        "avgMinutes": 22.52173913043478
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:9d29dcea-b90f-4813-a762-81232a8c2c50:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IVET CASANOVAS LLAVERIAS",
+          "shirtNumber": "16",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 21,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 21,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:9d29dcea-b90f-4813-a762-81232a8c2c50:2025-2026",
           "seasonStartYear": 2025,
@@ -31807,21 +33413,43 @@
       "key": "UUID:585eb6dc-3c87-4541-b7a7-0bfe134144b6",
       "label": "IVET NOLASCO PAREDES",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "IVET NOLASCO PAREDES AE MINGUELLA B - PURE CUISINE #12",
+      "meta": "2 temporadas \u00B7 #12 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "IVET NOLASCO PAREDES AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #12",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 104,
-        "valuation": 87,
+        "seasons": 2,
+        "games": 17,
+        "points": 124,
+        "valuation": 106,
         "fouls": 8,
-        "minutes": 343,
-        "avgPoints": 6.5,
-        "avgValuation": 5.4375,
-        "avgFouls": 0.5,
-        "avgMinutes": 21.4375
+        "minutes": 367,
+        "avgPoints": 7.294117647058823,
+        "avgValuation": 6.235294117647059,
+        "avgFouls": 0.47058823529411764,
+        "avgMinutes": 21.58823529411765
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:585eb6dc-3c87-4541-b7a7-0bfe134144b6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IVET NOLASCO PAREDES",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 20,
+          "valuation": 19,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 20,
+          "avgValuation": 19,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:585eb6dc-3c87-4541-b7a7-0bfe134144b6:2025-2026",
           "seasonStartYear": 2025,
@@ -32406,6 +34034,49 @@
       ]
     },
     {
+      "key": "UUID:08c76421-b1b2-444b-a04e-a26ba426dcb1",
+      "label": "JAN MARTIN ESCARRE",
+      "latestShirtNumber": "50",
+      "meta": "1 temporada \u00B7 #50 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "JAN MARTIN ESCARRE UE SANT ANDREU GROC #50",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:08c76421-b1b2-444b-a04e-a26ba426dcb1:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JAN MARTIN ESCARRE",
+          "shirtNumber": "50",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
+        }
+      ]
+    },
+    {
       "key": "UUID:9a01c02c-7e7f-4a65-af93-aea1c38dabca",
       "label": "JANA BAENA SANTACREU",
       "latestShirtNumber": "22",
@@ -32712,21 +34383,43 @@
       "key": "UUID:e298930a-0d55-40bd-a5ae-9c02e244483a",
       "label": "JANA CUBARS\u00CD SANCHEZ",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "JANA CUBARS\u00CD SANCHEZ AE MINGUELLA B - PURE CUISINE #9",
+      "meta": "2 temporadas \u00B7 #9 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "JANA CUBARS\u00CD SANCHEZ AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #9",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 158,
-        "valuation": 129,
-        "fouls": 19,
-        "minutes": 359,
-        "avgPoints": 9.875,
-        "avgValuation": 8.0625,
-        "avgFouls": 1.1875,
-        "avgMinutes": 22.4375
+        "seasons": 2,
+        "games": 17,
+        "points": 183,
+        "valuation": 151,
+        "fouls": 20,
+        "minutes": 383,
+        "avgPoints": 10.764705882352942,
+        "avgValuation": 8.882352941176471,
+        "avgFouls": 1.1764705882352942,
+        "avgMinutes": 22.529411764705884
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:e298930a-0d55-40bd-a5ae-9c02e244483a:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JANA CUBARS\u00CD SANCHEZ",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 25,
+          "valuation": 22,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 25,
+          "avgValuation": 22,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:e298930a-0d55-40bd-a5ae-9c02e244483a:2025-2026",
           "seasonStartYear": 2025,
@@ -33311,6 +35004,49 @@
       ]
     },
     {
+      "key": "UUID:b9431a00-c5ea-4fba-86d2-10c6a7f0ac89",
+      "label": "JESUS CASELLAS GARCIA",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 B.I.M.",
+      "searchText": "JESUS CASELLAS GARCIA B.I.M. #9",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:b9431a00-c5ea-4fba-86d2-10c6a7f0ac89:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JESUS CASELLAS GARCIA",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
       "key": "UUID:6bc06a59-7b74-4a0b-9151-5fc08c507375",
       "label": "JIHANE BOULAICH",
       "latestShirtNumber": "10",
@@ -33741,6 +35477,49 @@
       ]
     },
     {
+      "key": "UUID:eda182e7-391b-4f1e-ae83-b75dec0abe79",
+      "label": "JOFRE BUXERES DEL RIO",
+      "latestShirtNumber": "27",
+      "meta": "1 temporada \u00B7 #27 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "JOFRE BUXERES DEL RIO DOMINIQUES BARCELONA #27",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 3,
+        "fouls": 4,
+        "minutes": 24,
+        "avgPoints": 7,
+        "avgValuation": 3,
+        "avgFouls": 4,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:eda182e7-391b-4f1e-ae83-b75dec0abe79:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JOFRE BUXERES DEL RIO",
+          "shirtNumber": "27",
+          "games": 1,
+          "points": 7,
+          "valuation": 3,
+          "fouls": 4,
+          "minutes": 24,
+          "avgPoints": 7,
+          "avgValuation": 3,
+          "avgFouls": 4,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
       "key": "UUID:9f746308-d70a-4b9f-a24a-e325d5aae2d4",
       "label": "JOHANNA ZARELY VALLADOLID CARRANZA",
       "latestShirtNumber": "16",
@@ -33780,6 +35559,49 @@
           "primaryTeamName": "BC TECLA SALA  A",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
           "primaryTeamIdExtern": 79709
+        }
+      ]
+    },
+    {
+      "key": "UUID:686c9aa2-e408-48b7-8c36-9872df7a0d64",
+      "label": "JORDI MARIN CORCHERO",
+      "latestShirtNumber": "48",
+      "meta": "1 temporada \u00B7 #48 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "JORDI MARIN CORCHERO UE SANT ANDREU GROC #48",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:686c9aa2-e408-48b7-8c36-9872df7a0d64:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JORDI MARIN CORCHERO",
+          "shirtNumber": "48",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
         }
       ]
     },
@@ -33866,6 +35688,49 @@
           "primaryTeamName": "CB. CANET",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:78693",
           "primaryTeamIdExtern": 78693
+        }
+      ]
+    },
+    {
+      "key": "UUID:124bdf91-bbdf-4ade-80fa-e7fee7928ab6",
+      "label": "JOSEP DALMAU GUTIERREZ",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 CE VILA OLIMPICA",
+      "searchText": "JOSEP DALMAU GUTIERREZ CE VILA OLIMPICA #7",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 36,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 36
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:124bdf91-bbdf-4ade-80fa-e7fee7928ab6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JOSEP DALMAU GUTIERREZ",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 36,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 36,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
         }
       ]
     },
@@ -36031,21 +37896,43 @@
       "key": "UUID:54679965-7291-42cf-a80d-75e56e2a21f2",
       "label": "JULIE SCHERER GRIFOL",
       "latestShirtNumber": "28",
-      "meta": "1 temporada \u00B7 #28 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "JULIE SCHERER GRIFOL AE MINGUELLA B - PURE CUISINE #28",
+      "meta": "2 temporadas \u00B7 #28 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "JULIE SCHERER GRIFOL AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #28",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 153,
-        "valuation": 127,
+        "seasons": 2,
+        "games": 17,
+        "points": 168,
+        "valuation": 142,
         "fouls": 16,
-        "minutes": 353,
-        "avgPoints": 9.5625,
-        "avgValuation": 7.9375,
-        "avgFouls": 1,
-        "avgMinutes": 22.0625
+        "minutes": 377,
+        "avgPoints": 9.882352941176471,
+        "avgValuation": 8.352941176470589,
+        "avgFouls": 0.9411764705882353,
+        "avgMinutes": 22.176470588235293
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:54679965-7291-42cf-a80d-75e56e2a21f2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JULIE SCHERER GRIFOL",
+          "shirtNumber": "28",
+          "games": 1,
+          "points": 15,
+          "valuation": 15,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 15,
+          "avgValuation": 15,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:54679965-7291-42cf-a80d-75e56e2a21f2:2025-2026",
           "seasonStartYear": 2025,
@@ -36802,6 +38689,49 @@
       ]
     },
     {
+      "key": "UUID:fc50011e-6af2-404d-8b3d-13586ab013d0",
+      "label": "L.D.G.G.",
+      "latestShirtNumber": "77",
+      "meta": "1 temporada \u00B7 #77 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "L.D.G.G. C.B GRUP BARNA NEGRE #77",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 17,
+        "valuation": 17,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 17,
+        "avgValuation": 17,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:fc50011e-6af2-404d-8b3d-13586ab013d0:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "L.D.G.G.",
+          "shirtNumber": "77",
+          "games": 1,
+          "points": 17,
+          "valuation": 17,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 17,
+          "avgValuation": 17,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:7cc2ebbf-66f8-4687-ade1-e4b13c92b342",
       "label": "L.M.F.",
       "latestShirtNumber": "99",
@@ -37409,21 +39339,43 @@
       "key": "UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1",
       "label": "LAIA DENC\u00C0S GUARDA",
       "latestShirtNumber": "6",
-      "meta": "1 temporada \u00B7 #6 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "LAIA DENC\u00C0S GUARDA C.B GRUP BARNA VERMELL  1ER ANY #6",
+      "meta": "2 temporadas \u00B7 #6 \u00B7 C.B GRUP BARNA A",
+      "searchText": "LAIA DENC\u00C0S GUARDA C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #6",
       "totals": {
-        "seasons": 1,
-        "games": 22,
+        "seasons": 2,
+        "games": 23,
         "points": 82,
-        "valuation": 58,
-        "fouls": 17,
-        "minutes": 447,
-        "avgPoints": 3.727272727272727,
-        "avgValuation": 2.6363636363636362,
-        "avgFouls": 0.7727272727272727,
-        "avgMinutes": 20.318181818181817
+        "valuation": 55,
+        "fouls": 18,
+        "minutes": 465,
+        "avgPoints": 3.5652173913043477,
+        "avgValuation": 2.391304347826087,
+        "avgFouls": 0.782608695652174,
+        "avgMinutes": 20.217391304347824
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAIA DENC\u00C0S GUARDA",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 0,
+          "valuation": -3,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -3,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:74094079-c1cf-4dd1-bdea-bac54159a2a1:2025-2026",
           "seasonStartYear": 2025,
@@ -37452,21 +39404,43 @@
       "key": "UUID:3158310a-da15-43bd-93ea-25a647df6105",
       "label": "LAIA DEU ORIOL",
       "latestShirtNumber": "17",
-      "meta": "1 temporada \u00B7 #17 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "LAIA DEU ORIOL JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #17",
+      "meta": "2 temporadas \u00B7 #17 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "LAIA DEU ORIOL JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #17",
       "totals": {
-        "seasons": 1,
-        "games": 27,
-        "points": 341,
-        "valuation": 250,
-        "fouls": 55,
-        "minutes": 669,
-        "avgPoints": 12.62962962962963,
-        "avgValuation": 9.25925925925926,
-        "avgFouls": 2.037037037037037,
-        "avgMinutes": 24.77777777777778
+        "seasons": 2,
+        "games": 28,
+        "points": 349,
+        "valuation": 255,
+        "fouls": 58,
+        "minutes": 697,
+        "avgPoints": 12.464285714285714,
+        "avgValuation": 9.107142857142858,
+        "avgFouls": 2.0714285714285716,
+        "avgMinutes": 24.892857142857142
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:3158310a-da15-43bd-93ea-25a647df6105:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAIA DEU ORIOL",
+          "shirtNumber": "17",
+          "games": 1,
+          "points": 8,
+          "valuation": 5,
+          "fouls": 3,
+          "minutes": 28,
+          "avgPoints": 8,
+          "avgValuation": 5,
+          "avgFouls": 3,
+          "avgMinutes": 28,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:3158310a-da15-43bd-93ea-25a647df6105:2025-2026",
           "seasonStartYear": 2025,
@@ -39217,22 +41191,44 @@
     {
       "key": "UUID:51c37607-539d-40bd-b6fa-3c433ade7f73",
       "label": "LARA MENDEZ MONTOYA",
-      "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 JOVENTUT BADALONA VERD",
-      "searchText": "LARA MENDEZ MONTOYA JOVENTUT BADALONA VERD #7",
+      "latestShirtNumber": "24",
+      "meta": "2 temporadas \u00B7 #24 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "searchText": "LARA MENDEZ MONTOYA FEMEN\u00CD SANT ADRI\u00C0 A JOVENTUT BADALONA VERD #24",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 20,
-        "valuation": -9,
-        "fouls": 21,
-        "minutes": 303,
-        "avgPoints": 1.4285714285714286,
-        "avgValuation": -0.6428571428571429,
-        "avgFouls": 1.5,
-        "avgMinutes": 21.642857142857142
+        "seasons": 2,
+        "games": 15,
+        "points": 26,
+        "valuation": -8,
+        "fouls": 24,
+        "minutes": 333,
+        "avgPoints": 1.7333333333333334,
+        "avgValuation": -0.5333333333333333,
+        "avgFouls": 1.6,
+        "avgMinutes": 22.2
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:51c37607-539d-40bd-b6fa-3c433ade7f73:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LARA MENDEZ MONTOYA",
+          "shirtNumber": "24",
+          "games": 1,
+          "points": 6,
+          "valuation": 1,
+          "fouls": 3,
+          "minutes": 30,
+          "avgPoints": 6,
+          "avgValuation": 1,
+          "avgFouls": 3,
+          "avgMinutes": 30,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:51c37607-539d-40bd-b6fa-3c433ade7f73:2025-2026",
           "seasonStartYear": 2025,
@@ -39383,6 +41379,49 @@
           "primaryTeamName": "BC SANT JOAN DESPI A",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81593",
           "primaryTeamIdExtern": 81593
+        }
+      ]
+    },
+    {
+      "key": "UUID:e716d4e2-b099-46e9-b367-deed57dbead6",
+      "label": "LARS PUIG MARTINEZ-CANOVAS",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "LARS PUIG MARTINEZ-CANOVAS UE SANT ANDREU GROC #22",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 30,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:e716d4e2-b099-46e9-b367-deed57dbead6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LARS PUIG MARTINEZ-CANOVAS",
+          "shirtNumber": "22",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 30,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
         }
       ]
     },
@@ -40288,6 +42327,49 @@
           "primaryTeamName": "E.B. ROSELLA",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81157",
           "primaryTeamIdExtern": 81157
+        }
+      ]
+    },
+    {
+      "key": "UUID:bd2e2534-1b4e-4732-bb68-6a50f67b5d3f",
+      "label": "LEONARDO PAUDICE",
+      "latestShirtNumber": "57",
+      "meta": "1 temporada \u00B7 #57 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "LEONARDO PAUDICE UE SANT CUGAT - OCCIDENT NEGRE #57",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 13,
+        "valuation": 7,
+        "fouls": 5,
+        "minutes": 28,
+        "avgPoints": 13,
+        "avgValuation": 7,
+        "avgFouls": 5,
+        "avgMinutes": 28
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:bd2e2534-1b4e-4732-bb68-6a50f67b5d3f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LEONARDO PAUDICE",
+          "shirtNumber": "57",
+          "games": 1,
+          "points": 13,
+          "valuation": 7,
+          "fouls": 5,
+          "minutes": 28,
+          "avgPoints": 13,
+          "avgValuation": 7,
+          "avgFouls": 5,
+          "avgMinutes": 28,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
         }
       ]
     },
@@ -42451,6 +44533,49 @@
       ]
     },
     {
+      "key": "UUID:d660f31a-e36b-45d7-916a-075b0e9b1d91",
+      "label": "LUCAS PEREZ PERALES",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "LUCAS PEREZ PERALES UE SANT ANDREU GROC #12",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 1,
+        "fouls": 3,
+        "minutes": 30,
+        "avgPoints": 4,
+        "avgValuation": 1,
+        "avgFouls": 3,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:d660f31a-e36b-45d7-916a-075b0e9b1d91:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LUCAS PEREZ PERALES",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 4,
+          "valuation": 1,
+          "fouls": 3,
+          "minutes": 30,
+          "avgPoints": 4,
+          "avgValuation": 1,
+          "avgFouls": 3,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
+        }
+      ]
+    },
+    {
       "key": "UUID:61974024-3ca9-4ed8-8d3c-b3049ecc7f0b",
       "label": "LUCIA ALZAMORA SANTA CRUZ",
       "latestShirtNumber": "1",
@@ -43527,6 +45652,49 @@
       ]
     },
     {
+      "key": "UUID:aa91e6a2-33a6-48ce-a775-64db7302584c",
+      "label": "LUKE ALVAREZ KUCHARCZYK",
+      "latestShirtNumber": "21",
+      "meta": "1 temporada \u00B7 #21 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "LUKE ALVAREZ KUCHARCZYK DOMINIQUES BARCELONA #21",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 10,
+        "valuation": 7,
+        "fouls": 3,
+        "minutes": 18,
+        "avgPoints": 10,
+        "avgValuation": 7,
+        "avgFouls": 3,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:aa91e6a2-33a6-48ce-a775-64db7302584c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LUKE ALVAREZ KUCHARCZYK",
+          "shirtNumber": "21",
+          "games": 1,
+          "points": 10,
+          "valuation": 7,
+          "fouls": 3,
+          "minutes": 18,
+          "avgPoints": 10,
+          "avgValuation": 7,
+          "avgFouls": 3,
+          "avgMinutes": 18,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
       "key": "UUID:8db2bb4c-26d8-4e40-be06-b814c7ea1959",
       "label": "LULU FAMA DIAGNE MARTINEZ",
       "latestShirtNumber": "24",
@@ -43828,6 +45996,49 @@
       ]
     },
     {
+      "key": "UUID:ec5145b1-18a4-4e2a-91d1-6ae2d6a66d1b",
+      "label": "M.M.R.",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 CE VILA OLIMPICA",
+      "searchText": "M.M.R. CE VILA OLIMPICA #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 21,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:ec5145b1-18a4-4e2a-91d1-6ae2d6a66d1b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "M.M.R.",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 21,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 21,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
+        }
+      ]
+    },
+    {
       "key": "UUID:cef3b980-dd68-4744-8ac7-413db55d6301",
       "label": "M.N.G.",
       "latestShirtNumber": "8",
@@ -44125,6 +46336,49 @@
           "primaryTeamName": "A.E.E. COL\u00B7LEGI CULTURAL BADALONA",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81963",
           "primaryTeamIdExtern": 81963
+        }
+      ]
+    },
+    {
+      "key": "UUID:30ef9477-11aa-47b9-b14f-36ac155b7b8f",
+      "label": "MAEL LORENZO LATASA DE ARANIBAR",
+      "latestShirtNumber": "3",
+      "meta": "1 temporada \u00B7 #3 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "MAEL LORENZO LATASA DE ARANIBAR UE SANT ANDREU GROC #3",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 1,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 1,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:30ef9477-11aa-47b9-b14f-36ac155b7b8f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MAEL LORENZO LATASA DE ARANIBAR",
+          "shirtNumber": "3",
+          "games": 1,
+          "points": 1,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 1,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "UE SANT ANDREU GROC"
+          ],
+          "primaryTeamName": "UE SANT ANDREU GROC",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "primaryTeamIdExtern": 91876
         }
       ]
     },
@@ -44562,21 +46816,43 @@
       "key": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573",
       "label": "M\u00C0LIA MONTSERRAT MATEO",
       "latestShirtNumber": "11",
-      "meta": "1 temporada \u00B7 #11 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "M\u00C0LIA MONTSERRAT MATEO C.B GRUP BARNA VERMELL  1ER ANY C.B GRUP BARNA A #11",
+      "meta": "2 temporadas \u00B7 #11 \u00B7 C.B GRUP BARNA A",
+      "searchText": "M\u00C0LIA MONTSERRAT MATEO C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #11",
       "totals": {
-        "seasons": 1,
-        "games": 26,
-        "points": 252,
-        "valuation": 180,
-        "fouls": 34,
-        "minutes": 590,
-        "avgPoints": 9.692307692307692,
-        "avgValuation": 6.923076923076923,
-        "avgFouls": 1.3076923076923077,
-        "avgMinutes": 22.692307692307693
+        "seasons": 2,
+        "games": 27,
+        "points": 276,
+        "valuation": 200,
+        "fouls": 35,
+        "minutes": 620,
+        "avgPoints": 10.222222222222221,
+        "avgValuation": 7.407407407407407,
+        "avgFouls": 1.2962962962962963,
+        "avgMinutes": 22.962962962962962
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "M\u00C0LIA MONTSERRAT MATEO",
+          "shirtNumber": "11",
+          "games": 1,
+          "points": 24,
+          "valuation": 20,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 24,
+          "avgValuation": 20,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:fb2eb3fe-c04a-4280-8d08-2a556e68f573:2025-2026",
           "seasonStartYear": 2025,
@@ -44993,21 +47269,43 @@
       "key": "UUID:4b19c161-0860-41f5-8005-6b512018d169",
       "label": "MAR P\u00C9REZ GIMENO",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 M\u00C0GIC BADALONA CB SANT JOSEP - PAF",
-      "searchText": "MAR P\u00C9REZ GIMENO M\u00C0GIC BADALONA CB SANT JOSEP - PAF #9",
+      "meta": "2 temporadas \u00B7 #9 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "searchText": "MAR P\u00C9REZ GIMENO FEMEN\u00CD SANT ADRI\u00C0 A M\u00C0GIC BADALONA CB SANT JOSEP - PAF #9",
       "totals": {
-        "seasons": 1,
-        "games": 17,
-        "points": 10,
-        "valuation": -3,
+        "seasons": 2,
+        "games": 18,
+        "points": 12,
+        "valuation": -1,
         "fouls": 11,
-        "minutes": 349,
-        "avgPoints": 0.5882352941176471,
-        "avgValuation": -0.17647058823529413,
-        "avgFouls": 0.6470588235294118,
-        "avgMinutes": 20.529411764705884
+        "minutes": 367,
+        "avgPoints": 0.6666666666666666,
+        "avgValuation": -0.05555555555555555,
+        "avgFouls": 0.6111111111111112,
+        "avgMinutes": 20.38888888888889
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:4b19c161-0860-41f5-8005-6b512018d169:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MAR P\u00C9REZ GIMENO",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:4b19c161-0860-41f5-8005-6b512018d169:2025-2026",
           "seasonStartYear": 2025,
@@ -45287,6 +47585,135 @@
           "primaryTeamName": "VEDRUNA GR\u00C0CIA VERD",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
           "primaryTeamIdExtern": 82766
+        }
+      ]
+    },
+    {
+      "key": "UUID:c0ef4000-72be-4f31-b486-57b5f533cab8",
+      "label": "MARC MOGIO PAREDES",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 B.I.M.",
+      "searchText": "MARC MOGIO PAREDES B.I.M. #22",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -2,
+        "fouls": 2,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -2,
+        "avgFouls": 2,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:c0ef4000-72be-4f31-b486-57b5f533cab8:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARC MOGIO PAREDES",
+          "shirtNumber": "22",
+          "games": 1,
+          "points": 0,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
+      "key": "UUID:876c45a4-ee68-4491-9775-7c3bd2bfa0cf",
+      "label": "MARC MUNILL MARIN",
+      "latestShirtNumber": "13",
+      "meta": "1 temporada \u00B7 #13 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "MARC MUNILL MARIN DOMINIQUES BARCELONA #13",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 20,
+        "valuation": 16,
+        "fouls": 4,
+        "minutes": 24,
+        "avgPoints": 20,
+        "avgValuation": 16,
+        "avgFouls": 4,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:876c45a4-ee68-4491-9775-7c3bd2bfa0cf:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARC MUNILL MARIN",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 20,
+          "valuation": 16,
+          "fouls": 4,
+          "minutes": 24,
+          "avgPoints": 20,
+          "avgValuation": 16,
+          "avgFouls": 4,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
+      "key": "UUID:eeacf90f-37f5-4ccd-bfdc-4bd8b8a99ef3",
+      "label": "MARC VALLEZ OTERO",
+      "latestShirtNumber": "24",
+      "meta": "1 temporada \u00B7 #24 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "MARC VALLEZ OTERO C.B GRUP BARNA NEGRE #24",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 20,
+        "valuation": 19,
+        "fouls": 1,
+        "minutes": 20,
+        "avgPoints": 20,
+        "avgValuation": 19,
+        "avgFouls": 1,
+        "avgMinutes": 20
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:eeacf90f-37f5-4ccd-bfdc-4bd8b8a99ef3:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARC VALLEZ OTERO",
+          "shirtNumber": "24",
+          "games": 1,
+          "points": 20,
+          "valuation": 19,
+          "fouls": 1,
+          "minutes": 20,
+          "avgPoints": 20,
+          "avgValuation": 19,
+          "avgFouls": 1,
+          "avgMinutes": 20,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
         }
       ]
     },
@@ -47145,6 +49572,135 @@
       ]
     },
     {
+      "key": "UUID:3f0ac8a9-5b1c-448f-b068-60e601d64595",
+      "label": "MARIO GARCIA-CASTRILLON RAMIA",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "MARIO GARCIA-CASTRILLON RAMIA DOMINIQUES BARCELONA #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 4,
+        "fouls": 0,
+        "minutes": 18,
+        "avgPoints": 4,
+        "avgValuation": 4,
+        "avgFouls": 0,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:3f0ac8a9-5b1c-448f-b068-60e601d64595:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARIO GARCIA-CASTRILLON RAMIA",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 4,
+          "valuation": 4,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 4,
+          "avgValuation": 4,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
+      "key": "UUID:e844d464-cfff-4dd8-8a40-c33386aeb61f",
+      "label": "MARIO ORTIGA GARCIA",
+      "latestShirtNumber": "0",
+      "meta": "1 temporada \u00B7 #0 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "MARIO ORTIGA GARCIA DOMINIQUES BARCELONA #0",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 4,
+        "fouls": 2,
+        "minutes": 24,
+        "avgPoints": 7,
+        "avgValuation": 4,
+        "avgFouls": 2,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:e844d464-cfff-4dd8-8a40-c33386aeb61f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARIO ORTIGA GARCIA",
+          "shirtNumber": "0",
+          "games": 1,
+          "points": 7,
+          "valuation": 4,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 7,
+          "avgValuation": 4,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
+      "key": "UUID:118bb6d1-085e-47a1-8967-cafeabad52a4",
+      "label": "MARIO TAMAYO MA\u00D1ES",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "MARIO TAMAYO MA\u00D1ES C.B GRUP BARNA NEGRE #23",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 13,
+        "valuation": 12,
+        "fouls": 1,
+        "minutes": 20,
+        "avgPoints": 13,
+        "avgValuation": 12,
+        "avgFouls": 1,
+        "avgMinutes": 20
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:118bb6d1-085e-47a1-8967-cafeabad52a4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARIO TAMAYO MA\u00D1ES",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 13,
+          "valuation": 12,
+          "fouls": 1,
+          "minutes": 20,
+          "avgPoints": 13,
+          "avgValuation": 12,
+          "avgFouls": 1,
+          "avgMinutes": 20,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:14a9b03d-a9be-41dd-8794-4f345095c986",
       "label": "MARIONA ALB\u00C0 RODRIGUEZ",
       "latestShirtNumber": "3",
@@ -47581,21 +50137,43 @@
       "key": "UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05",
       "label": "MARIONA SOLEY BODRO",
       "latestShirtNumber": "6",
-      "meta": "1 temporada \u00B7 #6 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "MARIONA SOLEY BODRO JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #6",
+      "meta": "2 temporadas \u00B7 #6 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "MARIONA SOLEY BODRO JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #6",
       "totals": {
-        "seasons": 1,
-        "games": 28,
-        "points": 312,
-        "valuation": 236,
-        "fouls": 47,
-        "minutes": 704,
-        "avgPoints": 11.142857142857142,
-        "avgValuation": 8.428571428571429,
-        "avgFouls": 1.6785714285714286,
-        "avgMinutes": 25.142857142857142
+        "seasons": 2,
+        "games": 29,
+        "points": 318,
+        "valuation": 237,
+        "fouls": 52,
+        "minutes": 720,
+        "avgPoints": 10.96551724137931,
+        "avgValuation": 8.172413793103448,
+        "avgFouls": 1.793103448275862,
+        "avgMinutes": 24.82758620689655
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARIONA SOLEY BODRO",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 6,
+          "valuation": 1,
+          "fouls": 5,
+          "minutes": 16,
+          "avgPoints": 6,
+          "avgValuation": 1,
+          "avgFouls": 5,
+          "avgMinutes": 16,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:2bf3e398-3671-41f9-9eab-6af7a9387e05:2025-2026",
           "seasonStartYear": 2025,
@@ -48050,6 +50628,92 @@
           "primaryTeamName": "CB SANTPEDOR",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82708",
           "primaryTeamIdExtern": 82708
+        }
+      ]
+    },
+    {
+      "key": "UUID:cc0a229d-3241-4a10-af09-f67e5316118f",
+      "label": "MARTI PELEGRI RADA",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "MARTI PELEGRI RADA UE SANT CUGAT - OCCIDENT NEGRE #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 12,
+        "valuation": 9,
+        "fouls": 1,
+        "minutes": 30,
+        "avgPoints": 12,
+        "avgValuation": 9,
+        "avgFouls": 1,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:cc0a229d-3241-4a10-af09-f67e5316118f:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTI PELEGRI RADA",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 12,
+          "valuation": 9,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 12,
+          "avgValuation": 9,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
+        }
+      ]
+    },
+    {
+      "key": "UUID:507345b1-f111-4abf-a73d-1b2f69a0cfdd",
+      "label": "MARTI SANCHEZ ALBERTI",
+      "latestShirtNumber": "18",
+      "meta": "1 temporada \u00B7 #18 \u00B7 B.I.M.",
+      "searchText": "MARTI SANCHEZ ALBERTI B.I.M. #18",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 30,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:507345b1-f111-4abf-a73d-1b2f69a0cfdd:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTI SANCHEZ ALBERTI",
+          "shirtNumber": "18",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 30,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 30,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
         }
       ]
     },
@@ -49867,21 +52531,43 @@
       "key": "UUID:3e48b176-e623-4e6f-8193-907925044f18",
       "label": "MARTINA SEMPER DE FRIAS",
       "latestShirtNumber": "3",
-      "meta": "1 temporada \u00B7 #3 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "MARTINA SEMPER DE FRIAS JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #3",
+      "meta": "2 temporadas \u00B7 #3 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "MARTINA SEMPER DE FRIAS JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #3",
       "totals": {
-        "seasons": 1,
-        "games": 21,
+        "seasons": 2,
+        "games": 22,
         "points": 76,
-        "valuation": 36,
-        "fouls": 24,
-        "minutes": 524,
-        "avgPoints": 3.619047619047619,
-        "avgValuation": 1.7142857142857142,
-        "avgFouls": 1.1428571428571428,
-        "avgMinutes": 24.952380952380953
+        "valuation": 31,
+        "fouls": 29,
+        "minutes": 552,
+        "avgPoints": 3.4545454545454546,
+        "avgValuation": 1.4090909090909092,
+        "avgFouls": 1.3181818181818181,
+        "avgMinutes": 25.09090909090909
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:3e48b176-e623-4e6f-8193-907925044f18:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTINA SEMPER DE FRIAS",
+          "shirtNumber": "3",
+          "games": 1,
+          "points": 0,
+          "valuation": -5,
+          "fouls": 5,
+          "minutes": 28,
+          "avgPoints": 0,
+          "avgValuation": -5,
+          "avgFouls": 5,
+          "avgMinutes": 28,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:3e48b176-e623-4e6f-8193-907925044f18:2025-2026",
           "seasonStartYear": 2025,
@@ -49954,21 +52640,43 @@
       "key": "UUID:076054fb-d507-4139-9344-fda37b3f934a",
       "label": "MARTINA SOLE ABELLO",
       "latestShirtNumber": "5",
-      "meta": "1 temporada \u00B7 #5 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #5 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "MARTINA SOLE ABELLO DOMINIQUES BARCELONA TARONJA #5",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 266,
-        "valuation": 179,
-        "fouls": 42,
-        "minutes": 532,
-        "avgPoints": 16.625,
-        "avgValuation": 11.1875,
-        "avgFouls": 2.625,
-        "avgMinutes": 33.25
+        "seasons": 2,
+        "games": 17,
+        "points": 286,
+        "valuation": 194,
+        "fouls": 44,
+        "minutes": 568,
+        "avgPoints": 16.823529411764707,
+        "avgValuation": 11.411764705882353,
+        "avgFouls": 2.588235294117647,
+        "avgMinutes": 33.411764705882355
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:076054fb-d507-4139-9344-fda37b3f934a:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTINA SOLE ABELLO",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 20,
+          "valuation": 15,
+          "fouls": 2,
+          "minutes": 36,
+          "avgPoints": 20,
+          "avgValuation": 15,
+          "avgFouls": 2,
+          "avgMinutes": 36,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:076054fb-d507-4139-9344-fda37b3f934a:2025-2026",
           "seasonStartYear": 2025,
@@ -50162,6 +52870,92 @@
           "primaryTeamName": "BF CORNELLA",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80451",
           "primaryTeamIdExtern": 80451
+        }
+      ]
+    },
+    {
+      "key": "UUID:849901f4-86f5-48a9-b97d-33d965a46141",
+      "label": "MATEO RODEIRO AMORIM",
+      "latestShirtNumber": "99",
+      "meta": "1 temporada \u00B7 #99 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "MATEO RODEIRO AMORIM DOMINIQUES BARCELONA #99",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 18,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:849901f4-86f5-48a9-b97d-33d965a46141:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MATEO RODEIRO AMORIM",
+          "shirtNumber": "99",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
+        }
+      ]
+    },
+    {
+      "key": "UUID:0eef9bfb-6935-478b-a4cb-14b7f23b4548",
+      "label": "MAX BALART GONZ\u00C1LEZ",
+      "latestShirtNumber": "50",
+      "meta": "1 temporada \u00B7 #50 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "MAX BALART GONZ\u00C1LEZ DOMINIQUES BARCELONA #50",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 9,
+        "valuation": 9,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 9,
+        "avgValuation": 9,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:0eef9bfb-6935-478b-a4cb-14b7f23b4548:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MAX BALART GONZ\u00C1LEZ",
+          "shirtNumber": "50",
+          "games": 1,
+          "points": 9,
+          "valuation": 9,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 9,
+          "avgValuation": 9,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
         }
       ]
     },
@@ -50470,21 +53264,43 @@
       "key": "UUID:b1633169-856f-4f78-9290-79894721eedf",
       "label": "MIA CAMPS FERRER",
       "latestShirtNumber": "21",
-      "meta": "1 temporada \u00B7 #21 \u00B7 M\u00C0GIC BADALONA CB SANT JOSEP - PAF",
-      "searchText": "MIA CAMPS FERRER M\u00C0GIC BADALONA CB SANT JOSEP - PAF #21",
+      "meta": "2 temporadas \u00B7 #21 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "searchText": "MIA CAMPS FERRER FEMEN\u00CD SANT ADRI\u00C0 A M\u00C0GIC BADALONA CB SANT JOSEP - PAF #21",
       "totals": {
-        "seasons": 1,
-        "games": 16,
+        "seasons": 2,
+        "games": 17,
         "points": 40,
-        "valuation": -20,
-        "fouls": 45,
-        "minutes": 414,
-        "avgPoints": 2.5,
-        "avgValuation": -1.25,
-        "avgFouls": 2.8125,
-        "avgMinutes": 25.875
+        "valuation": -24,
+        "fouls": 49,
+        "minutes": 438,
+        "avgPoints": 2.3529411764705883,
+        "avgValuation": -1.411764705882353,
+        "avgFouls": 2.8823529411764706,
+        "avgMinutes": 25.764705882352942
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:b1633169-856f-4f78-9290-79894721eedf:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MIA CAMPS FERRER",
+          "shirtNumber": "21",
+          "games": 1,
+          "points": 0,
+          "valuation": -4,
+          "fouls": 4,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -4,
+          "avgFouls": 4,
+          "avgMinutes": 24,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 A"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "primaryTeamIdExtern": 89366
+        },
         {
           "key": "UUID:b1633169-856f-4f78-9290-79894721eedf:2025-2026",
           "seasonStartYear": 2025,
@@ -50643,21 +53459,43 @@
       "key": "UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918",
       "label": "MIA GOBERNA JUVE",
       "latestShirtNumber": "2",
-      "meta": "1 temporada \u00B7 #2 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "MIA GOBERNA JUVE JAC SANTS BARCELONA U10 #2",
+      "meta": "2 temporadas \u00B7 #2 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "MIA GOBERNA JUVE JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #2",
       "totals": {
-        "seasons": 1,
-        "games": 18,
+        "seasons": 2,
+        "games": 19,
         "points": 142,
-        "valuation": 117,
-        "fouls": 12,
-        "minutes": 458,
-        "avgPoints": 7.888888888888889,
-        "avgValuation": 6.5,
-        "avgFouls": 0.6666666666666666,
-        "avgMinutes": 25.444444444444443
+        "valuation": 115,
+        "fouls": 14,
+        "minutes": 485,
+        "avgPoints": 7.473684210526316,
+        "avgValuation": 6.052631578947368,
+        "avgFouls": 0.7368421052631579,
+        "avgMinutes": 25.526315789473685
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MIA GOBERNA JUVE",
+          "shirtNumber": "2",
+          "games": 1,
+          "points": 0,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 27,
+          "avgPoints": 0,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 27,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:e2bcee56-5f8f-4a97-9e04-cf57ad6d7918:2025-2026",
           "seasonStartYear": 2025,
@@ -50686,21 +53524,43 @@
       "key": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
       "label": "MIA GOMEZ VALLS",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "MIA GOMEZ VALLS C.B GRUP BARNA VERMELL  1ER ANY #8",
+      "meta": "2 temporadas \u00B7 #8 \u00B7 C.B GRUP BARNA A",
+      "searchText": "MIA GOMEZ VALLS C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #8",
       "totals": {
-        "seasons": 1,
-        "games": 23,
-        "points": 137,
-        "valuation": 82,
-        "fouls": 29,
-        "minutes": 510,
-        "avgPoints": 5.956521739130435,
-        "avgValuation": 3.5652173913043477,
-        "avgFouls": 1.2608695652173914,
-        "avgMinutes": 22.17391304347826
+        "seasons": 2,
+        "games": 24,
+        "points": 153,
+        "valuation": 96,
+        "fouls": 31,
+        "minutes": 537,
+        "avgPoints": 6.375,
+        "avgValuation": 4,
+        "avgFouls": 1.2916666666666667,
+        "avgMinutes": 22.375
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MIA GOMEZ VALLS",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 16,
+          "valuation": 14,
+          "fouls": 2,
+          "minutes": 27,
+          "avgPoints": 16,
+          "avgValuation": 14,
+          "avgFouls": 2,
+          "avgMinutes": 27,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735:2025-2026",
           "seasonStartYear": 2025,
@@ -52838,6 +55698,49 @@
       ]
     },
     {
+      "key": "UUID:53649376-5cd3-4740-a032-10d5ba7ea92c",
+      "label": "NEO VAN LEEUWEN DE JONG",
+      "latestShirtNumber": "2",
+      "meta": "1 temporada \u00B7 #2 \u00B7 CE VILA OLIMPICA",
+      "searchText": "NEO VAN LEEUWEN DE JONG CE VILA OLIMPICA #2",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 27,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 27
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:53649376-5cd3-4740-a032-10d5ba7ea92c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NEO VAN LEEUWEN DE JONG",
+          "shirtNumber": "2",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 27,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 27,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
+        }
+      ]
+    },
+    {
       "key": "UUID:17f6d5e1-3de9-4276-878f-49ee85103210",
       "label": "NEREA GONZ\u00C1LEZ MORENTE",
       "latestShirtNumber": "10",
@@ -53139,6 +56042,92 @@
       ]
     },
     {
+      "key": "UUID:a7b35876-5980-4f84-ae46-48d150c341d4",
+      "label": "NIL FERRER PENA",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "NIL FERRER PENA UE SANT CUGAT - OCCIDENT NEGRE #9",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 5,
+        "fouls": 2,
+        "minutes": 30,
+        "avgPoints": 7,
+        "avgValuation": 5,
+        "avgFouls": 2,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:a7b35876-5980-4f84-ae46-48d150c341d4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NIL FERRER PENA",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 7,
+          "valuation": 5,
+          "fouls": 2,
+          "minutes": 30,
+          "avgPoints": 7,
+          "avgValuation": 5,
+          "avgFouls": 2,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
+        }
+      ]
+    },
+    {
+      "key": "UUID:03b583fc-cb3b-409f-a6aa-27fa2f2801a8",
+      "label": "NIL PI GONZALEZ",
+      "latestShirtNumber": "0",
+      "meta": "1 temporada \u00B7 #0 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "NIL PI GONZALEZ C.B GRUP BARNA NEGRE #0",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 21,
+        "valuation": 20,
+        "fouls": 1,
+        "minutes": 18,
+        "avgPoints": 21,
+        "avgValuation": 20,
+        "avgFouls": 1,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:03b583fc-cb3b-409f-a6aa-27fa2f2801a8:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NIL PI GONZALEZ",
+          "shirtNumber": "0",
+          "games": 1,
+          "points": 21,
+          "valuation": 20,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 21,
+          "avgValuation": 20,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:fb36d382-c146-4d90-9278-edfa0cc6e471",
       "label": "NINA GOMEZ BORDIN",
       "latestShirtNumber": "12",
@@ -53228,21 +56217,43 @@
       "key": "UUID:a4e97ff8-3c48-4560-9af7-9530c0353819",
       "label": "NOA BARDERA PRADO",
       "latestShirtNumber": "21",
-      "meta": "1 temporada \u00B7 #21 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "meta": "2 temporadas \u00B7 #21 \u00B7 DOMINIQUES BARCELONA TARONJA",
       "searchText": "NOA BARDERA PRADO DOMINIQUES BARCELONA TARONJA #21",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 115,
-        "valuation": 62,
+        "seasons": 2,
+        "games": 17,
+        "points": 119,
+        "valuation": 64,
         "fouls": 29,
-        "minutes": 510,
-        "avgPoints": 7.1875,
-        "avgValuation": 3.875,
-        "avgFouls": 1.8125,
-        "avgMinutes": 31.875
+        "minutes": 543,
+        "avgPoints": 7,
+        "avgValuation": 3.764705882352941,
+        "avgFouls": 1.7058823529411764,
+        "avgMinutes": 31.941176470588236
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:a4e97ff8-3c48-4560-9af7-9530c0353819:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NOA BARDERA PRADO",
+          "shirtNumber": "21",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 33,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 33,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:a4e97ff8-3c48-4560-9af7-9530c0353819:2025-2026",
           "seasonStartYear": 2025,
@@ -53271,21 +56282,43 @@
       "key": "UUID:9bf7459f-d288-401c-8deb-8ed167b09e44",
       "label": "NOA C\u00D3RDOBA PINTO",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "NOA C\u00D3RDOBA PINTO C.B GRUP BARNA VERMELL  1ER ANY C.B GRUP BARNA A #10",
+      "meta": "2 temporadas \u00B7 #10 \u00B7 C.B GRUP BARNA A",
+      "searchText": "NOA C\u00D3RDOBA PINTO C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #10",
       "totals": {
-        "seasons": 1,
-        "games": 24,
+        "seasons": 2,
+        "games": 25,
         "points": 167,
-        "valuation": 92,
-        "fouls": 33,
-        "minutes": 521,
-        "avgPoints": 6.958333333333333,
-        "avgValuation": 3.8333333333333335,
-        "avgFouls": 1.375,
-        "avgMinutes": 21.708333333333332
+        "valuation": 91,
+        "fouls": 34,
+        "minutes": 539,
+        "avgPoints": 6.68,
+        "avgValuation": 3.64,
+        "avgFouls": 1.36,
+        "avgMinutes": 21.56
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:9bf7459f-d288-401c-8deb-8ed167b09e44:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NOA C\u00D3RDOBA PINTO",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA A"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA A",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "primaryTeamIdExtern": 90463
+        },
         {
           "key": "UUID:9bf7459f-d288-401c-8deb-8ed167b09e44:2025-2026",
           "seasonStartYear": 2025,
@@ -54130,6 +57163,92 @@
       ]
     },
     {
+      "key": "UUID:62f685ba-326d-4a2b-9699-87f94defdd84",
+      "label": "NOAH PIFERRER SORIA",
+      "latestShirtNumber": "30",
+      "meta": "1 temporada \u00B7 #30 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "NOAH PIFERRER SORIA C.B GRUP BARNA NEGRE #30",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 18,
+        "valuation": 15,
+        "fouls": 3,
+        "minutes": 27,
+        "avgPoints": 18,
+        "avgValuation": 15,
+        "avgFouls": 3,
+        "avgMinutes": 27
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:62f685ba-326d-4a2b-9699-87f94defdd84:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NOAH PIFERRER SORIA",
+          "shirtNumber": "30",
+          "games": 1,
+          "points": 18,
+          "valuation": 15,
+          "fouls": 3,
+          "minutes": 27,
+          "avgPoints": 18,
+          "avgValuation": 15,
+          "avgFouls": 3,
+          "avgMinutes": 27,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
+      "key": "UUID:25267a09-72a0-4d46-bdb9-b6365a5b2c07",
+      "label": "NOEL HERNANDEZ TEJEDOR",
+      "latestShirtNumber": "14",
+      "meta": "1 temporada \u00B7 #14 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "NOEL HERNANDEZ TEJEDOR C.B GRUP BARNA NEGRE #14",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 9,
+        "valuation": 8,
+        "fouls": 1,
+        "minutes": 22,
+        "avgPoints": 9,
+        "avgValuation": 8,
+        "avgFouls": 1,
+        "avgMinutes": 22
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:25267a09-72a0-4d46-bdb9-b6365a5b2c07:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NOEL HERNANDEZ TEJEDOR",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 9,
+          "valuation": 8,
+          "fouls": 1,
+          "minutes": 22,
+          "avgPoints": 9,
+          "avgValuation": 8,
+          "avgFouls": 1,
+          "avgMinutes": 22,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
+        }
+      ]
+    },
+    {
       "key": "UUID:08276c81-c76e-43e9-b096-ce2d25cca1c8",
       "label": "NOEM\u00CD ISABELLA SOLIS PORTEZ",
       "latestShirtNumber": "10",
@@ -54737,21 +57856,43 @@
       "key": "UUID:77fa96c1-9f39-4f45-a4e9-84120dabbd39",
       "label": "NORA RIBAS COMA",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "NORA RIBAS COMA JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #12",
+      "meta": "2 temporadas \u00B7 #12 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "NORA RIBAS COMA JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #12",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 13,
-        "valuation": 6,
+        "seasons": 2,
+        "games": 15,
+        "points": 15,
+        "valuation": 8,
         "fouls": 2,
-        "minutes": 355,
-        "avgPoints": 0.9285714285714286,
-        "avgValuation": 0.42857142857142855,
-        "avgFouls": 0.14285714285714285,
-        "avgMinutes": 25.357142857142858
+        "minutes": 379,
+        "avgPoints": 1,
+        "avgValuation": 0.5333333333333333,
+        "avgFouls": 0.13333333333333333,
+        "avgMinutes": 25.266666666666666
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:77fa96c1-9f39-4f45-a4e9-84120dabbd39:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NORA RIBAS COMA",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:77fa96c1-9f39-4f45-a4e9-84120dabbd39:2025-2026",
           "seasonStartYear": 2025,
@@ -55247,6 +58388,49 @@
           "primaryTeamName": "DOMINIQUES BARCELONA NEGRE",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
           "primaryTeamIdExtern": 82476
+        }
+      ]
+    },
+    {
+      "key": "UUID:3d0af4ec-4d2f-4b0b-8e50-d54219a618fe",
+      "label": "NURIA GELONCH SANZ",
+      "latestShirtNumber": "4",
+      "meta": "1 temporada \u00B7 #4 \u00B7 CE VILA OLIMPICA",
+      "searchText": "NURIA GELONCH SANZ CE VILA OLIMPICA #4",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 26,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 26
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:3d0af4ec-4d2f-4b0b-8e50-d54219a618fe:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NURIA GELONCH SANZ",
+          "shirtNumber": "4",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 26,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 26,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
         }
       ]
     },
@@ -58096,6 +61280,49 @@
       ]
     },
     {
+      "key": "UUID:d012cf83-0dc5-4e96-bbb9-a231d65d95d2",
+      "label": "PABLO GOMEZ ENGEL",
+      "latestShirtNumber": "1",
+      "meta": "1 temporada \u00B7 #1 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "PABLO GOMEZ ENGEL UE SANT CUGAT - OCCIDENT NEGRE #1",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 15,
+        "valuation": 14,
+        "fouls": 1,
+        "minutes": 28,
+        "avgPoints": 15,
+        "avgValuation": 14,
+        "avgFouls": 1,
+        "avgMinutes": 28
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:d012cf83-0dc5-4e96-bbb9-a231d65d95d2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "PABLO GOMEZ ENGEL",
+          "shirtNumber": "1",
+          "games": 1,
+          "points": 15,
+          "valuation": 14,
+          "fouls": 1,
+          "minutes": 28,
+          "avgPoints": 15,
+          "avgValuation": 14,
+          "avgFouls": 1,
+          "avgMinutes": 28,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
+        }
+      ]
+    },
+    {
       "key": "UUID:494de49c-2ab8-4fd0-b7f9-a79d0421f383",
       "label": "PAU CAROL VICENS",
       "latestShirtNumber": "18",
@@ -58137,6 +61364,49 @@
           "primaryTeamName": "FEMEN\u00CD OSONA MYSTICS- OVA PROJECTS",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79527",
           "primaryTeamIdExtern": 79527
+        }
+      ]
+    },
+    {
+      "key": "UUID:65221dd0-f170-4e69-a4df-fad478c6d580",
+      "label": "PAU QUILIS RICO",
+      "latestShirtNumber": "17",
+      "meta": "1 temporada \u00B7 #17 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "PAU QUILIS RICO DOMINIQUES BARCELONA #17",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 10,
+        "valuation": 6,
+        "fouls": 3,
+        "minutes": 18,
+        "avgPoints": 10,
+        "avgValuation": 6,
+        "avgFouls": 3,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:65221dd0-f170-4e69-a4df-fad478c6d580:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "PAU QUILIS RICO",
+          "shirtNumber": "17",
+          "games": 1,
+          "points": 10,
+          "valuation": 6,
+          "fouls": 3,
+          "minutes": 18,
+          "avgPoints": 10,
+          "avgValuation": 6,
+          "avgFouls": 3,
+          "avgMinutes": 18,
+          "teamNames": [
+            "DOMINIQUES BARCELONA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "primaryTeamIdExtern": 91937
         }
       ]
     },
@@ -60210,6 +63480,49 @@
       ]
     },
     {
+      "key": "UUID:2f7f043b-ee34-4e09-b3e0-2425f09f910c",
+      "label": "QUIM CASTELLS BURBANO",
+      "latestShirtNumber": "6",
+      "meta": "1 temporada \u00B7 #6 \u00B7 B.I.M.",
+      "searchText": "QUIM CASTELLS BURBANO B.I.M. #6",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:2f7f043b-ee34-4e09-b3e0-2425f09f910c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "QUIM CASTELLS BURBANO",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
       "key": "UUID:907ff5ad-3181-4135-9fb2-0b6a81d9c66a",
       "label": "RAMATA WANDIANGA",
       "latestShirtNumber": "20",
@@ -61416,6 +64729,49 @@
       ]
     },
     {
+      "key": "UUID:2cca56ef-5b56-4f0e-871b-b608cb5209ac",
+      "label": "SALOMON ARENALES PEREZ",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 B.I.M.",
+      "searchText": "SALOMON ARENALES PEREZ B.I.M. #11",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 30,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:2cca56ef-5b56-4f0e-871b-b608cb5209ac:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SALOMON ARENALES PEREZ",
+          "shirtNumber": "11",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "B.I.M."
+          ],
+          "primaryTeamName": "B.I.M.",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "primaryTeamIdExtern": 94243
+        }
+      ]
+    },
+    {
       "key": "UUID:147b819f-c5b1-49f9-afc9-0dc93063e101",
       "label": "SAM COLELL GARC\u00CDA",
       "latestShirtNumber": "17",
@@ -61677,21 +65033,43 @@
       "key": "UUID:407c0f2c-af3a-4199-a608-a37b261f81ec",
       "label": "SANDRA RIBES TAPIAS",
       "latestShirtNumber": "95",
-      "meta": "1 temporada \u00B7 #95 \u00B7 DOMINIQUES BARCELONA NEGRE",
-      "searchText": "SANDRA RIBES TAPIAS DOMINIQUES BARCELONA NEGRE DOMINIQUES BARCELONA TARONJA #95",
+      "meta": "2 temporadas \u00B7 #95 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "searchText": "SANDRA RIBES TAPIAS DOMINIQUES BARCELONA TARONJA DOMINIQUES BARCELONA NEGRE #95",
       "totals": {
-        "seasons": 1,
-        "games": 17,
-        "points": 41,
-        "valuation": -18,
+        "seasons": 2,
+        "games": 18,
+        "points": 43,
+        "valuation": -16,
         "fouls": 36,
-        "minutes": 407,
-        "avgPoints": 2.411764705882353,
-        "avgValuation": -1.0588235294117647,
-        "avgFouls": 2.1176470588235294,
-        "avgMinutes": 23.941176470588236
+        "minutes": 429,
+        "avgPoints": 2.388888888888889,
+        "avgValuation": -0.8888888888888888,
+        "avgFouls": 2,
+        "avgMinutes": 23.833333333333332
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:407c0f2c-af3a-4199-a608-a37b261f81ec:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SANDRA RIBES TAPIAS",
+          "shirtNumber": "95",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 22,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 22,
+          "teamNames": [
+            "DOMINIQUES BARCELONA TARONJA"
+          ],
+          "primaryTeamName": "DOMINIQUES BARCELONA TARONJA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "primaryTeamIdExtern": 91941
+        },
         {
           "key": "UUID:407c0f2c-af3a-4199-a608-a37b261f81ec:2025-2026",
           "seasonStartYear": 2025,
@@ -62109,21 +65487,43 @@
       "key": "UUID:014e0770-28a3-493c-9fef-675ad1355e47",
       "label": "SARA M\u00C1RQUEZ HERN\u00C1NDEZ",
       "latestShirtNumber": "28",
-      "meta": "1 temporada \u00B7 #28 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "SARA M\u00C1RQUEZ HERN\u00C1NDEZ JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #28",
+      "meta": "2 temporadas \u00B7 #28 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "SARA M\u00C1RQUEZ HERN\u00C1NDEZ JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #28",
       "totals": {
-        "seasons": 1,
-        "games": 13,
-        "points": 5,
-        "valuation": -2,
-        "fouls": 4,
-        "minutes": 302,
-        "avgPoints": 0.38461538461538464,
-        "avgValuation": -0.15384615384615385,
-        "avgFouls": 0.3076923076923077,
-        "avgMinutes": 23.23076923076923
+        "seasons": 2,
+        "games": 14,
+        "points": 7,
+        "valuation": -1,
+        "fouls": 5,
+        "minutes": 332,
+        "avgPoints": 0.5,
+        "avgValuation": -0.07142857142857142,
+        "avgFouls": 0.35714285714285715,
+        "avgMinutes": 23.714285714285715
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:014e0770-28a3-493c-9fef-675ad1355e47:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SARA M\u00C1RQUEZ HERN\u00C1NDEZ",
+          "shirtNumber": "28",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:014e0770-28a3-493c-9fef-675ad1355e47:2025-2026",
           "seasonStartYear": 2025,
@@ -62360,6 +65760,49 @@
           "primaryTeamName": "C.B. LLINARS",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83799",
           "primaryTeamIdExtern": 83799
+        }
+      ]
+    },
+    {
+      "key": "UUID:7e299ecd-e41a-4c78-8463-ecd74bf8bbf4",
+      "label": "SASHA BOSSARD",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "SASHA BOSSARD C.B GRUP BARNA NEGRE #12",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 7,
+        "fouls": 0,
+        "minutes": 21,
+        "avgPoints": 7,
+        "avgValuation": 7,
+        "avgFouls": 0,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:7e299ecd-e41a-4c78-8463-ecd74bf8bbf4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SASHA BOSSARD",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 7,
+          "valuation": 7,
+          "fouls": 0,
+          "minutes": 21,
+          "avgPoints": 7,
+          "avgValuation": 7,
+          "avgFouls": 0,
+          "avgMinutes": 21,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
         }
       ]
     },
@@ -63315,21 +66758,43 @@
       "key": "UUID:4c218872-e73a-49af-bdb1-cbdf56f7e2a8",
       "label": "SOFIA CONESA TKACHENKO",
       "latestShirtNumber": "5",
-      "meta": "1 temporada \u00B7 #5 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
-      "searchText": "SOFIA CONESA TKACHENKO JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #5",
+      "meta": "2 temporadas \u00B7 #5 \u00B7 JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "searchText": "SOFIA CONESA TKACHENKO JESU\u00CFTES GR\u00C0CIA KOSTKA VERD JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE #5",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 73,
-        "valuation": 53,
-        "fouls": 6,
-        "minutes": 327,
-        "avgPoints": 5.214285714285714,
-        "avgValuation": 3.7857142857142856,
-        "avgFouls": 0.42857142857142855,
-        "avgMinutes": 23.357142857142858
+        "seasons": 2,
+        "games": 15,
+        "points": 75,
+        "valuation": 54,
+        "fouls": 7,
+        "minutes": 357,
+        "avgPoints": 5,
+        "avgValuation": 3.6,
+        "avgFouls": 0.4666666666666667,
+        "avgMinutes": 23.8
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:4c218872-e73a-49af-bdb1-cbdf56f7e2a8:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SOFIA CONESA TKACHENKO",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 1,
+          "minutes": 30,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 1,
+          "avgMinutes": 30,
+          "teamNames": [
+            "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD"
+          ],
+          "primaryTeamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
+          "primaryTeamIdExtern": 88717
+        },
         {
           "key": "UUID:4c218872-e73a-49af-bdb1-cbdf56f7e2a8:2025-2026",
           "seasonStartYear": 2025,
@@ -64774,6 +68239,49 @@
       ]
     },
     {
+      "key": "UUID:8ed0f503-6bc2-42ba-b9ab-6a5b0b415ac0",
+      "label": "TIMOTEO FASANELLA PERSICO",
+      "latestShirtNumber": "77",
+      "meta": "1 temporada \u00B7 #77 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "TIMOTEO FASANELLA PERSICO UE SANT CUGAT - OCCIDENT NEGRE #77",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 2,
+        "fouls": 0,
+        "minutes": 30,
+        "avgPoints": 2,
+        "avgValuation": 2,
+        "avgFouls": 0,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:8ed0f503-6bc2-42ba-b9ab-6a5b0b415ac0:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "TIMOTEO FASANELLA PERSICO",
+          "shirtNumber": "77",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 30,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 30,
+          "teamNames": [
+            "UE SANT CUGAT - OCCIDENT NEGRE"
+          ],
+          "primaryTeamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "primaryTeamIdExtern": 91311
+        }
+      ]
+    },
+    {
       "key": "UUID:4731ef2b-c874-4758-b6a5-3c3cae1ca0eb",
       "label": "TINA CARPINTERO GOMEZ",
       "latestShirtNumber": "14",
@@ -64948,22 +68456,44 @@
     {
       "key": "UUID:ff94b08b-1930-42aa-84aa-c2f8d8056169",
       "label": "UMA PACH\u00C1 BUIL",
-      "latestShirtNumber": "11",
-      "meta": "1 temporada \u00B7 #11 \u00B7 M\u00C0GIC BADALONA CB SANT JOSEP - PAF",
-      "searchText": "UMA PACH\u00C1 BUIL M\u00C0GIC BADALONA CB SANT JOSEP - PAF #11",
+      "latestShirtNumber": "17",
+      "meta": "2 temporadas \u00B7 #17 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "UMA PACH\u00C1 BUIL AE MINGUELLA A - PURE CUISINE M\u00C0GIC BADALONA CB SANT JOSEP - PAF #17",
       "totals": {
-        "seasons": 1,
-        "games": 18,
-        "points": 30,
-        "valuation": 24,
-        "fouls": 1,
-        "minutes": 397,
-        "avgPoints": 1.6666666666666667,
-        "avgValuation": 1.3333333333333333,
-        "avgFouls": 0.05555555555555555,
-        "avgMinutes": 22.055555555555557
+        "seasons": 2,
+        "games": 19,
+        "points": 44,
+        "valuation": 37,
+        "fouls": 2,
+        "minutes": 421,
+        "avgPoints": 2.3157894736842106,
+        "avgValuation": 1.9473684210526316,
+        "avgFouls": 0.10526315789473684,
+        "avgMinutes": 22.157894736842106
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:ff94b08b-1930-42aa-84aa-c2f8d8056169:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "UMA PACH\u00C1 BUIL",
+          "shirtNumber": "17",
+          "games": 1,
+          "points": 14,
+          "valuation": 13,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 14,
+          "avgValuation": 13,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:ff94b08b-1930-42aa-84aa-c2f8d8056169:2025-2026",
           "seasonStartYear": 2025,
@@ -64992,21 +68522,43 @@
       "key": "UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4",
       "label": "UMA PONS ARRUF\u00CD",
       "latestShirtNumber": "14",
-      "meta": "1 temporada \u00B7 #14 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "UMA PONS ARRUF\u00CD JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #14",
+      "meta": "2 temporadas \u00B7 #14 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "UMA PONS ARRUF\u00CD JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #14",
       "totals": {
-        "seasons": 1,
-        "games": 19,
-        "points": 71,
-        "valuation": 8,
-        "fouls": 40,
-        "minutes": 422,
-        "avgPoints": 3.736842105263158,
-        "avgValuation": 0.42105263157894735,
-        "avgFouls": 2.1052631578947367,
-        "avgMinutes": 22.210526315789473
+        "seasons": 2,
+        "games": 20,
+        "points": 79,
+        "valuation": 11,
+        "fouls": 42,
+        "minutes": 446,
+        "avgPoints": 3.95,
+        "avgValuation": 0.55,
+        "avgFouls": 2.1,
+        "avgMinutes": 22.3
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "UMA PONS ARRUF\u00CD",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 8,
+          "valuation": 3,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 8,
+          "avgValuation": 3,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:9c994a4a-fab7-4604-8331-1c62602bc3d4:2025-2026",
           "seasonStartYear": 2025,
@@ -67101,21 +70653,43 @@
       "key": "UUID:dc714da0-7173-42c5-af17-587ef84935f9",
       "label": "VERA L\u00D3PEZ HERN\u00C1NDEZ",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 AE MINGUELLA B - PURE CUISINE",
-      "searchText": "VERA L\u00D3PEZ HERN\u00C1NDEZ AE MINGUELLA B - PURE CUISINE #8",
+      "meta": "2 temporadas \u00B7 #8 \u00B7 AE MINGUELLA A - PURE CUISINE",
+      "searchText": "VERA L\u00D3PEZ HERN\u00C1NDEZ AE MINGUELLA A - PURE CUISINE AE MINGUELLA B - PURE CUISINE #8",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 135,
-        "valuation": 82,
+        "seasons": 2,
+        "games": 17,
+        "points": 163,
+        "valuation": 110,
         "fouls": 36,
-        "minutes": 362,
-        "avgPoints": 8.4375,
-        "avgValuation": 5.125,
-        "avgFouls": 2.25,
-        "avgMinutes": 22.625
+        "minutes": 386,
+        "avgPoints": 9.588235294117647,
+        "avgValuation": 6.470588235294118,
+        "avgFouls": 2.1176470588235294,
+        "avgMinutes": 22.705882352941178
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:dc714da0-7173-42c5-af17-587ef84935f9:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VERA L\u00D3PEZ HERN\u00C1NDEZ",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 28,
+          "valuation": 28,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 28,
+          "avgValuation": 28,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "AE MINGUELLA A - PURE CUISINE"
+          ],
+          "primaryTeamName": "AE MINGUELLA A - PURE CUISINE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "primaryTeamIdExtern": 89513
+        },
         {
           "key": "UUID:dc714da0-7173-42c5-af17-587ef84935f9:2025-2026",
           "seasonStartYear": 2025,
@@ -67615,6 +71189,49 @@
       ]
     },
     {
+      "key": "UUID:8623c114-bc7c-41e5-8380-036cffa5b94c",
+      "label": "WESLEY ELIAS CURWIN",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 CE VILA OLIMPICA",
+      "searchText": "WESLEY ELIAS CURWIN CE VILA OLIMPICA #8",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:8623c114-bc7c-41e5-8380-036cffa5b94c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "WESLEY ELIAS CURWIN",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
+        }
+      ]
+    },
+    {
       "key": "UUID:2a19a011-6838-4e1e-b5ce-a0f86abe255f",
       "label": "X.D.Q.B.",
       "latestShirtNumber": "28",
@@ -67740,6 +71357,49 @@
           "primaryTeamName": "CREU ALTA SABADELL",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79401",
           "primaryTeamIdExtern": 79401
+        }
+      ]
+    },
+    {
+      "key": "UUID:33010dd1-1207-4c0b-8508-f48092444a26",
+      "label": "XAVI HIDALGO DURANY",
+      "latestShirtNumber": "1",
+      "meta": "1 temporada \u00B7 #1 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "XAVI HIDALGO DURANY C.B GRUP BARNA NEGRE #1",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 18,
+        "valuation": 14,
+        "fouls": 2,
+        "minutes": 20,
+        "avgPoints": 18,
+        "avgValuation": 14,
+        "avgFouls": 2,
+        "avgMinutes": 20
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:33010dd1-1207-4c0b-8508-f48092444a26:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "XAVI HIDALGO DURANY",
+          "shirtNumber": "1",
+          "games": 1,
+          "points": 18,
+          "valuation": 14,
+          "fouls": 2,
+          "minutes": 20,
+          "avgPoints": 18,
+          "avgValuation": 14,
+          "avgFouls": 2,
+          "avgMinutes": 20,
+          "teamNames": [
+            "C.B GRUP BARNA NEGRE"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "primaryTeamIdExtern": 90467
         }
       ]
     },
@@ -67870,6 +71530,49 @@
           "primaryTeamName": "UB MIR B",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81569",
           "primaryTeamIdExtern": 81569
+        }
+      ]
+    },
+    {
+      "key": "UUID:ab71e8bb-536a-45a5-b833-2be78b5d3e66",
+      "label": "YOUSEF SEDDOUG EL KHALIFI",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 CE VILA OLIMPICA",
+      "searchText": "YOUSEF SEDDOUG EL KHALIFI CE VILA OLIMPICA #5",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:ab71e8bb-536a-45a5-b833-2be78b5d3e66:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "YOUSEF SEDDOUG EL KHALIFI",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "CE VILA OLIMPICA"
+          ],
+          "primaryTeamName": "CE VILA OLIMPICA",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "primaryTeamIdExtern": 94630
         }
       ]
     },
@@ -68006,21 +71709,43 @@
       "key": "UUID:d4bf24ce-40da-41f4-a702-e97889567a9d",
       "label": "ZOA SALVADOR FERRER",
       "latestShirtNumber": "22",
-      "meta": "1 temporada \u00B7 #22 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "ZOA SALVADOR FERRER JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #22",
+      "meta": "2 temporadas \u00B7 #22 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "ZOA SALVADOR FERRER JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #22",
       "totals": {
-        "seasons": 1,
-        "games": 20,
-        "points": 120,
-        "valuation": 101,
-        "fouls": 13,
-        "minutes": 441,
-        "avgPoints": 6,
-        "avgValuation": 5.05,
-        "avgFouls": 0.65,
-        "avgMinutes": 22.05
+        "seasons": 2,
+        "games": 21,
+        "points": 124,
+        "valuation": 103,
+        "fouls": 15,
+        "minutes": 463,
+        "avgPoints": 5.904761904761905,
+        "avgValuation": 4.904761904761905,
+        "avgFouls": 0.7142857142857143,
+        "avgMinutes": 22.047619047619047
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:d4bf24ce-40da-41f4-a702-e97889567a9d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ZOA SALVADOR FERRER",
+          "shirtNumber": "22",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 2,
+          "minutes": 22,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 2,
+          "avgMinutes": 22,
+          "teamNames": [
+            "JAC SANTS BARCELONA U10 1"
+          ],
+          "primaryTeamName": "JAC SANTS BARCELONA U10 1",
+          "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "primaryTeamIdExtern": 91790
+        },
         {
           "key": "UUID:d4bf24ce-40da-41f4-a702-e97889567a9d:2025-2026",
           "seasonStartYear": 2025,

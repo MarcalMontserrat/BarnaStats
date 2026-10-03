@@ -9,5 +9,6 @@ public interface IMatchMappingSyncRunner
         IReadOnlyCollection<int> explicitMatchWebIds,
         bool includeAll,
         string? sourceUrl = null,
-        bool interactive = true);
+        bool interactive = true,
+        Action<string>? log = null);
 }

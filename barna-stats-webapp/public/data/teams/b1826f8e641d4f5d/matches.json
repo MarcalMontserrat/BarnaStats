@@ -1,0 +1,123 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+    "teamIdIntern": 583293,
+    "teamIdExtern": 91311,
+    "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+    "matchWebId": 35423,
+    "matchInternId": 290345,
+    "matchExternId": 1217011,
+    "matchDate": "2026-10-03T11:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24344,
+    "categoryName": "C.t. Pre-mini Mascul\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell C",
+    "levelCode": "C",
+    "groupCode": "23",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "B.I.M.",
+    "homeScore": 3,
+    "awayScore": 53,
+    "awayTeam": "UE SANT CUGAT - OCCIDENT NEGRE",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+    "rivalTeam": "B.I.M.",
+    "officialTeamScore": 53,
+    "officialRivalScore": 3,
+    "teamScore": 101,
+    "rivalScore": 3,
+    "result": "W",
+    "topScorer": "ELIAS SALMI GOMIS",
+    "topScorerTeam": "UE SANT CUGAT - OCCIDENT NEGRE",
+    "topScorerPoints": 31,
+    "teamTopScorer": "ELIAS SALMI GOMIS",
+    "teamTopScorerPoints": 31,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 51,
+      "maxDeficit": 0,
+      "bestRun": 35,
+      "rivalBestRun": 2,
+      "closingRun": 0,
+      "rivalClosingRun": 1,
+      "firstScorer": "GRAU CODINA ALCOBERO",
+      "firstScorerTeam": "UE SANT CUGAT - OCCIDENT NEGRE",
+      "lastScorer": "I.F.T.",
+      "lastScorerTeam": "B.I.M.",
+      "teamFirstScorer": "GRAU CODINA ALCOBERO",
+      "teamLastScorer": "ELIAS SALMI GOMIS",
+      "bestPeriodLabel": "Parcial 2",
+      "bestPeriodDiff": 16,
+      "worstPeriodLabel": "Parcial 8",
+      "worstPeriodDiff": -1,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 12,
+          "rivalPoints": 0,
+          "diff": 12
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 16,
+          "rivalPoints": 0,
+          "diff": 16
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 14,
+          "rivalPoints": 2,
+          "diff": 12
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 11,
+          "rivalPoints": 0,
+          "diff": 11
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 0,
+          "rivalPoints": 1,
+          "diff": -1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

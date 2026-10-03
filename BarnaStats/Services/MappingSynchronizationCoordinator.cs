@@ -64,7 +64,8 @@ public sealed class MappingSynchronizationCoordinator
                 explicitMatchIds,
                 includeAll,
                 sourceUrl,
-                interactive);
+                interactive,
+                log);
 
             if (!string.IsNullOrWhiteSpace(sourceUrl) &&
                 syncResult.DiscoveredMappings.Count == 0 &&
@@ -99,6 +100,8 @@ public sealed class MappingSynchronizationCoordinator
                     mappings.Add(mapping);
                     mappingsById[discovery.MatchWebId] = mapping;
                 }
+
+                mapping.ApplyTeamIdExterns(discovery);
 
                 if (string.IsNullOrWhiteSpace(discovery.UuidMatch))
                 {
@@ -180,10 +183,18 @@ public sealed class MappingSynchronizationCoordinator
             if (syncResult.PhaseMetadata is not null)
                 log?.Invoke($"Metadata de fase guardada en: {Path.GetFullPath(storage.PhaseMetadataFile)}");
 
+            // Un partido con UUID pero sin ficheros (p. ej. la fuente aún no había publicado sus stats)
+            // se vuelve a pedir en cada sync aunque su UUID no haya cambiado.
+            var pendingDownloadIds = orderedMappings
+                .Where(mapping => !string.IsNullOrWhiteSpace(mapping.UuidMatch) && !IsFutureMatch(mapping.MatchDate))
+                .Where(mapping => !File.Exists(storage.GetStatsPath(mapping.MatchWebId, mapping.UuidMatch!)) ||
+                                  !File.Exists(storage.GetMovesPath(mapping.MatchWebId, mapping.UuidMatch!)))
+                .Select(mapping => mapping.MatchWebId);
+
             return new MappingSynchronizationResult(
                 true,
                 phaseMetadataChanged,
-                updatedIds.OrderBy(id => id).ToList());
+                updatedIds.Concat(pendingDownloadIds).Distinct().OrderBy(id => id).ToList());
         }
         catch (Exception ex)
         {
@@ -310,6 +321,18 @@ public sealed class MappingSynchronizationCoordinator
 
         metadata.SeasonStartYear = inferredSeasonStartYear.Value;
         metadata.SeasonLabel = BuildSeasonLabel(inferredSeasonStartYear.Value);
+    }
+
+    private static bool IsFutureMatch(DateTime? matchDate)
+    {
+        if (!matchDate.HasValue)
+            return false;
+
+        var localMatchDate = matchDate.Value;
+        if (localMatchDate.TimeOfDay == TimeSpan.Zero)
+            return localMatchDate.Date > DateTime.Today;
+
+        return localMatchDate > DateTime.Now;
     }
 
     private static int InferSeasonStartYear(DateTime matchDate)

@@ -172,7 +172,7 @@ async Task<MappingSynchronizationResult> ExecuteSyncMappingsAsync(
 {
     var coordinator = new MappingSynchronizationCoordinator(
         paths,
-        new MatchMappingSyncService(paths.BrowserProfileDir),
+        new MatchMappingSyncService(paths.BrowserProfileDir, paths.MsStatsTokenFile),
         jsonOptions);
     var result = await coordinator.ExecuteAsync(
         storage,
@@ -251,8 +251,29 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
         return (true, false);
     }
 
+    var msStatsToken = MsStatsTokenStore.LoadValid(paths.MsStatsTokenFile);
     using var http = MsStatsHttpClientFactory.Create();
-    var client = new MsStatsClient(http);
+    var client = new MsStatsClient(http, msStatsToken);
+    var appAccountSettings = AppAccountSettings.Resolve(paths.OutputDir);
+    if (appAccountSettings.Error is not null)
+        Console.WriteLine($"Cuenta de la app: {appAccountSettings.Error}");
+    var appClient = FcbqAppClient.TryCreate(http, paths.FcbqAppTokenFile, appAccountSettings);
+    var legacyStatsIds = await LoadLegacyStatsIdsAsync(appClient, storage, pendingMappings);
+    var statsSources = new System.Collections.Concurrent.ConcurrentDictionary<int, string?>();
+
+    if (msStatsToken is null && appClient is null && pendingMappings.Any(mapping => MsStatsClient.IsStatsGuid(mapping.UuidMatch)))
+    {
+        var withoutToken = pendingMappings.Count(mapping => MsStatsClient.IsStatsGuid(mapping.UuidMatch));
+        Console.WriteLine($"Sin token válido de msstats: se omiten {withoutToken} partido(s) de la temporada actual.");
+        Console.WriteLine("El token se renueva en el paso de mappings con navegador (no con --skip-mappings).");
+        pendingMappings = pendingMappings
+            .Where(mapping => !MsStatsClient.IsStatsGuid(mapping.UuidMatch))
+            .ToList();
+
+        if (pendingMappings.Count == 0)
+            return (true, false);
+    }
+
     var requestedConcurrency = GetConfiguredMaxParallelMatchDownloads();
     var concurrency = Math.Min(requestedConcurrency, pendingMappings.Count);
     var consoleLock = new object();
@@ -277,26 +298,54 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
 
             try
             {
-                var statsTask = client.GetMatchStatsRawAsync(mapping.UuidMatch!);
-                var movesTask = client.GetMatchMovesRawAsync(mapping.UuidMatch!);
-                await Task.WhenAll(statsTask, movesTask);
+                string? statsRaw = null;
+                string? movesRaw = null;
+                string? statsSource = null;
 
-                var statsRaw = await statsTask;
-                var movesRaw = await movesTask;
+                if (!MsStatsClient.IsStatsGuid(mapping.UuidMatch) || msStatsToken is not null)
+                {
+                    var statsTask = client.GetMatchStatsRawAsync(mapping.UuidMatch!);
+                    var movesTask = client.GetMatchMovesRawAsync(mapping.UuidMatch!);
+                    await Task.WhenAll(statsTask, movesTask);
+                    statsRaw = await statsTask;
+                    movesRaw = await movesTask;
+                }
+
+                // Desde 2026-2027 hay categorías (p. ej. Pre-mini) que en la web solo muestran el marcador.
+                // Con la cuenta de la app se piden las stats completas al endpoint antiguo.
+                if ((statsRaw is null || !HasMatchPlayers(statsRaw)) &&
+                    appClient is not null &&
+                    legacyStatsIds.TryGetValue(mapping.MatchWebId, out var legacyStatsId))
+                {
+                    var appStatsRaw = await appClient.GetMatchStatsRawAsync(legacyStatsId);
+                    if (HasMatchPlayers(appStatsRaw))
+                    {
+                        statsRaw = appStatsRaw;
+                        movesRaw = await appClient.GetMatchMovesRawAsync(legacyStatsId);
+                        statsSource = "app";
+                    }
+                }
 
                 // La fuente puede responder 200 con `{}` (p. ej. partidos de una temporada ya archivada).
                 // Eso no es un partido: se trata como fallo para no sobrescribir datos buenos con vacíos.
-                if (!HasMatchTeams(statsRaw))
+                if (statsRaw is null || !HasMatchTeams(statsRaw))
                     throw new InvalidDataException("La fuente devolvió estadísticas vacías (sin equipos). No se sobrescribe nada.");
+
+                // Desde 2026-2027 la fuente publica primero el partido sin jugadoras (solo marcador y parciales).
+                // No se guarda: así la fase sigue incompleta y la próxima sync lo vuelve a pedir.
+                if (!HasMatchPlayers(statsRaw))
+                    throw new InvalidDataException("Estadísticas aún sin jugadoras (solo marcador). Se reintentará en la próxima sync.");
+
+                statsSources[mapping.MatchWebId] = statsSource;
 
                 var prettyStats = JsonFormatting.PrettyPrint(statsRaw);
                 var prettyMoves = JsonFormatting.PrettyPrint(movesRaw);
 
                 var statsChanged = await WriteFileIfChangedAsync(statsPath, prettyStats);
                 // Un partido puede no tener jugada a jugada, pero unas jugadas ya guardadas no se sustituyen por vacías.
-                var keepExistingMoves = IsEmptyJsonPayload(movesRaw) &&
+                var keepExistingMoves = IsEmptyMovesPayload(movesRaw) &&
                                         File.Exists(movesPath) &&
-                                        !IsEmptyJsonPayload(await File.ReadAllTextAsync(movesPath));
+                                        !IsEmptyMovesPayload(await File.ReadAllTextAsync(movesPath));
                 var movesChanged = !keepExistingMoves && await WriteFileIfChangedAsync(movesPath, prettyMoves);
                 var staleFilesDeleted = DeleteStaleMatchFiles(storage, mapping.MatchWebId, mapping.UuidMatch!);
                 var anyChanged = statsChanged || movesChanged || staleFilesDeleted;
@@ -329,6 +378,9 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
 
     downloadedCount = results.Count(result => result.Downloaded);
     filesChanged = results.Any(result => result.FilesChanged);
+
+    if (await SaveStatsSourcesAsync(storage, mappings, statsSources))
+        filesChanged = true;
 
     Console.WriteLine();
     Console.WriteLine("Terminado.");
@@ -397,10 +449,17 @@ static bool HasMatchTeams(string statsRaw)
     try
     {
         using var document = JsonDocument.Parse(statsRaw);
-        return document.RootElement.ValueKind == JsonValueKind.Object &&
-               document.RootElement.TryGetProperty("teams", out var teams) &&
-               teams.ValueKind == JsonValueKind.Array &&
-               teams.GetArrayLength() >= 2;
+        var root = document.RootElement;
+        if (root.ValueKind != JsonValueKind.Object)
+            return false;
+
+        if (root.TryGetProperty("teams", out var teams))
+            return teams.ValueKind == JsonValueKind.Array && teams.GetArrayLength() >= 2;
+
+        // Formato 2026-2027: `boxscore[0]` (periodo 0 = partido entero) con `local` y `visitor`.
+        return TryGetFullMatchBoxscore(root, out var boxscore) &&
+               boxscore.TryGetProperty("local", out var local) && local.ValueKind == JsonValueKind.Object &&
+               boxscore.TryGetProperty("visitor", out var visitor) && visitor.ValueKind == JsonValueKind.Object;
     }
     catch (JsonException)
     {
@@ -408,10 +467,129 @@ static bool HasMatchTeams(string statsRaw)
     }
 }
 
+static bool HasMatchPlayers(string statsRaw)
+{
+    try
+    {
+        using var document = JsonDocument.Parse(statsRaw);
+        var root = document.RootElement;
+        if (root.TryGetProperty("teams", out var teams))
+            return teams.ValueKind == JsonValueKind.Array &&
+                   teams.GetArrayLength() >= 2 &&
+                   teams.EnumerateArray().All(team =>
+                       team.TryGetProperty("players", out var teamPlayers) &&
+                       teamPlayers.ValueKind == JsonValueKind.Array &&
+                       teamPlayers.GetArrayLength() > 0);
+
+        return TryGetFullMatchBoxscore(root, out var boxscore) &&
+               HasPlayers(boxscore, "local") &&
+               HasPlayers(boxscore, "visitor");
+    }
+    catch (JsonException)
+    {
+        return false;
+    }
+
+    static bool HasPlayers(JsonElement boxscore, string side)
+    {
+        return boxscore.TryGetProperty(side, out var team) &&
+               team.TryGetProperty("players", out var players) &&
+               players.ValueKind == JsonValueKind.Array &&
+               players.GetArrayLength() > 0;
+    }
+}
+
+async Task<IReadOnlyDictionary<int, string>> LoadLegacyStatsIdsAsync(
+    FcbqAppClient? appClient,
+    TeamStoragePaths storage,
+    IReadOnlyList<MatchMapping> pendingMappings)
+{
+    if (appClient is null ||
+        storage.Scope.Kind != StorageScopeKind.Phase ||
+        storage.Scope.Id is not > 0 ||
+        !pendingMappings.Any(mapping => MsStatsClient.IsStatsGuid(mapping.UuidMatch)))
+    {
+        return new Dictionary<int, string>();
+    }
+
+    try
+    {
+        var legacyStatsIds = await appClient.GetLegacyStatsIdsAsync(storage.Scope.Id.Value);
+        Console.WriteLine($"Cuenta de la app activa: {legacyStatsIds.Count} partidos con stats de la app en la fase.");
+        return legacyStatsIds;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"No se pudieron leer los ids de la app: {ex.Message}");
+        return new Dictionary<int, string>();
+    }
+}
+
+async Task<bool> SaveStatsSourcesAsync(
+    TeamStoragePaths storage,
+    IReadOnlyList<MatchMapping> mappings,
+    IReadOnlyDictionary<int, string?> statsSources)
+{
+    var changed = false;
+    foreach (var mapping in mappings)
+    {
+        if (!statsSources.TryGetValue(mapping.MatchWebId, out var source) ||
+            string.Equals(mapping.StatsSource, source, StringComparison.Ordinal))
+        {
+            continue;
+        }
+
+        mapping.StatsSource = source;
+        changed = true;
+    }
+
+    if (changed)
+        await File.WriteAllTextAsync(storage.MappingFile, JsonSerializer.Serialize(mappings, jsonOptions));
+
+    return changed;
+}
+
+static bool TryGetFullMatchBoxscore(JsonElement root, out JsonElement boxscore)
+{
+    boxscore = default;
+    if (!root.TryGetProperty("boxscore", out var periods) || periods.ValueKind != JsonValueKind.Array)
+        return false;
+
+    foreach (var period in periods.EnumerateArray())
+    {
+        if (period.TryGetProperty("period", out var number) && number.TryGetInt32(out var value) && value == 0)
+        {
+            boxscore = period;
+            return true;
+        }
+    }
+
+    return false;
+}
+
 static bool IsEmptyJsonPayload(string? raw)
 {
     var trimmed = raw?.Trim() ?? "";
     return trimmed is "" or "{}" or "[]" or "null";
+}
+
+static bool IsEmptyMovesPayload(string? raw)
+{
+    if (IsEmptyJsonPayload(raw))
+        return true;
+
+    try
+    {
+        using var document = JsonDocument.Parse(raw!);
+        return document.RootElement.ValueKind == JsonValueKind.Object &&
+               document.RootElement.TryGetProperty("playByPlay", out var events) &&
+               events.ValueKind == JsonValueKind.Array &&
+               events.GetArrayLength() == 0;
+    }
+    catch (JsonException)
+    {
+        return false;
+    }
 }
 
 async Task<bool> WriteFileIfChangedAsync(string path, string content)

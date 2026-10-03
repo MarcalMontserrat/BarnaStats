@@ -38,7 +38,7 @@ builder.Services.AddSingleton(_ =>
 builder.Services.AddSingleton<PersistentBrowserMappingSyncRunner>(provider =>
 {
     var paths = provider.GetRequiredService<BarnaStatsPaths>();
-    return new PersistentBrowserMappingSyncRunner(paths.BrowserProfileDir);
+    return new PersistentBrowserMappingSyncRunner(paths.BrowserProfileDir, paths.MsStatsTokenFile);
 });
 builder.Services.AddSingleton<MappingSynchronizationCoordinator>(provider =>
 {
@@ -46,6 +46,7 @@ builder.Services.AddSingleton<MappingSynchronizationCoordinator>(provider =>
     var runner = provider.GetRequiredService<PersistentBrowserMappingSyncRunner>();
     return new MappingSynchronizationCoordinator(paths, runner);
 });
+builder.Services.AddSingleton<AppAccountStatusService>();
 builder.Services.AddSingleton<SyncOrchestrator>();
 builder.Services.AddSingleton<ResultsSourceCatalogService>();
 builder.Services.AddSingleton<MatchAiReportService>();
@@ -70,5 +71,6 @@ app.MapHealthEndpoints();
 app.MapSyncEndpoints();
 app.MapMatchEndpoints();
 app.MapBasquetCatalaEndpoints();
+app.MapAppAccountEndpoints();
 
 app.Run();

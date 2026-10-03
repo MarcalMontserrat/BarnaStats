@@ -6,4 +6,5 @@ public sealed class MatchMappingSyncResult
     public required IReadOnlyList<int> TargetMatchWebIds { get; init; }
     public required IReadOnlyDictionary<int, string?> ResolvedUuids { get; init; }
     public PhaseMetadata? PhaseMetadata { get; init; }
+    public bool MsStatsTokenPending { get; init; }
 }

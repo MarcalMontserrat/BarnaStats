@@ -13,6 +13,8 @@ public sealed class BarnaStatsPaths
         StatsDir = Path.Combine(OutputDir, "stats");
         MovesDir = Path.Combine(OutputDir, "moves");
         BrowserProfileDir = Path.Combine(OutputDir, "browser-profile");
+        MsStatsTokenFile = Path.Combine(OutputDir, "tmp", "msstats-token.txt");
+        FcbqAppTokenFile = AppAccountSettings.GetSessionTokenFile(OutputDir);
         ResultsSourcesRegistryFile = Path.Combine(OutputDir, "results_sources.json");
         GenerateAnalysisProjectFile = Path.Combine(RepoRoot, "GenerateAnalisys", "GenerateAnalisys.csproj");
     }
@@ -26,6 +28,8 @@ public sealed class BarnaStatsPaths
     public string StatsDir { get; }
     public string MovesDir { get; }
     public string BrowserProfileDir { get; }
+    public string MsStatsTokenFile { get; }
+    public string FcbqAppTokenFile { get; }
     public string ResultsSourcesRegistryFile { get; }
     public string GenerateAnalysisProjectFile { get; }
 

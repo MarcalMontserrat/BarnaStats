@@ -1,0 +1,93 @@
+{
+  "seasonStartYear": 2026,
+  "seasonLabel": "2026-2027",
+  "scopes": [
+    {
+      "key": "source:2026-2027:24344",
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "sourcePhaseId": 24344,
+      "phaseNumber": 1,
+      "categoryName": "C.t. Pre-mini Mascul\u00ED",
+      "phaseName": "Primera Fase",
+      "levelName": "Nivell C",
+      "levelCode": "C",
+      "groupCode": "23",
+      "matchesCount": 3,
+      "rows": [
+        {
+          "position": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "teamName": "C.B GRUP BARNA NEGRE",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 146,
+          "pointsAgainst": 1,
+          "pointDiff": 145
+        },
+        {
+          "position": 2,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
+          "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 101,
+          "pointsAgainst": 3,
+          "pointDiff": 98
+        },
+        {
+          "position": 3,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+          "teamName": "DOMINIQUES BARCELONA",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 103,
+          "pointsAgainst": 16,
+          "pointDiff": 87
+        },
+        {
+          "position": 4,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
+          "teamName": "UE SANT ANDREU GROC",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 16,
+          "pointsAgainst": 103,
+          "pointDiff": -87
+        },
+        {
+          "position": 5,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
+          "teamName": "B.I.M.",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 3,
+          "pointsAgainst": 101,
+          "pointDiff": -98
+        },
+        {
+          "position": 6,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+          "teamName": "CE VILA OLIMPICA",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 1,
+          "pointsAgainst": 146,
+          "pointDiff": -145
+        }
+      ]
+    }
+  ]
+}

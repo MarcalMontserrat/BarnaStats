@@ -18,6 +18,7 @@ public sealed class SyncOrchestrator
     private readonly Lock _lock = new();
     private readonly BarnaStatsPaths _barnaStatsPaths;
     private readonly MappingSynchronizationCoordinator _mappingSynchronizationCoordinator;
+    private readonly AppAccountStatusService _appAccountStatusService;
     private readonly PhaseCacheInspector _phaseCacheInspector;
     private readonly RepoPaths _repoPaths;
     private readonly ResultsSourceCatalogService _resultsSourceCatalogService;
@@ -35,8 +36,10 @@ public sealed class SyncOrchestrator
         RepoPaths repoPaths,
         ResultsSourceCatalogService resultsSourceCatalogService,
         BarnaStatsPaths barnaStatsPaths,
-        MappingSynchronizationCoordinator mappingSynchronizationCoordinator)
+        MappingSynchronizationCoordinator mappingSynchronizationCoordinator,
+        AppAccountStatusService appAccountStatusService)
     {
+        _appAccountStatusService = appAccountStatusService;
         _repoPaths = repoPaths;
         _resultsSourceCatalogService = resultsSourceCatalogService;
         _barnaStatsPaths = barnaStatsPaths;
@@ -262,6 +265,7 @@ public sealed class SyncOrchestrator
         job.StartedAtUtc = DateTimeOffset.UtcNow;
         job.Status = SyncJobStatus.Running;
         job.AppendLog($"[{DateTimeOffset.UtcNow:HH:mm:ss}] Lanzando sync-all para {job.SourceUrl}{(job.ForceRefresh ? " (modo forzado)" : "")}");
+        job.AppendLog(_appAccountStatusService.DescribeForJobLog());
 
         try
         {
@@ -346,6 +350,7 @@ public sealed class SyncOrchestrator
         job.StartedAtUtc = DateTimeOffset.UtcNow;
         job.Status = SyncJobStatus.Running;
         job.AppendLog(startMessage);
+        job.AppendLog(_appAccountStatusService.DescribeForJobLog());
 
         var failures = new List<string>();
         var blockedSources = new List<string>();

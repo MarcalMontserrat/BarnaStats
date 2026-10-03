@@ -1,17 +1,26 @@
 {
-  "generatedAtUtc": "2026-09-29T09:18:12.734685Z",
-  "defaultSeasonLabel": "2025-2026",
+  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
+  "defaultSeasonLabel": "2026-2027",
   "historicalTeamsFile": "archive/teams.json",
   "historicalPlayersFile": "archive/players.json",
   "seasons": [
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "totalTeams": 12,
+      "totalMatches": 6,
+      "dataRoot": "",
+      "analysisFile": "analysis.json",
+      "competitionFile": "competition.json"
+    },
     {
       "seasonStartYear": 2025,
       "seasonLabel": "2025-2026",
       "totalTeams": 143,
       "totalMatches": 1187,
-      "dataRoot": "",
-      "analysisFile": "analysis.json",
-      "competitionFile": "competition.json"
+      "dataRoot": "seasons/2025-2026/",
+      "analysisFile": "seasons/2025-2026/analysis.json",
+      "competitionFile": "seasons/2025-2026/competition.json"
     }
   ]
 }

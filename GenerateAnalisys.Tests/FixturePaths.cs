@@ -6,6 +6,7 @@ internal static class FixturePaths
     public static string RepoRoot => FindAncestorContaining("BarnaStats.sln");
     public static string FixturesRoot => Path.Combine(TestProjectRoot, "Fixtures");
     public static string SinglePhaseRoot => Path.Combine(FixturesRoot, "single-phase");
+    public static string MsStats2026PhaseRoot => Path.Combine(FixturesRoot, "msstats-2026-phase");
 
     private static string FindAncestorContaining(string markerFile)
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-09-29T09:18:12.734685Z",
+  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -142,6 +142,34 @@
       ]
     },
     {
+      "key": "TEAM:89513",
+      "label": "AE MINGUELLA A - PURE CUISINE",
+      "latestTeamIdExtern": 89513,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Femen\u00ED \u00B7 A",
+      "searchText": "AE MINGUELLA A - PURE CUISINE C.t. Pre-mini Femen\u00ED A",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:89513:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 89513,
+          "teamName": "AE MINGUELLA A - PURE CUISINE",
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "levelName": "A",
+          "matchesPlayed": 1,
+          "playersCount": 10,
+          "pointsFor": 142,
+          "pointsAgainst": 12,
+          "pointDiff": 130,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 1,
+          "avgValuation": 126
+        }
+      ]
+    },
+    {
       "key": "TEAM:80522",
       "label": "AE MINGUELLA A - PURE CUISINE",
       "latestTeamIdExtern": 80522,
@@ -250,6 +278,34 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 9.2
+        }
+      ]
+    },
+    {
+      "key": "TEAM:94243",
+      "label": "B.I.M.",
+      "latestTeamIdExtern": 94243,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Mascul\u00ED \u00B7 C",
+      "searchText": "B.I.M. C.t. Pre-mini Mascul\u00ED C",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:94243:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 94243,
+          "teamName": "B.I.M.",
+          "categoryName": "C.t. Pre-mini Mascul\u00ED",
+          "levelName": "C",
+          "matchesPlayed": 1,
+          "playersCount": 9,
+          "pointsFor": 3,
+          "pointsAgainst": 101,
+          "pointDiff": -98,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 5,
+          "avgValuation": -8
         }
       ]
     },
@@ -646,6 +702,34 @@
       ]
     },
     {
+      "key": "TEAM:90463",
+      "label": "C.B GRUP BARNA A",
+      "latestTeamIdExtern": 90463,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Femen\u00ED \u00B7 A",
+      "searchText": "C.B GRUP BARNA A C.t. Pre-mini Femen\u00ED A",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:90463:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 90463,
+          "teamName": "C.B GRUP BARNA A",
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "levelName": "A",
+          "matchesPlayed": 1,
+          "playersCount": 11,
+          "pointsFor": 68,
+          "pointsAgainst": 34,
+          "pointDiff": 34,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 2,
+          "avgValuation": 44
+        }
+      ]
+    },
+    {
       "key": "TEAM:81185",
       "label": "C.B GRUP BARNA A",
       "latestTeamIdExtern": 81185,
@@ -670,6 +754,34 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 36.8235294117647
+        }
+      ]
+    },
+    {
+      "key": "TEAM:90467",
+      "label": "C.B GRUP BARNA NEGRE",
+      "latestTeamIdExtern": 90467,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Mascul\u00ED \u00B7 C",
+      "searchText": "C.B GRUP BARNA NEGRE C.t. Pre-mini Mascul\u00ED C",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:90467:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 90467,
+          "teamName": "C.B GRUP BARNA NEGRE",
+          "categoryName": "C.t. Pre-mini Mascul\u00ED",
+          "levelName": "C",
+          "matchesPlayed": 1,
+          "playersCount": 11,
+          "pointsFor": 146,
+          "pointsAgainst": 1,
+          "pointDiff": 145,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 1,
+          "avgValuation": 128
         }
       ]
     },
@@ -1701,6 +1813,34 @@
       ]
     },
     {
+      "key": "TEAM:94630",
+      "label": "CE VILA OLIMPICA",
+      "latestTeamIdExtern": 94630,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Mascul\u00ED \u00B7 C",
+      "searchText": "CE VILA OLIMPICA C.t. Pre-mini Mascul\u00ED C",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:94630:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 94630,
+          "teamName": "CE VILA OLIMPICA",
+          "categoryName": "C.t. Pre-mini Mascul\u00ED",
+          "levelName": "C",
+          "matchesPlayed": 1,
+          "playersCount": 9,
+          "pointsFor": 1,
+          "pointsAgainst": 146,
+          "pointDiff": -145,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 6,
+          "avgValuation": -10
+        }
+      ]
+    },
+    {
       "key": "TEAM:81071",
       "label": "CENTRE CAT\u00D2LIC L\u0027H",
       "latestTeamIdExtern": 81071,
@@ -1953,6 +2093,34 @@
       ]
     },
     {
+      "key": "TEAM:91937",
+      "label": "DOMINIQUES BARCELONA",
+      "latestTeamIdExtern": 91937,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Mascul\u00ED \u00B7 C",
+      "searchText": "DOMINIQUES BARCELONA C.t. Pre-mini Mascul\u00ED C",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91937:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91937,
+          "teamName": "DOMINIQUES BARCELONA",
+          "categoryName": "C.t. Pre-mini Mascul\u00ED",
+          "levelName": "C",
+          "matchesPlayed": 1,
+          "playersCount": 11,
+          "pointsFor": 103,
+          "pointsAgainst": 16,
+          "pointDiff": 87,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 3,
+          "avgValuation": 81
+        }
+      ]
+    },
+    {
       "key": "TEAM:82476",
       "label": "DOMINIQUES BARCELONA NEGRE",
       "latestTeamIdExtern": 82476,
@@ -1977,6 +2145,34 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 3.8333333333333335
+        }
+      ]
+    },
+    {
+      "key": "TEAM:91941",
+      "label": "DOMINIQUES BARCELONA TARONJA",
+      "latestTeamIdExtern": 91941,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Femen\u00ED \u00B7 A",
+      "searchText": "DOMINIQUES BARCELONA TARONJA C.t. Pre-mini Femen\u00ED A",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91941:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91941,
+          "teamName": "DOMINIQUES BARCELONA TARONJA",
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "levelName": "A",
+          "matchesPlayed": 1,
+          "playersCount": 8,
+          "pointsFor": 76,
+          "pointsAgainst": 74,
+          "pointDiff": 2,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 3,
+          "avgValuation": 45
         }
       ]
     },
@@ -2289,6 +2485,34 @@
       ]
     },
     {
+      "key": "TEAM:89366",
+      "label": "FEMEN\u00CD SANT ADRI\u00C0 A",
+      "latestTeamIdExtern": 89366,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Femen\u00ED \u00B7 A",
+      "searchText": "FEMEN\u00CD SANT ADRI\u00C0 A C.t. Pre-mini Femen\u00ED A",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:89366:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 89366,
+          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "levelName": "A",
+          "matchesPlayed": 1,
+          "playersCount": 8,
+          "pointsFor": 74,
+          "pointsAgainst": 76,
+          "pointDiff": -2,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 4,
+          "avgValuation": 38
+        }
+      ]
+    },
+    {
       "key": "TEAM:80235",
       "label": "FEMEN\u00CD SANT ADRI\u00C0 A",
       "latestTeamIdExtern": 80235,
@@ -2401,6 +2625,34 @@
       ]
     },
     {
+      "key": "TEAM:91790",
+      "label": "JAC SANTS BARCELONA U10 1",
+      "latestTeamIdExtern": 91790,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Femen\u00ED \u00B7 A",
+      "searchText": "JAC SANTS BARCELONA U10 1 C.t. Pre-mini Femen\u00ED A",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91790:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91790,
+          "teamName": "JAC SANTS BARCELONA U10 1",
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "levelName": "A",
+          "matchesPlayed": 1,
+          "playersCount": 10,
+          "pointsFor": 34,
+          "pointsAgainst": 68,
+          "pointDiff": -34,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 5,
+          "avgValuation": 7
+        }
+      ]
+    },
+    {
       "key": "TEAM:83463",
       "label": "JAC SANTS BARCELONA U10 1",
       "latestTeamIdExtern": 83463,
@@ -2453,6 +2705,34 @@
           "ties": 0,
           "standingPosition": 5,
           "avgValuation": 18.333333333333332
+        }
+      ]
+    },
+    {
+      "key": "TEAM:88717",
+      "label": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+      "latestTeamIdExtern": 88717,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Femen\u00ED \u00B7 A",
+      "searchText": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD C.t. Pre-mini Femen\u00ED A",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:88717:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 88717,
+          "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "levelName": "A",
+          "matchesPlayed": 1,
+          "playersCount": 9,
+          "pointsFor": 12,
+          "pointsAgainst": 142,
+          "pointDiff": -130,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 6,
+          "avgValuation": 2
         }
       ]
     },
@@ -3773,6 +4053,34 @@
       ]
     },
     {
+      "key": "TEAM:91876",
+      "label": "UE SANT ANDREU GROC",
+      "latestTeamIdExtern": 91876,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Mascul\u00ED \u00B7 C",
+      "searchText": "UE SANT ANDREU GROC C.t. Pre-mini Mascul\u00ED C",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91876:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91876,
+          "teamName": "UE SANT ANDREU GROC",
+          "categoryName": "C.t. Pre-mini Mascul\u00ED",
+          "levelName": "C",
+          "matchesPlayed": 1,
+          "playersCount": 9,
+          "pointsFor": 16,
+          "pointsAgainst": 103,
+          "pointDiff": -87,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 4,
+          "avgValuation": -1
+        }
+      ]
+    },
+    {
       "key": "TEAM:82149",
       "label": "UE SANT ANDREU GROC",
       "latestTeamIdExtern": 82149,
@@ -3825,6 +4133,34 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 25.357142857142858
+        }
+      ]
+    },
+    {
+      "key": "TEAM:91311",
+      "label": "UE SANT CUGAT - OCCIDENT NEGRE",
+      "latestTeamIdExtern": 91311,
+      "meta": "1 temporada \u00B7 C.t. Pre-mini Mascul\u00ED \u00B7 C",
+      "searchText": "UE SANT CUGAT - OCCIDENT NEGRE C.t. Pre-mini Mascul\u00ED C",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91311:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91311,
+          "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
+          "categoryName": "C.t. Pre-mini Mascul\u00ED",
+          "levelName": "C",
+          "matchesPlayed": 1,
+          "playersCount": 8,
+          "pointsFor": 101,
+          "pointsAgainst": 3,
+          "pointDiff": 98,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 2,
+          "avgValuation": 85
         }
       ]
     },

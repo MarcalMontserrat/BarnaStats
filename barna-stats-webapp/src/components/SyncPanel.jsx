@@ -1,5 +1,6 @@
 import {useDeferredValue, useEffect, useRef, useState} from "react";
 import PrettySelect from "./PrettySelect.jsx";
+import AppAccountStatus from "./AppAccountStatus.jsx";
 import {
     buildResultsUrl,
     GENDER_OPTIONS,
@@ -1188,6 +1189,8 @@ function SyncPanel({
                     esperará sin recargar la página.
                 </div>
             </div>
+
+            <AppAccountStatus apiAvailable={apiAvailable} refreshKey={`${job?.jobId ?? ""}:${job?.status ?? ""}`} />
 
             <div style={styles.builderSection}>
                 <div style={styles.builderGrid}>

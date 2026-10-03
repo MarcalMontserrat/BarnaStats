@@ -1,0 +1,123 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+    "teamIdIntern": 583593,
+    "teamIdExtern": 90467,
+    "teamName": "C.B GRUP BARNA NEGRE",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+    "matchWebId": 41176,
+    "matchInternId": 290495,
+    "matchExternId": 1227748,
+    "matchDate": "2026-10-03T11:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24344,
+    "categoryName": "C.t. Pre-mini Mascul\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell C",
+    "levelCode": "C",
+    "groupCode": "23",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "CE VILA OLIMPICA",
+    "homeScore": 1,
+    "awayScore": 51,
+    "awayTeam": "C.B GRUP BARNA NEGRE",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
+    "rivalTeam": "CE VILA OLIMPICA",
+    "officialTeamScore": 51,
+    "officialRivalScore": 1,
+    "teamScore": 146,
+    "rivalScore": 1,
+    "result": "W",
+    "topScorer": "NIL PI GONZALEZ",
+    "topScorerTeam": "C.B GRUP BARNA NEGRE",
+    "topScorerPoints": 21,
+    "teamTopScorer": "NIL PI GONZALEZ",
+    "teamTopScorerPoints": 21,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 51,
+      "maxDeficit": 0,
+      "bestRun": 51,
+      "rivalBestRun": 1,
+      "closingRun": 0,
+      "rivalClosingRun": 1,
+      "firstScorer": "NOAH PIFERRER SORIA",
+      "firstScorerTeam": "C.B GRUP BARNA NEGRE",
+      "lastScorer": "IAN BRAUN SIMAL",
+      "lastScorerTeam": "CE VILA OLIMPICA",
+      "teamFirstScorer": "NOAH PIFERRER SORIA",
+      "teamLastScorer": "NOAH PIFERRER SORIA",
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": 19,
+      "worstPeriodLabel": "Parcial 8",
+      "worstPeriodDiff": -1,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 19,
+          "rivalPoints": 0,
+          "diff": 19
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 8,
+          "rivalPoints": 0,
+          "diff": 8
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 16,
+          "rivalPoints": 0,
+          "diff": 16
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 8,
+          "rivalPoints": 0,
+          "diff": 8
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 0,
+          "rivalPoints": 0,
+          "diff": 0
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 0,
+          "rivalPoints": 1,
+          "diff": -1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

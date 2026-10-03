@@ -292,6 +292,7 @@ public sealed class MatchAnalysisService
         var selectedPaths = new List<string>();
         var duplicateMatchWebIds = new List<int>();
         var phaseMetadataByRoot = new Dictionary<string, PhaseMetadataFile?>(StringComparer.OrdinalIgnoreCase);
+        var mappingInfoByRoot = new Dictionary<string, IReadOnlyDictionary<int, MatchMappingInfo>>(StringComparer.OrdinalIgnoreCase);
 
         var candidates = Directory.GetFiles(rawDataRootDir, "*_stats.json", SearchOption.AllDirectories)
             .Select(path => new
@@ -303,8 +304,11 @@ public sealed class MatchAnalysisService
                 LastWriteTimeUtc = File.GetLastWriteTimeUtc(path)
             })
             .Where(x => x.MatchWebId.HasValue)
-            .GroupBy(x => x.MatchWebId!.Value)
-            .OrderBy(group => group.Key);
+            // Los matchWebId se reutilizan entre temporadas (p. ej. 35421 es de 2025-2026 y de 2026-2027):
+            // el mismo partido guardado en varias carpetas comparte uuid, así que se agrupa por los dos.
+            .GroupBy(x => (MatchWebId: x.MatchWebId!.Value, Uuid: TryGetUuidFromFileName(Path.GetFileName(x.Path))))
+            .OrderBy(group => group.Key.MatchWebId)
+            .ThenBy(group => group.Key.Uuid, StringComparer.OrdinalIgnoreCase);
 
         foreach (var group in candidates)
         {
@@ -315,7 +319,7 @@ public sealed class MatchAnalysisService
                 .First();
 
             if (group.Count() > 1)
-                duplicateMatchWebIds.Add(group.Key);
+                duplicateMatchWebIds.Add(group.Key.MatchWebId);
 
             selectedPaths.Add(selected.Path);
         }
@@ -325,10 +329,48 @@ public sealed class MatchAnalysisService
             Console.WriteLine($"Duplicados detectados en {duplicateMatchWebIds.Count} partidos. Se prioriza la versión más reciente, dando preferencia a las carpetas con scope dedicado como `out/phases`.");
         }
 
-        return selectedPaths.Select(path => new StatsFileContext(
-            path,
-            TryGetMatchWebIdFromFileName(Path.GetFileName(path))!.Value,
-            GetPhaseMetadataForStatsPath(path, phaseMetadataByRoot)));
+        return selectedPaths.Select(path =>
+        {
+            var matchWebId = TryGetMatchWebIdFromFileName(Path.GetFileName(path))!.Value;
+            return new StatsFileContext(
+                path,
+                matchWebId,
+                GetPhaseMetadataForStatsPath(path, phaseMetadataByRoot),
+                GetMappingInfoForStatsPath(path, mappingInfoByRoot).GetValueOrDefault(matchWebId));
+        });
+    }
+
+    // Las stats desde 2026-2027 no traen el id de `/equip/{id}`; lo guarda la sync en el mapping de la fase.
+    private static IReadOnlyDictionary<int, MatchMappingInfo> GetMappingInfoForStatsPath(
+        string statsPath,
+        IDictionary<string, IReadOnlyDictionary<int, MatchMappingInfo>> mappingInfoByRoot)
+    {
+        var rootDir = Directory.GetParent(Path.GetDirectoryName(statsPath) ?? "")?.FullName;
+        if (string.IsNullOrWhiteSpace(rootDir))
+            return new Dictionary<int, MatchMappingInfo>();
+
+        if (mappingInfoByRoot.TryGetValue(rootDir, out var cached))
+            return cached;
+
+        var result = new Dictionary<int, MatchMappingInfo>();
+        var mappingPath = Path.Combine(rootDir, "match_mapping.json");
+
+        try
+        {
+            if (File.Exists(mappingPath))
+            {
+                var mappings = JsonSerializer.Deserialize<List<MatchMappingFileEntry>>(File.ReadAllText(mappingPath), JsonOptions) ?? [];
+                foreach (var mapping in mappings)
+                    result[mapping.MatchWebId] = new MatchMappingInfo(mapping.LocalTeamIdExtern, mapping.VisitorTeamIdExtern);
+            }
+        }
+        catch (JsonException)
+        {
+            // Sin mapping legible los equipos se identifican por nombre, como cualquier partido sin id externo.
+        }
+
+        mappingInfoByRoot[rootDir] = result;
+        return result;
     }
 
     private PhaseMetadataFile? GetPhaseMetadataForStatsPath(
@@ -448,6 +490,12 @@ public sealed class MatchAnalysisService
         return int.TryParse(prefix, out var id) ? id : null;
     }
 
+    private static string TryGetUuidFromFileName(string fileName)
+    {
+        var segments = fileName.Split('_');
+        return segments.Length >= 3 ? segments[1].ToLowerInvariant() : "";
+    }
+
     private static string BuildTeamKey(TeamInfo team, PhaseMetadataFile? phaseMetadata, string? seasonLabel)
     {
         var normalizedSeasonLabel = NameNormalizer.Normalize(seasonLabel);
@@ -520,8 +568,26 @@ public sealed class MatchAnalysisService
     private static async Task<PreparedMatch> PrepareMatchAsync(StatsFileContext statsFile, CancellationToken cancellationToken)
     {
         var statsRaw = await File.ReadAllTextAsync(statsFile.Path, cancellationToken);
-        var match = JsonSerializer.Deserialize<StatsRoot>(statsRaw, JsonOptions);
         var movesRaw = await TryReadMovesRawAsync(statsFile.Path);
+
+        if (MsStatsMatchAdapter.IsMsStatsMatchFormat(statsRaw))
+        {
+            var (convertedMatch, convertedMoves) = MsStatsMatchAdapter.Convert(
+                statsRaw,
+                movesRaw,
+                statsFile.MappingInfo?.LocalTeamIdExtern,
+                statsFile.MappingInfo?.VisitorTeamIdExtern);
+
+            // Los informes de IA leen el JSON en crudo: se les pasa ya en el formato antiguo.
+            return new PreparedMatch(
+                statsFile,
+                JsonSerializer.Serialize(convertedMatch),
+                convertedMatch,
+                JsonSerializer.Serialize(convertedMoves),
+                convertedMoves);
+        }
+
+        var match = JsonSerializer.Deserialize<StatsRoot>(statsRaw, JsonOptions);
 
         return new PreparedMatch(statsFile, statsRaw, match, movesRaw, DeserializeMoves(movesRaw));
     }
@@ -536,7 +602,17 @@ public sealed class MatchAnalysisService
     private sealed record StatsFileContext(
         string Path,
         int MatchWebId,
-        PhaseMetadataFile? PhaseMetadata);
+        PhaseMetadataFile? PhaseMetadata,
+        MatchMappingInfo? MappingInfo);
+
+    private sealed record MatchMappingInfo(int? LocalTeamIdExtern, int? VisitorTeamIdExtern);
+
+    private sealed class MatchMappingFileEntry
+    {
+        public int MatchWebId { get; set; }
+        public int? LocalTeamIdExtern { get; set; }
+        public int? VisitorTeamIdExtern { get; set; }
+    }
 }
 
 internal sealed class TeamAccumulator

@@ -86,7 +86,19 @@ public sealed class StatsContractsTests
 
         foreach (var statsPath in Directory.EnumerateFiles(outDir, "*_stats.json", SearchOption.AllDirectories))
         {
-            var stats = JsonSerializer.Deserialize<StatsRoot>(File.ReadAllText(statsPath), JsonOptions);
+            var statsRaw = File.ReadAllText(statsPath);
+            if (IsMsStatsMatchFormat(statsRaw))
+            {
+                var match = JsonSerializer.Deserialize<MsStatsMatchStats>(statsRaw);
+                if (match?.Boxscore.FirstOrDefault(period => period.Period == 0) is not { Local: not null, Visitor: not null })
+                {
+                    throw new XunitException($"`{statsPath}` (formato 2026-2027) no contiene local y visitante.");
+                }
+
+                continue;
+            }
+
+            var stats = JsonSerializer.Deserialize<StatsRoot>(statsRaw, JsonOptions);
 
             if (stats is null)
             {
@@ -101,7 +113,18 @@ public sealed class StatsContractsTests
 
         foreach (var movesPath in Directory.EnumerateFiles(outDir, "*_moves.json", SearchOption.AllDirectories))
         {
-            var moves = JsonSerializer.Deserialize<List<MoveEvent>>(File.ReadAllText(movesPath), JsonOptions);
+            var movesRaw = File.ReadAllText(movesPath);
+            if (movesRaw.TrimStart().StartsWith('{'))
+            {
+                if (JsonSerializer.Deserialize<MsStatsPlayByPlay>(movesRaw) is null)
+                {
+                    throw new XunitException($"No se ha podido deserializar `{movesPath}` (formato 2026-2027).");
+                }
+
+                continue;
+            }
+
+            var moves = JsonSerializer.Deserialize<List<MoveEvent>>(movesRaw, JsonOptions);
 
             if (moves is null)
             {
@@ -127,5 +150,13 @@ public sealed class StatsContractsTests
                 throw new XunitException($"`{metadataPath}` no contiene la metadata mínima esperada.");
             }
         }
+    }
+
+    private static bool IsMsStatsMatchFormat(string statsRaw)
+    {
+        using var document = JsonDocument.Parse(statsRaw);
+        return document.RootElement.ValueKind == JsonValueKind.Object &&
+               document.RootElement.TryGetProperty("header", out _) &&
+               document.RootElement.TryGetProperty("boxscore", out _);
     }
 }

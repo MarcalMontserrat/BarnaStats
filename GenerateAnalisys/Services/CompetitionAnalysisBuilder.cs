@@ -75,7 +75,8 @@ internal static class CompetitionAnalysisBuilder
     {
         return teamAnalyses
             .SelectMany(team => team.MatchSummaries)
-            .GroupBy(summary => summary.MatchWebId)
+            // El matchWebId solo es único dentro de una temporada: la fuente lo reutiliza de un año a otro.
+            .GroupBy(summary => (summary.SeasonStartYear, summary.SeasonLabel, summary.MatchWebId))
             .Select(group =>
             {
                 var homePerspective = group.FirstOrDefault(summary => summary.IsHome) ?? group.First();

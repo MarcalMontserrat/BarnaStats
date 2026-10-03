@@ -36,8 +36,12 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         CultureInfo.InvariantCulture
     ];
 
+    // Desde la temporada 2026-2027 el enlace es `/estadistica/partit/{guid}`; antes, `/estadistiques/{24 hex}`.
     private static readonly Regex UuidRouteRegex = new(
-        "/estadistiques/([a-f0-9]{24})(?:[/?#\"'<> ]|$)",
+        "/(?:estadistiques|estadistica/partit)/([a-f0-9]{24}|[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})(?:[/?#\"'<> ]|$)",
+        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    private static readonly Regex TeamIdExternRouteRegex = new(
+        "href\\s*=\\s*[\"'](?:https?://www\\.basquetcatala\\.cat)?/equip/(\\d+)[\"']",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
     private static readonly Regex UuidJsonRegex = new(
         "\"(?:uuid(?:Match)?|guid(?:Estadistiques)?|statsGuid|estadistiquesGuid|guidStats)\"\\s*:\\s*\"([a-f0-9]{24})\"",
@@ -108,11 +112,16 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
     private static readonly Regex GroupCodeRegex = new(
         @"^[A-Z0-9/]+$",
         RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    // Destino de los logs de la sync en curso. La API lo usa para que el detalle (partidos a resolver, captcha,
+    // páginas sin uuid) llegue al log del job en lugar de perderse en la consola del proceso.
+    private static readonly AsyncLocal<Action<string>?> LogSink = new();
     private readonly string _browserProfileDir;
+    private readonly string? _msStatsTokenFile;
 
-    public MatchMappingSyncService(string browserProfileDir)
+    public MatchMappingSyncService(string browserProfileDir, string? msStatsTokenFile = null)
     {
         _browserProfileDir = browserProfileDir;
+        _msStatsTokenFile = msStatsTokenFile;
     }
 
     public async Task<MatchMappingSyncResult> SyncAsync(
@@ -120,8 +129,12 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         IReadOnlyCollection<int> explicitMatchWebIds,
         bool includeAll,
         string? sourceUrl = null,
-        bool interactive = true)
+        bool interactive = true,
+        Action<string>? log = null)
     {
+        if (log is not null)
+            LogSink.Value = log;
+
         var initialTargetMatchWebIds = BuildTargetMatchWebIds(
             existingMappings,
             explicitMatchWebIds,
@@ -131,7 +144,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         if (string.IsNullOrWhiteSpace(sourceUrl) && initialTargetMatchWebIds.Count == 0)
             return EmptySyncResult;
 
-        Console.WriteLine("Intentando reutilizar la sesión guardada sin abrir navegador...");
+        Log("Intentando reutilizar la sesión guardada sin abrir navegador...");
 
         var backgroundResult = await RunSyncSessionAsync(
             existingMappings,
@@ -147,11 +160,11 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         var fallbackMappings = MergeSyncResult(existingMappings, backgroundResult);
         var unresolvedTargets = CountUnresolvedTargets(backgroundResult);
 
-        Console.WriteLine();
-        Console.WriteLine(string.IsNullOrWhiteSpace(sourceUrl) || backgroundResult.DiscoveredMappings.Count > 0
+        Log(string.Empty);
+        Log(string.IsNullOrWhiteSpace(sourceUrl) || backgroundResult.DiscoveredMappings.Count > 0
             ? $"La sesión en segundo plano no ha bastado. Quedan {unresolvedTargets} partido(s) por resolver."
             : "La fuente no se ha podido leer en segundo plano. Puede haber captcha, login o challenge.");
-        Console.WriteLine("Abriendo navegador visible para que puedas intervenir solo si hace falta.");
+        Log("Abriendo navegador visible para que puedas intervenir solo si hace falta.");
 
         return await RunSyncSessionAsync(
             fallbackMappings,
@@ -189,8 +202,12 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         IReadOnlyCollection<int> explicitMatchWebIds,
         bool includeAll,
         string? sourceUrl = null,
-        bool interactive = true)
+        bool interactive = true,
+        Action<string>? log = null)
     {
+        if (log is not null)
+            LogSink.Value = log;
+
         var initialTargetMatchWebIds = BuildTargetMatchWebIds(
             existingMappings,
             explicitMatchWebIds,
@@ -228,9 +245,9 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
         if (!headless)
         {
-            Console.WriteLine("Se abrirá un navegador real para reutilizar tu sesión.");
-            Console.WriteLine("Si aparece login o captcha, resuélvelo ahí y vuelve al terminal.");
-            Console.WriteLine(interactive
+            Log("Se abrirá un navegador real para reutilizar tu sesión.");
+            Log("Si aparece login o captcha, resuélvelo ahí y vuelve al terminal.");
+            Log(interactive
                 ? string.IsNullOrWhiteSpace(sourceUrl)
                     ? "Pulsa ENTER cuando la web de basquetcatala esté lista."
                     : "Pulsa ENTER cuando la página de basquetcatala esté visible."
@@ -283,16 +300,16 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
                 resolved.TryAdd(mapping.MatchWebId, mapping.UuidMatch);
         }
 
-        Console.WriteLine();
-        Console.WriteLine($"Mappings actuales: {existingMappings.Count}");
+        Log(string.Empty);
+        Log($"Mappings actuales: {existingMappings.Count}");
         if (!string.IsNullOrWhiteSpace(sourceUrl))
         {
-            Console.WriteLine($"Partidos encontrados en la fuente: {discoveredMappings.Count}");
-            Console.WriteLine($"UUIDs directos encontrados     : {discoveredMappings.Count(x => !string.IsNullOrWhiteSpace(x.UuidMatch))}");
-            Console.WriteLine($"Partidos aún sin jugar         : {discoveredMappings.Count(x => IsFutureMatch(x.MatchDate))}");
+            Log($"Partidos encontrados en la fuente: {discoveredMappings.Count}");
+            Log($"UUIDs directos encontrados     : {discoveredMappings.Count(x => !string.IsNullOrWhiteSpace(x.UuidMatch))}");
+            Log($"Partidos aún sin jugar         : {discoveredMappings.Count(x => IsFutureMatch(x.MatchDate))}");
         }
 
-        Console.WriteLine($"Partidos a resolver: {targetMatchWebIds.Count(matchWebId => !resolved.ContainsKey(matchWebId))}");
+        Log($"Partidos a resolver: {targetMatchWebIds.Count(matchWebId => !resolved.ContainsKey(matchWebId))}");
 
         foreach (var matchWebId in targetMatchWebIds)
         {
@@ -302,13 +319,112 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             resolved[matchWebId] = await ResolveSingleAsync(page, matchWebId, interactive, headless);
         }
 
+        var msStatsTokenPending = await EnsureMsStatsTokenAsync(
+            page,
+            existingMappings,
+            discoveredMappings,
+            resolved,
+            interactive,
+            headless);
+
         return new MatchMappingSyncResult
         {
             DiscoveredMappings = discoveredMappings,
             TargetMatchWebIds = targetMatchWebIds,
             ResolvedUuids = resolved,
-            PhaseMetadata = sourceInspection?.PhaseMetadata
+            PhaseMetadata = sourceInspection?.PhaseMetadata,
+            MsStatsTokenPending = msStatsTokenPending
         };
+    }
+
+    // Devuelve true si hacía falta token y no se ha podido conseguir en esta sesión.
+    private async Task<bool> EnsureMsStatsTokenAsync(
+        IPage page,
+        IReadOnlyList<MatchMapping> existingMappings,
+        IReadOnlyList<MatchDiscovery> discoveredMappings,
+        IReadOnlyDictionary<int, string?> resolved,
+        bool interactive,
+        bool headless)
+    {
+        if (string.IsNullOrWhiteSpace(_msStatsTokenFile) || MsStatsTokenStore.LoadValid(_msStatsTokenFile) is not null)
+            return false;
+
+        var futureMatchWebIds = discoveredMappings
+            .Where(discovery => IsFutureMatch(discovery.MatchDate))
+            .Select(discovery => discovery.MatchWebId)
+            .Concat(existingMappings
+                .Where(mapping => IsFutureMatch(mapping.MatchDate))
+                .Select(mapping => mapping.MatchWebId))
+            .ToHashSet();
+        var statsGuid = resolved
+            .Where(entry => !futureMatchWebIds.Contains(entry.Key))
+            .Select(entry => entry.Value)
+            .FirstOrDefault(MsStatsClient.IsStatsGuid);
+
+        if (statsGuid is null)
+            return false;
+
+        var token = await CaptureMsStatsTokenAsync(page, statsGuid, interactive, headless);
+        if (token is null)
+            return true;
+
+        MsStatsTokenStore.Save(_msStatsTokenFile, token);
+        Log($"Token de msstats renovado (caduca {MsStatsTokenStore.TryGetExpiration(token)?.ToLocalTime():HH:mm}).");
+        return false;
+    }
+
+    private static async Task<string?> CaptureMsStatsTokenAsync(IPage page, string statsGuid, bool interactive, bool headless)
+    {
+        var statsUrl = $"https://www.basquetcatala.cat/estadistica/partit/{statsGuid}";
+        Log($"Obteniendo token de msstats desde {statsUrl}...");
+
+        for (var attempt = 1; attempt <= AutomaticResolveRetryAttempts; attempt += 1)
+        {
+            try
+            {
+                // La propia página pide sus stats a msstats con el token de la web: se lee de esa petición.
+                var requestTask = page.WaitForRequestAsync(
+                    request => request.Url.Contains("msstats.optimalwayconsulting.com/v1/", StringComparison.OrdinalIgnoreCase) &&
+                               request.Url.Contains("/matches/", StringComparison.OrdinalIgnoreCase),
+                    new PageWaitForRequestOptions { Timeout = 20000 });
+                var response = await page.GotoAsync(statsUrl, new PageGotoOptions
+                {
+                    WaitUntil = WaitUntilState.DOMContentLoaded
+                });
+
+                if (await IsSecurityChallengeActiveAsync(page, response))
+                {
+                    _ = requestTask.ContinueWith(task => task.Exception, TaskScheduler.Default);
+                    Log("  Detectada la verificación de seguridad al pedir el token.");
+
+                    if (headless)
+                        return null;
+
+                    var resolvedPage = await WaitForSecurityChallengeResolutionAsync(page, interactive, "las estadísticas", statsUrl);
+                    if (resolvedPage is null)
+                        return null;
+
+                    page = resolvedPage;
+                    continue;
+                }
+
+                var request = await requestTask;
+                var headers = await request.AllHeadersAsync();
+                if (headers.TryGetValue("authorization", out var authorization) && !string.IsNullOrWhiteSpace(authorization))
+                    return MsStatsTokenStore.NormalizeToken(authorization);
+
+                Log("  La página pidió las stats sin token.");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Log($"  ERROR al obtener el token: {ex.Message}");
+                if (attempt < AutomaticResolveRetryAttempts)
+                    await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
+            }
+        }
+
+        return null;
     }
 
     private async Task<string?> ResolveSingleAsync(IPage page, int matchWebId, bool interactive, bool headless)
@@ -317,7 +433,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
         for (var attempt = 1; ; attempt += 1)
         {
-            Console.WriteLine($"Resolviendo uuid para matchWebId={matchWebId}...");
+            Log($"Resolviendo uuid para matchWebId={matchWebId}...");
 
             try
             {
@@ -332,13 +448,13 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
                 if (await IsSecurityChallengeActiveAsync(page, response))
                 {
-                    Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
-                    Console.WriteLine($"  URL actual: {page.Url}");
-                    Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page, response)}");
+                    Log($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                    Log($"  URL actual: {page.Url}");
+                    Log($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page, response)}");
 
                     if (headless)
                     {
-                        Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                        Log("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
                         return null;
                     }
 
@@ -358,51 +474,51 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
                 var uuid = await ExtractUuidAsync(page);
                 if (!string.IsNullOrWhiteSpace(uuid))
                 {
-                    Console.WriteLine($"  OK -> {uuid}");
+                    Log($"  OK -> {uuid}");
                     return uuid;
                 }
 
-                Console.WriteLine("  No se pudo extraer el uuid automáticamente.");
-                Console.WriteLine($"  URL actual: {page.Url}");
+                Log("  No se pudo extraer el uuid automáticamente.");
+                Log($"  URL actual: {page.Url}");
 
                 if (!interactive)
                 {
-                    Console.WriteLine("  SKIP automático: la página respondió pero no expone uuid.");
+                    Log("  SKIP automático: la página respondió pero no expone uuid.");
                     return null;
                 }
 
-                Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
-                Console.WriteLine("  Escribe 'skip' y pulsa ENTER para saltar este partido.");
+                Log("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
+                Log("  Escribe 'skip' y pulsa ENTER para saltar este partido.");
 
                 var input = Console.ReadLine()?.Trim().ToLowerInvariant();
                 if (input == "skip")
                 {
-                    Console.WriteLine("  SKIP");
+                    Log("  SKIP");
                     return null;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"  ERROR al cargar el partido: {ex.Message}");
+                Log($"  ERROR al cargar el partido: {ex.Message}");
 
                 if (!interactive)
                 {
                     if (attempt >= AutomaticResolveRetryAttempts)
                     {
-                        Console.WriteLine("  SKIP automático tras agotar reintentos por fallo.");
+                        Log("  SKIP automático tras agotar reintentos por fallo.");
                         return null;
                     }
 
-                    Console.WriteLine($"  Reintentando automáticamente por fallo en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticResolveRetryAttempts})...");
+                    Log($"  Reintentando automáticamente por fallo en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticResolveRetryAttempts})...");
                     await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
                     continue;
                 }
 
-                Console.WriteLine("  Pulsa ENTER para reintentar o escribe 'skip' para saltar este partido.");
+                Log("  Pulsa ENTER para reintentar o escribe 'skip' para saltar este partido.");
                 var input = Console.ReadLine()?.Trim().ToLowerInvariant();
                 if (input == "skip")
                 {
-                    Console.WriteLine("  SKIP");
+                    Log("  SKIP");
                     return null;
                 }
             }
@@ -422,13 +538,13 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
                 if (inspection.RequiresHumanVerification)
                 {
-                    Console.WriteLine($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
-                    Console.WriteLine($"  URL actual: {page.Url}");
-                    Console.WriteLine($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page)}");
+                    Log($"  Detectada la verificación de seguridad de basquetcatala en {sessionLabel}.");
+                    Log($"  URL actual: {page.Url}");
+                    Log($"  Motivo detector: {await DescribeSecurityChallengeReasonAsync(page)}");
 
                     if (headless)
                     {
-                        Console.WriteLine("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
+                        Log("  En segundo plano no se puede resolver. Se abrirá navegador visible.");
                         return ResultsSourceInspection.Empty;
                     }
 
@@ -447,58 +563,58 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
                 if (discoveredMappings.Count > 0)
                 {
-                    Console.WriteLine($"  OK -> {discoveredMappings.Count} partidos encontrados");
+                    Log($"  OK -> {discoveredMappings.Count} partidos encontrados");
                     if (inspection.PhaseMetadata is not null)
                     {
                         var metadata = inspection.PhaseMetadata;
-                        Console.WriteLine(
+                        Log(
                             $"  Metadata -> {metadata.CategoryName ?? "sin categoría"} · {metadata.LevelName ?? "sin nivel"} · grupo {metadata.GroupCode ?? "?"}");
                     }
 
                     return inspection;
                 }
 
-                Console.WriteLine("  No se pudo extraer ningún partido de la fuente.");
-                Console.WriteLine($"  URL actual: {page.Url}");
+                Log("  No se pudo extraer ningún partido de la fuente.");
+                Log($"  URL actual: {page.Url}");
 
                 if (!interactive)
                 {
-                    Console.WriteLine("  SKIP automático: la página respondió pero no expone partidos.");
+                    Log("  SKIP automático: la página respondió pero no expone partidos.");
                     return ResultsSourceInspection.Empty;
                 }
 
-                Console.WriteLine("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
-                Console.WriteLine("  Escribe 'skip' y pulsa ENTER para continuar sin usar la fuente.");
+                Log("  Revisa la página en el navegador, resuelve captcha si aparece y pulsa ENTER para reintentar.");
+                Log("  Escribe 'skip' y pulsa ENTER para continuar sin usar la fuente.");
 
                 var input = Console.ReadLine()?.Trim().ToLowerInvariant();
                 if (input == "skip")
                 {
-                    Console.WriteLine("  SKIP");
+                    Log("  SKIP");
                     return ResultsSourceInspection.Empty;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"  ERROR al leer la fuente: {ex.Message}");
+                Log($"  ERROR al leer la fuente: {ex.Message}");
 
                 if (!interactive)
                 {
                     if (attempt >= AutomaticRetryAttempts)
                     {
-                        Console.WriteLine("  SKIP automático de la fuente tras agotar reintentos por fallo.");
+                        Log("  SKIP automático de la fuente tras agotar reintentos por fallo.");
                         return ResultsSourceInspection.Empty;
                     }
 
-                    Console.WriteLine($"  Reintentando automáticamente por fallo en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
+                    Log($"  Reintentando automáticamente por fallo en {AutomaticRetryDelayMs / 1000.0:0.#} s ({attempt}/{AutomaticRetryAttempts})...");
                     await page.WaitForTimeoutAsync(AutomaticRetryDelayMs);
                     continue;
                 }
 
-                Console.WriteLine("  Pulsa ENTER para reintentar o escribe 'skip' para continuar sin usar la fuente.");
+                Log("  Pulsa ENTER para reintentar o escribe 'skip' para continuar sin usar la fuente.");
                 var input = Console.ReadLine()?.Trim().ToLowerInvariant();
                 if (input == "skip")
                 {
-                    Console.WriteLine("  SKIP");
+                    Log("  SKIP");
                     return ResultsSourceInspection.Empty;
                 }
             }
@@ -510,7 +626,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         var capturedResponses = new List<IResponse>();
         void HandleResponse(object? _, IResponse response) => capturedResponses.Add(response);
 
-        Console.WriteLine($"Buscando partidos en resultados: {sourceUrl}");
+        Log($"Buscando partidos en resultados: {sourceUrl}");
 
         page.Response += HandleResponse;
 
@@ -550,9 +666,11 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
             return new ResultsSourceInspection
             {
-                DiscoveredMappings = discovered.Values
-                    .OrderBy(x => x.MatchWebId)
-                    .ToList(),
+                DiscoveredMappings = ApplyTeamIdExternsFromResultRows(
+                    discovered.Values
+                        .OrderBy(x => x.MatchWebId)
+                        .ToList(),
+                    html),
                 PhaseMetadata = phaseMetadata,
                 RequiresHumanVerification = false
             };
@@ -578,7 +696,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
                 var profileDir = GetBrowserProfileDir(channel);
                 Directory.CreateDirectory(profileDir);
 
-                Console.WriteLine($"Intentando navegador del sistema: {FormatBrowserChannelLabel(channel)}...");
+                Log($"Intentando navegador del sistema: {FormatBrowserChannelLabel(channel)}...");
 
                 return await playwright.Chromium.LaunchPersistentContextAsync(
                     profileDir,
@@ -591,13 +709,13 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             }
             catch (PlaywrightException ex) when (CanFallbackToBundledChromium(ex))
             {
-                Console.WriteLine($"No se pudo abrir {FormatBrowserChannelLabel(channel)}. Se probará otra opción.");
+                Log($"No se pudo abrir {FormatBrowserChannelLabel(channel)}. Se probará otra opción.");
             }
         }
 
         var chromiumProfileDir = GetBrowserProfileDir("chromium");
         Directory.CreateDirectory(chromiumProfileDir);
-        Console.WriteLine("No se pudo abrir Edge/Chrome del sistema. Intentando Chromium de Playwright...");
+        Log("No se pudo abrir Edge/Chrome del sistema. Intentando Chromium de Playwright...");
 
         return await playwright.Chromium.LaunchPersistentContextAsync(
             chromiumProfileDir,
@@ -629,6 +747,9 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         if (!string.IsNullOrWhiteSpace(sourceUrl) && result.DiscoveredMappings.Count == 0)
             return true;
 
+        if (result.MsStatsTokenPending)
+            return true;
+
         return CountUnresolvedTargets(result) > 0;
     }
 
@@ -648,7 +769,9 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             {
                 MatchWebId = mapping.MatchWebId,
                 UuidMatch = mapping.UuidMatch,
-                MatchDate = mapping.MatchDate
+                MatchDate = mapping.MatchDate,
+                LocalTeamIdExtern = mapping.LocalTeamIdExtern,
+                VisitorTeamIdExtern = mapping.VisitorTeamIdExtern
             })
             .ToDictionary(mapping => mapping.MatchWebId);
 
@@ -668,6 +791,8 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
             if (discovery.MatchDate.HasValue)
                 mapping.MatchDate = discovery.MatchDate;
+
+            mapping.ApplyTeamIdExterns(discovery);
         }
 
         foreach (var resolvedEntry in syncResult.ResolvedUuids)
@@ -757,7 +882,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
 
                 for (const a of allCandidates) {
                     const href = a.getAttribute('href') || '';
-                    const match = href.match(/\/estadistiques\/([a-f0-9]{24})(?:[/?#]|$)/i);
+                    const match = href.match(/\/(?:estadistiques|estadistica\/partit)\/([a-f0-9]{24}|[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})(?:[/?#]|$)/i);
                     if (match) {
                         return match[1];
                     }
@@ -875,7 +1000,9 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             {
                 MatchWebId = discovery.MatchWebId,
                 UuidMatch = mergedUuid,
-                MatchDate = mergedDate
+                MatchDate = mergedDate,
+                LocalTeamIdExtern = existing.LocalTeamIdExtern ?? discovery.LocalTeamIdExtern,
+                VisitorTeamIdExtern = existing.VisitorTeamIdExtern ?? discovery.VisitorTeamIdExtern
             };
         }
     }
@@ -926,7 +1053,9 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             {
                 MatchWebId = occurrence.MatchWebId,
                 UuidMatch = nearestUuid.Uuid,
-                MatchDate = existing?.MatchDate ?? matchDate
+                MatchDate = existing?.MatchDate ?? matchDate,
+                LocalTeamIdExtern = existing?.LocalTeamIdExtern,
+                VisitorTeamIdExtern = existing?.VisitorTeamIdExtern
             };
         }
 
@@ -951,7 +1080,9 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             {
                 MatchWebId = current.MatchWebId,
                 UuidMatch = current.UuidMatch,
-                MatchDate = matchDate
+                MatchDate = matchDate,
+                LocalTeamIdExtern = current.LocalTeamIdExtern,
+                VisitorTeamIdExtern = current.VisitorTeamIdExtern
             };
         }
 
@@ -1005,6 +1136,41 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             UuidMatch = ExtractUuidsFromText(chunk).FirstOrDefault(),
             MatchDate = matchDate
         };
+    }
+
+    private static IReadOnlyList<MatchDiscovery> ApplyTeamIdExternsFromResultRows(
+        IReadOnlyList<MatchDiscovery> discoveries,
+        string html)
+    {
+        // Las filas tienen líneas en blanco por dentro, así que aquí se parte solo por fila de partido.
+        // Cada fila enlaza primero al equipo local y después al visitante.
+        var teamIdExternsByMatch = new Dictionary<int, (int Local, int Visitor)>();
+
+        foreach (var row in html.Split("<div id=\"fila\">", StringSplitOptions.RemoveEmptyEntries).Skip(1))
+        {
+            var matchWebIds = ExtractMatchWebIdsFromText(row);
+            var teamIdExterns = TeamIdExternRouteRegex.Matches(row)
+                .Select(match => int.TryParse(match.Groups[1].Value, out var teamIdExtern) ? teamIdExtern : 0)
+                .Where(teamIdExtern => teamIdExtern > 0)
+                .Distinct()
+                .ToList();
+
+            if (matchWebIds.Count == 1 && teamIdExterns.Count == 2)
+                teamIdExternsByMatch[matchWebIds[0]] = (teamIdExterns[0], teamIdExterns[1]);
+        }
+
+        return discoveries
+            .Select(discovery => teamIdExternsByMatch.TryGetValue(discovery.MatchWebId, out var teamIdExterns)
+                ? new MatchDiscovery
+                {
+                    MatchWebId = discovery.MatchWebId,
+                    UuidMatch = discovery.UuidMatch,
+                    MatchDate = discovery.MatchDate,
+                    LocalTeamIdExtern = teamIdExterns.Local,
+                    VisitorTeamIdExtern = teamIdExterns.Visitor
+                }
+                : discovery)
+            .ToList();
     }
 
     private static IReadOnlyList<int> ExtractMatchWebIdsFromText(string text)
@@ -1209,7 +1375,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         string scopeLabel,
         string retryUrl)
     {
-        Console.WriteLine($"  El navegador queda abierto sin recargar la página para resolver la verificación de {scopeLabel}.");
+        Log($"  El navegador queda abierto sin recargar la página para resolver la verificación de {scopeLabel}.");
         var lastKnownUrl = page.Url;
         var lastCookieSnapshot = await ReadCookieSnapshotAsync(page, retryUrl);
 
@@ -1217,35 +1383,35 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
         {
             while (true)
             {
-                Console.WriteLine("  Completa el reCAPTCHA en el navegador y pulsa ENTER para comprobar de nuevo.");
-                Console.WriteLine("  Escribe 'skip' y pulsa ENTER para saltar este paso.");
+                Log("  Completa el reCAPTCHA en el navegador y pulsa ENTER para comprobar de nuevo.");
+                Log("  Escribe 'skip' y pulsa ENTER para saltar este paso.");
 
                 var input = Console.ReadLine()?.Trim().ToLowerInvariant();
                 if (input == "skip")
                 {
-                    Console.WriteLine("  SKIP");
+                    Log("  SKIP");
                     return null;
                 }
 
                 var accessiblePage = await TryFindAccessibleProtectedPageAsync(page, retryUrl);
                 if (accessiblePage is not null)
                 {
-                    Console.WriteLine("  Verificación resuelta usando la pestaña actual.");
+                    Log("  Verificación resuelta usando la pestaña actual.");
                     return accessiblePage;
                 }
 
                 var reopenedPage = await TryReopenProtectedUrlAsync(page, retryUrl);
                 if (reopenedPage is not null)
                 {
-                    Console.WriteLine("  Verificación resuelta. Reanudando...");
+                    Log("  Verificación resuelta. Reanudando...");
                     return reopenedPage;
                 }
 
-                Console.WriteLine("  La verificación sigue pendiente o el acceso aún no ha quedado liberado.");
+                Log("  La verificación sigue pendiente o el acceso aún no ha quedado liberado.");
             }
         }
 
-        Console.WriteLine("  Resuelve el reCAPTCHA ahí; el proceso reanudará automáticamente cuando desaparezca la pantalla de seguridad.");
+        Log("  Resuelve el reCAPTCHA ahí; el proceso reanudará automáticamente cuando desaparezca la pantalla de seguridad.");
 
         var remainingSeconds = SecurityChallengeWaitTimeoutMs / 1000;
         while (remainingSeconds > 0)
@@ -1260,17 +1426,17 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             var accessiblePage = await TryFindAccessibleProtectedPageAsync(page, retryUrl);
             if (accessiblePage is not null)
             {
-                Console.WriteLine("  Verificación resuelta usando la pestaña actual.");
+                Log("  Verificación resuelta usando la pestaña actual.");
                 return accessiblePage;
             }
 
             if (hasSessionChange)
             {
-                Console.WriteLine("  Se ha detectado un cambio en la sesión. Reintentando acceso a la URL protegida...");
+                Log("  Se ha detectado un cambio en la sesión. Reintentando acceso a la URL protegida...");
                 var reopenedPage = await TryReopenProtectedUrlAsync(page, retryUrl);
                 if (reopenedPage is not null)
                 {
-                    Console.WriteLine("  Verificación resuelta. Reanudando...");
+                    Log("  Verificación resuelta. Reanudando...");
                     return reopenedPage;
                 }
             }
@@ -1280,7 +1446,7 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             remainingSeconds -= SecurityChallengePollDelayMs / 1000;
         }
 
-        Console.WriteLine("  Tiempo de espera agotado sin resolver la verificación.");
+        Log("  Tiempo de espera agotado sin resolver la verificación.");
         return null;
     }
 
@@ -1560,6 +1726,15 @@ public sealed class MatchMappingSyncService : IMatchMappingSyncRunner
             return false;
 
         return GroupCodeRegex.IsMatch(segment.Trim());
+    }
+
+    private static void Log(string message)
+    {
+        var sink = LogSink.Value;
+        if (sink is null)
+            Console.WriteLine(message);
+        else
+            sink(message);
     }
 
     private static bool IsFutureMatch(DateTime? matchDate)

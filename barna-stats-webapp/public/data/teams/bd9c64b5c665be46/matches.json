@@ -1,0 +1,123 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "teamIdIntern": 583371,
+    "teamIdExtern": 90463,
+    "teamName": "C.B GRUP BARNA A",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "matchWebId": 28619,
+    "matchInternId": 290384,
+    "matchExternId": 1210193,
+    "matchDate": "2026-10-03T11:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 23958,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell A",
+    "levelCode": "A",
+    "groupCode": "02",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "JAC SANTS BARCELONA U10 1",
+    "homeScore": 34,
+    "awayScore": 68,
+    "awayTeam": "C.B GRUP BARNA A",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+    "rivalTeam": "JAC SANTS BARCELONA U10 1",
+    "officialTeamScore": 68,
+    "officialRivalScore": 34,
+    "teamScore": 68,
+    "rivalScore": 34,
+    "result": "W",
+    "topScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "topScorerTeam": "C.B GRUP BARNA A",
+    "topScorerPoints": 24,
+    "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "teamTopScorerPoints": 24,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 34,
+      "maxDeficit": 0,
+      "bestRun": 16,
+      "rivalBestRun": 11,
+      "closingRun": 10,
+      "rivalClosingRun": 0,
+      "firstScorer": "M\u00C0LIA MONTSERRAT MATEO",
+      "firstScorerTeam": "C.B GRUP BARNA A",
+      "lastScorer": "ANNA GUITART SINSARD",
+      "lastScorerTeam": "C.B GRUP BARNA A",
+      "teamFirstScorer": "M\u00C0LIA MONTSERRAT MATEO",
+      "teamLastScorer": "ANNA GUITART SINSARD",
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": 16,
+      "worstPeriodLabel": "Parcial 2",
+      "worstPeriodDiff": -9,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 16,
+          "rivalPoints": 0,
+          "diff": 16
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 2,
+          "rivalPoints": 11,
+          "diff": -9
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 9,
+          "rivalPoints": 0,
+          "diff": 9
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 4,
+          "rivalPoints": 6,
+          "diff": -2
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 5,
+          "rivalPoints": 6,
+          "diff": -1
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 6,
+          "rivalPoints": 3,
+          "diff": 3
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 13,
+          "rivalPoints": 2,
+          "diff": 11
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 13,
+          "rivalPoints": 6,
+          "diff": 7
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

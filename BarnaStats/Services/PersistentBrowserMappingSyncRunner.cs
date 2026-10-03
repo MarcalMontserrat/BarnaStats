@@ -12,9 +12,9 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
     private volatile bool _browserContextClosed;
     private bool _disposed;
 
-    public PersistentBrowserMappingSyncRunner(string browserProfileDir)
+    public PersistentBrowserMappingSyncRunner(string browserProfileDir, string? msStatsTokenFile = null)
     {
-        _syncService = new MatchMappingSyncService(browserProfileDir);
+        _syncService = new MatchMappingSyncService(browserProfileDir, msStatsTokenFile);
     }
 
     public async Task<MatchMappingSyncResult> SyncAsync(
@@ -22,7 +22,8 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
         IReadOnlyCollection<int> explicitMatchWebIds,
         bool includeAll,
         string? sourceUrl = null,
-        bool interactive = true)
+        bool interactive = true,
+        Action<string>? log = null)
     {
         await _semaphore.WaitAsync();
 
@@ -33,7 +34,7 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
 
             try
             {
-                return await RunSyncAsync(existingMappings, explicitMatchWebIds, includeAll, sourceUrl, interactive);
+                return await RunSyncAsync(existingMappings, explicitMatchWebIds, includeAll, sourceUrl, interactive, log);
             }
             catch (PlaywrightException ex) when (IsClosedTargetError(ex))
             {
@@ -41,7 +42,7 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
                 Console.WriteLine("El navegador persistente estaba cerrado. Se vuelve a abrir y se reintenta.");
                 await ResetBrowserContextAsync();
                 await EnsureBrowserContextAsync();
-                return await RunSyncAsync(existingMappings, explicitMatchWebIds, includeAll, sourceUrl, interactive);
+                return await RunSyncAsync(existingMappings, explicitMatchWebIds, includeAll, sourceUrl, interactive, log);
             }
         }
         finally
@@ -55,7 +56,8 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
         IReadOnlyCollection<int> explicitMatchWebIds,
         bool includeAll,
         string? sourceUrl,
-        bool interactive)
+        bool interactive,
+        Action<string>? log)
     {
         return _syncService.SyncWithBrowserContextAsync(
             _browserContext!,
@@ -63,7 +65,8 @@ public sealed class PersistentBrowserMappingSyncRunner : IMatchMappingSyncRunner
             explicitMatchWebIds,
             includeAll,
             sourceUrl,
-            interactive);
+            interactive,
+            log);
     }
 
     public async ValueTask DisposeAsync()
