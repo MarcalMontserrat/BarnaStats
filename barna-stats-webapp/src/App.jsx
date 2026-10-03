@@ -87,10 +87,14 @@ function App() {
     }, [preferredSeasonLabel]);
 
     const handleSeasonChange = (event) => {
+        const baseRoute = getSeasonScopedRouteBase(route);
         setPreferredSeasonLabel(event.target.value);
 
         // Equipos, categorías y fases cambian entre temporadas: se vuelve a la vista base de la página.
-        navigateToHash(getSeasonScopedRouteBase(route));
+        // El hash se actualiza ya, sin esperar al `hashchange`: si no, el render intermedio ve todavía el
+        // equipo de la temporada anterior (`2026-2027::…`) y devuelve la preferencia a esa temporada.
+        setHash(baseRoute);
+        navigateToHash(baseRoute);
     };
 
     useEffect(() => {
