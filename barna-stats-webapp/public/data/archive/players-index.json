@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
+  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -210,6 +210,13 @@
       "latestShirtNumber": "11",
       "meta": "1 temporada \u00B7 #11 \u00B7 AB PREMI\u00C0",
       "searchText": "ABRIL ESCOBOSA PLANTADA AB PREMI\u00C0 #11"
+    },
+    {
+      "key": "UUID:d54a6b27-2085-450f-87a7-1797c7635817",
+      "label": "ABRIL HERENCIA CARRE\u00D1O",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 CN TERRASSA 1",
+      "searchText": "ABRIL HERENCIA CARRE\u00D1O CN TERRASSA 1 #5"
     },
     {
       "key": "UUID:592abc6b-eb96-47f2-847b-67bdda762149",
@@ -476,6 +483,13 @@
       "latestShirtNumber": "15",
       "meta": "1 temporada \u00B7 #15 \u00B7 AEC COLLBLANC",
       "searchText": "AINA CASAB\u00D3 GONZ\u00C1LEZ AEC COLLBLANC #15"
+    },
+    {
+      "key": "UUID:0109b24c-98d1-11e9-a2a5-0216824770c2",
+      "label": "AINA CORTINAS GUIRAO",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "AINA CORTINAS GUIRAO FEMEN\u00CD SANT ADRI\u00C0 BLANC #23"
     },
     {
       "key": "UUID:f541c23e-670c-4052-a93a-095d3714ca12",
@@ -870,6 +884,13 @@
       "searchText": "AKANE HUERTAS RODR\u00CDGUEZ ESCOLA IPSI 16 #8"
     },
     {
+      "key": "UUID:122eb3ce-4ca9-47fe-a722-fcea3c3efe77",
+      "label": "ALAE EL ASRI CHENTOUF",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "ALAE EL ASRI CHENTOUF CE SANT NICOLAU 2 #23"
+    },
+    {
       "key": "UUID:56676b9a-69c8-40fc-9f35-2bd11bb2752e",
       "label": "ALAIA GOMEZ LOPEZ",
       "latestShirtNumber": "37",
@@ -889,6 +910,13 @@
       "latestShirtNumber": "21",
       "meta": "1 temporada \u00B7 #21 \u00B7 CB GAV\u00C0 VERMELL",
       "searchText": "ALBA CASTILLO CEBALLOS CB GAV\u00C0 VERMELL #21"
+    },
+    {
+      "key": "UUID:cce10dc0-6617-4935-89e5-ee9a5941113b",
+      "label": "ALBA CRUZ RIVAS",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 CN TERRASSA 1",
+      "searchText": "ALBA CRUZ RIVAS CN TERRASSA 1 #9"
     },
     {
       "key": "UUID:b765de8b-d900-4349-aba6-4b0f44021e05",
@@ -931,6 +959,13 @@
       "latestShirtNumber": "19",
       "meta": "1 temporada \u00B7 #19 \u00B7 VILAB\u00C0SQUET VILADECANS PMF BLANC",
       "searchText": "ALBA GONZALEZ AZNAR VILAB\u00C0SQUET VILADECANS PMF BLANC #19"
+    },
+    {
+      "key": "UUID:02a0f0a3-c745-44f4-8317-dca49d17290a",
+      "label": "ALBA HADZIHASANOVIC VI\u00C9",
+      "latestShirtNumber": "20",
+      "meta": "1 temporada \u00B7 #20 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "ALBA HADZIHASANOVIC VI\u00C9 CE SANT NICOLAU 2 #20"
     },
     {
       "key": "UUID:c8ea9eb2-e758-4075-af1e-bb24ba7afe7b",
@@ -1120,6 +1155,13 @@
       "latestShirtNumber": "85",
       "meta": "1 temporada \u00B7 #85 \u00B7 SE LA SALLE BONANOVA VERMELL",
       "searchText": "ALEXANDRA UMBERT MATTA SE LA SALLE BONANOVA VERMELL #85"
+    },
+    {
+      "key": "UUID:041b8584-2fbc-41a8-864d-3a68f4702f53",
+      "label": "ALEXIA BISTU\u00C9 GARCIA",
+      "latestShirtNumber": "6",
+      "meta": "1 temporada \u00B7 #6 \u00B7 CN TERRASSA 1",
+      "searchText": "ALEXIA BISTU\u00C9 GARCIA CN TERRASSA 1 #6"
     },
     {
       "key": "UUID:c535b853-5d79-461e-a405-95a7e2c7d1db",
@@ -1423,6 +1465,13 @@
       "searchText": "ANDREA ILLA MARINI FEMENI MARESME 3 VILES BLAU - PMF #7"
     },
     {
+      "key": "UUID:0139597f-98d1-11e9-a2a5-0216824770c2",
+      "label": "ANDREA ORRIOS MARTINEZ",
+      "latestShirtNumber": "26",
+      "meta": "1 temporada \u00B7 #26 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "ANDREA ORRIOS MARTINEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #26"
+    },
+    {
       "key": "UUID:6e5ba434-10d8-43c6-a08c-eee0a6da8f9b",
       "label": "ANDREA PA\u00CDS ARILLA",
       "latestShirtNumber": "76",
@@ -1505,6 +1554,13 @@
       "latestShirtNumber": "9",
       "meta": "1 temporada \u00B7 #9 \u00B7 CB VILASSAR DE DALT",
       "searchText": "ANNA RODRIGUEZ ESTEBAN CB VILASSAR DE DALT #9"
+    },
+    {
+      "key": "UUID:98ae11fc-65c8-4908-969b-6ad436899073",
+      "label": "ANNA TORRES MORENTE",
+      "latestShirtNumber": "17",
+      "meta": "1 temporada \u00B7 #17 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "ANNA TORRES MORENTE CE SANT NICOLAU 2 #17"
     },
     {
       "key": "UUID:17a0acf7-d2af-4940-83c6-953eb3102906",
@@ -1610,6 +1666,13 @@
       "latestShirtNumber": "22",
       "meta": "1 temporada \u00B7 #22 \u00B7 A.E SANT ANDREU NATZARET",
       "searchText": "ARIA GONGORA MINGUEZ A.E SANT ANDREU NATZARET #22"
+    },
+    {
+      "key": "UUID:671352ed-fe63-46c4-8fca-725c898d767e",
+      "label": "ARIADNA ARIAS LUNA",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "ARIADNA ARIAS LUNA BASQUET SANT PERE VERMELL #10"
     },
     {
       "key": "UUID:2950125f-d1f3-4e16-b66f-960d20c5447a",
@@ -1806,6 +1869,13 @@
       "latestShirtNumber": "3",
       "meta": "1 temporada \u00B7 #3 \u00B7 CBS FEM  U10",
       "searchText": "ARLET CARRERA DOMINGO CBS FEM  U10 #3"
+    },
+    {
+      "key": "UUID:120c2d86-fe1e-4fc2-ad17-10d3821b7fc5",
+      "label": "ARLET CARRETERO HERNANDEZ",
+      "latestShirtNumber": "16",
+      "meta": "1 temporada \u00B7 #16 \u00B7 CN TERRASSA 1",
+      "searchText": "ARLET CARRETERO HERNANDEZ CN TERRASSA 1 #16"
     },
     {
       "key": "UUID:08b0004c-3aa3-4649-8b6a-3ed4124a5b19",
@@ -2256,6 +2326,13 @@
       "searchText": "BERTA JUNYENT SERRA PAIDOS-ASFE U10F BLANC PAIDOS-ASFE U10F VERD #7"
     },
     {
+      "key": "UUID:0159f8f9-98d1-11e9-a2a5-0216824770c2",
+      "label": "BERTA LARROYA NILO",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "BERTA LARROYA NILO CE SANT NICOLAU 2 #10"
+    },
+    {
       "key": "UUID:d59eaeb0-ba0d-4c63-bde3-05a9d3b5230b",
       "label": "BERTA LOZANO SANMARTIN",
       "latestShirtNumber": "45",
@@ -2704,6 +2781,13 @@
       "searchText": "CARLA JENNIFER PILLAJO CAIZA BF CORNELLA #21"
     },
     {
+      "key": "UUID:eee7e11a-8efc-4ef3-826a-ced165a5ef77",
+      "label": "CARLA LIGERO MAR\u00CDN",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "CARLA LIGERO MAR\u00CDN CE SANT NICOLAU 2 #12"
+    },
+    {
       "key": "UUID:011b3f34-3435-472c-a4a8-a845ff55dbbd",
       "label": "CARLA MARTIN DE HIJAS NU\u00D1EZ",
       "latestShirtNumber": "41",
@@ -2753,11 +2837,25 @@
       "searchText": "CARLA PALAU ALVAREZ AESE 1 #19"
     },
     {
+      "key": "UUID:01719d60-98d1-11e9-a2a5-0216824770c2",
+      "label": "CARLA PATI\u00D1O MARIN",
+      "latestShirtNumber": "24",
+      "meta": "1 temporada \u00B7 #24 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "CARLA PATI\u00D1O MARIN CE SANT NICOLAU 2 #24"
+    },
+    {
       "key": "UUID:279e6f9e-3e7a-4d1e-b8d5-2f767f334340",
       "label": "CARLA PEIR\u00D3N COCERA",
       "latestShirtNumber": "26",
       "meta": "1 temporada \u00B7 #26 \u00B7 DOMINIQUES BARCELONA NEGRE",
       "searchText": "CARLA PEIR\u00D3N COCERA DOMINIQUES BARCELONA NEGRE DOMINIQUES BARCELONA TARONJA #26"
+    },
+    {
+      "key": "UUID:87e21452-a078-40f9-b674-7d494618e8a6",
+      "label": "CARLA PEREZ  FINISTROSA",
+      "latestShirtNumber": "2",
+      "meta": "1 temporada \u00B7 #2 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "CARLA PEREZ  FINISTROSA FEMEN\u00CD SANT ADRI\u00C0 BLANC #2"
     },
     {
       "key": "UUID:0dd73b68-b37c-44c7-b218-31b4e81d7a4f",
@@ -2795,6 +2893,13 @@
       "searchText": "CARLA SANTOS BLAS SANT QUIRZE B\u00C0SQUET CLUB #9"
     },
     {
+      "key": "UUID:77a86fb2-2e72-4f49-90cc-a7b549b057ce",
+      "label": "CARLA SA\u00D1UDO MOTA",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "CARLA SA\u00D1UDO MOTA BASQUET SANT PERE VERMELL #23"
+    },
+    {
       "key": "UUID:82d4e2ee-5113-4420-909a-14e20c19e5a2",
       "label": "CARLA SARRIERA BA\u00D1OS",
       "latestShirtNumber": "10",
@@ -2821,6 +2926,20 @@
       "latestShirtNumber": "14",
       "meta": "1 temporada \u00B7 #14 \u00B7 ESCOLA IPSI 16",
       "searchText": "CARLOTA BALART BALLAR\u00CDN ESCOLA IPSI 16 #14"
+    },
+    {
+      "key": "UUID:cc9949df-4a73-4275-a603-5d0a88392634",
+      "label": "CARLOTA BORRELL CASALS",
+      "latestShirtNumber": "2",
+      "meta": "1 temporada \u00B7 #2 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "CARLOTA BORRELL CASALS CE SANT NICOLAU 2 #2"
+    },
+    {
+      "key": "UUID:7881c1d0-c871-4c04-bf84-345394317f74",
+      "label": "CARLOTA CERVANTES JAN\u00C9",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "CARLOTA CERVANTES JAN\u00C9 BASQUET SANT PERE VERMELL #12"
     },
     {
       "key": "UUID:9f5db579-5a7c-467b-8915-fc25382640e4",
@@ -3313,6 +3432,13 @@
       "searchText": "CLAUDIA VIVAS GORDILLO CLUB BASQUET ARGENTONA #4"
     },
     {
+      "key": "UUID:b615349e-8372-40e6-bd2f-6091337766b8",
+      "label": "CLAUDIA ZAGUIRRE MARQUEZ",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "CLAUDIA ZAGUIRRE MARQUEZ BASQUET SANT PERE VERMELL #9"
+    },
+    {
       "key": "UUID:0b0405a8-dabd-46aa-aca3-bfe26a6f048c",
       "label": "CLOE FLORES MENGUAL",
       "latestShirtNumber": "23",
@@ -3325,6 +3451,13 @@
       "latestShirtNumber": "12",
       "meta": "1 temporada \u00B7 #12 \u00B7 C.B. VILANOVA DEL VALLES NEGRE-SISQUELLA GRUP",
       "searchText": "CLOE PLAZA ANDREO C.B. VILANOVA DEL VALLES NEGRE-SISQUELLA GRUP #12"
+    },
+    {
+      "key": "UUID:4d81676c-e10e-4c84-af57-8d9411ab51cd",
+      "label": "CLOE SERRANO GIANNOTTI",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "CLOE SERRANO GIANNOTTI FEMEN\u00CD SANT ADRI\u00C0 BLANC #15"
     },
     {
       "key": "UUID:c9aaa98a-24b0-4161-9bda-86092bb300c4",
@@ -3542,6 +3675,13 @@
       "latestShirtNumber": "14",
       "meta": "1 temporada \u00B7 #14 \u00B7 SESE B",
       "searchText": "DANIELA SORIANO GUTI\u00C9RREZ SESE B #14"
+    },
+    {
+      "key": "UUID:0139dd21-98d1-11e9-a2a5-0216824770c2",
+      "label": "DANIELLA DIAZ MENDEZ",
+      "latestShirtNumber": "28",
+      "meta": "1 temporada \u00B7 #28 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "DANIELLA DIAZ MENDEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #28"
     },
     {
       "key": "UUID:650113ae-013a-4712-8fe0-c07a14a51e0a",
@@ -3766,6 +3906,13 @@
       "latestShirtNumber": "4",
       "meta": "1 temporada \u00B7 #4 \u00B7 A.E SANT ANDREU NATZARET",
       "searchText": "ELENA ALVAREZ GALLEGO A.E SANT ANDREU NATZARET #4"
+    },
+    {
+      "key": "UUID:8b2e58f8-3c02-488b-bcd6-78330d2d00ce",
+      "label": "ELENA IBA\u00D1EZ PUMAR",
+      "latestShirtNumber": "29",
+      "meta": "1 temporada \u00B7 #29 \u00B7 CN TERRASSA 1",
+      "searchText": "ELENA IBA\u00D1EZ PUMAR CN TERRASSA 1 #29"
     },
     {
       "key": "UUID:913da02c-1d39-40f9-a741-a0b6459b654f",
@@ -5196,6 +5343,13 @@
       "searchText": "IRIA VILAMASANA RODRIGUEZ UE SANT ANDREU VERMELL #89"
     },
     {
+      "key": "UUID:ae7ca12c-9efe-4ace-8276-baf282877b96",
+      "label": "IRINA BARRERA MORTE",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "IRINA BARRERA MORTE FEMEN\u00CD SANT ADRI\u00C0 BLANC #12"
+    },
+    {
       "key": "UUID:f9305c8c-13ea-436e-aef2-8ef65c5ac8a2",
       "label": "IRINA CALLE GONZALEZ",
       "latestShirtNumber": "76",
@@ -5383,6 +5537,13 @@
       "latestShirtNumber": "78",
       "meta": "1 temporada \u00B7 #78 \u00B7 C.E.B. SANT JORDI",
       "searchText": "IVET VILA NIUB\u00D3 C.E.B. SANT JORDI #78"
+    },
+    {
+      "key": "UUID:5f77e3ff-2800-4316-b8ad-b46e210839cf",
+      "label": "IVET VIZCARRO CAMPOS",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "IVET VIZCARRO CAMPOS CE SANT NICOLAU 2 #15"
     },
     {
       "key": "UUID:a3f3ee6f-47cb-4673-bed7-870f8c858a8e",
@@ -5770,6 +5931,13 @@
       "searchText": "JULIA AGUILERA ESCOBOSA VILAB\u00C0SQUET VILADECANS PMF BLANC #1"
     },
     {
+      "key": "UUID:b19e496a-a8ba-4f9f-8eae-becd22217769",
+      "label": "JULIA AGUILERA GONZALEZ",
+      "latestShirtNumber": "13",
+      "meta": "1 temporada \u00B7 #13 \u00B7 CN TERRASSA 1",
+      "searchText": "JULIA AGUILERA GONZALEZ CN TERRASSA 1 #13"
+    },
+    {
       "key": "UUID:bae232b2-94fa-4b1f-9008-94e8dc9d1dbb",
       "label": "J\u00DALIA AGUILERA LLOBET",
       "latestShirtNumber": "19",
@@ -5789,6 +5957,13 @@
       "latestShirtNumber": "13",
       "meta": "1 temporada \u00B7 #13 \u00B7 PAIDOS-ASFE U10F BLANC",
       "searchText": "J\u00FAlia Alza Torres PAIDOS-ASFE U10F BLANC #13"
+    },
+    {
+      "key": "UUID:0146dd3f-98d1-11e9-a2a5-0216824770c2",
+      "label": "JULIA BALCELLS HIJARRUBIA",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 CN TERRASSA 1",
+      "searchText": "JULIA BALCELLS HIJARRUBIA CN TERRASSA 1 #19"
     },
     {
       "key": "UUID:d672b0e0-ee0d-409d-b177-6aaf1aba38ee",
@@ -5838,6 +6013,13 @@
       "latestShirtNumber": "21",
       "meta": "1 temporada \u00B7 #21 \u00B7 CB SANT ANDREU",
       "searchText": "J\u00DALIA ESPEJO IGLESIAS CB SANT ANDREU #21"
+    },
+    {
+      "key": "UUID:36d82a14-05c6-4609-a2dc-fd9e84bf1329",
+      "label": "JULIA ESTIARTE GIRVENT",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "JULIA ESTIARTE GIRVENT CE SANT NICOLAU 2 #19"
     },
     {
       "key": "UUID:0e271444-0742-4b8e-a61a-7acca31d0cb9",
@@ -6288,6 +6470,13 @@
       "searchText": "LAIA DEU ORIOL JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #17"
     },
     {
+      "key": "UUID:293a6026-63e1-4999-9f03-c8682dceed99",
+      "label": "LAIA EL BOHDIDI LOPEZ",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 CN TERRASSA 1",
+      "searchText": "LAIA EL BOHDIDI LOPEZ CN TERRASSA 1 #22"
+    },
+    {
       "key": "UUID:2fa0528a-ceda-4810-8358-9d633ea93ba6",
       "label": "LAIA ESTART\u00DAS ARSEDA",
       "latestShirtNumber": "14",
@@ -6323,11 +6512,25 @@
       "searchText": "LAIA FOZ MONTSERRAT UE.MONTGAT - VERMELL #2"
     },
     {
+      "key": "UUID:56b1a2a3-6c30-4cc9-b021-e08a2e276244",
+      "label": "LAIA FRAGOSO RUEDA",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LAIA FRAGOSO RUEDA FEMEN\u00CD SANT ADRI\u00C0 BLANC #7"
+    },
+    {
       "key": "UUID:1fcb7891-4eda-4487-b7ec-cc0940830e38",
       "label": "LAIA GARCIA JUNQUERA",
       "latestShirtNumber": "4",
       "meta": "1 temporada \u00B7 #4 \u00B7 CN CALDES",
       "searchText": "LAIA GARCIA JUNQUERA CN CALDES #4"
+    },
+    {
+      "key": "UUID:6f5ab8dc-107c-4b3e-93d2-94b27381b2b2",
+      "label": "LAIA GARRETA PETITB\u00D3",
+      "latestShirtNumber": "33",
+      "meta": "1 temporada \u00B7 #33 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LAIA GARRETA PETITB\u00D3 FEMEN\u00CD SANT ADRI\u00C0 BLANC #33"
     },
     {
       "key": "UUID:059af811-d59b-4d3f-b3cd-e3e67606d80c",
@@ -6610,6 +6813,13 @@
       "searchText": "LAURA CATALAN SANZ CB VILASSAR DE DALT #78"
     },
     {
+      "key": "UUID:01588fb5-98d1-11e9-a2a5-0216824770c2",
+      "label": "LAURA ESCURSELL DOMINGUEZ",
+      "latestShirtNumber": "44",
+      "meta": "1 temporada \u00B7 #44 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LAURA ESCURSELL DOMINGUEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #44"
+    },
+    {
       "key": "UUID:ecac9f86-3926-46df-834f-424604e27ad1",
       "label": "LAURA ISABEL PUJOL CA\u00D1AFE",
       "latestShirtNumber": "11",
@@ -6643,6 +6853,13 @@
       "latestShirtNumber": "15",
       "meta": "1 temporada \u00B7 #15 \u00B7 BC TECLA SALA  A",
       "searchText": "L\u00C9A AGUT ASIA BC TECLA SALA  A #15"
+    },
+    {
+      "key": "UUID:2ab138c5-9b3f-4e98-8745-a642faec3bca",
+      "label": "L\u00C9A GUITART SINSARD",
+      "latestShirtNumber": "13",
+      "meta": "1 temporada \u00B7 #13 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "L\u00C9A GUITART SINSARD FEMEN\u00CD SANT ADRI\u00C0 BLANC #13"
     },
     {
       "key": "UUID:86fa5c31-2091-4235-9c02-b8b385aa63ec",
@@ -7189,6 +7406,13 @@
       "latestShirtNumber": "2",
       "meta": "1 temporada \u00B7 #2 \u00B7 SE LA SALLE BONANOVA NEGRE",
       "searchText": "LUCIA GUILL\u00C9N NARBON SE LA SALLE BONANOVA NEGRE #2"
+    },
+    {
+      "key": "UUID:f04f3eb7-b44a-4434-91d8-dea30c4b0a27",
+      "label": "LUCIA L\u00D3PEZ PARRA",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LUCIA L\u00D3PEZ PARRA FEMEN\u00CD SANT ADRI\u00C0 BLANC #22"
     },
     {
       "key": "UUID:6fdc7bf0-ea4d-4e3e-8d9e-98027dd1c404",
@@ -8150,6 +8374,13 @@
       "searchText": "MARTINA BERCERO OLIVA CE SANT NICOLAU #13"
     },
     {
+      "key": "UUID:6b6afb35-24e5-47a3-b84e-a66819a7cb5e",
+      "label": "MARTINA BOIXAD\u00D3S ROMERO",
+      "latestShirtNumber": "21",
+      "meta": "1 temporada \u00B7 #21 \u00B7 CN TERRASSA 1",
+      "searchText": "MARTINA BOIXAD\u00D3S ROMERO CN TERRASSA 1 #21"
+    },
+    {
       "key": "UUID:bfac81ac-03df-4a80-bf9e-79714f20d9dd",
       "label": "MARTINA BUENO CANALS",
       "latestShirtNumber": "12",
@@ -8353,6 +8584,13 @@
       "searchText": "MARTINA PUERTOLAS MORENOS SANT GERVASI 1 #12"
     },
     {
+      "key": "UUID:c58317dc-52b8-44dd-8999-3f6b3d87f9e9",
+      "label": "MARTINA RAMELLS TOLEDO",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "MARTINA RAMELLS TOLEDO BASQUET SANT PERE VERMELL #8"
+    },
+    {
       "key": "UUID:48f1b1dd-159f-4816-9644-e59bce89828d",
       "label": "MARTINA REDONDO ACE\u00D1A",
       "latestShirtNumber": "20",
@@ -8498,6 +8736,13 @@
       "latestShirtNumber": "21",
       "meta": "1 temporada \u00B7 #21 \u00B7 LA CASA AGENCY - C.B. SANT JOSEP OBRER BLANC",
       "searchText": "MERITXELL AGUILAR LA CASA AGENCY - C.B. SANT JOSEP OBRER BLANC #21"
+    },
+    {
+      "key": "UUID:4efdca87-0e3f-45b0-b7c6-da3f09cabf29",
+      "label": "MERITXELL DAVIA MARTINEZ",
+      "latestShirtNumber": "4",
+      "meta": "1 temporada \u00B7 #4 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "MERITXELL DAVIA MARTINEZ CE SANT NICOLAU 2 #4"
     },
     {
       "key": "UUID:2ce912b4-dfff-4eb1-b8e4-64e024450c1b",
@@ -9093,6 +9338,13 @@
       "latestShirtNumber": "14",
       "meta": "1 temporada \u00B7 #14 \u00B7 C.B.VILASSAR DE MAR 1984",
       "searchText": "NOA RUBIO RAMIREZ C.B.VILASSAR DE MAR 1984 #14"
+    },
+    {
+      "key": "UUID:68518fa6-711b-484f-b4cf-4c86617d8194",
+      "label": "NOA SANTANDER SALA",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 CN TERRASSA 1",
+      "searchText": "NOA SANTANDER SALA CN TERRASSA 1 #8"
     },
     {
       "key": "UUID:a1286a6a-74a8-4b5b-bf86-7d2290c2e86d",
@@ -9970,6 +10222,13 @@
       "searchText": "PAULA MART\u00CDNEZ MERCADAL CB SANTPEDOR #2"
     },
     {
+      "key": "UUID:95fce237-d913-455a-bb26-1e3adfe49a7a",
+      "label": "PAULA MARTINEZ ZAGUIRRE",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 CN TERRASSA 1",
+      "searchText": "PAULA MARTINEZ ZAGUIRRE CN TERRASSA 1 #23"
+    },
+    {
       "key": "UUID:d6fe6afa-a428-4ad9-be6e-52593d48a481",
       "label": "PAULA MONTARDIT BENITO",
       "latestShirtNumber": "6",
@@ -10129,6 +10388,13 @@
       "latestShirtNumber": "29",
       "meta": "1 temporada \u00B7 #29 \u00B7 CB MANLLEU (U10F)",
       "searchText": "QUERALT PROS CARRILLO CB MANLLEU (U10F) #29"
+    },
+    {
+      "key": "UUID:975aa0fa-9461-4b54-81c1-7494569e9841",
+      "label": "QUERALT RODR\u00CDGUEZ BANDERA",
+      "latestShirtNumber": "94",
+      "meta": "1 temporada \u00B7 #94 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "QUERALT RODR\u00CDGUEZ BANDERA BASQUET SANT PERE VERMELL #94"
     },
     {
       "key": "UUID:effe5ab1-747b-4d0b-ad55-4779f1fd9023",
@@ -10528,6 +10794,13 @@
       "latestShirtNumber": "4",
       "meta": "1 temporada \u00B7 #4 \u00B7 CALAFELL AM ATTIA TRADING",
       "searchText": "SELVA BONVEHI LARRAZ CALAFELL AM ATTIA TRADING #4"
+    },
+    {
+      "key": "UUID:c6d7f92a-b843-4d62-bae9-50397c020def",
+      "label": "SENDY COSTA CANALS",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "SENDY COSTA CANALS BASQUET SANT PERE VERMELL #7"
     },
     {
       "key": "UUID:3f32124c-911b-4b71-a0d8-98e78bef60d5",
@@ -11055,6 +11328,13 @@
       "searchText": "VALENTINA OLGA ORELLANA MORALES A.E. BADALON\u00C8S - PINTURAS CORBACHO #5"
     },
     {
+      "key": "UUID:06f5f861-3fd1-42ff-a448-f64d9c741cf4",
+      "label": "VALENTINA RIERA LLOPART",
+      "latestShirtNumber": "14",
+      "meta": "1 temporada \u00B7 #14 \u00B7 CN TERRASSA 1",
+      "searchText": "VALENTINA RIERA LLOPART CN TERRASSA 1 #14"
+    },
+    {
       "key": "UUID:38e67716-fb97-4f83-8f2a-4a14769a22f7",
       "label": "VALENTINA ROCIO DOMINGUEZ FALCONI",
       "latestShirtNumber": "13",
@@ -11356,6 +11636,13 @@
       "searchText": "VILMA NAVAS BERTRAN JOVENTUT BADALONA A #2"
     },
     {
+      "key": "UUID:eb2e0731-20f4-49a3-b580-f95370000d22",
+      "label": "VINYET ESCODA FERNANDEZ",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "VINYET ESCODA FERNANDEZ BASQUET SANT PERE VERMELL #11"
+    },
+    {
       "key": "UUID:e5853802-c295-4008-90c8-6e965d994893",
       "label": "VINYET ESTRUCH SAIZ",
       "latestShirtNumber": "11",
@@ -11375,6 +11662,13 @@
       "latestShirtNumber": "28",
       "meta": "1 temporada \u00B7 #28 \u00B7 C.B. ESPARREGUERA",
       "searchText": "VINYET OLTRA GUEVARA C.B. ESPARREGUERA #28"
+    },
+    {
+      "key": "UUID:603da581-957f-4069-9dc7-f5a178037632",
+      "label": "VIOLETA MATEU FRUTOS",
+      "latestShirtNumber": "18",
+      "meta": "1 temporada \u00B7 #18 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "VIOLETA MATEU FRUTOS BASQUET SANT PERE VERMELL #18"
     },
     {
       "key": "UUID:8623c114-bc7c-41e5-8380-036cffa5b94c",

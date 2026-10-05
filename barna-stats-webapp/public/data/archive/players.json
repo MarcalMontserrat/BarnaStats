@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
+  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -1334,6 +1334,49 @@
           "primaryTeamName": "AB PREMI\u00C0",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81625",
           "primaryTeamIdExtern": 81625
+        }
+      ]
+    },
+    {
+      "key": "UUID:d54a6b27-2085-450f-87a7-1797c7635817",
+      "label": "ABRIL HERENCIA CARRE\u00D1O",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 CN TERRASSA 1",
+      "searchText": "ABRIL HERENCIA CARRE\u00D1O CN TERRASSA 1 #5",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -5,
+        "fouls": 5,
+        "minutes": 7,
+        "avgPoints": 0,
+        "avgValuation": -5,
+        "avgFouls": 5,
+        "avgMinutes": 7
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:d54a6b27-2085-450f-87a7-1797c7635817:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ABRIL HERENCIA CARRE\u00D1O",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 0,
+          "valuation": -5,
+          "fouls": 5,
+          "minutes": 7,
+          "avgPoints": 0,
+          "avgValuation": -5,
+          "avgFouls": 5,
+          "avgMinutes": 7,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -3015,6 +3058,49 @@
           "primaryTeamName": "AEC COLLBLANC",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85940",
           "primaryTeamIdExtern": 85940
+        }
+      ]
+    },
+    {
+      "key": "UUID:0109b24c-98d1-11e9-a2a5-0216824770c2",
+      "label": "AINA CORTINAS GUIRAO",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "AINA CORTINAS GUIRAO FEMEN\u00CD SANT ADRI\u00C0 BLANC #23",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 1,
+        "fouls": 3,
+        "minutes": 24,
+        "avgPoints": 6,
+        "avgValuation": 1,
+        "avgFouls": 3,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:0109b24c-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AINA CORTINAS GUIRAO",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 6,
+          "valuation": 1,
+          "fouls": 3,
+          "minutes": 24,
+          "avgPoints": 6,
+          "avgValuation": 1,
+          "avgFouls": 3,
+          "avgMinutes": 24,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -5478,6 +5564,49 @@
       ]
     },
     {
+      "key": "UUID:122eb3ce-4ca9-47fe-a722-fcea3c3efe77",
+      "label": "ALAE EL ASRI CHENTOUF",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "ALAE EL ASRI CHENTOUF CE SANT NICOLAU 2 #23",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": -2,
+        "fouls": 4,
+        "minutes": 25,
+        "avgPoints": 7,
+        "avgValuation": -2,
+        "avgFouls": 4,
+        "avgMinutes": 25
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:122eb3ce-4ca9-47fe-a722-fcea3c3efe77:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALAE EL ASRI CHENTOUF",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 7,
+          "valuation": -2,
+          "fouls": 4,
+          "minutes": 25,
+          "avgPoints": 7,
+          "avgValuation": -2,
+          "avgFouls": 4,
+          "avgMinutes": 25,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
+        }
+      ]
+    },
+    {
       "key": "UUID:56676b9a-69c8-40fc-9f35-2bd11bb2752e",
       "label": "ALAIA GOMEZ LOPEZ",
       "latestShirtNumber": "37",
@@ -5603,6 +5732,49 @@
           "primaryTeamName": "CB GAV\u00C0 VERMELL",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83833",
           "primaryTeamIdExtern": 83833
+        }
+      ]
+    },
+    {
+      "key": "UUID:cce10dc0-6617-4935-89e5-ee9a5941113b",
+      "label": "ALBA CRUZ RIVAS",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 CN TERRASSA 1",
+      "searchText": "ALBA CRUZ RIVAS CN TERRASSA 1 #9",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 0,
+        "fouls": 2,
+        "minutes": 26,
+        "avgPoints": 4,
+        "avgValuation": 0,
+        "avgFouls": 2,
+        "avgMinutes": 26
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:cce10dc0-6617-4935-89e5-ee9a5941113b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALBA CRUZ RIVAS",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 4,
+          "valuation": 0,
+          "fouls": 2,
+          "minutes": 26,
+          "avgPoints": 4,
+          "avgValuation": 0,
+          "avgFouls": 2,
+          "avgMinutes": 26,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -5862,6 +6034,49 @@
           "primaryTeamName": "VILAB\u00C0SQUET VILADECANS PMF BLANC",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
           "primaryTeamIdExtern": 84676
+        }
+      ]
+    },
+    {
+      "key": "UUID:02a0f0a3-c745-44f4-8317-dca49d17290a",
+      "label": "ALBA HADZIHASANOVIC VI\u00C9",
+      "latestShirtNumber": "20",
+      "meta": "1 temporada \u00B7 #20 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "ALBA HADZIHASANOVIC VI\u00C9 CE SANT NICOLAU 2 #20",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 5,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 6,
+        "avgValuation": 5,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:02a0f0a3-c745-44f4-8317-dca49d17290a:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALBA HADZIHASANOVIC VI\u00C9",
+          "shirtNumber": "20",
+          "games": 1,
+          "points": 6,
+          "valuation": 5,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 6,
+          "avgValuation": 5,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
         }
       ]
     },
@@ -7026,6 +7241,49 @@
           "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:83518",
           "primaryTeamIdExtern": 83518
+        }
+      ]
+    },
+    {
+      "key": "UUID:041b8584-2fbc-41a8-864d-3a68f4702f53",
+      "label": "ALEXIA BISTU\u00C9 GARCIA",
+      "latestShirtNumber": "6",
+      "meta": "1 temporada \u00B7 #6 \u00B7 CN TERRASSA 1",
+      "searchText": "ALEXIA BISTU\u00C9 GARCIA CN TERRASSA 1 #6",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 1,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 1
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:041b8584-2fbc-41a8-864d-3a68f4702f53:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ALEXIA BISTU\u00C9 GARCIA",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 1,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 1,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -8907,6 +9165,49 @@
       ]
     },
     {
+      "key": "UUID:0139597f-98d1-11e9-a2a5-0216824770c2",
+      "label": "ANDREA ORRIOS MARTINEZ",
+      "latestShirtNumber": "26",
+      "meta": "1 temporada \u00B7 #26 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "ANDREA ORRIOS MARTINEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #26",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 3,
+        "fouls": 0,
+        "minutes": 19,
+        "avgPoints": 4,
+        "avgValuation": 3,
+        "avgFouls": 0,
+        "avgMinutes": 19
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:0139597f-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ANDREA ORRIOS MARTINEZ",
+          "shirtNumber": "26",
+          "games": 1,
+          "points": 4,
+          "valuation": 3,
+          "fouls": 0,
+          "minutes": 19,
+          "avgPoints": 4,
+          "avgValuation": 3,
+          "avgFouls": 0,
+          "avgMinutes": 19,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
+        }
+      ]
+    },
+    {
       "key": "UUID:6e5ba434-10d8-43c6-a08c-eee0a6da8f9b",
       "label": "ANDREA PA\u00CDS ARILLA",
       "latestShirtNumber": "76",
@@ -9442,6 +9743,49 @@
           "primaryTeamName": "CB VILASSAR DE DALT",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81714",
           "primaryTeamIdExtern": 81714
+        }
+      ]
+    },
+    {
+      "key": "UUID:98ae11fc-65c8-4908-969b-6ad436899073",
+      "label": "ANNA TORRES MORENTE",
+      "latestShirtNumber": "17",
+      "meta": "1 temporada \u00B7 #17 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "ANNA TORRES MORENTE CE SANT NICOLAU 2 #17",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 14,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 14
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:98ae11fc-65c8-4908-969b-6ad436899073:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ANNA TORRES MORENTE",
+          "shirtNumber": "17",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 14,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 14,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
         }
       ]
     },
@@ -10109,6 +10453,49 @@
           "primaryTeamName": "A.E SANT ANDREU NATZARET",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80464",
           "primaryTeamIdExtern": 80464
+        }
+      ]
+    },
+    {
+      "key": "UUID:671352ed-fe63-46c4-8fca-725c898d767e",
+      "label": "ARIADNA ARIAS LUNA",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "ARIADNA ARIAS LUNA BASQUET SANT PERE VERMELL #10",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 12,
+        "valuation": 10,
+        "fouls": 2,
+        "minutes": 21,
+        "avgPoints": 12,
+        "avgValuation": 10,
+        "avgFouls": 2,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:671352ed-fe63-46c4-8fca-725c898d767e:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ARIADNA ARIAS LUNA",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 12,
+          "valuation": 10,
+          "fouls": 2,
+          "minutes": 21,
+          "avgPoints": 12,
+          "avgValuation": 10,
+          "avgFouls": 2,
+          "avgMinutes": 21,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
         }
       ]
     },
@@ -11313,6 +11700,49 @@
           "primaryTeamName": "CBS FEM  U10",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80111",
           "primaryTeamIdExtern": 80111
+        }
+      ]
+    },
+    {
+      "key": "UUID:120c2d86-fe1e-4fc2-ad17-10d3821b7fc5",
+      "label": "ARLET CARRETERO HERNANDEZ",
+      "latestShirtNumber": "16",
+      "meta": "1 temporada \u00B7 #16 \u00B7 CN TERRASSA 1",
+      "searchText": "ARLET CARRETERO HERNANDEZ CN TERRASSA 1 #16",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 32,
+        "avgPoints": 4,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 32
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:120c2d86-fe1e-4fc2-ad17-10d3821b7fc5:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ARLET CARRETERO HERNANDEZ",
+          "shirtNumber": "16",
+          "games": 1,
+          "points": 4,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 32,
+          "avgPoints": 4,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 32,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -14097,6 +14527,49 @@
       ]
     },
     {
+      "key": "UUID:0159f8f9-98d1-11e9-a2a5-0216824770c2",
+      "label": "BERTA LARROYA NILO",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "BERTA LARROYA NILO CE SANT NICOLAU 2 #10",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 1,
+        "valuation": -3,
+        "fouls": 4,
+        "minutes": 22,
+        "avgPoints": 1,
+        "avgValuation": -3,
+        "avgFouls": 4,
+        "avgMinutes": 22
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:0159f8f9-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "BERTA LARROYA NILO",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 1,
+          "valuation": -3,
+          "fouls": 4,
+          "minutes": 22,
+          "avgPoints": 1,
+          "avgValuation": -3,
+          "avgFouls": 4,
+          "avgMinutes": 22,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
+        }
+      ]
+    },
+    {
       "key": "UUID:d59eaeb0-ba0d-4c63-bde3-05a9d3b5230b",
       "label": "BERTA LOZANO SANMARTIN",
       "latestShirtNumber": "45",
@@ -16875,6 +17348,49 @@
       ]
     },
     {
+      "key": "UUID:eee7e11a-8efc-4ef3-826a-ced165a5ef77",
+      "label": "CARLA LIGERO MAR\u00CDN",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "CARLA LIGERO MAR\u00CDN CE SANT NICOLAU 2 #12",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 19,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 19
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:eee7e11a-8efc-4ef3-826a-ced165a5ef77:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA LIGERO MAR\u00CDN",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 19,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 19,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
+        }
+      ]
+    },
+    {
       "key": "UUID:011b3f34-3435-472c-a4a8-a845ff55dbbd",
       "label": "CARLA MARTIN DE HIJAS NU\u00D1EZ",
       "latestShirtNumber": "41",
@@ -17176,6 +17692,49 @@
       ]
     },
     {
+      "key": "UUID:01719d60-98d1-11e9-a2a5-0216824770c2",
+      "label": "CARLA PATI\u00D1O MARIN",
+      "latestShirtNumber": "24",
+      "meta": "1 temporada \u00B7 #24 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "CARLA PATI\u00D1O MARIN CE SANT NICOLAU 2 #24",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -4,
+        "fouls": 4,
+        "minutes": 25,
+        "avgPoints": 0,
+        "avgValuation": -4,
+        "avgFouls": 4,
+        "avgMinutes": 25
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:01719d60-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA PATI\u00D1O MARIN",
+          "shirtNumber": "24",
+          "games": 1,
+          "points": 0,
+          "valuation": -4,
+          "fouls": 4,
+          "minutes": 25,
+          "avgPoints": 0,
+          "avgValuation": -4,
+          "avgFouls": 4,
+          "avgMinutes": 25,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
+        }
+      ]
+    },
+    {
       "key": "UUID:279e6f9e-3e7a-4d1e-b8d5-2f767f334340",
       "label": "CARLA PEIR\u00D3N COCERA",
       "latestShirtNumber": "26",
@@ -17216,6 +17775,49 @@
           "primaryTeamName": "DOMINIQUES BARCELONA NEGRE",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:82476",
           "primaryTeamIdExtern": 82476
+        }
+      ]
+    },
+    {
+      "key": "UUID:87e21452-a078-40f9-b674-7d494618e8a6",
+      "label": "CARLA PEREZ  FINISTROSA",
+      "latestShirtNumber": "2",
+      "meta": "1 temporada \u00B7 #2 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "CARLA PEREZ  FINISTROSA FEMEN\u00CD SANT ADRI\u00C0 BLANC #2",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 5,
+        "fouls": 2,
+        "minutes": 19,
+        "avgPoints": 7,
+        "avgValuation": 5,
+        "avgFouls": 2,
+        "avgMinutes": 19
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:87e21452-a078-40f9-b674-7d494618e8a6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA PEREZ  FINISTROSA",
+          "shirtNumber": "2",
+          "games": 1,
+          "points": 7,
+          "valuation": 5,
+          "fouls": 2,
+          "minutes": 19,
+          "avgPoints": 7,
+          "avgValuation": 5,
+          "avgFouls": 2,
+          "avgMinutes": 19,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -17435,6 +18037,49 @@
       ]
     },
     {
+      "key": "UUID:77a86fb2-2e72-4f49-90cc-a7b549b057ce",
+      "label": "CARLA SA\u00D1UDO MOTA",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "CARLA SA\u00D1UDO MOTA BASQUET SANT PERE VERMELL #23",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 11,
+        "valuation": 9,
+        "fouls": 0,
+        "minutes": 25,
+        "avgPoints": 11,
+        "avgValuation": 9,
+        "avgFouls": 0,
+        "avgMinutes": 25
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:77a86fb2-2e72-4f49-90cc-a7b549b057ce:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA SA\u00D1UDO MOTA",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 11,
+          "valuation": 9,
+          "fouls": 0,
+          "minutes": 25,
+          "avgPoints": 11,
+          "avgValuation": 9,
+          "avgFouls": 0,
+          "avgMinutes": 25,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
+        }
+      ]
+    },
+    {
       "key": "UUID:82d4e2ee-5113-4420-909a-14e20c19e5a2",
       "label": "CARLA SARRIERA BA\u00D1OS",
       "latestShirtNumber": "10",
@@ -17603,6 +18248,92 @@
           "primaryTeamName": "ESCOLA IPSI 16",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81620",
           "primaryTeamIdExtern": 81620
+        }
+      ]
+    },
+    {
+      "key": "UUID:cc9949df-4a73-4275-a603-5d0a88392634",
+      "label": "CARLOTA BORRELL CASALS",
+      "latestShirtNumber": "2",
+      "meta": "1 temporada \u00B7 #2 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "CARLOTA BORRELL CASALS CE SANT NICOLAU 2 #2",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 4,
+        "fouls": 0,
+        "minutes": 21,
+        "avgPoints": 4,
+        "avgValuation": 4,
+        "avgFouls": 0,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:cc9949df-4a73-4275-a603-5d0a88392634:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLOTA BORRELL CASALS",
+          "shirtNumber": "2",
+          "games": 1,
+          "points": 4,
+          "valuation": 4,
+          "fouls": 0,
+          "minutes": 21,
+          "avgPoints": 4,
+          "avgValuation": 4,
+          "avgFouls": 0,
+          "avgMinutes": 21,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
+        }
+      ]
+    },
+    {
+      "key": "UUID:7881c1d0-c871-4c04-bf84-345394317f74",
+      "label": "CARLOTA CERVANTES JAN\u00C9",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "CARLOTA CERVANTES JAN\u00C9 BASQUET SANT PERE VERMELL #12",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 5,
+        "fouls": 1,
+        "minutes": 26,
+        "avgPoints": 6,
+        "avgValuation": 5,
+        "avgFouls": 1,
+        "avgMinutes": 26
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:7881c1d0-c871-4c04-bf84-345394317f74:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLOTA CERVANTES JAN\u00C9",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 6,
+          "valuation": 5,
+          "fouls": 1,
+          "minutes": 26,
+          "avgPoints": 6,
+          "avgValuation": 5,
+          "avgFouls": 1,
+          "avgMinutes": 26,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
         }
       ]
     },
@@ -20776,6 +21507,49 @@
       ]
     },
     {
+      "key": "UUID:b615349e-8372-40e6-bd2f-6091337766b8",
+      "label": "CLAUDIA ZAGUIRRE MARQUEZ",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "CLAUDIA ZAGUIRRE MARQUEZ BASQUET SANT PERE VERMELL #9",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 7,
+        "valuation": 2,
+        "fouls": 4,
+        "minutes": 22,
+        "avgPoints": 7,
+        "avgValuation": 2,
+        "avgFouls": 4,
+        "avgMinutes": 22
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:b615349e-8372-40e6-bd2f-6091337766b8:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLAUDIA ZAGUIRRE MARQUEZ",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 7,
+          "valuation": 2,
+          "fouls": 4,
+          "minutes": 22,
+          "avgPoints": 7,
+          "avgValuation": 2,
+          "avgFouls": 4,
+          "avgMinutes": 22,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
+        }
+      ]
+    },
+    {
       "key": "UUID:0b0405a8-dabd-46aa-aca3-bfe26a6f048c",
       "label": "CLOE FLORES MENGUAL",
       "latestShirtNumber": "23",
@@ -20858,6 +21632,49 @@
           "primaryTeamName": "C.B. VILANOVA DEL VALLES NEGRE-SISQUELLA GRUP",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81486",
           "primaryTeamIdExtern": 81486
+        }
+      ]
+    },
+    {
+      "key": "UUID:4d81676c-e10e-4c84-af57-8d9411ab51cd",
+      "label": "CLOE SERRANO GIANNOTTI",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "CLOE SERRANO GIANNOTTI FEMEN\u00CD SANT ADRI\u00C0 BLANC #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 5,
+        "fouls": 1,
+        "minutes": 16,
+        "avgPoints": 6,
+        "avgValuation": 5,
+        "avgFouls": 1,
+        "avgMinutes": 16
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:4d81676c-e10e-4c84-af57-8d9411ab51cd:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLOE SERRANO GIANNOTTI",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 6,
+          "valuation": 5,
+          "fouls": 1,
+          "minutes": 16,
+          "avgPoints": 6,
+          "avgValuation": 5,
+          "avgFouls": 1,
+          "avgMinutes": 16,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -22193,6 +23010,49 @@
           "primaryTeamName": "SESE B",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI 1R. ANY::TEAM:79862",
           "primaryTeamIdExtern": 79862
+        }
+      ]
+    },
+    {
+      "key": "UUID:0139dd21-98d1-11e9-a2a5-0216824770c2",
+      "label": "DANIELLA DIAZ MENDEZ",
+      "latestShirtNumber": "28",
+      "meta": "1 temporada \u00B7 #28 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "DANIELLA DIAZ MENDEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #28",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 0,
+        "fouls": 2,
+        "minutes": 16,
+        "avgPoints": 4,
+        "avgValuation": 0,
+        "avgFouls": 2,
+        "avgMinutes": 16
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:0139dd21-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "DANIELLA DIAZ MENDEZ",
+          "shirtNumber": "28",
+          "games": 1,
+          "points": 4,
+          "valuation": 0,
+          "fouls": 2,
+          "minutes": 16,
+          "avgPoints": 4,
+          "avgValuation": 0,
+          "avgFouls": 2,
+          "avgMinutes": 16,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -23572,6 +24432,49 @@
           "primaryTeamName": "A.E SANT ANDREU NATZARET",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:80464",
           "primaryTeamIdExtern": 80464
+        }
+      ]
+    },
+    {
+      "key": "UUID:8b2e58f8-3c02-488b-bcd6-78330d2d00ce",
+      "label": "ELENA IBA\u00D1EZ PUMAR",
+      "latestShirtNumber": "29",
+      "meta": "1 temporada \u00B7 #29 \u00B7 CN TERRASSA 1",
+      "searchText": "ELENA IBA\u00D1EZ PUMAR CN TERRASSA 1 #29",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": -2,
+        "fouls": 0,
+        "minutes": 20,
+        "avgPoints": 5,
+        "avgValuation": -2,
+        "avgFouls": 0,
+        "avgMinutes": 20
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:8b2e58f8-3c02-488b-bcd6-78330d2d00ce:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ELENA IBA\u00D1EZ PUMAR",
+          "shirtNumber": "29",
+          "games": 1,
+          "points": 5,
+          "valuation": -2,
+          "fouls": 0,
+          "minutes": 20,
+          "avgPoints": 5,
+          "avgValuation": -2,
+          "avgFouls": 0,
+          "avgMinutes": 20,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -32612,6 +33515,49 @@
       ]
     },
     {
+      "key": "UUID:ae7ca12c-9efe-4ace-8276-baf282877b96",
+      "label": "IRINA BARRERA MORTE",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "IRINA BARRERA MORTE FEMEN\u00CD SANT ADRI\u00C0 BLANC #12",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 1,
+        "valuation": -3,
+        "fouls": 3,
+        "minutes": 18,
+        "avgPoints": 1,
+        "avgValuation": -3,
+        "avgFouls": 3,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:ae7ca12c-9efe-4ace-8276-baf282877b96:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IRINA BARRERA MORTE",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 1,
+          "valuation": -3,
+          "fouls": 3,
+          "minutes": 18,
+          "avgPoints": 1,
+          "avgValuation": -3,
+          "avgFouls": 3,
+          "avgMinutes": 18,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
+        }
+      ]
+    },
+    {
       "key": "UUID:f9305c8c-13ea-436e-aef2-8ef65c5ac8a2",
       "label": "IRINA CALLE GONZALEZ",
       "latestShirtNumber": "76",
@@ -33815,6 +34761,49 @@
           "primaryTeamName": "C.E.B. SANT JORDI",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81783",
           "primaryTeamIdExtern": 81783
+        }
+      ]
+    },
+    {
+      "key": "UUID:5f77e3ff-2800-4316-b8ad-b46e210839cf",
+      "label": "IVET VIZCARRO CAMPOS",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "IVET VIZCARRO CAMPOS CE SANT NICOLAU 2 #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": 2,
+        "fouls": 2,
+        "minutes": 21,
+        "avgPoints": 5,
+        "avgValuation": 2,
+        "avgFouls": 2,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:5f77e3ff-2800-4316-b8ad-b46e210839cf:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IVET VIZCARRO CAMPOS",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 5,
+          "valuation": 2,
+          "fouls": 2,
+          "minutes": 21,
+          "avgPoints": 5,
+          "avgValuation": 2,
+          "avgFouls": 2,
+          "avgMinutes": 21,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
         }
       ]
     },
@@ -36210,6 +37199,49 @@
       ]
     },
     {
+      "key": "UUID:b19e496a-a8ba-4f9f-8eae-becd22217769",
+      "label": "JULIA AGUILERA GONZALEZ",
+      "latestShirtNumber": "13",
+      "meta": "1 temporada \u00B7 #13 \u00B7 CN TERRASSA 1",
+      "searchText": "JULIA AGUILERA GONZALEZ CN TERRASSA 1 #13",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": 1,
+        "fouls": 4,
+        "minutes": 21,
+        "avgPoints": 5,
+        "avgValuation": 1,
+        "avgFouls": 4,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:b19e496a-a8ba-4f9f-8eae-becd22217769:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JULIA AGUILERA GONZALEZ",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 5,
+          "valuation": 1,
+          "fouls": 4,
+          "minutes": 21,
+          "avgPoints": 5,
+          "avgValuation": 1,
+          "avgFouls": 4,
+          "avgMinutes": 21,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
+        }
+      ]
+    },
+    {
       "key": "UUID:bae232b2-94fa-4b1f-9008-94e8dc9d1dbb",
       "label": "J\u00DALIA AGUILERA LLOBET",
       "latestShirtNumber": "19",
@@ -36337,6 +37369,49 @@
           "primaryTeamName": "PAIDOS-ASFE U10F BLANC",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79509",
           "primaryTeamIdExtern": 79509
+        }
+      ]
+    },
+    {
+      "key": "UUID:0146dd3f-98d1-11e9-a2a5-0216824770c2",
+      "label": "JULIA BALCELLS HIJARRUBIA",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 CN TERRASSA 1",
+      "searchText": "JULIA BALCELLS HIJARRUBIA CN TERRASSA 1 #19",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 1,
+        "fouls": 4,
+        "minutes": 33,
+        "avgPoints": 6,
+        "avgValuation": 1,
+        "avgFouls": 4,
+        "avgMinutes": 33
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:0146dd3f-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JULIA BALCELLS HIJARRUBIA",
+          "shirtNumber": "19",
+          "games": 1,
+          "points": 6,
+          "valuation": 1,
+          "fouls": 4,
+          "minutes": 33,
+          "avgPoints": 6,
+          "avgValuation": 1,
+          "avgFouls": 4,
+          "avgMinutes": 33,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -36639,6 +37714,49 @@
           "primaryTeamName": "CB SANT ANDREU",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82786",
           "primaryTeamIdExtern": 82786
+        }
+      ]
+    },
+    {
+      "key": "UUID:36d82a14-05c6-4609-a2dc-fd9e84bf1329",
+      "label": "JULIA ESTIARTE GIRVENT",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "JULIA ESTIARTE GIRVENT CE SANT NICOLAU 2 #19",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 17,
+        "valuation": 12,
+        "fouls": 4,
+        "minutes": 29,
+        "avgPoints": 17,
+        "avgValuation": 12,
+        "avgFouls": 4,
+        "avgMinutes": 29
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:36d82a14-05c6-4609-a2dc-fd9e84bf1329:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JULIA ESTIARTE GIRVENT",
+          "shirtNumber": "19",
+          "games": 1,
+          "points": 17,
+          "valuation": 12,
+          "fouls": 4,
+          "minutes": 29,
+          "avgPoints": 17,
+          "avgValuation": 12,
+          "avgFouls": 4,
+          "avgMinutes": 29,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
         }
       ]
     },
@@ -39467,6 +40585,49 @@
       ]
     },
     {
+      "key": "UUID:293a6026-63e1-4999-9f03-c8682dceed99",
+      "label": "LAIA EL BOHDIDI LOPEZ",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 CN TERRASSA 1",
+      "searchText": "LAIA EL BOHDIDI LOPEZ CN TERRASSA 1 #22",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": -2,
+        "fouls": 2,
+        "minutes": 25,
+        "avgPoints": 2,
+        "avgValuation": -2,
+        "avgFouls": 2,
+        "avgMinutes": 25
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:293a6026-63e1-4999-9f03-c8682dceed99:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAIA EL BOHDIDI LOPEZ",
+          "shirtNumber": "22",
+          "games": 1,
+          "points": 2,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 25,
+          "avgPoints": 2,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 25,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
+        }
+      ]
+    },
+    {
       "key": "UUID:2fa0528a-ceda-4810-8358-9d633ea93ba6",
       "label": "LAIA ESTART\u00DAS ARSEDA",
       "latestShirtNumber": "14",
@@ -39682,6 +40843,49 @@
       ]
     },
     {
+      "key": "UUID:56b1a2a3-6c30-4cc9-b021-e08a2e276244",
+      "label": "LAIA FRAGOSO RUEDA",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LAIA FRAGOSO RUEDA FEMEN\u00CD SANT ADRI\u00C0 BLANC #7",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 12,
+        "valuation": 8,
+        "fouls": 1,
+        "minutes": 16,
+        "avgPoints": 12,
+        "avgValuation": 8,
+        "avgFouls": 1,
+        "avgMinutes": 16
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:56b1a2a3-6c30-4cc9-b021-e08a2e276244:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAIA FRAGOSO RUEDA",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 12,
+          "valuation": 8,
+          "fouls": 1,
+          "minutes": 16,
+          "avgPoints": 12,
+          "avgValuation": 8,
+          "avgFouls": 1,
+          "avgMinutes": 16,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
+        }
+      ]
+    },
+    {
       "key": "UUID:1fcb7891-4eda-4487-b7ec-cc0940830e38",
       "label": "LAIA GARCIA JUNQUERA",
       "latestShirtNumber": "4",
@@ -39721,6 +40925,49 @@
           "primaryTeamName": "CN CALDES",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81497",
           "primaryTeamIdExtern": 81497
+        }
+      ]
+    },
+    {
+      "key": "UUID:6f5ab8dc-107c-4b3e-93d2-94b27381b2b2",
+      "label": "LAIA GARRETA PETITB\u00D3",
+      "latestShirtNumber": "33",
+      "meta": "1 temporada \u00B7 #33 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LAIA GARRETA PETITB\u00D3 FEMEN\u00CD SANT ADRI\u00C0 BLANC #33",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": -4,
+        "fouls": 4,
+        "minutes": 21,
+        "avgPoints": 2,
+        "avgValuation": -4,
+        "avgFouls": 4,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:6f5ab8dc-107c-4b3e-93d2-94b27381b2b2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAIA GARRETA PETITB\u00D3",
+          "shirtNumber": "33",
+          "games": 1,
+          "points": 2,
+          "valuation": -4,
+          "fouls": 4,
+          "minutes": 21,
+          "avgPoints": 2,
+          "avgValuation": -4,
+          "avgFouls": 4,
+          "avgMinutes": 21,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -41469,6 +42716,49 @@
       ]
     },
     {
+      "key": "UUID:01588fb5-98d1-11e9-a2a5-0216824770c2",
+      "label": "LAURA ESCURSELL DOMINGUEZ",
+      "latestShirtNumber": "44",
+      "meta": "1 temporada \u00B7 #44 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LAURA ESCURSELL DOMINGUEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #44",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 3,
+        "fouls": 3,
+        "minutes": 18,
+        "avgPoints": 6,
+        "avgValuation": 3,
+        "avgFouls": 3,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:01588fb5-98d1-11e9-a2a5-0216824770c2:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAURA ESCURSELL DOMINGUEZ",
+          "shirtNumber": "44",
+          "games": 1,
+          "points": 6,
+          "valuation": 3,
+          "fouls": 3,
+          "minutes": 18,
+          "avgPoints": 6,
+          "avgValuation": 3,
+          "avgFouls": 3,
+          "avgMinutes": 18,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
+        }
+      ]
+    },
+    {
       "key": "UUID:ecac9f86-3926-46df-834f-424604e27ad1",
       "label": "LAURA ISABEL PUJOL CA\u00D1AFE",
       "latestShirtNumber": "11",
@@ -41681,6 +42971,49 @@
           "primaryTeamName": "BC TECLA SALA  A",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:79709",
           "primaryTeamIdExtern": 79709
+        }
+      ]
+    },
+    {
+      "key": "UUID:2ab138c5-9b3f-4e98-8745-a642faec3bca",
+      "label": "L\u00C9A GUITART SINSARD",
+      "latestShirtNumber": "13",
+      "meta": "1 temporada \u00B7 #13 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "L\u00C9A GUITART SINSARD FEMEN\u00CD SANT ADRI\u00C0 BLANC #13",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 2,
+        "fouls": 2,
+        "minutes": 15,
+        "avgPoints": 4,
+        "avgValuation": 2,
+        "avgFouls": 2,
+        "avgMinutes": 15
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:2ab138c5-9b3f-4e98-8745-a642faec3bca:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "L\u00C9A GUITART SINSARD",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 2,
+          "minutes": 15,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 2,
+          "avgMinutes": 15,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -45045,6 +46378,49 @@
           "primaryTeamName": "SE LA SALLE BONANOVA NEGRE",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83519",
           "primaryTeamIdExtern": 83519
+        }
+      ]
+    },
+    {
+      "key": "UUID:f04f3eb7-b44a-4434-91d8-dea30c4b0a27",
+      "label": "LUCIA L\u00D3PEZ PARRA",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "LUCIA L\u00D3PEZ PARRA FEMEN\u00CD SANT ADRI\u00C0 BLANC #22",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 1,
+        "valuation": -2,
+        "fouls": 2,
+        "minutes": 18,
+        "avgPoints": 1,
+        "avgValuation": -2,
+        "avgFouls": 2,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:f04f3eb7-b44a-4434-91d8-dea30c4b0a27:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LUCIA L\u00D3PEZ PARRA",
+          "shirtNumber": "22",
+          "games": 1,
+          "points": 1,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 18,
+          "avgPoints": 1,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 18,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
         }
       ]
     },
@@ -51019,6 +52395,49 @@
       ]
     },
     {
+      "key": "UUID:6b6afb35-24e5-47a3-b84e-a66819a7cb5e",
+      "label": "MARTINA BOIXAD\u00D3S ROMERO",
+      "latestShirtNumber": "21",
+      "meta": "1 temporada \u00B7 #21 \u00B7 CN TERRASSA 1",
+      "searchText": "MARTINA BOIXAD\u00D3S ROMERO CN TERRASSA 1 #21",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 0,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 0
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:6b6afb35-24e5-47a3-b84e-a66819a7cb5e:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTINA BOIXAD\u00D3S ROMERO",
+          "shirtNumber": "21",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 0,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 0,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
+        }
+      ]
+    },
+    {
       "key": "UUID:bfac81ac-03df-4a80-bf9e-79714f20d9dd",
       "label": "MARTINA BUENO CANALS",
       "latestShirtNumber": "12",
@@ -52269,6 +53688,49 @@
       ]
     },
     {
+      "key": "UUID:c58317dc-52b8-44dd-8999-3f6b3d87f9e9",
+      "label": "MARTINA RAMELLS TOLEDO",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "MARTINA RAMELLS TOLEDO BASQUET SANT PERE VERMELL #8",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 23,
+        "valuation": 16,
+        "fouls": 0,
+        "minutes": 23,
+        "avgPoints": 23,
+        "avgValuation": 16,
+        "avgFouls": 0,
+        "avgMinutes": 23
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:c58317dc-52b8-44dd-8999-3f6b3d87f9e9:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTINA RAMELLS TOLEDO",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 23,
+          "valuation": 16,
+          "fouls": 0,
+          "minutes": 23,
+          "avgPoints": 23,
+          "avgValuation": 16,
+          "avgFouls": 0,
+          "avgMinutes": 23,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
+        }
+      ]
+    },
+    {
       "key": "UUID:48f1b1dd-159f-4816-9644-e59bce89828d",
       "label": "MARTINA REDONDO ACE\u00D1A",
       "latestShirtNumber": "20",
@@ -53214,6 +54676,49 @@
           "primaryTeamName": "LA CASA AGENCY - C.B. SANT JOSEP OBRER BLANC",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82180",
           "primaryTeamIdExtern": 82180
+        }
+      ]
+    },
+    {
+      "key": "UUID:4efdca87-0e3f-45b0-b7c6-da3f09cabf29",
+      "label": "MERITXELL DAVIA MARTINEZ",
+      "latestShirtNumber": "4",
+      "meta": "1 temporada \u00B7 #4 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "MERITXELL DAVIA MARTINEZ CE SANT NICOLAU 2 #4",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 0,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 0
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:4efdca87-0e3f-45b0-b7c6-da3f09cabf29:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MERITXELL DAVIA MARTINEZ",
+          "shirtNumber": "4",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 0,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 0,
+          "teamNames": [
+            "CE SANT NICOLAU 2"
+          ],
+          "primaryTeamName": "CE SANT NICOLAU 2",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "primaryTeamIdExtern": 89687
         }
       ]
     },
@@ -56987,6 +58492,49 @@
           "primaryTeamName": "C.B.VILASSAR DE MAR 1984",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84290",
           "primaryTeamIdExtern": 84290
+        }
+      ]
+    },
+    {
+      "key": "UUID:68518fa6-711b-484f-b4cf-4c86617d8194",
+      "label": "NOA SANTANDER SALA",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 CN TERRASSA 1",
+      "searchText": "NOA SANTANDER SALA CN TERRASSA 1 #8",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 11,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 11
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:68518fa6-711b-484f-b4cf-4c86617d8194:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NOA SANTANDER SALA",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 11,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 11,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
         }
       ]
     },
@@ -62405,6 +63953,49 @@
       ]
     },
     {
+      "key": "UUID:95fce237-d913-455a-bb26-1e3adfe49a7a",
+      "label": "PAULA MARTINEZ ZAGUIRRE",
+      "latestShirtNumber": "23",
+      "meta": "1 temporada \u00B7 #23 \u00B7 CN TERRASSA 1",
+      "searchText": "PAULA MARTINEZ ZAGUIRRE CN TERRASSA 1 #23",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 3,
+        "valuation": -5,
+        "fouls": 5,
+        "minutes": 9,
+        "avgPoints": 3,
+        "avgValuation": -5,
+        "avgFouls": 5,
+        "avgMinutes": 9
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:95fce237-d913-455a-bb26-1e3adfe49a7a:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "PAULA MARTINEZ ZAGUIRRE",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 3,
+          "valuation": -5,
+          "fouls": 5,
+          "minutes": 9,
+          "avgPoints": 3,
+          "avgValuation": -5,
+          "avgFouls": 5,
+          "avgMinutes": 9,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
+        }
+      ]
+    },
+    {
       "key": "UUID:d6fe6afa-a428-4ad9-be6e-52593d48a481",
       "label": "PAULA MONTARDIT BENITO",
       "latestShirtNumber": "6",
@@ -63390,6 +64981,49 @@
           "primaryTeamName": "CB MANLLEU (U10F)",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:85306",
           "primaryTeamIdExtern": 85306
+        }
+      ]
+    },
+    {
+      "key": "UUID:975aa0fa-9461-4b54-81c1-7494569e9841",
+      "label": "QUERALT RODR\u00CDGUEZ BANDERA",
+      "latestShirtNumber": "94",
+      "meta": "1 temporada \u00B7 #94 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "QUERALT RODR\u00CDGUEZ BANDERA BASQUET SANT PERE VERMELL #94",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 9,
+        "valuation": 7,
+        "fouls": 1,
+        "minutes": 18,
+        "avgPoints": 9,
+        "avgValuation": 7,
+        "avgFouls": 1,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:975aa0fa-9461-4b54-81c1-7494569e9841:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "QUERALT RODR\u00CDGUEZ BANDERA",
+          "shirtNumber": "94",
+          "games": 1,
+          "points": 9,
+          "valuation": 7,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 9,
+          "avgValuation": 7,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
         }
       ]
     },
@@ -65889,6 +67523,49 @@
           "primaryTeamName": "CALAFELL AM ATTIA TRADING",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84066",
           "primaryTeamIdExtern": 84066
+        }
+      ]
+    },
+    {
+      "key": "UUID:c6d7f92a-b843-4d62-bae9-50397c020def",
+      "label": "SENDY COSTA CANALS",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "SENDY COSTA CANALS BASQUET SANT PERE VERMELL #7",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 6,
+        "valuation": 3,
+        "fouls": 1,
+        "minutes": 26,
+        "avgPoints": 6,
+        "avgValuation": 3,
+        "avgFouls": 1,
+        "avgMinutes": 26
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:c6d7f92a-b843-4d62-bae9-50397c020def:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SENDY COSTA CANALS",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 6,
+          "valuation": 3,
+          "fouls": 1,
+          "minutes": 26,
+          "avgPoints": 6,
+          "avgValuation": 3,
+          "avgFouls": 1,
+          "avgMinutes": 26,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
         }
       ]
     },
@@ -69187,6 +70864,49 @@
       ]
     },
     {
+      "key": "UUID:06f5f861-3fd1-42ff-a448-f64d9c741cf4",
+      "label": "VALENTINA RIERA LLOPART",
+      "latestShirtNumber": "14",
+      "meta": "1 temporada \u00B7 #14 \u00B7 CN TERRASSA 1",
+      "searchText": "VALENTINA RIERA LLOPART CN TERRASSA 1 #14",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": 3,
+        "fouls": 1,
+        "minutes": 15,
+        "avgPoints": 5,
+        "avgValuation": 3,
+        "avgFouls": 1,
+        "avgMinutes": 15
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:06f5f861-3fd1-42ff-a448-f64d9c741cf4:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VALENTINA RIERA LLOPART",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 5,
+          "valuation": 3,
+          "fouls": 1,
+          "minutes": 15,
+          "avgPoints": 5,
+          "avgValuation": 3,
+          "avgFouls": 1,
+          "avgMinutes": 15,
+          "teamNames": [
+            "CN TERRASSA 1"
+          ],
+          "primaryTeamName": "CN TERRASSA 1",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "primaryTeamIdExtern": 90356
+        }
+      ]
+    },
+    {
       "key": "UUID:38e67716-fb97-4f83-8f2a-4a14769a22f7",
       "label": "VALENTINA ROCIO DOMINGUEZ FALCONI",
       "latestShirtNumber": "13",
@@ -71059,6 +72779,49 @@
       ]
     },
     {
+      "key": "UUID:eb2e0731-20f4-49a3-b580-f95370000d22",
+      "label": "VINYET ESCODA FERNANDEZ",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "VINYET ESCODA FERNANDEZ BASQUET SANT PERE VERMELL #11",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 8,
+        "valuation": 6,
+        "fouls": 2,
+        "minutes": 20,
+        "avgPoints": 8,
+        "avgValuation": 6,
+        "avgFouls": 2,
+        "avgMinutes": 20
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:eb2e0731-20f4-49a3-b580-f95370000d22:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VINYET ESCODA FERNANDEZ",
+          "shirtNumber": "11",
+          "games": 1,
+          "points": 8,
+          "valuation": 6,
+          "fouls": 2,
+          "minutes": 20,
+          "avgPoints": 8,
+          "avgValuation": 6,
+          "avgFouls": 2,
+          "avgMinutes": 20,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
+        }
+      ]
+    },
+    {
       "key": "UUID:e5853802-c295-4008-90c8-6e965d994893",
       "label": "VINYET ESTRUCH SAIZ",
       "latestShirtNumber": "11",
@@ -71185,6 +72948,49 @@
           "primaryTeamName": "C.B. ESPARREGUERA",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82074",
           "primaryTeamIdExtern": 82074
+        }
+      ]
+    },
+    {
+      "key": "UUID:603da581-957f-4069-9dc7-f5a178037632",
+      "label": "VIOLETA MATEU FRUTOS",
+      "latestShirtNumber": "18",
+      "meta": "1 temporada \u00B7 #18 \u00B7 BASQUET SANT PERE VERMELL",
+      "searchText": "VIOLETA MATEU FRUTOS BASQUET SANT PERE VERMELL #18",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 9,
+        "valuation": 4,
+        "fouls": 4,
+        "minutes": 19,
+        "avgPoints": 9,
+        "avgValuation": 4,
+        "avgFouls": 4,
+        "avgMinutes": 19
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:603da581-957f-4069-9dc7-f5a178037632:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VIOLETA MATEU FRUTOS",
+          "shirtNumber": "18",
+          "games": 1,
+          "points": 9,
+          "valuation": 4,
+          "fouls": 4,
+          "minutes": 19,
+          "avgPoints": 9,
+          "avgValuation": 4,
+          "avgFouls": 4,
+          "avgMinutes": 19,
+          "teamNames": [
+            "BASQUET SANT PERE VERMELL"
+          ],
+          "primaryTeamName": "BASQUET SANT PERE VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "primaryTeamIdExtern": 91102
         }
       ]
     },

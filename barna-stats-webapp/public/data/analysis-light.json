@@ -1,9 +1,9 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
-  "totalMatches": 6,
-  "totalTeams": 12,
+  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
+  "totalMatches": 8,
+  "totalTeams": 16,
   "teams": [
     {
       "seasonStartYear": 2026,
@@ -45,6 +45,27 @@
         "levelName": "Nivell C",
         "levelCode": "C",
         "groupCode": "23"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+      "teamIdIntern": 583158,
+      "teamIdExtern": 91102,
+      "teamName": "BASQUET SANT PERE VERMELL",
+      "matchesPlayed": 1,
+      "playersCount": 9,
+      "matchesFile": "teams/86c2e238558738cd/matches.json",
+      "playersFile": "teams/86c2e238558738cd/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 23873,
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "phaseName": "Fase Previa",
+        "levelName": "",
+        "levelCode": "",
+        "groupCode": "07"
       }
     },
     {
@@ -92,6 +113,27 @@
     {
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+      "teamIdIntern": 583159,
+      "teamIdExtern": 89687,
+      "teamName": "CE SANT NICOLAU 2",
+      "matchesPlayed": 1,
+      "playersCount": 10,
+      "matchesFile": "teams/0d72154de685fd1a/matches.json",
+      "playersFile": "teams/0d72154de685fd1a/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 23873,
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "phaseName": "Fase Previa",
+        "levelName": "",
+        "levelCode": "",
+        "groupCode": "07"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
       "teamIdIntern": 583592,
       "teamIdExtern": 94630,
@@ -108,6 +150,27 @@
         "levelName": "Nivell C",
         "levelCode": "C",
         "groupCode": "23"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+      "teamIdIntern": 585488,
+      "teamIdExtern": 90356,
+      "teamName": "CN TERRASSA 1",
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "matchesFile": "teams/3eceedadabda56f5/matches.json",
+      "playersFile": "teams/3eceedadabda56f5/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 23873,
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "phaseName": "Fase Previa",
+        "levelName": "",
+        "levelCode": "",
+        "groupCode": "07"
       }
     },
     {
@@ -171,6 +234,27 @@
         "levelName": "Nivell A",
         "levelCode": "A",
         "groupCode": "02"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+      "teamIdIntern": 585489,
+      "teamIdExtern": 89373,
+      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "matchesPlayed": 1,
+      "playersCount": 11,
+      "matchesFile": "teams/12e4270a3236a535/matches.json",
+      "playersFile": "teams/12e4270a3236a535/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 23873,
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "phaseName": "Fase Previa",
+        "levelName": "",
+        "levelCode": "",
+        "groupCode": "07"
       }
     },
     {

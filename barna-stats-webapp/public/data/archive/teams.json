@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-03T16:05:04.086285Z",
+  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -474,6 +474,34 @@
           "ties": 0,
           "standingPosition": 8,
           "avgValuation": 7.666666666666667
+        }
+      ]
+    },
+    {
+      "key": "TEAM:91102",
+      "label": "BASQUET SANT PERE VERMELL",
+      "latestTeamIdExtern": 91102,
+      "meta": "1 temporada \u00B7 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "searchText": "BASQUET SANT PERE VERMELL C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91102:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91102,
+          "teamName": "BASQUET SANT PERE VERMELL",
+          "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+          "levelName": "",
+          "matchesPlayed": 1,
+          "playersCount": 9,
+          "pointsFor": 91,
+          "pointsAgainst": 40,
+          "pointDiff": 51,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 1,
+          "avgValuation": 62
         }
       ]
     },
@@ -1813,6 +1841,34 @@
       ]
     },
     {
+      "key": "TEAM:89687",
+      "label": "CE SANT NICOLAU 2",
+      "latestTeamIdExtern": 89687,
+      "meta": "1 temporada \u00B7 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "searchText": "CE SANT NICOLAU 2 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:89687:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 89687,
+          "teamName": "CE SANT NICOLAU 2",
+          "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+          "levelName": "",
+          "matchesPlayed": 1,
+          "playersCount": 10,
+          "pointsFor": 40,
+          "pointsAgainst": 91,
+          "pointDiff": -51,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 4,
+          "avgValuation": 13
+        }
+      ]
+    },
+    {
       "key": "TEAM:94630",
       "label": "CE VILA OLIMPICA",
       "latestTeamIdExtern": 94630,
@@ -2061,6 +2117,34 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 40.625
+        }
+      ]
+    },
+    {
+      "key": "TEAM:90356",
+      "label": "CN TERRASSA 1",
+      "latestTeamIdExtern": 90356,
+      "meta": "1 temporada \u00B7 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "searchText": "CN TERRASSA 1 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:90356:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 90356,
+          "teamName": "CN TERRASSA 1",
+          "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+          "levelName": "",
+          "matchesPlayed": 1,
+          "playersCount": 12,
+          "pointsFor": 34,
+          "pointsAgainst": 53,
+          "pointDiff": -19,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 3,
+          "avgValuation": -10
         }
       ]
     },
@@ -2537,6 +2621,34 @@
           "ties": 0,
           "standingPosition": 3,
           "avgValuation": 24.5
+        }
+      ]
+    },
+    {
+      "key": "TEAM:89373",
+      "label": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "latestTeamIdExtern": 89373,
+      "meta": "1 temporada \u00B7 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "searchText": "FEMEN\u00CD SANT ADRI\u00C0 BLANC C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:89373:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 89373,
+          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+          "levelName": "",
+          "matchesPlayed": 1,
+          "playersCount": 11,
+          "pointsFor": 53,
+          "pointsAgainst": 34,
+          "pointDiff": 19,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 2,
+          "avgValuation": 18
         }
       ]
     },

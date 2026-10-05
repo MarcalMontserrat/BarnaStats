@@ -51,6 +51,57 @@
     ]
   },
   {
+    "key": "fcbq-club:3428",
+    "label": "ASSOCIACIO ESPORTIVA SANT NICOLAU CANYELLES",
+    "shortName": "A.E. SANT NICOLAU C",
+    "clubId": 3428,
+    "primaryTeamIdExtern": 89687,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 10,
+    "categoriesCount": 1,
+    "levelsCount": 0,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "ASSOCIACIO ESPORTIVA SANT NICOLAU CANYELLES A.E. SANT NICOLAU C CE SANT NICOLAU 2 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+    "categories": [
+      {
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "levels": [
+          {
+            "levelKey": "__no-level__",
+            "levelName": "Sin nivel visible",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+                "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+                "teamIdExtern": 89687,
+                "teamName": "CE SANT NICOLAU 2",
+                "matchesPlayed": 1,
+                "playersCount": 10,
+                "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+                "levelKey": "",
+                "levelName": "",
+                "phaseLabel": "Fase Previa \u00B7 Grupo 07",
+                "latestPhaseOptionValue": "source:23873",
+                "groupCode": "07",
+                "standingPosition": 4,
+                "record": {
+                  "wins": 0,
+                  "losses": 1,
+                  "ties": 0,
+                  "pointsFor": 40,
+                  "pointsAgainst": 91
+                },
+                "pointDiff": -51,
+                "avgValuation": 13
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "key": "fcbq-club:203",
     "label": "BASQUET CLUB SANT JOAN DESPI",
     "shortName": "B.C. SANT JOAN DESP",
@@ -94,6 +145,57 @@
                 },
                 "pointDiff": -98,
                 "avgValuation": -8
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "derived-club:basquet-sant-pere",
+    "label": "BASQUET SANT PERE",
+    "shortName": "BASQUET SANT PERE",
+    "clubId": 0,
+    "primaryTeamIdExtern": 91102,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 9,
+    "categoriesCount": 1,
+    "levelsCount": 0,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "BASQUET SANT PERE BASQUET SANT PERE VERMELL C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+    "categories": [
+      {
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "levels": [
+          {
+            "levelKey": "__no-level__",
+            "levelName": "Sin nivel visible",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+                "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+                "teamIdExtern": 91102,
+                "teamName": "BASQUET SANT PERE VERMELL",
+                "matchesPlayed": 1,
+                "playersCount": 9,
+                "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+                "levelKey": "",
+                "levelName": "",
+                "phaseLabel": "Fase Previa \u00B7 Grupo 07",
+                "latestPhaseOptionValue": "source:23873",
+                "groupCode": "07",
+                "standingPosition": 1,
+                "record": {
+                  "wins": 1,
+                  "losses": 0,
+                  "ties": 0,
+                  "pointsFor": 91,
+                  "pointsAgainst": 40
+                },
+                "pointDiff": 51,
+                "avgValuation": 62
               }
             ]
           }
@@ -341,6 +443,57 @@
     ]
   },
   {
+    "key": "derived-club:cn-terrassa-1",
+    "label": "CN TERRASSA 1",
+    "shortName": "CN TERRASSA 1",
+    "clubId": 0,
+    "primaryTeamIdExtern": 90356,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 12,
+    "categoriesCount": 1,
+    "levelsCount": 0,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "CN TERRASSA 1 C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+    "categories": [
+      {
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "levels": [
+          {
+            "levelKey": "__no-level__",
+            "levelName": "Sin nivel visible",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+                "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+                "teamIdExtern": 90356,
+                "teamName": "CN TERRASSA 1",
+                "matchesPlayed": 1,
+                "playersCount": 12,
+                "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+                "levelKey": "",
+                "levelName": "",
+                "phaseLabel": "Fase Previa \u00B7 Grupo 07",
+                "latestPhaseOptionValue": "source:23873",
+                "groupCode": "07",
+                "standingPosition": 3,
+                "record": {
+                  "wins": 0,
+                  "losses": 1,
+                  "ties": 0,
+                  "pointsFor": 34,
+                  "pointsAgainst": 53
+                },
+                "pointDiff": -19,
+                "avgValuation": -10
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "key": "derived-club:dominiques-barcelona",
     "label": "DOMINIQUES BARCELONA",
     "shortName": "DOMINIQUES BARCELONA",
@@ -483,14 +636,49 @@
     "shortName": "U.B. SANT ADRIA",
     "clubId": 2517,
     "primaryTeamIdExtern": 89366,
-    "totalTeams": 1,
-    "totalMatches": 1,
-    "totalPlayers": 8,
-    "categoriesCount": 1,
+    "totalTeams": 2,
+    "totalMatches": 2,
+    "totalPlayers": 19,
+    "categoriesCount": 2,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
-    "searchText": "UNIO BASQUET SANT ADRIA U.B. SANT ADRIA FEMEN\u00CD SANT ADRI\u00C0 A C.t. Pre-mini Femen\u00ED Nivell A",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 2 partidos",
+    "searchText": "UNIO BASQUET SANT ADRIA U.B. SANT ADRIA FEMEN\u00CD SANT ADRI\u00C0 A C.t. Pre-mini Femen\u00ED Nivell A FEMEN\u00CD SANT ADRI\u00C0 BLANC C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
+      {
+        "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+        "levels": [
+          {
+            "levelKey": "__no-level__",
+            "levelName": "Sin nivel visible",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+                "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+                "teamIdExtern": 89373,
+                "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+                "matchesPlayed": 1,
+                "playersCount": 11,
+                "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+                "levelKey": "",
+                "levelName": "",
+                "phaseLabel": "Fase Previa \u00B7 Grupo 07",
+                "latestPhaseOptionValue": "source:23873",
+                "groupCode": "07",
+                "standingPosition": 2,
+                "record": {
+                  "wins": 1,
+                  "losses": 0,
+                  "ties": 0,
+                  "pointsFor": 53,
+                  "pointsAgainst": 34
+                },
+                "pointDiff": 19,
+                "avgValuation": 18
+              }
+            ]
+          }
+        ]
+      },
       {
         "categoryName": "C.t. Pre-mini Femen\u00ED",
         "levels": [

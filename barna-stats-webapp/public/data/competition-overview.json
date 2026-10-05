@@ -1,9 +1,21 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "totalTeams": 12,
-  "totalMatches": 6,
+  "totalTeams": 16,
+  "totalMatches": 8,
   "phases": [
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "sourcePhaseId": 23873,
+      "phaseNumber": 1,
+      "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "phaseName": "Fase Previa",
+      "levelName": "",
+      "levelCode": "",
+      "groupCode": "07",
+      "matchesCount": 2
+    },
     {
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
@@ -49,6 +61,15 @@
       "totalValuation": -8
     },
     {
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+      "teamIdIntern": 583158,
+      "teamIdExtern": 91102,
+      "teamName": "BASQUET SANT PERE VERMELL",
+      "matchesPlayed": 1,
+      "playersCount": 9,
+      "totalValuation": 62
+    },
+    {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
       "teamIdIntern": 583371,
       "teamIdExtern": 90463,
@@ -67,12 +88,30 @@
       "totalValuation": 128
     },
     {
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+      "teamIdIntern": 583159,
+      "teamIdExtern": 89687,
+      "teamName": "CE SANT NICOLAU 2",
+      "matchesPlayed": 1,
+      "playersCount": 10,
+      "totalValuation": 13
+    },
+    {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
       "teamIdIntern": 583592,
       "teamIdExtern": 94630,
       "teamName": "CE VILA OLIMPICA",
       "matchesPlayed": 1,
       "playersCount": 9,
+      "totalValuation": -10
+    },
+    {
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+      "teamIdIntern": 585488,
+      "teamIdExtern": 90356,
+      "teamName": "CN TERRASSA 1",
+      "matchesPlayed": 1,
+      "playersCount": 12,
       "totalValuation": -10
     },
     {
@@ -101,6 +140,15 @@
       "matchesPlayed": 1,
       "playersCount": 8,
       "totalValuation": 38
+    },
+    {
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+      "teamIdIntern": 585489,
+      "teamIdExtern": 89373,
+      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "matchesPlayed": 1,
+      "playersCount": 11,
+      "totalValuation": 18
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
@@ -140,6 +188,12 @@
     }
   ],
   "categoryFiles": [
+    {
+      "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "matchesFile": "competition-matches/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json",
+      "leadersFile": "competition-player-leaders/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json",
+      "standingsFile": "competition-standings/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json"
+    },
     {
       "categoryName": "C.t. Pre-mini Femen\u00ED",
       "matchesFile": "competition-matches/c-t-pre-mini-femeni.json",

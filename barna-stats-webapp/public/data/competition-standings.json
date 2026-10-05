@@ -3,6 +3,69 @@
   "seasonLabel": "2026-2027",
   "scopes": [
     {
+      "key": "source:2026-2027:23873",
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "sourcePhaseId": 23873,
+      "phaseNumber": 1,
+      "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+      "phaseName": "Fase Previa",
+      "levelName": "",
+      "levelCode": "",
+      "groupCode": "07",
+      "matchesCount": 2,
+      "rows": [
+        {
+          "position": 1,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "teamName": "BASQUET SANT PERE VERMELL",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 91,
+          "pointsAgainst": 40,
+          "pointDiff": 51
+        },
+        {
+          "position": 2,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 53,
+          "pointsAgainst": 34,
+          "pointDiff": 19
+        },
+        {
+          "position": 3,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
+          "teamName": "CN TERRASSA 1",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 34,
+          "pointsAgainst": 53,
+          "pointDiff": -19
+        },
+        {
+          "position": 4,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "teamName": "CE SANT NICOLAU 2",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 40,
+          "pointsAgainst": 91,
+          "pointDiff": -51
+        }
+      ]
+    },
+    {
       "key": "source:2026-2027:23958",
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
