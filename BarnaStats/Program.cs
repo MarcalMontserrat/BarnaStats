@@ -314,15 +314,30 @@ async Task<(bool Succeeded, bool FilesChanged)> RunDownloadAsync(
                 // Desde 2026-2027 hay categorías (p. ej. Pre-mini) que en la web solo muestran el marcador.
                 // Con la cuenta de la app se piden las stats completas al endpoint antiguo.
                 if ((statsRaw is null || !HasMatchPlayers(statsRaw)) &&
-                    appClient is not null &&
-                    legacyStatsIds.TryGetValue(mapping.MatchWebId, out var legacyStatsId))
+                    appClient is not null)
                 {
-                    var appStatsRaw = await appClient.GetMatchStatsRawAsync(legacyStatsId);
-                    if (HasMatchPlayers(appStatsRaw))
+                    if (!legacyStatsIds.TryGetValue(mapping.MatchWebId, out var legacyStatsId))
                     {
-                        statsRaw = appStatsRaw;
-                        movesRaw = await appClient.GetMatchMovesRawAsync(legacyStatsId);
-                        statsSource = "app";
+                        lock (consoleLock)
+                        {
+                            Console.WriteLine($"  App -> matchWebId={mapping.MatchWebId} no aparece en el listado de la app (sin universallyid).");
+                        }
+                    }
+                    else
+                    {
+                        var appStatsRaw = await appClient.GetMatchStatsRawAsync(legacyStatsId);
+                        var appHasPlayers = HasMatchPlayers(appStatsRaw);
+                        lock (consoleLock)
+                        {
+                            Console.WriteLine($"  App -> matchWebId={mapping.MatchWebId} universallyid={legacyStatsId}: {(appHasPlayers ? "con jugadoras" : "respuesta sin jugadoras")} ({appStatsRaw.Length} bytes).");
+                        }
+
+                        if (appHasPlayers)
+                        {
+                            statsRaw = appStatsRaw;
+                            movesRaw = await appClient.GetMatchMovesRawAsync(legacyStatsId);
+                            statsSource = "app";
+                        }
                     }
                 }
 
@@ -516,6 +531,7 @@ async Task<IReadOnlyDictionary<int, string>> LoadLegacyStatsIdsAsync(
     {
         var legacyStatsIds = await appClient.GetLegacyStatsIdsAsync(storage.Scope.Id.Value);
         Console.WriteLine($"Cuenta de la app activa: {legacyStatsIds.Count} partidos con stats de la app en la fase.");
+        Console.WriteLine($"  Ids de la app (matchWebId): {string.Join(", ", legacyStatsIds.Keys.OrderBy(id => id))}");
         return legacyStatsIds;
     }
     catch (Exception ex)

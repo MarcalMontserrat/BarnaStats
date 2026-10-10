@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
+  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -1212,21 +1212,43 @@
       "key": "UUID:b0d889f0-5d19-4597-a5b3-12844708659d",
       "label": "ABRIL CAPELLA CASAS",
       "latestShirtNumber": "23",
-      "meta": "1 temporada \u00B7 #23 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "ABRIL CAPELLA CASAS VEDRUNA GR\u00C0CIA VERD #23",
+      "meta": "2 temporadas \u00B7 #23 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "ABRIL CAPELLA CASAS VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #23",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 41,
-        "valuation": 21,
-        "fouls": 8,
-        "minutes": 300,
-        "avgPoints": 2.9285714285714284,
-        "avgValuation": 1.5,
-        "avgFouls": 0.5714285714285714,
-        "avgMinutes": 21.428571428571427
+        "seasons": 2,
+        "games": 15,
+        "points": 43,
+        "valuation": 20,
+        "fouls": 11,
+        "minutes": 324,
+        "avgPoints": 2.8666666666666667,
+        "avgValuation": 1.3333333333333333,
+        "avgFouls": 0.7333333333333333,
+        "avgMinutes": 21.6
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:b0d889f0-5d19-4597-a5b3-12844708659d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ABRIL CAPELLA CASAS",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 2,
+          "valuation": -1,
+          "fouls": 3,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": -1,
+          "avgFouls": 3,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:b0d889f0-5d19-4597-a5b3-12844708659d:2025-2026",
           "seasonStartYear": 2025,
@@ -2353,21 +2375,43 @@
       "key": "UUID:da39dec5-1621-491e-8524-813bd8a086cd",
       "label": "ADRIANA ROCAFORT MAZA",
       "latestShirtNumber": "13",
-      "meta": "1 temporada \u00B7 #13 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "ADRIANA ROCAFORT MAZA SE LA SALLE BONANOVA NEGRE #13",
+      "meta": "2 temporadas \u00B7 #13 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "ADRIANA ROCAFORT MAZA SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #13",
       "totals": {
-        "seasons": 1,
-        "games": 12,
-        "points": 43,
-        "valuation": 26,
+        "seasons": 2,
+        "games": 13,
+        "points": 50,
+        "valuation": 33,
         "fouls": 14,
-        "minutes": 248,
-        "avgPoints": 3.5833333333333335,
-        "avgValuation": 2.1666666666666665,
-        "avgFouls": 1.1666666666666667,
-        "avgMinutes": 20.666666666666668
+        "minutes": 275,
+        "avgPoints": 3.8461538461538463,
+        "avgValuation": 2.5384615384615383,
+        "avgFouls": 1.0769230769230769,
+        "avgMinutes": 21.153846153846153
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:da39dec5-1621-491e-8524-813bd8a086cd:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ADRIANA ROCAFORT MAZA",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 7,
+          "valuation": 7,
+          "fouls": 0,
+          "minutes": 27,
+          "avgPoints": 7,
+          "avgValuation": 7,
+          "avgFouls": 0,
+          "avgMinutes": 27,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:da39dec5-1621-491e-8524-813bd8a086cd:2025-2026",
           "seasonStartYear": 2025,
@@ -2933,6 +2977,49 @@
       ]
     },
     {
+      "key": "UUID:c37c6d25-32d0-4936-9283-57d64e1b3529",
+      "label": "AINA CAMBR\u00D3N CRISTANCHO",
+      "latestShirtNumber": "14",
+      "meta": "1 temporada \u00B7 #14 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "AINA CAMBR\u00D3N CRISTANCHO LIMA-HORTA B\u00C0SQUET SALM\u00D3 #14",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 4,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 4,
+        "avgValuation": 4,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:c37c6d25-32d0-4936-9283-57d64e1b3529:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AINA CAMBR\u00D3N CRISTANCHO",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 4,
+          "valuation": 4,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 4,
+          "avgValuation": 4,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
+        }
+      ]
+    },
+    {
       "key": "UUID:6b18e554-b6f7-4380-86e5-7265343cd993",
       "label": "AINA CARABEL GALVEZ",
       "latestShirtNumber": "7",
@@ -3069,15 +3156,15 @@
       "searchText": "AINA CORTINAS GUIRAO FEMEN\u00CD SANT ADRI\u00C0 BLANC #23",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 6,
+        "games": 2,
+        "points": 9,
         "valuation": 1,
-        "fouls": 3,
-        "minutes": 24,
-        "avgPoints": 6,
-        "avgValuation": 1,
-        "avgFouls": 3,
-        "avgMinutes": 24
+        "fouls": 5,
+        "minutes": 44,
+        "avgPoints": 4.5,
+        "avgValuation": 0.5,
+        "avgFouls": 2.5,
+        "avgMinutes": 22
       },
       "seasonSummaries": [
         {
@@ -3086,15 +3173,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "AINA CORTINAS GUIRAO",
           "shirtNumber": "23",
-          "games": 1,
-          "points": 6,
+          "games": 2,
+          "points": 9,
           "valuation": 1,
-          "fouls": 3,
-          "minutes": 24,
-          "avgPoints": 6,
-          "avgValuation": 1,
-          "avgFouls": 3,
-          "avgMinutes": 24,
+          "fouls": 5,
+          "minutes": 44,
+          "avgPoints": 4.5,
+          "avgValuation": 0.5,
+          "avgFouls": 2.5,
+          "avgMinutes": 22,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -4353,6 +4440,49 @@
           "primaryTeamName": "ESCOLA IPSI 16",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81620",
           "primaryTeamIdExtern": 81620
+        }
+      ]
+    },
+    {
+      "key": "UUID:6c037a15-9e7c-480f-aa7c-ac4966ea7d36",
+      "label": "AINA SABAT\u00C9 MOSEGU\u00CD",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "AINA SABAT\u00C9 MOSEGU\u00CD LIMA-HORTA B\u00C0SQUET SALM\u00D3 #8",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": -2,
+        "fouls": 0,
+        "minutes": 30,
+        "avgPoints": 2,
+        "avgValuation": -2,
+        "avgFouls": 0,
+        "avgMinutes": 30
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:6c037a15-9e7c-480f-aa7c-ac4966ea7d36:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "AINA SABAT\u00C9 MOSEGU\u00CD",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 2,
+          "valuation": -2,
+          "fouls": 0,
+          "minutes": 30,
+          "avgPoints": 2,
+          "avgValuation": -2,
+          "avgFouls": 0,
+          "avgMinutes": 30,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
         }
       ]
     },
@@ -8824,21 +8954,43 @@
       "key": "UUID:e3cb1090-8c21-44b3-ab52-308864fb0a40",
       "label": "ANA DIAZ LOMBARDO",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ANA DIAZ LOMBARDO C.B GRUP BARNA A #15",
+      "meta": "2 temporadas \u00B7 #15 \u00B7 C.B GRUP BARNA B",
+      "searchText": "ANA DIAZ LOMBARDO C.B GRUP BARNA B C.B GRUP BARNA A #15",
       "totals": {
-        "seasons": 1,
-        "games": 11,
+        "seasons": 2,
+        "games": 12,
         "points": 47,
-        "valuation": 38,
-        "fouls": 8,
-        "minutes": 270,
-        "avgPoints": 4.2727272727272725,
-        "avgValuation": 3.4545454545454546,
-        "avgFouls": 0.7272727272727273,
-        "avgMinutes": 24.545454545454547
+        "valuation": 36,
+        "fouls": 10,
+        "minutes": 288,
+        "avgPoints": 3.9166666666666665,
+        "avgValuation": 3,
+        "avgFouls": 0.8333333333333334,
+        "avgMinutes": 24
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:e3cb1090-8c21-44b3-ab52-308864fb0a40:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ANA DIAZ LOMBARDO",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 0,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:e3cb1090-8c21-44b3-ab52-308864fb0a40:2025-2026",
           "seasonStartYear": 2025,
@@ -9172,15 +9324,15 @@
       "searchText": "ANDREA ORRIOS MARTINEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #26",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 4,
-        "valuation": 3,
-        "fouls": 0,
-        "minutes": 19,
-        "avgPoints": 4,
-        "avgValuation": 3,
-        "avgFouls": 0,
-        "avgMinutes": 19
+        "games": 2,
+        "points": 6,
+        "valuation": 2,
+        "fouls": 1,
+        "minutes": 33,
+        "avgPoints": 3,
+        "avgValuation": 1,
+        "avgFouls": 0.5,
+        "avgMinutes": 16.5
       },
       "seasonSummaries": [
         {
@@ -9189,15 +9341,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "ANDREA ORRIOS MARTINEZ",
           "shirtNumber": "26",
-          "games": 1,
-          "points": 4,
-          "valuation": 3,
-          "fouls": 0,
-          "minutes": 19,
-          "avgPoints": 4,
-          "avgValuation": 3,
-          "avgFouls": 0,
-          "avgMinutes": 19,
+          "games": 2,
+          "points": 6,
+          "valuation": 2,
+          "fouls": 1,
+          "minutes": 33,
+          "avgPoints": 3,
+          "avgValuation": 1,
+          "avgFouls": 0.5,
+          "avgMinutes": 16.5,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -9599,18 +9751,18 @@
       "label": "ANNA GUITART SINSARD",
       "latestShirtNumber": "32",
       "meta": "2 temporadas \u00B7 #32 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ANNA GUITART SINSARD C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #32",
+      "searchText": "ANNA GUITART SINSARD C.B GRUP BARNA A C.B GRUP BARNA B C.B GRUP BARNA VERMELL  1ER ANY #32",
       "totals": {
         "seasons": 2,
-        "games": 23,
-        "points": 145,
-        "valuation": 99,
+        "games": 24,
+        "points": 148,
+        "valuation": 102,
         "fouls": 15,
-        "minutes": 493,
-        "avgPoints": 6.304347826086956,
-        "avgValuation": 4.304347826086956,
-        "avgFouls": 0.6521739130434783,
-        "avgMinutes": 21.434782608695652
+        "minutes": 511,
+        "avgPoints": 6.166666666666667,
+        "avgValuation": 4.25,
+        "avgFouls": 0.625,
+        "avgMinutes": 21.291666666666668
       },
       "seasonSummaries": [
         {
@@ -9619,17 +9771,18 @@
           "seasonLabel": "2026-2027",
           "playerName": "ANNA GUITART SINSARD",
           "shirtNumber": "32",
-          "games": 1,
-          "points": 12,
-          "valuation": 8,
+          "games": 2,
+          "points": 15,
+          "valuation": 11,
           "fouls": 2,
-          "minutes": 24,
-          "avgPoints": 12,
-          "avgValuation": 8,
-          "avgFouls": 2,
-          "avgMinutes": 24,
+          "minutes": 42,
+          "avgPoints": 7.5,
+          "avgValuation": 5.5,
+          "avgFouls": 1,
+          "avgMinutes": 21,
           "teamNames": [
-            "C.B GRUP BARNA A"
+            "C.B GRUP BARNA A",
+            "C.B GRUP BARNA B"
           ],
           "primaryTeamName": "C.B GRUP BARNA A",
           "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
@@ -10464,14 +10617,14 @@
       "searchText": "ARIADNA ARIAS LUNA BASQUET SANT PERE VERMELL #10",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 12,
-        "valuation": 10,
-        "fouls": 2,
-        "minutes": 21,
-        "avgPoints": 12,
-        "avgValuation": 10,
-        "avgFouls": 2,
+        "games": 2,
+        "points": 20,
+        "valuation": 15,
+        "fouls": 5,
+        "minutes": 42,
+        "avgPoints": 10,
+        "avgValuation": 7.5,
+        "avgFouls": 2.5,
         "avgMinutes": 21
       },
       "seasonSummaries": [
@@ -10481,14 +10634,14 @@
           "seasonLabel": "2026-2027",
           "playerName": "ARIADNA ARIAS LUNA",
           "shirtNumber": "10",
-          "games": 1,
-          "points": 12,
-          "valuation": 10,
-          "fouls": 2,
-          "minutes": 21,
-          "avgPoints": 12,
-          "avgValuation": 10,
-          "avgFouls": 2,
+          "games": 2,
+          "points": 20,
+          "valuation": 15,
+          "fouls": 5,
+          "minutes": 42,
+          "avgPoints": 10,
+          "avgValuation": 7.5,
+          "avgFouls": 2.5,
           "avgMinutes": 21,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
@@ -11621,21 +11774,43 @@
       "key": "UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d",
       "label": "ARLET BALAGUER\u00D3 PI\u00D1AS",
       "latestShirtNumber": "2",
-      "meta": "1 temporada \u00B7 #2 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ARLET BALAGUER\u00D3 PI\u00D1AS C.B GRUP BARNA A #2",
+      "meta": "2 temporadas \u00B7 #2 \u00B7 C.B GRUP BARNA B",
+      "searchText": "ARLET BALAGUER\u00D3 PI\u00D1AS C.B GRUP BARNA B C.B GRUP BARNA A #2",
       "totals": {
-        "seasons": 1,
-        "games": 16,
+        "seasons": 2,
+        "games": 17,
         "points": 56,
-        "valuation": 20,
+        "valuation": 18,
         "fouls": 25,
-        "minutes": 435,
-        "avgPoints": 3.5,
-        "avgValuation": 1.25,
-        "avgFouls": 1.5625,
-        "avgMinutes": 27.1875
+        "minutes": 462,
+        "avgPoints": 3.2941176470588234,
+        "avgValuation": 1.0588235294117647,
+        "avgFouls": 1.4705882352941178,
+        "avgMinutes": 27.176470588235293
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ARLET BALAGUER\u00D3 PI\u00D1AS",
+          "shirtNumber": "2",
+          "games": 1,
+          "points": 0,
+          "valuation": -2,
+          "fouls": 0,
+          "minutes": 27,
+          "avgPoints": 0,
+          "avgValuation": -2,
+          "avgFouls": 0,
+          "avgMinutes": 27,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d:2025-2026",
           "seasonStartYear": 2025,
@@ -13711,21 +13886,43 @@
       "key": "UUID:586dc31b-7f17-44a0-ad7a-9f95ef7621bc",
       "label": "B.M.E.",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "B.M.E. SE LA SALLE BONANOVA NEGRE #7",
+      "meta": "2 temporadas \u00B7 #7 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "B.M.E. SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #7",
       "totals": {
-        "seasons": 1,
-        "games": 13,
+        "seasons": 2,
+        "games": 14,
         "points": 37,
-        "valuation": 4,
-        "fouls": 18,
-        "minutes": 298,
-        "avgPoints": 2.8461538461538463,
-        "avgValuation": 0.3076923076923077,
-        "avgFouls": 1.3846153846153846,
-        "avgMinutes": 22.923076923076923
+        "valuation": 1,
+        "fouls": 19,
+        "minutes": 319,
+        "avgPoints": 2.642857142857143,
+        "avgValuation": 0.07142857142857142,
+        "avgFouls": 1.3571428571428572,
+        "avgMinutes": 22.785714285714285
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:586dc31b-7f17-44a0-ad7a-9f95ef7621bc:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "B.M.E.",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 0,
+          "valuation": -3,
+          "fouls": 1,
+          "minutes": 21,
+          "avgPoints": 0,
+          "avgValuation": -3,
+          "avgFouls": 1,
+          "avgMinutes": 21,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:586dc31b-7f17-44a0-ad7a-9f95ef7621bc:2025-2026",
           "seasonStartYear": 2025,
@@ -14307,6 +14504,49 @@
           "primaryTeamName": "U.E. HORTA",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82789",
           "primaryTeamIdExtern": 82789
+        }
+      ]
+    },
+    {
+      "key": "UUID:54ec0be1-a338-4e99-a01b-6dd95aac51cc",
+      "label": "BERTA COMA CIRERA",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "BERTA COMA CIRERA LIMA-HORTA B\u00C0SQUET SALM\u00D3 #15",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 2,
+        "fouls": 0,
+        "minutes": 18,
+        "avgPoints": 2,
+        "avgValuation": 2,
+        "avgFouls": 0,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:54ec0be1-a338-4e99-a01b-6dd95aac51cc:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "BERTA COMA CIRERA",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
         }
       ]
     },
@@ -17563,6 +17803,49 @@
       ]
     },
     {
+      "key": "UUID:7d1c86d8-a27c-4300-8a77-9c82fa62df49",
+      "label": "CARLA MONRAS SANDIN",
+      "latestShirtNumber": "27",
+      "meta": "1 temporada \u00B7 #27 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "CARLA MONRAS SANDIN LIMA-HORTA B\u00C0SQUET SALM\u00D3 #27",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -1,
+        "fouls": 1,
+        "minutes": 24,
+        "avgPoints": 0,
+        "avgValuation": -1,
+        "avgFouls": 1,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:7d1c86d8-a27c-4300-8a77-9c82fa62df49:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CARLA MONRAS SANDIN",
+          "shirtNumber": "27",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
+        }
+      ]
+    },
+    {
       "key": "UUID:b0265ad2-4f33-4185-a86e-c1899d19a083",
       "label": "CARLA MORILLO SOL\u00D3RZANO",
       "latestShirtNumber": "25",
@@ -17786,15 +18069,15 @@
       "searchText": "CARLA PEREZ  FINISTROSA FEMEN\u00CD SANT ADRI\u00C0 BLANC #2",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 7,
-        "valuation": 5,
-        "fouls": 2,
-        "minutes": 19,
-        "avgPoints": 7,
-        "avgValuation": 5,
-        "avgFouls": 2,
-        "avgMinutes": 19
+        "games": 2,
+        "points": 12,
+        "valuation": 4,
+        "fouls": 5,
+        "minutes": 41,
+        "avgPoints": 6,
+        "avgValuation": 2,
+        "avgFouls": 2.5,
+        "avgMinutes": 20.5
       },
       "seasonSummaries": [
         {
@@ -17803,15 +18086,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "CARLA PEREZ  FINISTROSA",
           "shirtNumber": "2",
-          "games": 1,
-          "points": 7,
-          "valuation": 5,
-          "fouls": 2,
-          "minutes": 19,
-          "avgPoints": 7,
-          "avgValuation": 5,
-          "avgFouls": 2,
-          "avgMinutes": 19,
+          "games": 2,
+          "points": 12,
+          "valuation": 4,
+          "fouls": 5,
+          "minutes": 41,
+          "avgPoints": 6,
+          "avgValuation": 2,
+          "avgFouls": 2.5,
+          "avgMinutes": 20.5,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -18044,15 +18327,15 @@
       "searchText": "CARLA SA\u00D1UDO MOTA BASQUET SANT PERE VERMELL #23",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 11,
-        "valuation": 9,
-        "fouls": 0,
-        "minutes": 25,
-        "avgPoints": 11,
-        "avgValuation": 9,
-        "avgFouls": 0,
-        "avgMinutes": 25
+        "games": 2,
+        "points": 13,
+        "valuation": 7,
+        "fouls": 4,
+        "minutes": 48,
+        "avgPoints": 6.5,
+        "avgValuation": 3.5,
+        "avgFouls": 2,
+        "avgMinutes": 24
       },
       "seasonSummaries": [
         {
@@ -18061,15 +18344,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "CARLA SA\u00D1UDO MOTA",
           "shirtNumber": "23",
-          "games": 1,
-          "points": 11,
-          "valuation": 9,
-          "fouls": 0,
-          "minutes": 25,
-          "avgPoints": 11,
-          "avgValuation": 9,
-          "avgFouls": 0,
-          "avgMinutes": 25,
+          "games": 2,
+          "points": 13,
+          "valuation": 7,
+          "fouls": 4,
+          "minutes": 48,
+          "avgPoints": 6.5,
+          "avgValuation": 3.5,
+          "avgFouls": 2,
+          "avgMinutes": 24,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -18302,15 +18585,15 @@
       "searchText": "CARLOTA CERVANTES JAN\u00C9 BASQUET SANT PERE VERMELL #12",
       "totals": {
         "seasons": 1,
-        "games": 1,
+        "games": 2,
         "points": 6,
-        "valuation": 5,
-        "fouls": 1,
-        "minutes": 26,
-        "avgPoints": 6,
-        "avgValuation": 5,
-        "avgFouls": 1,
-        "avgMinutes": 26
+        "valuation": 1,
+        "fouls": 5,
+        "minutes": 39,
+        "avgPoints": 3,
+        "avgValuation": 0.5,
+        "avgFouls": 2.5,
+        "avgMinutes": 19.5
       },
       "seasonSummaries": [
         {
@@ -18319,15 +18602,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "CARLOTA CERVANTES JAN\u00C9",
           "shirtNumber": "12",
-          "games": 1,
+          "games": 2,
           "points": 6,
-          "valuation": 5,
-          "fouls": 1,
-          "minutes": 26,
-          "avgPoints": 6,
-          "avgValuation": 5,
-          "avgFouls": 1,
-          "avgMinutes": 26,
+          "valuation": 1,
+          "fouls": 5,
+          "minutes": 39,
+          "avgPoints": 3,
+          "avgValuation": 0.5,
+          "avgFouls": 2.5,
+          "avgMinutes": 19.5,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -19334,21 +19617,43 @@
       "key": "UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b",
       "label": "CHIARA MART\u00CDNEZ LAMPIS",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "CHIARA MART\u00CDNEZ LAMPIS VEDRUNA GR\u00C0CIA VERD #8",
+      "meta": "2 temporadas \u00B7 #8 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "CHIARA MART\u00CDNEZ LAMPIS VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #8",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 67,
-        "valuation": 49,
+        "seasons": 2,
+        "games": 15,
+        "points": 77,
+        "valuation": 59,
         "fouls": 10,
-        "minutes": 311,
-        "avgPoints": 4.785714285714286,
-        "avgValuation": 3.5,
-        "avgFouls": 0.7142857142857143,
-        "avgMinutes": 22.214285714285715
+        "minutes": 335,
+        "avgPoints": 5.133333333333334,
+        "avgValuation": 3.933333333333333,
+        "avgFouls": 0.6666666666666666,
+        "avgMinutes": 22.333333333333332
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CHIARA MART\u00CDNEZ LAMPIS",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 10,
+          "valuation": 10,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 10,
+          "avgValuation": 10,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b:2025-2026",
           "seasonStartYear": 2025,
@@ -20475,21 +20780,43 @@
       "key": "UUID:27d328c7-e06e-4aa7-98db-530c827d4a18",
       "label": "CLARA RIUS CAPRETTI",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "CLARA RIUS CAPRETTI SE LA SALLE BONANOVA NEGRE #8",
+      "meta": "2 temporadas \u00B7 #8 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "CLARA RIUS CAPRETTI SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #8",
       "totals": {
-        "seasons": 1,
-        "games": 10,
-        "points": 37,
+        "seasons": 2,
+        "games": 11,
+        "points": 39,
         "valuation": 23,
-        "fouls": 10,
-        "minutes": 213,
-        "avgPoints": 3.7,
-        "avgValuation": 2.3,
-        "avgFouls": 1,
-        "avgMinutes": 21.3
+        "fouls": 12,
+        "minutes": 234,
+        "avgPoints": 3.5454545454545454,
+        "avgValuation": 2.090909090909091,
+        "avgFouls": 1.0909090909090908,
+        "avgMinutes": 21.272727272727273
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:27d328c7-e06e-4aa7-98db-530c827d4a18:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CLARA RIUS CAPRETTI",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 2,
+          "valuation": 0,
+          "fouls": 2,
+          "minutes": 21,
+          "avgPoints": 2,
+          "avgValuation": 0,
+          "avgFouls": 2,
+          "avgMinutes": 21,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:27d328c7-e06e-4aa7-98db-530c827d4a18:2025-2026",
           "seasonStartYear": 2025,
@@ -21514,15 +21841,15 @@
       "searchText": "CLAUDIA ZAGUIRRE MARQUEZ BASQUET SANT PERE VERMELL #9",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 7,
-        "valuation": 2,
-        "fouls": 4,
-        "minutes": 22,
-        "avgPoints": 7,
+        "games": 2,
+        "points": 13,
+        "valuation": 4,
+        "fouls": 8,
+        "minutes": 40,
+        "avgPoints": 6.5,
         "avgValuation": 2,
         "avgFouls": 4,
-        "avgMinutes": 22
+        "avgMinutes": 20
       },
       "seasonSummaries": [
         {
@@ -21531,15 +21858,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "CLAUDIA ZAGUIRRE MARQUEZ",
           "shirtNumber": "9",
-          "games": 1,
-          "points": 7,
-          "valuation": 2,
-          "fouls": 4,
-          "minutes": 22,
-          "avgPoints": 7,
+          "games": 2,
+          "points": 13,
+          "valuation": 4,
+          "fouls": 8,
+          "minutes": 40,
+          "avgPoints": 6.5,
           "avgValuation": 2,
           "avgFouls": 4,
-          "avgMinutes": 22,
+          "avgMinutes": 20,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -21643,15 +21970,15 @@
       "searchText": "CLOE SERRANO GIANNOTTI FEMEN\u00CD SANT ADRI\u00C0 BLANC #15",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 6,
-        "valuation": 5,
-        "fouls": 1,
-        "minutes": 16,
-        "avgPoints": 6,
-        "avgValuation": 5,
-        "avgFouls": 1,
-        "avgMinutes": 16
+        "games": 2,
+        "points": 10,
+        "valuation": 4,
+        "fouls": 6,
+        "minutes": 27,
+        "avgPoints": 5,
+        "avgValuation": 2,
+        "avgFouls": 3,
+        "avgMinutes": 13.5
       },
       "seasonSummaries": [
         {
@@ -21660,15 +21987,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "CLOE SERRANO GIANNOTTI",
           "shirtNumber": "15",
-          "games": 1,
-          "points": 6,
-          "valuation": 5,
-          "fouls": 1,
-          "minutes": 16,
-          "avgPoints": 6,
-          "avgValuation": 5,
-          "avgFouls": 1,
-          "avgMinutes": 16,
+          "games": 2,
+          "points": 10,
+          "valuation": 4,
+          "fouls": 6,
+          "minutes": 27,
+          "avgPoints": 5,
+          "avgValuation": 2,
+          "avgFouls": 3,
+          "avgMinutes": 13.5,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -21812,21 +22139,43 @@
       "key": "UUID:7783d519-989b-43ae-b92f-bf71b2fcc9b8",
       "label": "CRISTINA RUBIO PEDR\u00D3S",
       "latestShirtNumber": "14",
-      "meta": "1 temporada \u00B7 #14 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "CRISTINA RUBIO PEDR\u00D3S SE LA SALLE BONANOVA NEGRE #14",
+      "meta": "2 temporadas \u00B7 #14 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "CRISTINA RUBIO PEDR\u00D3S SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #14",
       "totals": {
-        "seasons": 1,
-        "games": 11,
-        "points": 19,
-        "valuation": -14,
-        "fouls": 29,
-        "minutes": 225,
-        "avgPoints": 1.7272727272727273,
-        "avgValuation": -1.2727272727272727,
-        "avgFouls": 2.6363636363636362,
-        "avgMinutes": 20.454545454545453
+        "seasons": 2,
+        "games": 12,
+        "points": 22,
+        "valuation": -15,
+        "fouls": 31,
+        "minutes": 243,
+        "avgPoints": 1.8333333333333333,
+        "avgValuation": -1.25,
+        "avgFouls": 2.5833333333333335,
+        "avgMinutes": 20.25
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:7783d519-989b-43ae-b92f-bf71b2fcc9b8:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "CRISTINA RUBIO PEDR\u00D3S",
+          "shirtNumber": "14",
+          "games": 1,
+          "points": 3,
+          "valuation": -1,
+          "fouls": 2,
+          "minutes": 18,
+          "avgPoints": 3,
+          "avgValuation": -1,
+          "avgFouls": 2,
+          "avgMinutes": 18,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:7783d519-989b-43ae-b92f-bf71b2fcc9b8:2025-2026",
           "seasonStartYear": 2025,
@@ -24224,21 +24573,43 @@
       "key": "UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b",
       "label": "EKAMJOT KAUR SANDHU",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "EKAMJOT KAUR SANDHU VEDRUNA GR\u00C0CIA VERD #15",
+      "meta": "2 temporadas \u00B7 #15 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "EKAMJOT KAUR SANDHU VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #15",
       "totals": {
-        "seasons": 1,
-        "games": 11,
-        "points": 5,
-        "valuation": 2,
-        "fouls": 3,
-        "minutes": 219,
-        "avgPoints": 0.45454545454545453,
-        "avgValuation": 0.18181818181818182,
-        "avgFouls": 0.2727272727272727,
-        "avgMinutes": 19.90909090909091
+        "seasons": 2,
+        "games": 12,
+        "points": 7,
+        "valuation": 3,
+        "fouls": 4,
+        "minutes": 243,
+        "avgPoints": 0.5833333333333334,
+        "avgValuation": 0.25,
+        "avgFouls": 0.3333333333333333,
+        "avgMinutes": 20.25
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "EKAMJOT KAUR SANDHU",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 2,
+          "valuation": 1,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 1,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b:2025-2026",
           "seasonStartYear": 2025,
@@ -24654,21 +25025,43 @@
       "key": "UUID:b6b8f84d-09e1-4f93-af7a-5628e1deac70",
       "label": "ELIA BLESA MASA",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "ELIA BLESA MASA SE LA SALLE BONANOVA NEGRE #15",
+      "meta": "2 temporadas \u00B7 #15 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "ELIA BLESA MASA SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #15",
       "totals": {
-        "seasons": 1,
-        "games": 11,
+        "seasons": 2,
+        "games": 12,
         "points": 12,
-        "valuation": 4,
-        "fouls": 2,
-        "minutes": 224,
-        "avgPoints": 1.0909090909090908,
-        "avgValuation": 0.36363636363636365,
-        "avgFouls": 0.18181818181818182,
-        "avgMinutes": 20.363636363636363
+        "valuation": 3,
+        "fouls": 3,
+        "minutes": 245,
+        "avgPoints": 1,
+        "avgValuation": 0.25,
+        "avgFouls": 0.25,
+        "avgMinutes": 20.416666666666668
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:b6b8f84d-09e1-4f93-af7a-5628e1deac70:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ELIA BLESA MASA",
+          "shirtNumber": "15",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 21,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 21,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:b6b8f84d-09e1-4f93-af7a-5628e1deac70:2025-2026",
           "seasonStartYear": 2025,
@@ -28732,6 +29125,49 @@
       ]
     },
     {
+      "key": "UUID:d076c3eb-b56a-4dcb-86b3-96f12e45d631",
+      "label": "FRIDA LEUPOLD CARRERAS",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "FRIDA LEUPOLD CARRERAS LIMA-HORTA B\u00C0SQUET SALM\u00D3 #9",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 2,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 2,
+        "avgValuation": 2,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:d076c3eb-b56a-4dcb-86b3-96f12e45d631:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "FRIDA LEUPOLD CARRERAS",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
+        }
+      ]
+    },
+    {
       "key": "UUID:09a22769-dab0-48b7-b050-0fe09c49a42e",
       "label": "G.C.G.",
       "latestShirtNumber": "6",
@@ -28771,6 +29207,49 @@
           "primaryTeamName": "CB NAV\u00C0S",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826",
           "primaryTeamIdExtern": 83826
+        }
+      ]
+    },
+    {
+      "key": "UUID:17449f92-73eb-4732-b432-38779937620b",
+      "label": "G.G.M.",
+      "latestShirtNumber": "4",
+      "meta": "1 temporada \u00B7 #4 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "G.G.M. LIMA-HORTA B\u00C0SQUET SALM\u00D3 #4",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 12,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 12
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:17449f92-73eb-4732-b432-38779937620b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "G.G.M.",
+          "shirtNumber": "4",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 12,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 12,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
         }
       ]
     },
@@ -29145,21 +29624,43 @@
       "key": "UUID:07544f64-d4e6-43ca-953c-c9a4541402a6",
       "label": "GALA IGLESIAS DE SENILLOSA",
       "latestShirtNumber": "4",
-      "meta": "1 temporada \u00B7 #4 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "GALA IGLESIAS DE SENILLOSA SE LA SALLE BONANOVA NEGRE #4",
+      "meta": "2 temporadas \u00B7 #4 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "GALA IGLESIAS DE SENILLOSA SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #4",
       "totals": {
-        "seasons": 1,
-        "games": 13,
+        "seasons": 2,
+        "games": 14,
         "points": 11,
         "valuation": -7,
         "fouls": 9,
-        "minutes": 249,
-        "avgPoints": 0.8461538461538461,
-        "avgValuation": -0.5384615384615384,
-        "avgFouls": 0.6923076923076923,
-        "avgMinutes": 19.153846153846153
+        "minutes": 267,
+        "avgPoints": 0.7857142857142857,
+        "avgValuation": -0.5,
+        "avgFouls": 0.6428571428571429,
+        "avgMinutes": 19.071428571428573
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:07544f64-d4e6-43ca-953c-c9a4541402a6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "GALA IGLESIAS DE SENILLOSA",
+          "shirtNumber": "4",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:07544f64-d4e6-43ca-953c-c9a4541402a6:2025-2026",
           "seasonStartYear": 2025,
@@ -33002,21 +33503,43 @@
       "key": "UUID:79b53e81-c32b-4615-9038-db309dd8bfd5",
       "label": "IRENE SITJ\u00C0 P\u00C9REZ",
       "latestShirtNumber": "5",
-      "meta": "1 temporada \u00B7 #5 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "IRENE SITJ\u00C0 P\u00C9REZ SE LA SALLE BONANOVA NEGRE #5",
+      "meta": "2 temporadas \u00B7 #5 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "IRENE SITJ\u00C0 P\u00C9REZ SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #5",
       "totals": {
-        "seasons": 1,
-        "games": 12,
-        "points": 18,
-        "valuation": 2,
+        "seasons": 2,
+        "games": 13,
+        "points": 22,
+        "valuation": 6,
         "fouls": 13,
-        "minutes": 245,
-        "avgPoints": 1.5,
-        "avgValuation": 0.16666666666666666,
-        "avgFouls": 1.0833333333333333,
-        "avgMinutes": 20.416666666666668
+        "minutes": 263,
+        "avgPoints": 1.6923076923076923,
+        "avgValuation": 0.46153846153846156,
+        "avgFouls": 1,
+        "avgMinutes": 20.23076923076923
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:79b53e81-c32b-4615-9038-db309dd8bfd5:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "IRENE SITJ\u00C0 P\u00C9REZ",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 4,
+          "valuation": 4,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 4,
+          "avgValuation": 4,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:79b53e81-c32b-4615-9038-db309dd8bfd5:2025-2026",
           "seasonStartYear": 2025,
@@ -33522,15 +34045,15 @@
       "searchText": "IRINA BARRERA MORTE FEMEN\u00CD SANT ADRI\u00C0 BLANC #12",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 1,
-        "valuation": -3,
-        "fouls": 3,
-        "minutes": 18,
-        "avgPoints": 1,
-        "avgValuation": -3,
-        "avgFouls": 3,
-        "avgMinutes": 18
+        "games": 2,
+        "points": 10,
+        "valuation": 3,
+        "fouls": 5,
+        "minutes": 39,
+        "avgPoints": 5,
+        "avgValuation": 1.5,
+        "avgFouls": 2.5,
+        "avgMinutes": 19.5
       },
       "seasonSummaries": [
         {
@@ -33539,15 +34062,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "IRINA BARRERA MORTE",
           "shirtNumber": "12",
-          "games": 1,
-          "points": 1,
-          "valuation": -3,
-          "fouls": 3,
-          "minutes": 18,
-          "avgPoints": 1,
-          "avgValuation": -3,
-          "avgFouls": 3,
-          "avgMinutes": 18,
+          "games": 2,
+          "points": 10,
+          "valuation": 3,
+          "fouls": 5,
+          "minutes": 39,
+          "avgPoints": 5,
+          "avgValuation": 1.5,
+          "avgFouls": 2.5,
+          "avgMinutes": 19.5,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -37761,6 +38284,49 @@
       ]
     },
     {
+      "key": "UUID:9355bba6-83eb-4004-b818-457dd58f6a3d",
+      "label": "JULIA FERRANDO PEREZ",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "JULIA FERRANDO PEREZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #8",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 4,
+        "valuation": 1,
+        "fouls": 2,
+        "minutes": 11,
+        "avgPoints": 4,
+        "avgValuation": 1,
+        "avgFouls": 2,
+        "avgMinutes": 11
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:9355bba6-83eb-4004-b818-457dd58f6a3d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "JULIA FERRANDO PEREZ",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 4,
+          "valuation": 1,
+          "fouls": 2,
+          "minutes": 11,
+          "avgPoints": 4,
+          "avgValuation": 1,
+          "avgFouls": 2,
+          "avgMinutes": 11,
+          "teamNames": [
+            "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
+          ],
+          "primaryTeamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "primaryTeamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "primaryTeamIdExtern": 89373
+        }
+      ]
+    },
+    {
       "key": "UUID:0e271444-0742-4b8e-a61a-7acca31d0cb9",
       "label": "J\u00DALIA GALVEZ GUERRA",
       "latestShirtNumber": "0",
@@ -38274,6 +38840,49 @@
           "primaryTeamName": "CB NAV\u00C0S",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83826",
           "primaryTeamIdExtern": 83826
+        }
+      ]
+    },
+    {
+      "key": "UUID:92a7508b-11ef-4926-89ad-bc913ed08917",
+      "label": "J\u00DALIA MASACHS OLIVERAS",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "J\u00DALIA MASACHS OLIVERAS VEDRUNA GR\u00C0CIA NEGRE #11",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 8,
+        "valuation": 8,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 8,
+        "avgValuation": 8,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:92a7508b-11ef-4926-89ad-bc913ed08917:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "J\u00DALIA MASACHS OLIVERAS",
+          "shirtNumber": "11",
+          "games": 1,
+          "points": 8,
+          "valuation": 8,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 8,
+          "avgValuation": 8,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
         }
       ]
     },
@@ -39937,49 +40546,6 @@
       ]
     },
     {
-      "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb",
-      "label": "L.M.V.",
-      "latestShirtNumber": "13",
-      "meta": "1 temporada \u00B7 #13 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "L.M.V. VEDRUNA GR\u00C0CIA VERD #13",
-      "totals": {
-        "seasons": 1,
-        "games": 8,
-        "points": 43,
-        "valuation": 24,
-        "fouls": 12,
-        "minutes": 146,
-        "avgPoints": 5.375,
-        "avgValuation": 3,
-        "avgFouls": 1.5,
-        "avgMinutes": 18.25
-      },
-      "seasonSummaries": [
-        {
-          "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb:2025-2026",
-          "seasonStartYear": 2025,
-          "seasonLabel": "2025-2026",
-          "playerName": "L.M.V.",
-          "shirtNumber": "13",
-          "games": 8,
-          "points": 43,
-          "valuation": 24,
-          "fouls": 12,
-          "minutes": 146,
-          "avgPoints": 5.375,
-          "avgValuation": 3,
-          "avgFouls": 1.5,
-          "avgMinutes": 18.25,
-          "teamNames": [
-            "VEDRUNA GR\u00C0CIA VERD"
-          ],
-          "primaryTeamName": "VEDRUNA GR\u00C0CIA VERD",
-          "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
-          "primaryTeamIdExtern": 82766
-        }
-      ]
-    },
-    {
       "key": "UUID:c0ff713c-d56f-4c3f-b94e-1fd6cb1d837f",
       "label": "LAIA ALARCON CANTOS",
       "latestShirtNumber": "12",
@@ -40850,15 +41416,15 @@
       "searchText": "LAIA FRAGOSO RUEDA FEMEN\u00CD SANT ADRI\u00C0 BLANC #7",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 12,
-        "valuation": 8,
-        "fouls": 1,
-        "minutes": 16,
-        "avgPoints": 12,
-        "avgValuation": 8,
-        "avgFouls": 1,
-        "avgMinutes": 16
+        "games": 2,
+        "points": 21,
+        "valuation": 13,
+        "fouls": 4,
+        "minutes": 40,
+        "avgPoints": 10.5,
+        "avgValuation": 6.5,
+        "avgFouls": 2,
+        "avgMinutes": 20
       },
       "seasonSummaries": [
         {
@@ -40867,15 +41433,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "LAIA FRAGOSO RUEDA",
           "shirtNumber": "7",
-          "games": 1,
-          "points": 12,
-          "valuation": 8,
-          "fouls": 1,
-          "minutes": 16,
-          "avgPoints": 12,
-          "avgValuation": 8,
-          "avgFouls": 1,
-          "avgMinutes": 16,
+          "games": 2,
+          "points": 21,
+          "valuation": 13,
+          "fouls": 4,
+          "minutes": 40,
+          "avgPoints": 10.5,
+          "avgValuation": 6.5,
+          "avgFouls": 2,
+          "avgMinutes": 20,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -40936,14 +41502,14 @@
       "searchText": "LAIA GARRETA PETITB\u00D3 FEMEN\u00CD SANT ADRI\u00C0 BLANC #33",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 2,
-        "valuation": -4,
-        "fouls": 4,
-        "minutes": 21,
-        "avgPoints": 2,
-        "avgValuation": -4,
-        "avgFouls": 4,
+        "games": 2,
+        "points": 8,
+        "valuation": -1,
+        "fouls": 6,
+        "minutes": 42,
+        "avgPoints": 4,
+        "avgValuation": -0.5,
+        "avgFouls": 3,
         "avgMinutes": 21
       },
       "seasonSummaries": [
@@ -40953,14 +41519,14 @@
           "seasonLabel": "2026-2027",
           "playerName": "LAIA GARRETA PETITB\u00D3",
           "shirtNumber": "33",
-          "games": 1,
-          "points": 2,
-          "valuation": -4,
-          "fouls": 4,
-          "minutes": 21,
-          "avgPoints": 2,
-          "avgValuation": -4,
-          "avgFouls": 4,
+          "games": 2,
+          "points": 8,
+          "valuation": -1,
+          "fouls": 6,
+          "minutes": 42,
+          "avgPoints": 4,
+          "avgValuation": -0.5,
+          "avgFouls": 3,
           "avgMinutes": 21,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
@@ -41965,21 +42531,43 @@
       "key": "UUID:491c1e87-674d-462f-bcaf-2242c0c00ec5",
       "label": "LAIA PASCUAL FONT",
       "latestShirtNumber": "6",
-      "meta": "1 temporada \u00B7 #6 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "LAIA PASCUAL FONT SE LA SALLE BONANOVA NEGRE #6",
+      "meta": "2 temporadas \u00B7 #6 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "LAIA PASCUAL FONT SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #6",
       "totals": {
-        "seasons": 1,
-        "games": 11,
+        "seasons": 2,
+        "games": 12,
         "points": 5,
-        "valuation": -7,
-        "fouls": 12,
-        "minutes": 195,
-        "avgPoints": 0.45454545454545453,
-        "avgValuation": -0.6363636363636364,
-        "avgFouls": 1.0909090909090908,
-        "avgMinutes": 17.727272727272727
+        "valuation": -8,
+        "fouls": 13,
+        "minutes": 213,
+        "avgPoints": 0.4166666666666667,
+        "avgValuation": -0.6666666666666666,
+        "avgFouls": 1.0833333333333333,
+        "avgMinutes": 17.75
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:491c1e87-674d-462f-bcaf-2242c0c00ec5:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LAIA PASCUAL FONT",
+          "shirtNumber": "6",
+          "games": 1,
+          "points": 0,
+          "valuation": -1,
+          "fouls": 1,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -1,
+          "avgFouls": 1,
+          "avgMinutes": 18,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:491c1e87-674d-462f-bcaf-2242c0c00ec5:2025-2026",
           "seasonStartYear": 2025,
@@ -42723,15 +43311,15 @@
       "searchText": "LAURA ESCURSELL DOMINGUEZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #44",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 6,
-        "valuation": 3,
-        "fouls": 3,
-        "minutes": 18,
-        "avgPoints": 6,
-        "avgValuation": 3,
-        "avgFouls": 3,
-        "avgMinutes": 18
+        "games": 2,
+        "points": 15,
+        "valuation": 8,
+        "fouls": 5,
+        "minutes": 40,
+        "avgPoints": 7.5,
+        "avgValuation": 4,
+        "avgFouls": 2.5,
+        "avgMinutes": 20
       },
       "seasonSummaries": [
         {
@@ -42740,15 +43328,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "LAURA ESCURSELL DOMINGUEZ",
           "shirtNumber": "44",
-          "games": 1,
-          "points": 6,
-          "valuation": 3,
-          "fouls": 3,
-          "minutes": 18,
-          "avgPoints": 6,
-          "avgValuation": 3,
-          "avgFouls": 3,
-          "avgMinutes": 18,
+          "games": 2,
+          "points": 15,
+          "valuation": 8,
+          "fouls": 5,
+          "minutes": 40,
+          "avgPoints": 7.5,
+          "avgValuation": 4,
+          "avgFouls": 2.5,
+          "avgMinutes": 20,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -42982,15 +43570,15 @@
       "searchText": "L\u00C9A GUITART SINSARD FEMEN\u00CD SANT ADRI\u00C0 BLANC #13",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 4,
-        "valuation": 2,
-        "fouls": 2,
-        "minutes": 15,
-        "avgPoints": 4,
-        "avgValuation": 2,
-        "avgFouls": 2,
-        "avgMinutes": 15
+        "games": 2,
+        "points": 6,
+        "valuation": -1,
+        "fouls": 3,
+        "minutes": 33,
+        "avgPoints": 3,
+        "avgValuation": -0.5,
+        "avgFouls": 1.5,
+        "avgMinutes": 16.5
       },
       "seasonSummaries": [
         {
@@ -42999,15 +43587,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "L\u00C9A GUITART SINSARD",
           "shirtNumber": "13",
-          "games": 1,
-          "points": 4,
-          "valuation": 2,
-          "fouls": 2,
-          "minutes": 15,
-          "avgPoints": 4,
-          "avgValuation": 2,
-          "avgFouls": 2,
-          "avgMinutes": 15,
+          "games": 2,
+          "points": 6,
+          "valuation": -1,
+          "fouls": 3,
+          "minutes": 33,
+          "avgPoints": 3,
+          "avgValuation": -0.5,
+          "avgFouls": 1.5,
+          "avgMinutes": 16.5,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -45049,21 +45637,43 @@
       "key": "UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b",
       "label": "LIA TORAL VICENTE",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "LIA TORAL VICENTE VEDRUNA GR\u00C0CIA VERD #10",
+      "meta": "2 temporadas \u00B7 #10 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "LIA TORAL VICENTE VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #10",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 86,
-        "valuation": 54,
-        "fouls": 7,
-        "minutes": 324,
-        "avgPoints": 6.142857142857143,
-        "avgValuation": 3.857142857142857,
-        "avgFouls": 0.5,
-        "avgMinutes": 23.142857142857142
+        "seasons": 2,
+        "games": 15,
+        "points": 93,
+        "valuation": 59,
+        "fouls": 8,
+        "minutes": 348,
+        "avgPoints": 6.2,
+        "avgValuation": 3.933333333333333,
+        "avgFouls": 0.5333333333333333,
+        "avgMinutes": 23.2
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LIA TORAL VICENTE",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 7,
+          "valuation": 5,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 7,
+          "avgValuation": 5,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b:2025-2026",
           "seasonStartYear": 2025,
@@ -45736,6 +46346,71 @@
       ]
     },
     {
+      "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb",
+      "label": "LOLA MARCOS VALLE",
+      "latestShirtNumber": "13",
+      "meta": "2 temporadas \u00B7 #13 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "LOLA MARCOS VALLE VEDRUNA GR\u00C0CIA NEGRE L.M.V. VEDRUNA GR\u00C0CIA VERD #13",
+      "totals": {
+        "seasons": 2,
+        "games": 9,
+        "points": 57,
+        "valuation": 36,
+        "fouls": 14,
+        "minutes": 170,
+        "avgPoints": 6.333333333333333,
+        "avgValuation": 4,
+        "avgFouls": 1.5555555555555556,
+        "avgMinutes": 18.88888888888889
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LOLA MARCOS VALLE",
+          "shirtNumber": "13",
+          "games": 1,
+          "points": 14,
+          "valuation": 12,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 14,
+          "avgValuation": 12,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
+        {
+          "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb:2025-2026",
+          "seasonStartYear": 2025,
+          "seasonLabel": "2025-2026",
+          "playerName": "L.M.V.",
+          "shirtNumber": "13",
+          "games": 8,
+          "points": 43,
+          "valuation": 24,
+          "fouls": 12,
+          "minutes": 146,
+          "avgPoints": 5.375,
+          "avgValuation": 3,
+          "avgFouls": 1.5,
+          "avgMinutes": 18.25,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA VERD"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA VERD",
+          "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:82766",
+          "primaryTeamIdExtern": 82766
+        }
+      ]
+    },
+    {
       "key": "UUID:9f2ccfa8-543a-421b-82d4-48913a405985",
       "label": "LOLA RACERO PLANAS",
       "latestShirtNumber": "25",
@@ -46342,21 +47017,43 @@
       "key": "UUID:241f513c-59b9-49e2-af00-7136bdbb59b1",
       "label": "LUCIA GUILL\u00C9N NARBON",
       "latestShirtNumber": "2",
-      "meta": "1 temporada \u00B7 #2 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "LUCIA GUILL\u00C9N NARBON SE LA SALLE BONANOVA NEGRE #2",
+      "meta": "2 temporadas \u00B7 #2 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "LUCIA GUILL\u00C9N NARBON SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #2",
       "totals": {
-        "seasons": 1,
-        "games": 10,
-        "points": 74,
-        "valuation": 54,
+        "seasons": 2,
+        "games": 11,
+        "points": 79,
+        "valuation": 56,
         "fouls": 14,
-        "minutes": 220,
-        "avgPoints": 7.4,
-        "avgValuation": 5.4,
-        "avgFouls": 1.4,
-        "avgMinutes": 22
+        "minutes": 247,
+        "avgPoints": 7.181818181818182,
+        "avgValuation": 5.090909090909091,
+        "avgFouls": 1.2727272727272727,
+        "avgMinutes": 22.454545454545453
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:241f513c-59b9-49e2-af00-7136bdbb59b1:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LUCIA GUILL\u00C9N NARBON",
+          "shirtNumber": "2",
+          "games": 1,
+          "points": 5,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 27,
+          "avgPoints": 5,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 27,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:241f513c-59b9-49e2-af00-7136bdbb59b1:2025-2026",
           "seasonStartYear": 2025,
@@ -46389,15 +47086,15 @@
       "searchText": "LUCIA L\u00D3PEZ PARRA FEMEN\u00CD SANT ADRI\u00C0 BLANC #22",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 1,
-        "valuation": -2,
-        "fouls": 2,
-        "minutes": 18,
-        "avgPoints": 1,
+        "games": 2,
+        "points": 4,
+        "valuation": -4,
+        "fouls": 4,
+        "minutes": 34,
+        "avgPoints": 2,
         "avgValuation": -2,
         "avgFouls": 2,
-        "avgMinutes": 18
+        "avgMinutes": 17
       },
       "seasonSummaries": [
         {
@@ -46406,15 +47103,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "LUCIA L\u00D3PEZ PARRA",
           "shirtNumber": "22",
-          "games": 1,
-          "points": 1,
-          "valuation": -2,
-          "fouls": 2,
-          "minutes": 18,
-          "avgPoints": 1,
+          "games": 2,
+          "points": 4,
+          "valuation": -4,
+          "fouls": 4,
+          "minutes": 34,
+          "avgPoints": 2,
           "avgValuation": -2,
           "avgFouls": 2,
-          "avgMinutes": 18,
+          "avgMinutes": 17,
           "teamNames": [
             "FEMEN\u00CD SANT ADRI\u00C0 BLANC"
           ],
@@ -46988,21 +47685,43 @@
       "key": "UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38",
       "label": "LUC\u00CDA VILLAR FLORES",
       "latestShirtNumber": "73",
-      "meta": "1 temporada \u00B7 #73 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "LUC\u00CDA VILLAR FLORES VEDRUNA GR\u00C0CIA VERD #73",
+      "meta": "2 temporadas \u00B7 #73 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "LUC\u00CDA VILLAR FLORES VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #73",
       "totals": {
-        "seasons": 1,
-        "games": 11,
-        "points": 31,
-        "valuation": 2,
-        "fouls": 17,
-        "minutes": 237,
-        "avgPoints": 2.8181818181818183,
-        "avgValuation": 0.18181818181818182,
-        "avgFouls": 1.5454545454545454,
-        "avgMinutes": 21.545454545454547
+        "seasons": 2,
+        "games": 12,
+        "points": 41,
+        "valuation": 9,
+        "fouls": 19,
+        "minutes": 261,
+        "avgPoints": 3.4166666666666665,
+        "avgValuation": 0.75,
+        "avgFouls": 1.5833333333333333,
+        "avgMinutes": 21.75
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "LUC\u00CDA VILLAR FLORES",
+          "shirtNumber": "73",
+          "games": 1,
+          "points": 10,
+          "valuation": 7,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 10,
+          "avgValuation": 7,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38:2025-2026",
           "seasonStartYear": 2025,
@@ -47289,21 +48008,43 @@
       "key": "UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e",
       "label": "M.C.M.",
       "latestShirtNumber": "19",
-      "meta": "1 temporada \u00B7 #19 \u00B7 C.B GRUP BARNA A",
-      "searchText": "M.C.M. C.B GRUP BARNA A #19",
+      "meta": "2 temporadas \u00B7 #19 \u00B7 C.B GRUP BARNA B",
+      "searchText": "M.C.M. C.B GRUP BARNA B C.B GRUP BARNA A #19",
       "totals": {
-        "seasons": 1,
-        "games": 16,
-        "points": 120,
-        "valuation": 70,
-        "fouls": 36,
-        "minutes": 466,
-        "avgPoints": 7.5,
-        "avgValuation": 4.375,
-        "avgFouls": 2.25,
-        "avgMinutes": 29.125
+        "seasons": 2,
+        "games": 17,
+        "points": 124,
+        "valuation": 73,
+        "fouls": 37,
+        "minutes": 493,
+        "avgPoints": 7.294117647058823,
+        "avgValuation": 4.294117647058823,
+        "avgFouls": 2.176470588235294,
+        "avgMinutes": 29
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "M.C.M.",
+          "shirtNumber": "19",
+          "games": 1,
+          "points": 4,
+          "valuation": 3,
+          "fouls": 1,
+          "minutes": 27,
+          "avgPoints": 4,
+          "avgValuation": 3,
+          "avgFouls": 1,
+          "avgMinutes": 27,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e:2025-2026",
           "seasonStartYear": 2025,
@@ -47454,6 +48195,49 @@
           "primaryTeamName": "NAVAS REFORMAS - CB. GAV\u00C0 BLAU",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:83832",
           "primaryTeamIdExtern": 83832
+        }
+      ]
+    },
+    {
+      "key": "UUID:c36055ee-3b44-41aa-9222-6905c36fc71c",
+      "label": "M.P.S.",
+      "latestShirtNumber": "26",
+      "meta": "1 temporada \u00B7 #26 \u00B7 C.B GRUP BARNA B",
+      "searchText": "M.P.S. C.B GRUP BARNA B #26",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": 4,
+        "fouls": 1,
+        "minutes": 21,
+        "avgPoints": 5,
+        "avgValuation": 4,
+        "avgFouls": 1,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:c36055ee-3b44-41aa-9222-6905c36fc71c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "M.P.S.",
+          "shirtNumber": "26",
+          "games": 1,
+          "points": 5,
+          "valuation": 4,
+          "fouls": 1,
+          "minutes": 21,
+          "avgPoints": 5,
+          "avgValuation": 4,
+          "avgFouls": 1,
+          "avgMinutes": 21,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
         }
       ]
     },
@@ -48193,18 +48977,18 @@
       "label": "M\u00C0LIA MONTSERRAT MATEO",
       "latestShirtNumber": "11",
       "meta": "2 temporadas \u00B7 #11 \u00B7 C.B GRUP BARNA A",
-      "searchText": "M\u00C0LIA MONTSERRAT MATEO C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #11",
+      "searchText": "M\u00C0LIA MONTSERRAT MATEO C.B GRUP BARNA A C.B GRUP BARNA B C.B GRUP BARNA VERMELL  1ER ANY #11",
       "totals": {
         "seasons": 2,
-        "games": 27,
-        "points": 276,
-        "valuation": 200,
-        "fouls": 35,
-        "minutes": 620,
-        "avgPoints": 10.222222222222221,
-        "avgValuation": 7.407407407407407,
-        "avgFouls": 1.2962962962962963,
-        "avgMinutes": 22.962962962962962
+        "games": 28,
+        "points": 285,
+        "valuation": 207,
+        "fouls": 37,
+        "minutes": 641,
+        "avgPoints": 10.178571428571429,
+        "avgValuation": 7.392857142857143,
+        "avgFouls": 1.3214285714285714,
+        "avgMinutes": 22.892857142857142
       },
       "seasonSummaries": [
         {
@@ -48213,17 +48997,18 @@
           "seasonLabel": "2026-2027",
           "playerName": "M\u00C0LIA MONTSERRAT MATEO",
           "shirtNumber": "11",
-          "games": 1,
-          "points": 24,
-          "valuation": 20,
-          "fouls": 1,
-          "minutes": 30,
-          "avgPoints": 24,
-          "avgValuation": 20,
-          "avgFouls": 1,
-          "avgMinutes": 30,
+          "games": 2,
+          "points": 33,
+          "valuation": 27,
+          "fouls": 3,
+          "minutes": 51,
+          "avgPoints": 16.5,
+          "avgValuation": 13.5,
+          "avgFouls": 1.5,
+          "avgMinutes": 25.5,
           "teamNames": [
-            "C.B GRUP BARNA A"
+            "C.B GRUP BARNA A",
+            "C.B GRUP BARNA B"
           ],
           "primaryTeamName": "C.B GRUP BARNA A",
           "primaryTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
@@ -49741,6 +50526,49 @@
       ]
     },
     {
+      "key": "UUID:5524de0a-0352-4ba3-a4f9-0ffc269d9ad3",
+      "label": "MARIA JOS\u00C9 CUATIN JURADO",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "MARIA JOS\u00C9 CUATIN JURADO LIMA-HORTA B\u00C0SQUET SALM\u00D3 #19",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 18,
+        "avgPoints": 0,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:5524de0a-0352-4ba3-a4f9-0ffc269d9ad3:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARIA JOS\u00C9 CUATIN JURADO",
+          "shirtNumber": "19",
+          "games": 1,
+          "points": 0,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
+        }
+      ]
+    },
+    {
       "key": "UUID:e88a6161-0634-4a6b-94d4-9b4e0b3a2790",
       "label": "MARIA LARGO D\u00CDEZ",
       "latestShirtNumber": "6",
@@ -50042,6 +50870,49 @@
       ]
     },
     {
+      "key": "UUID:8e3ebafc-7e5d-4dfb-87eb-b390d1779a2a",
+      "label": "MAR\u00CDA MU\u00D1OZ URETA",
+      "latestShirtNumber": "16",
+      "meta": "1 temporada \u00B7 #16 \u00B7 C.B GRUP BARNA B",
+      "searchText": "MAR\u00CDA MU\u00D1OZ URETA C.B GRUP BARNA B #16",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 2,
+        "fouls": 0,
+        "minutes": 21,
+        "avgPoints": 2,
+        "avgValuation": 2,
+        "avgFouls": 0,
+        "avgMinutes": 21
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:8e3ebafc-7e5d-4dfb-87eb-b390d1779a2a:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MAR\u00CDA MU\u00D1OZ URETA",
+          "shirtNumber": "16",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 21,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 21,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        }
+      ]
+    },
+    {
       "key": "UUID:da9c5b06-d060-4f4d-bc79-9204be6a0baf",
       "label": "MARIA PIEDRA BARALDES",
       "latestShirtNumber": "31",
@@ -50124,6 +50995,49 @@
           "primaryTeamName": "LA SALLE MANRESA B",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81762",
           "primaryTeamIdExtern": 81762
+        }
+      ]
+    },
+    {
+      "key": "UUID:6ef6f910-41f4-4dee-8c7f-735970c1ecee",
+      "label": "MARIA RIBERA BLANCO",
+      "latestShirtNumber": "3",
+      "meta": "1 temporada \u00B7 #3 \u00B7 C.B GRUP BARNA B",
+      "searchText": "MARIA RIBERA BLANCO C.B GRUP BARNA B #3",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 2,
+        "fouls": 0,
+        "minutes": 18,
+        "avgPoints": 2,
+        "avgValuation": 2,
+        "avgFouls": 0,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:6ef6f910-41f4-4dee-8c7f-735970c1ecee:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARIA RIBERA BLANCO",
+          "shirtNumber": "3",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 18,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
         }
       ]
     },
@@ -52312,21 +53226,43 @@
       "key": "UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca",
       "label": "MARTINA BECH RUEDA",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "MARTINA BECH RUEDA VEDRUNA GR\u00C0CIA VERD #7",
+      "meta": "2 temporadas \u00B7 #7 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "MARTINA BECH RUEDA VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #7",
       "totals": {
-        "seasons": 1,
-        "games": 11,
-        "points": 4,
+        "seasons": 2,
+        "games": 12,
+        "points": 8,
         "valuation": -5,
-        "fouls": 7,
-        "minutes": 235,
-        "avgPoints": 0.36363636363636365,
-        "avgValuation": -0.45454545454545453,
-        "avgFouls": 0.6363636363636364,
-        "avgMinutes": 21.363636363636363
+        "fouls": 8,
+        "minutes": 259,
+        "avgPoints": 0.6666666666666666,
+        "avgValuation": -0.4166666666666667,
+        "avgFouls": 0.6666666666666666,
+        "avgMinutes": 21.583333333333332
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "MARTINA BECH RUEDA",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 4,
+          "valuation": 0,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 4,
+          "avgValuation": 0,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca:2025-2026",
           "seasonStartYear": 2025,
@@ -53695,15 +54631,15 @@
       "searchText": "MARTINA RAMELLS TOLEDO BASQUET SANT PERE VERMELL #8",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 23,
-        "valuation": 16,
-        "fouls": 0,
-        "minutes": 23,
-        "avgPoints": 23,
-        "avgValuation": 16,
-        "avgFouls": 0,
-        "avgMinutes": 23
+        "games": 2,
+        "points": 41,
+        "valuation": 22,
+        "fouls": 4,
+        "minutes": 54,
+        "avgPoints": 20.5,
+        "avgValuation": 11,
+        "avgFouls": 2,
+        "avgMinutes": 27
       },
       "seasonSummaries": [
         {
@@ -53712,15 +54648,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "MARTINA RAMELLS TOLEDO",
           "shirtNumber": "8",
-          "games": 1,
-          "points": 23,
-          "valuation": 16,
-          "fouls": 0,
-          "minutes": 23,
-          "avgPoints": 23,
-          "avgValuation": 16,
-          "avgFouls": 0,
-          "avgMinutes": 23,
+          "games": 2,
+          "points": 41,
+          "valuation": 22,
+          "fouls": 4,
+          "minutes": 54,
+          "avgPoints": 20.5,
+          "avgValuation": 11,
+          "avgFouls": 2,
+          "avgMinutes": 27,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -56302,21 +57238,43 @@
       "key": "UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c",
       "label": "N\u00C0DIA GRAS DEL ROSARIO",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "N\u00C0DIA GRAS DEL ROSARIO VEDRUNA GR\u00C0CIA VERD #12",
+      "meta": "2 temporadas \u00B7 #12 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "N\u00C0DIA GRAS DEL ROSARIO VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #12",
       "totals": {
-        "seasons": 1,
-        "games": 10,
-        "points": 27,
-        "valuation": 17,
-        "fouls": 9,
-        "minutes": 228,
-        "avgPoints": 2.7,
-        "avgValuation": 1.7,
-        "avgFouls": 0.9,
-        "avgMinutes": 22.8
+        "seasons": 2,
+        "games": 11,
+        "points": 29,
+        "valuation": 15,
+        "fouls": 13,
+        "minutes": 252,
+        "avgPoints": 2.6363636363636362,
+        "avgValuation": 1.3636363636363635,
+        "avgFouls": 1.1818181818181819,
+        "avgMinutes": 22.90909090909091
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "N\u00C0DIA GRAS DEL ROSARIO",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 2,
+          "valuation": -2,
+          "fouls": 4,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": -2,
+          "avgFouls": 4,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c:2025-2026",
           "seasonStartYear": 2025,
@@ -58496,6 +59454,49 @@
       ]
     },
     {
+      "key": "UUID:052b9e9c-4bb7-4d0d-9385-b5a8de5aba90",
+      "label": "NOA RUIZ DE AZUA GONZALEZ",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "NOA RUIZ DE AZUA GONZALEZ LIMA-HORTA B\u00C0SQUET SALM\u00D3 #5",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 0,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 2,
+        "avgValuation": 0,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:052b9e9c-4bb7-4d0d-9385-b5a8de5aba90:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "NOA RUIZ DE AZUA GONZALEZ",
+          "shirtNumber": "5",
+          "games": 1,
+          "points": 2,
+          "valuation": 0,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 0,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
+        }
+      ]
+    },
+    {
       "key": "UUID:68518fa6-711b-484f-b4cf-4c86617d8194",
       "label": "NOA SANTANDER SALA",
       "latestShirtNumber": "8",
@@ -60373,21 +61374,43 @@
       "key": "UUID:4be97cfa-217a-4f38-bba9-603cfb21f38d",
       "label": "OLIVIA CARRASCOSA MART\u00CDN",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "OLIVIA CARRASCOSA MART\u00CDN SE LA SALLE BONANOVA NEGRE #12",
+      "meta": "2 temporadas \u00B7 #12 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "OLIVIA CARRASCOSA MART\u00CDN SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #12",
       "totals": {
-        "seasons": 1,
-        "games": 12,
-        "points": 110,
-        "valuation": 81,
-        "fouls": 20,
-        "minutes": 246,
-        "avgPoints": 9.166666666666666,
-        "avgValuation": 6.75,
-        "avgFouls": 1.6666666666666667,
-        "avgMinutes": 20.5
+        "seasons": 2,
+        "games": 13,
+        "points": 123,
+        "valuation": 92,
+        "fouls": 21,
+        "minutes": 270,
+        "avgPoints": 9.461538461538462,
+        "avgValuation": 7.076923076923077,
+        "avgFouls": 1.6153846153846154,
+        "avgMinutes": 20.76923076923077
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:4be97cfa-217a-4f38-bba9-603cfb21f38d:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "OLIVIA CARRASCOSA MART\u00CDN",
+          "shirtNumber": "12",
+          "games": 1,
+          "points": 13,
+          "valuation": 11,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 13,
+          "avgValuation": 11,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:4be97cfa-217a-4f38-bba9-603cfb21f38d:2025-2026",
           "seasonStartYear": 2025,
@@ -60502,21 +61525,43 @@
       "key": "UUID:38829633-5ef7-4dde-9648-11ce9afcfd05",
       "label": "OLIVIA FERN\u00C1NDEZ IGUACEN",
       "latestShirtNumber": "1",
-      "meta": "1 temporada \u00B7 #1 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "OLIVIA FERN\u00C1NDEZ IGUACEN SE LA SALLE BONANOVA NEGRE #1",
+      "meta": "2 temporadas \u00B7 #1 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "OLIVIA FERN\u00C1NDEZ IGUACEN SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #1",
       "totals": {
-        "seasons": 1,
-        "games": 11,
-        "points": 8,
-        "valuation": 1,
-        "fouls": 5,
-        "minutes": 224,
-        "avgPoints": 0.7272727272727273,
-        "avgValuation": 0.09090909090909091,
-        "avgFouls": 0.45454545454545453,
-        "avgMinutes": 20.363636363636363
+        "seasons": 2,
+        "games": 12,
+        "points": 12,
+        "valuation": 3,
+        "fouls": 7,
+        "minutes": 242,
+        "avgPoints": 1,
+        "avgValuation": 0.25,
+        "avgFouls": 0.5833333333333334,
+        "avgMinutes": 20.166666666666668
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:38829633-5ef7-4dde-9648-11ce9afcfd05:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "OLIVIA FERN\u00C1NDEZ IGUACEN",
+          "shirtNumber": "1",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 2,
+          "minutes": 18,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 2,
+          "avgMinutes": 18,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:38829633-5ef7-4dde-9648-11ce9afcfd05:2025-2026",
           "seasonStartYear": 2025,
@@ -61536,21 +62581,43 @@
       "key": "UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6",
       "label": "ONA HARZEE TORRELL",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ONA HARZEE TORRELL C.B GRUP BARNA A #7",
+      "meta": "2 temporadas \u00B7 #7 \u00B7 C.B GRUP BARNA B",
+      "searchText": "ONA HARZEE TORRELL C.B GRUP BARNA B C.B GRUP BARNA A #7",
       "totals": {
-        "seasons": 1,
-        "games": 14,
-        "points": 40,
-        "valuation": 8,
-        "fouls": 26,
-        "minutes": 321,
-        "avgPoints": 2.857142857142857,
-        "avgValuation": 0.5714285714285714,
-        "avgFouls": 1.8571428571428572,
-        "avgMinutes": 22.928571428571427
+        "seasons": 2,
+        "games": 15,
+        "points": 44,
+        "valuation": 10,
+        "fouls": 27,
+        "minutes": 333,
+        "avgPoints": 2.933333333333333,
+        "avgValuation": 0.6666666666666666,
+        "avgFouls": 1.8,
+        "avgMinutes": 22.2
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "ONA HARZEE TORRELL",
+          "shirtNumber": "7",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 1,
+          "minutes": 12,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 1,
+          "avgMinutes": 12,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6:2025-2026",
           "seasonStartYear": 2025,
@@ -64042,21 +65109,43 @@
       "key": "UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea",
       "label": "PAULA NAUDIN COMA",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "PAULA NAUDIN COMA VEDRUNA GR\u00C0CIA VERD #9",
+      "meta": "2 temporadas \u00B7 #9 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "PAULA NAUDIN COMA VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #9",
       "totals": {
-        "seasons": 1,
-        "games": 10,
-        "points": 182,
-        "valuation": 136,
-        "fouls": 18,
-        "minutes": 257,
-        "avgPoints": 18.2,
-        "avgValuation": 13.6,
-        "avgFouls": 1.8,
-        "avgMinutes": 25.7
+        "seasons": 2,
+        "games": 11,
+        "points": 202,
+        "valuation": 155,
+        "fouls": 19,
+        "minutes": 281,
+        "avgPoints": 18.363636363636363,
+        "avgValuation": 14.090909090909092,
+        "avgFouls": 1.7272727272727273,
+        "avgMinutes": 25.545454545454547
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "PAULA NAUDIN COMA",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 20,
+          "valuation": 19,
+          "fouls": 1,
+          "minutes": 24,
+          "avgPoints": 20,
+          "avgValuation": 19,
+          "avgFouls": 1,
+          "avgMinutes": 24,
+          "teamNames": [
+            "VEDRUNA GR\u00C0CIA NEGRE"
+          ],
+          "primaryTeamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "primaryTeamIdExtern": 92009
+        },
         {
           "key": "UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea:2025-2026",
           "seasonStartYear": 2025,
@@ -64684,6 +65773,49 @@
       ]
     },
     {
+      "key": "UUID:849ae23e-bd12-4071-917e-a67736174ef6",
+      "label": "Q.B.H.",
+      "latestShirtNumber": "25",
+      "meta": "1 temporada \u00B7 #25 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "Q.B.H. LIMA-HORTA B\u00C0SQUET SALM\u00D3 #25",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 0,
+        "valuation": -2,
+        "fouls": 2,
+        "minutes": 18,
+        "avgPoints": 0,
+        "avgValuation": -2,
+        "avgFouls": 2,
+        "avgMinutes": 18
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:849ae23e-bd12-4071-917e-a67736174ef6:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "Q.B.H.",
+          "shirtNumber": "25",
+          "games": 1,
+          "points": 0,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 18,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
+        }
+      ]
+    },
+    {
       "key": "UUID:6291980d-54a0-4bb0-bb19-8e27c7ca7cec",
       "label": "Q.R.H.",
       "latestShirtNumber": "12",
@@ -64992,15 +66124,15 @@
       "searchText": "QUERALT RODR\u00CDGUEZ BANDERA BASQUET SANT PERE VERMELL #94",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 9,
-        "valuation": 7,
-        "fouls": 1,
-        "minutes": 18,
-        "avgPoints": 9,
-        "avgValuation": 7,
+        "games": 2,
+        "points": 13,
+        "valuation": 10,
+        "fouls": 2,
+        "minutes": 41,
+        "avgPoints": 6.5,
+        "avgValuation": 5,
         "avgFouls": 1,
-        "avgMinutes": 18
+        "avgMinutes": 20.5
       },
       "seasonSummaries": [
         {
@@ -65009,15 +66141,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "QUERALT RODR\u00CDGUEZ BANDERA",
           "shirtNumber": "94",
-          "games": 1,
-          "points": 9,
-          "valuation": 7,
-          "fouls": 1,
-          "minutes": 18,
-          "avgPoints": 9,
-          "avgValuation": 7,
+          "games": 2,
+          "points": 13,
+          "valuation": 10,
+          "fouls": 2,
+          "minutes": 41,
+          "avgPoints": 6.5,
+          "avgValuation": 5,
           "avgFouls": 1,
-          "avgMinutes": 18,
+          "avgMinutes": 20.5,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -65290,21 +66422,43 @@
       "key": "UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5",
       "label": "RANIA MOUSSAOUI SASTRES",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 C.B GRUP BARNA A",
-      "searchText": "RANIA MOUSSAOUI SASTRES C.B GRUP BARNA A #10",
+      "meta": "2 temporadas \u00B7 #10 \u00B7 C.B GRUP BARNA B",
+      "searchText": "RANIA MOUSSAOUI SASTRES C.B GRUP BARNA B C.B GRUP BARNA A #10",
       "totals": {
-        "seasons": 1,
-        "games": 17,
-        "points": 74,
-        "valuation": 47,
-        "fouls": 18,
-        "minutes": 415,
-        "avgPoints": 4.352941176470588,
-        "avgValuation": 2.764705882352941,
-        "avgFouls": 1.0588235294117647,
-        "avgMinutes": 24.41176470588235
+        "seasons": 2,
+        "games": 18,
+        "points": 79,
+        "valuation": 48,
+        "fouls": 21,
+        "minutes": 439,
+        "avgPoints": 4.388888888888889,
+        "avgValuation": 2.6666666666666665,
+        "avgFouls": 1.1666666666666667,
+        "avgMinutes": 24.38888888888889
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "RANIA MOUSSAOUI SASTRES",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 5,
+          "valuation": 1,
+          "fouls": 3,
+          "minutes": 24,
+          "avgPoints": 5,
+          "avgValuation": 1,
+          "avgFouls": 3,
+          "avgMinutes": 24,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5:2025-2026",
           "seasonStartYear": 2025,
@@ -67534,15 +68688,15 @@
       "searchText": "SENDY COSTA CANALS BASQUET SANT PERE VERMELL #7",
       "totals": {
         "seasons": 1,
-        "games": 1,
-        "points": 6,
-        "valuation": 3,
+        "games": 2,
+        "points": 11,
+        "valuation": 2,
         "fouls": 1,
-        "minutes": 26,
-        "avgPoints": 6,
-        "avgValuation": 3,
-        "avgFouls": 1,
-        "avgMinutes": 26
+        "minutes": 62,
+        "avgPoints": 5.5,
+        "avgValuation": 1,
+        "avgFouls": 0.5,
+        "avgMinutes": 31
       },
       "seasonSummaries": [
         {
@@ -67551,15 +68705,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "SENDY COSTA CANALS",
           "shirtNumber": "7",
-          "games": 1,
-          "points": 6,
-          "valuation": 3,
+          "games": 2,
+          "points": 11,
+          "valuation": 2,
           "fouls": 1,
-          "minutes": 26,
-          "avgPoints": 6,
-          "avgValuation": 3,
-          "avgFouls": 1,
-          "avgMinutes": 26,
+          "minutes": 62,
+          "avgPoints": 5.5,
+          "avgValuation": 1,
+          "avgFouls": 0.5,
+          "avgMinutes": 31,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -68930,21 +70084,43 @@
       "key": "UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc",
       "label": "SOFIA MOYA KLOTZ",
       "latestShirtNumber": "23",
-      "meta": "1 temporada \u00B7 #23 \u00B7 C.B GRUP BARNA A",
-      "searchText": "SOFIA MOYA KLOTZ C.B GRUP BARNA A #23",
+      "meta": "2 temporadas \u00B7 #23 \u00B7 C.B GRUP BARNA B",
+      "searchText": "SOFIA MOYA KLOTZ C.B GRUP BARNA B C.B GRUP BARNA A #23",
       "totals": {
-        "seasons": 1,
-        "games": 12,
-        "points": 114,
+        "seasons": 2,
+        "games": 13,
+        "points": 119,
         "valuation": 60,
-        "fouls": 22,
-        "minutes": 352,
-        "avgPoints": 9.5,
-        "avgValuation": 5,
-        "avgFouls": 1.8333333333333333,
-        "avgMinutes": 29.333333333333332
+        "fouls": 24,
+        "minutes": 382,
+        "avgPoints": 9.153846153846153,
+        "avgValuation": 4.615384615384615,
+        "avgFouls": 1.8461538461538463,
+        "avgMinutes": 29.384615384615383
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SOFIA MOYA KLOTZ",
+          "shirtNumber": "23",
+          "games": 1,
+          "points": 5,
+          "valuation": 0,
+          "fouls": 2,
+          "minutes": 30,
+          "avgPoints": 5,
+          "avgValuation": 0,
+          "avgFouls": 2,
+          "avgMinutes": 30,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc:2025-2026",
           "seasonStartYear": 2025,
@@ -69095,6 +70271,49 @@
           "primaryTeamName": "CB VILASSAR DE DALT",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:81714",
           "primaryTeamIdExtern": 81714
+        }
+      ]
+    },
+    {
+      "key": "UUID:f54da6ab-e9e1-479f-be15-9cdacd8bed35",
+      "label": "SOF\u00CDA VALDEZ MARISCAL",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "SOF\u00CDA VALDEZ MARISCAL LIMA-HORTA B\u00C0SQUET SALM\u00D3 #11",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 5,
+        "valuation": 3,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 5,
+        "avgValuation": 3,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:f54da6ab-e9e1-479f-be15-9cdacd8bed35:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "SOF\u00CDA VALDEZ MARISCAL",
+          "shirtNumber": "11",
+          "games": 1,
+          "points": 5,
+          "valuation": 3,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 5,
+          "avgValuation": 3,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
         }
       ]
     },
@@ -71985,21 +73204,43 @@
       "key": "UUID:566d460e-e5a9-42e4-8fe9-4d61cc4b01a7",
       "label": "VEGA PUNCERNAU CARRILLO",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "VEGA PUNCERNAU CARRILLO SE LA SALLE BONANOVA NEGRE #9",
+      "meta": "2 temporadas \u00B7 #9 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "VEGA PUNCERNAU CARRILLO SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #9",
       "totals": {
-        "seasons": 1,
-        "games": 11,
-        "points": 21,
-        "valuation": -4,
-        "fouls": 15,
-        "minutes": 219,
-        "avgPoints": 1.9090909090909092,
-        "avgValuation": -0.36363636363636365,
-        "avgFouls": 1.3636363636363635,
-        "avgMinutes": 19.90909090909091
+        "seasons": 2,
+        "games": 12,
+        "points": 25,
+        "valuation": -2,
+        "fouls": 17,
+        "minutes": 243,
+        "avgPoints": 2.0833333333333335,
+        "avgValuation": -0.16666666666666666,
+        "avgFouls": 1.4166666666666667,
+        "avgMinutes": 20.25
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:566d460e-e5a9-42e4-8fe9-4d61cc4b01a7:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VEGA PUNCERNAU CARRILLO",
+          "shirtNumber": "9",
+          "games": 1,
+          "points": 4,
+          "valuation": 2,
+          "fouls": 2,
+          "minutes": 24,
+          "avgPoints": 4,
+          "avgValuation": 2,
+          "avgFouls": 2,
+          "avgMinutes": 24,
+          "teamNames": [
+            "SE LA SALLE BONANOVA VERMELL"
+          ],
+          "primaryTeamName": "SE LA SALLE BONANOVA VERMELL",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "primaryTeamIdExtern": 91073
+        },
         {
           "key": "UUID:566d460e-e5a9-42e4-8fe9-4d61cc4b01a7:2025-2026",
           "seasonStartYear": 2025,
@@ -72107,6 +73348,49 @@
           "primaryTeamName": "VILAB\u00C0SQUET VILADECANS PMF BLANC",
           "primaryTeamKey": "2025-2026::C.T. PRE-MINI FEMENI::TEAM:84676",
           "primaryTeamIdExtern": 84676
+        }
+      ]
+    },
+    {
+      "key": "UUID:9aea42ba-e070-43ba-9ed0-0c36c0fdab82",
+      "label": "VEGA TREPAT L\u00D3PEZ",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "VEGA TREPAT L\u00D3PEZ LIMA-HORTA B\u00C0SQUET SALM\u00D3 #10",
+      "totals": {
+        "seasons": 1,
+        "games": 1,
+        "points": 2,
+        "valuation": 2,
+        "fouls": 0,
+        "minutes": 24,
+        "avgPoints": 2,
+        "avgValuation": 2,
+        "avgFouls": 0,
+        "avgMinutes": 24
+      },
+      "seasonSummaries": [
+        {
+          "key": "UUID:9aea42ba-e070-43ba-9ed0-0c36c0fdab82:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VEGA TREPAT L\u00D3PEZ",
+          "shirtNumber": "10",
+          "games": 1,
+          "points": 2,
+          "valuation": 2,
+          "fouls": 0,
+          "minutes": 24,
+          "avgPoints": 2,
+          "avgValuation": 2,
+          "avgFouls": 0,
+          "avgMinutes": 24,
+          "teamNames": [
+            "LIMA-HORTA B\u00C0SQUET SALM\u00D3"
+          ],
+          "primaryTeamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "primaryTeamIdExtern": 94361
         }
       ]
     },
@@ -72567,21 +73851,43 @@
       "key": "UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232",
       "label": "VERA RUIZ PEREZ",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 C.B GRUP BARNA A",
-      "searchText": "VERA RUIZ PEREZ C.B GRUP BARNA A #8",
+      "meta": "2 temporadas \u00B7 #8 \u00B7 C.B GRUP BARNA B",
+      "searchText": "VERA RUIZ PEREZ C.B GRUP BARNA B C.B GRUP BARNA A #8",
       "totals": {
-        "seasons": 1,
-        "games": 16,
+        "seasons": 2,
+        "games": 17,
         "points": 68,
-        "valuation": 39,
-        "fouls": 21,
-        "minutes": 423,
-        "avgPoints": 4.25,
-        "avgValuation": 2.4375,
-        "avgFouls": 1.3125,
-        "avgMinutes": 26.4375
+        "valuation": 37,
+        "fouls": 23,
+        "minutes": 441,
+        "avgPoints": 4,
+        "avgValuation": 2.176470588235294,
+        "avgFouls": 1.3529411764705883,
+        "avgMinutes": 25.941176470588236
       },
       "seasonSummaries": [
+        {
+          "key": "UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "playerName": "VERA RUIZ PEREZ",
+          "shirtNumber": "8",
+          "games": 1,
+          "points": 0,
+          "valuation": -2,
+          "fouls": 2,
+          "minutes": 18,
+          "avgPoints": 0,
+          "avgValuation": -2,
+          "avgFouls": 2,
+          "avgMinutes": 18,
+          "teamNames": [
+            "C.B GRUP BARNA B"
+          ],
+          "primaryTeamName": "C.B GRUP BARNA B",
+          "primaryTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "primaryTeamIdExtern": 90781
+        },
         {
           "key": "UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232:2025-2026",
           "seasonStartYear": 2025,
@@ -72786,15 +74092,15 @@
       "searchText": "VINYET ESCODA FERNANDEZ BASQUET SANT PERE VERMELL #11",
       "totals": {
         "seasons": 1,
-        "games": 1,
+        "games": 2,
         "points": 8,
-        "valuation": 6,
-        "fouls": 2,
-        "minutes": 20,
-        "avgPoints": 8,
-        "avgValuation": 6,
-        "avgFouls": 2,
-        "avgMinutes": 20
+        "valuation": -1,
+        "fouls": 7,
+        "minutes": 32,
+        "avgPoints": 4,
+        "avgValuation": -0.5,
+        "avgFouls": 3.5,
+        "avgMinutes": 16
       },
       "seasonSummaries": [
         {
@@ -72803,15 +74109,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "VINYET ESCODA FERNANDEZ",
           "shirtNumber": "11",
-          "games": 1,
+          "games": 2,
           "points": 8,
-          "valuation": 6,
-          "fouls": 2,
-          "minutes": 20,
-          "avgPoints": 8,
-          "avgValuation": 6,
-          "avgFouls": 2,
-          "avgMinutes": 20,
+          "valuation": -1,
+          "fouls": 7,
+          "minutes": 32,
+          "avgPoints": 4,
+          "avgValuation": -0.5,
+          "avgFouls": 3.5,
+          "avgMinutes": 16,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],
@@ -72959,15 +74265,15 @@
       "searchText": "VIOLETA MATEU FRUTOS BASQUET SANT PERE VERMELL #18",
       "totals": {
         "seasons": 1,
-        "games": 1,
+        "games": 2,
         "points": 9,
-        "valuation": 4,
-        "fouls": 4,
-        "minutes": 19,
-        "avgPoints": 9,
-        "avgValuation": 4,
-        "avgFouls": 4,
-        "avgMinutes": 19
+        "valuation": 2,
+        "fouls": 6,
+        "minutes": 42,
+        "avgPoints": 4.5,
+        "avgValuation": 1,
+        "avgFouls": 3,
+        "avgMinutes": 21
       },
       "seasonSummaries": [
         {
@@ -72976,15 +74282,15 @@
           "seasonLabel": "2026-2027",
           "playerName": "VIOLETA MATEU FRUTOS",
           "shirtNumber": "18",
-          "games": 1,
+          "games": 2,
           "points": 9,
-          "valuation": 4,
-          "fouls": 4,
-          "minutes": 19,
-          "avgPoints": 9,
-          "avgValuation": 4,
-          "avgFouls": 4,
-          "avgMinutes": 19,
+          "valuation": 2,
+          "fouls": 6,
+          "minutes": 42,
+          "avgPoints": 4.5,
+          "avgValuation": 1,
+          "avgFouls": 3,
+          "avgMinutes": 21,
           "teamNames": [
             "BASQUET SANT PERE VERMELL"
           ],

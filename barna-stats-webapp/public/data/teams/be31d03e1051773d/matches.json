@@ -1,0 +1,130 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+    "teamIdIntern": 588085,
+    "teamIdExtern": 90781,
+    "teamName": "C.B GRUP BARNA B",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+    "awayTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+    "matchWebId": 28331,
+    "matchInternId": 292741,
+    "matchExternId": 1230698,
+    "matchDate": "2026-10-10T14:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24023,
+    "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "04",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "SE LA SALLE BONANOVA VERMELL",
+    "homeScore": 42,
+    "awayScore": 39,
+    "awayTeam": "C.B GRUP BARNA B",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+    "rivalTeam": "SE LA SALLE BONANOVA VERMELL",
+    "officialTeamScore": 39,
+    "officialRivalScore": 42,
+    "teamScore": 39,
+    "rivalScore": 42,
+    "result": "L",
+    "topScorer": "OLIVIA CARRASCOSA MART\u00CDN",
+    "topScorerTeam": "SE LA SALLE BONANOVA VERMELL",
+    "topScorerPoints": 13,
+    "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "teamTopScorerPoints": 9,
+    "insights": {
+      "leadChanges": 1,
+      "ties": 4,
+      "maxLead": 4,
+      "maxDeficit": 12,
+      "bestRun": 11,
+      "rivalBestRun": 11,
+      "closingRun": 1,
+      "rivalClosingRun": 0,
+      "firstScorer": "LUCIA GUILL\u00C9N NARBON",
+      "firstScorerTeam": "SE LA SALLE BONANOVA VERMELL",
+      "lastScorer": "SOFIA MOYA KLOTZ",
+      "lastScorerTeam": "C.B GRUP BARNA B",
+      "teamFirstScorer": "SOFIA MOYA KLOTZ",
+      "teamLastScorer": "SOFIA MOYA KLOTZ",
+      "bestPeriodLabel": "Parcial 2",
+      "bestPeriodDiff": 7,
+      "worstPeriodLabel": "Parcial 3",
+      "worstPeriodDiff": -6,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 5,
+          "diff": -3
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 9,
+          "rivalPoints": 2,
+          "diff": 7
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 0,
+          "rivalPoints": 6,
+          "diff": -6
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 2,
+          "diff": -2
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 4,
+          "rivalPoints": 10,
+          "diff": -6
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 9,
+          "rivalPoints": 4,
+          "diff": 5
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 4,
+          "rivalPoints": 2,
+          "diff": 2
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 8,
+          "rivalPoints": 5,
+          "diff": 3
+        },
+        {
+          "periodNumber": 9,
+          "label": "Parcial 9",
+          "teamPoints": 3,
+          "rivalPoints": 6,
+          "diff": -3
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "seasonStartYear": 2026,
+  "seasonLabel": "2026-2027",
+  "scopes": [
+    {
+      "key": "source:2026-2027:24023",
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "sourcePhaseId": 24023,
+      "phaseNumber": 1,
+      "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+      "phaseName": "Primera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "04",
+      "matchesCount": 2,
+      "rows": [
+        {
+          "position": 1,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 79,
+          "pointsAgainst": 19,
+          "pointDiff": 60
+        },
+        {
+          "position": 2,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "teamName": "SE LA SALLE BONANOVA VERMELL",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 42,
+          "pointsAgainst": 39,
+          "pointDiff": 3
+        },
+        {
+          "position": 3,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "teamName": "C.B GRUP BARNA B",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 39,
+          "pointsAgainst": 42,
+          "pointDiff": -3
+        },
+        {
+          "position": 4,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+          "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "played": 1,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 19,
+          "pointsAgainst": 79,
+          "pointDiff": -60
+        }
+      ]
+    }
+  ]
+}

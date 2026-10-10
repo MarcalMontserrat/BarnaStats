@@ -13,31 +13,31 @@
       "levelName": "",
       "levelCode": "",
       "groupCode": "07",
-      "matchesCount": 2,
+      "matchesCount": 3,
       "rows": [
         {
           "position": 1,
-          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
-          "teamName": "BASQUET SANT PERE VERMELL",
-          "played": 1,
-          "wins": 1,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
+          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+          "played": 2,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 91,
-          "pointsAgainst": 40,
-          "pointDiff": 51
+          "pointsFor": 109,
+          "pointsAgainst": 77,
+          "pointDiff": 32
         },
         {
           "position": 2,
-          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
-          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-          "played": 1,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
+          "teamName": "BASQUET SANT PERE VERMELL",
+          "played": 2,
           "wins": 1,
-          "losses": 0,
+          "losses": 1,
           "ties": 0,
-          "pointsFor": 53,
-          "pointsAgainst": 34,
-          "pointDiff": 19
+          "pointsFor": 134,
+          "pointsAgainst": 96,
+          "pointDiff": 38
         },
         {
           "position": 3,

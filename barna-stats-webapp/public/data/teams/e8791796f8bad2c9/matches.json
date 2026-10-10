@@ -1,0 +1,116 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+    "teamIdIntern": 586452,
+    "teamIdExtern": 94361,
+    "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+    "awayTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "matchWebId": 28332,
+    "matchInternId": 291925,
+    "matchExternId": 1209906,
+    "matchDate": "2026-10-10T10:30:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24023,
+    "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "04",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+    "homeScore": 19,
+    "awayScore": 69,
+    "awayTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "isHome": true,
+    "rivalTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "rivalTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "officialTeamScore": 19,
+    "officialRivalScore": 69,
+    "teamScore": 19,
+    "rivalScore": 79,
+    "result": "L",
+    "topScorer": "PAULA NAUDIN COMA",
+    "topScorerTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "topScorerPoints": 20,
+    "teamTopScorer": "SOF\u00CDA VALDEZ MARISCAL",
+    "teamTopScorerPoints": 5,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 3,
+      "maxLead": 2,
+      "maxDeficit": 52,
+      "bestRun": 3,
+      "rivalBestRun": 25,
+      "closingRun": 2,
+      "rivalClosingRun": 0,
+      "firstScorer": "AINA SABAT\u00C9 MOSEGU\u00CD",
+      "firstScorerTeam": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "lastScorer": "PAULA NAUDIN COMA",
+      "lastScorerTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+      "teamFirstScorer": "AINA SABAT\u00C9 MOSEGU\u00CD",
+      "teamLastScorer": "BERTA COMA CIRERA",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 0,
+      "worstPeriodLabel": "Parcial 2",
+      "worstPeriodDiff": -16,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 6,
+          "rivalPoints": 10,
+          "diff": -4
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 2,
+          "rivalPoints": 18,
+          "diff": -16
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 2,
+          "rivalPoints": 7,
+          "diff": -5
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 12,
+          "diff": -12
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 2,
+          "rivalPoints": 10,
+          "diff": -8
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 5,
+          "rivalPoints": 10,
+          "diff": -5
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 2,
+          "rivalPoints": 2,
+          "diff": 0
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

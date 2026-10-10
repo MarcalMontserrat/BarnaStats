@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
+  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -492,16 +492,16 @@
           "teamName": "BASQUET SANT PERE VERMELL",
           "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
           "levelName": "",
-          "matchesPlayed": 1,
+          "matchesPlayed": 2,
           "playersCount": 9,
-          "pointsFor": 91,
-          "pointsAgainst": 40,
-          "pointDiff": 51,
+          "pointsFor": 134,
+          "pointsAgainst": 96,
+          "pointDiff": 38,
           "wins": 1,
-          "losses": 0,
+          "losses": 1,
           "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 62
+          "standingPosition": 2,
+          "avgValuation": 31
         }
       ]
     },
@@ -782,6 +782,34 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 36.8235294117647
+        }
+      ]
+    },
+    {
+      "key": "TEAM:90781",
+      "label": "C.B GRUP BARNA B",
+      "latestTeamIdExtern": 90781,
+      "meta": "1 temporada \u00B7 C.t. Mini Femen\u00ED 1r. Any \u00B7 B",
+      "searchText": "C.B GRUP BARNA B C.t. Mini Femen\u00ED 1r. Any B",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:90781:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 90781,
+          "teamName": "C.B GRUP BARNA B",
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "levelName": "B",
+          "matchesPlayed": 1,
+          "playersCount": 12,
+          "pointsFor": 39,
+          "pointsAgainst": 42,
+          "pointDiff": -3,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 3,
+          "avgValuation": 18
         }
       ]
     },
@@ -2639,16 +2667,16 @@
           "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
           "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
           "levelName": "",
-          "matchesPlayed": 1,
-          "playersCount": 11,
-          "pointsFor": 53,
-          "pointsAgainst": 34,
-          "pointDiff": 19,
-          "wins": 1,
+          "matchesPlayed": 2,
+          "playersCount": 12,
+          "pointsFor": 109,
+          "pointsAgainst": 77,
+          "pointDiff": 32,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 18
+          "standingPosition": 1,
+          "avgValuation": 15
         }
       ]
     },
@@ -3153,6 +3181,34 @@
           "ties": 0,
           "standingPosition": 1,
           "avgValuation": 52.94117647058823
+        }
+      ]
+    },
+    {
+      "key": "TEAM:94361",
+      "label": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "latestTeamIdExtern": 94361,
+      "meta": "1 temporada \u00B7 C.t. Mini Femen\u00ED 1r. Any \u00B7 B",
+      "searchText": "LIMA-HORTA B\u00C0SQUET SALM\u00D3 C.t. Mini Femen\u00ED 1r. Any B",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:94361:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 94361,
+          "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "levelName": "B",
+          "matchesPlayed": 1,
+          "playersCount": 11,
+          "pointsFor": 19,
+          "pointsAgainst": 79,
+          "pointDiff": -60,
+          "wins": 0,
+          "losses": 1,
+          "ties": 0,
+          "standingPosition": 4,
+          "avgValuation": 8
         }
       ]
     },
@@ -3713,6 +3769,34 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 17.666666666666668
+        }
+      ]
+    },
+    {
+      "key": "TEAM:91073",
+      "label": "SE LA SALLE BONANOVA VERMELL",
+      "latestTeamIdExtern": 91073,
+      "meta": "1 temporada \u00B7 C.t. Mini Femen\u00ED 1r. Any \u00B7 B",
+      "searchText": "SE LA SALLE BONANOVA VERMELL C.t. Mini Femen\u00ED 1r. Any B",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91073:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91073,
+          "teamName": "SE LA SALLE BONANOVA VERMELL",
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "levelName": "B",
+          "matchesPlayed": 1,
+          "playersCount": 12,
+          "pointsFor": 42,
+          "pointsAgainst": 39,
+          "pointDiff": 3,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 2,
+          "avgValuation": 22
         }
       ]
     },
@@ -4357,6 +4441,34 @@
           "ties": 0,
           "standingPosition": 6,
           "avgValuation": 12.444444444444445
+        }
+      ]
+    },
+    {
+      "key": "TEAM:92009",
+      "label": "VEDRUNA GR\u00C0CIA NEGRE",
+      "latestTeamIdExtern": 92009,
+      "meta": "1 temporada \u00B7 C.t. Mini Femen\u00ED 1r. Any \u00B7 B",
+      "searchText": "VEDRUNA GR\u00C0CIA NEGRE C.t. Mini Femen\u00ED 1r. Any B",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:92009:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 92009,
+          "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "levelName": "B",
+          "matchesPlayed": 1,
+          "playersCount": 10,
+          "pointsFor": 79,
+          "pointsAgainst": 19,
+          "pointDiff": 60,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 1,
+          "avgValuation": 59
         }
       ]
     },

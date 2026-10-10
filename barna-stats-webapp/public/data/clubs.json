@@ -159,11 +159,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 91102,
     "totalTeams": 1,
-    "totalMatches": 1,
+    "totalMatches": 2,
     "totalPlayers": 9,
     "categoriesCount": 1,
     "levelsCount": 0,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
     "searchText": "BASQUET SANT PERE BASQUET SANT PERE VERMELL C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
       {
@@ -178,7 +178,7 @@
                 "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
                 "teamIdExtern": 91102,
                 "teamName": "BASQUET SANT PERE VERMELL",
-                "matchesPlayed": 1,
+                "matchesPlayed": 2,
                 "playersCount": 9,
                 "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
                 "levelKey": "",
@@ -186,16 +186,16 @@
                 "phaseLabel": "Fase Previa \u00B7 Grupo 07",
                 "latestPhaseOptionValue": "source:23873",
                 "groupCode": "07",
-                "standingPosition": 1,
+                "standingPosition": 2,
                 "record": {
                   "wins": 1,
-                  "losses": 0,
+                  "losses": 1,
                   "ties": 0,
-                  "pointsFor": 91,
-                  "pointsAgainst": 40
+                  "pointsFor": 134,
+                  "pointsAgainst": 96
                 },
-                "pointDiff": 51,
-                "avgValuation": 62
+                "pointDiff": 38,
+                "avgValuation": 31
               }
             ]
           }
@@ -260,14 +260,49 @@
     "shortName": "C.B. GRUP BARNA",
     "clubId": 24,
     "primaryTeamIdExtern": 90463,
-    "totalTeams": 2,
-    "totalMatches": 2,
-    "totalPlayers": 22,
-    "categoriesCount": 2,
-    "levelsCount": 2,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 2 partidos",
-    "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.t. Pre-mini Femen\u00ED Nivell A C.B GRUP BARNA NEGRE C.t. Pre-mini Mascul\u00ED Nivell C",
+    "totalTeams": 3,
+    "totalMatches": 3,
+    "totalPlayers": 34,
+    "categoriesCount": 3,
+    "levelsCount": 3,
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 3 partidos",
+    "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.t. Pre-mini Femen\u00ED Nivell A C.B GRUP BARNA B C.t. Mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA NEGRE C.t. Pre-mini Mascul\u00ED Nivell C",
     "categories": [
+      {
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "levels": [
+          {
+            "levelKey": "B",
+            "levelName": "Nivell B",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+                "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+                "teamIdExtern": 90781,
+                "teamName": "C.B GRUP BARNA B",
+                "matchesPlayed": 1,
+                "playersCount": 12,
+                "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+                "levelKey": "B",
+                "levelName": "Nivell B",
+                "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
+                "latestPhaseOptionValue": "source:24023",
+                "groupCode": "04",
+                "standingPosition": 3,
+                "record": {
+                  "wins": 0,
+                  "losses": 1,
+                  "ties": 0,
+                  "pointsFor": 39,
+                  "pointsAgainst": 42
+                },
+                "pointDiff": -3,
+                "avgValuation": 18
+              }
+            ]
+          }
+        ]
+      },
       {
         "categoryName": "C.t. Pre-mini Femen\u00ED",
         "levels": [
@@ -580,6 +615,57 @@
     ]
   },
   {
+    "key": "fcbq-club:3464",
+    "label": "FUNDACIO VEDRUNA CATALUNYA EDUCACIO",
+    "shortName": "S.E. VEDRUNA GRACIA",
+    "clubId": 3464,
+    "primaryTeamIdExtern": 92009,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 10,
+    "categoriesCount": 1,
+    "levelsCount": 1,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "FUNDACIO VEDRUNA CATALUNYA EDUCACIO S.E. VEDRUNA GRACIA VEDRUNA GR\u00C0CIA NEGRE C.t. Mini Femen\u00ED 1r. Any Nivell B",
+    "categories": [
+      {
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "levels": [
+          {
+            "levelKey": "B",
+            "levelName": "Nivell B",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+                "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+                "teamIdExtern": 92009,
+                "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+                "matchesPlayed": 1,
+                "playersCount": 10,
+                "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+                "levelKey": "B",
+                "levelName": "Nivell B",
+                "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
+                "latestPhaseOptionValue": "source:24023",
+                "groupCode": "04",
+                "standingPosition": 1,
+                "record": {
+                  "wins": 1,
+                  "losses": 0,
+                  "ties": 0,
+                  "pointsFor": 79,
+                  "pointsAgainst": 19
+                },
+                "pointDiff": 60,
+                "avgValuation": 59
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "key": "fcbq-club:26",
     "label": "JAC CLUB SANTS",
     "shortName": "JAC CLUB SANTS",
@@ -631,17 +717,119 @@
     ]
   },
   {
+    "key": "derived-club:lima-horta-basquet-salmo",
+    "label": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+    "shortName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+    "clubId": 0,
+    "primaryTeamIdExtern": 94361,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 11,
+    "categoriesCount": 1,
+    "levelsCount": 1,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "LIMA-HORTA B\u00C0SQUET SALM\u00D3 C.t. Mini Femen\u00ED 1r. Any Nivell B",
+    "categories": [
+      {
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "levels": [
+          {
+            "levelKey": "B",
+            "levelName": "Nivell B",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+                "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+                "teamIdExtern": 94361,
+                "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+                "matchesPlayed": 1,
+                "playersCount": 11,
+                "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+                "levelKey": "B",
+                "levelName": "Nivell B",
+                "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
+                "latestPhaseOptionValue": "source:24023",
+                "groupCode": "04",
+                "standingPosition": 4,
+                "record": {
+                  "wins": 0,
+                  "losses": 1,
+                  "ties": 0,
+                  "pointsFor": 19,
+                  "pointsAgainst": 79
+                },
+                "pointDiff": -60,
+                "avgValuation": 8
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "derived-club:se-la-salle-bonanova",
+    "label": "SE LA SALLE BONANOVA",
+    "shortName": "SE LA SALLE BONANOVA",
+    "clubId": 0,
+    "primaryTeamIdExtern": 91073,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 12,
+    "categoriesCount": 1,
+    "levelsCount": 1,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "SE LA SALLE BONANOVA SE LA SALLE BONANOVA VERMELL C.t. Mini Femen\u00ED 1r. Any Nivell B",
+    "categories": [
+      {
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "levels": [
+          {
+            "levelKey": "B",
+            "levelName": "Nivell B",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+                "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+                "teamIdExtern": 91073,
+                "teamName": "SE LA SALLE BONANOVA VERMELL",
+                "matchesPlayed": 1,
+                "playersCount": 12,
+                "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+                "levelKey": "B",
+                "levelName": "Nivell B",
+                "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
+                "latestPhaseOptionValue": "source:24023",
+                "groupCode": "04",
+                "standingPosition": 2,
+                "record": {
+                  "wins": 1,
+                  "losses": 0,
+                  "ties": 0,
+                  "pointsFor": 42,
+                  "pointsAgainst": 39
+                },
+                "pointDiff": 3,
+                "avgValuation": 22
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "key": "fcbq-club:2517",
     "label": "UNIO BASQUET SANT ADRIA",
     "shortName": "U.B. SANT ADRIA",
     "clubId": 2517,
     "primaryTeamIdExtern": 89366,
     "totalTeams": 2,
-    "totalMatches": 2,
-    "totalPlayers": 19,
+    "totalMatches": 3,
+    "totalPlayers": 20,
     "categoriesCount": 2,
     "levelsCount": 1,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 2 partidos",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 3 partidos",
     "searchText": "UNIO BASQUET SANT ADRIA U.B. SANT ADRIA FEMEN\u00CD SANT ADRI\u00C0 A C.t. Pre-mini Femen\u00ED Nivell A FEMEN\u00CD SANT ADRI\u00C0 BLANC C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
     "categories": [
       {
@@ -656,24 +844,24 @@
                 "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
                 "teamIdExtern": 89373,
                 "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-                "matchesPlayed": 1,
-                "playersCount": 11,
+                "matchesPlayed": 2,
+                "playersCount": 12,
                 "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
                 "levelKey": "",
                 "levelName": "",
                 "phaseLabel": "Fase Previa \u00B7 Grupo 07",
                 "latestPhaseOptionValue": "source:23873",
                 "groupCode": "07",
-                "standingPosition": 2,
+                "standingPosition": 1,
                 "record": {
-                  "wins": 1,
+                  "wins": 2,
                   "losses": 0,
                   "ties": 0,
-                  "pointsFor": 53,
-                  "pointsAgainst": 34
+                  "pointsFor": 109,
+                  "pointsAgainst": 77
                 },
-                "pointDiff": 19,
-                "avgValuation": 18
+                "pointDiff": 32,
+                "avgValuation": 15
               }
             ]
           }

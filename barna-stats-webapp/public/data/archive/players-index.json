@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
+  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -194,8 +194,8 @@
       "key": "UUID:b0d889f0-5d19-4597-a5b3-12844708659d",
       "label": "ABRIL CAPELLA CASAS",
       "latestShirtNumber": "23",
-      "meta": "1 temporada \u00B7 #23 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "ABRIL CAPELLA CASAS VEDRUNA GR\u00C0CIA VERD #23"
+      "meta": "2 temporadas \u00B7 #23 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "ABRIL CAPELLA CASAS VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #23"
     },
     {
       "key": "UUID:c166a35c-6e02-47c1-82b8-407d08f2ec9d",
@@ -376,8 +376,8 @@
       "key": "UUID:da39dec5-1621-491e-8524-813bd8a086cd",
       "label": "ADRIANA ROCAFORT MAZA",
       "latestShirtNumber": "13",
-      "meta": "1 temporada \u00B7 #13 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "ADRIANA ROCAFORT MAZA SE LA SALLE BONANOVA NEGRE #13"
+      "meta": "2 temporadas \u00B7 #13 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "ADRIANA ROCAFORT MAZA SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #13"
     },
     {
       "key": "UUID:7f84e1b4-6178-4ae0-bb2d-520ae4ceffd9",
@@ -462,6 +462,13 @@
       "latestShirtNumber": "12",
       "meta": "1 temporada \u00B7 #12 \u00B7 C.B. LLINARS",
       "searchText": "AINA AMELA RUIZ C.B. LLINARS #12"
+    },
+    {
+      "key": "UUID:c37c6d25-32d0-4936-9283-57d64e1b3529",
+      "label": "AINA CAMBR\u00D3N CRISTANCHO",
+      "latestShirtNumber": "14",
+      "meta": "1 temporada \u00B7 #14 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "AINA CAMBR\u00D3N CRISTANCHO LIMA-HORTA B\u00C0SQUET SALM\u00D3 #14"
     },
     {
       "key": "UUID:6b18e554-b6f7-4380-86e5-7265343cd993",
@@ -686,6 +693,13 @@
       "latestShirtNumber": "16",
       "meta": "1 temporada \u00B7 #16 \u00B7 ESCOLA IPSI 16",
       "searchText": "AINA RUBINAT SOLSONA ESCOLA IPSI 16 #16"
+    },
+    {
+      "key": "UUID:6c037a15-9e7c-480f-aa7c-ac4966ea7d36",
+      "label": "AINA SABAT\u00C9 MOSEGU\u00CD",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "AINA SABAT\u00C9 MOSEGU\u00CD LIMA-HORTA B\u00C0SQUET SALM\u00D3 #8"
     },
     {
       "key": "UUID:83e97d5f-877a-4c9f-8398-a1fe84f0f580",
@@ -1412,8 +1426,8 @@
       "key": "UUID:e3cb1090-8c21-44b3-ab52-308864fb0a40",
       "label": "ANA DIAZ LOMBARDO",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ANA DIAZ LOMBARDO C.B GRUP BARNA A #15"
+      "meta": "2 temporadas \u00B7 #15 \u00B7 C.B GRUP BARNA B",
+      "searchText": "ANA DIAZ LOMBARDO C.B GRUP BARNA B C.B GRUP BARNA A #15"
     },
     {
       "key": "UUID:a0ee9f4e-3b76-4e47-aa8e-8ba3df4779df",
@@ -1539,7 +1553,7 @@
       "label": "ANNA GUITART SINSARD",
       "latestShirtNumber": "32",
       "meta": "2 temporadas \u00B7 #32 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ANNA GUITART SINSARD C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #32"
+      "searchText": "ANNA GUITART SINSARD C.B GRUP BARNA A C.B GRUP BARNA B C.B GRUP BARNA VERMELL  1ER ANY #32"
     },
     {
       "key": "UUID:08a10d68-efb8-46e1-bec6-de562ae4c8a8",
@@ -1860,8 +1874,8 @@
       "key": "UUID:312a4bd1-ffc6-42fe-81b9-1d03ecbe001d",
       "label": "ARLET BALAGUER\u00D3 PI\u00D1AS",
       "latestShirtNumber": "2",
-      "meta": "1 temporada \u00B7 #2 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ARLET BALAGUER\u00D3 PI\u00D1AS C.B GRUP BARNA A #2"
+      "meta": "2 temporadas \u00B7 #2 \u00B7 C.B GRUP BARNA B",
+      "searchText": "ARLET BALAGUER\u00D3 PI\u00D1AS C.B GRUP BARNA B C.B GRUP BARNA A #2"
     },
     {
       "key": "UUID:7db6bb59-a6ef-4209-877e-883aa9fb9e52",
@@ -2196,8 +2210,8 @@
       "key": "UUID:586dc31b-7f17-44a0-ad7a-9f95ef7621bc",
       "label": "B.M.E.",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "B.M.E. SE LA SALLE BONANOVA NEGRE #7"
+      "meta": "2 temporadas \u00B7 #7 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "B.M.E. SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #7"
     },
     {
       "key": "UUID:cb45e6f7-ab87-4820-8b72-2e7e655fa394",
@@ -2289,6 +2303,13 @@
       "latestShirtNumber": "23",
       "meta": "1 temporada \u00B7 #23 \u00B7 U.E. HORTA",
       "searchText": "BERTA CLARAMUNT TROCHUT U.E. HORTA #23"
+    },
+    {
+      "key": "UUID:54ec0be1-a338-4e99-a01b-6dd95aac51cc",
+      "label": "BERTA COMA CIRERA",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "BERTA COMA CIRERA LIMA-HORTA B\u00C0SQUET SALM\u00D3 #15"
     },
     {
       "key": "UUID:9ba812fb-6d8a-447b-94ed-e8457abdcf24",
@@ -2816,6 +2837,13 @@
       "searchText": "CARLA MOLINA MARTORELL U.E. CLARET B #6"
     },
     {
+      "key": "UUID:7d1c86d8-a27c-4300-8a77-9c82fa62df49",
+      "label": "CARLA MONRAS SANDIN",
+      "latestShirtNumber": "27",
+      "meta": "1 temporada \u00B7 #27 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "CARLA MONRAS SANDIN LIMA-HORTA B\u00C0SQUET SALM\u00D3 #27"
+    },
+    {
       "key": "UUID:b0265ad2-4f33-4185-a86e-c1899d19a083",
       "label": "CARLA MORILLO SOL\u00D3RZANO",
       "latestShirtNumber": "25",
@@ -3099,8 +3127,8 @@
       "key": "UUID:9ca218c7-b9d9-4bfd-ac45-87103e05994b",
       "label": "CHIARA MART\u00CDNEZ LAMPIS",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "CHIARA MART\u00CDNEZ LAMPIS VEDRUNA GR\u00C0CIA VERD #8"
+      "meta": "2 temporadas \u00B7 #8 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "CHIARA MART\u00CDNEZ LAMPIS VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #8"
     },
     {
       "key": "UUID:bc94eee4-6f3d-40d9-97f1-5220618ebadb",
@@ -3281,8 +3309,8 @@
       "key": "UUID:27d328c7-e06e-4aa7-98db-530c827d4a18",
       "label": "CLARA RIUS CAPRETTI",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "CLARA RIUS CAPRETTI SE LA SALLE BONANOVA NEGRE #8"
+      "meta": "2 temporadas \u00B7 #8 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "CLARA RIUS CAPRETTI SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #8"
     },
     {
       "key": "UUID:40c184e1-74f1-44a2-b6b7-e6f0eb116c6a",
@@ -3484,8 +3512,8 @@
       "key": "UUID:7783d519-989b-43ae-b92f-bf71b2fcc9b8",
       "label": "CRISTINA RUBIO PEDR\u00D3S",
       "latestShirtNumber": "14",
-      "meta": "1 temporada \u00B7 #14 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "CRISTINA RUBIO PEDR\u00D3S SE LA SALLE BONANOVA NEGRE #14"
+      "meta": "2 temporadas \u00B7 #14 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "CRISTINA RUBIO PEDR\u00D3S SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #14"
     },
     {
       "key": "UUID:b7cf08b4-a0ad-48cc-94f6-f6fcd2eaf2c1",
@@ -3876,8 +3904,8 @@
       "key": "UUID:5e019608-f4d9-4df6-9518-1fe498ab4a5b",
       "label": "EKAMJOT KAUR SANDHU",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "EKAMJOT KAUR SANDHU VEDRUNA GR\u00C0CIA VERD #15"
+      "meta": "2 temporadas \u00B7 #15 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "EKAMJOT KAUR SANDHU VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #15"
     },
     {
       "key": "UUID:4ce64611-2585-4718-b0a7-3630fd209f0f",
@@ -3946,8 +3974,8 @@
       "key": "UUID:b6b8f84d-09e1-4f93-af7a-5628e1deac70",
       "label": "ELIA BLESA MASA",
       "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "ELIA BLESA MASA SE LA SALLE BONANOVA NEGRE #15"
+      "meta": "2 temporadas \u00B7 #15 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "ELIA BLESA MASA SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #15"
     },
     {
       "key": "UUID:882be3bd-fdd1-4a74-aa51-4dcdbe410b02",
@@ -4580,11 +4608,25 @@
       "searchText": "FORTUNE EREMOJE ATSEDAGHO OKUNDAYE LA SALLE MANRESA A LA SALLE MANRESA B #9"
     },
     {
+      "key": "UUID:d076c3eb-b56a-4dcb-86b3-96f12e45d631",
+      "label": "FRIDA LEUPOLD CARRERAS",
+      "latestShirtNumber": "9",
+      "meta": "1 temporada \u00B7 #9 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "FRIDA LEUPOLD CARRERAS LIMA-HORTA B\u00C0SQUET SALM\u00D3 #9"
+    },
+    {
       "key": "UUID:09a22769-dab0-48b7-b050-0fe09c49a42e",
       "label": "G.C.G.",
       "latestShirtNumber": "6",
       "meta": "1 temporada \u00B7 #6 \u00B7 CB NAV\u00C0S",
       "searchText": "G.C.G. CB NAV\u00C0S #6"
+    },
+    {
+      "key": "UUID:17449f92-73eb-4732-b432-38779937620b",
+      "label": "G.G.M.",
+      "latestShirtNumber": "4",
+      "meta": "1 temporada \u00B7 #4 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "G.G.M. LIMA-HORTA B\u00C0SQUET SALM\u00D3 #4"
     },
     {
       "key": "UUID:8527fda1-c140-43c5-b78f-6563f9052f2d",
@@ -4646,8 +4688,8 @@
       "key": "UUID:07544f64-d4e6-43ca-953c-c9a4541402a6",
       "label": "GALA IGLESIAS DE SENILLOSA",
       "latestShirtNumber": "4",
-      "meta": "1 temporada \u00B7 #4 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "GALA IGLESIAS DE SENILLOSA SE LA SALLE BONANOVA NEGRE #4"
+      "meta": "2 temporadas \u00B7 #4 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "GALA IGLESIAS DE SENILLOSA SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #4"
     },
     {
       "key": "UUID:6e354f81-118b-441d-98e6-5c7195f36da6",
@@ -5262,8 +5304,8 @@
       "key": "UUID:79b53e81-c32b-4615-9038-db309dd8bfd5",
       "label": "IRENE SITJ\u00C0 P\u00C9REZ",
       "latestShirtNumber": "5",
-      "meta": "1 temporada \u00B7 #5 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "IRENE SITJ\u00C0 P\u00C9REZ SE LA SALLE BONANOVA NEGRE #5"
+      "meta": "2 temporadas \u00B7 #5 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "IRENE SITJ\u00C0 P\u00C9REZ SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #5"
     },
     {
       "key": "UUID:ea33cfdd-ac26-495d-ab41-86c0c29dedd3",
@@ -6022,6 +6064,13 @@
       "searchText": "JULIA ESTIARTE GIRVENT CE SANT NICOLAU 2 #19"
     },
     {
+      "key": "UUID:9355bba6-83eb-4004-b818-457dd58f6a3d",
+      "label": "JULIA FERRANDO PEREZ",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 BLANC",
+      "searchText": "JULIA FERRANDO PEREZ FEMEN\u00CD SANT ADRI\u00C0 BLANC #8"
+    },
+    {
       "key": "UUID:0e271444-0742-4b8e-a61a-7acca31d0cb9",
       "label": "J\u00DALIA GALVEZ GUERRA",
       "latestShirtNumber": "0",
@@ -6104,6 +6153,13 @@
       "latestShirtNumber": "4",
       "meta": "1 temporada \u00B7 #4 \u00B7 CB NAV\u00C0S",
       "searchText": "J\u00DALIA MARTINEZ MORA CB NAV\u00C0S #4"
+    },
+    {
+      "key": "UUID:92a7508b-11ef-4926-89ad-bc913ed08917",
+      "label": "J\u00DALIA MASACHS OLIVERAS",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "J\u00DALIA MASACHS OLIVERAS VEDRUNA GR\u00C0CIA NEGRE #11"
     },
     {
       "key": "UUID:09dd41d6-d289-4ab4-a008-5eb3eac5f07e",
@@ -6370,13 +6426,6 @@
       "latestShirtNumber": "88",
       "meta": "1 temporada \u00B7 #88 \u00B7 UE SANT ANDREU VERMELL",
       "searchText": "L.M.R. UE SANT ANDREU GROC UE SANT ANDREU VERMELL #88"
-    },
-    {
-      "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb",
-      "label": "L.M.V.",
-      "latestShirtNumber": "13",
-      "meta": "1 temporada \u00B7 #13 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "L.M.V. VEDRUNA GR\u00C0CIA VERD #13"
     },
     {
       "key": "UUID:c0ff713c-d56f-4c3f-b94e-1fd6cb1d837f",
@@ -6697,8 +6746,8 @@
       "key": "UUID:491c1e87-674d-462f-bcaf-2242c0c00ec5",
       "label": "LAIA PASCUAL FONT",
       "latestShirtNumber": "6",
-      "meta": "1 temporada \u00B7 #6 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "LAIA PASCUAL FONT SE LA SALLE BONANOVA NEGRE #6"
+      "meta": "2 temporadas \u00B7 #6 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "LAIA PASCUAL FONT SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #6"
     },
     {
       "key": "UUID:94782a29-cf0d-4e8c-bfc8-03bdea92e0e4",
@@ -7194,8 +7243,8 @@
       "key": "UUID:d9bdbc1d-774c-41c1-b33e-4264cedce47b",
       "label": "LIA TORAL VICENTE",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "LIA TORAL VICENTE VEDRUNA GR\u00C0CIA VERD #10"
+      "meta": "2 temporadas \u00B7 #10 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "LIA TORAL VICENTE VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #10"
     },
     {
       "key": "UUID:75a23e23-40e6-49df-859f-6cd3024a0af7",
@@ -7303,6 +7352,13 @@
       "searchText": "LOLA LERIDA ROS TALENOM BOET MATAR\u00D3 2017 TALENOM BOET MATAR\u00D3 2016 #0"
     },
     {
+      "key": "UUID:b10fc96d-9406-4f0d-826a-1e75e9ecb6eb",
+      "label": "LOLA MARCOS VALLE",
+      "latestShirtNumber": "13",
+      "meta": "2 temporadas \u00B7 #13 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "LOLA MARCOS VALLE VEDRUNA GR\u00C0CIA NEGRE L.M.V. VEDRUNA GR\u00C0CIA VERD #13"
+    },
+    {
       "key": "UUID:9f2ccfa8-543a-421b-82d4-48913a405985",
       "label": "LOLA RACERO PLANAS",
       "latestShirtNumber": "25",
@@ -7404,8 +7460,8 @@
       "key": "UUID:241f513c-59b9-49e2-af00-7136bdbb59b1",
       "label": "LUCIA GUILL\u00C9N NARBON",
       "latestShirtNumber": "2",
-      "meta": "1 temporada \u00B7 #2 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "LUCIA GUILL\u00C9N NARBON SE LA SALLE BONANOVA NEGRE #2"
+      "meta": "2 temporadas \u00B7 #2 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "LUCIA GUILL\u00C9N NARBON SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #2"
     },
     {
       "key": "UUID:f04f3eb7-b44a-4434-91d8-dea30c4b0a27",
@@ -7509,8 +7565,8 @@
       "key": "UUID:f9b6f6aa-ef1a-4a9f-a9ee-e95a58f55f38",
       "label": "LUC\u00CDA VILLAR FLORES",
       "latestShirtNumber": "73",
-      "meta": "1 temporada \u00B7 #73 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "LUC\u00CDA VILLAR FLORES VEDRUNA GR\u00C0CIA VERD #73"
+      "meta": "2 temporadas \u00B7 #73 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "LUC\u00CDA VILLAR FLORES VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #73"
     },
     {
       "key": "UUID:aa91e6a2-33a6-48ce-a775-64db7302584c",
@@ -7558,8 +7614,8 @@
       "key": "UUID:f07007f7-a07d-4c23-9ea8-cef809fd396e",
       "label": "M.C.M.",
       "latestShirtNumber": "19",
-      "meta": "1 temporada \u00B7 #19 \u00B7 C.B GRUP BARNA A",
-      "searchText": "M.C.M. C.B GRUP BARNA A #19"
+      "meta": "2 temporadas \u00B7 #19 \u00B7 C.B GRUP BARNA B",
+      "searchText": "M.C.M. C.B GRUP BARNA B C.B GRUP BARNA A #19"
     },
     {
       "key": "UUID:8c52f194-466e-4350-b508-96da85d19549",
@@ -7581,6 +7637,13 @@
       "latestShirtNumber": "8",
       "meta": "1 temporada \u00B7 #8 \u00B7 NAVAS REFORMAS - CB. GAV\u00C0 BLAU",
       "searchText": "M.N.G. NAVAS REFORMAS - CB. GAV\u00C0 BLAU #8"
+    },
+    {
+      "key": "UUID:c36055ee-3b44-41aa-9222-6905c36fc71c",
+      "label": "M.P.S.",
+      "latestShirtNumber": "26",
+      "meta": "1 temporada \u00B7 #26 \u00B7 C.B GRUP BARNA B",
+      "searchText": "M.P.S. C.B GRUP BARNA B #26"
     },
     {
       "key": "UUID:710bd05a-2b20-4c33-b890-1bb6bb81fcb7",
@@ -7706,7 +7769,7 @@
       "label": "M\u00C0LIA MONTSERRAT MATEO",
       "latestShirtNumber": "11",
       "meta": "2 temporadas \u00B7 #11 \u00B7 C.B GRUP BARNA A",
-      "searchText": "M\u00C0LIA MONTSERRAT MATEO C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #11"
+      "searchText": "M\u00C0LIA MONTSERRAT MATEO C.B GRUP BARNA A C.B GRUP BARNA B C.B GRUP BARNA VERMELL  1ER ANY #11"
     },
     {
       "key": "UUID:7292d133-a30e-4399-a2af-563287e636bf",
@@ -7947,6 +8010,13 @@
       "searchText": "MARIA GOMEZ PEREZ C.B. VILANOVA DEL VALLES NEGRE-SISQUELLA GRUP #17"
     },
     {
+      "key": "UUID:5524de0a-0352-4ba3-a4f9-0ffc269d9ad3",
+      "label": "MARIA JOS\u00C9 CUATIN JURADO",
+      "latestShirtNumber": "19",
+      "meta": "1 temporada \u00B7 #19 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "MARIA JOS\u00C9 CUATIN JURADO LIMA-HORTA B\u00C0SQUET SALM\u00D3 #19"
+    },
+    {
       "key": "UUID:e88a6161-0634-4a6b-94d4-9b4e0b3a2790",
       "label": "MARIA LARGO D\u00CDEZ",
       "latestShirtNumber": "6",
@@ -7996,6 +8066,13 @@
       "searchText": "MARIA MORENO LOPEZ BASQUET NEUS #26"
     },
     {
+      "key": "UUID:8e3ebafc-7e5d-4dfb-87eb-b390d1779a2a",
+      "label": "MAR\u00CDA MU\u00D1OZ URETA",
+      "latestShirtNumber": "16",
+      "meta": "1 temporada \u00B7 #16 \u00B7 C.B GRUP BARNA B",
+      "searchText": "MAR\u00CDA MU\u00D1OZ URETA C.B GRUP BARNA B #16"
+    },
+    {
       "key": "UUID:da9c5b06-d060-4f4d-bc79-9204be6a0baf",
       "label": "MARIA PIEDRA BARALDES",
       "latestShirtNumber": "31",
@@ -8008,6 +8085,13 @@
       "latestShirtNumber": "7",
       "meta": "1 temporada \u00B7 #7 \u00B7 LA SALLE MANRESA B",
       "searchText": "MARIA RATERA PRECIADO LA SALLE MANRESA B #7"
+    },
+    {
+      "key": "UUID:6ef6f910-41f4-4dee-8c7f-735970c1ecee",
+      "label": "MARIA RIBERA BLANCO",
+      "latestShirtNumber": "3",
+      "meta": "1 temporada \u00B7 #3 \u00B7 C.B GRUP BARNA B",
+      "searchText": "MARIA RIBERA BLANCO C.B GRUP BARNA B #3"
     },
     {
       "key": "UUID:956bf47b-f480-4521-90d3-696e633ce0fe",
@@ -8363,8 +8447,8 @@
       "key": "UUID:6b716657-bcd9-4cc4-ab6b-4a77e967e1ca",
       "label": "MARTINA BECH RUEDA",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "MARTINA BECH RUEDA VEDRUNA GR\u00C0CIA VERD #7"
+      "meta": "2 temporadas \u00B7 #7 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "MARTINA BECH RUEDA VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #7"
     },
     {
       "key": "UUID:ebbf4f5a-b960-48fc-892e-ce8abe3d7691",
@@ -8993,8 +9077,8 @@
       "key": "UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c",
       "label": "N\u00C0DIA GRAS DEL ROSARIO",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "N\u00C0DIA GRAS DEL ROSARIO VEDRUNA GR\u00C0CIA VERD #12"
+      "meta": "2 temporadas \u00B7 #12 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "N\u00C0DIA GRAS DEL ROSARIO VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #12"
     },
     {
       "key": "UUID:79d9cb71-b9ab-4c19-b7dd-69ecd14ae96a",
@@ -9340,6 +9424,13 @@
       "searchText": "NOA RUBIO RAMIREZ C.B.VILASSAR DE MAR 1984 #14"
     },
     {
+      "key": "UUID:052b9e9c-4bb7-4d0d-9385-b5a8de5aba90",
+      "label": "NOA RUIZ DE AZUA GONZALEZ",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "NOA RUIZ DE AZUA GONZALEZ LIMA-HORTA B\u00C0SQUET SALM\u00D3 #5"
+    },
+    {
       "key": "UUID:68518fa6-711b-484f-b4cf-4c86617d8194",
       "label": "NOA SANTANDER SALA",
       "latestShirtNumber": "8",
@@ -9644,8 +9735,8 @@
       "key": "UUID:4be97cfa-217a-4f38-bba9-603cfb21f38d",
       "label": "OLIVIA CARRASCOSA MART\u00CDN",
       "latestShirtNumber": "12",
-      "meta": "1 temporada \u00B7 #12 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "OLIVIA CARRASCOSA MART\u00CDN SE LA SALLE BONANOVA NEGRE #12"
+      "meta": "2 temporadas \u00B7 #12 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "OLIVIA CARRASCOSA MART\u00CDN SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #12"
     },
     {
       "key": "UUID:53123ba8-86eb-4869-b669-656a30302c42",
@@ -9665,8 +9756,8 @@
       "key": "UUID:38829633-5ef7-4dde-9648-11ce9afcfd05",
       "label": "OLIVIA FERN\u00C1NDEZ IGUACEN",
       "latestShirtNumber": "1",
-      "meta": "1 temporada \u00B7 #1 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "OLIVIA FERN\u00C1NDEZ IGUACEN SE LA SALLE BONANOVA NEGRE #1"
+      "meta": "2 temporadas \u00B7 #1 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "OLIVIA FERN\u00C1NDEZ IGUACEN SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #1"
     },
     {
       "key": "UUID:ebd9cfca-f296-4de3-89b2-b28f3e3a7bd4",
@@ -9833,8 +9924,8 @@
       "key": "UUID:2aa8840a-51a9-4cf4-9097-4c9793ce46b6",
       "label": "ONA HARZEE TORRELL",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 C.B GRUP BARNA A",
-      "searchText": "ONA HARZEE TORRELL C.B GRUP BARNA A #7"
+      "meta": "2 temporadas \u00B7 #7 \u00B7 C.B GRUP BARNA B",
+      "searchText": "ONA HARZEE TORRELL C.B GRUP BARNA B C.B GRUP BARNA A #7"
     },
     {
       "key": "UUID:c06cb96d-0a70-4883-908e-8590e0e73b67",
@@ -10239,8 +10330,8 @@
       "key": "UUID:32bac3cd-ed6b-4e99-8b03-e7cd346dbbea",
       "label": "PAULA NAUDIN COMA",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 VEDRUNA GR\u00C0CIA VERD",
-      "searchText": "PAULA NAUDIN COMA VEDRUNA GR\u00C0CIA VERD #9"
+      "meta": "2 temporadas \u00B7 #9 \u00B7 VEDRUNA GR\u00C0CIA NEGRE",
+      "searchText": "PAULA NAUDIN COMA VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #9"
     },
     {
       "key": "UUID:e11be2f3-6052-47e7-bafa-2d8373e3e1ab",
@@ -10339,6 +10430,13 @@
       "latestShirtNumber": "6",
       "meta": "1 temporada \u00B7 #6 \u00B7 FEMEN\u00CD OSONA LIBERTY- OVA PROJECTS",
       "searchText": "PRINCESS OMOSEFE DANIEL DANIEL FEMEN\u00CD OSONA LIBERTY- OVA PROJECTS #6"
+    },
+    {
+      "key": "UUID:849ae23e-bd12-4071-917e-a67736174ef6",
+      "label": "Q.B.H.",
+      "latestShirtNumber": "25",
+      "meta": "1 temporada \u00B7 #25 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "Q.B.H. LIMA-HORTA B\u00C0SQUET SALM\u00D3 #25"
     },
     {
       "key": "UUID:6291980d-54a0-4bb0-bb19-8e27c7ca7cec",
@@ -10442,8 +10540,8 @@
       "key": "UUID:cd97cdb2-8b2d-4ad8-8ad4-3f4433caf8d5",
       "label": "RANIA MOUSSAOUI SASTRES",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 C.B GRUP BARNA A",
-      "searchText": "RANIA MOUSSAOUI SASTRES C.B GRUP BARNA A #10"
+      "meta": "2 temporadas \u00B7 #10 \u00B7 C.B GRUP BARNA B",
+      "searchText": "RANIA MOUSSAOUI SASTRES C.B GRUP BARNA B C.B GRUP BARNA A #10"
     },
     {
       "key": "UUID:36772452-beff-4a7a-9517-64989843dcf2",
@@ -11023,8 +11121,8 @@
       "key": "UUID:37982bdd-7972-4bb1-a7c5-f26a0cccf3cc",
       "label": "SOFIA MOYA KLOTZ",
       "latestShirtNumber": "23",
-      "meta": "1 temporada \u00B7 #23 \u00B7 C.B GRUP BARNA A",
-      "searchText": "SOFIA MOYA KLOTZ C.B GRUP BARNA A #23"
+      "meta": "2 temporadas \u00B7 #23 \u00B7 C.B GRUP BARNA B",
+      "searchText": "SOFIA MOYA KLOTZ C.B GRUP BARNA B C.B GRUP BARNA A #23"
     },
     {
       "key": "UUID:fc2860b5-7a4a-4acf-bdb0-3b047a28e5bf",
@@ -11046,6 +11144,13 @@
       "latestShirtNumber": "15",
       "meta": "1 temporada \u00B7 #15 \u00B7 CB VILASSAR DE DALT",
       "searchText": "SOFIA PUCK ROMERO CB VILASSAR DE DALT #15"
+    },
+    {
+      "key": "UUID:f54da6ab-e9e1-479f-be15-9cdacd8bed35",
+      "label": "SOF\u00CDA VALDEZ MARISCAL",
+      "latestShirtNumber": "11",
+      "meta": "1 temporada \u00B7 #11 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "SOF\u00CDA VALDEZ MARISCAL LIMA-HORTA B\u00C0SQUET SALM\u00D3 #11"
     },
     {
       "key": "UUID:6a791b01-c094-461d-a1ff-3832f948da3a",
@@ -11513,8 +11618,8 @@
       "key": "UUID:566d460e-e5a9-42e4-8fe9-4d61cc4b01a7",
       "label": "VEGA PUNCERNAU CARRILLO",
       "latestShirtNumber": "9",
-      "meta": "1 temporada \u00B7 #9 \u00B7 SE LA SALLE BONANOVA NEGRE",
-      "searchText": "VEGA PUNCERNAU CARRILLO SE LA SALLE BONANOVA NEGRE #9"
+      "meta": "2 temporadas \u00B7 #9 \u00B7 SE LA SALLE BONANOVA VERMELL",
+      "searchText": "VEGA PUNCERNAU CARRILLO SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #9"
     },
     {
       "key": "UUID:e0676cb3-56ed-4b2b-ba50-beda94b5a80a",
@@ -11529,6 +11634,13 @@
       "latestShirtNumber": "17",
       "meta": "1 temporada \u00B7 #17 \u00B7 VILAB\u00C0SQUET VILADECANS PMF BLANC",
       "searchText": "VEGA SANTIAGO GALVEZ VILAB\u00C0SQUET VILADECANS PMF BLANC #17"
+    },
+    {
+      "key": "UUID:9aea42ba-e070-43ba-9ed0-0c36c0fdab82",
+      "label": "VEGA TREPAT L\u00D3PEZ",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "VEGA TREPAT L\u00D3PEZ LIMA-HORTA B\u00C0SQUET SALM\u00D3 #10"
     },
     {
       "key": "UUID:5328972e-e744-4f40-9466-8156e567243e",
@@ -11604,8 +11716,8 @@
       "key": "UUID:4f49f55c-d7ed-414c-b890-bdf15ea13232",
       "label": "VERA RUIZ PEREZ",
       "latestShirtNumber": "8",
-      "meta": "1 temporada \u00B7 #8 \u00B7 C.B GRUP BARNA A",
-      "searchText": "VERA RUIZ PEREZ C.B GRUP BARNA A #8"
+      "meta": "2 temporadas \u00B7 #8 \u00B7 C.B GRUP BARNA B",
+      "searchText": "VERA RUIZ PEREZ C.B GRUP BARNA B C.B GRUP BARNA A #8"
     },
     {
       "key": "UUID:a0e4bf43-1659-4ed5-9db0-6585f790f1bc",

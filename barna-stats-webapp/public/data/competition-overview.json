@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "totalTeams": 16,
-  "totalMatches": 8,
+  "totalTeams": 20,
+  "totalMatches": 11,
   "phases": [
     {
       "seasonStartYear": 2026,
@@ -14,7 +14,7 @@
       "levelName": "",
       "levelCode": "",
       "groupCode": "07",
-      "matchesCount": 2
+      "matchesCount": 3
     },
     {
       "seasonStartYear": 2026,
@@ -27,6 +27,18 @@
       "levelCode": "A",
       "groupCode": "02",
       "matchesCount": 3
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "sourcePhaseId": 24023,
+      "phaseNumber": 1,
+      "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+      "phaseName": "Primera Fase",
+      "levelName": "Nivell B",
+      "levelCode": "B",
+      "groupCode": "04",
+      "matchesCount": 2
     },
     {
       "seasonStartYear": 2026,
@@ -65,7 +77,7 @@
       "teamIdIntern": 583158,
       "teamIdExtern": 91102,
       "teamName": "BASQUET SANT PERE VERMELL",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 9,
       "totalValuation": 62
     },
@@ -77,6 +89,15 @@
       "matchesPlayed": 1,
       "playersCount": 11,
       "totalValuation": 44
+    },
+    {
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+      "teamIdIntern": 588085,
+      "teamIdExtern": 90781,
+      "teamName": "C.B GRUP BARNA B",
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "totalValuation": 18
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
@@ -146,9 +167,9 @@
       "teamIdIntern": 585489,
       "teamIdExtern": 89373,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-      "matchesPlayed": 1,
-      "playersCount": 11,
-      "totalValuation": 18
+      "matchesPlayed": 2,
+      "playersCount": 12,
+      "totalValuation": 30
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
@@ -169,6 +190,24 @@
       "totalValuation": 2
     },
     {
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+      "teamIdIntern": 586452,
+      "teamIdExtern": 94361,
+      "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "matchesPlayed": 1,
+      "playersCount": 11,
+      "totalValuation": 8
+    },
+    {
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+      "teamIdIntern": 588084,
+      "teamIdExtern": 91073,
+      "teamName": "SE LA SALLE BONANOVA VERMELL",
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "totalValuation": 22
+    },
+    {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
       "teamIdIntern": 584407,
       "teamIdExtern": 91876,
@@ -185,6 +224,15 @@
       "matchesPlayed": 1,
       "playersCount": 8,
       "totalValuation": 85
+    },
+    {
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+      "teamIdIntern": 586453,
+      "teamIdExtern": 92009,
+      "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+      "matchesPlayed": 1,
+      "playersCount": 10,
+      "totalValuation": 59
     }
   ],
   "categoryFiles": [
@@ -193,6 +241,12 @@
       "matchesFile": "competition-matches/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json",
       "leadersFile": "competition-player-leaders/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json",
       "standingsFile": "competition-standings/c-t-bcn-u15-cadet-femeni-1r-any-promocio.json"
+    },
+    {
+      "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+      "matchesFile": "competition-matches/c-t-mini-femeni-1r-any.json",
+      "leadersFile": "competition-player-leaders/c-t-mini-femeni-1r-any.json",
+      "standingsFile": "competition-standings/c-t-mini-femeni-1r-any.json"
     },
     {
       "categoryName": "C.t. Pre-mini Femen\u00ED",

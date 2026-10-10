@@ -1,9 +1,9 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "generatedAtUtc": "2026-10-05T19:00:38.027068Z",
-  "totalMatches": 8,
-  "totalTeams": 16,
+  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
+  "totalMatches": 11,
+  "totalTeams": 20,
   "teams": [
     {
       "seasonStartYear": 2026,
@@ -54,7 +54,7 @@
       "teamIdIntern": 583158,
       "teamIdExtern": 91102,
       "teamName": "BASQUET SANT PERE VERMELL",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 9,
       "matchesFile": "teams/86c2e238558738cd/matches.json",
       "playersFile": "teams/86c2e238558738cd/players.json",
@@ -87,6 +87,27 @@
         "levelName": "Nivell A",
         "levelCode": "A",
         "groupCode": "02"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+      "teamIdIntern": 588085,
+      "teamIdExtern": 90781,
+      "teamName": "C.B GRUP BARNA B",
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "matchesFile": "teams/be31d03e1051773d/matches.json",
+      "playersFile": "teams/be31d03e1051773d/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 24023,
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "phaseName": "Primera Fase",
+        "levelName": "Nivell B",
+        "levelCode": "B",
+        "groupCode": "04"
       }
     },
     {
@@ -243,8 +264,8 @@
       "teamIdIntern": 585489,
       "teamIdExtern": 89373,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-      "matchesPlayed": 1,
-      "playersCount": 11,
+      "matchesPlayed": 2,
+      "playersCount": 12,
       "matchesFile": "teams/12e4270a3236a535/matches.json",
       "playersFile": "teams/12e4270a3236a535/players.json",
       "latestContext": {
@@ -302,6 +323,48 @@
     {
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
+      "teamIdIntern": 586452,
+      "teamIdExtern": 94361,
+      "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "matchesPlayed": 1,
+      "playersCount": 11,
+      "matchesFile": "teams/e8791796f8bad2c9/matches.json",
+      "playersFile": "teams/e8791796f8bad2c9/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 24023,
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "phaseName": "Primera Fase",
+        "levelName": "Nivell B",
+        "levelCode": "B",
+        "groupCode": "04"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+      "teamIdIntern": 588084,
+      "teamIdExtern": 91073,
+      "teamName": "SE LA SALLE BONANOVA VERMELL",
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "matchesFile": "teams/2da1a437f0f41c0e/matches.json",
+      "playersFile": "teams/2da1a437f0f41c0e/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 24023,
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "phaseName": "Primera Fase",
+        "levelName": "Nivell B",
+        "levelCode": "B",
+        "groupCode": "04"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
       "teamIdIntern": 584407,
       "teamIdExtern": 91876,
@@ -339,6 +402,27 @@
         "levelName": "Nivell C",
         "levelCode": "C",
         "groupCode": "23"
+      }
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+      "teamIdIntern": 586453,
+      "teamIdExtern": 92009,
+      "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+      "matchesPlayed": 1,
+      "playersCount": 10,
+      "matchesFile": "teams/245fab6d2a015903/matches.json",
+      "playersFile": "teams/245fab6d2a015903/players.json",
+      "latestContext": {
+        "phaseNumber": 1,
+        "sourcePhaseId": 24023,
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "phaseName": "Primera Fase",
+        "levelName": "Nivell B",
+        "levelCode": "B",
+        "groupCode": "04"
       }
     }
   ]
