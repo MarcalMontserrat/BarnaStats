@@ -6,11 +6,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 89513,
     "totalTeams": 1,
-    "totalMatches": 1,
+    "totalMatches": 2,
     "totalPlayers": 10,
     "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
     "searchText": "AE MINGUELLA AE MINGUELLA A - PURE CUISINE C.t. Pre-mini Femen\u00ED Nivell A",
     "categories": [
       {
@@ -25,7 +25,7 @@
                 "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
                 "teamIdExtern": 89513,
                 "teamName": "AE MINGUELLA A - PURE CUISINE",
-                "matchesPlayed": 1,
+                "matchesPlayed": 2,
                 "playersCount": 10,
                 "categoryName": "C.t. Pre-mini Femen\u00ED",
                 "levelKey": "A",
@@ -33,16 +33,16 @@
                 "phaseLabel": "Primera Fase \u00B7 Nivell A \u00B7 Grupo 02",
                 "latestPhaseOptionValue": "source:23958",
                 "groupCode": "02",
-                "standingPosition": 1,
+                "standingPosition": 3,
                 "record": {
                   "wins": 1,
-                  "losses": 0,
+                  "losses": 1,
                   "ties": 0,
-                  "pointsFor": 142,
-                  "pointsAgainst": 12
+                  "pointsFor": 192,
+                  "pointsAgainst": 68
                 },
-                "pointDiff": 130,
-                "avgValuation": 126
+                "pointDiff": 124,
+                "avgValuation": 75
               }
             ]
           }
@@ -261,11 +261,11 @@
     "clubId": 24,
     "primaryTeamIdExtern": 90463,
     "totalTeams": 3,
-    "totalMatches": 3,
-    "totalPlayers": 34,
+    "totalMatches": 4,
+    "totalPlayers": 35,
     "categoriesCount": 3,
     "levelsCount": 3,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 3 partidos",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 4 partidos",
     "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.t. Pre-mini Femen\u00ED Nivell A C.B GRUP BARNA B C.t. Mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA NEGRE C.t. Pre-mini Mascul\u00ED Nivell C",
     "categories": [
       {
@@ -315,8 +315,8 @@
                 "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
                 "teamIdExtern": 90463,
                 "teamName": "C.B GRUP BARNA A",
-                "matchesPlayed": 1,
-                "playersCount": 11,
+                "matchesPlayed": 2,
+                "playersCount": 12,
                 "categoryName": "C.t. Pre-mini Femen\u00ED",
                 "levelKey": "A",
                 "levelName": "Nivell A",
@@ -325,14 +325,14 @@
                 "groupCode": "02",
                 "standingPosition": 2,
                 "record": {
-                  "wins": 1,
+                  "wins": 2,
                   "losses": 0,
                   "ties": 0,
-                  "pointsFor": 68,
-                  "pointsAgainst": 34
+                  "pointsFor": 124,
+                  "pointsAgainst": 84
                 },
-                "pointDiff": 34,
-                "avgValuation": 44
+                "pointDiff": 40,
+                "avgValuation": 35.5
               }
             ]
           }
@@ -460,7 +460,7 @@
                 "phaseLabel": "Primera Fase \u00B7 Nivell A \u00B7 Grupo 02",
                 "latestPhaseOptionValue": "source:23958",
                 "groupCode": "02",
-                "standingPosition": 6,
+                "standingPosition": 5,
                 "record": {
                   "wins": 0,
                   "losses": 1,
@@ -535,11 +535,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 91937,
     "totalTeams": 2,
-    "totalMatches": 2,
-    "totalPlayers": 19,
+    "totalMatches": 3,
+    "totalPlayers": 21,
     "categoriesCount": 2,
     "levelsCount": 2,
-    "meta": "2 equipos \u00B7 2 categorias \u00B7 2 partidos",
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 3 partidos",
     "searchText": "DOMINIQUES BARCELONA C.t. Pre-mini Mascul\u00ED Nivell C DOMINIQUES BARCELONA TARONJA C.t. Pre-mini Femen\u00ED Nivell A",
     "categories": [
       {
@@ -554,24 +554,24 @@
                 "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
                 "teamIdExtern": 91941,
                 "teamName": "DOMINIQUES BARCELONA TARONJA",
-                "matchesPlayed": 1,
-                "playersCount": 8,
+                "matchesPlayed": 2,
+                "playersCount": 10,
                 "categoryName": "C.t. Pre-mini Femen\u00ED",
                 "levelKey": "A",
                 "levelName": "Nivell A",
                 "phaseLabel": "Primera Fase \u00B7 Nivell A \u00B7 Grupo 02",
                 "latestPhaseOptionValue": "source:23958",
                 "groupCode": "02",
-                "standingPosition": 3,
+                "standingPosition": 1,
                 "record": {
-                  "wins": 1,
+                  "wins": 2,
                   "losses": 0,
                   "ties": 0,
-                  "pointsFor": 76,
-                  "pointsAgainst": 74
+                  "pointsFor": 156,
+                  "pointsAgainst": 94
                 },
-                "pointDiff": 2,
-                "avgValuation": 45
+                "pointDiff": 62,
+                "avgValuation": 46.5
               }
             ]
           }
@@ -672,11 +672,11 @@
     "clubId": 26,
     "primaryTeamIdExtern": 91790,
     "totalTeams": 1,
-    "totalMatches": 1,
-    "totalPlayers": 10,
+    "totalMatches": 2,
+    "totalPlayers": 11,
     "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
     "searchText": "JAC CLUB SANTS JAC SANTS BARCELONA U10 1 C.t. Pre-mini Femen\u00ED Nivell A",
     "categories": [
       {
@@ -691,24 +691,24 @@
                 "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
                 "teamIdExtern": 91790,
                 "teamName": "JAC SANTS BARCELONA U10 1",
-                "matchesPlayed": 1,
-                "playersCount": 10,
+                "matchesPlayed": 2,
+                "playersCount": 11,
                 "categoryName": "C.t. Pre-mini Femen\u00ED",
                 "levelKey": "A",
                 "levelName": "Nivell A",
                 "phaseLabel": "Primera Fase \u00B7 Nivell A \u00B7 Grupo 02",
                 "latestPhaseOptionValue": "source:23958",
                 "groupCode": "02",
-                "standingPosition": 5,
+                "standingPosition": 6,
                 "record": {
                   "wins": 0,
-                  "losses": 1,
+                  "losses": 2,
                   "ties": 0,
-                  "pointsFor": 34,
-                  "pointsAgainst": 68
+                  "pointsFor": 54,
+                  "pointsAgainst": 148
                 },
-                "pointDiff": -34,
-                "avgValuation": 7
+                "pointDiff": -94,
+                "avgValuation": 3
               }
             ]
           }

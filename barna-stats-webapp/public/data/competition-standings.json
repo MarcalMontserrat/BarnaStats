@@ -76,43 +76,43 @@
       "levelName": "Nivell A",
       "levelCode": "A",
       "groupCode": "02",
-      "matchesCount": 3,
+      "matchesCount": 5,
       "rows": [
         {
           "position": 1,
-          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
-          "teamName": "AE MINGUELLA A - PURE CUISINE",
-          "played": 1,
-          "wins": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+          "teamName": "DOMINIQUES BARCELONA TARONJA",
+          "played": 2,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 142,
-          "pointsAgainst": 12,
-          "pointDiff": 130
+          "pointsFor": 156,
+          "pointsAgainst": 94,
+          "pointDiff": 62
         },
         {
           "position": 2,
           "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
           "teamName": "C.B GRUP BARNA A",
-          "played": 1,
-          "wins": 1,
+          "played": 2,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 68,
-          "pointsAgainst": 34,
-          "pointDiff": 34
+          "pointsFor": 124,
+          "pointsAgainst": 84,
+          "pointDiff": 40
         },
         {
           "position": 3,
-          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
-          "teamName": "DOMINIQUES BARCELONA TARONJA",
-          "played": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "teamName": "AE MINGUELLA A - PURE CUISINE",
+          "played": 2,
           "wins": 1,
-          "losses": 0,
+          "losses": 1,
           "ties": 0,
-          "pointsFor": 76,
-          "pointsAgainst": 74,
-          "pointDiff": 2
+          "pointsFor": 192,
+          "pointsAgainst": 68,
+          "pointDiff": 124
         },
         {
           "position": 4,
@@ -128,18 +128,6 @@
         },
         {
           "position": 5,
-          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
-          "teamName": "JAC SANTS BARCELONA U10 1",
-          "played": 1,
-          "wins": 0,
-          "losses": 1,
-          "ties": 0,
-          "pointsFor": 34,
-          "pointsAgainst": 68,
-          "pointDiff": -34
-        },
-        {
-          "position": 6,
           "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
           "teamName": "JESU\u00CFTES GR\u00C0CIA KOSTKA VERD",
           "played": 1,
@@ -149,6 +137,18 @@
           "pointsFor": 12,
           "pointsAgainst": 142,
           "pointDiff": -130
+        },
+        {
+          "position": 6,
+          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+          "teamName": "JAC SANTS BARCELONA U10 1",
+          "played": 2,
+          "wins": 0,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 54,
+          "pointsAgainst": 148,
+          "pointDiff": -94
         }
       ]
     },

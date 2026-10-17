@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
-  "totalMatches": 11,
+  "generatedAtUtc": "2026-10-17T11:44:37.431124Z",
+  "totalMatches": 13,
   "totalTeams": 20,
   "teams": [
     {
@@ -12,7 +12,7 @@
       "teamIdIntern": 583163,
       "teamIdExtern": 89513,
       "teamName": "AE MINGUELLA A - PURE CUISINE",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 10,
       "matchesFile": "teams/7024b17284a7a8ab/matches.json",
       "playersFile": "teams/7024b17284a7a8ab/players.json",
@@ -75,8 +75,8 @@
       "teamIdIntern": 583371,
       "teamIdExtern": 90463,
       "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 1,
-      "playersCount": 11,
+      "matchesPlayed": 2,
+      "playersCount": 12,
       "matchesFile": "teams/bd9c64b5c665be46/matches.json",
       "playersFile": "teams/bd9c64b5c665be46/players.json",
       "latestContext": {
@@ -222,8 +222,8 @@
       "teamIdIntern": 584410,
       "teamIdExtern": 91941,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "matchesPlayed": 1,
-      "playersCount": 8,
+      "matchesPlayed": 2,
+      "playersCount": 10,
       "matchesFile": "teams/268d0567822fa648/matches.json",
       "playersFile": "teams/268d0567822fa648/players.json",
       "latestContext": {
@@ -285,8 +285,8 @@
       "teamIdIntern": 583370,
       "teamIdExtern": 91790,
       "teamName": "JAC SANTS BARCELONA U10 1",
-      "matchesPlayed": 1,
-      "playersCount": 10,
+      "matchesPlayed": 2,
+      "playersCount": 11,
       "matchesFile": "teams/eb61db587c60b676/matches.json",
       "playersFile": "teams/eb61db587c60b676/players.json",
       "latestContext": {

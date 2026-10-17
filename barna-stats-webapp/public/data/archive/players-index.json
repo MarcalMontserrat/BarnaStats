@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
+  "generatedAtUtc": "2026-10-17T11:44:37.431124Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -292,8 +292,8 @@
       "key": "UUID:aa996cd9-9cf4-4ade-a3cf-e79485ee36f6",
       "label": "ABRIL SANZ PEREZ",
       "latestShirtNumber": "28",
-      "meta": "1 temporada \u00B7 #28 \u00B7 JAC SANTS BARCELONA U10",
-      "searchText": "ABRIL SANZ PEREZ JAC SANTS BARCELONA U10 JAC SANTS BARCELONA U10 1 #28"
+      "meta": "2 temporadas \u00B7 #28 \u00B7 JAC SANTS BARCELONA U10 1",
+      "searchText": "ABRIL SANZ PEREZ JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #28"
     },
     {
       "key": "UUID:8d274907-7b2b-428a-bc3a-ef9b920c8670",
@@ -880,8 +880,8 @@
       "key": "UUID:c3157839-e1a1-4ef7-9bd2-55c38eb190be",
       "label": "AITANA SALVADOR CERESUELA",
       "latestShirtNumber": "1",
-      "meta": "1 temporada \u00B7 #1 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "AITANA SALVADOR CERESUELA C.B GRUP BARNA VERMELL  1ER ANY #1"
+      "meta": "2 temporadas \u00B7 #1 \u00B7 C.B GRUP BARNA A",
+      "searchText": "AITANA SALVADOR CERESUELA C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #1"
     },
     {
       "key": "UUID:6cb4dadb-dc88-461a-bc95-770524f1a301",
@@ -985,8 +985,8 @@
       "key": "UUID:c8ea9eb2-e758-4075-af1e-bb24ba7afe7b",
       "label": "ALBA LLAURADO SANCHEZ",
       "latestShirtNumber": "10",
-      "meta": "1 temporada \u00B7 #10 \u00B7 DOMINIQUES BARCELONA NEGRE",
-      "searchText": "ALBA LLAURADO SANCHEZ DOMINIQUES BARCELONA NEGRE DOMINIQUES BARCELONA TARONJA #10"
+      "meta": "2 temporadas \u00B7 #10 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "searchText": "ALBA LLAURADO SANCHEZ DOMINIQUES BARCELONA TARONJA DOMINIQUES BARCELONA NEGRE #10"
     },
     {
       "key": "UUID:2336dc60-442f-4b8d-8503-2a3f3b2263cf",
@@ -1601,8 +1601,8 @@
       "key": "UUID:dff9157d-6f54-42f0-9c4d-dd484efc9bf0",
       "label": "ANTONELLA CORNEJO MERIDA",
       "latestShirtNumber": "17",
-      "meta": "1 temporada \u00B7 #17 \u00B7 DOMINIQUES BARCELONA NEGRE",
-      "searchText": "ANTONELLA CORNEJO MERIDA DOMINIQUES BARCELONA NEGRE #17"
+      "meta": "2 temporadas \u00B7 #17 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "searchText": "ANTONELLA CORNEJO MERIDA DOMINIQUES BARCELONA TARONJA DOMINIQUES BARCELONA NEGRE #17"
     },
     {
       "key": "UUID:bb6857d9-cb90-4d7d-8b71-e7b95ae8a132",

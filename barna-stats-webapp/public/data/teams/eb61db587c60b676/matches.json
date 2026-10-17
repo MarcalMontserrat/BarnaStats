@@ -119,5 +119,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+    "teamIdIntern": 592371,
+    "teamIdExtern": 91790,
+    "teamName": "JAC SANTS BARCELONA U10 1",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+    "matchWebId": 28624,
+    "matchInternId": 294884,
+    "matchExternId": 1210198,
+    "matchDate": "2026-10-17T13:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 23958,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell A",
+    "levelCode": "A",
+    "groupCode": "02",
+    "phaseRound": 2,
+    "roundNumber": 2,
+    "homeTeam": "DOMINIQUES BARCELONA TARONJA",
+    "homeScore": 70,
+    "awayScore": 20,
+    "awayTeam": "JAC SANTS BARCELONA U10 1",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+    "rivalTeam": "DOMINIQUES BARCELONA TARONJA",
+    "officialTeamScore": 20,
+    "officialRivalScore": 70,
+    "teamScore": 20,
+    "rivalScore": 80,
+    "result": "L",
+    "topScorer": "MARTINA SOLE ABELLO",
+    "topScorerTeam": "DOMINIQUES BARCELONA TARONJA",
+    "topScorerPoints": 43,
+    "teamTopScorer": "EMMA CROSAS LARRA\u00D1AGA",
+    "teamTopScorerPoints": 7,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 52,
+      "bestRun": 6,
+      "rivalBestRun": 23,
+      "closingRun": 2,
+      "rivalClosingRun": 0,
+      "firstScorer": "GALA PELA\u00D3 SALVAD\u00D3",
+      "firstScorerTeam": "DOMINIQUES BARCELONA TARONJA",
+      "lastScorer": "GALA PELA\u00D3 SALVAD\u00D3",
+      "lastScorerTeam": "DOMINIQUES BARCELONA TARONJA",
+      "teamFirstScorer": "LAIA DEU ORIOL",
+      "teamLastScorer": "EMMA CROSAS LARRA\u00D1AGA",
+      "bestPeriodLabel": "Parcial 2",
+      "bestPeriodDiff": 3,
+      "worstPeriodLabel": "Parcial 7",
+      "worstPeriodDiff": -15,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 10,
+          "diff": -8
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 5,
+          "rivalPoints": 2,
+          "diff": 3
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 3,
+          "rivalPoints": 4,
+          "diff": -1
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 0,
+          "rivalPoints": 10,
+          "diff": -10
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 4,
+          "rivalPoints": 17,
+          "diff": -13
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 4,
+          "diff": -4
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 2,
+          "rivalPoints": 17,
+          "diff": -15
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 4,
+          "rivalPoints": 6,
+          "diff": -2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

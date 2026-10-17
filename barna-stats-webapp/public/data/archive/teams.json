@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-10T20:01:41.002447Z",
+  "generatedAtUtc": "2026-10-17T11:44:37.431124Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -156,16 +156,16 @@
           "teamName": "AE MINGUELLA A - PURE CUISINE",
           "categoryName": "C.t. Pre-mini Femen\u00ED",
           "levelName": "A",
-          "matchesPlayed": 1,
+          "matchesPlayed": 2,
           "playersCount": 10,
-          "pointsFor": 142,
-          "pointsAgainst": 12,
-          "pointDiff": 130,
+          "pointsFor": 192,
+          "pointsAgainst": 68,
+          "pointDiff": 124,
           "wins": 1,
-          "losses": 0,
+          "losses": 1,
           "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 126
+          "standingPosition": 3,
+          "avgValuation": 75
         }
       ]
     },
@@ -744,16 +744,16 @@
           "teamName": "C.B GRUP BARNA A",
           "categoryName": "C.t. Pre-mini Femen\u00ED",
           "levelName": "A",
-          "matchesPlayed": 1,
-          "playersCount": 11,
-          "pointsFor": 68,
-          "pointsAgainst": 34,
-          "pointDiff": 34,
-          "wins": 1,
+          "matchesPlayed": 2,
+          "playersCount": 12,
+          "pointsFor": 124,
+          "pointsAgainst": 84,
+          "pointDiff": 40,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
           "standingPosition": 2,
-          "avgValuation": 44
+          "avgValuation": 35.5
         }
       ]
     },
@@ -2275,16 +2275,16 @@
           "teamName": "DOMINIQUES BARCELONA TARONJA",
           "categoryName": "C.t. Pre-mini Femen\u00ED",
           "levelName": "A",
-          "matchesPlayed": 1,
-          "playersCount": 8,
-          "pointsFor": 76,
-          "pointsAgainst": 74,
-          "pointDiff": 2,
-          "wins": 1,
+          "matchesPlayed": 2,
+          "playersCount": 10,
+          "pointsFor": 156,
+          "pointsAgainst": 94,
+          "pointDiff": 62,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 45
+          "standingPosition": 1,
+          "avgValuation": 46.5
         }
       ]
     },
@@ -2779,16 +2779,16 @@
           "teamName": "JAC SANTS BARCELONA U10 1",
           "categoryName": "C.t. Pre-mini Femen\u00ED",
           "levelName": "A",
-          "matchesPlayed": 1,
-          "playersCount": 10,
-          "pointsFor": 34,
-          "pointsAgainst": 68,
-          "pointDiff": -34,
+          "matchesPlayed": 2,
+          "playersCount": 11,
+          "pointsFor": 54,
+          "pointsAgainst": 148,
+          "pointDiff": -94,
           "wins": 0,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "standingPosition": 5,
-          "avgValuation": 7
+          "standingPosition": 6,
+          "avgValuation": 3
         }
       ]
     },
@@ -2871,7 +2871,7 @@
           "wins": 0,
           "losses": 1,
           "ties": 0,
-          "standingPosition": 6,
+          "standingPosition": 5,
           "avgValuation": 2
         }
       ]

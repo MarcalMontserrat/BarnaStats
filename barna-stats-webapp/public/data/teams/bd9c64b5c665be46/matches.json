@@ -119,5 +119,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "teamIdIntern": 592039,
+    "teamIdExtern": 90463,
+    "teamName": "C.B GRUP BARNA A",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "matchWebId": 28626,
+    "matchInternId": 294718,
+    "matchExternId": 1221929,
+    "matchDate": "2026-10-17T12:45:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 23958,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell A",
+    "levelCode": "A",
+    "groupCode": "02",
+    "phaseRound": 2,
+    "roundNumber": 2,
+    "homeTeam": "AE MINGUELLA A - PURE CUISINE",
+    "homeScore": 50,
+    "awayScore": 56,
+    "awayTeam": "C.B GRUP BARNA A",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+    "rivalTeam": "AE MINGUELLA A - PURE CUISINE",
+    "officialTeamScore": 56,
+    "officialRivalScore": 50,
+    "teamScore": 56,
+    "rivalScore": 50,
+    "result": "W",
+    "topScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "topScorerTeam": "C.B GRUP BARNA A",
+    "topScorerPoints": 21,
+    "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "teamTopScorerPoints": 21,
+    "insights": {
+      "leadChanges": 5,
+      "ties": 2,
+      "maxLead": 12,
+      "maxDeficit": 3,
+      "bestRun": 10,
+      "rivalBestRun": 9,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "UMA PACH\u00C1 BUIL",
+      "firstScorerTeam": "AE MINGUELLA A - PURE CUISINE",
+      "lastScorer": "JULIE SCHERER GRIFOL",
+      "lastScorerTeam": "AE MINGUELLA A - PURE CUISINE",
+      "teamFirstScorer": "EVA RODRIGUEZ CANO",
+      "teamLastScorer": "M\u00C0LIA MONTSERRAT MATEO",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 7,
+      "worstPeriodLabel": "Parcial 6",
+      "worstPeriodDiff": -9,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 8,
+          "rivalPoints": 7,
+          "diff": 1
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 8,
+          "rivalPoints": 6,
+          "diff": 2
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 3,
+          "rivalPoints": 2,
+          "diff": 1
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 6,
+          "rivalPoints": 4,
+          "diff": 2
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 10,
+          "rivalPoints": 10,
+          "diff": 0
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 2,
+          "rivalPoints": 11,
+          "diff": -9
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 13,
+          "rivalPoints": 6,
+          "diff": 7
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 6,
+          "rivalPoints": 4,
+          "diff": 2
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]
