@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-17T11:44:37.431124Z",
+  "generatedAtUtc": "2026-10-17T15:06:25.169362Z",
   "teams": [
     {
       "key": "TEAM:82353",
@@ -800,16 +800,16 @@
           "teamName": "C.B GRUP BARNA B",
           "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 1,
-          "playersCount": 12,
-          "pointsFor": 39,
-          "pointsAgainst": 42,
-          "pointDiff": -3,
+          "matchesPlayed": 2,
+          "playersCount": 14,
+          "pointsFor": 71,
+          "pointsAgainst": 75,
+          "pointDiff": -4,
           "wins": 0,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "standingPosition": 3,
-          "avgValuation": 18
+          "standingPosition": 5,
+          "avgValuation": 10
         }
       ]
     },
@@ -2821,6 +2821,34 @@
       ]
     },
     {
+      "key": "TEAM:91791",
+      "label": "JAC SANTS BARCELONA U11 1",
+      "latestTeamIdExtern": 91791,
+      "meta": "1 temporada \u00B7 C.t. Mini Femen\u00ED 1r. Any \u00B7 B",
+      "searchText": "JAC SANTS BARCELONA U11 1 C.t. Mini Femen\u00ED 1r. Any B",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:91791:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 91791,
+          "teamName": "JAC SANTS BARCELONA U11 1",
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "levelName": "B",
+          "matchesPlayed": 1,
+          "playersCount": 8,
+          "pointsFor": 33,
+          "pointsAgainst": 32,
+          "pointDiff": 1,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 3,
+          "avgValuation": 9
+        }
+      ]
+    },
+    {
       "key": "TEAM:81442",
       "label": "JESU\u00CFTES GR\u00C0CIA KOSTKA NEGRE",
       "latestTeamIdExtern": 81442,
@@ -3199,16 +3227,16 @@
           "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
           "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 1,
-          "playersCount": 11,
-          "pointsFor": 19,
-          "pointsAgainst": 79,
-          "pointDiff": -60,
+          "matchesPlayed": 2,
+          "playersCount": 12,
+          "pointsFor": 42,
+          "pointsAgainst": 163,
+          "pointDiff": -121,
           "wins": 0,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "standingPosition": 4,
-          "avgValuation": 8
+          "standingPosition": 6,
+          "avgValuation": -2
         }
       ]
     },
@@ -3787,16 +3815,16 @@
           "teamName": "SE LA SALLE BONANOVA VERMELL",
           "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 1,
-          "playersCount": 12,
-          "pointsFor": 42,
-          "pointsAgainst": 39,
-          "pointDiff": 3,
-          "wins": 1,
+          "matchesPlayed": 2,
+          "playersCount": 15,
+          "pointsFor": 126,
+          "pointsAgainst": 62,
+          "pointDiff": 64,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "standingPosition": 2,
-          "avgValuation": 22
+          "standingPosition": 1,
+          "avgValuation": 36.5
         }
       ]
     },
@@ -3993,6 +4021,34 @@
           "ties": 0,
           "standingPosition": 2,
           "avgValuation": 19.88235294117647
+        }
+      ]
+    },
+    {
+      "key": "TEAM:93285",
+      "label": "U.E. CLARET B",
+      "latestTeamIdExtern": 93285,
+      "meta": "1 temporada \u00B7 C.t. Mini Femen\u00ED 1r. Any \u00B7 B",
+      "searchText": "U.E. CLARET B C.t. Mini Femen\u00ED 1r. Any B",
+      "seasonSummaries": [
+        {
+          "key": "TEAM:93285:2026-2027",
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "teamIdExtern": 93285,
+          "teamName": "U.E. CLARET B",
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "levelName": "B",
+          "matchesPlayed": 1,
+          "playersCount": 10,
+          "pointsFor": 47,
+          "pointsAgainst": 44,
+          "pointDiff": 3,
+          "wins": 1,
+          "losses": 0,
+          "ties": 0,
+          "standingPosition": 2,
+          "avgValuation": 33
         }
       ]
     },
@@ -4459,16 +4515,16 @@
           "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
           "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
           "levelName": "B",
-          "matchesPlayed": 1,
-          "playersCount": 10,
-          "pointsFor": 79,
-          "pointsAgainst": 19,
-          "pointDiff": 60,
+          "matchesPlayed": 2,
+          "playersCount": 13,
+          "pointsFor": 123,
+          "pointsAgainst": 66,
+          "pointDiff": 57,
           "wins": 1,
-          "losses": 0,
+          "losses": 1,
           "ties": 0,
-          "standingPosition": 1,
-          "avgValuation": 59
+          "standingPosition": 4,
+          "avgValuation": 41.5
         }
       ]
     },

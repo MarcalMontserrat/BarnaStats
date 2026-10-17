@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-17T11:44:37.431124Z",
+  "generatedAtUtc": "2026-10-17T15:06:25.169362Z",
   "defaultSeasonLabel": "2026-2027",
   "historicalTeamsFile": "archive/teams.json",
   "historicalPlayersFile": "archive/players.json",
@@ -7,8 +7,8 @@
     {
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
-      "totalTeams": 20,
-      "totalMatches": 13,
+      "totalTeams": 22,
+      "totalMatches": 16,
       "dataRoot": "",
       "analysisFile": "analysis.json",
       "competitionFile": "competition.json"

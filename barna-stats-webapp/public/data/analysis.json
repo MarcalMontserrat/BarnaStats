@@ -1,9 +1,9 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "generatedAtUtc": "2026-10-17T11:44:37.431124Z",
-  "totalMatches": 13,
-  "totalTeams": 20,
+  "generatedAtUtc": "2026-10-17T15:06:25.169362Z",
+  "totalMatches": 16,
+  "totalTeams": 22,
   "teams": [
     {
       "seasonStartYear": 2026,
@@ -116,8 +116,8 @@
       "teamIdIntern": 588085,
       "teamIdExtern": 90781,
       "teamName": "C.B GRUP BARNA B",
-      "matchesPlayed": 1,
-      "playersCount": 12,
+      "matchesPlayed": 2,
+      "playersCount": 14,
       "matchesFile": "teams/be31d03e1051773d/matches.json",
       "playersFile": "teams/be31d03e1051773d/players.json",
       "phases": [
@@ -131,7 +131,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -372,6 +372,32 @@
     {
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+      "teamIdIntern": 592731,
+      "teamIdExtern": 91791,
+      "teamName": "JAC SANTS BARCELONA U11 1",
+      "matchesPlayed": 1,
+      "playersCount": 8,
+      "matchesFile": "teams/7d173c99a0335790/matches.json",
+      "playersFile": "teams/7d173c99a0335790/players.json",
+      "phases": [
+        {
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "phaseNumber": 1,
+          "sourcePhaseId": 24023,
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "phaseName": "Primera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "04",
+          "matchesPlayed": 1
+        }
+      ]
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
       "teamIdIntern": 583162,
       "teamIdExtern": 88717,
@@ -402,8 +428,8 @@
       "teamIdIntern": 586452,
       "teamIdExtern": 94361,
       "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-      "matchesPlayed": 1,
-      "playersCount": 11,
+      "matchesPlayed": 2,
+      "playersCount": 12,
       "matchesFile": "teams/e8791796f8bad2c9/matches.json",
       "playersFile": "teams/e8791796f8bad2c9/players.json",
       "phases": [
@@ -417,7 +443,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -428,10 +454,36 @@
       "teamIdIntern": 588084,
       "teamIdExtern": 91073,
       "teamName": "SE LA SALLE BONANOVA VERMELL",
-      "matchesPlayed": 1,
-      "playersCount": 12,
+      "matchesPlayed": 2,
+      "playersCount": 15,
       "matchesFile": "teams/2da1a437f0f41c0e/matches.json",
       "playersFile": "teams/2da1a437f0f41c0e/players.json",
+      "phases": [
+        {
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "phaseNumber": 1,
+          "sourcePhaseId": 24023,
+          "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+          "phaseName": "Primera Fase",
+          "levelName": "Nivell B",
+          "levelCode": "B",
+          "groupCode": "04",
+          "matchesPlayed": 2
+        }
+      ]
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+      "teamIdIntern": 592401,
+      "teamIdExtern": 93285,
+      "teamName": "U.E. CLARET B",
+      "matchesPlayed": 1,
+      "playersCount": 10,
+      "matchesFile": "teams/a85b1a183d39a1bd/matches.json",
+      "playersFile": "teams/a85b1a183d39a1bd/players.json",
       "phases": [
         {
           "seasonStartYear": 2026,
@@ -506,8 +558,8 @@
       "teamIdIntern": 586453,
       "teamIdExtern": 92009,
       "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-      "matchesPlayed": 1,
-      "playersCount": 10,
+      "matchesPlayed": 2,
+      "playersCount": 13,
       "matchesFile": "teams/245fab6d2a015903/matches.json",
       "playersFile": "teams/245fab6d2a015903/players.json",
       "phases": [
@@ -521,7 +573,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     }

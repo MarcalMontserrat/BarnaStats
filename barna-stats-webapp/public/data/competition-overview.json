@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "totalTeams": 20,
-  "totalMatches": 13,
+  "totalTeams": 22,
+  "totalMatches": 16,
   "phases": [
     {
       "seasonStartYear": 2026,
@@ -38,7 +38,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "04",
-      "matchesCount": 2
+      "matchesCount": 5
     },
     {
       "seasonStartYear": 2026,
@@ -95,9 +95,9 @@
       "teamIdIntern": 588085,
       "teamIdExtern": 90781,
       "teamName": "C.B GRUP BARNA B",
-      "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": 18
+      "matchesPlayed": 2,
+      "playersCount": 14,
+      "totalValuation": 20
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
@@ -181,6 +181,15 @@
       "totalValuation": 6
     },
     {
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+      "teamIdIntern": 592731,
+      "teamIdExtern": 91791,
+      "teamName": "JAC SANTS BARCELONA U11 1",
+      "matchesPlayed": 1,
+      "playersCount": 8,
+      "totalValuation": 9
+    },
+    {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
       "teamIdIntern": 583162,
       "teamIdExtern": 88717,
@@ -194,18 +203,27 @@
       "teamIdIntern": 586452,
       "teamIdExtern": 94361,
       "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-      "matchesPlayed": 1,
-      "playersCount": 11,
-      "totalValuation": 8
+      "matchesPlayed": 2,
+      "playersCount": 12,
+      "totalValuation": -4
     },
     {
       "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
       "teamIdIntern": 588084,
       "teamIdExtern": 91073,
       "teamName": "SE LA SALLE BONANOVA VERMELL",
+      "matchesPlayed": 2,
+      "playersCount": 15,
+      "totalValuation": 73
+    },
+    {
+      "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+      "teamIdIntern": 592401,
+      "teamIdExtern": 93285,
+      "teamName": "U.E. CLARET B",
       "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": 22
+      "playersCount": 10,
+      "totalValuation": 33
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
@@ -230,9 +248,9 @@
       "teamIdIntern": 586453,
       "teamIdExtern": 92009,
       "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-      "matchesPlayed": 1,
-      "playersCount": 10,
-      "totalValuation": 59
+      "matchesPlayed": 2,
+      "playersCount": 13,
+      "totalValuation": 83
     }
   ],
   "categoryFiles": [

@@ -1,0 +1,123 @@
+[
+  {
+    "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+    "teamIdIntern": 592401,
+    "teamIdExtern": 93285,
+    "teamName": "U.E. CLARET B",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "awayTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+    "matchWebId": 28335,
+    "matchInternId": 294899,
+    "matchExternId": 1209909,
+    "matchDate": "2026-10-17T13:15:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24023,
+    "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "04",
+    "phaseRound": 1,
+    "roundNumber": 1,
+    "homeTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "homeScore": 44,
+    "awayScore": 47,
+    "awayTeam": "U.E. CLARET B",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "rivalTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "officialTeamScore": 47,
+    "officialRivalScore": 44,
+    "teamScore": 47,
+    "rivalScore": 44,
+    "result": "W",
+    "topScorer": "C.I.G.",
+    "topScorerTeam": "U.E. CLARET B",
+    "topScorerPoints": 17,
+    "teamTopScorer": "C.I.G.",
+    "teamTopScorerPoints": 17,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 10,
+      "maxDeficit": 0,
+      "bestRun": 8,
+      "rivalBestRun": 7,
+      "closingRun": 0,
+      "rivalClosingRun": 2,
+      "firstScorer": "CLAUDIA SU\u00C1REZ MART\u00CDNEZ",
+      "firstScorerTeam": "U.E. CLARET B",
+      "lastScorer": "LUC\u00CDA VILLAR FLORES",
+      "lastScorerTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+      "teamFirstScorer": "CLAUDIA SU\u00C1REZ MART\u00CDNEZ",
+      "teamLastScorer": "C.I.G.",
+      "bestPeriodLabel": "Parcial 1",
+      "bestPeriodDiff": 5,
+      "worstPeriodLabel": "Parcial 8",
+      "worstPeriodDiff": -6,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 10,
+          "rivalPoints": 5,
+          "diff": 5
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 10,
+          "rivalPoints": 5,
+          "diff": 5
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 2,
+          "rivalPoints": 6,
+          "diff": -4
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 5,
+          "rivalPoints": 5,
+          "diff": 0
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 6,
+          "rivalPoints": 4,
+          "diff": 2
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 4,
+          "rivalPoints": 8,
+          "diff": -4
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 5,
+          "rivalPoints": 0,
+          "diff": 5
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 5,
+          "rivalPoints": 11,
+          "diff": -6
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
+  }
+]

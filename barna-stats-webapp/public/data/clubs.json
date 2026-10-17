@@ -261,11 +261,11 @@
     "clubId": 24,
     "primaryTeamIdExtern": 90463,
     "totalTeams": 3,
-    "totalMatches": 4,
-    "totalPlayers": 35,
+    "totalMatches": 5,
+    "totalPlayers": 37,
     "categoriesCount": 3,
     "levelsCount": 3,
-    "meta": "3 equipos \u00B7 3 categorias \u00B7 4 partidos",
+    "meta": "3 equipos \u00B7 3 categorias \u00B7 5 partidos",
     "searchText": "CLUB BASQUET GRUP BARNA C.B. GRUP BARNA C.B GRUP BARNA A C.t. Pre-mini Femen\u00ED Nivell A C.B GRUP BARNA B C.t. Mini Femen\u00ED 1r. Any Nivell B C.B GRUP BARNA NEGRE C.t. Pre-mini Mascul\u00ED Nivell C",
     "categories": [
       {
@@ -280,24 +280,24 @@
                 "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
                 "teamIdExtern": 90781,
                 "teamName": "C.B GRUP BARNA B",
-                "matchesPlayed": 1,
-                "playersCount": 12,
+                "matchesPlayed": 2,
+                "playersCount": 14,
                 "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
                 "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
                 "latestPhaseOptionValue": "source:24023",
                 "groupCode": "04",
-                "standingPosition": 3,
+                "standingPosition": 5,
                 "record": {
                   "wins": 0,
-                  "losses": 1,
+                  "losses": 2,
                   "ties": 0,
-                  "pointsFor": 39,
-                  "pointsAgainst": 42
+                  "pointsFor": 71,
+                  "pointsAgainst": 75
                 },
-                "pointDiff": -3,
-                "avgValuation": 18
+                "pointDiff": -4,
+                "avgValuation": 10
               }
             ]
           }
@@ -621,11 +621,11 @@
     "clubId": 3464,
     "primaryTeamIdExtern": 92009,
     "totalTeams": 1,
-    "totalMatches": 1,
-    "totalPlayers": 10,
+    "totalMatches": 2,
+    "totalPlayers": 13,
     "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
     "searchText": "FUNDACIO VEDRUNA CATALUNYA EDUCACIO S.E. VEDRUNA GRACIA VEDRUNA GR\u00C0CIA NEGRE C.t. Mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
       {
@@ -640,24 +640,24 @@
                 "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
                 "teamIdExtern": 92009,
                 "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-                "matchesPlayed": 1,
-                "playersCount": 10,
+                "matchesPlayed": 2,
+                "playersCount": 13,
                 "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
                 "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
                 "latestPhaseOptionValue": "source:24023",
                 "groupCode": "04",
-                "standingPosition": 1,
+                "standingPosition": 4,
                 "record": {
                   "wins": 1,
-                  "losses": 0,
+                  "losses": 1,
                   "ties": 0,
-                  "pointsFor": 79,
-                  "pointsAgainst": 19
+                  "pointsFor": 123,
+                  "pointsAgainst": 66
                 },
-                "pointDiff": 60,
-                "avgValuation": 59
+                "pointDiff": 57,
+                "avgValuation": 41.5
               }
             ]
           }
@@ -671,14 +671,49 @@
     "shortName": "JAC CLUB SANTS",
     "clubId": 26,
     "primaryTeamIdExtern": 91790,
-    "totalTeams": 1,
-    "totalMatches": 2,
-    "totalPlayers": 11,
-    "categoriesCount": 1,
-    "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
-    "searchText": "JAC CLUB SANTS JAC SANTS BARCELONA U10 1 C.t. Pre-mini Femen\u00ED Nivell A",
+    "totalTeams": 2,
+    "totalMatches": 3,
+    "totalPlayers": 19,
+    "categoriesCount": 2,
+    "levelsCount": 2,
+    "meta": "2 equipos \u00B7 2 categorias \u00B7 3 partidos",
+    "searchText": "JAC CLUB SANTS JAC SANTS BARCELONA U10 1 C.t. Pre-mini Femen\u00ED Nivell A JAC SANTS BARCELONA U11 1 C.t. Mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
+      {
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "levels": [
+          {
+            "levelKey": "B",
+            "levelName": "Nivell B",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+                "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+                "teamIdExtern": 91791,
+                "teamName": "JAC SANTS BARCELONA U11 1",
+                "matchesPlayed": 1,
+                "playersCount": 8,
+                "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+                "levelKey": "B",
+                "levelName": "Nivell B",
+                "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
+                "latestPhaseOptionValue": "source:24023",
+                "groupCode": "04",
+                "standingPosition": 3,
+                "record": {
+                  "wins": 1,
+                  "losses": 0,
+                  "ties": 0,
+                  "pointsFor": 33,
+                  "pointsAgainst": 32
+                },
+                "pointDiff": 1,
+                "avgValuation": 9
+              }
+            ]
+          }
+        ]
+      },
       {
         "categoryName": "C.t. Pre-mini Femen\u00ED",
         "levels": [
@@ -723,11 +758,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 94361,
     "totalTeams": 1,
-    "totalMatches": 1,
-    "totalPlayers": 11,
+    "totalMatches": 2,
+    "totalPlayers": 12,
     "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
     "searchText": "LIMA-HORTA B\u00C0SQUET SALM\u00D3 C.t. Mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
       {
@@ -742,24 +777,24 @@
                 "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
                 "teamIdExtern": 94361,
                 "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-                "matchesPlayed": 1,
-                "playersCount": 11,
+                "matchesPlayed": 2,
+                "playersCount": 12,
                 "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
                 "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
                 "latestPhaseOptionValue": "source:24023",
                 "groupCode": "04",
-                "standingPosition": 4,
+                "standingPosition": 6,
                 "record": {
                   "wins": 0,
-                  "losses": 1,
+                  "losses": 2,
                   "ties": 0,
-                  "pointsFor": 19,
-                  "pointsAgainst": 79
+                  "pointsFor": 42,
+                  "pointsAgainst": 163
                 },
-                "pointDiff": -60,
-                "avgValuation": 8
+                "pointDiff": -121,
+                "avgValuation": -2
               }
             ]
           }
@@ -774,11 +809,11 @@
     "clubId": 0,
     "primaryTeamIdExtern": 91073,
     "totalTeams": 1,
-    "totalMatches": 1,
-    "totalPlayers": 12,
+    "totalMatches": 2,
+    "totalPlayers": 15,
     "categoriesCount": 1,
     "levelsCount": 1,
-    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 2 partidos",
     "searchText": "SE LA SALLE BONANOVA SE LA SALLE BONANOVA VERMELL C.t. Mini Femen\u00ED 1r. Any Nivell B",
     "categories": [
       {
@@ -793,24 +828,24 @@
                 "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
                 "teamIdExtern": 91073,
                 "teamName": "SE LA SALLE BONANOVA VERMELL",
-                "matchesPlayed": 1,
-                "playersCount": 12,
+                "matchesPlayed": 2,
+                "playersCount": 15,
                 "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
                 "levelKey": "B",
                 "levelName": "Nivell B",
                 "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
                 "latestPhaseOptionValue": "source:24023",
                 "groupCode": "04",
-                "standingPosition": 2,
+                "standingPosition": 1,
                 "record": {
-                  "wins": 1,
+                  "wins": 2,
                   "losses": 0,
                   "ties": 0,
-                  "pointsFor": 42,
-                  "pointsAgainst": 39
+                  "pointsFor": 126,
+                  "pointsAgainst": 62
                 },
-                "pointDiff": 3,
-                "avgValuation": 22
+                "pointDiff": 64,
+                "avgValuation": 36.5
               }
             ]
           }
@@ -897,6 +932,57 @@
                 },
                 "pointDiff": -2,
                 "avgValuation": 38
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "fcbq-club:148",
+    "label": "UNIO ESPORTIVA CLARET",
+    "shortName": "U.E. CLARET",
+    "clubId": 148,
+    "primaryTeamIdExtern": 93285,
+    "totalTeams": 1,
+    "totalMatches": 1,
+    "totalPlayers": 10,
+    "categoriesCount": 1,
+    "levelsCount": 1,
+    "meta": "1 equipo \u00B7 1 categoria \u00B7 1 partidos",
+    "searchText": "UNIO ESPORTIVA CLARET U.E. CLARET U.E. CLARET B C.t. Mini Femen\u00ED 1r. Any Nivell B",
+    "categories": [
+      {
+        "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+        "levels": [
+          {
+            "levelKey": "B",
+            "levelName": "Nivell B",
+            "teams": [
+              {
+                "key": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+                "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+                "teamIdExtern": 93285,
+                "teamName": "U.E. CLARET B",
+                "matchesPlayed": 1,
+                "playersCount": 10,
+                "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+                "levelKey": "B",
+                "levelName": "Nivell B",
+                "phaseLabel": "Primera Fase \u00B7 Nivell B \u00B7 Grupo 04",
+                "latestPhaseOptionValue": "source:24023",
+                "groupCode": "04",
+                "standingPosition": 2,
+                "record": {
+                  "wins": 1,
+                  "losses": 0,
+                  "ties": 0,
+                  "pointsFor": 47,
+                  "pointsAgainst": 44
+                },
+                "pointDiff": 3,
+                "avgValuation": 33
               }
             ]
           }
