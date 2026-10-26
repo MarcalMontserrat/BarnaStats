@@ -240,5 +240,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "teamIdIntern": 597075,
+    "teamIdExtern": 90463,
+    "teamName": "C.B GRUP BARNA A",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "matchWebId": 28627,
+    "matchInternId": 297236,
+    "matchExternId": 1210201,
+    "matchDate": "2026-10-24T13:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 23958,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell A",
+    "levelCode": "A",
+    "groupCode": "02",
+    "phaseRound": 3,
+    "roundNumber": 3,
+    "homeTeam": "DOMINIQUES BARCELONA TARONJA",
+    "homeScore": 68,
+    "awayScore": 59,
+    "awayTeam": "C.B GRUP BARNA A",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
+    "rivalTeam": "DOMINIQUES BARCELONA TARONJA",
+    "officialTeamScore": 59,
+    "officialRivalScore": 68,
+    "teamScore": 59,
+    "rivalScore": 68,
+    "result": "L",
+    "topScorer": "MARTINA SOLE ABELLO",
+    "topScorerTeam": "DOMINIQUES BARCELONA TARONJA",
+    "topScorerPoints": 28,
+    "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "teamTopScorerPoints": 21,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 2,
+      "maxLead": 0,
+      "maxDeficit": 16,
+      "bestRun": 9,
+      "rivalBestRun": 12,
+      "closingRun": 6,
+      "rivalClosingRun": 0,
+      "firstScorer": "CLAUDIA ROCA MARTI",
+      "firstScorerTeam": "DOMINIQUES BARCELONA TARONJA",
+      "lastScorer": "CLAUDIA JOU GARCIA",
+      "lastScorerTeam": "C.B GRUP BARNA A",
+      "teamFirstScorer": "M\u00C0LIA MONTSERRAT MATEO",
+      "teamLastScorer": "CLAUDIA JOU GARCIA",
+      "bestPeriodLabel": "Parcial 8",
+      "bestPeriodDiff": 5,
+      "worstPeriodLabel": "Parcial 2",
+      "worstPeriodDiff": -8,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 6,
+          "rivalPoints": 8,
+          "diff": -2
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 0,
+          "rivalPoints": 8,
+          "diff": -8
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 11,
+          "rivalPoints": 8,
+          "diff": 3
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 7,
+          "rivalPoints": 8,
+          "diff": -1
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 12,
+          "rivalPoints": 12,
+          "diff": 0
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 2,
+          "rivalPoints": 8,
+          "diff": -6
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 8,
+          "rivalPoints": 8,
+          "diff": 0
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 13,
+          "rivalPoints": 8,
+          "diff": 5
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

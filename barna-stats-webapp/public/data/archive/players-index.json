@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-17T15:06:25.169362Z",
+  "generatedAtUtc": "2026-10-26T19:57:22.147112Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -159,8 +159,8 @@
       "key": "UUID:e6fdb8d5-d01c-495d-8c0e-94018423f484",
       "label": "ABRIL AMBROJO DOMINGUEZ",
       "latestShirtNumber": "7",
-      "meta": "1 temporada \u00B7 #7 \u00B7 C.B GRUP BARNA VERMELL  1ER ANY",
-      "searchText": "ABRIL AMBROJO DOMINGUEZ C.B GRUP BARNA VERMELL  1ER ANY #7"
+      "meta": "2 temporadas \u00B7 #7 \u00B7 C.B GRUP BARNA A",
+      "searchText": "ABRIL AMBROJO DOMINGUEZ C.B GRUP BARNA A C.B GRUP BARNA VERMELL  1ER ANY #7"
     },
     {
       "key": "UUID:3d02ec97-f4b8-48a9-a398-df73d8986126",
@@ -625,6 +625,13 @@
       "searchText": "AINA MU\u00D1OZ BALLBER CBS FEM  U10 #8"
     },
     {
+      "key": "UUID:8750089c-3c91-4fd9-945c-0dd9121eb5ff",
+      "label": "AINA NATALIA SUT ZULUAGA",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 CE SANT NICOLAU 2",
+      "searchText": "AINA NATALIA SUT ZULUAGA CE SANT NICOLAU 2 #5"
+    },
+    {
       "key": "UUID:dc24ff85-61d2-4915-bec9-89bff0c1a533",
       "label": "AINA NIETO FRANC\u00C9S",
       "latestShirtNumber": "14",
@@ -968,6 +975,13 @@
       "searchText": "ALBA GONZALEZ AZNAR VILAB\u00C0SQUET VILADECANS PMF BLANC #19"
     },
     {
+      "key": "UUID:8cbcb48f-a47c-4743-8f1f-e405c804dcf8",
+      "label": "ALBA GUIMER\u00C0 FONRODONA",
+      "latestShirtNumber": "6",
+      "meta": "1 temporada \u00B7 #6 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "ALBA GUIMER\u00C0 FONRODONA QBASKET SANT CUGAT #6"
+    },
+    {
       "key": "UUID:02a0f0a3-c745-44f4-8317-dca49d17290a",
       "label": "ALBA HADZIHASANOVIC VI\u00C9",
       "latestShirtNumber": "20",
@@ -1103,9 +1117,9 @@
     {
       "key": "UUID:96bda936-293f-429a-8fa1-3ce4049fd0a4",
       "label": "ALEJANDRO MIRANDA SOLER",
-      "latestShirtNumber": "15",
-      "meta": "1 temporada \u00B7 #15 \u00B7 C.B GRUP BARNA NEGRE",
-      "searchText": "ALEJANDRO MIRANDA SOLER C.B GRUP BARNA NEGRE #15"
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "ALEJANDRO MIRANDA SOLER C.B GRUP BARNA NEGRE #10"
     },
     {
       "key": "UUID:54cbeed7-5d23-4227-a90c-1571104a6103",
@@ -1491,6 +1505,13 @@
       "latestShirtNumber": "19",
       "meta": "1 temporada \u00B7 #19 \u00B7 CB CASTELLDEFELS 1617F",
       "searchText": "ANDREA PARIS GUTIERREZ RIOS CB CASTELLDEFELS 1617F #19"
+    },
+    {
+      "key": "UUID:abf3b301-e655-48ce-870a-82aed9e6a8f1",
+      "label": "ANDREA PASCUAL CUBILLAS",
+      "latestShirtNumber": "32",
+      "meta": "1 temporada \u00B7 #32 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "ANDREA PASCUAL CUBILLAS QBASKET SANT CUGAT #32"
     },
     {
       "key": "UUID:262b1ab3-984e-42c8-abe5-152e2681eb8e",
@@ -2298,6 +2319,13 @@
       "searchText": "BERTA CANADELL SUADES PAIDOS-ASFE U9F #22"
     },
     {
+      "key": "UUID:59595bda-0843-4bdf-bd64-9d93bca24232",
+      "label": "BERTA CASTILLO CERVERO",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "BERTA CASTILLO CERVERO QBASKET SANT CUGAT #10"
+    },
+    {
       "key": "UUID:cfe1c420-3e64-456a-909f-38c6d280c8ad",
       "label": "BERTA CLARAMUNT TROCHUT",
       "latestShirtNumber": "23",
@@ -2366,6 +2394,13 @@
       "latestShirtNumber": "16",
       "meta": "1 temporada \u00B7 #16 \u00B7 U.E.MATAR\u00D3 - PRAF",
       "searchText": "BERTA MONTULL AMADOR U.E.MATAR\u00D3 - PRAF #16"
+    },
+    {
+      "key": "UUID:30d94069-b417-41a5-b8c6-fd67305f5139",
+      "label": "BERTA MORET NEGRE",
+      "latestShirtNumber": "25",
+      "meta": "1 temporada \u00B7 #25 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "BERTA MORET NEGRE QBASKET SANT CUGAT #25"
     },
     {
       "key": "UUID:7036fc96-ba97-4d82-b687-459ac34a4f94",
@@ -2875,8 +2910,8 @@
       "key": "UUID:279e6f9e-3e7a-4d1e-b8d5-2f767f334340",
       "label": "CARLA PEIR\u00D3N COCERA",
       "latestShirtNumber": "26",
-      "meta": "1 temporada \u00B7 #26 \u00B7 DOMINIQUES BARCELONA NEGRE",
-      "searchText": "CARLA PEIR\u00D3N COCERA DOMINIQUES BARCELONA NEGRE DOMINIQUES BARCELONA TARONJA #26"
+      "meta": "2 temporadas \u00B7 #26 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "searchText": "CARLA PEIR\u00D3N COCERA DOMINIQUES BARCELONA TARONJA DOMINIQUES BARCELONA NEGRE #26"
     },
     {
       "key": "UUID:87e21452-a078-40f9-b674-7d494618e8a6",
@@ -2898,6 +2933,13 @@
       "latestShirtNumber": "16",
       "meta": "1 temporada \u00B7 #16 \u00B7 C.B GRUP BARNA A",
       "searchText": "CARLA PULIDO GONZALEZ C.B GRUP BARNA A #16"
+    },
+    {
+      "key": "UUID:242030e2-d171-40f7-a314-8eb0631c0c84",
+      "label": "CARLA REVERTER RUIZ",
+      "latestShirtNumber": "28",
+      "meta": "1 temporada \u00B7 #28 \u00B7 FEMEN\u00CD SANT ADRI\u00C0 A",
+      "searchText": "CARLA REVERTER RUIZ FEMEN\u00CD SANT ADRI\u00C0 A #28"
     },
     {
       "key": "UUID:621fc37b-ea46-4ffd-81ac-d6330a389d10",
@@ -2954,6 +2996,13 @@
       "latestShirtNumber": "14",
       "meta": "1 temporada \u00B7 #14 \u00B7 ESCOLA IPSI 16",
       "searchText": "CARLOTA BALART BALLAR\u00CDN ESCOLA IPSI 16 #14"
+    },
+    {
+      "key": "UUID:25106045-b655-4234-bca1-773b1c87d5b6",
+      "label": "CARLOTA BATCHELLI MARSAN",
+      "latestShirtNumber": "22",
+      "meta": "1 temporada \u00B7 #22 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "CARLOTA BATCHELLI MARSAN QBASKET SANT CUGAT #22"
     },
     {
       "key": "UUID:cc9949df-4a73-4275-a603-5d0a88392634",
@@ -3584,6 +3633,13 @@
       "latestShirtNumber": "23",
       "meta": "1 temporada \u00B7 #23 \u00B7 C.B. LLINARS",
       "searchText": "DANA KALAI ARAQUE C.B. LLINARS #23"
+    },
+    {
+      "key": "UUID:d530015b-56fe-461f-814d-eb7954023d2e",
+      "label": "DANA RUIZ QUERALT",
+      "latestShirtNumber": "18",
+      "meta": "1 temporada \u00B7 #18 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "DANA RUIZ QUERALT LIMA-HORTA B\u00C0SQUET SALM\u00D3 #18"
     },
     {
       "key": "UUID:0b66c4fa-b42a-40bb-b795-a776754afeaa",
@@ -4419,6 +4475,13 @@
       "searchText": "EMMA SURINYAC MARTOS FEMEN\u00CD OSONA LIBERTY- OVA PROJECTS #12"
     },
     {
+      "key": "UUID:79631f6f-204c-4f0a-9fe2-6bcb6557699d",
+      "label": "EMMA TORRENT SANZ",
+      "latestShirtNumber": "7",
+      "meta": "1 temporada \u00B7 #7 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "EMMA TORRENT SANZ QBASKET SANT CUGAT #7"
+    },
+    {
       "key": "UUID:179e3871-a41a-4d98-bdf9-be2533a51895",
       "label": "EMMA UBACH GARCIA",
       "latestShirtNumber": "10",
@@ -4657,6 +4720,13 @@
       "searchText": "GABRIELA L\u00D3PEZ TORO FC MARTINENC B\u00C0SQUET U9 #19"
     },
     {
+      "key": "UUID:eb2025a1-9ff9-4688-9d59-af66e6894fec",
+      "label": "GAEL RAHMAN LLENAS",
+      "latestShirtNumber": "16",
+      "meta": "1 temporada \u00B7 #16 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "GAEL RAHMAN LLENAS UE SANT ANDREU GROC #16"
+    },
+    {
       "key": "UUID:84773fc5-ada2-4751-bbaf-1cfc11414b15",
       "label": "GAL.LA ESTUDIS COMELLAS",
       "latestShirtNumber": "21",
@@ -4844,6 +4914,13 @@
       "latestShirtNumber": "26",
       "meta": "1 temporada \u00B7 #26 \u00B7 CREU ALTA SABADELL",
       "searchText": "GEORGINA ROMERO MOURELO CREU ALTA SABADELL #26"
+    },
+    {
+      "key": "UUID:61e76a11-d36f-4c35-80df-eb4c26dd5ff1",
+      "label": "GEVA LEVY",
+      "latestShirtNumber": "1",
+      "meta": "1 temporada \u00B7 #1 \u00B7 UE SANT CUGAT - OCCIDENT NEGRE",
+      "searchText": "GEVA LEVY UE SANT CUGAT - OCCIDENT NEGRE #1"
     },
     {
       "key": "UUID:309e0f66-e7d8-4f41-8265-c2d7a379d96c",
@@ -5234,8 +5311,8 @@
       "key": "UUID:167e0c53-10b1-47f3-83dd-669866b51bf1",
       "label": "IN\u00C9S PUNCERNAU CORONAS",
       "latestShirtNumber": "5",
-      "meta": "1 temporada \u00B7 #5 \u00B7 CB MANYANET LES CORTS VERD",
-      "searchText": "IN\u00C9S PUNCERNAU CORONAS CB MANYANET LES CORTS VERD #5"
+      "meta": "2 temporadas \u00B7 #5 \u00B7 JAC SANTS BARCELONA U11 1",
+      "searchText": "IN\u00C9S PUNCERNAU CORONAS JAC SANTS BARCELONA U11 1 CB MANYANET LES CORTS VERD #5"
     },
     {
       "key": "UUID:57e1dc12-dfa3-4b2b-9460-3ebb68041e82",
@@ -5861,6 +5938,13 @@
       "searchText": "JOANNA BOLIVAR JIMENEZ CB VILASSAR DE DALT #21"
     },
     {
+      "key": "UUID:1d357d6b-ea8e-435d-86c4-bef87c9d5a6f",
+      "label": "JOFRE ASENSIO MOURABIT",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 DOMINIQUES BARCELONA",
+      "searchText": "JOFRE ASENSIO MOURABIT DOMINIQUES BARCELONA #12"
+    },
+    {
       "key": "UUID:eda182e7-391b-4f1e-ae83-b75dec0abe79",
       "label": "JOFRE BUXERES DEL RIO",
       "latestShirtNumber": "27",
@@ -6365,6 +6449,13 @@
       "searchText": "KEIRA ELIZABETH AMORES ZAMBRANO RIO LOGISTIC CB LLI\u00C7A D\u2019AMUNT #8"
     },
     {
+      "key": "UUID:e008463c-7531-47d4-9c84-11d26f48edb3",
+      "label": "K\u00C8NIA BARBERA AMIG\u00D3",
+      "latestShirtNumber": "12",
+      "meta": "1 temporada \u00B7 #12 \u00B7 CN TERRASSA 1",
+      "searchText": "K\u00C8NIA BARBERA AMIG\u00D3 CN TERRASSA 1 #12"
+    },
+    {
       "key": "UUID:3c5b1dee-6b17-4eaa-85a5-9665e417cfbf",
       "label": "KENIA PARDOS PRIETO",
       "latestShirtNumber": "3",
@@ -6421,6 +6512,13 @@
       "searchText": "L.D.G.G. C.B GRUP BARNA NEGRE #77"
     },
     {
+      "key": "UUID:2535a211-7d6d-47ce-b468-2ca5d1c7a09a",
+      "label": "L.M.",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 C.B GRUP BARNA NEGRE",
+      "searchText": "L.M. C.B GRUP BARNA NEGRE #15"
+    },
+    {
       "key": "UUID:7cc2ebbf-66f8-4687-ade1-e4b13c92b342",
       "label": "L.M.F.",
       "latestShirtNumber": "99",
@@ -6433,6 +6531,13 @@
       "latestShirtNumber": "88",
       "meta": "1 temporada \u00B7 #88 \u00B7 UE SANT ANDREU VERMELL",
       "searchText": "L.M.R. UE SANT ANDREU GROC UE SANT ANDREU VERMELL #88"
+    },
+    {
+      "key": "UUID:7d1d068e-2182-49bf-8a77-8643225b4f76",
+      "label": "L.S.V.",
+      "latestShirtNumber": "21",
+      "meta": "1 temporada \u00B7 #21 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "L.S.V. QBASKET SANT CUGAT #21"
     },
     {
       "key": "UUID:c0ff713c-d56f-4c3f-b94e-1fd6cb1d837f",
@@ -7975,6 +8080,13 @@
       "searchText": "MAR\u00CDA COSTA HERRERA B\u00C0SQUET SAFA CLAROR 2 #27"
     },
     {
+      "key": "UUID:5f6155f6-7ce6-4a83-bcef-99c1fd136423",
+      "label": "MARIA DE SIMON GARC\u00CDA",
+      "latestShirtNumber": "13",
+      "meta": "1 temporada \u00B7 #13 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "MARIA DE SIMON GARC\u00CDA QBASKET SANT CUGAT #13"
+    },
+    {
       "key": "UUID:30531024-78f6-4d98-a762-7b05b92d80f9",
       "label": "MAR\u00CDA DEL POZO CASTILLA",
       "latestShirtNumber": "16",
@@ -8120,6 +8232,13 @@
       "latestShirtNumber": "9",
       "meta": "1 temporada \u00B7 #9 \u00B7 B\u00C0SQUET SAFA CLAROR 2",
       "searchText": "MARIA RODRIGUEZ ORTIZ B\u00C0SQUET SAFA CLAROR 2 #9"
+    },
+    {
+      "key": "UUID:ec9ee7cf-5366-46ce-bce7-492b3a74eae0",
+      "label": "MARIA ROS\u00C9S GARCIA",
+      "latestShirtNumber": "5",
+      "meta": "1 temporada \u00B7 #5 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "MARIA ROS\u00C9S GARCIA QBASKET SANT CUGAT #5"
     },
     {
       "key": "UUID:d7dc1534-e37c-4168-a23b-776b1375a3a9",
@@ -8752,6 +8871,13 @@
       "searchText": "MARTINA TIRADO GIJON SANT GERVASI 1 #16"
     },
     {
+      "key": "UUID:6bf5439f-6c35-4436-876f-d3355473a5c4",
+      "label": "MARTINA VILLAGRASA ALVAREZ",
+      "latestShirtNumber": "3",
+      "meta": "1 temporada \u00B7 #3 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "MARTINA VILLAGRASA ALVAREZ QBASKET SANT CUGAT #3"
+    },
+    {
       "key": "UUID:29282020-9091-4339-bb83-764a507fb09c",
       "label": "MARWA GAMRA EL FELLAH",
       "latestShirtNumber": "14",
@@ -8785,6 +8911,13 @@
       "latestShirtNumber": "50",
       "meta": "1 temporada \u00B7 #50 \u00B7 DOMINIQUES BARCELONA",
       "searchText": "MAX BALART GONZ\u00C1LEZ DOMINIQUES BARCELONA #50"
+    },
+    {
+      "key": "UUID:11d0b825-eb1c-4ebf-8778-c62b76d886f7",
+      "label": "MAX MEMBRADO RUANA",
+      "latestShirtNumber": "14",
+      "meta": "1 temporada \u00B7 #14 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "MAX MEMBRADO RUANA UE SANT ANDREU GROC #14"
     },
     {
       "key": "UUID:e00af675-2e59-454a-b410-5d106156d62c",
@@ -8875,7 +9008,7 @@
       "label": "MIA GOBERNA JUVE",
       "latestShirtNumber": "2",
       "meta": "2 temporadas \u00B7 #2 \u00B7 JAC SANTS BARCELONA U10 1",
-      "searchText": "MIA GOBERNA JUVE JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #2"
+      "searchText": "MIA GOBERNA JUVE JAC SANTS BARCELONA U11 1 JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #2"
     },
     {
       "key": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735",
@@ -8997,6 +9130,13 @@
       "searchText": "MIAH RAMIREZ MORENO AESE 1 #81"
     },
     {
+      "key": "UUID:6b537f39-3012-4391-91ca-7fe85f7a594b",
+      "label": "MICAELA MUSCIA MACIA",
+      "latestShirtNumber": "8",
+      "meta": "1 temporada \u00B7 #8 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "MICAELA MUSCIA MACIA QBASKET SANT CUGAT #8"
+    },
+    {
       "key": "UUID:c117c98c-d111-41dc-bd43-f0f996e21e8f",
       "label": "MILA MIRABETE GARCIA",
       "latestShirtNumber": "18",
@@ -9072,6 +9212,13 @@
       "latestShirtNumber": "6",
       "meta": "1 temporada \u00B7 #6 \u00B7 FC MARTINENC B\u00C0SQUET U9",
       "searchText": "N.M.D.H. FC MARTINENC B\u00C0SQUET U9 #6"
+    },
+    {
+      "key": "UUID:1ca01756-61cc-463d-8785-5ccd159c03b4",
+      "label": "N.M.I.",
+      "latestShirtNumber": "15",
+      "meta": "1 temporada \u00B7 #15 \u00B7 QBASKET SANT CUGAT",
+      "searchText": "N.M.I. QBASKET SANT CUGAT #15"
     },
     {
       "key": "UUID:cb813d42-51d4-4979-a3f5-b2e469e9e41c",
@@ -9665,8 +9812,8 @@
       "key": "UUID:cd91939b-cd67-4748-9778-9a08a045eda6",
       "label": "NURIA DE VILLASANTE SANTOS",
       "latestShirtNumber": "4",
-      "meta": "1 temporada \u00B7 #4 \u00B7 DOMINIQUES BARCELONA NEGRE",
-      "searchText": "NURIA DE VILLASANTE SANTOS DOMINIQUES BARCELONA NEGRE #4"
+      "meta": "2 temporadas \u00B7 #4 \u00B7 DOMINIQUES BARCELONA TARONJA",
+      "searchText": "NURIA DE VILLASANTE SANTOS DOMINIQUES BARCELONA TARONJA DOMINIQUES BARCELONA NEGRE #4"
     },
     {
       "key": "UUID:3d0af4ec-4d2f-4b0b-8e50-d54219a618fe",
@@ -9765,6 +9912,13 @@
       "latestShirtNumber": "1",
       "meta": "2 temporadas \u00B7 #1 \u00B7 SE LA SALLE BONANOVA VERMELL",
       "searchText": "OLIVIA FERN\u00C1NDEZ IGUACEN SE LA SALLE BONANOVA VERMELL SE LA SALLE BONANOVA NEGRE #1"
+    },
+    {
+      "key": "UUID:a9a75bb8-d20e-4061-b8c8-9a3789dfc33e",
+      "label": "OL\u00CDVIA FUENTES GOMEZ",
+      "latestShirtNumber": "25",
+      "meta": "1 temporada \u00B7 #25 \u00B7 LIMA-HORTA B\u00C0SQUET SALM\u00D3",
+      "searchText": "OL\u00CDVIA FUENTES GOMEZ LIMA-HORTA B\u00C0SQUET SALM\u00D3 #25"
     },
     {
       "key": "UUID:ebd9cfca-f296-4de3-89b2-b28f3e3a7bd4",
@@ -10430,6 +10584,13 @@
       "latestShirtNumber": "10",
       "meta": "1 temporada \u00B7 #10 \u00B7 RIO LOGISTIC CB LLI\u00C7A D\u2019AMUNT",
       "searchText": "PAULA VONNA GONZALEZ RIO LOGISTIC CB LLI\u00C7A D\u2019AMUNT #10"
+    },
+    {
+      "key": "UUID:025a7a75-515a-4a64-839a-48f560c55c03",
+      "label": "POL RIBOT FUERTES",
+      "latestShirtNumber": "29",
+      "meta": "1 temporada \u00B7 #29 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "POL RIBOT FUERTES UE SANT ANDREU GROC #29"
     },
     {
       "key": "UUID:f011cb94-549b-4218-8941-31b7ac9d1e94",

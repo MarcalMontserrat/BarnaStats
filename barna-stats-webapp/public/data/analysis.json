@@ -1,9 +1,9 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "generatedAtUtc": "2026-10-17T15:06:25.169362Z",
-  "totalMatches": 16,
-  "totalTeams": 22,
+  "generatedAtUtc": "2026-10-26T19:57:22.147112Z",
+  "totalMatches": 26,
+  "totalTeams": 23,
   "teams": [
     {
       "seasonStartYear": 2026,
@@ -12,7 +12,7 @@
       "teamIdIntern": 583163,
       "teamIdExtern": 89513,
       "teamName": "AE MINGUELLA A - PURE CUISINE",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 10,
       "matchesFile": "teams/7024b17284a7a8ab/matches.json",
       "playersFile": "teams/7024b17284a7a8ab/players.json",
@@ -27,7 +27,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "02",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -38,7 +38,7 @@
       "teamIdIntern": 583292,
       "teamIdExtern": 94243,
       "teamName": "B.I.M.",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 9,
       "matchesFile": "teams/4c6cc5cd1f06ad2e/matches.json",
       "playersFile": "teams/4c6cc5cd1f06ad2e/players.json",
@@ -53,7 +53,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -90,8 +90,8 @@
       "teamIdIntern": 583371,
       "teamIdExtern": 90463,
       "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 2,
-      "playersCount": 12,
+      "matchesPlayed": 3,
+      "playersCount": 13,
       "matchesFile": "teams/bd9c64b5c665be46/matches.json",
       "playersFile": "teams/bd9c64b5c665be46/players.json",
       "phases": [
@@ -105,7 +105,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "02",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -116,7 +116,7 @@
       "teamIdIntern": 588085,
       "teamIdExtern": 90781,
       "teamName": "C.B GRUP BARNA B",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 14,
       "matchesFile": "teams/be31d03e1051773d/matches.json",
       "playersFile": "teams/be31d03e1051773d/players.json",
@@ -131,7 +131,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -139,11 +139,11 @@
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
-      "teamIdIntern": 583593,
+      "teamIdIntern": 597129,
       "teamIdExtern": 90467,
       "teamName": "C.B GRUP BARNA NEGRE",
-      "matchesPlayed": 1,
-      "playersCount": 11,
+      "matchesPlayed": 2,
+      "playersCount": 12,
       "matchesFile": "teams/7e97f2b80a187a9f/matches.json",
       "playersFile": "teams/7e97f2b80a187a9f/players.json",
       "phases": [
@@ -157,7 +157,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -168,8 +168,8 @@
       "teamIdIntern": 583159,
       "teamIdExtern": 89687,
       "teamName": "CE SANT NICOLAU 2",
-      "matchesPlayed": 1,
-      "playersCount": 10,
+      "matchesPlayed": 2,
+      "playersCount": 11,
       "matchesFile": "teams/0d72154de685fd1a/matches.json",
       "playersFile": "teams/0d72154de685fd1a/players.json",
       "phases": [
@@ -183,7 +183,7 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "07",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -194,7 +194,7 @@
       "teamIdIntern": 583592,
       "teamIdExtern": 94630,
       "teamName": "CE VILA OLIMPICA",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 9,
       "matchesFile": "teams/78f7ff0829be462e/matches.json",
       "playersFile": "teams/78f7ff0829be462e/players.json",
@@ -209,7 +209,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -220,8 +220,8 @@
       "teamIdIntern": 585488,
       "teamIdExtern": 90356,
       "teamName": "CN TERRASSA 1",
-      "matchesPlayed": 1,
-      "playersCount": 12,
+      "matchesPlayed": 2,
+      "playersCount": 13,
       "matchesFile": "teams/3eceedadabda56f5/matches.json",
       "playersFile": "teams/3eceedadabda56f5/players.json",
       "phases": [
@@ -235,7 +235,7 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "07",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -246,8 +246,8 @@
       "teamIdIntern": 584406,
       "teamIdExtern": 91937,
       "teamName": "DOMINIQUES BARCELONA",
-      "matchesPlayed": 1,
-      "playersCount": 11,
+      "matchesPlayed": 2,
+      "playersCount": 12,
       "matchesFile": "teams/3c517fd801660270/matches.json",
       "playersFile": "teams/3c517fd801660270/players.json",
       "phases": [
@@ -261,7 +261,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -272,10 +272,36 @@
       "teamIdIntern": 584410,
       "teamIdExtern": 91941,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "matchesPlayed": 2,
-      "playersCount": 10,
+      "matchesPlayed": 3,
+      "playersCount": 12,
       "matchesFile": "teams/268d0567822fa648/matches.json",
       "playersFile": "teams/268d0567822fa648/players.json",
+      "phases": [
+        {
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "phaseNumber": 1,
+          "sourcePhaseId": 23958,
+          "categoryName": "C.t. Pre-mini Femen\u00ED",
+          "phaseName": "Primera Fase",
+          "levelName": "Nivell A",
+          "levelCode": "A",
+          "groupCode": "02",
+          "matchesPlayed": 3
+        }
+      ]
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+      "teamIdIntern": 584411,
+      "teamIdExtern": 89366,
+      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
+      "matchesPlayed": 2,
+      "playersCount": 9,
+      "matchesFile": "teams/b5f9a51e7239456b/matches.json",
+      "playersFile": "teams/b5f9a51e7239456b/players.json",
       "phases": [
         {
           "seasonStartYear": 2026,
@@ -294,37 +320,11 @@
     {
       "seasonStartYear": 2026,
       "seasonLabel": "2026-2027",
-      "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
-      "teamIdIntern": 584411,
-      "teamIdExtern": 89366,
-      "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
-      "matchesPlayed": 1,
-      "playersCount": 8,
-      "matchesFile": "teams/b5f9a51e7239456b/matches.json",
-      "playersFile": "teams/b5f9a51e7239456b/players.json",
-      "phases": [
-        {
-          "seasonStartYear": 2026,
-          "seasonLabel": "2026-2027",
-          "phaseNumber": 1,
-          "sourcePhaseId": 23958,
-          "categoryName": "C.t. Pre-mini Femen\u00ED",
-          "phaseName": "Primera Fase",
-          "levelName": "Nivell A",
-          "levelCode": "A",
-          "groupCode": "02",
-          "matchesPlayed": 1
-        }
-      ]
-    },
-    {
-      "seasonStartYear": 2026,
-      "seasonLabel": "2026-2027",
       "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
       "teamIdIntern": 585489,
       "teamIdExtern": 89373,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 12,
       "matchesFile": "teams/12e4270a3236a535/matches.json",
       "playersFile": "teams/12e4270a3236a535/players.json",
@@ -339,7 +339,7 @@
           "levelName": "",
           "levelCode": "",
           "groupCode": "07",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -376,8 +376,8 @@
       "teamIdIntern": 592731,
       "teamIdExtern": 91791,
       "teamName": "JAC SANTS BARCELONA U11 1",
-      "matchesPlayed": 1,
-      "playersCount": 8,
+      "matchesPlayed": 2,
+      "playersCount": 10,
       "matchesFile": "teams/7d173c99a0335790/matches.json",
       "playersFile": "teams/7d173c99a0335790/players.json",
       "phases": [
@@ -391,7 +391,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -428,8 +428,8 @@
       "teamIdIntern": 586452,
       "teamIdExtern": 94361,
       "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-      "matchesPlayed": 2,
-      "playersCount": 12,
+      "matchesPlayed": 3,
+      "playersCount": 14,
       "matchesFile": "teams/e8791796f8bad2c9/matches.json",
       "playersFile": "teams/e8791796f8bad2c9/players.json",
       "phases": [
@@ -443,7 +443,33 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
+        }
+      ]
+    },
+    {
+      "seasonStartYear": 2026,
+      "seasonLabel": "2026-2027",
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90595",
+      "teamIdIntern": 597899,
+      "teamIdExtern": 90595,
+      "teamName": "QBASKET SANT CUGAT",
+      "matchesPlayed": 1,
+      "playersCount": 12,
+      "matchesFile": "teams/66f4b05ee20a4f56/matches.json",
+      "playersFile": "teams/66f4b05ee20a4f56/players.json",
+      "phases": [
+        {
+          "seasonStartYear": 2026,
+          "seasonLabel": "2026-2027",
+          "phaseNumber": 1,
+          "sourcePhaseId": 23873,
+          "categoryName": "C.t. Bcn U15 - Cadet Femen\u00ED 1r. Any Promoci\u00F3",
+          "phaseName": "Fase Previa",
+          "levelName": "",
+          "levelCode": "",
+          "groupCode": "07",
+          "matchesPlayed": 1
         }
       ]
     },
@@ -454,7 +480,7 @@
       "teamIdIntern": 588084,
       "teamIdExtern": 91073,
       "teamName": "SE LA SALLE BONANOVA VERMELL",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 15,
       "matchesFile": "teams/2da1a437f0f41c0e/matches.json",
       "playersFile": "teams/2da1a437f0f41c0e/players.json",
@@ -469,7 +495,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -480,7 +506,7 @@
       "teamIdIntern": 592401,
       "teamIdExtern": 93285,
       "teamName": "U.E. CLARET B",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 10,
       "matchesFile": "teams/a85b1a183d39a1bd/matches.json",
       "playersFile": "teams/a85b1a183d39a1bd/players.json",
@@ -495,7 +521,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -506,8 +532,8 @@
       "teamIdIntern": 584407,
       "teamIdExtern": 91876,
       "teamName": "UE SANT ANDREU GROC",
-      "matchesPlayed": 1,
-      "playersCount": 9,
+      "matchesPlayed": 2,
+      "playersCount": 12,
       "matchesFile": "teams/b3ec45af3d6dab9d/matches.json",
       "playersFile": "teams/b3ec45af3d6dab9d/players.json",
       "phases": [
@@ -521,7 +547,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -532,8 +558,8 @@
       "teamIdIntern": 583293,
       "teamIdExtern": 91311,
       "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
-      "matchesPlayed": 1,
-      "playersCount": 8,
+      "matchesPlayed": 2,
+      "playersCount": 9,
       "matchesFile": "teams/b1826f8e641d4f5d/matches.json",
       "playersFile": "teams/b1826f8e641d4f5d/players.json",
       "phases": [
@@ -547,7 +573,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 1
+          "matchesPlayed": 2
         }
       ]
     },
@@ -558,7 +584,7 @@
       "teamIdIntern": 586453,
       "teamIdExtern": 92009,
       "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 13,
       "matchesFile": "teams/245fab6d2a015903/matches.json",
       "playersFile": "teams/245fab6d2a015903/players.json",
@@ -573,7 +599,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     }

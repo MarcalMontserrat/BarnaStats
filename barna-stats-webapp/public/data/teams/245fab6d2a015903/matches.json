@@ -233,5 +233,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "teamIdIntern": 597487,
+    "teamIdExtern": 92009,
+    "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+    "awayTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "matchWebId": 28339,
+    "matchInternId": 297442,
+    "matchExternId": 1209913,
+    "matchDate": "2026-10-24T14:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24023,
+    "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "04",
+    "phaseRound": 3,
+    "roundNumber": 3,
+    "homeTeam": "JAC SANTS BARCELONA U11 1",
+    "homeScore": 87,
+    "awayScore": 43,
+    "awayTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+    "rivalTeam": "JAC SANTS BARCELONA U11 1",
+    "officialTeamScore": 43,
+    "officialRivalScore": 87,
+    "teamScore": 43,
+    "rivalScore": 87,
+    "result": "L",
+    "topScorer": "CLARA MARTIN MARGALEF",
+    "topScorerTeam": "JAC SANTS BARCELONA U11 1",
+    "topScorerPoints": 28,
+    "teamTopScorer": "PAULA NAUDIN COMA",
+    "teamTopScorerPoints": 12,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 0,
+      "maxDeficit": 57,
+      "bestRun": 12,
+      "rivalBestRun": 18,
+      "closingRun": 12,
+      "rivalClosingRun": 0,
+      "firstScorer": "CLARA MARTIN MARGALEF",
+      "firstScorerTeam": "JAC SANTS BARCELONA U11 1",
+      "lastScorer": "CHIARA MART\u00CDNEZ LAMPIS",
+      "lastScorerTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+      "teamFirstScorer": "CHIARA MART\u00CDNEZ LAMPIS",
+      "teamLastScorer": "CHIARA MART\u00CDNEZ LAMPIS",
+      "bestPeriodLabel": "Parcial 8",
+      "bestPeriodDiff": 12,
+      "worstPeriodLabel": "Parcial 1",
+      "worstPeriodDiff": -16,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 2,
+          "rivalPoints": 18,
+          "diff": -16
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 2,
+          "rivalPoints": 8,
+          "diff": -6
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 4,
+          "rivalPoints": 16,
+          "diff": -12
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 3,
+          "rivalPoints": 7,
+          "diff": -4
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 6,
+          "rivalPoints": 19,
+          "diff": -13
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 6,
+          "rivalPoints": 6,
+          "diff": 0
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 8,
+          "rivalPoints": 13,
+          "diff": -5
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 12,
+          "rivalPoints": 0,
+          "diff": 12
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

@@ -119,5 +119,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+    "teamIdIntern": 597154,
+    "teamIdExtern": 93285,
+    "teamName": "U.E. CLARET B",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+    "awayTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+    "matchWebId": 28338,
+    "matchInternId": 297276,
+    "matchExternId": 1217986,
+    "matchDate": "2026-10-24T13:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24023,
+    "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "04",
+    "phaseRound": 2,
+    "roundNumber": 2,
+    "homeTeam": "U.E. CLARET B",
+    "homeScore": 45,
+    "awayScore": 44,
+    "awayTeam": "SE LA SALLE BONANOVA VERMELL",
+    "isHome": true,
+    "rivalTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+    "rivalTeam": "SE LA SALLE BONANOVA VERMELL",
+    "officialTeamScore": 45,
+    "officialRivalScore": 44,
+    "teamScore": 45,
+    "rivalScore": 44,
+    "result": "W",
+    "topScorer": "OLIVIA CARRASCOSA MART\u00CDN",
+    "topScorerTeam": "SE LA SALLE BONANOVA VERMELL",
+    "topScorerPoints": 18,
+    "teamTopScorer": "C.I.G.",
+    "teamTopScorerPoints": 13,
+    "insights": {
+      "leadChanges": 6,
+      "ties": 2,
+      "maxLead": 11,
+      "maxDeficit": 9,
+      "bestRun": 15,
+      "rivalBestRun": 11,
+      "closingRun": 0,
+      "rivalClosingRun": 5,
+      "firstScorer": "MARTINA GONZALEZ GUILLEN",
+      "firstScorerTeam": "U.E. CLARET B",
+      "lastScorer": "DANIELA PUIG MOR",
+      "lastScorerTeam": "SE LA SALLE BONANOVA VERMELL",
+      "teamFirstScorer": "MARTINA GONZALEZ GUILLEN",
+      "teamLastScorer": "C.I.G.",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 7,
+      "worstPeriodLabel": "Parcial 3",
+      "worstPeriodDiff": -6,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 4,
+          "rivalPoints": 2,
+          "diff": 2
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 5,
+          "rivalPoints": 8,
+          "diff": -3
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 0,
+          "rivalPoints": 6,
+          "diff": -6
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 4,
+          "rivalPoints": 4,
+          "diff": 0
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 11,
+          "rivalPoints": 5,
+          "diff": 6
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 4,
+          "rivalPoints": 5,
+          "diff": -1
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 9,
+          "rivalPoints": 2,
+          "diff": 7
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 8,
+          "rivalPoints": 12,
+          "diff": -4
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

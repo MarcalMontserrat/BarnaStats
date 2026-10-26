@@ -13,79 +13,79 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "04",
-      "matchesCount": 5,
+      "matchesCount": 8,
       "rows": [
         {
           "position": 1,
-          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
-          "teamName": "SE LA SALLE BONANOVA VERMELL",
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
+          "teamName": "JAC SANTS BARCELONA U11 1",
           "played": 2,
           "wins": 2,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 126,
-          "pointsAgainst": 62,
-          "pointDiff": 64
+          "pointsFor": 120,
+          "pointsAgainst": 75,
+          "pointDiff": 45
         },
         {
           "position": 2,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
           "teamName": "U.E. CLARET B",
-          "played": 1,
-          "wins": 1,
+          "played": 2,
+          "wins": 2,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 47,
-          "pointsAgainst": 44,
-          "pointDiff": 3
+          "pointsFor": 92,
+          "pointsAgainst": 88,
+          "pointDiff": 4
         },
         {
           "position": 3,
-          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
-          "teamName": "JAC SANTS BARCELONA U11 1",
-          "played": 1,
-          "wins": 1,
-          "losses": 0,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
+          "teamName": "SE LA SALLE BONANOVA VERMELL",
+          "played": 3,
+          "wins": 2,
+          "losses": 1,
           "ties": 0,
-          "pointsFor": 33,
-          "pointsAgainst": 32,
-          "pointDiff": 1
+          "pointsFor": 170,
+          "pointsAgainst": 107,
+          "pointDiff": 63
         },
         {
           "position": 4,
-          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
-          "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-          "played": 2,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+          "teamName": "C.B GRUP BARNA B",
+          "played": 3,
           "wins": 1,
-          "losses": 1,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 123,
-          "pointsAgainst": 66,
-          "pointDiff": 57
+          "pointsFor": 142,
+          "pointsAgainst": 94,
+          "pointDiff": 48
         },
         {
           "position": 5,
-          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
-          "teamName": "C.B GRUP BARNA B",
-          "played": 2,
-          "wins": 0,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+          "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
+          "played": 3,
+          "wins": 1,
           "losses": 2,
           "ties": 0,
-          "pointsFor": 71,
-          "pointsAgainst": 75,
-          "pointDiff": -4
+          "pointsFor": 166,
+          "pointsAgainst": 153,
+          "pointDiff": 13
         },
         {
           "position": 6,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
           "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 42,
-          "pointsAgainst": 163,
-          "pointDiff": -121
+          "pointsFor": 61,
+          "pointsAgainst": 234,
+          "pointDiff": -173
         }
       ]
     }

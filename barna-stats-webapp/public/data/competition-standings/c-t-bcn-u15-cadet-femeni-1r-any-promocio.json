@@ -13,19 +13,19 @@
       "levelName": "",
       "levelCode": "",
       "groupCode": "07",
-      "matchesCount": 3,
+      "matchesCount": 5,
       "rows": [
         {
           "position": 1,
           "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
           "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-          "played": 2,
-          "wins": 2,
+          "played": 3,
+          "wins": 3,
           "losses": 0,
           "ties": 0,
-          "pointsFor": 109,
-          "pointsAgainst": 77,
-          "pointDiff": 32
+          "pointsFor": 193,
+          "pointsAgainst": 107,
+          "pointDiff": 86
         },
         {
           "position": 2,
@@ -43,25 +43,37 @@
           "position": 3,
           "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
           "teamName": "CN TERRASSA 1",
-          "played": 1,
-          "wins": 0,
+          "played": 2,
+          "wins": 1,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 34,
-          "pointsAgainst": 53,
-          "pointDiff": -19
+          "pointsFor": 120,
+          "pointsAgainst": 92,
+          "pointDiff": 28
         },
         {
           "position": 4,
-          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
-          "teamName": "CE SANT NICOLAU 2",
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90595",
+          "teamName": "QBASKET SANT CUGAT",
           "played": 1,
           "wins": 0,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 40,
-          "pointsAgainst": 91,
-          "pointDiff": -51
+          "pointsFor": 30,
+          "pointsAgainst": 84,
+          "pointDiff": -54
+        },
+        {
+          "position": 5,
+          "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
+          "teamName": "CE SANT NICOLAU 2",
+          "played": 2,
+          "wins": 0,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 79,
+          "pointsAgainst": 177,
+          "pointDiff": -98
         }
       ]
     }

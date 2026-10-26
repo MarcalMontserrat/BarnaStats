@@ -119,5 +119,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+    "teamIdIntern": 597129,
+    "teamIdExtern": 90467,
+    "teamName": "C.B GRUP BARNA NEGRE",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+    "matchWebId": 35430,
+    "matchInternId": 297263,
+    "matchExternId": 1217018,
+    "matchDate": "2026-10-24T13:00:00+02:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24344,
+    "categoryName": "C.t. Pre-mini Mascul\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell C",
+    "levelCode": "C",
+    "groupCode": "23",
+    "phaseRound": 2,
+    "roundNumber": 2,
+    "homeTeam": "DOMINIQUES BARCELONA",
+    "homeScore": 42,
+    "awayScore": 72,
+    "awayTeam": "C.B GRUP BARNA NEGRE",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
+    "rivalTeam": "DOMINIQUES BARCELONA",
+    "officialTeamScore": 72,
+    "officialRivalScore": 42,
+    "teamScore": 72,
+    "rivalScore": 42,
+    "result": "W",
+    "topScorer": "JOFRE ASENSIO MOURABIT",
+    "topScorerTeam": "DOMINIQUES BARCELONA",
+    "topScorerPoints": 17,
+    "teamTopScorer": "MARIO TAMAYO MA\u00D1ES",
+    "teamTopScorerPoints": 16,
+    "insights": {
+      "leadChanges": 3,
+      "ties": 3,
+      "maxLead": 31,
+      "maxDeficit": 5,
+      "bestRun": 19,
+      "rivalBestRun": 14,
+      "closingRun": 1,
+      "rivalClosingRun": 0,
+      "firstScorer": "NIL PI GONZALEZ",
+      "firstScorerTeam": "C.B GRUP BARNA NEGRE",
+      "lastScorer": "XAVI HIDALGO DURANY",
+      "lastScorerTeam": "C.B GRUP BARNA NEGRE",
+      "teamFirstScorer": "NIL PI GONZALEZ",
+      "teamLastScorer": "XAVI HIDALGO DURANY",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 14,
+      "worstPeriodLabel": "Parcial 3",
+      "worstPeriodDiff": -9,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 4,
+          "rivalPoints": 4,
+          "diff": 0
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 9,
+          "rivalPoints": 0,
+          "diff": 9
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 6,
+          "rivalPoints": 15,
+          "diff": -9
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 4,
+          "rivalPoints": 9,
+          "diff": -5
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 11,
+          "rivalPoints": 4,
+          "diff": 7
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 8,
+          "rivalPoints": 4,
+          "diff": 4
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 16,
+          "rivalPoints": 2,
+          "diff": 14
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 14,
+          "rivalPoints": 4,
+          "diff": 10
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "totalTeams": 22,
-  "totalMatches": 16,
+  "totalTeams": 23,
+  "totalMatches": 26,
   "phases": [
     {
       "seasonStartYear": 2026,
@@ -14,7 +14,7 @@
       "levelName": "",
       "levelCode": "",
       "groupCode": "07",
-      "matchesCount": 3
+      "matchesCount": 5
     },
     {
       "seasonStartYear": 2026,
@@ -26,7 +26,7 @@
       "levelName": "Nivell A",
       "levelCode": "A",
       "groupCode": "02",
-      "matchesCount": 5
+      "matchesCount": 7
     },
     {
       "seasonStartYear": 2026,
@@ -38,7 +38,7 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "04",
-      "matchesCount": 5
+      "matchesCount": 8
     },
     {
       "seasonStartYear": 2026,
@@ -50,7 +50,7 @@
       "levelName": "Nivell C",
       "levelCode": "C",
       "groupCode": "23",
-      "matchesCount": 3
+      "matchesCount": 6
     }
   ],
   "teams": [
@@ -59,18 +59,18 @@
       "teamIdIntern": 583163,
       "teamIdExtern": 89513,
       "teamName": "AE MINGUELLA A - PURE CUISINE",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 10,
-      "totalValuation": 150
+      "totalValuation": 182
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
       "teamIdIntern": 583292,
       "teamIdExtern": 94243,
       "teamName": "B.I.M.",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 9,
-      "totalValuation": -8
+      "totalValuation": -5
     },
     {
       "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:91102",
@@ -86,90 +86,90 @@
       "teamIdIntern": 583371,
       "teamIdExtern": 90463,
       "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 2,
-      "playersCount": 12,
-      "totalValuation": 71
+      "matchesPlayed": 3,
+      "playersCount": 13,
+      "totalValuation": 102
     },
     {
       "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
       "teamIdIntern": 588085,
       "teamIdExtern": 90781,
       "teamName": "C.B GRUP BARNA B",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 14,
-      "totalValuation": 20
+      "totalValuation": 70
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
-      "teamIdIntern": 583593,
+      "teamIdIntern": 597129,
       "teamIdExtern": 90467,
       "teamName": "C.B GRUP BARNA NEGRE",
-      "matchesPlayed": 1,
-      "playersCount": 11,
-      "totalValuation": 128
+      "matchesPlayed": 2,
+      "playersCount": 12,
+      "totalValuation": 172
     },
     {
       "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89687",
       "teamIdIntern": 583159,
       "teamIdExtern": 89687,
       "teamName": "CE SANT NICOLAU 2",
-      "matchesPlayed": 1,
-      "playersCount": 10,
-      "totalValuation": 13
+      "matchesPlayed": 2,
+      "playersCount": 11,
+      "totalValuation": 32
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94630",
       "teamIdIntern": 583592,
       "teamIdExtern": 94630,
       "teamName": "CE VILA OLIMPICA",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 9,
-      "totalValuation": -10
+      "totalValuation": 23
     },
     {
       "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90356",
       "teamIdIntern": 585488,
       "teamIdExtern": 90356,
       "teamName": "CN TERRASSA 1",
-      "matchesPlayed": 1,
-      "playersCount": 12,
-      "totalValuation": -10
+      "matchesPlayed": 2,
+      "playersCount": 13,
+      "totalValuation": 48
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
       "teamIdIntern": 584406,
       "teamIdExtern": 91937,
       "teamName": "DOMINIQUES BARCELONA",
-      "matchesPlayed": 1,
-      "playersCount": 11,
-      "totalValuation": 81
+      "matchesPlayed": 2,
+      "playersCount": 12,
+      "totalValuation": 99
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91941",
       "teamIdIntern": 584410,
       "teamIdExtern": 91941,
       "teamName": "DOMINIQUES BARCELONA TARONJA",
-      "matchesPlayed": 2,
-      "playersCount": 10,
-      "totalValuation": 93
+      "matchesPlayed": 3,
+      "playersCount": 12,
+      "totalValuation": 126
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
       "teamIdIntern": 584411,
       "teamIdExtern": 89366,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
-      "matchesPlayed": 1,
-      "playersCount": 8,
-      "totalValuation": 38
+      "matchesPlayed": 2,
+      "playersCount": 9,
+      "totalValuation": 71
     },
     {
       "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:89373",
       "teamIdIntern": 585489,
       "teamIdExtern": 89373,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 BLANC",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 12,
-      "totalValuation": 30
+      "totalValuation": 82
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
@@ -185,9 +185,9 @@
       "teamIdIntern": 592731,
       "teamIdExtern": 91791,
       "teamName": "JAC SANTS BARCELONA U11 1",
-      "matchesPlayed": 1,
-      "playersCount": 8,
-      "totalValuation": 9
+      "matchesPlayed": 2,
+      "playersCount": 10,
+      "totalValuation": 75
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:88717",
@@ -203,54 +203,63 @@
       "teamIdIntern": 586452,
       "teamIdExtern": 94361,
       "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
+      "playersCount": 14,
+      "totalValuation": 8
+    },
+    {
+      "teamKey": "2026-2027::C.T. BCN U15 - CADET FEMENI 1R. ANY PROMOCIO::TEAM:90595",
+      "teamIdIntern": 597899,
+      "teamIdExtern": 90595,
+      "teamName": "QBASKET SANT CUGAT",
+      "matchesPlayed": 1,
       "playersCount": 12,
-      "totalValuation": -4
+      "totalValuation": -5
     },
     {
       "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91073",
       "teamIdIntern": 588084,
       "teamIdExtern": 91073,
       "teamName": "SE LA SALLE BONANOVA VERMELL",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 15,
-      "totalValuation": 73
+      "totalValuation": 104
     },
     {
       "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
       "teamIdIntern": 592401,
       "teamIdExtern": 93285,
       "teamName": "U.E. CLARET B",
-      "matchesPlayed": 1,
+      "matchesPlayed": 2,
       "playersCount": 10,
-      "totalValuation": 33
+      "totalValuation": 61
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
       "teamIdIntern": 584407,
       "teamIdExtern": 91876,
       "teamName": "UE SANT ANDREU GROC",
-      "matchesPlayed": 1,
-      "playersCount": 9,
-      "totalValuation": -1
+      "matchesPlayed": 2,
+      "playersCount": 12,
+      "totalValuation": 11
     },
     {
       "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
       "teamIdIntern": 583293,
       "teamIdExtern": 91311,
       "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
-      "matchesPlayed": 1,
-      "playersCount": 8,
-      "totalValuation": 85
+      "matchesPlayed": 2,
+      "playersCount": 9,
+      "totalValuation": 203
     },
     {
       "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
       "teamIdIntern": 586453,
       "teamIdExtern": 92009,
       "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 13,
-      "totalValuation": 83
+      "totalValuation": 93
     }
   ],
   "categoryFiles": [
