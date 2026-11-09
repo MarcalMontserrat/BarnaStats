@@ -88,7 +88,7 @@
       "levelName": "Nivell A",
       "levelCode": "A",
       "groupCode": "02",
-      "matchesCount": 7,
+      "matchesCount": 9,
       "rows": [
         {
           "position": 1,
@@ -104,39 +104,39 @@
         },
         {
           "position": 2,
-          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
-          "teamName": "C.B GRUP BARNA A",
+          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
           "played": 3,
           "wins": 2,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 183,
-          "pointsAgainst": 152,
-          "pointDiff": 31
+          "pointsFor": 195,
+          "pointsAgainst": 175,
+          "pointDiff": 20
         },
         {
           "position": 3,
-          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
-          "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
-          "played": 2,
-          "wins": 1,
-          "losses": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+          "teamName": "AE MINGUELLA A - PURE CUISINE",
+          "played": 4,
+          "wins": 2,
+          "losses": 2,
           "ties": 0,
-          "pointsFor": 144,
-          "pointsAgainst": 145,
-          "pointDiff": -1
+          "pointsFor": 341,
+          "pointsAgainst": 176,
+          "pointDiff": 165
         },
         {
           "position": 4,
-          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
-          "teamName": "AE MINGUELLA A - PURE CUISINE",
-          "played": 3,
-          "wins": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+          "teamName": "C.B GRUP BARNA A",
+          "played": 4,
+          "wins": 2,
           "losses": 2,
           "ties": 0,
-          "pointsFor": 261,
-          "pointsAgainst": 138,
-          "pointDiff": 123
+          "pointsFor": 213,
+          "pointsAgainst": 203,
+          "pointDiff": 10
         },
         {
           "position": 5,
@@ -154,13 +154,13 @@
           "position": 6,
           "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
           "teamName": "JAC SANTS BARCELONA U10 1",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 54,
-          "pointsAgainst": 148,
-          "pointDiff": -94
+          "pointsFor": 92,
+          "pointsAgainst": 228,
+          "pointDiff": -136
         }
       ]
     },
@@ -175,10 +175,22 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "04",
-      "matchesCount": 8,
+      "matchesCount": 10,
       "rows": [
         {
           "position": 1,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+          "teamName": "U.E. CLARET B",
+          "played": 3,
+          "wins": 3,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 178,
+          "pointsAgainst": 105,
+          "pointDiff": 73
+        },
+        {
+          "position": 2,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
           "teamName": "JAC SANTS BARCELONA U11 1",
           "played": 2,
@@ -188,18 +200,6 @@
           "pointsFor": 120,
           "pointsAgainst": 75,
           "pointDiff": 45
-        },
-        {
-          "position": 2,
-          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
-          "teamName": "U.E. CLARET B",
-          "played": 2,
-          "wins": 2,
-          "losses": 0,
-          "ties": 0,
-          "pointsFor": 92,
-          "pointsAgainst": 88,
-          "pointDiff": 4
         },
         {
           "position": 3,
@@ -217,37 +217,37 @@
           "position": 4,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
           "teamName": "C.B GRUP BARNA B",
-          "played": 3,
-          "wins": 1,
+          "played": 4,
+          "wins": 2,
           "losses": 2,
           "ties": 0,
-          "pointsFor": 142,
-          "pointsAgainst": 94,
-          "pointDiff": 48
+          "pointsFor": 206,
+          "pointsAgainst": 133,
+          "pointDiff": 73
         },
         {
           "position": 5,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
           "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-          "played": 3,
+          "played": 4,
           "wins": 1,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 166,
-          "pointsAgainst": 153,
-          "pointDiff": 13
+          "pointsFor": 205,
+          "pointsAgainst": 217,
+          "pointDiff": -12
         },
         {
           "position": 6,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
           "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-          "played": 3,
+          "played": 4,
           "wins": 0,
-          "losses": 3,
+          "losses": 4,
           "ties": 0,
-          "pointsFor": 61,
-          "pointsAgainst": 234,
-          "pointDiff": -173
+          "pointsFor": 78,
+          "pointsAgainst": 320,
+          "pointDiff": -242
         }
       ]
     },
@@ -262,10 +262,22 @@
       "levelName": "Nivell C",
       "levelCode": "C",
       "groupCode": "23",
-      "matchesCount": 6,
+      "matchesCount": 8,
       "rows": [
         {
           "position": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "teamName": "C.B GRUP BARNA NEGRE",
+          "played": 3,
+          "wins": 3,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 307,
+          "pointsAgainst": 50,
+          "pointDiff": 257
+        },
+        {
+          "position": 2,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
           "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
           "played": 2,
@@ -277,28 +289,16 @@
           "pointDiff": 201
         },
         {
-          "position": 2,
-          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
-          "teamName": "C.B GRUP BARNA NEGRE",
-          "played": 2,
-          "wins": 2,
-          "losses": 0,
-          "ties": 0,
-          "pointsFor": 218,
-          "pointsAgainst": 43,
-          "pointDiff": 175
-        },
-        {
           "position": 3,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
           "teamName": "DOMINIQUES BARCELONA",
-          "played": 2,
-          "wins": 1,
+          "played": 3,
+          "wins": 2,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 145,
-          "pointsAgainst": 88,
-          "pointDiff": 57
+          "pointsFor": 230,
+          "pointsAgainst": 97,
+          "pointDiff": 133
         },
         {
           "position": 4,
@@ -316,25 +316,25 @@
           "position": 5,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
           "teamName": "B.I.M.",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 19,
-          "pointsAgainst": 144,
-          "pointDiff": -125
+          "pointsFor": 28,
+          "pointsAgainst": 229,
+          "pointDiff": -201
         },
         {
           "position": 6,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
           "teamName": "UE SANT ANDREU GROC",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 40,
-          "pointsAgainst": 230,
-          "pointDiff": -190
+          "pointsFor": 47,
+          "pointsAgainst": 319,
+          "pointDiff": -272
         }
       ]
     }

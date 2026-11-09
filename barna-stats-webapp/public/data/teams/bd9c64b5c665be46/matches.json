@@ -361,5 +361,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "teamIdIntern": 605316,
+    "teamIdExtern": 90463,
+    "teamName": "C.B GRUP BARNA A",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:90463",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+    "matchWebId": 28632,
+    "matchInternId": 301357,
+    "matchExternId": 1237101,
+    "matchDate": "2026-11-08T10:15:00+01:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 23958,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell A",
+    "levelCode": "A",
+    "groupCode": "02",
+    "phaseRound": 4,
+    "roundNumber": 4,
+    "homeTeam": "C.B GRUP BARNA A",
+    "homeScore": 30,
+    "awayScore": 51,
+    "awayTeam": "FEMEN\u00CD SANT ADRI\u00C0 A",
+    "isHome": true,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89366",
+    "rivalTeam": "FEMEN\u00CD SANT ADRI\u00C0 A",
+    "officialTeamScore": 30,
+    "officialRivalScore": 51,
+    "teamScore": 30,
+    "rivalScore": 51,
+    "result": "L",
+    "topScorer": "IN\u00C9S \u00C1LVAREZ NAVARRO",
+    "topScorerTeam": "FEMEN\u00CD SANT ADRI\u00C0 A",
+    "topScorerPoints": 18,
+    "teamTopScorer": "M\u00C0LIA MONTSERRAT MATEO",
+    "teamTopScorerPoints": 7,
+    "insights": {
+      "leadChanges": 1,
+      "ties": 1,
+      "maxLead": 4,
+      "maxDeficit": 21,
+      "bestRun": 6,
+      "rivalBestRun": 12,
+      "closingRun": 0,
+      "rivalClosingRun": 6,
+      "firstScorer": "IN\u00C9S \u00C1LVAREZ NAVARRO",
+      "firstScorerTeam": "FEMEN\u00CD SANT ADRI\u00C0 A",
+      "lastScorer": "CARLA EXPOSITO CHUECO",
+      "lastScorerTeam": "FEMEN\u00CD SANT ADRI\u00C0 A",
+      "teamFirstScorer": "ABRIL ARIZA BERNAL",
+      "teamLastScorer": "ANNA GUITART SINSARD",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 3,
+      "worstPeriodLabel": "Parcial 5",
+      "worstPeriodDiff": -10,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 4,
+          "rivalPoints": 2,
+          "diff": 2
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 4,
+          "rivalPoints": 13,
+          "diff": -9
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 4,
+          "rivalPoints": 4,
+          "diff": 0
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 3,
+          "rivalPoints": 2,
+          "diff": 1
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 0,
+          "rivalPoints": 10,
+          "diff": -10
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 6,
+          "rivalPoints": 8,
+          "diff": -2
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 7,
+          "rivalPoints": 4,
+          "diff": 3
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 2,
+          "rivalPoints": 8,
+          "diff": -6
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

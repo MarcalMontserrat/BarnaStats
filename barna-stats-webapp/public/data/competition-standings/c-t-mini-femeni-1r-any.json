@@ -13,10 +13,22 @@
       "levelName": "Nivell B",
       "levelCode": "B",
       "groupCode": "04",
-      "matchesCount": 8,
+      "matchesCount": 10,
       "rows": [
         {
           "position": 1,
+          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
+          "teamName": "U.E. CLARET B",
+          "played": 3,
+          "wins": 3,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 178,
+          "pointsAgainst": 105,
+          "pointDiff": 73
+        },
+        {
+          "position": 2,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:91791",
           "teamName": "JAC SANTS BARCELONA U11 1",
           "played": 2,
@@ -26,18 +38,6 @@
           "pointsFor": 120,
           "pointsAgainst": 75,
           "pointDiff": 45
-        },
-        {
-          "position": 2,
-          "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:93285",
-          "teamName": "U.E. CLARET B",
-          "played": 2,
-          "wins": 2,
-          "losses": 0,
-          "ties": 0,
-          "pointsFor": 92,
-          "pointsAgainst": 88,
-          "pointDiff": 4
         },
         {
           "position": 3,
@@ -55,37 +55,37 @@
           "position": 4,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
           "teamName": "C.B GRUP BARNA B",
-          "played": 3,
-          "wins": 1,
+          "played": 4,
+          "wins": 2,
           "losses": 2,
           "ties": 0,
-          "pointsFor": 142,
-          "pointsAgainst": 94,
-          "pointDiff": 48
+          "pointsFor": 206,
+          "pointsAgainst": 133,
+          "pointDiff": 73
         },
         {
           "position": 5,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
           "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-          "played": 3,
+          "played": 4,
           "wins": 1,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 166,
-          "pointsAgainst": 153,
-          "pointDiff": 13
+          "pointsFor": 205,
+          "pointsAgainst": 217,
+          "pointDiff": -12
         },
         {
           "position": 6,
           "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:94361",
           "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-          "played": 3,
+          "played": 4,
           "wins": 0,
-          "losses": 3,
+          "losses": 4,
           "ties": 0,
-          "pointsFor": 61,
-          "pointsAgainst": 234,
-          "pointDiff": -173
+          "pointsFor": 78,
+          "pointsAgainst": 320,
+          "pointDiff": -242
         }
       ]
     }

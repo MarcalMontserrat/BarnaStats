@@ -375,5 +375,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+    "teamIdIntern": 603357,
+    "teamIdExtern": 90781,
+    "teamName": "C.B GRUP BARNA B",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "awayTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:90781",
+    "matchWebId": 28340,
+    "matchInternId": 300377,
+    "matchExternId": 1209914,
+    "matchDate": "2026-11-07T12:00:00+01:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 24023,
+    "categoryName": "C.t. Mini Femen\u00ED 1r. Any",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell B",
+    "levelCode": "B",
+    "groupCode": "04",
+    "phaseRound": 4,
+    "roundNumber": 4,
+    "homeTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "homeScore": 39,
+    "awayScore": 64,
+    "awayTeam": "C.B GRUP BARNA B",
+    "isHome": false,
+    "rivalTeamKey": "2026-2027::C.T. MINI FEMENI 1R. ANY::TEAM:92009",
+    "rivalTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "officialTeamScore": 64,
+    "officialRivalScore": 39,
+    "teamScore": 64,
+    "rivalScore": 39,
+    "result": "W",
+    "topScorer": "MARIA SERVITJE P\u00C9REZ",
+    "topScorerTeam": "VEDRUNA GR\u00C0CIA NEGRE",
+    "topScorerPoints": 15,
+    "teamTopScorer": "SOFIA MOYA KLOTZ",
+    "teamTopScorerPoints": 14,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 0,
+      "maxLead": 26,
+      "maxDeficit": 0,
+      "bestRun": 17,
+      "rivalBestRun": 10,
+      "closingRun": 2,
+      "rivalClosingRun": 0,
+      "firstScorer": "M.P.S.",
+      "firstScorerTeam": "C.B GRUP BARNA B",
+      "lastScorer": "ONA HARZEE TORRELL",
+      "lastScorerTeam": "C.B GRUP BARNA B",
+      "teamFirstScorer": "M.P.S.",
+      "teamLastScorer": "ONA HARZEE TORRELL",
+      "bestPeriodLabel": "Parcial 7",
+      "bestPeriodDiff": 14,
+      "worstPeriodLabel": "Parcial 6",
+      "worstPeriodDiff": -8,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 5,
+          "rivalPoints": 0,
+          "diff": 5
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 8,
+          "rivalPoints": 9,
+          "diff": -1
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 8,
+          "rivalPoints": 0,
+          "diff": 8
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 9,
+          "rivalPoints": 12,
+          "diff": -3
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 11,
+          "rivalPoints": 0,
+          "diff": 11
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 0,
+          "rivalPoints": 8,
+          "diff": -8
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 15,
+          "rivalPoints": 1,
+          "diff": 14
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 8,
+          "rivalPoints": 9,
+          "diff": -1
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]

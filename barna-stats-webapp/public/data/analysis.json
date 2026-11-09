@@ -1,8 +1,8 @@
 {
   "seasonStartYear": 2026,
   "seasonLabel": "2026-2027",
-  "generatedAtUtc": "2026-10-26T19:57:22.147112Z",
-  "totalMatches": 26,
+  "generatedAtUtc": "2026-11-09T07:29:58.578702Z",
+  "totalMatches": 32,
   "totalTeams": 23,
   "teams": [
     {
@@ -12,7 +12,7 @@
       "teamIdIntern": 583163,
       "teamIdExtern": 89513,
       "teamName": "AE MINGUELLA A - PURE CUISINE",
-      "matchesPlayed": 3,
+      "matchesPlayed": 4,
       "playersCount": 10,
       "matchesFile": "teams/7024b17284a7a8ab/matches.json",
       "playersFile": "teams/7024b17284a7a8ab/players.json",
@@ -27,7 +27,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "02",
-          "matchesPlayed": 3
+          "matchesPlayed": 4
         }
       ]
     },
@@ -38,7 +38,7 @@
       "teamIdIntern": 583292,
       "teamIdExtern": 94243,
       "teamName": "B.I.M.",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 9,
       "matchesFile": "teams/4c6cc5cd1f06ad2e/matches.json",
       "playersFile": "teams/4c6cc5cd1f06ad2e/players.json",
@@ -53,7 +53,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -90,7 +90,7 @@
       "teamIdIntern": 583371,
       "teamIdExtern": 90463,
       "teamName": "C.B GRUP BARNA A",
-      "matchesPlayed": 3,
+      "matchesPlayed": 4,
       "playersCount": 13,
       "matchesFile": "teams/bd9c64b5c665be46/matches.json",
       "playersFile": "teams/bd9c64b5c665be46/players.json",
@@ -105,7 +105,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "02",
-          "matchesPlayed": 3
+          "matchesPlayed": 4
         }
       ]
     },
@@ -116,7 +116,7 @@
       "teamIdIntern": 588085,
       "teamIdExtern": 90781,
       "teamName": "C.B GRUP BARNA B",
-      "matchesPlayed": 3,
+      "matchesPlayed": 4,
       "playersCount": 14,
       "matchesFile": "teams/be31d03e1051773d/matches.json",
       "playersFile": "teams/be31d03e1051773d/players.json",
@@ -131,7 +131,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 3
+          "matchesPlayed": 4
         }
       ]
     },
@@ -142,7 +142,7 @@
       "teamIdIntern": 597129,
       "teamIdExtern": 90467,
       "teamName": "C.B GRUP BARNA NEGRE",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 12,
       "matchesFile": "teams/7e97f2b80a187a9f/matches.json",
       "playersFile": "teams/7e97f2b80a187a9f/players.json",
@@ -157,7 +157,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -246,7 +246,7 @@
       "teamIdIntern": 584406,
       "teamIdExtern": 91937,
       "teamName": "DOMINIQUES BARCELONA",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 12,
       "matchesFile": "teams/3c517fd801660270/matches.json",
       "playersFile": "teams/3c517fd801660270/players.json",
@@ -261,7 +261,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -298,7 +298,7 @@
       "teamIdIntern": 584411,
       "teamIdExtern": 89366,
       "teamName": "FEMEN\u00CD SANT ADRI\u00C0 A",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 9,
       "matchesFile": "teams/b5f9a51e7239456b/matches.json",
       "playersFile": "teams/b5f9a51e7239456b/players.json",
@@ -313,7 +313,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "02",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -350,7 +350,7 @@
       "teamIdIntern": 583370,
       "teamIdExtern": 91790,
       "teamName": "JAC SANTS BARCELONA U10 1",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 11,
       "matchesFile": "teams/eb61db587c60b676/matches.json",
       "playersFile": "teams/eb61db587c60b676/players.json",
@@ -365,7 +365,7 @@
           "levelName": "Nivell A",
           "levelCode": "A",
           "groupCode": "02",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -428,7 +428,7 @@
       "teamIdIntern": 586452,
       "teamIdExtern": 94361,
       "teamName": "LIMA-HORTA B\u00C0SQUET SALM\u00D3",
-      "matchesPlayed": 3,
+      "matchesPlayed": 4,
       "playersCount": 14,
       "matchesFile": "teams/e8791796f8bad2c9/matches.json",
       "playersFile": "teams/e8791796f8bad2c9/players.json",
@@ -443,7 +443,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 3
+          "matchesPlayed": 4
         }
       ]
     },
@@ -506,7 +506,7 @@
       "teamIdIntern": 592401,
       "teamIdExtern": 93285,
       "teamName": "U.E. CLARET B",
-      "matchesPlayed": 2,
+      "matchesPlayed": 3,
       "playersCount": 10,
       "matchesFile": "teams/a85b1a183d39a1bd/matches.json",
       "playersFile": "teams/a85b1a183d39a1bd/players.json",
@@ -521,7 +521,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -532,8 +532,8 @@
       "teamIdIntern": 584407,
       "teamIdExtern": 91876,
       "teamName": "UE SANT ANDREU GROC",
-      "matchesPlayed": 2,
-      "playersCount": 12,
+      "matchesPlayed": 3,
+      "playersCount": 13,
       "matchesFile": "teams/b3ec45af3d6dab9d/matches.json",
       "playersFile": "teams/b3ec45af3d6dab9d/players.json",
       "phases": [
@@ -547,7 +547,7 @@
           "levelName": "Nivell C",
           "levelCode": "C",
           "groupCode": "23",
-          "matchesPlayed": 2
+          "matchesPlayed": 3
         }
       ]
     },
@@ -584,7 +584,7 @@
       "teamIdIntern": 586453,
       "teamIdExtern": 92009,
       "teamName": "VEDRUNA GR\u00C0CIA NEGRE",
-      "matchesPlayed": 3,
+      "matchesPlayed": 4,
       "playersCount": 13,
       "matchesFile": "teams/245fab6d2a015903/matches.json",
       "playersFile": "teams/245fab6d2a015903/players.json",
@@ -599,7 +599,7 @@
           "levelName": "Nivell B",
           "levelCode": "B",
           "groupCode": "04",
-          "matchesPlayed": 3
+          "matchesPlayed": 4
         }
       ]
     }

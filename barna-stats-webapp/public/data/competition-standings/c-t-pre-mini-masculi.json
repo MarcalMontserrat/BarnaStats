@@ -13,10 +13,22 @@
       "levelName": "Nivell C",
       "levelCode": "C",
       "groupCode": "23",
-      "matchesCount": 6,
+      "matchesCount": 8,
       "rows": [
         {
           "position": 1,
+          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
+          "teamName": "C.B GRUP BARNA NEGRE",
+          "played": 3,
+          "wins": 3,
+          "losses": 0,
+          "ties": 0,
+          "pointsFor": 307,
+          "pointsAgainst": 50,
+          "pointDiff": 257
+        },
+        {
+          "position": 2,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91311",
           "teamName": "UE SANT CUGAT - OCCIDENT NEGRE",
           "played": 2,
@@ -28,28 +40,16 @@
           "pointDiff": 201
         },
         {
-          "position": 2,
-          "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:90467",
-          "teamName": "C.B GRUP BARNA NEGRE",
-          "played": 2,
-          "wins": 2,
-          "losses": 0,
-          "ties": 0,
-          "pointsFor": 218,
-          "pointsAgainst": 43,
-          "pointDiff": 175
-        },
-        {
           "position": 3,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91937",
           "teamName": "DOMINIQUES BARCELONA",
-          "played": 2,
-          "wins": 1,
+          "played": 3,
+          "wins": 2,
           "losses": 1,
           "ties": 0,
-          "pointsFor": 145,
-          "pointsAgainst": 88,
-          "pointDiff": 57
+          "pointsFor": 230,
+          "pointsAgainst": 97,
+          "pointDiff": 133
         },
         {
           "position": 4,
@@ -67,25 +67,25 @@
           "position": 5,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:94243",
           "teamName": "B.I.M.",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 19,
-          "pointsAgainst": 144,
-          "pointDiff": -125
+          "pointsFor": 28,
+          "pointsAgainst": 229,
+          "pointDiff": -201
         },
         {
           "position": 6,
           "teamKey": "2026-2027::C.T. PRE-MINI MASCULI::TEAM:91876",
           "teamName": "UE SANT ANDREU GROC",
-          "played": 2,
+          "played": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "ties": 0,
-          "pointsFor": 40,
-          "pointsAgainst": 230,
-          "pointDiff": -190
+          "pointsFor": 47,
+          "pointsAgainst": 319,
+          "pointDiff": -272
         }
       ]
     }

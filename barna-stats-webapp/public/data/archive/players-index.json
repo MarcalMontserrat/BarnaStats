@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-10-26T19:57:22.147112Z",
+  "generatedAtUtc": "2026-11-09T07:29:58.578702Z",
   "players": [
     {
       "key": "PLAYER:69041763192518207",
@@ -7996,6 +7996,13 @@
       "searchText": "MARA BLANCO CARBALLEDA VEDRUNA GR\u00C0CIA NEGRE VEDRUNA GR\u00C0CIA VERD #3"
     },
     {
+      "key": "UUID:f481dee0-6c0a-40a1-97ab-6074dfc241f7",
+      "label": "MARC MARTINEZ REYES",
+      "latestShirtNumber": "10",
+      "meta": "1 temporada \u00B7 #10 \u00B7 UE SANT ANDREU GROC",
+      "searchText": "MARC MARTINEZ REYES UE SANT ANDREU GROC #10"
+    },
+    {
       "key": "UUID:c0ef4000-72be-4f31-b486-57b5f533cab8",
       "label": "MARC MOGIO PAREDES",
       "latestShirtNumber": "22",
@@ -9008,7 +9015,7 @@
       "label": "MIA GOBERNA JUVE",
       "latestShirtNumber": "2",
       "meta": "2 temporadas \u00B7 #2 \u00B7 JAC SANTS BARCELONA U10 1",
-      "searchText": "MIA GOBERNA JUVE JAC SANTS BARCELONA U11 1 JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U10 #2"
+      "searchText": "MIA GOBERNA JUVE JAC SANTS BARCELONA U10 1 JAC SANTS BARCELONA U11 1 JAC SANTS BARCELONA U10 #2"
     },
     {
       "key": "UUID:8900dddb-ce3b-4450-8e0b-9bc03d2c3735",

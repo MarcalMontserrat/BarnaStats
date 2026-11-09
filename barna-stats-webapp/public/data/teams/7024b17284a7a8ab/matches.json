@@ -354,5 +354,126 @@
     "matchReport": "",
     "matchReportGeneratedAtUtc": null,
     "matchReportModel": ""
+  },
+  {
+    "teamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+    "teamIdIntern": 602234,
+    "teamIdExtern": 89513,
+    "teamName": "AE MINGUELLA A - PURE CUISINE",
+    "seasonStartYear": 2026,
+    "seasonLabel": "2026-2027",
+    "homeTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:89513",
+    "awayTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+    "matchWebId": 28631,
+    "matchInternId": 299816,
+    "matchExternId": 1210205,
+    "matchDate": "2026-11-07T10:00:00+01:00",
+    "phaseNumber": 1,
+    "sourcePhaseId": 23958,
+    "categoryName": "C.t. Pre-mini Femen\u00ED",
+    "phaseName": "Primera Fase",
+    "levelName": "Nivell A",
+    "levelCode": "A",
+    "groupCode": "02",
+    "phaseRound": 4,
+    "roundNumber": 4,
+    "homeTeam": "AE MINGUELLA A - PURE CUISINE",
+    "homeScore": 80,
+    "awayScore": 38,
+    "awayTeam": "JAC SANTS BARCELONA U10 1",
+    "isHome": true,
+    "rivalTeamKey": "2026-2027::C.T. PRE-MINI FEMENI::TEAM:91790",
+    "rivalTeam": "JAC SANTS BARCELONA U10 1",
+    "officialTeamScore": 80,
+    "officialRivalScore": 38,
+    "teamScore": 80,
+    "rivalScore": 38,
+    "result": "W",
+    "topScorer": "VERA L\u00D3PEZ HERN\u00C1NDEZ",
+    "topScorerTeam": "AE MINGUELLA A - PURE CUISINE",
+    "topScorerPoints": 19,
+    "teamTopScorer": "VERA L\u00D3PEZ HERN\u00C1NDEZ",
+    "teamTopScorerPoints": 19,
+    "insights": {
+      "leadChanges": 0,
+      "ties": 4,
+      "maxLead": 42,
+      "maxDeficit": 2,
+      "bestRun": 11,
+      "rivalBestRun": 6,
+      "closingRun": 8,
+      "rivalClosingRun": 0,
+      "firstScorer": "JANA CUBARS\u00CD SANCHEZ",
+      "firstScorerTeam": "AE MINGUELLA A - PURE CUISINE",
+      "lastScorer": "ERIN TOR L\u00D3PEZ",
+      "lastScorerTeam": "AE MINGUELLA A - PURE CUISINE",
+      "teamFirstScorer": "JANA CUBARS\u00CD SANCHEZ",
+      "teamLastScorer": "ERIN TOR L\u00D3PEZ",
+      "bestPeriodLabel": "Parcial 2",
+      "bestPeriodDiff": 11,
+      "worstPeriodLabel": "Parcial 7",
+      "worstPeriodDiff": -1,
+      "periodScores": [
+        {
+          "periodNumber": 1,
+          "label": "Parcial 1",
+          "teamPoints": 10,
+          "rivalPoints": 8,
+          "diff": 2
+        },
+        {
+          "periodNumber": 2,
+          "label": "Parcial 2",
+          "teamPoints": 17,
+          "rivalPoints": 6,
+          "diff": 11
+        },
+        {
+          "periodNumber": 3,
+          "label": "Parcial 3",
+          "teamPoints": 6,
+          "rivalPoints": 4,
+          "diff": 2
+        },
+        {
+          "periodNumber": 4,
+          "label": "Parcial 4",
+          "teamPoints": 5,
+          "rivalPoints": 1,
+          "diff": 4
+        },
+        {
+          "periodNumber": 5,
+          "label": "Parcial 5",
+          "teamPoints": 14,
+          "rivalPoints": 3,
+          "diff": 11
+        },
+        {
+          "periodNumber": 6,
+          "label": "Parcial 6",
+          "teamPoints": 8,
+          "rivalPoints": 3,
+          "diff": 5
+        },
+        {
+          "periodNumber": 7,
+          "label": "Parcial 7",
+          "teamPoints": 7,
+          "rivalPoints": 8,
+          "diff": -1
+        },
+        {
+          "periodNumber": 8,
+          "label": "Parcial 8",
+          "teamPoints": 13,
+          "rivalPoints": 5,
+          "diff": 8
+        }
+      ]
+    },
+    "matchReport": "",
+    "matchReportGeneratedAtUtc": null,
+    "matchReportModel": ""
   }
 ]
